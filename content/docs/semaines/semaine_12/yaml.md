@@ -92,7 +92,6 @@ fruits:
   - pomme
   - banane
   - orange
-
 # Style « flow » (comme JSON)
 fruits: [pomme, banane, orange]
 </pre>
@@ -102,18 +101,15 @@ fruits: [pomme, banane, orange]
 <pre>
 # Sans guillemets (la plupart du temps)
 nom: Alice
-
 # Avec simples ou doubles guillemets si besoin
 message: 'Elle a dit : "Salut !"'
 description: "Texte sur\nplusieurs lignes\navec retours à la ligne"
-
 # Bloc littéral (garde exactement le texte, retours à la ligne inclus)
 poeme: |
   Roses are red
   Violets are blue
   YAML est génial
   Et toi aussi !
-
 # Bloc replié (les retours à la ligne deviennent des espaces)
 resume: &gt;
   Ceci est un long texte
