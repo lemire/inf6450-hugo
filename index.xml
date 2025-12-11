@@ -226,25 +226,16 @@ nous avons deux &lt;strong&gt;vocabulaires XML&lt;/strong&gt;.&lt;/p&gt;</descri
  &lt;a class="anchor" href="#les-documents-epub"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;Le livre électronique émerge comme norme dans l’édition. Bien qu’il existe plusieurs formats possibles, nous allons nous concentrer plus particulièrement dans ce cours sur le format EPUB qui est souvent utilisé. Il est notamment supporté par les plateformes iBooks d’Apple, &lt;a href="https://en.wikipedia.org/wiki/Kobo_Inc."&gt;Kobo&lt;/a&gt;, etc. Amazon utilise un format similaire pour le Kindle, mais comme il est propre à Amazon, nous ne nous y attarderons pas.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;Le format EPUB peut être décrit sommairement comme du XHTML que l’on place dans une archive compressée zip. On peut se demander pourquoi les éditeurs préfèrent un tel format à quelque chose d’autre, comme le format PDF. Le format PDF est malheureusement mal adapté aux livres électroniques parce qu’il suppose que le document sera imprimé sur papier. Il comporte donc une notion fixée d’avance de page. Dans une liseuse électronique, la taille de la page dépend de la taille de l’écran et des goûts du lecteur.&lt;/p&gt;</description></item><item><title>Modèles de programmation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</guid><description>&lt;style&gt;
- .codeblock {
- background:#282c34; color:#abb2bf; padding:18px; border-radius:8px; overflow-x:auto;
- font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em; line-height:1.5;
- margin:1.8em 0;
- }
- .xmlblock {
- background:#f8fafc; border:1px solid #cbd5e1; color:#2d3748; padding:18px; border-radius:8px;
- overflow-x:auto; font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em;
- margin:1.8em 0;
- }
- code {background:#e5e7eb; padding:3px 7px; border-radius:4px; font-size:0.95em;}
-&lt;/style&gt;
-&lt;h1&gt;
+&lt;p&gt;Le format EPUB peut être décrit sommairement comme du XHTML que l’on place dans une archive compressée zip. On peut se demander pourquoi les éditeurs préfèrent un tel format à quelque chose d’autre, comme le format PDF. Le format PDF est malheureusement mal adapté aux livres électroniques parce qu’il suppose que le document sera imprimé sur papier. Il comporte donc une notion fixée d’avance de page. Dans une liseuse électronique, la taille de la page dépend de la taille de l’écran et des goûts du lecteur.&lt;/p&gt;</description></item><item><title>Modèles de programmation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</guid><description>&lt;h1 id="modèles-de-programmation-xml"&gt;
  Modèles de programmation XML
+ &lt;a class="anchor" href="#mod%c3%a8les-de-programmation-xml"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;
- Il y a plusieurs façons de traiter du XML. Chaque méthode a ses avantages et ses inconvénients. Bien que ce module s’intéresse surtout à l’approche DOM, il est important de connaître l’ensemble des méthodologies possibles et d’avoir une idée des forces et faiblesses relatives de chacune.
-&lt;/p&gt;</description></item><item><title>XHTML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Il y a plusieurs façons de traiter du XML. Chaque méthode a ses avantages et ses inconvénients. Bien que ce module s&amp;rsquo;intéresse surtout à l&amp;rsquo;approche DOM, il est important de connaître l&amp;rsquo;ensemble des méthodologies possibles et d&amp;rsquo;avoir une idée des forces et faiblesses relatives de chacune.&lt;/p&gt;
+&lt;h3 id="traitement-du-xml-comme-du-texte"&gt;
+ Traitement du XML comme du texte
+ &lt;a class="anchor" href="#traitement-du-xml-comme-du-texte"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Un fichier XML est d&amp;rsquo;abord un fichier texte. Comme certains langages, tel Java, savent bien traiter les fichiers en format texte, ils peuvent directement traiter le XML.&lt;/p&gt;</description></item><item><title>XHTML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/</guid><description>&lt;h1 class=""&gt;
  XHTML
 &lt;/h1&gt;
 &lt;div class=""&gt;
