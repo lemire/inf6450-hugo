@@ -99,7 +99,7 @@ Par contre, l'ordre dans lequel les attributs sont présentés est sans importan
 
 ## Appels d'entités
 
-Un élément peut contenir du texte, mais ne peut contenir le symbole <, comme dans l'exemple <a><</a>, parce que cela mène à de la confusion. On ne peut non plus y trouver le symbole & ou la séquence « ]]&gt; ». Que faire alors s'il faut utiliser le caractère < dans un texte mathématique, par exemple? Il faut utiliser un **appel d'entité**. Un appel d'entité est un bout de texte qui commence par une esperluette ( &) et se termine par un point-virgule ( ; ). Nous verrons plus tard que nous pouvons définir nos propres appels d'entités; les appels d'entités suivants font partie de la définition du XML :
+Un élément peut contenir du texte, mais ne peut contenir le symbole <, comme dans l'exemple `<a><</a>`, parce que cela mène à de la confusion. On ne peut non plus y trouver le symbole & ou la séquence « ]]&gt; ». Que faire alors s'il faut utiliser le caractère < dans un texte mathématique, par exemple? Il faut utiliser un **appel d'entité**. Un appel d'entité est un bout de texte qui commence par une esperluette ( &) et se termine par un point-virgule ( ; ). Nous verrons plus tard que nous pouvons définir nos propres appels d'entités; les appels d'entités suivants font partie de la définition du XML :
 
 | appel d'entité | résultat |
 |---------------|----------|
