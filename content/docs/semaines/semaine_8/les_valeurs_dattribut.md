@@ -11,7 +11,7 @@ Nous savons maintenant comment aller chercher la valeur d'un attribut en utilisa
 ```xml
 <facture>
    <montant>10.10</montant>
-   </facture>
+</facture>
 ```
 
 Nous voulons le simplifier pour n'avoir que :
@@ -24,10 +24,10 @@ Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer une 
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
-   <xsl:stylesheet version="1.0"
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-   <xsl:template match="facture">
-   <facture montant="{montant}" />
-   </xsl:template>
-   </xsl:stylesheet>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:template match="facture">
+        <facture montant="{montant}" />
+    </xsl:template>
+</xsl:stylesheet>
 ```
