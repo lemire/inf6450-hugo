@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 5 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/</link><description>Recent content in Semaine 5 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/index.xml" rel="self" type="application/rss+xml"/><item><title>Format de document</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/format_de_document/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/format_de_document/</guid><description>&lt;h1 id="format-de-document"&gt;
+ Format de document
+ &lt;a class="anchor" href="#format-de-document"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="le-sgml-standardized-general-markup-language"&gt;
+ Le SGML (&lt;em&gt;Standardized General Markup Language&lt;/em&gt;)
+ &lt;a class="anchor" href="#le-sgml-standardized-general-markup-language"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;En 1969, Charles Goldfarb, Edward Mosher et Raymond Lorie ont inventé le GML (&lt;em&gt;Generalized Markup Language&lt;/em&gt;). Chercheurs chez IBM, ils voulaient faciliter l&amp;rsquo;échange d&amp;rsquo;informations entre les outils d&amp;rsquo;édition, de formatage et de recherche de documents. Le GML possédait déjà un concept de « type de documents » similaire aux documents DTD modernes. Chez IBM, le GML a été utilisé pour la production d&amp;rsquo;environ 90 % des documents électroniques.&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/</guid><description>&lt;h1 class=""&gt;
+ Autoévaluation
+&lt;/h1&gt;
+&lt;div class=""&gt;
+ &lt;p&gt;
+ Le bouton « Vérifier ma réponse » donne accès à un script qui, en plus de vous permettre 
+	de vérifier vos réponses, fournit une courte explication. 
+	Si tous les commentaires sont en
+ &lt;span style="color:blue"&gt;
+ bleu
+ &lt;/span&gt;
+ , c'est que vous avez la bonne réponse; 
+	sinon, lisez les commentaires en
+ &lt;span style="color:red"&gt;
+ rouge
+ &lt;/span&gt;
+ pour comprendre votre erreur. 
+	Puis, essayez de nouveau en cliquant sur le bouton « Recommencer ».
+ &lt;/p&gt;
+ &lt;div style="margin-left:1cm"&gt;
+ &lt;div style="background-color:#E0EAF0"&gt;
+ &lt;b&gt;
+ Question 1
+ &lt;/b&gt;
+ .
+		Quel énoncé décrit le mieux l'intention des créateurs du XML?
+ &lt;/div&gt;
+ &lt;p style="width:90%;"&gt;
+ Choisissez la bonne réponse parmi les suivantes.
+ &lt;/p&gt;</description></item><item><title>Familiarisation avec EPUB</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/</guid><description>&lt;h1 id="familiarisation-avec-epub"&gt;
+ Familiarisation avec EPUB
+ &lt;a class="anchor" href="#familiarisation-avec-epub"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;La semaine prochaine, nous étudierons le format EPUB. Afin de préparer ces travaux, nous vous invitons à faire les lectures préparatoires suivantes :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/Livre_num%C3%A9rique"&gt;La page Wikipedia sur les livres électroniques&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/EPUB_%28format%29"&gt;La page Wikipedia sur EPUB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/Projet_Gutenberg"&gt;La page Wikipedia sur Projet Gutenberg&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Par ailleurs, vous devriez visiter le site du projet Gutenberg et consulter quelques livres électroniques.&lt;/p&gt;
+&lt;hr&gt;</description></item></channel></rss>

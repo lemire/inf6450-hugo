@@ -1,0 +1,1050 @@
+<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+ XHTML
+
+
+ 
+  Qu'est-ce que le XHTML?
+ 
+ 
+  Le HTML a été inventé par Tim Berners-Lee, alors qu'il travaillait pour le centre de recherche
+CERN en Suisse. L'intention de Berners-Lee était de proposer un système révolutionnaire de
+gestion de l'information qu'il appela
+  
+   World Wide Web
+  
+  . Comme pièce maîtresse de son architecture,
+il avait besoin d'un format de documents qu'il appela HTML (
+  
+   HyperText Markup Language
+  
+  ).
+La première page web, dont l'adresse était http://nxoc01.cern.ch/hypertext/WWW/TheProject.html, 
+vit le jour en 1990.
+ "><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="XHTML"><meta property="og:description" content="XHTML Qu'est-ce que le XHTML? Le HTML a été inventé par Tim Berners-Lee, alors qu'il travaillait pour le centre de recherche CERN en Suisse. L'intention de Berners-Lee était de proposer un système révolutionnaire de gestion de l'information qu'il appela World Wide Web . Comme pièce maîtresse de son architecture, il avait besoin d'un format de documents qu'il appela HTML ( HyperText Markup Language ). La première page web, dont l'adresse était http://nxoc01.cern.ch/hypertext/WWW/TheProject.html, vit le jour en 1990."><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>XHTML | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/xhtml/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.404ed02339d2d5426e41a3dfb7f7d97d5856d49e3b81cc7db3aeee0980357f55.js integrity="sha256-QE7QIznS1UJuQaPft/fZfVhW1J47gcx9s67uCYA1f1U=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/inf6450-hugo/><img src=/inf6450-hugo/xml.jpg alt=Logo class=book-icon><span>INF 6450 - Gestion de l'information avec XML</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Rechercher aria-label=Rechercher maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/inf6450-hugo/docs/professeur/>Pense-bête DTD</a></li><li><span>Semaines</span><ul><li><input type=checkbox id=section-7441693393d20b821fe8b37c5a6f7cf2 class=toggle>
+<label for=section-7441693393d20b821fe8b37c5a6f7cf2 class=flex><a href=/inf6450-hugo/docs/semaines/semaine_1/ class=flex-auto>Semaine 1</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/>Installation d’un navigateur moderne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/>Créer un fichier XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/>Introduction à XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/>Principes du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/>Encodage des caractères Unicode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/>Mise en forme du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/>Laboratoire sur la structure en arbre des documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/>Petit guide d’usage du courriel efficace</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-af40a75de7e5184983fffc4ff12ae982 class=toggle>
+<label for=section-af40a75de7e5184983fffc4ff12ae982 class=flex><a role=button class=flex-auto>Semaine 2</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/>Définition de type de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/>Validation de documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-19fac9b87d4af3855d770f5f0a1ea19e class=toggle>
+<label for=section-19fac9b87d4af3855d770f5f0a1ea19e class=flex><a role=button class=flex-auto>Semaine 3</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/>Espace de nom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/>Le fichier pom.xml en Java</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/>Le fichier sitemap.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/>Les fichiers csproj en C#</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/rss/>Les formats RSS et Atom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/>Le fichier AndroidManifest.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/travail_1/>Travail 1</a></li></ul></li><li><input type=checkbox id=section-f5606a0b5813317643cf57b4b6e8a8e4 class=toggle checked>
+<label for=section-f5606a0b5813317643cf57b4b6e8a8e4 class=flex><a role=button class=flex-auto>Semaine 4</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_4/xhtml/ class=active>XHTML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/html_5/>HTML 5</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/mathml/>MathML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/svg/>SVG</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/base64/>Base64</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/markdown/>MarkDown</a></li></ul></li><li><input type=checkbox id=section-ea112c6c027e8be5b72462b07efbd404 class=toggle>
+<label for=section-ea112c6c027e8be5b72462b07efbd404 class=flex><a role=button class=flex-auto>Semaine 5</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_5/format_de_document/>Format de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/>Familiarisation avec EPUB</a></li></ul></li><li><input type=checkbox id=section-63939a07d015168789e352a75a400204 class=toggle>
+<label for=section-63939a07d015168789e352a75a400204 class=flex><a role=button class=flex-auto>Semaine 6</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/>Les documents EPUB</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/>Utilisation de Sigil et de Thorium</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/>Des pages web dynamiques avec JavaScript</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/travail_2/>Travail 2</a></li></ul></li><li><input type=checkbox id=section-ab34f94bdc2e263dca825db6224ae341 class=toggle>
+<label for=section-ab34f94bdc2e263dca825db6224ae341 class=flex><a role=button class=flex-auto>Semaine 7</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/>XPath : un premier laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_approfondissement/>XPath : approfondissement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/>XPath : second laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/>XPath 2.0 et 3.0</a></li></ul></li><li><input type=checkbox id=section-c9fff26212e55a28630558b97c972fce class=toggle>
+<label for=section-c9fff26212e55a28630558b97c972fce class=flex><a role=button class=flex-auto>Semaine 8</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_8/introduction_au_xslt/>Introduction au XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne/>XSLT en ligne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/>Un peu plus de XSLT : fonctionnement de base, template et value-of</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/>Les valeurs d’attribut</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/>XSLT modulaire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/>Les noms d’éléments</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/>Attribut mode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/>La fonction generate-id</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_tests/>Les tests</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_boucles/>Les boucles</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/>Clés et aggrégation</a></li></ul></li><li><input type=checkbox id=section-9b8667613d67aeb0609307ae83a17fa7 class=toggle>
+<label for=section-9b8667613d67aeb0609307ae83a17fa7 class=flex><a role=button class=flex-auto>Semaine 9</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/>Générer des noeuds dynamiquement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/variables_et_parametres/>Variables et paramètres</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/>Mise en forme</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/>Espaces de noms</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/les_axes/>Les axes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/etude_dun_exemple_docbook/>Étude d’un exemple (DocBook)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/>Laboratoire XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt_avec_python_optionnel/>Laboratoire XSLT avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/xslt_20_et_30/>XSLT 2.0 et 3.0</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=toggle>
+<label for=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=flex><a role=button class=flex-auto>Semaine 10</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_10/xquery/>XQuery</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_xquery_avec_python_optionnel/>Laboratoire XQuery avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/css/>CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/>Laboratoire CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/les_langages_declaratifs/>Les langages déclaratifs</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/travail_3/>Travail 3</a></li></ul></li><li><input type=checkbox id=section-6d7b5d8190eb01621a1a63639d583071 class=toggle>
+<label for=section-6d7b5d8190eb01621a1a63639d583071 class=flex><a role=button class=flex-auto>Semaine 11</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/>Modèles de programmation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/>Activité JSON/XML avec Jackson</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-da204379f6c471ce99e7d0fb98f947ac class=toggle>
+<label for=section-da204379f6c471ce99e7d0fb98f947ac class=flex><a role=button class=flex-auto>Semaine 12</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom/>DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/autoevaluation_dom/>Autoévaluation DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/>Problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/>Solutions aux problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom_javascript_et_autres_langages/>DOM : JavaScript et autres langages</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/>Asynchronous JavaScript And XML (AJAX)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/json/>JSON</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/yaml/>YAML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/>Docx (Microsoft Word)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/travail_4/>Travail 4</a></li></ul></li><li><input type=checkbox id=section-b751a142c973750b05080598365caf8b class=toggle>
+<label for=section-b751a142c973750b05080598365caf8b class=flex><a role=button class=flex-auto>Semaine 13</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/>Du XML aux graphes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/>Introduction au RDF</a></li></ul></li><li><input type=checkbox id=section-f04b8e776ca9029e58015bccc14ef21b class=toggle>
+<label for=section-f04b8e776ca9029e58015bccc14ef21b class=flex><a role=button class=flex-auto>Semaine 14</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/>Applications du RDF</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/travail_5/>Travail 5</a></li></ul></li><li><input type=checkbox id=section-e29b75c1086e87120d49e87d63a39c0a class=toggle>
+<label for=section-e29b75c1086e87120d49e87d63a39c0a class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>XHTML</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><h1>XHTML</h1><div><h2>Qu'est-ce que le XHTML?</h2><p>Le HTML a été inventé par Tim Berners-Lee, alors qu'il travaillait pour le centre de recherche
+CERN en Suisse. L'intention de Berners-Lee était de proposer un système révolutionnaire de
+gestion de l'information qu'il appela
+<i>World Wide Web
+</i>. Comme pièce maîtresse de son architecture,
+il avait besoin d'un format de documents qu'il appela HTML (
+<i>HyperText Markup Language
+</i>).
+La première page web, dont l'adresse était http://nxoc01.cern.ch/hypertext/WWW/TheProject.html,
+vit le jour en 1990.</p><p>Le HTML est un langage à base de balises, un peu comme une application XML.
+En fait, il existe une application XML appelée XHTML, qui est à la fois du HTML
+et du XML. Le document que vous lisez en ce moment en est un exemple.
+<b>En effet, le document que vous lisez est à la fois du XML bien formé et valable, mais aussi du HTML.</b></p><p>Rappelons qu'une « application XML » est un ensemble de balises et d'attributs,
+c'est-à-dire un vocabulaire XML, avec des conventions d'usage dont certaines
+peuvent être représentées par un document DTD.</p><p>La très grande majorité des documents sur le web sont écrits en HTML et, de plus en plus,
+en XHTML. Une des raisons principales de l'utilisation du XHTML, c'est que les outils qui
+traitent le XML peuvent aussi traiter du XHTML puisque ce dernier est
+aussi du XML. Il est donc possible, dans une organisation, de combiner le contenu web (HTML) avec
+le stockage des informations en XML. Comme nous le verrons plus tard dans le cours
+(module 3, section portant sur le XSLT), on
+peut même transformer automatiquement le XML en XHTML.</p><p>Si on dit « HTML » tout court, ce n'est pas nécessairement du XML et
+il se peut que les outils conçus pour le XML ne puissent être utilisés pour le traiter.
+Cependant, si on dit « XHTML », alors il s'agit à la fois de HTML et de 
+XML et on peut utiliser les outils destinés au XML pour en traiter le contenu.
+Voici quelques différences entre le HTML et le XHTML :</p><p>Les serveurs web distinguent le contenu en fournissant aux navigateurs différents codes MIME (Multipurpose Internet Mail Extensions), alors que le HTML a le code MIME « text/html », on utilise le code MIME « application/xml » ou « application/xhtml+xml » pour le XHTML. Avec le serveur web Apache, on obtient le résultat désiré en
+ajoutant un fichier « .htaccess », dans le même répertoire que nos fichiers XHTML, contenant la ligne « AddType application/xml .xhtml ».</p><ul><li>En HTML traditionnel, on n'a pas à fermer les
+éléments. Ainsi, le code suivant «
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>i
+</span><span style=color:#a65700>>
+</span>texte
+<span style=color:#fff;background:#d00;font-weight:700;font-style:italic>&lt;
+</span><span style=color:#fff;background:#d00;font-weight:700;font-style:italic>/
+</span><span style=color:#fff;background:#d00;font-weight:700;font-style:italic>p
+</span><span style=color:#a65700>>
+</span>» est
+acceptable en HTML, mais en XHTML, il faut écrire
+«<pre><span style=color:#a65700>&lt;</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span><span style=color:#a65700>&lt;</span><span style=color:#5f5035>i</span><span style=color:#a65700>&gt;</span>texte<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>i</span><span style=color:#a65700>&gt;</span><span style=color:#a65700>&lt;/</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span> ».</pre></li><li>Les valeurs d'attributs en HTML n'ont pas à être entre des guillemets ou apostrophes.
+Ainsi, le code «
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>table
+</span><span style=color:#274796>border
+</span><span style=color:#808030>=
+</span><span style=color:#fff;background:#d00;font-weight:700;font-style:italic>0
+</span><span style=color:#fff;background:#d00;font-weight:700;font-style:italic>>
+</span>» est acceptable
+en HTML, mais en XHTML, il faut écrire «
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>table
+</span><span style=color:#274796>border
+</span><span style=color:#808030>=
+</span><span style=color:#0000e6>"
+</span><span style=color:#0000e6>0
+</span><span style=color:#0000e6>"
+</span><span style=color:#a65700>>
+</span>».</li><li>En HTML, la casse des noms est sans importance. Ainsi, on peut remplacer
+« &lt;p> » par « &lt;P> », alors que ce n'est pas permis en XHTML.</li></ul><p>Dans ce cours, nous nous intéresserons surtout au XHTML. Un document XHTML prend la forme suivante :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+Voici mon document.
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><p>On reconnaît d'abord la déclaration XML qui n'a rien de particulier : &lt;?xml version="1.0" encoding="ISO-8859-1" ?>.
+Comme pour tout document XML, on peut omettre la déclaration XML d'un document XHTML,
+mais si nous voulons écrire en français avec des lettres accentuées, il est nettement préférable
+d'avoir la déclaration XML de notre exemple.</p><p>On reconnaît ensuite la déclaration de type de document : &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">.
+Observez qu'elle apparaît sur deux lignes, que c'est souvent le cas, mais que c'est un choix purement esthétique.
+La déclaration de type de document est un peu particulière : il s'agit d'une déclaration utilisant
+un identifiant public. On doit utiliser un tel identifiant
+quand on veut signifier qu'il s'agit d'une application XML commune; on évite ainsi
+que des milliers de personnes aillent chercher des documents DTD à l'adresse
+« http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd ».
+On s'attend qu'un logiciel qui dépend d'une application XML commune
+n'ait pas besoin d'aller chercher les documents DTD, chaque fois que le document XML est lu.
+Un navigateur ne tient généralement pas compte de la DTD externe, on peut donc omettre
+la déclaration DOCTYPE sans problème.</p><p>Le reste du document est simplement un élément-racine « html » contenant deux éléments :
+un élément
+<i>head
+</i>et un élément
+<i>body
+</i>. L'élément
+<i>head
+</i>doit contenir
+un élément
+<i>title
+</i>, alors que l'élément
+<i>body
+</i>peut être vide, mais peut aussi posséder du
+contenu XML mixte (texte et diverses balises XHTML). L'espace de nom ayant l'URI « http://www.w3.org/1999/xhtml »
+est utilisé.</p><p>Si vous copiez le texte qui précède dans un éditeur de texte comme
+<i>Bloc-notes
+</i>et que vous enregistrez le fichier
+sous un nom comme « test.xhtml », vous devriez être capable d'ouvrir le fichier dans votre
+navigateur et de voir le texte « Voici mon document. » s'afficher à l'écran. Les documents HTML sont tous des
+documents en format texte et l'extension du fichier est arbitraire : on utilise tout aussi bien
+« .htm » que « .html », « .xhtml » ou même « .xml ». L'avantage de
+l'extension « .xhtml » est d'informer le navigateur qu'il s'agit d'un document XHTML,
+donc un document HTML et un document XML.</p><h2>La structure du document XHTML :
+<i>head
+</i>et
+<i>body</i></h2><p>Comme nous le disions, l'élément-racine d'un document XHTML est nommé « html ». Cet élément contient
+<b>deux et exactement deux
+</b>sous-éléments :
+<i>head
+</i>et
+<i>body
+</i>. L'élément
+<i>head
+</i>n'est pas affiché directement dans le navigateur et contient des métadonnées, c'est-à-dire une description du contenu.
+Un élément
+<i>head
+</i>doit au minimum contenir un élément
+<i>title
+</i>qui donne le titre du
+document XHTML. Par la suite, l'élément
+<i>body
+</i>contient un ensemble de balises et
+du texte (contenu mixte) qui sera affiché directement dans le navigateur.</p><h2>Les paragraphes en HTML</h2><p>L'élément
+<i>body
+</i>contient des balises et du texte. Les retours de ligne sont traités
+comme des espaces normaux. Ainsi, les deux documents suivants seront affichés
+de la même manière par un navigateur.</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+Voici mon document.
+Voici ma vie.
+Voici mon chat.
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+Voici mon document.
+<p>Voici ma vie.</p>
+<p>Voici mon chat.
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre></p><p>La question qui se pose alors est : Comment faire des paragraphes? En effet, dans les deux documents plus haut, le
+texte s'affichera sur une seule ligne (vous pouvez le tester!). La solution consiste à utiliser l'élément « p » pour
+« paragraphe ». Pour avoir trois paragraphes, on remplace le document HTML précédent par celui qui suit. Observez
+que chaque balise « p » ouverte doit être fermée.</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>Voici mon document.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>Voici ma vie.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>Voici mon chat.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>p</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><h2>Les listes en HTML</h2><p>Supposons que l'on veuille faire une liste, comme ceci :</p><ul><li>Premier point : le chat est noir.</li><li>Second point : le chat est blanc.</li><li>Dernier point : le chat est marron.</li></ul><p>On peut obtenir ce résultat avec un élément « ul » pour
+<i>unordered list
+</i>(liste sans ordre),
+contenant des éléments « li ». Observez que chaque balise « li » ouverte doit être fermée.</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>ul</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Premier point: le chat est noir.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Second point: le chat est blanc.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Dernier point: le chat est marron.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>ul</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><p>Supposons maintenant que nous voulions une liste avec un compteur :</p><ol><li>Le chat est noir.</li><li>Le chat est blanc.</li><li>Le chat est marron.</li></ol><p>Il suffit alors de remplacer l'élément « ul » par l'élément « ol »
+pour
+<i>ordered list
+</i>(liste ordonnée) :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>ol</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Le chat est noir.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Le chat est blanc.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>Le chat est marron.<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>li</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>ol</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><h2>Les tableaux en HTML</h2><p>Supposons maintenant que nous voulions produire un tableau. On peut l'obtenir à l'aide d'un élément
+« table ». Cet élément contiendra plusieurs éléments « tr » (éléments correspondant à une ligne) qui eux-mêmes
+contiennent des éléments « td » (éléments correspondant à une cellule). Ainsi, pour obtenir un tableau comme celui-ci :</p><table border=0 class=tabblanc><tbody><tr><td>Nom</td><td>Valeur</td></tr><tr><td>Mustang</td><td>50 $</td></tr><tr><td>Ferrari</td><td>500 $</td></tr></tbody></table><p>On utilise le code suivant :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>table</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Nom<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Valeur<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Mustang<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>50 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Ferrari<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>500 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>table</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><p>Supposons maintenant que l'on veuille un tableau avec des lignes pour marquer et diviser les cellules. Il suffit alors
+d'utiliser l'attribut « border ». Sa valeur numérique représente l'épaisseur en pixels de la bordure.
+Ainsi, pour obtenir ce résultat :</p><table border=1 class=tabblanc><tbody><tr><td style=border-style:solid>Nom</td><td style=border-style:solid>Valeur</td></tr><tr><td style=border-style:solid>Mustang</td><td style=border-style:solid>50 $</td></tr><tr><td style=border-style:solid>Ferrari</td><td style=border-style:solid>500 $</td></tr></tbody></table><p>On utilisera le code XHTML suivant :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>table</span> <span style=color:#274796>border</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Nom<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Valeur<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Mustang<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>50 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Ferrari<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>500 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>table</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><p>Tous les tableaux ne sont pas si simples. On peut faire en sorte
+qu'une même cellule occupe deux colonnes
+(&lt;td colspan="2">) ou deux rangées (&lt;td rowspan="2">).
+Aussi, souvent, on utilise l'élément « th » au lieu de l'élément « td » pour désigner
+la première rangée d'un tableau lorsque celle-ci forme l'entête
+descriptive du tableau. Il est aussi possible d'utiliser
+un élément « caption » au sein d'un tableau pour
+noter le titre du tableau :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>table</span> <span style=color:#274796>border</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>caption</span><span style=color:#a65700>&gt;</span>Valeur de différents véhicule<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>caption</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>th</span><span style=color:#a65700>&gt;</span>Nom<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>th</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>th</span><span style=color:#a65700>&gt;</span>Valeur<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>th</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Mustang<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>50 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>Ferrari<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>500 $<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>td</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>tr</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>table</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><h2>Les caractères italiques et gras</h2><p>On peut très facilement utiliser des effets de polices de caractères en HTML. Pour obtenir des caractères en italique,
+par exemple
+<i>maman
+</i>, il suffit d'utiliser un élément « i » comme ceci : &lt;i>maman&lt;/i>.
+Pour des caractères en gras, comme
+<b>maman
+</b>, il suffit d'utiliser un élément « b » comme ceci :
+&lt;b>maman&lt;/b>. On peut également combiner les deux, comme
+<b><i>maman
+</i></b>, en écrivant &lt;i>&lt;b>maman&lt;/b>&lt;/i>
+ou bien &lt;b>&lt;i>maman&lt;/i>&lt;/b>. Il est cependant préférable d'utiliser
+« em » (emphase) au lieu de « i » et « strong » (fort) au lieu de « b » : le navigateur choisira alors de
+rendre le texte dans un élément « em » avec un italique ou une autre technique appropriée, et de rendre le texte dans un élément « strong » en caractères gras ou une autre technique appropriée. On évite ainsi de confondre la présentation (italique ou gras) et la sémantique (emphase ou point fort). Dans le cas où un terme est défini, vous devriez utiliser un élément « dfn » (définition) comme dans cet exemple: « La &lt;dfn>mort&lt;/dfn> est la fin de la vie ». La plupart des navigateurs afficheront alors le mot « mort » en caratères italiques.</p><h2>Les listes de définitions</h2><p>Supposons que nous voulions une liste de définitions comme celle qui suit :</p><dl><dt>Voiture</dt><dd>Véhicule sur roues.</dd><dt>Chat</dt><dd>Bête sauvage qui se nourrit de lait.</dd><dt>Éléphant</dt><dd>Bête sauvage de couleur rose.</dd></dl><p>On obtient ce résultat en XHTML avec un élément « dl » pour
+<i>definition list
+</i>contenant
+une série d'éléments « dt » et « dd » en paire, où l'élément « dt » fournit le terme à définir
+et l'élément « dd » sa définition.</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43> </span><span style=color:#004a43>?&gt;</span>
+<span style=color:#004a43>&lt;!</span><span style=color:#004a43>DOCTYPE</span> <span style=color:#004a43>html</span> <span style=color:maroon;font-weight:700>PUBLIC</span> <span style=color:#0000e6>"-//W3C//DTD XHTML 1.0 Strict//EN"</span>
+    <span style=color:#0000e6>"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"</span><span style=color:#004a43>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>html</span> <span style=color:#666616>xmlns</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#666616>http</span><span style=color:purple>:</span><span style=color:maroon;font-weight:700>//</span><span style=color:#55d>www.w3.org</span><span style=color:#40015a>/1999/xhtml</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>Titre de mon document<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>title</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>head</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dl</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>Voiture<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>Véhicule sur roues. <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>Chat<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>Bête sauvage qui se nourrit de lait. <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>Éléphant<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dt</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>Bête sauvage de couleur rose. <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dd</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>dl</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>body</span><span style=color:#a65700>&gt;</span>
+<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>html</span><span style=color:#a65700>&gt;</span>
+</pre><h2>Les lignes horizontales</h2><p>Pour obtenir une ligne horizontale, on utilise l'élément « hr » qui doit être vide. On
+doit donc écrire &lt;hr>&lt;/hr> ou plus simplement &lt;hr />. Voici une ligne horizontale :</p><hr><h2>Les images</h2><p>Au moment d'écrire ces lignes, on trouve un logo de l'UQAM à l'URL</p><pre>https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg.</pre><p>Pour insérer une image dans un document HTML, il suffit d'utiliser une balise « img »
+avec comme attribut « src » pour source, soit l'URL. Par
+exemple, le code</p><pre>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg"&gt;</pre><p>ou</p><pre>&lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg" /&gt;</pre><p>permettra d'insérer le logo de l'UQAM
+dans un document. Il est préférable de prévoir que l'image
+pourrait ne pas être trouvée ou affichée en ajoutant un attribut « alt » qui contient
+du texte décrivant le contenu de l'image; si l'image n'est pas disponible, le texte contenu
+dans l'attribut « alt » s'affichera.
+Le résultat final prend la forme
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg" alt="logo de l'UQAM" />
+ce qui donne :</p><img alt="logo de l'UQAM" src=https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg><h2>Les hyperliens</h2><p>Pour inclure un hyperlien, comme dans l'exemple de la
+<a href=http://www.uqam.ca/>page de l'UQAM
+</a>[lien vers http://www.uqam.ca/], il suffit d'utiliser
+la syntaxe « &lt;a href="http://www.uqam.ca/">page de l'UQAM ».</p><p>On peut également ajouter des marqueurs dans une page web en utilisant
+la syntaxe « &lt;a name="point1">Premier point de mon document&lt;/a> ».
+Contrairement à la syntaxe « &lt;a href="..."> », l'attribut « name »
+n'ajoute pas un hyperlien, mais un marqueur généralement invisible dans la page.
+Par exemple, si la page contient plusieurs sections, on peut ajouter un marqueur au début de chaque section.
+On pourra alors faire des liens non seulement vers le document, mais aussi vers la section marquée dans le document.
+Ainsi, l'hyperlien « &lt;a href="pageweb.html#point1">aller vers le premier point du document pageweb.html&lt;/a> »
+mènera l'utilisateur dans le document « pageweb.html », précisément au marqueur du « point 1 »,
+s'il existe, évidemment.</p><h2>Les abbréviations</h2><p>On utilise parfois des abbréviations dans une page web tel que « etc. » ou « no ». On peut indiquer au navigateur qu'il
+s'agit d'une abbréviation avec un élément abbr comme ceci : « &lt;abbr>no&lt;/abbr> ». Il est parfois utile d'utiliser
+l'attribut « title » pour décrire l'abbréviation en question
+comme dans ceci : « &lt;abbr title="numéro">no&lt;/abbr> ». De la même façon, on peut noter les acronymes avec un élément « acronym » comme
+ceci : « &lt;acronym title="Organisation du traité de l'Atlantique Nord">OTAN&lt;/acronym> ».</p><h2>Les adresses</h2><p>Il est fréquent qu'une page web contienne un adresse. Le XHTML nous permet
+d'indiquer au navigateur qu'il s'agit bien d'une adresse avec l'élément « address », comme ceci :
+« &lt;address>
+Daniel Lemire&lt;br />
+100, rue Sherbrooke
+&lt;/address> ». Ici, l'élément « br » sert à noter un retour de charriot.</p><h2>Les indices et exposants</h2><p>Dans un texte, il arrive qu'on veuille utiliser des exposants
+et des indices. Les éléments « sup » et « sub » servent à cette fonction.
+Par exemple, « premier » peut s'écrit « 1
+<sup>er
+</sup>». Il n'est malheureusement pas possible de noter automatiquement des notes en bas de page en HTML ou XHTML.</p><h2>Le code et les exemples</h2><p>Il y a plusieurs éléments permettant de traiter de la programmation informatique ou des mathématiques. Le code informatique peut s'écrire dans un élément « code ».
+Le texte saisi à l'écran par un utilisateur peut s'écrire dans un élément « kbd ».
+Les exemples de sortie à l'écran peuvent s'écrire dans un élément « samp » (pour sample) et les variables peuvent s'écrire dans un élément « var ». Voici un exemple : «
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>La valeur de la variable
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>var
+</span><span style=color:#a65700>>
+</span>i
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>var
+</span><span style=color:#a65700>>
+</span>est obtenue avec ce code:
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>code
+</span><span style=color:#a65700>>
+</span>int i = 1; i+=1
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>code
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>On s'attend à ce que l'utilisateur tape
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>kbd
+</span><span style=color:#a65700>>
+</span>Yes
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>kbd
+</span><span style=color:#a65700>>
+</span>pour oui. Voici un exemple de résultat:
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>samp
+</span><span style=color:#a65700>>
+</span>Error!
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>samp
+</span><span style=color:#a65700>>
+</span>.
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>».</p><h2>Les citations</h2><p>Pour citer quelqu'un, on peut utiliser un élément « q » lorsqu'il s'agit d'un courte citation au sein d'un paragraphe ou élément « blockquote » lorsque la citation doit former un court paragraphe. Plusieurs navigateur mettent automatiquement le contenu de l'élément « q » entre guillemets et le contenu de l'élément « blockquote » en retrait. Voici un exemple : «
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>Jean a dit:
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>q
+</span><span style=color:#a65700>>
+</span>mon cher!
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>q
+</span><span style=color:#a65700>>
+</span>. Par la suite, je lui ai lu ce texte fatidique.
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>blockquote
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>Oh! Comme la mer a merée! Oh! Comme j'ai jéjé!
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>blockquote
+</span><span style=color:#a65700>>
+</span>».</p><h2>Les révisions</h2><p>Les éléments del et ins permettent de noter un retrait et un ajout, respectivement, comme dans cet exemple:</p><pre>J'ai <span style=color:#a65700>&lt;</span><span style=color:#5f5035>del</span><span style=color:#a65700>&gt;</span>marié<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>del</span><span style=color:#a65700>&gt;</span><span style=color:#a65700>&lt;</span><span style=color:#5f5035>ins</span><span style=color:#a65700>&gt;</span>épousé<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>ins</span><span style=color:#a65700>&gt;</span> ta mère
+</pre>Le navigateur se
+chargera d'afficher les retraits et les ajouts de manière compréhensible.<p></p><h2>La langue</h2><p>Le XHTML respecte la spécification XML voulant qu'on indique
+la langue dans laquelle est écrite un texte avec l'attribute « xml:lang ». Cet attribut est optionnel, mais peut
+s'avérer pratique. Dans le cas où un texte
+en langue étrangère est présent dans un paragraphe, on peut utiliser
+l'élément « span » pour en indiquer la langue.
+Voici un exemple :
+«
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>p
+</span><span style=color:#666616>xml
+</span><span style=color:purple>:
+</span><span style=color:#074726>lang
+</span><span style=color:#808030>=
+</span><span style=color:#0000e6>"
+</span><span style=color:#0000e6>fr-CA
+</span><span style=color:#0000e6>"
+</span><span style=color:#a65700>>
+</span>Jean aime les
+<span style=color:#a65700>&lt;
+</span><span style=color:#5f5035>span
+</span><span style=color:#666616>xml
+</span><span style=color:purple>:
+</span><span style=color:#074726>lang
+</span><span style=color:#808030>=
+</span><span style=color:#0000e6>"
+</span><span style=color:#0000e6>en-US
+</span><span style=color:#0000e6>"
+</span><span style=color:#a65700>>
+</span>computers
+<span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>span
+</span><span style=color:#a65700>>
+</span><span style=color:#a65700>&lt;/
+</span><span style=color:#5f5035>p
+</span><span style=color:#a65700>>
+</span>». L'élément « span »
+ne sert qu'à nous permettre de sélectionner un texte
+au sein d'un autre élément.</p><h2>Les commentaires</h2><p>Ajouter des commentaires en XHTML est facile. Les commentaires
+du XML s'appliquent: il suffit de débuter le commentaire par &lt;!-- et
+de le terminer par -->. Il n'est pas permis d'inclure au sein d'un
+commentaire deux tirets (--) ni de terminer un commentaire par un tiret.</p><h2>Séparation du contenu et de la présentation</h2><p>Avec le XHTML, on peut contrôler en partie l'apparence du texte, en utilisant
+des italiques ou en plaçant des bordures dans nos tableaux. Ce contrôle est cependant limité :
+on ne peut pas ajuster l'indentation des paragraphes et on ne peut que difficilement ajuster les marges de la page.
+Nous verrons au module 3, dans la section sur le CSS, qu'il existe une façon élégante d'y arriver.</p><h2>Convertir du HTML mal formé</h2><p>Dans une organisation, il est fréquent d'avoir à composer avec des sites web
+qui ne respectent pas les normes les plus élémentaires. Réécrire le HTML en XHTML
+peut sembler une tâche très ardue. Heureusement, il existe des outils gratuits
+pour corriger du HTML mal formé et générer automatiquement un XHTML valable, comme
+par exemple HTMLTidy (
+<a href=http://tidy.sourceforge.net/>http://tidy.sourceforge.net/
+</a>).
+Le W3C rend aussi disponible un outil de vérification en ligne des sites web pour
+s'assurer de leur conformité avec les normes (
+<a href=http://validator.w3.org/>http://validator.w3.org/
+</a>).
+Vous pourrez facilement constater que plusieurs pages à l'UQAM ne sont pas du HTML valable,
+y compris certaines pages web de ce cours !</p><h2>Spécification Relax NG</h2><p>Il existe des définitions de type de document
+officielle pour le XHML, mais elles sont longues et
+peu lisible. Sean B. Palmer a écrit une spécification
+Relax NG pour un sous-ensemble du XHTML que je
+reproduis ici avec permission.
+Je vous invite à vérifier que vous pouvez
+en comprendre l'essentiel.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;grammar</span> <span style=color:#1f2328>xmlns=</span><span style=color:#0a3069>&#34;http://relaxng.org/ns/structure/1.0&#34;</span>
+</span></span><span style=display:flex><span>         <span style=color:#1f2328>datatypeLibrary=</span><span style=color:#0a3069>&#34;http://www.w3.org/2001/XMLSchema-datatypes&#34;</span>
+</span></span><span style=display:flex><span>         <span style=color:#1f2328>ns=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/xhtml&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;start&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;html&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/start&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#57606a>&lt;!-- Common attribute groups --&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Core.attrs&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;id&#34;</span><span style=color:#0550ae>&gt;&lt;data</span> <span style=color:#1f2328>type=</span><span style=color:#0a3069>&#34;ID&#34;</span><span style=color:#0550ae>/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;class&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;style&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;title&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;xml:lang&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dir&#34;</span><span style=color:#0550ae>&gt;&lt;choice&gt;&lt;value&gt;</span>ltr<span style=color:#0550ae>&lt;/value&gt;&lt;value&gt;</span>rtl<span style=color:#0550ae>&lt;/value&gt;&lt;/choice&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Core.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;onclick&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#57606a>&lt;!-- Content models --&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;BlockMinusForm&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;address&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;blockquote&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;del&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;div.elem&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dl&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h1&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h2&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h3&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;hr&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ins&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ol&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;p&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;pre&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;script&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;table&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ul&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Block&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;BlockMinusForm&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;form&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;InlineMinusMedia&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;a&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;abbr&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;br&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;code&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;del&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;em&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;input&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ins&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;label&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;script&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;span&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;strong&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sub&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sup&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;textarea&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;text/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;InlineMinusMedia&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;img&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;object&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Block&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#57606a>&lt;!-- Elements --&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;html&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;html&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;head&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;body&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;head&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;head&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;profile&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;title&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;base&#34;</span><span style=color:#0550ae>/&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;interleave&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;script&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;style&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;meta&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;link&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/interleave&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;title&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;title&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;text/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;base&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;base&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;href&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;meta&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;meta&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;content&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;name&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;link&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;link&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;href&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;rel&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;type&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;style&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;style&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;I18n.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;type&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;title&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;text/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;script&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;script&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;type&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;src&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;text/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;body&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;body&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;onload&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Block&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;div.elem&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;div&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;p&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;p&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h1&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h1&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h2&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h2&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h3&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;h3&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ul&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ul&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;oneOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;li&#34;</span><span style=color:#0550ae>/&gt;&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ol&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ol&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;oneOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;li&#34;</span><span style=color:#0550ae>/&gt;&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;li&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;li&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dl&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dl&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;group&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dt&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;oneOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dd&#34;</span><span style=color:#0550ae>/&gt;&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/group&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dt&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dt&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dd&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;dd&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;address&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;address&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;hr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;hr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;pre&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;pre&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;InlineMinusMedia&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;blockquote&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;blockquote&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Block&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ins&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;ins&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;del&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;del&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;a&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;a&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;href&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;rel&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;interleave&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;text/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;img&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;zeroOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;span&#34;</span><span style=color:#0550ae>/&gt;&lt;/zeroOrMore&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/interleave&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;span&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;span&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;br&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;br&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Core.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;em&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;em&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;strong&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;strong&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;code&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;code&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cite&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;abbr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;abbr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sub&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sub&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sup&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;sup&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;object&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;object&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;data&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;type&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;img&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;img&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;alt&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;src&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;height&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;width&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;form&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;form&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;action&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;method&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;BlockMinusForm&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;label&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;label&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;input&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;input&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;type&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;value&gt;</span>text<span style=color:#0550ae>&lt;/value&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;value&gt;</span>submit<span style=color:#0550ae>&lt;/value&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;value&gt;</span>hidden<span style=color:#0550ae>&lt;/value&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;name&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;size&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;value&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;empty/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;textarea&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;textarea&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;cols&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;rows&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;attribute</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;name&#34;</span><span style=color:#0550ae>&gt;&lt;text/&gt;&lt;/attribute&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;text/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;table&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;table&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;optional&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;caption&#34;</span><span style=color:#0550ae>/&gt;&lt;/optional&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;oneOrMore&gt;&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;tr&#34;</span><span style=color:#0550ae>/&gt;&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;caption&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;caption&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Inline&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;tr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;tr&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;choice&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;th&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;td&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/choice&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;/oneOrMore&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;th&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;th&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;define</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;td&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;element</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;td&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Main.attrs&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#0550ae>&lt;ref</span> <span style=color:#1f2328>name=</span><span style=color:#0a3069>&#34;Flow&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/element&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#0550ae>&lt;/define&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/grammar&gt;</span>
+</span></span></code></pre></div><h2>Conclusion</h2><p>Le XHTML est un vocabulaire XML.
+Vous pouvez en consulter la DTD en ligne, à l'adresse http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd;
+il ne s'agit pas d'une DTD facile à lire, mais elle est néanmoins disponible.
+Notez qu'il existe de très bons livres de référence pour approfondir le XHTML, mais
+pour ce cours, il suffit de connaître les quelques balises présentées dans ce document.</p><p>Un des avantages importants du XHTML sur des pages web traditionnelles (souvent mal formées)
+est qu'on peut facilement traiter des pages XHTML avec des outils destinés au XML. En somme, on peut plus facilement extraire et traiter l'information d'une page XHTML
+que l'on peut le faire d'une page HTML mal formée.</p><h2>Livres de référence</h2><ul><li>Jennifer Robbins,
+<a href="http://www.amazon.ca/HTML-XHTML-Pocket-Reference-Robbins/dp/0596527276/sr=1-6/qid=1159624221/ref=sr_1_6/702-1271204-2832035?ie=UTF8&amp;s=books">HTML and XHTML Pocket Reference
+</a>, O'Reilly Media, 2006, 97 pages.</li><li>Jean Engels,
+<a href="http://www.amazon.ca/Xhtml-css-exercices-Jean-Engels/dp/2212116373/sr=1-1/qid=1159624092/ref=sr_1_1/702-1271204-2832035?ie=UTF8&amp;s=books-en-francais">XHTML et css : cours et exercices
+</a>, Eyrolles, 2006.</li></ul><h2>Activité d'autoévaluation</h2><p>Afin de vous assurez d'avoir bien compris les notions présentées dans cette leçon, vous devez créer un document XHTML valable, utilisant les différents éléments que nous avons étudiés. Afin que votre navigateur reconnaisse le document comme étant du XHTML, vous devriez utiliser l'extension « xhtml ». Si vous déposez le fichier sur un serveur web Apache, il peut être nécessaire de créer aussi un fichier « .htaccess » et de le déposer dans
+le même répertoire que votre fichier XHTML afin que le serveur puisse reconnaître
+les fichiers XHTML. Votre fichier « .htaccess » pourrait avoir le contenu suivant :</p><pre>DirectoryIndex index.xhtml index.html index.php index.pl index.cgi
+AddType application/xml .xhtml
+</pre></div><hr></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_3/travail_1/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Travail 1">
+<span>Travail 1</span>
+</a><a href=/inf6450-hugo/docs/semaines/semaine_4/html_5/ class="flex align-center float-right book-icon"><span>HTML 5</span>
+<img src=/inf6450-hugo/svg/forward.svg alt=Next title="HTML 5"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>

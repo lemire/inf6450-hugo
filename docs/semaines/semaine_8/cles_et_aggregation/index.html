@@ -1,0 +1,252 @@
+<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='
+ Clés et aggrégation
+
+
+ Obtenir l&#39;aggrégation avec la fonction
+    « generate-id »
+
+
+ Supposons qu&#39;on veuille calculer le total des
+    éléments « quantite », mais en faisant l&#39;aggrégation
+    pour chaque valeur de l&#39;attribut « type » dans l&#39;exemple suivant.
+
+
+ <?xml version="1.0" encoding="ISO-8859-1"?>
+    <?xml-stylesheet href="produits.xsl" type="text/xsl" ?>
+    <produits>
+    <france>
+    <quantite type="bain">53</quantite>
+    <quantite type="chambre">12</quantite>
+    </france>
+    <canada>
+    <quantite type="bain">14</quantite>
+    <quantite type="chambre">12</quantite>
+    </canada>
+    </produits>
+
+
+ On pourrait tenter de résoudre ce problème avec une expression
+    XPath de la forme « sum(//quantite[@type=current()/@type]) ».
+    Malheureusement, on risque
+    alors de calculer plusieurs fois la même somme. Par exemple, tentez
+    d&#39;appliquer
+    la transformation suivante :
+'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="Clés et aggrégation"><meta property="og:description" content='Clés et aggrégation Obtenir l&#39;aggrégation avec la fonction « generate-id » Supposons qu&#39;on veuille calculer le total des éléments « quantite », mais en faisant l&#39;aggrégation pour chaque valeur de l&#39;attribut « type » dans l&#39;exemple suivant. <?xml version="1.0" encoding="ISO-8859-1"?> <?xml-stylesheet href="produits.xsl" type="text/xsl" ?> <produits> <france> <quantite type="bain">53</quantite> <quantite type="chambre">12</quantite> </france> <canada> <quantite type="bain">14</quantite> <quantite type="chambre">12</quantite> </canada> </produits> On pourrait tenter de résoudre ce problème avec une expression XPath de la forme « sum(//quantite[@type=current()/@type]) ». Malheureusement, on risque alors de calculer plusieurs fois la même somme. Par exemple, tentez d&#39;appliquer la transformation suivante :'><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Clés et aggrégation | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.404ed02339d2d5426e41a3dfb7f7d97d5856d49e3b81cc7db3aeee0980357f55.js integrity="sha256-QE7QIznS1UJuQaPft/fZfVhW1J47gcx9s67uCYA1f1U=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/inf6450-hugo/><img src=/inf6450-hugo/xml.jpg alt=Logo class=book-icon><span>INF 6450 - Gestion de l'information avec XML</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Rechercher aria-label=Rechercher maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/inf6450-hugo/docs/professeur/>Pense-bête DTD</a></li><li><span>Semaines</span><ul><li><input type=checkbox id=section-7441693393d20b821fe8b37c5a6f7cf2 class=toggle>
+<label for=section-7441693393d20b821fe8b37c5a6f7cf2 class=flex><a href=/inf6450-hugo/docs/semaines/semaine_1/ class=flex-auto>Semaine 1</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/>Installation d’un navigateur moderne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/>Créer un fichier XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/>Introduction à XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/>Principes du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/>Encodage des caractères Unicode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/>Mise en forme du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/>Laboratoire sur la structure en arbre des documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/>Petit guide d’usage du courriel efficace</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-af40a75de7e5184983fffc4ff12ae982 class=toggle>
+<label for=section-af40a75de7e5184983fffc4ff12ae982 class=flex><a role=button class=flex-auto>Semaine 2</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/>Définition de type de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/>Validation de documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-19fac9b87d4af3855d770f5f0a1ea19e class=toggle>
+<label for=section-19fac9b87d4af3855d770f5f0a1ea19e class=flex><a role=button class=flex-auto>Semaine 3</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/>Espace de nom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/>Le fichier pom.xml en Java</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/>Le fichier sitemap.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/>Les fichiers csproj en C#</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/rss/>Les formats RSS et Atom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/>Le fichier AndroidManifest.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/travail_1/>Travail 1</a></li></ul></li><li><input type=checkbox id=section-f5606a0b5813317643cf57b4b6e8a8e4 class=toggle>
+<label for=section-f5606a0b5813317643cf57b4b6e8a8e4 class=flex><a role=button class=flex-auto>Semaine 4</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_4/xhtml/>XHTML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/html_5/>HTML 5</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/mathml/>MathML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/svg/>SVG</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/base64/>Base64</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/markdown/>MarkDown</a></li></ul></li><li><input type=checkbox id=section-ea112c6c027e8be5b72462b07efbd404 class=toggle>
+<label for=section-ea112c6c027e8be5b72462b07efbd404 class=flex><a role=button class=flex-auto>Semaine 5</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_5/format_de_document/>Format de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/>Familiarisation avec EPUB</a></li></ul></li><li><input type=checkbox id=section-63939a07d015168789e352a75a400204 class=toggle>
+<label for=section-63939a07d015168789e352a75a400204 class=flex><a role=button class=flex-auto>Semaine 6</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/>Les documents EPUB</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/>Utilisation de Sigil et de Thorium</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/>Des pages web dynamiques avec JavaScript</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/travail_2/>Travail 2</a></li></ul></li><li><input type=checkbox id=section-ab34f94bdc2e263dca825db6224ae341 class=toggle>
+<label for=section-ab34f94bdc2e263dca825db6224ae341 class=flex><a role=button class=flex-auto>Semaine 7</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/>XPath : un premier laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_approfondissement/>XPath : approfondissement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/>XPath : second laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/>XPath 2.0 et 3.0</a></li></ul></li><li><input type=checkbox id=section-c9fff26212e55a28630558b97c972fce class=toggle checked>
+<label for=section-c9fff26212e55a28630558b97c972fce class=flex><a role=button class=flex-auto>Semaine 8</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_8/introduction_au_xslt/>Introduction au XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne/>XSLT en ligne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/>Un peu plus de XSLT : fonctionnement de base, template et value-of</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/>Les valeurs d’attribut</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/>XSLT modulaire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/>Les noms d’éléments</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/>Attribut mode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/>La fonction generate-id</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_tests/>Les tests</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_boucles/>Les boucles</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/ class=active>Clés et aggrégation</a></li></ul></li><li><input type=checkbox id=section-9b8667613d67aeb0609307ae83a17fa7 class=toggle>
+<label for=section-9b8667613d67aeb0609307ae83a17fa7 class=flex><a role=button class=flex-auto>Semaine 9</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/>Générer des noeuds dynamiquement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/variables_et_parametres/>Variables et paramètres</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/>Mise en forme</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/>Espaces de noms</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/les_axes/>Les axes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/etude_dun_exemple_docbook/>Étude d’un exemple (DocBook)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/>Laboratoire XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt_avec_python_optionnel/>Laboratoire XSLT avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/xslt_20_et_30/>XSLT 2.0 et 3.0</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=toggle>
+<label for=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=flex><a role=button class=flex-auto>Semaine 10</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_10/xquery/>XQuery</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_xquery_avec_python_optionnel/>Laboratoire XQuery avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/css/>CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/>Laboratoire CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/les_langages_declaratifs/>Les langages déclaratifs</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/travail_3/>Travail 3</a></li></ul></li><li><input type=checkbox id=section-6d7b5d8190eb01621a1a63639d583071 class=toggle>
+<label for=section-6d7b5d8190eb01621a1a63639d583071 class=flex><a role=button class=flex-auto>Semaine 11</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/>Modèles de programmation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/>Activité JSON/XML avec Jackson</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-da204379f6c471ce99e7d0fb98f947ac class=toggle>
+<label for=section-da204379f6c471ce99e7d0fb98f947ac class=flex><a role=button class=flex-auto>Semaine 12</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom/>DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/autoevaluation_dom/>Autoévaluation DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/>Problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/>Solutions aux problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom_javascript_et_autres_langages/>DOM : JavaScript et autres langages</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/>Asynchronous JavaScript And XML (AJAX)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/json/>JSON</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/yaml/>YAML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/>Docx (Microsoft Word)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/travail_4/>Travail 4</a></li></ul></li><li><input type=checkbox id=section-b751a142c973750b05080598365caf8b class=toggle>
+<label for=section-b751a142c973750b05080598365caf8b class=flex><a role=button class=flex-auto>Semaine 13</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/>Du XML aux graphes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/>Introduction au RDF</a></li></ul></li><li><input type=checkbox id=section-f04b8e776ca9029e58015bccc14ef21b class=toggle>
+<label for=section-f04b8e776ca9029e58015bccc14ef21b class=flex><a role=button class=flex-auto>Semaine 14</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/>Applications du RDF</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/travail_5/>Travail 5</a></li></ul></li><li><input type=checkbox id=section-e29b75c1086e87120d49e87d63a39c0a class=toggle>
+<label for=section-e29b75c1086e87120d49e87d63a39c0a class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>Clés et aggrégation</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><h1>Clés et aggrégation</h1><h2 class=recall>Obtenir l'aggrégation avec la fonction
+« generate-id »</h2><p>Supposons qu'on veuille calculer le total des
+éléments « quantite », mais en faisant l'aggrégation
+pour chaque valeur de l'attribut « type » dans l'exemple suivant.</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;?xml-stylesheet href="produits.xsl" type="text/xsl" ?>
+&lt;produits>
+&lt;france>
+&lt;quantite type="bain">53&lt;/quantite>
+&lt;quantite type="chambre">12&lt;/quantite>
+&lt;/france>
+&lt;canada>
+&lt;quantite type="bain">14&lt;/quantite>
+&lt;quantite type="chambre">12&lt;/quantite>
+&lt;/canada>
+&lt;/produits></p><p>On pourrait tenter de résoudre ce problème avec une expression
+XPath de la forme « sum(//quantite[@type=current()/@type]) ».
+Malheureusement, on risque
+alors de calculer plusieurs fois la même somme. Par exemple, tentez
+d'appliquer
+la transformation suivante :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+&lt;xsl:template match="produits">
+&lt;html>
+&lt;body>
+&lt;xsl:apply-templates select="*" />
+&lt;/body>
+&lt;/html>
+&lt;/xsl:template>
+&lt;xsl:template match="quantite">
+&lt;p>
+&lt;xsl:value-of select="@type" />
+- &lt;xsl:value-of select="sum(//quantite[@type=current()/@type])" />
+&lt;/p>
+&lt;/xsl:template>
+&lt;/xsl:stylesheet></p><p>Vous obtiendrez alors le résultat suivant :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;html>&lt;body>
+&lt;p>bain
+- 67&lt;/p>
+&lt;p>chambre
+- 24&lt;/p>
+&lt;p>bain
+- 67&lt;/p>
+&lt;p>chambre
+- 24&lt;/p>
+&lt;/body>&lt;/html></p><p>Pour calculer la somme qu'une seule fois pour chaque valeur de l'attribut
+type,
+on pourrait ne faire le calcul que la première fois qu'on rencontre une
+valeur
+d'attribut donnée. L'expression XPath « //quantite[@type=x] »
+représente
+l'ensemble des éléments quantite ayant un attribut de valeur x.
+L'expression « //quantite[@type=x][1] » nous donne le premier
+élément de ce type
+rencontré.
+On pourrait penser que l'expression XPath
+« //quantite[@type=x][1]=current() » permet
+de déterminer si le nœud courant est le premier. Malheureusement,
+cette expression XPath vérifie plutôt si les deux éléments ont le même
+contenu.
+Comme nous avons deux éléments quantite ayant le même contenu dans notre
+exemple,
+cette solution ne suffit pas.
+La fonction generate-id quant à elle associe un identifiant unique à chaque
+nœud d'un
+document XML et permet donc de distinguer les éléments entre eux même
+lorsqu'ils ont le même contenu.
+L'expression
+« //quantite[@type=current()/@type]) » donne la séquence de tous
+les éléments quantite ayant un attribut type de même valeur que l'élément
+courant,
+alors que
+« (//quantite[@type=current()/@type])[1] »
+sélectionne le premier de cette liste.
+On peut vérifier si l'élément « quantite » est le premier
+du document ayant un certain type avec la fonction « generate-id »
+et l'expression « generate-id((//quantite[@type=current()/@type])[1])
+= generate-id(.) ».
+On peut aussi vérifier que c'est le dernier
+avec l'expression
+« generate-id((//quantite[@type=current()/@type])[last()])
+= generate-id(.) ». En utilisant cette astuce, on peut obtenir
+l'aggrégation
+souhaitée avec le programme XSLT suivant où l'on fait la somme seulement
+pour le premier élément rencontré ayant un certain type :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+&lt;xsl:template match="produits">
+&lt;html>
+&lt;body>
+&lt;xsl:apply-templates select="*" />
+&lt;/body>
+&lt;/html>
+&lt;/xsl:template>
+&lt;xsl:template match="quantite">
+&lt;xsl:if
+test="generate-id((//quantite[@type=current()/@type])[1])
+= generate-id(.)" >
+&lt;p>
+&lt;xsl:value-of select="@type" />
+- &lt;xsl:value-of select="sum(//quantite[@type=current()/@type])" />
+&lt;/p>
+&lt;/xsl:if>
+&lt;/xsl:template>
+&lt;/xsl:stylesheet></p><p>On peut appliquer cette technique à notre exemple de la section précédente
+avec
+les vendeurs et les clients. La transformation suivante permet de ne
+calculer la fréquence
+de chaque client qu'une seule fois.</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+&lt;xsl:template match="listes">
+&lt;html>&lt;body>&lt;ul>
+&lt;xsl:apply-templates select="*" />
+&lt;/ul>&lt;/body>&lt;/html>
+&lt;/xsl:template>
+&lt;xsl:template match="vendeur">
+&lt;xsl:apply-templates select="*" />
+&lt;/xsl:template>
+&lt;xsl:template match="client">
+&lt;xsl:if
+test="generate-id(.)=generate-id(//client[nom=current()/nom][1])">
+&lt;li>&lt;xsl:value-of select="nom" />:
+&lt;xsl:value-of select="count(//client[nom=current()/nom])"
+/>&lt;/li>
+&lt;/xsl:if>
+&lt;/xsl:template>
+&lt;/xsl:stylesheet></p><p>Le résultat de cette transformation donne une liste désordonnée de
+clients :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;html>&lt;body>&lt;ul>
+&lt;li>Jacques:
+1&lt;/li>
+&lt;li>Sylvain:
+2&lt;/li>
+&lt;li>Claude:
+1&lt;/li>
+&lt;li>Yvon:
+2&lt;/li>
+&lt;li>Arthur:
+1&lt;/li>
+&lt;li>Claudette:
+1&lt;/li>
+&lt;/ul>&lt;/body>&lt;/html></p><p>On peut trier le nom des clients en utilisant un
+élément xsl:sort :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+&lt;xsl:template match="listes">
+&lt;html>&lt;body>&lt;ul>
+&lt;xsl:for-each select="//client" >
+&lt;xsl:sort select="nom" order="ascending" data-type="text" />
+&lt;xsl:if
+test="generate-id(.)=generate-id(//client[nom=current()/nom][1])">
+&lt;li>&lt;xsl:value-of select="nom" />:
+&lt;xsl:value-of select="count(//client[nom=current()/nom])"
+/>&lt;/li>
+&lt;/xsl:if>
+&lt;/xsl:for-each>
+&lt;/ul>&lt;/body>&lt;/html>
+&lt;/xsl:template>
+&lt;/xsl:stylesheet></p><h3 class=recall>Un peu plus de performance avec la fonction XSLT
+« key »</h3><p>Le problème avec l'utilisation d'expressions XPath telles que
+//client[nom=current()/nom] est qu'elles peuvent s'avérer coûteuses en temps
+de calcul si on les utilisent à répétition. Afin d'accélérer les choses
+et simplifier un peu nos programmes, on peut créer un
+<a href=http://fr.wikipedia.org/wiki/Table_associative shape=rect>tableau associatif
+</a>avec l'élément xsl:key et sa
+fonction correspondante key. Un tableau
+associatif est simplement une structure de donnée qui associe à chaque clef
+ou au plusieurs
+valeurs. Puisque ce tableau est construit une seule fois lorsque le
+processeur rencontre
+l'élément xsl:key, le processeur XSLT n'a pas à visiter les nœuds du
+document plusieurs fois.
+L'élément xsl:key comprend trois attributs incluant le nom du tableau
+associative (name),
+les clefs à inclure (use) et les nœuds à traiter (match). L'instruction
+&lt;xsl:key name="montableau" match="client" use="nom"/> va créer un
+tableau associatif
+s'appelant montableau et qui associe à chaque valeur client/nom l'élément
+nom correspondant.
+La fonction key quant à elle prend deux paramètres incluant le nom du
+tableau et la valeur
+de la clef. À titre d'exemple, la transformation suivante permet de calculer
+la fréquence
+de chaque client comme à la question précédente, mais en utilisant un
+tableau associatif :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
+&lt;xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+&lt;xsl:key name="montableau" match="client" use="nom"/>
+&lt;xsl:template match="listes">
+&lt;html>&lt;body>&lt;ul>
+&lt;xsl:for-each select="//client" >
+&lt;xsl:sort select="nom" order="ascending" data-type="text" />
+&lt;xsl:if test="generate-id(.)=generate-id(key('montableau',nom)[1])">
+&lt;li>&lt;xsl:value-of select="nom" />:
+&lt;xsl:value-of select="count(//client[nom=current()/nom])"
+/>&lt;/li>
+&lt;/xsl:if>
+&lt;/xsl:for-each>
+&lt;/ul>&lt;/body>&lt;/html>
+&lt;/xsl:template>
+&lt;/xsl:stylesheet></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_8/les_boucles/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Les boucles">
+<span>Les boucles</span>
+</a><a href=/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/ class="flex align-center float-right book-icon"><span>Générer des noeuds dynamiquement</span>
+<img src=/inf6450-hugo/svg/forward.svg alt=Next title="Générer des noeuds dynamiquement"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 6 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/</link><description>Recent content in Semaine 6 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/index.xml" rel="self" type="application/rss+xml"/><item><title>Les documents EPUB</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/</guid><description>&lt;h1 id="les-documents-epub"&gt;
+ Les documents EPUB
+ &lt;a class="anchor" href="#les-documents-epub"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le livre électronique émerge comme norme dans l’édition. Bien qu’il existe plusieurs formats possibles, nous allons nous concentrer plus particulièrement dans ce cours sur le format EPUB qui est souvent utilisé. Il est notamment supporté par les plateformes iBooks d’Apple, &lt;a href="https://en.wikipedia.org/wiki/Kobo_Inc."&gt;Kobo&lt;/a&gt;, etc. Amazon utilise un format similaire pour le Kindle, mais comme il est propre à Amazon, nous ne nous y attarderons pas.&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Le format EPUB peut être décrit sommairement comme du XHTML que l’on place dans une archive compressée zip. On peut se demander pourquoi les éditeurs préfèrent un tel format à quelque chose d’autre, comme le format PDF. Le format PDF est malheureusement mal adapté aux livres électroniques parce qu’il suppose que le document sera imprimé sur papier. Il comporte donc une notion fixée d’avance de page. Dans une liseuse électronique, la taille de la page dépend de la taille de l’écran et des goûts du lecteur.&lt;/p&gt;</description></item><item><title>Utilisation de Sigil et de Thorium</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/</guid><description>&lt;h1&gt;
+ Utilisation de Sigil et de Thorium
+&lt;/h1&gt;
+&lt;h2&gt;
+ Sigil
+&lt;/h2&gt;
+&lt;p&gt;
+ Créer un fichier EPUB manuellement est un peu lourd. Ce n’est pas une
+ opération particulièrement difficile, mais il faut créer quelques fichiers
+ et les placer au bon endroit. Il est facile de faire des erreurs.
+&lt;/p&gt;
+&lt;p&gt;
+ Au lieu de cela, nous allons utiliser un éditeur dédié nommé Sigil. Vous
+ devez donc commencer par installer Sigil sur votre ordinateur :
+&lt;/p&gt;
+&lt;p&gt;
+ &lt;a class="spip_url spip_out auto" href="https://github.com/user-none/Sigil/releases" rel="noopener noreferrer nofollow external" target="_blank"&gt;
+ https://github.com/user-none/Sigil/releases
+ &lt;/a&gt;
+&lt;/p&gt;</description></item><item><title>Des pages web dynamiques avec JavaScript</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</guid><description>&lt;h1 class=""&gt;
+ Des pages web dynamiques avec JavaScript
+&lt;/h1&gt;
+&lt;div class=""&gt;
+ &lt;p&gt;
+ Dans ce cours, vous serez amené à utiliser le language JavaScript, aussi parfois appelé JavaScript. Il s’agit du langage de programmation utilisé par tous les navigateurs au sein des pages.
+ &lt;/p&gt;
+ &lt;p&gt;
+ Même s’il s’agit d’un langage de programmation complètement différent du Java, la syntaxe est similaire. Puisque vous maîtrisez Java, vous devriez être capable d’utiliser le JavaScript sans grand mal.
+ &lt;/p&gt;
+ &lt;p&gt;
+ Il n’est pas nécessaire de devenir un exemple en la matière, mais nous vous invitons tout de même à vous familiariser avec la langage au besoin. Un point d’entrée est le livre en ligne
+ &lt;a class="spip_out" href="https://fr.wikibooks.org/wiki/Programmation_JavaScript" rel="noopener noreferrer external" target="_blank"&gt;
+ Programmation JavaScript
+ &lt;/a&gt;
+ chez wikibooks (gratuit).
+ &lt;/p&gt;</description></item><item><title>Travail 2</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/travail_2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/travail_2/</guid><description>&lt;h1 class=""&gt;
+ Travail 2
+&lt;/h1&gt;
+&lt;div class=""&gt;
+ &lt;p&gt;
+ Vous avez créé votre premier EPUB intitulé « Mon premier livre » et vous l’avez consulté avec un lecteur de EPUB comme Readium. Vous êtes maintenant prêt pour le travail noté !
+ &lt;/p&gt;
+ &lt;p&gt;
+ Vous allez maintenant faire le deuxième travail noté.
+ &lt;/p&gt;
+ &lt;p&gt;
+ Vous devez transmettre votre travail en utilisant l’outil de dépôt de l’Université.
+ &lt;/p&gt;
+ &lt;p&gt;
+ Comme le premier travail du cours, ce travail n’est ni long ni très compliqué et vise simplement à s’assurer que vous être familier avec le XHTML et les livres électroniques. Nous espérons que le travail puisse être un peu amusant. Nous aborderons des problèmes plus difficiles de programmation dans les semaines qui viennent.
+ &lt;/p&gt;</description></item></channel></rss>

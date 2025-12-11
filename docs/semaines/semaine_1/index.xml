@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 1 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/</link><description>Recent content in Semaine 1 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/index.xml" rel="self" type="application/rss+xml"/><item><title>Installation d’un navigateur moderne</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</guid><description>&lt;h1 id="installation-dun-navigateur-moderne"&gt;
+ Installation d’un navigateur moderne
+ &lt;a class="anchor" href="#installation-dun-navigateur-moderne"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Si le système d’exploitation de votre ordinateur est Windows et que vous n’avez pas mis à jour votre système depuis très, très longtemps, vous utilisez peut-être Internet Explorer (IE). Malheureusement, ce navigateur ne supporte pas pleinement le XML. Nous vous demandons de télécharger un autre navigateur moderne : par exemple Google Chrome, Brave, Firefox, Safari ou Microsoft Edge.&lt;/p&gt;
+&lt;p&gt;Pour installer Google Chrome, rendez-vous à l’adresse &lt;a href="https://www.google.ca/chrome/"&gt;https://www.google.ca/chrome/&lt;/a&gt; ; lisez les informations, sélectionnez le fichier correspondant à votre système d’exploitation et téléchargez-le ; lancez ensuite la procédure d’installation et suivez bien les directives données. Sous Windows, il est possible que vous deviez faire redémarrer votre ordinateur après l’installation.&lt;/p&gt;</description></item><item><title>Créer un fichier XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/</guid><description>&lt;h1&gt;
+ Créer un fichier XML
+&lt;/h1&gt;
+&lt;p&gt;
+ Tous les systèmes d’exploitation fournissent un éditeur de texte. Windows a son Bloc-notes, macOS son TextEdit, et Linux propose de nombreux choix (vim, nano, gedit, etc.).
+&lt;/p&gt;
+&lt;p&gt;
+ Je vous recommande fortement d’utiliser
+ &lt;strong&gt;
+ &lt;a href="https://code.visualstudio.com"&gt;
+ Visual Studio Code
+ &lt;/a&gt;
+ &lt;/strong&gt;
+ : il est gratuit, multiplateforme (Windows, macOS, Linux), très léger, et il offre une excellente coloration syntaxique pour le XML, le HTML, etc.
+&lt;/p&gt;
+&lt;h2&gt;
+ Assistance par intelligence artificielle
+&lt;/h2&gt;
+&lt;p&gt;
+ Pour bénéficier d’une assistance par intelligence artificielle directement dans l’éditeur, il est possible d’ajouter GitHub Copilot, un outil d’autocomplétion alimenté par l’intelligence artificielle. Voici comment procéder.
+&lt;/p&gt;</description></item><item><title>Introduction à XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/</guid><description>&lt;h1&gt;
+ Introduction à XML
+&lt;/h1&gt;
+&lt;p&gt;
+ Le XML est un « métalangage » permettant d'échanger de l'information, principalement sur le web. Il a été conçu par Tim Bray, Jon Bosak et de nombreux autres collaborateurs, entre 1996 et 1999. On dit que c'est un « métalangage » parce qu'il est une façon pratique de créer de nouveaux
+ &lt;i&gt;
+ langages
+ &lt;/i&gt;
+ pour échanger des informations, mais qu'il ne constitue pas un langage en soi. On dit que le XML est « extensible » (peut être étendu) et que c'est un métalangage : les deux affirmations vont dans le même sens et notent la capacité du XML à s'adapter à des besoins différents.
+&lt;/p&gt;</description></item><item><title>Principes du XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/</guid><description>&lt;h1 id="principes-du-xml"&gt;
+ Principes du XML
+ &lt;a class="anchor" href="#principes-du-xml"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="quelques-principes-et-notions-importantes-du-xml"&gt;
+ Quelques principes et notions importantes du XML
+ &lt;a class="anchor" href="#quelques-principes-et-notions-importantes-du-xml"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Rappelons qu&amp;rsquo;une &lt;strong&gt;balise&lt;/strong&gt; est un segment de texte commençant par &amp;lt; et se terminant par &amp;gt;. Par exemple, &lt;lavie&gt; est une balise qui marque le début de l&amp;rsquo;élément &lt;em&gt;lavie&lt;/em&gt;. Une balise commençant par &amp;lt;/, comme &lt;/lavie&gt;, est une balise de fin; dans cet exemple, elle termine l&amp;rsquo;élément &lt;em&gt;lavie&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Le &lt;strong&gt;nom XML&lt;/strong&gt; de la balise est le texte suivant le symbole &amp;lt; (ou &amp;lt;/ pour une balise de fin) et pouvant contenir n&amp;rsquo;importe quelle lettre ou chiffre (a, b,&amp;hellip; 0, 1, 2,&amp;hellip;) ou les quatre symboles de ponctuation, soit la marque de soulignement ( _ ), le trait d&amp;rsquo;union ( - ), les deux-points (:) ou le point (.); un nom XML ne peut contenir d&amp;rsquo;autres caractères spéciaux, ni un espace&amp;quot;. En outre, il ne peut pas commencer par un chiffre, un trait d&amp;rsquo;union ou un point. Par exemple, le nom XML de la balise &lt;lavie&gt; est « lavie », alors que la balise &amp;lt;7lavie&amp;gt; ne serait pas autorisée. On réserve les noms débutant par xml, Xml, xMl, xmL, XMl, xML,Xml et XML pour les spécifications XML. Ainsi, la balise &lt;xmldanslavie&gt; est à éviter.&lt;/p&gt;</description></item><item><title>Encodage des caractères Unicode</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/</guid><description>&lt;header style="margin-bottom: 16px;"&gt;
+ &lt;h1 style="margin: 0 0 8px 0; font-size: 22px; font-weight: 700; color:#0b1220;"&gt;
+ Visualiseur d’octets UTF-8 / UTF-16
+ &lt;/h1&gt;
+ &lt;p&gt;
+ Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mask). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian).
+ &lt;/p&gt;</description></item><item><title>Mise en forme du XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/</guid><description>&lt;p&gt;
+ Si vous utilisez un traitement de texte pour préparer votre travaux et que vous souhaitez présenter le code XML, vous pouvez utiliser cette application pour le mettre en forme. Saisissez votre code XML et copiez la version mise en forme. Vous pouvez ensuite la copier dans votre logiciel de traitement de texte.
+&lt;/p&gt;
+&lt;!-- Prism.js CSS (Default light theme for better Word compatibility) --&gt;
+&lt;link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"&gt;
+&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"&gt;
+&lt;/script&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&amp;amp;display=swap" rel="stylesheet"/&gt;
+&lt;div id="warning" style="display: none; background: #ffcccc; color: #cc0000; padding: 10px; text-align: center; font-weight: bold;"&gt;
+ Attention : Une ou plusieurs lignes dépassent 80 caractères !
+&lt;/div&gt;
+&lt;div style="display: flex; flex-direction: column;"&gt;
+ &lt;div style="padding: 12px 20px; background: #007acc; color: white; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;"&gt;
+ Écrivez ou collez du code XML ici
+ &lt;/div&gt;
+ &lt;textarea autofocus="" id="input" spellcheck="false" style="resize: none; font-family: 'Fira Code', 'Consolas', monospace; font-size: 15px; padding: 20px; border: none; outline: none; background: #ffffff; color: #000000; line-height: 1.5; height: 10cm;"&gt;
+&lt;p&gt;&amp;lt;etudiant sexe=&amp;ldquo;M&amp;rdquo;&amp;gt;
+&amp;lt;nom&amp;gt;Jacques&amp;lt;/nom&amp;gt;
+&amp;lt;/etudiant&amp;gt;&lt;/p&gt;</description></item><item><title>Laboratoire sur la structure en arbre des documents XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</guid><description>&lt;h1&gt;
+ Laboratoire sur la structure en arbre des documents XML
+&lt;/h1&gt;
+&lt;p&gt;
+ Il est important de bien comprendre la structure en arbre des documents XML. Comme nous l’avons vu, un document XML
+ est arbre dont la racine est toujours le noeud-racine suivi normalement d’autres noeuds, comme des noeuds d’éléments.
+ Les différents noeuds sont ordonnés (si on interverti deux éléments, on crée de facto un nouveau document). Il faut
+ comprendre que les bouts de texte apparaissant dans un document XML sont noeuds à part entière.
+&lt;/p&gt;</description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</guid><description>&lt;h1&gt;
+ Petit guide d’usage du courriel efficace
+&lt;/h1&gt;
+&lt;p&gt;
+ Lors de l’écriture d’un courriel, être bref est important. Omettez les formules de salutation, les signatures
+ surfaites, etc.
+&lt;/p&gt;
+&lt;p&gt;
+ Attention aux émotions : Il est facile quand on reçoit ou transmet un courriel de s’emporter ou de lire dans les
+ messages reçus des sentiments. Dans un contexte professionnel, évitez d’écrire un courriel alors que vous êtes
+ énervé.
+&lt;/p&gt;
+&lt;p&gt;
+ Choisissez les destinataires de votre courriel avec soin. Il est pratiquement toujours mal avisé de transmettre un
+ courriel à un grand groupe, à moins que le courriel soit une communication formelle. Dans le doute, écrivez un
+ courriel à un seul destinataire.
+&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</guid><description>&lt;style&gt;
+ .intro {background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;}
+ .question {background: white; padding: 20px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+ pre {background: #f4f4f4; padding: 12px; border-radius: 5px; overflow-x: auto; font-size: 0.95em; margin: 10px 0;}
+ label {display: block; margin: 12px 0; cursor: pointer; padding: 8px; border-radius: 4px; transition: background 0.2s;}
+ input[type="radio"] {margin-right: 10px;}
+ .feedback {margin-top: 15px; padding: 12px; border-radius: 5px; font-weight: bold; display: none;}
+ .correct {background: #d4edda; color: #155724; border: 1px solid #c3e6cb;}
+ .incorrect {background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;}
+ .buttons {text-align: center; margin: 50px 0;}
+ button {background: #3498db; color: white; border: none; padding: 14px 32px; font-size: 1.1em; border-radius: 6px; cursor: pointer; margin: 0 15px;}
+ button:hover {background: #2980b9;}
+ #resetBtn {background: #7f8c8d;}
+ #resetBtn:hover {background: #95a5a6;}
+ .score {text-align: center; font-size: 1.5em; margin: 40px 0; font-weight: bold; color: #2c3e50;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Autoévaluation XML&lt;/h1&gt;
+&lt;div class="intro"&gt;
+ &lt;p&gt;Le bouton &lt;strong&gt;Vérifier mes réponses&lt;/strong&gt; vous indique immédiatement si vos choix sont corrects et vous donne une courte explication.&lt;/p&gt;</description></item></channel></rss>

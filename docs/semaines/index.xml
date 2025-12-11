@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/</link><description>Recent content on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/index.xml" rel="self" type="application/rss+xml"/><item><title>Évaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</guid><description>&lt;h1&gt;
+ Évaluation
+&lt;/h1&gt;
+&lt;p&gt;
+ Pour évaluer vos apprentissages dans ce cours, nous avons préparé 5 travaux
+ notés et un examen. Le tableau qui suit les présente sommairement.
+&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+ &lt;table class="table spip"&gt;
+ &lt;tbody&gt;
+ &lt;tr class="row_odd odd"&gt;
+ &lt;td&gt;
+ Activités notées
+ &lt;/td&gt;
+ &lt;td&gt;
+ Pondération
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_even even"&gt;
+ &lt;td&gt;
+ Travail noté 1 (les fondements du XML)
+ &lt;/td&gt;
+ &lt;td&gt;
+ 10 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_odd odd"&gt;
+ &lt;td&gt;
+ Travail noté 2 (les documents)
+ &lt;/td&gt;
+ &lt;td&gt;
+ 10 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_even even"&gt;
+ &lt;td&gt;
+ Travail noté 3 (CSS, XPath et XSLT)
+ &lt;/td&gt;
+ &lt;td&gt;
+ 15 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_odd odd"&gt;
+ &lt;td&gt;
+ Travail noté 4 (Java)
+ &lt;/td&gt;
+ &lt;td&gt;
+ 15 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_even even"&gt;
+ &lt;td&gt;
+ Travail noté 5 (RDF)
+ &lt;/td&gt;
+ &lt;td&gt;
+ 10 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_odd odd"&gt;
+ &lt;td&gt;
+ Examen
+ &lt;/td&gt;
+ &lt;td&gt;
+ 40 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr class="row_even even"&gt;
+ &lt;td&gt;
+ Total
+ &lt;/td&gt;
+ &lt;td&gt;
+ 100 %
+ &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+ &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;
+ En suivant le cours, semaine par semaine, vous serez invité à effectuer les
+ travaux en temps venu.
+&lt;/p&gt;</description></item><item><title>Glossaire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/glossaire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/glossaire/</guid><description>&lt;h1 id="glossaire"&gt;
+ Glossaire
+ &lt;a class="anchor" href="#glossaire"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Appel d’entité&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un appel d’entité est une suite de caractères qui commence par une esperluette (&lt;code&gt;&amp;amp;&lt;/code&gt;) et se termine par un point-virgule (&lt;code&gt;;&lt;/code&gt;). Les entités courantes :&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Entité&lt;/th&gt;
+ &lt;th style="text-align: right"&gt;Résultat&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;amp;amp;lt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;amp;amp;amp;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;amp;amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;amp;amp;quot;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;code&gt;&amp;quot;&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;amp;amp;apos;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;code&gt;’&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Attribut&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un attribut est un nom XML qui suit les mêmes règles que les noms d’éléments. Il est immédiatement suivi d’un signe &lt;code&gt;=&lt;/code&gt; et d’une valeur entre guillemets. Exemple : &lt;code&gt;&amp;lt;lavie age=&amp;quot;5&amp;quot;&amp;gt;&lt;/code&gt; a l’attribut &lt;code&gt;age=&amp;quot;5&amp;quot;&lt;/code&gt;. Une balise peut avoir plusieurs attributs, mais leurs noms doivent être distincts.&lt;/p&gt;</description></item><item><title>Pense-bête DTD</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/pense-bete_dtd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/pense-bete_dtd/</guid><description>&lt;h1&gt;Pense-bête DTD&lt;/h1&gt;
+&lt;h2 id="quelques-symboles-importants-en-dtd"&gt;
+ Quelques symboles importants en DTD
+ &lt;a class="anchor" href="#quelques-symboles-importants-en-dtd"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;&lt;!DOCTYPE nomXML_elementRacine SYSTEM "URL"&gt;&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Déclaration de type de document.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;strong&gt;&lt;!ELEMENT ... &gt;&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Déclaration d&amp;rsquo;un élément (instruction DTD).&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;&lt;strong&gt;?&lt;/strong&gt; — Élément optionnel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*&lt;/strong&gt; — Élément pouvant être présent plusieurs fois (0..∞).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;+&lt;/strong&gt; — Élément présent au moins une fois (1..∞).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;|&lt;/strong&gt; — Alternative (ou).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;#PCDATA&lt;/strong&gt; — Contenu textuel (parsed character data).&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt;&lt;strong&gt;&lt;!ATTLIST nomElementX nomAttributY ...&gt;&lt;/strong&gt;&lt;/dt&gt;
+&lt;dd&gt;
+&lt;p&gt;Spécifie qu’un élément &lt;code&gt;nomElementX&lt;/code&gt; possède l’attribut &lt;code&gt;nomAttributY&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

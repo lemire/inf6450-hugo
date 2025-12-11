@@ -1,0 +1,338 @@
+<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+ Travail 4
+
+
+ Consignes générales
+
+
+ 
+  Utilisez les noms des fichiers spécifiés dans chaque exercice.
+ 
+ 
+  Vous n'avez droit qu'à un seul fichier « .java » par exercice
+        et
+        il ne doit pas contenir plus de 500 lignes de code. Tous les problèmes
+        peuvent être résolus en moins de 100 lignes!
+        Rappelons qu'une « ligne » de code comprend un maximum de 80
+        caractères.
+ 
+ 
+  Chaque fichier Java doit débuter par un commentaire donnant le sigle du
+        cours et votre nom comme ceci :
+  /**
+            * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+            */
+ 
+ 
+  Vous devriez pouvoir accéder à la version de votre SDK, en tapant
+        « javac -version » ou « java -version »
+        dans une ligne de commande.
+ 
+ 
+  Ne traitez pas les cas d'exception, comme les fichiers qui n'existent
+        pas ou ne peuvent être ouverts.
+        Par contre, votre code doit produire un résultat correct dans des
+        conditions normales.
+        Par exemple, si on vous demande de produire du XML, il doit s'agir de
+        XML bien formé.
+        Si on vous demande de lire du XML, vous devez pouvoir lire tout XML qui
+        se conforme aux spécifications décrites dans l'exercice.
+        Vous devez utiliser l'API DOM.
+ 
+ 
+  Il est impératif que vos fichiers compilent avec le SDK (le plus
+        récent), sans utiliser de librairies particulières.
+  
+   Un fichier Java qui ne compile pas ne sera pas noté.
+  
+ 
+ 
+  Lorsque vous aurez terminé les exercices, vous devez transmettre à votre
+        personne tutrice,
+        en utilisant l'outil de dépôt de l'Université, l'ensemble des fichiers
+        avec l'extension Java comme fichiers attachés. Vous devez aussi remettre
+        un fichier XML ainsi qu'un document (Word 97/2000/XP,
+  
+   ODF
+  
+  ,
+        PDF, RTF ou en format texte) clairement identifié à votre nom contenant
+        l'analyse demandée à la première question du travail.
+        Il s'agit d'un travail personnel et vous ne devez pas partager vos
+        solutions.
+ 
+
+
+ Cette activité notée compte pour 15 % de la note globale.
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="Travail 4"><meta property="og:description" content="Travail 4 Consignes générales Utilisez les noms des fichiers spécifiés dans chaque exercice. Vous n'avez droit qu'à un seul fichier « .java » par exercice et il ne doit pas contenir plus de 500 lignes de code. Tous les problèmes peuvent être résolus en moins de 100 lignes! Rappelons qu'une « ligne » de code comprend un maximum de 80 caractères. Chaque fichier Java doit débuter par un commentaire donnant le sigle du cours et votre nom comme ceci : /** * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9 */ Vous devriez pouvoir accéder à la version de votre SDK, en tapant « javac -version » ou « java -version » dans une ligne de commande. Ne traitez pas les cas d'exception, comme les fichiers qui n'existent pas ou ne peuvent être ouverts. Par contre, votre code doit produire un résultat correct dans des conditions normales. Par exemple, si on vous demande de produire du XML, il doit s'agir de XML bien formé. Si on vous demande de lire du XML, vous devez pouvoir lire tout XML qui se conforme aux spécifications décrites dans l'exercice. Vous devez utiliser l'API DOM. Il est impératif que vos fichiers compilent avec le SDK (le plus récent), sans utiliser de librairies particulières. Un fichier Java qui ne compile pas ne sera pas noté. Lorsque vous aurez terminé les exercices, vous devez transmettre à votre personne tutrice, en utilisant l'outil de dépôt de l'Université, l'ensemble des fichiers avec l'extension Java comme fichiers attachés. Vous devez aussi remettre un fichier XML ainsi qu'un document (Word 97/2000/XP, ODF , PDF, RTF ou en format texte) clairement identifié à votre nom contenant l'analyse demandée à la première question du travail. Il s'agit d'un travail personnel et vous ne devez pas partager vos solutions. Cette activité notée compte pour 15 % de la note globale."><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Travail 4 | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.404ed02339d2d5426e41a3dfb7f7d97d5856d49e3b81cc7db3aeee0980357f55.js integrity="sha256-QE7QIznS1UJuQaPft/fZfVhW1J47gcx9s67uCYA1f1U=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/inf6450-hugo/><img src=/inf6450-hugo/xml.jpg alt=Logo class=book-icon><span>INF 6450 - Gestion de l'information avec XML</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Rechercher aria-label=Rechercher maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/inf6450-hugo/docs/professeur/>Pense-bête DTD</a></li><li><span>Semaines</span><ul><li><input type=checkbox id=section-7441693393d20b821fe8b37c5a6f7cf2 class=toggle>
+<label for=section-7441693393d20b821fe8b37c5a6f7cf2 class=flex><a href=/inf6450-hugo/docs/semaines/semaine_1/ class=flex-auto>Semaine 1</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/>Installation d’un navigateur moderne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/>Créer un fichier XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/>Introduction à XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/>Principes du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/>Encodage des caractères Unicode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/>Mise en forme du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/>Laboratoire sur la structure en arbre des documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/>Petit guide d’usage du courriel efficace</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-af40a75de7e5184983fffc4ff12ae982 class=toggle>
+<label for=section-af40a75de7e5184983fffc4ff12ae982 class=flex><a role=button class=flex-auto>Semaine 2</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/>Définition de type de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/>Validation de documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-19fac9b87d4af3855d770f5f0a1ea19e class=toggle>
+<label for=section-19fac9b87d4af3855d770f5f0a1ea19e class=flex><a role=button class=flex-auto>Semaine 3</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/>Espace de nom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/>Le fichier pom.xml en Java</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/>Le fichier sitemap.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/>Les fichiers csproj en C#</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/rss/>Les formats RSS et Atom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/>Le fichier AndroidManifest.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/travail_1/>Travail 1</a></li></ul></li><li><input type=checkbox id=section-f5606a0b5813317643cf57b4b6e8a8e4 class=toggle>
+<label for=section-f5606a0b5813317643cf57b4b6e8a8e4 class=flex><a role=button class=flex-auto>Semaine 4</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_4/xhtml/>XHTML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/html_5/>HTML 5</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/mathml/>MathML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/svg/>SVG</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/base64/>Base64</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/markdown/>MarkDown</a></li></ul></li><li><input type=checkbox id=section-ea112c6c027e8be5b72462b07efbd404 class=toggle>
+<label for=section-ea112c6c027e8be5b72462b07efbd404 class=flex><a role=button class=flex-auto>Semaine 5</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_5/format_de_document/>Format de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/>Familiarisation avec EPUB</a></li></ul></li><li><input type=checkbox id=section-63939a07d015168789e352a75a400204 class=toggle>
+<label for=section-63939a07d015168789e352a75a400204 class=flex><a role=button class=flex-auto>Semaine 6</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/>Les documents EPUB</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/>Utilisation de Sigil et de Thorium</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/>Des pages web dynamiques avec JavaScript</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/travail_2/>Travail 2</a></li></ul></li><li><input type=checkbox id=section-ab34f94bdc2e263dca825db6224ae341 class=toggle>
+<label for=section-ab34f94bdc2e263dca825db6224ae341 class=flex><a role=button class=flex-auto>Semaine 7</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/>XPath : un premier laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_approfondissement/>XPath : approfondissement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/>XPath : second laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/>XPath 2.0 et 3.0</a></li></ul></li><li><input type=checkbox id=section-c9fff26212e55a28630558b97c972fce class=toggle>
+<label for=section-c9fff26212e55a28630558b97c972fce class=flex><a role=button class=flex-auto>Semaine 8</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_8/introduction_au_xslt/>Introduction au XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne/>XSLT en ligne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/>Un peu plus de XSLT : fonctionnement de base, template et value-of</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/>Les valeurs d’attribut</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/>XSLT modulaire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/>Les noms d’éléments</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/>Attribut mode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/>La fonction generate-id</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_tests/>Les tests</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_boucles/>Les boucles</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/>Clés et aggrégation</a></li></ul></li><li><input type=checkbox id=section-9b8667613d67aeb0609307ae83a17fa7 class=toggle>
+<label for=section-9b8667613d67aeb0609307ae83a17fa7 class=flex><a role=button class=flex-auto>Semaine 9</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/>Générer des noeuds dynamiquement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/variables_et_parametres/>Variables et paramètres</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/>Mise en forme</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/>Espaces de noms</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/les_axes/>Les axes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/etude_dun_exemple_docbook/>Étude d’un exemple (DocBook)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/>Laboratoire XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt_avec_python_optionnel/>Laboratoire XSLT avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/xslt_20_et_30/>XSLT 2.0 et 3.0</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=toggle>
+<label for=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=flex><a role=button class=flex-auto>Semaine 10</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_10/xquery/>XQuery</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_xquery_avec_python_optionnel/>Laboratoire XQuery avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/css/>CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/>Laboratoire CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/les_langages_declaratifs/>Les langages déclaratifs</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/travail_3/>Travail 3</a></li></ul></li><li><input type=checkbox id=section-6d7b5d8190eb01621a1a63639d583071 class=toggle>
+<label for=section-6d7b5d8190eb01621a1a63639d583071 class=flex><a role=button class=flex-auto>Semaine 11</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/>Modèles de programmation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/>Activité JSON/XML avec Jackson</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-da204379f6c471ce99e7d0fb98f947ac class=toggle checked>
+<label for=section-da204379f6c471ce99e7d0fb98f947ac class=flex><a role=button class=flex-auto>Semaine 12</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom/>DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/autoevaluation_dom/>Autoévaluation DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/>Problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/>Solutions aux problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom_javascript_et_autres_langages/>DOM : JavaScript et autres langages</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/>Asynchronous JavaScript And XML (AJAX)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/json/>JSON</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/yaml/>YAML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/>Docx (Microsoft Word)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/travail_4/ class=active>Travail 4</a></li></ul></li><li><input type=checkbox id=section-b751a142c973750b05080598365caf8b class=toggle>
+<label for=section-b751a142c973750b05080598365caf8b class=flex><a role=button class=flex-auto>Semaine 13</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/>Du XML aux graphes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/>Introduction au RDF</a></li></ul></li><li><input type=checkbox id=section-f04b8e776ca9029e58015bccc14ef21b class=toggle>
+<label for=section-f04b8e776ca9029e58015bccc14ef21b class=flex><a role=button class=flex-auto>Semaine 14</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/>Applications du RDF</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/travail_5/>Travail 5</a></li></ul></li><li><input type=checkbox id=section-e29b75c1086e87120d49e87d63a39c0a class=toggle>
+<label for=section-e29b75c1086e87120d49e87d63a39c0a class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>Travail 4</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><h1>Travail 4</h1><h2>Consignes générales</h2><ol><li>Utilisez les noms des fichiers spécifiés dans chaque exercice.</li><li>Vous n'avez droit qu'à un seul fichier « .java » par exercice
+et
+il ne doit pas contenir plus de 500 lignes de code. Tous les problèmes
+peuvent être résolus en moins de 100 lignes!
+Rappelons qu'une « ligne » de code comprend un maximum de 80
+caractères.</li><li>Chaque fichier Java doit débuter par un commentaire donnant le sigle du
+cours et votre nom comme ceci :<pre>/**
+            * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+            */</pre></li><li>Vous devriez pouvoir accéder à la version de votre SDK, en tapant
+« javac -version » ou « java -version »
+dans une ligne de commande.</li><li>Ne traitez pas les cas d'exception, comme les fichiers qui n'existent
+pas ou ne peuvent être ouverts.
+Par contre, votre code doit produire un résultat correct dans des
+conditions normales.
+Par exemple, si on vous demande de produire du XML, il doit s'agir de
+XML bien formé.
+Si on vous demande de lire du XML, vous devez pouvoir lire tout XML qui
+se conforme aux spécifications décrites dans l'exercice.
+Vous devez utiliser l'API DOM.</li><li>Il est impératif que vos fichiers compilent avec le SDK (le plus
+récent), sans utiliser de librairies particulières.
+<strong>Un fichier Java qui ne compile pas ne sera pas noté.</strong></li><li>Lorsque vous aurez terminé les exercices, vous devez transmettre à votre
+personne tutrice,
+en utilisant l'outil de dépôt de l'Université, l'ensemble des fichiers
+avec l'extension Java comme fichiers attachés. Vous devez aussi remettre
+un fichier XML ainsi qu'un document (Word 97/2000/XP,
+<a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office">ODF
+</a>,
+PDF, RTF ou en format texte) clairement identifié à votre nom contenant
+l'analyse demandée à la première question du travail.
+Il s'agit d'un travail personnel et vous ne devez pas partager vos
+solutions.</li></ol><p>Cette activité notée compte pour 15 % de la note globale.</p><br><h2>Exercice 1</h2><p>Supposons une liste de transactions avec un attribut « montant »
+pour chaque client,
+comme dans le document XML suivant :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43>
+    </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43>
+    </span><span style=color:#004a43>?&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>liste</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>client</span> <span style=color:#274796>nom</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>Jean
+        Charles</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>transaction</span> <span style=color:#274796>montant</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>500</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>question</span><span style=color:#a65700>&gt;</span>Quelle est la dernière marque?<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>question</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>transaction</span> <span style=color:#274796>montant</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1200</span><span style=color:#0000e6>"</span> <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>client</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>client</span> <span style=color:#274796>nom</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>Pierre
+        Élisabeth</span><span style=color:#0000e6>"</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>transaction</span> <span style=color:#274796>montant</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>600</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>transaction</span> <span style=color:#274796>montant</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>800</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>question</span><span style=color:#a65700>&gt;</span>Où puis-je trouver le modèle
+    2002?<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>question</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>transaction</span> <span style=color:#274796>montant</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>2000</span><span style=color:#0000e6>"</span> <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>client</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>liste</span><span style=color:#a65700>&gt;</span>
+</pre><p>Supposons que le fichier se nomme «
+<b>transactions.xml
+</b>».</p><p>Nous ne savons pas combien de transactions il peut y avoir par client; nous
+ne savons pas combien de clients nous avons;
+de plus, nous ne connaissons pas les noms des clients d'avance. Nous
+supposons que l'élément-racine est toujours « liste »;
+que tous les éléments « transaction » ont un attribut
+« montant »;
+que tous les éléments « transaction » sont dans des éléments
+« client »; que les éléments
+« client » sont tous dans l'élément-racine et ont tous un attribut
+« nom ».
+Nous supposons également qu'il n'y aura pas deux attributs « nom »
+avec la même valeur (même nom).
+Enfin, nous supposons que toutes les valeurs d'attribut de
+« montant » sont des entiers (« int » en Java).</p><p>Écrivez un programme qui calcule la somme des valeurs de l'attribut
+« montant » pour chaque
+client (seuls les attributs « montant » des éléments
+« transaction »).
+Nous supposons qu'il s'agit de nombres entiers, des dollars par exemple.
+Le code source de votre programme sera dans un fichier nommé
+«
+<b>Transactions.java
+</b>».</p><p>Ainsi, la commande « java Transactions transactions.xml » devra
+donner :</p><pre> Nom du client: Jean Charles
+    Somme: 1700
+    Nom du client: Pierre Élisabeth
+    Somme: 3400</pre><p>Comparez la solution que vous obtenez en utilisant DOM avec ce qui est
+possible de faire avec XSLT, en fonction du temps de développement.
+Donnez au moins un avantage de l'approche DOM sur l'approche XSLT et un
+avantage
+de l'approche XSLT sur DOM. Vous devez
+remettre une solution XSLT sous la forme d'un document XML. Vous pouvez
+mettre des commentaires dans votre code Java, mais la comparaison entre DOM
+et XSLT
+doit être faite dans un document à part.</p><h2>Exercice 2</h2><p>Avec XSLT, nous pouvons combiner plusieurs documents en utilisant la fonction
+« document » qui permet
+de charger plusieurs documents XML. Mais que se passe-t-il lorsque nous
+devons combiner plusieurs documents,
+dont certains ne sont pas en XML? À ce moment, l'utilisation d'un
+langage comme Java et de DOM peut être très avantageuse.</p><p>Supposons qu'un serveur enregistre les achats effectués sur le site, dans un
+fichier texte, en plaçant
+chaque achat sur une ligne avec des informations séparées par des virgules.
+Le fichier se nomme «
+<b>achats.txt
+</b>» :</p><pre> Jean Charles, 3214324565, 321, 2
+    Yvan Richard, 5435435545, 321, 1
+    Yvette Gagnon, 4324324243, 1, 12</pre><p>Sur chaque ligne, se trouvent le nom du client, son numéro de carte de
+crédit, le code du produit acheté et la quantité achetée.
+Nous supposons que le serveur est un logiciel commercial et qu'il n'est pas
+possible de le modifier
+pour obtenir le format des données en XML.</p><p>Par ailleurs, nous avons un document XML contenant notre inventaire; le
+fichier se nomme «
+<b>inventaire.xml
+</b>».
+Le voici :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43>
+    </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43>?&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>432.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>43</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>100</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>321</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>31.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>200</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+</pre><p>Écrivez un programme qui met à jour l'inventaire en tenant compte des achats
+de la journée,
+contenus dans le fichier «
+<b>achats.txt
+</b>».
+Votre code source devra se trouver dans le fichier
+«
+<b>Inventaire.java
+</b>» et
+la commande « java Inventaire achats.txt inventaire.xml» va modifier le
+fichier
+« inventaire » pour y soustraire les produits achetés ce qui, dans
+le cas qui nous concerne,
+donnera un fichier « inventaire.xml » ayant le contenu
+suivant :</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43>
+    </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43>?&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>432.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>31</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>100</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>321</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>31.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>197</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+</pre><p>Nous pouvons supposer que le fichier « inventaire.xml » ne contient
+qu'un seul élément
+« produit » pour chaque valeur d'attribut « code ». Nous
+pouvons aussi supposer
+qu'aucun code invalide n'apparaît dans le fichier « achats.txt ».
+Par contre, nous ne savons pas combien
+de produits nous avons et combien d'achats il y aura. Évidemment, il est
+possible d'avoir un nombre négatif de produits
+dans notre inventaire.</p><p><b>Indice.-
+</b>Il est parfaitement possible d'écrire un tel programme en
+moins de 50 lignes.</p><h2>Exercice 3</h2><p>Il est parfois pénible d'utiliser l'interface DOM
+quand on cherche une seule information précise.
+Écrivez un programme Java qui permet d'extraire
+le prix correspondant à l'item ayant le code
+de produit 321 dans un fichier XML ayant la
+forme suivante en utilisant
+<strong>une expression XPath
+</strong>.</p><pre><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#7d0045>1.0</span><span style=color:#0000e6>"</span><span style=color:#004a43>
+    </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:#0000e6>"</span><span style=color:#004a43>?&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>1</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>432.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>43</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>32.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>100</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>produit</span> <span style=color:#274796>code</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>321</span><span style=color:#0000e6>"</span>
+    <span style=color:#274796>prix</span><span style=color:#808030>=</span><span style=color:#0000e6>"</span><span style=color:#0000e6>31.00</span><span style=color:#0000e6>"</span> <span style=color:#274796>quantité</span><span style=color:#808030>=</span> <span style=color:#0000e6>"</span><span style=color:#0000e6>200</span><span style=color:#0000e6>"</span>
+    <span style=color:#a65700>/&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>inventaire</span><span style=color:#a65700>&gt;</span>
+</pre><h2>Exercice 4</h2><p>En utilisant AJAX, on peut rendre une page
+web dynamique. Malheureusement, pour des raisons de sécurité,
+un script dans une page
+web ne peut charger un fichier qui se trouve dans
+un domaine autre que celui d'origine. On vous demande
+donc de déposer le fichier RSS
+<a href=https://www.ledevoir.com/rss/edition_complete.xml>https://www.ledevoir.com/rss/edition_complete.xml
+</a>(il faut enregister le contenu sur votre disque) sur votre machine et de
+créer
+une page web AJAX capable de charger le fichier XML en question
+et d'afficher tant le titre des nouvelles que leur description
+complète. Attention, il ne faut récupérer que le contenu des
+éléments au sein des éléments item.
+Vous pouvez supposer que les titres et descriptions ne contiennent
+que du texte, sans éléments HTML.</p><p>Certains étudiants trouvent utile d'utiliser la syntaxe
+« try { } catch(e) {} » de l'JavaScript (qui fonctionne
+comme en Java) pour traiter les erreurs. Cependant, cette
+syntaxe n'est pas nécessaire.</p><div style="background:#fff;overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em"><pre style=margin:0;line-height:125%><span style=color:#579>&lt;?xml version="1.0" ?&gt;</span>
+        <span style=color:#070>&lt;html</span> <span style=color:#00c>xmlns=</span><span style=background-color:#fff0f0>"http://www.w3.org/1999/xhtml"</span><span style=color:#070>&gt;</span>
+        <span style=color:#070>&lt;head&gt;</span>
+        <span style=color:#070>&lt;meta</span> <span style=color:#00c>charset=</span><span style=background-color:#fff0f0>"UTF-8"</span><span style=color:#070>&gt;</span>
+        <span style=color:#070>&lt;title&gt;</span>Exemple AJAX<span style=color:#070>&lt;/title&gt;</span>
+        <span style=color:#070>&lt;script </span><span style=color:#00c>language=</span><span style=background-color:#fff0f0>"JavaScript"</span><span style=color:#070>&gt;</span>
+        <span style=color:#080;font-weight:700>function</span>
+        afficheTitres(doc) {
+        titres <span style=color:#333>=</span>
+        doc.getElementsByTagName(<span style=background-color:#fff0f0>"title"</span>);
+        elementol <span style=color:#333>=</span> <span style=color:#007020>document</span>.createElement(<span style=background-color:#fff0f0>"ol"</span>);
+        <span style=color:#080;font-weight:700>var</span> longueur
+        <span style=color:#333>=</span> titres.length;
+        <span style=color:#080;font-weight:700>for</span> ( k <span style=color:#333>=</span> <span style=color:#00d;font-weight:700>0</span>; k <span style=color:#333>&lt;</span> longueur ; <span style=color:#333>++</span>k) {
+        elementli <span style=color:#333>=</span> <span style=color:#007020>document</span>.createElement(<span style=background-color:#fff0f0>"li"</span>);
+        elementli.appendChild(<span style=color:#007020>document</span>.createTextNode(titres[k].firstChild.nodeValue));
+        elementol.appendChild(elementli);
+        }
+        body <span style=color:#333>=</span> <span style=color:#007020>document</span>.getElementsByTagName(<span style=background-color:#fff0f0>"body"</span>).item(<span style=color:#00d;font-weight:700>0</span>);
+        body.appendChild(elementol);
+        }
+        <span style=color:#080;font-weight:700>function</span>
+        chargeDocument(f) {
+        <span style=color:#080;font-weight:700>var</span> fileReader
+        <span style=color:#333>=</span> <span style=color:#080;font-weight:700>new</span> FileReader();
+        fileReader.onload <span style=color:#333>=</span> <span style=color:#080;font-weight:700>function</span>(evt) {
+        <span style=color:#080;font-weight:700>var</span> doc <span style=color:#333>=</span> <span style=color:#080;font-weight:700>new</span>
+        DOMParser().parseFromString(<span style=color:#080;font-weight:700>this</span>.result, <span style=background-color:#fff0f0>'application/xml'</span>);
+        afficheTitres(doc);
+        }
+        fileReader.readAsText(f[<span style=color:#00d;font-weight:700>0</span>]);
+        }
+        <span style=color:#070>&lt;/script&gt;</span>
+        <span style=color:#070>&lt;/head&gt;</span>
+        <span style=color:#070>&lt;body&gt;</span>
+        <span style=color:#070>&lt;p&gt;</span>Récupére et affiche
+        les nouvelles du devoir: <span style=color:#070>&lt;/p&gt;</span>
+        <span style=color:#070>&lt;input</span> <span style=color:#00c>type=</span><span style=background-color:#fff0f0>"file"</span> <span style=color:#00c>onchange=</span><span style=background-color:#fff0f0>"chargeDocument(this.files)"</span>
+        <span style=color:#070>&gt;&lt;/input&gt;</span>
+        <span style=color:#070>&lt;/body&gt;</span>
+        <span style=color:#070>&lt;/html&gt;</span>
+    </pre></div><h2>Exercice 5</h2><p>Pour les cas simples, on peut convertir les documents XML en JSON, et vice
+versa avec une simple familiarité avec les formats. Convertissez le fichier
+suivant en fichier JSON.
+<a href=https://jsonlint.com/>Vérifiez que votre
+document JSON est un document JSON valable
+</a>.</p><pre style=color:#000;background:#fff><span style=color:#004a43>&lt;?</span><span style=color:maroon;font-weight:700>xml</span><span style=color:#004a43> </span><span style=color:#074726>version</span><span style=color:#808030>=</span><span style=color:maroon>"</span><span style=color:#7d0045>1.0</span><span style=color:maroon>"</span><span style=color:#004a43>
+    </span><span style=color:#074726>encoding</span><span style=color:#808030>=</span><span style=color:maroon>"</span><span style=color:#0000e6>ISO-8859-1</span><span style=color:maroon>"</span><span style=color:#004a43>?&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>joueur</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>Pierrot Rouge<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>cote</span><span style=color:#a65700>&gt;</span>3 étoiles<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>cote</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>parent</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>Pierrette Rouge<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>Pierre Rouge<span style=color:#a65700>&lt;/</span><span style=color:#5f5035>nom</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>parent</span><span style=color:#a65700>&gt;</span>
+    <span style=color:#a65700>&lt;/</span><span style=color:#5f5035>joueur</span><span style=color:#a65700>&gt;</span>
+</pre></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Docx (Microsoft Word)">
+<span>Docx (Microsoft Word)</span>
+</a><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/ class="flex align-center float-right book-icon"><span>Du XML aux graphes</span>
+<img src=/inf6450-hugo/svg/forward.svg alt=Next title="Du XML aux graphes"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>

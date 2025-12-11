@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 3 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/</link><description>Recent content in Semaine 3 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/index.xml" rel="self" type="application/rss+xml"/><item><title>Espace de nom</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/</guid><description>&lt;h3 id="les-vocabulaires-xml"&gt;
+ Les vocabulaires XML
+ &lt;a class="anchor" href="#les-vocabulaires-xml"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Un « vocabulaire XML » est un ensemble de noms de balises et d&amp;rsquo;attributs ayant une signification donnée.
+Par exemple, les gens de la comptabilité au sein d&amp;rsquo;une entreprise pourraient avoir un vocabulaire XML pour décrire
+certaines transactions, alors que les ingénieurs pourraient avoir leur propre vocabulaire pour
+décrire certains processus techniques. Les deux équipes pourraient utiliser les mêmes noms d&amp;rsquo;élément,
+comme « échéance », mais avec des significations différentes. On dira alors que
+nous avons deux &lt;strong&gt;vocabulaires XML&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Le fichier pom.xml en Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/</guid><description>&lt;h1 id="le-fichier-pomxml-en-java"&gt;
+ Le fichier pom.xml en Java
+ &lt;a class="anchor" href="#le-fichier-pomxml-en-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le fichier pom.xml (Project Object Model) est le cœur de tout projet Maven. C’est un fichier de configuration écrit en XML qui décrit complètement le projet : ses coordonnées, ses dépendances, les plugins utilisés, la version de Java ciblée, les profils d’exécution, etc. Il est utilisé par Maven et par la plupart des outils de build modernes (Gradle peut aussi le lire dans certains cas) ainsi que par les IDE comme IntelliJ IDEA ou Eclipse.&lt;/p&gt;</description></item><item><title>Le fichier sitemap.xml</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/</guid><description>&lt;h1 id="le-fichier-sitemapxml"&gt;
+ Le fichier sitemap.xml
+ &lt;a class="anchor" href="#le-fichier-sitemapxml"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le sitemap.xml est un fichier au format XML qui liste les URLs importantes d&amp;rsquo;un site web afin d&amp;rsquo;aider les moteurs de recherche (Google, Bing, etc.) à découvrir et indexer plus efficacement ses pages. Il est particulièrement utile pour les sites volumineux, les nouveaux sites ou ceux qui possèdent beaucoup de contenu difficilement accessible par les liens internes classiques. Bien qu&amp;rsquo;il ne garantisse pas l&amp;rsquo;indexation de toutes les pages listées, il constitue un signal fort pour les crawlers et améliore généralement la couverture du site.
+Ce fichier doit être placé à la racine du site&lt;a href="https://example.com/sitemap.xml"&gt;&lt;/a&gt; et suivre le protocole officiel défini sur sitemaps.org. On peut y indiquer pour chaque URL la date de dernière modification (&lt;code&gt;&amp;lt;lastmod&amp;gt;&lt;/code&gt;), la fréquence de mise à jour estimée (&lt;code&gt;&amp;lt;changefreq&amp;gt;&lt;/code&gt;), et une priorité relative (&lt;code&gt;&amp;lt;priority&amp;gt;&lt;/code&gt;) entre 0.0 et 1.0. Depuis quelques années, il est aussi possible d&amp;rsquo;utiliser des sitemaps vidéo, image, news ou même des index de sitemaps quand le fichier dépasse 50 000 URLs ou 50 Mo.
+Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</description></item><item><title>Les fichiers csproj en C#</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/</guid><description>&lt;h1 id="les-fichiers-csproj-en-c"&gt;
+ Les fichiers csproj en C#
+ &lt;a class="anchor" href="#les-fichiers-csproj-en-c"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Les fichiers csproj sont des fichiers de projet utilisés dans l&amp;rsquo;écosystème .NET pour les applications écrites en C#. Ils sont formatés en XML, ce qui permet une structure hiérarchique claire et lisible par les outils de développement comme Visual Studio ou dotnet CLI. Ces fichiers contiennent des informations essentielles sur le projet, telles que :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les dépendances NuGet&lt;/li&gt;
+&lt;li&gt;les configurations de build&lt;/li&gt;
+&lt;li&gt;les versions cibles du framework&lt;/li&gt;
+&lt;li&gt;les fichiers inclus dans le projet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Grâce à leur format XML, ils peuvent être édités manuellement ou générés automatiquement, offrant une flexibilité pour les développeurs qui souhaitent personnaliser leur environnement de travail.&lt;/p&gt;</description></item><item><title>Les formats RSS et Atom</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/rss/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/rss/</guid><description>&lt;h1 id="les-formats-rss-et-atom"&gt;
+ Les formats RSS et Atom
+ &lt;a class="anchor" href="#les-formats-rss-et-atom"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;RSS (Really Simple Syndication) et Atom sont deux formats de syndication de contenu web qui permettent de diffuser automatiquement des mises à jour (articles, billets de blog, balados, vidéos, etc.) sans avoir à visiter manuellement chaque site. Ils sont nés au début des années 2000, à une époque où les blogs explosaient et où les lecteurs voulaient centraliser leurs sources d’information.&lt;/p&gt;
+&lt;h4 id="rss--loriginal"&gt;
+ RSS : l’original
+ &lt;a class="anchor" href="#rss--loriginal"&gt;#&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;La première version de RSS est apparue en 1999 (Netscape), mais c’est la version RSS 2.0 (2002, publiée par Dave Winer sous licence Creative Commons) qui s’est imposée comme le standard le plus utilisé.&lt;br&gt;
+Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></item><item><title>Le fichier AndroidManifest.xml</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</guid><description>&lt;h1 id="le-fichier-androidmanifestxml"&gt;
+ Le fichier AndroidManifest.xml
+ &lt;a class="anchor" href="#le-fichier-androidmanifestxml"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le fichier AndroidManifest.xml est le cœur de toute application Android. Il s&amp;rsquo;agit d&amp;rsquo;un fichier XML obligatoire situé à la racine du projet qui décrit les composants essentiels de l&amp;rsquo;application au système Android. Il déclare notamment le package de l&amp;rsquo;application, les activités (Activity), services, récepteurs de diffusion (Broadcast Receiver) et fournisseurs de contenu (Content Provider). Sans ce fichier correctement configuré, l&amp;rsquo;application ne peut pas être installée ni exécutée sur un appareil ou un émulateur.
+Ce manifeste sert également à déclarer les permissions nécessaires (par exemple l&amp;rsquo;accès à Internet, à la caméra, au stockage), les fonctionnalités matérielles requises (comme la présence d&amp;rsquo;un capteur GPS ou d&amp;rsquo;une caméra), la version minimale et cible de l&amp;rsquo;API Android, ainsi que des métadonnées comme l&amp;rsquo;icône de l&amp;rsquo;application, le label affiché dans le launcher, le thème, ou encore si l&amp;rsquo;application supporte le mode portrait/seulement paysage. Depuis Android 12 et plus, certaines déclarations comme les activités exportées doivent être explicites pour des raisons de sécurité.
+Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application basique contenant une seule activité :&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/</guid><description>&lt;h1 class=""&gt;
+ Autoévaluation
+&lt;/h1&gt;
+&lt;div class=""&gt;
+ &lt;p&gt;
+ Le bouton « Vérifier ma réponse » donne accès à un script qui, en plus de vous permettre 	de vérifier vos réponses, fournit une courte explication. Si tous les commentaires sont en
+ &lt;span style="color:blue"&gt;
+ bleu
+ &lt;/span&gt;
+ , c'est que vous avez la bonne réponse; sinon, lisez les commentaires en
+ &lt;span style="color:red"&gt;
+ rouge
+ &lt;/span&gt;
+ pour comprendre votre erreur. Puis, essayez de nouveau en cliquant sur le bouton « Recommencer ».
+ &lt;/p&gt;
+ &lt;div style="margin-left:1cm"&gt;
+ &lt;div style="background-color:#E0EAF0"&gt;
+ &lt;b&gt;
+ Question 1
+ &lt;/b&gt;
+ .
+		Choisissez l'expression qui décrit le mieux un espace de noms XML.
+ &lt;/div&gt;
+ &lt;p style="width:90%;"&gt;
+ Choisissez la bonne réponse parmi les suivantes.
+ &lt;/p&gt;</description></item><item><title>Travail 1</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/travail_1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/travail_1/</guid><description>&lt;h1 class=""&gt;
+ Travail 1
+&lt;/h1&gt;
+&lt;div class=""&gt;
+ &lt;p&gt;
+ &lt;strong&gt;
+ Attention !
+ &lt;/strong&gt;
+ Le cours comprend quelques consignes simples pour la remise des travaux. Si vous choisissez de ne pas en tenir compte, il est possible que vous deviez subir des délais supplémentaires.
+ &lt;/p&gt;
+ &lt;h2&gt;
+ Consignes
+ &lt;/h2&gt;
+ &lt;p&gt;
+ Lorsque vous aurez terminé le travail, transmettez à votre personne tutrice, un seul document (Word 97/2000/XP,
+ &lt;a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office"&gt;
+ ODF
+ &lt;/a&gt;
+ , PDF, RTF ou en format texte).
+ &lt;strong&gt;
+ Ne transmettez pas vos solutions en plusieurs fichiers. Ne transmettez pas une archive compressée (zip ou autre).
+ &lt;/strong&gt;
+ Il s’agit d’un travail personnel et vous ne devez pas partager vos solutions.
+ &lt;/p&gt;</description></item></channel></rss>

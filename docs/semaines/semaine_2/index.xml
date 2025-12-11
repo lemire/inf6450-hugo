@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 2 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/</link><description>Recent content in Semaine 2 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/index.xml" rel="self" type="application/rss+xml"/><item><title>Définition de type de document</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/</guid><description>&lt;h1 id="définition-de-type-de-document"&gt;
+ Définition de type de document
+ &lt;a class="anchor" href="#d%c3%a9finition-de-type-de-document"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h2 id="document-xml-valable"&gt;
+ Document XML valable
+ &lt;a class="anchor" href="#document-xml-valable"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Nous avons vu ce qu&amp;rsquo;était un document XML bien formé : un seul élément-racine, les éléments ne se chevauchent pas, les noms XML ne commencent pas par un chiffre, et ainsi de suite. De plus, un document XML bien formé peut contenir n&amp;rsquo;importe quel élément et dans n&amp;rsquo;importe quel ordre, et tous les éléments peuvent contenir des attributs, et peu importe ceux-ci.&lt;/p&gt;</description></item><item><title>Validation de documents XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/</guid><description>&lt;h2 id="objectif"&gt;
+ Objectif
+ &lt;a class="anchor" href="#objectif"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Valider des documents XML avec Java.&lt;/p&gt;
+&lt;h2 id="activité-de-validation"&gt;
+ Activité de validation
+ &lt;a class="anchor" href="#activit%c3%a9-de-validation"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;On peut facilement vérifier si un document XML est « bien formé ». Il suffit de lui donner l’extension « .xml » (ou « .xhtml ») et de l’ouvrir dans un navigateur, par exemple.&lt;/p&gt;
+&lt;p&gt;Cependant, il arrive qu’on veuille vérifier que le document est non seulement bien formé, mais aussi valable par rapport à des documents DTD locaux. Apprenons donc à valider des documents XML, en exécutant les directives qui suivent, car cela vous sera très utile dans vos travaux en XML.&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/</guid><description>&lt;h1&gt;
+ Autoévaluation
+&lt;/h1&gt;
+&lt;p&gt;
+ Le bouton « Vérifier ma réponse » donne accès à un script qui, en
+ plus de vous permettre de vérifier vos réponses, fournit une courte
+ explication. Si tous les commentaires sont en
+ &lt;span style="color:blue"&gt;
+ bleu
+ &lt;/span&gt;
+ , c'est que vous avez la bonne réponse;
+ sinon, lisez les commentaires en
+ &lt;span style="color:red"&gt;
+ rouge
+ &lt;/span&gt;
+ pour
+ comprendre votre erreur. Puis, essayez de nouveau en cliquant sur le bouton
+ « Recommencer ».
+&lt;/p&gt;
+&lt;p&gt;
+ Rappel : L'environnement web du cours transforme parfois automatiquement
+ les adresses web (URL) en lien. L'environnement du cours met aussi en forme
+ certains guillemets et apostrophes. Il n'est possible pour le professeur de
+ corriger ce comportement (il n'est pas possible de changer l'environnement)
+ et vous devez l'ignorer lors de votre lecture. Par ailleurs, si vous
+ copiez-collez du contenu des exercices et des exemples, vous devez adapter
+ le code manuellement.
+&lt;/p&gt;</description></item></channel></rss>

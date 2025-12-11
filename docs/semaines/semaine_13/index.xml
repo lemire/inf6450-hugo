@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 13 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/</link><description>Recent content in Semaine 13 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/index.xml" rel="self" type="application/rss+xml"/><item><title>Du XML aux graphes</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/</guid><description>&lt;h1 id="du-xml-aux-graphes"&gt;
+ Du XML aux graphes
+ &lt;a class="anchor" href="#du-xml-aux-graphes"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Le cours porte sur le XML en tant qu&amp;rsquo;outil pour la gestion de l&amp;rsquo;information. Nous avons vu, dans les modules précédents, le rôle que peut jouer le XML comme outil dans la gestion des données, qui sont une forme de connaissances de premier niveau : le XML rend plus facile l&amp;rsquo;échange et la transformation des données. De plus, nous avons vu que le XML permet le marquage « sémantique » des informations; le XML s&amp;rsquo;impose donc naturellement comme outil de gestion des connaissances. En effet, prenons cet exemple de marquage sémantique :&lt;/p&gt;</description></item><item><title>Introduction au RDF</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/</guid><description>&lt;h1&gt;
+ Introduction au RDF
+&lt;/h1&gt;
+&lt;h2&gt;
+ Introduction
+&lt;/h2&gt;
+&lt;p&gt;
+ Le
+ &lt;i&gt;
+ Resource Description Framework
+ &lt;/i&gt;
+ (RDF) est un langage pour les
+ métadonnées sur le web,
+ c'est-à-dire un langage pour énoncer ce que l'on sait sur quelque chose ou
+ quelqu'un.
+ Par exemple, le RDF est idéal pour indiquer qui est l'auteur d'un document
+ ou quel est le titre du document.
+ De plus, le langage RDF est prévu pour être à la fois simple (mais tout est
+ relatif), suffisamment
+ puissant pour « tout » décrire, et facilement utilisable par des
+ logiciels.
+ Dans le deuxième texte que nous proposons, nous verrons quelques
+ applications intéressantes.
+ Pour l'instant, nous ne présentons dans ce texte que les concepts de base.
+&lt;/p&gt;</description></item></channel></rss>

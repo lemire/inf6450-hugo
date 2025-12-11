@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 11 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/</link><description>Recent content in Semaine 11 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/index.xml" rel="self" type="application/rss+xml"/><item><title>Modèles de programmation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/</guid><description>&lt;style&gt;
+ .codeblock {
+ background:#282c34; color:#abb2bf; padding:18px; border-radius:8px; overflow-x:auto;
+ font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em; line-height:1.5;
+ margin:1.8em 0;
+ }
+ .xmlblock {
+ background:#f8fafc; border:1px solid #cbd5e1; color:#2d3748; padding:18px; border-radius:8px;
+ overflow-x:auto; font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em;
+ margin:1.8em 0;
+ }
+ code {background:#e5e7eb; padding:3px 7px; border-radius:4px; font-size:0.95em;}
+&lt;/style&gt;
+&lt;h1&gt;
+ Modèles de programmation XML
+&lt;/h1&gt;
+&lt;p&gt;
+ Il y a plusieurs façons de traiter du XML. Chaque méthode a ses avantages et ses inconvénients. Bien que ce module s’intéresse surtout à l’approche DOM, il est important de connaître l’ensemble des méthodologies possibles et d’avoir une idée des forces et faiblesses relatives de chacune.
+&lt;/p&gt;</description></item><item><title>Activité JSON/XML avec Jackson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</guid><description>&lt;h1&gt;
+ Activité JSON/XML avec Jackson
+&lt;/h1&gt;
+&lt;p&gt;
+ &lt;a href="https://github.com/lemire/javajackson"&gt;
+ Nous vous invitons maintenant à faire une activité avec la librairie Java Jackson.
+ &lt;/a&gt;
+ Dans cette activité, vous verrez comment on peut créer et analyser des documents JSON et XML avec une librairie dédiée en Java.
+&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</guid><description>&lt;h1&gt;
+ Autoévaluation DOM
+&lt;/h1&gt;
+&lt;p&gt;
+ Le bouton « Vérifier ma réponse » donne accès à un script qui, en
+ plus de vous permettre
+ de vérifier vos réponses, fournit une courte explication.
+ Si tous les commentaires sont en
+ &lt;span style="color:blue"&gt;
+ bleu
+ &lt;/span&gt;
+ , c'est
+ que vous avez la bonne réponse;
+ sinon, lisez les commentaires en
+ &lt;span style="color:red"&gt;
+ rouge
+ &lt;/span&gt;
+ pour
+ comprendre votre erreur.
+ Puis, essayez de nouveau en cliquant sur le bouton
+ « Recommencer ».
+&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+ &lt;div style="background-color:#E0EAF0"&gt;
+ &lt;b&gt;
+ Question 1
+ &lt;/b&gt;
+ .
+ Si vous faites la lecture d'un document XML avec une librairie
+ supportant DOM et que, par la suite,
+ vous utilisez la même librairie pour sauvegarder exactement le même
+ modèle en arbre, est-ce
+ que le fichier nouvellement produit sera identique au fichier d'origine?
+ &lt;/div&gt;
+ &lt;p style="width:90%;"&gt;
+ Choisissez la bonne réponse parmi les suivantes.
+ &lt;/p&gt;</description></item></channel></rss>

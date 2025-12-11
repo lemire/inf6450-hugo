@@ -1,0 +1,1170 @@
+<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+ Autoévaluation
+
+
+ Le bouton « Vérifier ma réponse » donne accès à un script qui, en
+    plus de vous permettre de vérifier vos réponses, fournit une courte
+    explication. Si tous les commentaires sont en
+ 
+  bleu
+ 
+ , c'est que vous avez la bonne réponse;
+    sinon, lisez les commentaires en
+ 
+  rouge
+ 
+ pour
+    comprendre votre erreur. Puis, essayez de nouveau en cliquant sur le bouton
+    « Recommencer ».
+
+
+ Rappel : L'environnement web du cours transforme parfois automatiquement
+    les adresses web (URL) en lien. L'environnement du cours met aussi en forme
+    certains guillemets et apostrophes. Il n'est possible pour le professeur de
+    corriger ce comportement (il n'est pas possible de changer l'environnement)
+    et vous devez l'ignorer lors de votre lecture. Par ailleurs, si vous
+    copiez-collez du contenu des exercices et des exemples, vous devez adapter
+    le code manuellement.
+"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="Autoévaluation"><meta property="og:description" content="Autoévaluation Le bouton « Vérifier ma réponse » donne accès à un script qui, en plus de vous permettre de vérifier vos réponses, fournit une courte explication. Si tous les commentaires sont en bleu , c'est que vous avez la bonne réponse; sinon, lisez les commentaires en rouge pour comprendre votre erreur. Puis, essayez de nouveau en cliquant sur le bouton « Recommencer ». Rappel : L'environnement web du cours transforme parfois automatiquement les adresses web (URL) en lien. L'environnement du cours met aussi en forme certains guillemets et apostrophes. Il n'est possible pour le professeur de corriger ce comportement (il n'est pas possible de changer l'environnement) et vous devez l'ignorer lors de votre lecture. Par ailleurs, si vous copiez-collez du contenu des exercices et des exemples, vous devez adapter le code manuellement."><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>Autoévaluation | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.404ed02339d2d5426e41a3dfb7f7d97d5856d49e3b81cc7db3aeee0980357f55.js integrity="sha256-QE7QIznS1UJuQaPft/fZfVhW1J47gcx9s67uCYA1f1U=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/inf6450-hugo/><img src=/inf6450-hugo/xml.jpg alt=Logo class=book-icon><span>INF 6450 - Gestion de l'information avec XML</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Rechercher aria-label=Rechercher maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/inf6450-hugo/docs/professeur/>Pense-bête DTD</a></li><li><span>Semaines</span><ul><li><input type=checkbox id=section-7441693393d20b821fe8b37c5a6f7cf2 class=toggle>
+<label for=section-7441693393d20b821fe8b37c5a6f7cf2 class=flex><a href=/inf6450-hugo/docs/semaines/semaine_1/ class=flex-auto>Semaine 1</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/>Installation d’un navigateur moderne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/>Créer un fichier XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/>Introduction à XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/>Principes du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/>Encodage des caractères Unicode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/>Mise en forme du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/>Laboratoire sur la structure en arbre des documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/>Petit guide d’usage du courriel efficace</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-af40a75de7e5184983fffc4ff12ae982 class=toggle checked>
+<label for=section-af40a75de7e5184983fffc4ff12ae982 class=flex><a role=button class=flex-auto>Semaine 2</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/>Définition de type de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/>Validation de documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/ class=active>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-19fac9b87d4af3855d770f5f0a1ea19e class=toggle>
+<label for=section-19fac9b87d4af3855d770f5f0a1ea19e class=flex><a role=button class=flex-auto>Semaine 3</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/>Espace de nom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_pomxml_en_java/>Le fichier pom.xml en Java</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_sitemapxml/>Le fichier sitemap.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/les_fichiers_csproj_en_c/>Les fichiers csproj en C#</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/rss/>Les formats RSS et Atom</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/>Le fichier AndroidManifest.xml</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_3/travail_1/>Travail 1</a></li></ul></li><li><input type=checkbox id=section-f5606a0b5813317643cf57b4b6e8a8e4 class=toggle>
+<label for=section-f5606a0b5813317643cf57b4b6e8a8e4 class=flex><a role=button class=flex-auto>Semaine 4</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_4/xhtml/>XHTML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/html_5/>HTML 5</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/mathml/>MathML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/svg/>SVG</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/base64/>Base64</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_4/markdown/>MarkDown</a></li></ul></li><li><input type=checkbox id=section-ea112c6c027e8be5b72462b07efbd404 class=toggle>
+<label for=section-ea112c6c027e8be5b72462b07efbd404 class=flex><a role=button class=flex-auto>Semaine 5</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_5/format_de_document/>Format de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_5/familiarisation_avec_epub/>Familiarisation avec EPUB</a></li></ul></li><li><input type=checkbox id=section-63939a07d015168789e352a75a400204 class=toggle>
+<label for=section-63939a07d015168789e352a75a400204 class=flex><a role=button class=flex-auto>Semaine 6</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_6/les_documents_epub/>Les documents EPUB</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/utilisation_de_sigil_et_de_thorium/>Utilisation de Sigil et de Thorium</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/>Des pages web dynamiques avec JavaScript</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_6/travail_2/>Travail 2</a></li></ul></li><li><input type=checkbox id=section-ab34f94bdc2e263dca825db6224ae341 class=toggle>
+<label for=section-ab34f94bdc2e263dca825db6224ae341 class=flex><a role=button class=flex-auto>Semaine 7</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/>XPath : un premier laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_approfondissement/>XPath : approfondissement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/>XPath : second laboratoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/>XPath 2.0 et 3.0</a></li></ul></li><li><input type=checkbox id=section-c9fff26212e55a28630558b97c972fce class=toggle>
+<label for=section-c9fff26212e55a28630558b97c972fce class=flex><a role=button class=flex-auto>Semaine 8</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_8/introduction_au_xslt/>Introduction au XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne/>XSLT en ligne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/>Un peu plus de XSLT : fonctionnement de base, template et value-of</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/>Les valeurs d’attribut</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/>XSLT modulaire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/>Les noms d’éléments</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/>Attribut mode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/>La fonction generate-id</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_tests/>Les tests</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/les_boucles/>Les boucles</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/>Clés et aggrégation</a></li></ul></li><li><input type=checkbox id=section-9b8667613d67aeb0609307ae83a17fa7 class=toggle>
+<label for=section-9b8667613d67aeb0609307ae83a17fa7 class=flex><a role=button class=flex-auto>Semaine 9</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/>Générer des noeuds dynamiquement</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/variables_et_parametres/>Variables et paramètres</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/>Mise en forme</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/>Espaces de noms</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/les_axes/>Les axes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/etude_dun_exemple_docbook/>Étude d’un exemple (DocBook)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/>Laboratoire XSLT</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt_avec_python_optionnel/>Laboratoire XSLT avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/xslt_20_et_30/>XSLT 2.0 et 3.0</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_9/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=toggle>
+<label for=section-ac7bd3b61b4332fdc2f5f3b01c8b78bc class=flex><a role=button class=flex-auto>Semaine 10</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_10/xquery/>XQuery</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_xquery_avec_python_optionnel/>Laboratoire XQuery avec Python (optionnel)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/css/>CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/>Laboratoire CSS</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/les_langages_declaratifs/>Les langages déclaratifs</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_10/travail_3/>Travail 3</a></li></ul></li><li><input type=checkbox id=section-6d7b5d8190eb01621a1a63639d583071 class=toggle>
+<label for=section-6d7b5d8190eb01621a1a63639d583071 class=flex><a role=button class=flex-auto>Semaine 11</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_11/modeles_de_programmation/>Modèles de programmation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/>Activité JSON/XML avec Jackson</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-da204379f6c471ce99e7d0fb98f947ac class=toggle>
+<label for=section-da204379f6c471ce99e7d0fb98f947ac class=flex><a role=button class=flex-auto>Semaine 12</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom/>DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/autoevaluation_dom/>Autoévaluation DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/>Problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/>Solutions aux problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom_javascript_et_autres_langages/>DOM : JavaScript et autres langages</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/>Asynchronous JavaScript And XML (AJAX)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/json/>JSON</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/yaml/>YAML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/>Docx (Microsoft Word)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/travail_4/>Travail 4</a></li></ul></li><li><input type=checkbox id=section-b751a142c973750b05080598365caf8b class=toggle>
+<label for=section-b751a142c973750b05080598365caf8b class=flex><a role=button class=flex-auto>Semaine 13</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/>Du XML aux graphes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/>Introduction au RDF</a></li></ul></li><li><input type=checkbox id=section-f04b8e776ca9029e58015bccc14ef21b class=toggle>
+<label for=section-f04b8e776ca9029e58015bccc14ef21b class=flex><a role=button class=flex-auto>Semaine 14</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/>Applications du RDF</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/travail_5/>Travail 5</a></li></ul></li><li><input type=checkbox id=section-e29b75c1086e87120d49e87d63a39c0a class=toggle>
+<label for=section-e29b75c1086e87120d49e87d63a39c0a class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>Autoévaluation</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><h1>Autoévaluation</h1><p>Le bouton « Vérifier ma réponse » donne accès à un script qui, en
+plus de vous permettre de vérifier vos réponses, fournit une courte
+explication. Si tous les commentaires sont en
+<span style=color:blue>bleu
+</span>, c'est que vous avez la bonne réponse;
+sinon, lisez les commentaires en
+<span style=color:red>rouge
+</span>pour
+comprendre votre erreur. Puis, essayez de nouveau en cliquant sur le bouton
+« Recommencer ».</p><p>Rappel : L'environnement web du cours transforme parfois automatiquement
+les adresses web (URL) en lien. L'environnement du cours met aussi en forme
+certains guillemets et apostrophes. Il n'est possible pour le professeur de
+corriger ce comportement (il n'est pas possible de changer l'environnement)
+et vous devez l'ignorer lors de votre lecture. Par ailleurs, si vous
+copiez-collez du contenu des exercices et des exemples, vous devez adapter
+le code manuellement.</p><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 1
+</b>.
+Combien de DTD peut avoir un document XML?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596444672><ol><li><input name=idp140520596444672 onclick='var Click_MenuId="idp140520596445536true",formid="idp140520596444672",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596445536true>
+Une
+seule.
+<span class=feedback id=idp140520596445536true style=display:none;font-weight:700><br>(Réponse correcte!) Par contre, il peut
+y avoir une partie interne à la DTD,
+c'est-à-dire une partie qui est écrite dans le
+document XML lui-même. Le tout (DTD externe et interne)
+forme une seule DTD.</span></li><li><input name=idp140520596444672 onclick='var Click_MenuId="idp140520596447216false",formid="idp140520596444672",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596447216false>
+Autant
+qu'on veut.
+<span class=feedback id=idp140520596447216false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 2
+</b>.
+Il est nécessaire d'avoir une définition de type de document, par
+exemple un document DTD,
+pour déterminer si un document XML est valable.</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596448432><ol><li><input name=idp140520596448432 onclick='var Click_MenuId="idp140520596449584true",formid="idp140520596448432",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596449584true>
+Vrai.
+<span class=feedback id=idp140520596449584true style=display:none;font-weight:700><br>(Réponse correcte!) Un document est dit
+valable s'il
+est bien formé et respecte sa DTD.</span></li><li><input name=idp140520596448432 onclick='var Click_MenuId="idp140520596450976false",formid="idp140520596448432",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596450976false>
+Faux.
+<span class=feedback id=idp140520596450976false style=display:none;font-weight:700><br>(Réponse incorrecte!) On peut seulement
+vérifier qu'il est bien formé.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 3
+</b>.
+Qu'est-ce qu'une DTD interne?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596452464><ol><li><input name=idp140520596452464 onclick='var Click_MenuId="idp140520596453344false",formid="idp140520596452464",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596453344false>
+Une
+DTD qui a été conçue à l'interne, dans une compagnie
+ou institution.
+<span class=feedback id=idp140520596453344false style=display:none;font-weight:700><br>(Réponse incorrecte!) Incorrect. La
+provenance de la DTD est sans conséquence.</span></li><li><input name=idp140520596452464 onclick='var Click_MenuId="idp140520596454720true",formid="idp140520596452464",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596454720true>
+Une
+DTD qui apparaît dans le document XML
+entre des crochets.
+<span class=feedback id=idp140520596454720true style=display:none;font-weight:700><br>(Réponse correcte!) Correct.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 4
+</b>.
+Quel symbole est utilisé dans les DTD pour signifier qu'un élément est
+optionnel, c'est-à-dire qu'on peut en trouver un ou aucun?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596456016><ol><li><input name=idp140520596456016 onclick='var Click_MenuId="idp140520596457152true",formid="idp140520596456016",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596457152true>
+?
+<span class=feedback id=idp140520596457152true style=display:none;font-weight:700><br>(Réponse correcte!) Oui.</span></li><li><input name=idp140520596456016 onclick='var Click_MenuId="idp140520596458528false",formid="idp140520596456016",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596458528false>
+*
+<span class=feedback id=idp140520596458528false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596456016 onclick='var Click_MenuId="idp140520596459936false",formid="idp140520596456016",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596459936false>
++
+<span class=feedback id=idp140520596459936false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596456016 onclick='var Click_MenuId="idp140520596461376false",formid="idp140520596456016",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596461376false>
+|
+<span class=feedback id=idp140520596461376false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 5
+</b>.
+Quel symbole est utilisé dans les DTD pour signifier qu'un élément
+peut ne pas apparaître, n'apparaître qu'une fois ou apparaître plusieurs
+fois?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596462976><ol><li><input name=idp140520596462976 onclick='var Click_MenuId="idp140520596464208false",formid="idp140520596462976",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596464208false>
+?
+<span class=feedback id=idp140520596464208false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596462976 onclick='var Click_MenuId="idp140520596465616true",formid="idp140520596462976",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596465616true>
+*
+<span class=feedback id=idp140520596465616true style=display:none;font-weight:700><br>(Réponse correcte!) Oui.</span></li><li><input name=idp140520596462976 onclick='var Click_MenuId="idp140520596467024false",formid="idp140520596462976",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596467024false>
++
+<span class=feedback id=idp140520596467024false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596462976 onclick='var Click_MenuId="idp140520596468432false",formid="idp140520596462976",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596468432false>
+|
+<span class=feedback id=idp140520596468432false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 6
+</b>.
+Quel symbole est utilisé dans les DTD pour signifier qu'un élément
+doit apparaître au moins une fois?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596469968><ol><li><input name=idp140520596469968 onclick='var Click_MenuId="idp140520596471072false",formid="idp140520596469968",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596471072false>
+?
+<span class=feedback id=idp140520596471072false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596469968 onclick='var Click_MenuId="idp140520596472480false",formid="idp140520596469968",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596472480false>
+*
+<span class=feedback id=idp140520596472480false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596469968 onclick='var Click_MenuId="idp140520596473888true",formid="idp140520596469968",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596473888true>
++
+<span class=feedback id=idp140520596473888true style=display:none;font-weight:700><br>(Réponse correcte!) Oui.</span></li><li><input name=idp140520596469968 onclick='var Click_MenuId="idp140520596475296false",formid="idp140520596469968",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596475296false>
+|
+<span class=feedback id=idp140520596475296false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 7
+</b>.
+Quel symbole est utilisé dans les DTD pour signifier qu'un élément ou un
+autre peut apparaître?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596476832><ol><li><input name=idp140520596476832 onclick='var Click_MenuId="idp140520596477920false",formid="idp140520596476832",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596477920false>
+?
+<span class=feedback id=idp140520596477920false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596476832 onclick='var Click_MenuId="idp140520596479328false",formid="idp140520596476832",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596479328false>
+*
+<span class=feedback id=idp140520596479328false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596476832 onclick='var Click_MenuId="idp140520596480736false",formid="idp140520596476832",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596480736false>
++
+<span class=feedback id=idp140520596480736false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596476832 onclick='var Click_MenuId="idp140520596482144true",formid="idp140520596476832",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596482144true>
+|
+<span class=feedback id=idp140520596482144true style=display:none;font-weight:700><br>(Réponse correcte!) Oui.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 8
+</b>.
+Combien d'éléments « nom » peut contenir un document XML qui
+débute ainsi :<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+]></p></div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596483680><ol><li><input name=idp140520596483680 onclick='var Click_MenuId="idp140520596485152false",formid="idp140520596483680",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596485152false>
+Au
+moins un.
+<span class=feedback id=idp140520596485152false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596483680 onclick='var Click_MenuId="idp140520596487392false",formid="idp140520596483680",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596487392false>
+1
+<span class=feedback id=idp140520596487392false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596483680 onclick='var Click_MenuId="idp140520596488768true",formid="idp140520596483680",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596488768true>
+2
+<span class=feedback id=idp140520596488768true style=display:none;font-weight:700><br>(Réponse correcte!) Effectivement. La
+déclaration de type de document nous indique que
+l'élément-racine est « cheque »
+et que l'élement « cheque » doit contenir
+exactement un élément « recipiendaire »
+et un élément « emetteur », chacun contenant
+exactement un élément « nom ».</span></li><li><input name=idp140520596483680 onclick='var Click_MenuId="idp140520596490656false",formid="idp140520596483680",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596490656false>
+3
+<span class=feedback id=idp140520596490656false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596483680 onclick='var Click_MenuId="idp140520596492032false",formid="idp140520596483680",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596492032false>
+3
+ou plus
+<span class=feedback id=idp140520596492032false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 9
+</b>.
+Soit le document DTD suivant, disponible à l'adresse
+« http://www.mondomain.com/madtd.dtd ».
+Dites quels documents XML sont
+<b>valables
+</b>.<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ELEMENT etudiant (nom, numero, cours*)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT numero (#PCDATA)>
+&lt;!ELEMENT cours (#PCDATA)></p></div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596493792><ol><li><input name=idp140520596493792 type=checkbox value=idp140520596496256true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>&lt;/nom>&lt;numero>&lt;/numero>
+&lt;/etudiant></p><span class=feedback id=idp140520596496256true style=display:none;font-weight:700><br>Oui. Ce document est valable, car
+l'astérisque (*) permet d'avoir zéro ou plusieurs
+balises « cours ».</span></li><li><input name=idp140520596493792 type=checkbox value=idp140520596498608false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>Jean &lt;gras>B&lt;/gras>
+Pearson&lt;/nom>
+&lt;numero>12&lt;/numero>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;/etudiant></p><span class=feedback id=idp140520596498608false style=display:none;font-weight:700><br>Non, la balise &lt;nom> ne peut
+contenir que du texte et aucune balise.</span></li><li><input name=idp140520596493792 type=checkbox value=idp140520596501200false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE nom SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>Jean Pearson&lt;/nom>
+&lt;numero>12&lt;/numero>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;/etudiant></p><span class=feedback id=idp140520596501200false style=display:none;font-weight:700><br>Non, la déclaration de type de document
+indique que la racine doit être
+une balise de type « nom ».</span></li><li><input name=idp140520596493792 type=checkbox value=idp140520596503680true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE nom SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;nom>Jean Pearson&lt;/nom></p><span class=feedback id=idp140520596503680true style=display:none;font-weight:700><br>Oui. On utilise bien l'élément
+« nom » comme élément-racine et il est défini dans
+la DTD.</span></li><li><input name=idp140520596493792 type=checkbox value=idp140520596506816true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>Réjean Bougon&lt;/nom>
+&lt;numero>3156&lt;/numero>
+&lt;cours>Introduction à l'arithmétique&lt;/cours>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;/etudiant></p><span class=feedback id=idp140520596506816true style=display:none;font-weight:700><br>Oui. L'astérisque permet d'avoir
+plusieurs éléments « cours ».</span></li><li><input name=idp140520596493792 type=checkbox value=idp140520596509408false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;nom>Réjean Bougon&lt;/nom>
+&lt;numero>3156&lt;/numero>
+&lt;/etudiant></p><span class=feedback id=idp140520596509408false style=display:none;font-weight:700><br>Non. Il faut que les éléments
+apparaissent dans l'ordre :
+nom, numero et cours.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596493792",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596493792",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 10
+</b>.
+Soit le document DTD suivant, disponible à l'adresse
+« http://www.mondomain.com/madtd.dtd ».
+Dites quels documents XML sont
+<b>valables
+</b>.<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ELEMENT etudiant (nom, numero, cours+)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT numero (#PCDATA)>
+&lt;!ELEMENT cours (#PCDATA)></p></div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596512032><ol><li><input name=idp140520596512032 type=checkbox value=idp140520596514592false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;etudiant>
+&lt;nom>Jean Pearson&lt;/nom>
+&lt;numero>12&lt;/numero>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;cours>Introduction à l'informatique&lt;/cours>
+&lt;/etudiant></p><span class=feedback id=idp140520596514592false style=display:none;font-weight:700><br>Non. La déclaration XML doit apparaître
+en premier dans un document XML.</span></li><li><input name=idp140520596512032 type=checkbox value=idp140520596516896false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>&lt;/nom>&lt;numero>&lt;/numero>
+&lt;/etudiant></p><span class=feedback id=idp140520596516896false style=display:none;font-weight:700><br>Non. Le document n'est pas valable
+parce que le symbole « + » implique que l'élément
+« cours » doit apparaître au moins une
+fois.</span></li><li><input name=idp140520596512032 type=checkbox value=idp140520596519376true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE etudiant SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;etudiant>
+&lt;nom>Jean Pearson&lt;/nom>
+&lt;numero>12&lt;/numero>
+&lt;cours>Introduction aux ordinateurs&lt;/cours>
+&lt;/etudiant></p><span class=feedback id=idp140520596519376true style=display:none;font-weight:700><br>Oui. L'élément « cours »
+apparaît une fois, comme cela est exigé.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596512032",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596512032",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 11
+</b>.
+Soit le document DTD suivant, disponible à l'adresse
+« http://www.mondomain.com/madtd.dtd ».
+Dites quels documents XML sont
+<b>valables
+</b>.<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ELEMENT compagnie (president, ingénieur*, comptable+)>
+&lt;!ELEMENT president (prenom,nom)>
+&lt;!ELEMENT ingenieur (prenom,nom)>
+&lt;!ELEMENT comptable (prenom,nom)>
+&lt;!ELEMENT prenom (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)></p></div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596522000><ol><li><input name=idp140520596522000 type=checkbox value=idp140520596523952false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;president>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;/president>
+&lt;comptable>
+&lt;nom>Côté&lt;/nom>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;/comptable>
+&lt;/compagnie></p><span class=feedback id=idp140520596523952false style=display:none;font-weight:700><br>Non. Selon la DTD, il faut que les noms
+apparaissent après les prénoms.</span></li><li><input name=idp140520596522000 type=checkbox value=idp140520596527200true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;president>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;nom>Palado&lt;/nom>
+&lt;/president>
+&lt;comptable>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/comptable>
+&lt;/compagnie></p><span class=feedback id=idp140520596527200true style=display:none;font-weight:700><br>Oui. La compagnie a un comptable et un
+président, comme cela est demandé.</span></li><li><input name=idp140520596522000 type=checkbox value=idp140520596529760false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;president>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;nom>Palado&lt;/nom>
+&lt;/president>
+&lt;ingenieur>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/ingenieur>
+&lt;/compagnie></p><span class=feedback id=idp140520596529760false style=display:none;font-weight:700><br>Non. Il faut au moins un
+comptable.</span></li><li><input name=idp140520596522000 type=checkbox value=idp140520596532192true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;president>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;nom>Palado&lt;/nom>
+&lt;/president>
+&lt;ingenieur>
+&lt;prenom>Jean&lt;/prenom>
+&lt;nom>Bertran&lt;/nom>
+&lt;/ingenieur>
+&lt;ingenieur>
+&lt;prenom>Luc&lt;/prenom>
+&lt;nom>Fauche&lt;/nom>
+&lt;/ingenieur>
+&lt;comptable>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/comptable>
+&lt;/compagnie></p><span class=feedback id=idp140520596532192true style=display:none;font-weight:700><br>Oui. On peut avoir plus d'un
+ingénieur.</span></li><li><input name=idp140520596522000 type=checkbox value=idp140520596533856false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;president>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;nom>Palado&lt;/nom>
+&lt;/president>
+&lt;comptable>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/comptable>
+&lt;ingenieur>
+&lt;prenom>Jean&lt;/prenom>
+&lt;nom>Bertran&lt;/nom>
+&lt;/ingenieur>
+&lt;ingenieur>
+&lt;prenom>Luc&lt;/prenom>
+&lt;nom>Fauche&lt;/nom>
+&lt;/ingenieur>
+&lt;/compagnie></p><span class=feedback id=idp140520596533856false style=display:none;font-weight:700><br>Non. Les ingénieurs doivent apparaître
+avant les comptables.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596522000",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596522000",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 12
+</b>.
+Soit le document DTD suivant, disponible à l'adresse
+« http://www.mondomain.com/madtd.dtd ».
+Dites quels documents XML sont
+<b>valables
+</b>.<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ELEMENT compagnie (employe*)>
+&lt;!ELEMENT employe (nom,prenom,telephone?,division+)>
+&lt;!ELEMENT division (#PCDATA)>
+&lt;!ELEMENT prenom (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT telephone (#PCDATA)></p></div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596538544><ol><li><input name=idp140520596538544 type=checkbox value=idp140520596540544false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;employe>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;telephone>432432432&lt;/telephone>
+&lt;/employe>
+&lt;/compagnie></p><span class=feedback id=idp140520596540544false style=display:none;font-weight:700><br>Non. L'élément employé doit contenir au
+moins un élément « division ».</span></li><li><input name=idp140520596538544 type=checkbox value=idp140520596543520false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;employe>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;division>Services récréatifs&lt;/division>
+&lt;telephone>432432432&lt;/telephone>
+&lt;/employe>
+&lt;/compagnie></p><span class=feedback id=idp140520596543520false style=display:none;font-weight:700><br>Non. L'élément employé doit contenir un
+élément « division », mais après
+l'élément « telephone ».</span></li><li><input name=idp140520596538544 type=checkbox value=idp140520596546288true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;employe>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;division>Services récréatifs&lt;/division>
+&lt;/employe>
+&lt;/compagnie></p><span class=feedback id=idp140520596546288true style=display:none;font-weight:700><br>Oui. L'élément « telephone est
+facultatif ».</span></li><li><input name=idp140520596538544 type=checkbox value=idp140520596548752false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd">
+&lt;compagnie>
+&lt;employe>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;telephone>432-432-432444&lt;/telephone>
+&lt;telephone>433-444-444444&lt;/telephone>
+&lt;division>Services récréatifs&lt;/division>
+&lt;/employe>
+&lt;/compagnie></p><span class=feedback id=idp140520596548752false style=display:none;font-weight:700><br>Non. L'élément « telephone »
+peut ne pas apparaître ou apparaître une fois.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596538544",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596538544",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 13
+</b>.
+Soit le document DTD suivant, disponible à l'adresse
+« http://www.mondomain.com/madtd.dtd ».
+Dites quels documents XML sont
+<b>valables
+</b>.<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ELEMENT compagnie (president, ingénieur*, comptable+)>
+&lt;!ELEMENT president (prenom,nom)>
+&lt;!ELEMENT ingenieur (prenom,nom)>
+&lt;!ELEMENT comptable (prenom,nom)>
+&lt;!ELEMENT prenom (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)></p></div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596551568><ol><li><input name=idp140520596551568 type=checkbox value=idp140520596553424true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie [
+&lt;!ELEMENT compagnie (president, ingénieur*,
+comptable+)>
+&lt;!ELEMENT president (nom,prenom)>
+&lt;!ELEMENT ingenieur (nom,prenom)>
+&lt;!ELEMENT comptable (nom,prenom)>
+&lt;!ELEMENT prenom (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+]>
+&lt;compagnie>
+&lt;president>
+&lt;nom>Palado&lt;/nom>
+&lt;prenom>Pierre&lt;/prenom>
+&lt;/president>
+&lt;comptable>
+&lt;nom>Côté&lt;/nom>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;/comptable>
+&lt;/compagnie></p><span class=feedback id=idp140520596553424true style=display:none;font-weight:700><br>Dans ce cas précis, la DTD à l'adresse
+« http://www.mondomain.com/madtd.dtd » n'est
+jamais utilisé.
+Il ne faut donc considérer que la DTD interne. Selon cette
+DTD, le document XML est valable.</span></li><li><input name=idp140520596551568 type=checkbox value=idp140520596556096true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE taxe SYSTEM
+"http://www.mondomain.com/madtd.dtd" [
+&lt;!ELEMENT taxe (montant, comptable)>
+&lt;!ELEMENT montant (#PCDATA)>
+]>
+&lt;taxe>
+&lt;montant>
+50$
+&lt;/montant>
+&lt;comptable>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/comptable>
+&lt;/taxe></p><span class=feedback id=idp140520596556096true style=display:none;font-weight:700><br>Pour traiter le document, il faut ici
+combiner les deux DTD; on voit
+que l'élément « taxe » utilise un élément
+« comptable » de la DTD externe.
+Cela est parfaitement valable.</span></li><li><input name=idp140520596551568 type=checkbox value=idp140520596559184false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"
+?>
+&lt;!DOCTYPE compagnie SYSTEM
+"http://www.mondomain.com/madtd.dtd" [
+&lt;!ELEMENT montant (#PCDATA)>
+]>
+&lt;compagnie>
+&lt;president>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/president>
+&lt;comptable>
+&lt;prenom>Yvon&lt;/prenom>
+&lt;nom>Côté&lt;/nom>
+&lt;/comptable>
+&lt;montant>
+50$
+&lt;/montant>
+&lt;/compagnie></p><span class=feedback id=idp140520596559184false style=display:none;font-weight:700><br>Il n'est pas prévu dans la DTD externe
+que l'élément « compagnie » contienne
+un élément « montant », donc ce n'est pas permis.
+La DTD interne vient s'ajouter à la
+DTD externe, mais sans plus.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596551568",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596551568",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 14
+</b>.
+Dites quels documents XML sont
+<b>valables
+</b>.</div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596562240><ol><li><input name=idp140520596562240 type=checkbox value=idp140520596564208false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE jeu [
+&lt;!ELEMENT jeu (nom,(age|niveau))>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+]>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle&lt;/nom>
+&lt;age>15-25 ans&lt;/age>
+&lt;niveau>jeune adulte&lt;/niveau>
+&lt;/jeu></p><span class=feedback id=idp140520596564208false style=display:none;font-weight:700><br>Non. La DTD interne stipule que
+l'élément « jeu » contient un élément
+« nom », suivi d'un élément « age » ou
+d'un élément « niveau »,
+mais pas les deux.</span></li><li><input name=idp140520596562240 type=checkbox value=idp140520596567088true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE jeu [
+&lt;!ELEMENT jeu (nom,(age|niveau))>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+]>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle&lt;/nom>
+&lt;age>15-25 ans&lt;/age>
+&lt;/jeu></p><span class=feedback id=idp140520596567088true style=display:none;font-weight:700><br>Oui. La DTD interne stipule que
+l'élément « jeu » contient un élément
+« nom », suivi d'un élément « age » ou
+d'un élément « niveau »,
+mais pas les deux.</span></li><li><input name=idp140520596562240 type=checkbox value=idp140520596569696true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE jeu [
+&lt;!ELEMENT jeu (nom,(age|niveau)+)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+]>
+&lt;jeu>
+&lt;nom>Jeu de la poudre&lt;/nom>
+&lt;age>25-35 ans&lt;/age>
+&lt;niveau>universitaire&lt;/niveau>
+&lt;/jeu></p><span class=feedback id=idp140520596569696true style=display:none;font-weight:700><br>Oui. La DTD interne stipule que
+l'élément « jeu » contient un élément
+« nom » qui peut ou non être suivi de plusieurs
+éléments « age » ou
+éléments « niveau ».</span></li><li><input name=idp140520596562240 type=checkbox value=idp140520596572416true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE jeu [
+&lt;!ELEMENT jeu (nom,(#PCDATA|age|niveau)*)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+]>
+&lt;jeu>
+&lt;nom>Jeu de la poudre&lt;/nom>
+J'ai maintenant la balise age...
+&lt;age>25-35 ans&lt;/age>
+suivie d'une balise niveau
+&lt;niveau>universitaire&lt;/niveau>
+et je peux continuer
+&lt;/jeu></p><span class=feedback id=idp140520596572416true style=display:none;font-weight:700><br>Oui. La DTD interne stipule que
+l'élément « jeu » contient un élément
+« nom », suivi de contenu mixte avec texte et
+choix de balises
+entre « age » et « niveau ».</span></li><li><input name=idp140520596562240 type=checkbox value=idp140520596574416false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE jeu [
+&lt;!ELEMENT jeu (nom,(#PCDATA|age|niveau)*)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+]>
+&lt;jeu>
+Ceci est du XML avec contenu mixte
+&lt;nom>Jeu de la poudre&lt;/nom>
+J'ai maintenant la balise age...
+&lt;age>25-35 ans&lt;/age>
+suivie d'une balise niveau
+&lt;niveau>universitaire&lt;/niveau>
+et je peux continuer
+&lt;/jeu></p><span class=feedback id=idp140520596574416false style=display:none;font-weight:700><br>Non. L'élément « jeu » doit
+commencer par une balise « nom ».</span></li></ol><input class=button onclick='var spanel,formid="idp140520596562240",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596562240",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 15
+</b>.
+Dites quels documents XML sont
+<b>valables
+</b>.</div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596577264><ol><li><input name=idp140520596577264 type=checkbox value=idp140520596579552false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE activite [
+&lt;!ELEMENT activite ANY>
+&lt;!ELEMENT travail (nom,(age|niveau))>
+&lt;!ELEMENT jeu (nom,(age|niveau),gratuit?)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+&lt;!ELEMENT gratuit EMPTY>
+]>
+&lt;activite>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle&lt;/nom>
+&lt;age>15-25 ans&lt;/age>
+&lt;niveau>jeune adulte&lt;/niveau>
+&lt;/jeu>
+&lt;/activite></p><span class=feedback id=idp140520596579552false style=display:none;font-weight:700><br>Le problème ici est qu'on peut avoir un
+élément « age » ou un élément
+« niveau »,
+mais pas les deux. L'élément « activite » peut
+contenir tout élément déclaré dont « jeu ».
+L'élément « jeu » a une balise optionnelle
+« gratuit », qui est ici absente.</span></li><li><input name=idp140520596577264 type=checkbox value=idp140520596583408false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE activite [
+&lt;!ELEMENT activite ANY>
+&lt;!ELEMENT travail (nom,(age|niveau))>
+&lt;!ELEMENT jeu (nom,(age|niveau),gratuit?)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+&lt;!ELEMENT gratuit EMPTY>
+]>
+&lt;activite>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle
+&lt;/nom>
+&lt;age>15-25 ans
+&lt;/age>
+&lt;gratuit>
+&lt;/gratuit>
+&lt;/jeu>
+&lt;/activite></p><span class=feedback id=idp140520596583408false style=display:none;font-weight:700><br>Non. L'élément « gratuit »
+doit être vide de tout, incluant les espaces et retours de
+chariot. Il faut donc
+utiliser la syntaxe &lt;gratuit>&lt;/gratuit> ou, plus
+simplement, &lt;gratuit />.</span></li><li><input name=idp140520596577264 type=checkbox value=idp140520596587232false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE activite [
+&lt;!ELEMENT activite ANY>
+&lt;!ELEMENT travail (nom,(age|niveau))>
+&lt;!ELEMENT jeu (nom,(age|niveau),gratuit?)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+&lt;!ELEMENT gratuit EMPTY>
+]>
+&lt;activite>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle
+&lt;/nom>
+&lt;age>15-25 ans
+&lt;/age>
+&lt;niveau>jeune adulte
+&lt;/niveau>
+&lt;gratuit />
+&lt;/jeu>
+&lt;/activite></p><span class=feedback id=idp140520596587232false style=display:none;font-weight:700><br>On utilise les éléments
+« age » et « niveau », alors qu'on doit
+choisir entre l'un ou l'autre, à cause de l'opérateur
+« | » (ou logique).</span></li><li><input name=idp140520596577264 type=checkbox value=idp140520596591696true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE activite [
+&lt;!ELEMENT activite ANY>
+&lt;!ELEMENT travail (nom,(age|niveau))>
+&lt;!ELEMENT jeu (nom,(age|niveau),gratuit?)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+&lt;!ELEMENT gratuit EMPTY>
+]>
+&lt;activite>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle&lt;/nom>
+&lt;age>15-25 ans&lt;/age>
+&lt;/jeu>
+J'ajoute une balise &lt;nom>Mon nom est Bond&lt;/nom>
+&lt;/activite></p><span class=feedback id=idp140520596591696true style=display:none;font-weight:700><br>Oui. L'élément « activite »
+peut contenir n'importe quel élément déclaré et du contenu
+mixte.</span></li><li><input name=idp140520596577264 type=checkbox value=idp140520596593680false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE activite [
+&lt;!ELEMENT activite ANY>
+&lt;!ELEMENT travail (nom,(age|niveau))>
+&lt;!ELEMENT jeu (nom,(age|niveau),gratuit?)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT age (#PCDATA)>
+&lt;!ELEMENT niveau (#PCDATA)>
+&lt;!ELEMENT gratuit EMPTY>
+]>
+&lt;activite>
+&lt;jeu>
+&lt;nom>Jeu de la chandelle&lt;/nom>
+&lt;age>15-25 ans&lt;/age>
+&lt;/jeu>
+&lt;peuimporte>je peux tout me
+permettre&lt;/peuimporte>
+&lt;/activite></p><span class=feedback id=idp140520596593680false style=display:none;font-weight:700><br>Non. L'élément « peuimporte »
+n'est pas prévu par la DTD; il n'est donc pas permis.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596577264",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596577264",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 16
+</b>.
+Dites quels documents XML sont
+<b>valables
+</b>.</div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596596784><ol><li><input name=idp140520596596784 type=checkbox value=idp140520596599056false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+]>
+&lt;cheque commentaire="loyer">
+&lt;recipiendaire>
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque></p><span class=feedback id=idp140520596599056false style=display:none;font-weight:700><br>Non. Il n'est pas permis d'avoir un
+attribut non déclaré dans la DTD.</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596600960true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #REQUIRED>
+]>
+&lt;cheque commentaire="loyer">
+&lt;recipiendaire>
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque></p><span class=feedback id=idp140520596600960true style=display:none;font-weight:700><br>Oui. L'élément « cheque » a
+bien un attribut « commentaire », comme cela est
+nécessaire.</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596603744false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #REQUIRED>
+&lt;!ATTLIST recipiendaire commentaire CDATA #REQUIRED>
+&lt;!ATTLIST emetteur commentaire CDATA #REQUIRED>
+]>
+&lt;cheque commentaire="loyer">
+&lt;recipiendaire commentaire="mon ami">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque></p><span class=feedback id=idp140520596603744false style=display:none;font-weight:700><br>Non. L'élément « emetteur »
+devrait avoir un attribut « commentaire ».</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596606656true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #IMPLIED>
+&lt;!ATTLIST recipiendaire commentaire CDATA #IMPLIED>
+&lt;!ATTLIST emetteur commentaire CDATA #IMPLIED>
+]>
+&lt;cheque commentaire="loyer">
+&lt;recipiendaire commentaire="mon ami">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque></p><span class=feedback id=idp140520596606656true style=display:none;font-weight:700><br>Oui. L'élément « emetteur »
+n'a pas d'attribut « commentaire »,
+mais c'est permis à cause de la mention
+« IMPLIED ».</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596608688false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE cheque [
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ATTLIST cheque commentaire CDATA #IMPLIED
+numero ID #REQUIRED
+>
+&lt;!ATTLIST recipiendaire commentaire CDATA #IMPLIED>
+&lt;!ATTLIST emetteur commentaire CDATA #IMPLIED>
+]>
+&lt;cheque commentaire="loyer" numero="1324">
+&lt;recipiendaire commentaire="mon ami">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque></p><span class=feedback id=idp140520596608688false style=display:none;font-weight:700><br>Non. L'attribut
+« numero="1324" » doit avoir comme valeur un nom
+XML;
+en d'autres termes, il ne peut commencer par un
+chiffre.</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596611472false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE chequier [
+&lt;!ELEMENT chequier (cheque*)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #IMPLIED
+numero ID #REQUIRED
+>
+&lt;!ATTLIST recipiendaire commentaire CDATA #IMPLIED>
+&lt;!ATTLIST emetteur commentaire CDATA #IMPLIED>
+]>
+&lt;chequier>
+&lt;cheque commentaire="loyer" numero="cheque1324">
+&lt;recipiendaire commentaire="mon ami">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;cheque commentaire="encore le loyer"
+numero="cheque1324">
+&lt;recipiendaire commentaire="mon ami (encore)">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;/chequier></p><span class=feedback id=idp140520596611472false style=display:none;font-weight:700><br>Non. Nous avons ici deux attributs avec
+une valeur de type ID : il faut
+qu'ils aient des valeurs différentes. En XML, la valeur d'un
+attribut de type ID identifie un élément unique.</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596614320true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE chequier [
+&lt;!ELEMENT chequier (cheque*)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #IMPLIED
+numero ID #REQUIRED
+>
+&lt;!ATTLIST recipiendaire commentaire CDATA #IMPLIED
+nas ID #IMPLIED>
+&lt;!ATTLIST emetteur commentaire CDATA #IMPLIED>
+]>
+&lt;chequier>
+&lt;cheque commentaire="loyer" numero="cheque1324">
+&lt;recipiendaire commentaire="mon ami"
+nas="n333-344-444">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;cheque commentaire="encore le loyer"
+numero="cheque1325">
+&lt;recipiendaire commentaire="mon ami (encore)"
+nas="n333-344-444bis">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;/chequier></p><span class=feedback id=idp140520596614320true style=display:none;font-weight:700><br>Oui. Observez que tous les attributs
+ayant des valeurs de type ID ont des valeurs
+distinctes.</span></li><li><input name=idp140520596596784 type=checkbox value=idp140520596616224true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE chequier [
+&lt;!ELEMENT chequier (cheque*)>
+&lt;!ELEMENT recipiendaire (nom)>
+&lt;!ELEMENT emetteur (nom)>
+&lt;!ELEMENT montant (#PCDATA)>
+&lt;!ELEMENT cheque (recipiendaire,emetteur,montant)>
+&lt;!ELEMENT nom (#PCDATA)>
+&lt;!ATTLIST cheque commentaire CDATA #IMPLIED
+numero ID #REQUIRED
+>
+&lt;!ATTLIST recipiendaire commentaire CDATA #IMPLIED
+nas ID #IMPLIED>
+&lt;!ATTLIST emetteur commentaire CDATA #IMPLIED
+>
+]>
+&lt;chequier>
+&lt;cheque commentaire="le loyer d'aujourd'hui"
+numero="cheque1324">
+&lt;recipiendaire commentaire="mon ami"
+nas="n333-344-444">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;cheque commentaire="encore le loyer"
+numero="cheque1325">
+&lt;recipiendaire commentaire="mon ami (encore)"
+nas="n333-344-444bis">
+&lt;nom>Jean&lt;/nom>
+&lt;/recipiendaire>
+&lt;emetteur>
+&lt;nom>Martin&lt;/nom>
+&lt;/emetteur>
+&lt;montant>10$&lt;/montant>
+&lt;/cheque>
+&lt;/chequier></p><span class=feedback id=idp140520596616224true style=display:none;font-weight:700><br>Oui. Observez encore une fois que tous
+les attributs ayant des valeurs de type ID
+ont des valeurs distinctes.</span></li></ol><input class=button onclick='var spanel,formid="idp140520596596784",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596596784",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 17
+</b>.
+Dans une DTD, que signifie la ligne suivante?<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ATTLIST etudiant universite CDATA "Université du Québec à
+Montréal"></p><b>Indice.
+</b>Il s'agit d'une valeur d'attribut par défaut.</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596618288><ol><li><input name=idp140520596618288 onclick='var Click_MenuId="idp140520596620304false",formid="idp140520596618288",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596620304false>
+Que les éléments « etudiant » doivent toujours avoir
+explicitement
+un attribut « universite » ayant comme valeur
+« Université du Québec à Montréal ».
+<span class=feedback id=idp140520596620304false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non.</span></li><li><input name=idp140520596618288 onclick='var Click_MenuId="idp140520596621808false",formid="idp140520596618288",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596621808false>
+Que les éléments « etudiant » ont toujours
+implicitement un attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal ».
+<span class=feedback id=idp140520596621808false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non.</span></li><li><input name=idp140520596618288 onclick='var Click_MenuId="idp140520596623376true",formid="idp140520596618288",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596623376true>
+Que les éléments « etudiant » ont implicitement un
+attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal », à moins que l'on fournisse
+une autre valeur de type CDATA.
+<span class=feedback id=idp140520596623376true style=display:none;font-weight:700><br>(Réponse correcte!)
+Oui.</span></li><li><input name=idp140520596618288 onclick='var Click_MenuId="idp140520596625408false",formid="idp140520596618288",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596625408false>
+Que les éléments « etudiant » ont implicitement un
+attribut « universite » ayant
+comme valeur « Université du Québec à Montréal » et
+que si l'on fournit explicitement l'attribut,
+il doit avoir comme valeur « Université du Québec à
+Montréal ».
+<span class=feedback id=idp140520596625408false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 18
+</b>.
+Dans une DTD, que signifie la ligne suivante?<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ATTLIST etudiant universite CDATA #FIXED "Université du Québec
+à Montréal"></p><b>Indice.
+</b>Il s'agit d'une valeur d'attribut par défaut.</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596627440><ol><li><input name=idp140520596627440 onclick='var Click_MenuId="idp140520596629248false",formid="idp140520596627440",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596629248false>
+Que les éléments « etudiant » doivent toujours avoir
+explicitement un attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal ».
+<span class=feedback id=idp140520596629248false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. La valeur peut aussi être implicite.</span></li><li><input name=idp140520596627440 onclick='var Click_MenuId="idp140520596630960false",formid="idp140520596627440",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596630960false>
+Que les éléments « etudiant » ont toujours
+implicitement un attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal ».
+<span class=feedback id=idp140520596630960false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+C'est vrai, mais on peut aussi stipuler explicitement la
+valeur.</span></li><li><input name=idp140520596627440 onclick='var Click_MenuId="idp140520596632528false",formid="idp140520596627440",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596632528false>
+Que les éléments « etudiant » ont implicitement un
+attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal », à moins que l'on fournisse
+une autre valeur de type CDATA.
+<span class=feedback id=idp140520596632528false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. La valeur de l'attribut est fixe.</span></li><li><input name=idp140520596627440 onclick='var Click_MenuId="idp140520596634560true",formid="idp140520596627440",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596634560true>
+Que les éléments « etudiant » ont implicitement un
+attribut « universite »
+ayant comme valeur « Université du Québec à
+Montréal »,
+et que si l'on fournit explicitement l'attribut, il doit avoir
+comme valeur « Université du
+Québec à Montréal ».
+<span class=feedback id=idp140520596634560true style=display:none;font-weight:700><br>(Réponse correcte!)
+Oui.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 19
+</b>.
+Dans un document XML, que signifie la ligne suivante?<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;!ENTITY % administration "president,comptable,adjoint"></p>si le document XML commence par<p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
+&lt;!DOCTYPE taxe SYSTEM "http://www.mondomain.com/mabelledtd.dtd" [
+&lt;!ENTITY % administration "president,comptable,adjoint">
+]></p><b>Indice.
+</b>Il s'agit d'une entité paramètre.</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596636592><ol><li><input name=idp140520596636592 onclick='var Click_MenuId="idp140520596638880false",formid="idp140520596636592",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596638880false>
+Partout dans le document XML où le texte
+« &amp;administration; » apparaît,
+il est remplacé par « president,comptable,adjoint ».
+<span class=feedback id=idp140520596638880false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. Ce serait toutefois le cas si nous avions la ligne
+&lt;!ENTITY administration "president,comptable,adjoint"></span></li><li><input name=idp140520596636592 onclick='var Click_MenuId="idp140520596641024true",formid="idp140520596636592",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596641024true>
+Partout dans la DTD externe, le texte
+« %administration; » est remplacé
+par « president,comptable,adjoint ».
+<span class=feedback id=idp140520596641024true style=display:none;font-weight:700><br>(Réponse correcte!)
+Oui.</span></li><li><input name=idp140520596636592 onclick='var Click_MenuId="idp140520596642608false",formid="idp140520596636592",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596642608false>
+Partout dans la DTD externe, à supposer qu'elle ne définisse pas
+déjà l'entité « administration »,
+le texte « %administration; » est remplacé par
+« president,comptable,adjoint ».
+<span class=feedback id=idp140520596642608false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. La partie interne de la DTD a préséance sur la DTD
+externe.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 20
+</b>.
+Choisissez les documents valables.</div><p style=width:90%>Choisissez toutes les réponses qui s'appliquent, puis
+appuyez sur le bouton « Vérifier ma réponse ».</p><form id=idp140520596645360><ol><li><input name=idp140520596645360 type=checkbox value=idp140520596646224false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE dossier [
+&lt;!ELEMENT dossier (cas*)>
+&lt;!ELEMENT cas (#PCDATA|reference)*>
+&lt;!ELEMENT reference (#PCDATA)>
+&lt;!ATTLIST cas numero ID #REQUIRED>
+&lt;!ATTLIST reference numero IDREF #REQUIRED>
+]>
+&lt;dossier>
+&lt;cas numero="5543">La mère souffre de la
+grippe.&lt;/cas>
+&lt;cas numero="5544">Le père est en santé.&lt;/cas>
+&lt;cas numero="5548">L'enfant de &lt;reference
+numero="5543" />
+et de &lt;reference numero="5544" /> se porte
+bien.&lt;/cas>
+&lt;/dossier></p><span class=feedback id=idp140520596646224false style=display:none;font-weight:700><br>La valeur d'un attribut de type
+« ID » ou « IDREF » doit être un
+nom XML valable,
+donc elle ne doit pas débuter par un chiffre.</span></li><li><input name=idp140520596645360 type=checkbox value=idp140520596648048false><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE dossier [
+&lt;!ELEMENT dossier (cas*)>
+&lt;!ELEMENT cas (#PCDATA|reference)*>
+&lt;!ELEMENT reference (#PCDATA)>
+&lt;!ATTLIST cas numero ID #REQUIRED>
+&lt;!ATTLIST reference numero IDREF #REQUIRED>
+]>
+&lt;dossier>
+&lt;cas numero="c5543">La mère souffre de la
+grippe.&lt;/cas>
+&lt;cas numero="c5544">Le père est en santé.&lt;/cas>
+&lt;cas numero="c5548">L'enfant de &lt;reference
+numero="c12" /> et
+de &lt;reference numero="c13" /> se porte
+bien.&lt;/cas>
+&lt;/dossier></p><span class=feedback id=idp140520596648048false style=display:none;font-weight:700><br>Non. Toutes les valeurs d'attribut de
+type « IDREF » ne correspondent pas à une valeur
+d'attribut de type « ID ».</span></li><li><input name=idp140520596645360 type=checkbox value=idp140520596649936true><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"
+standalone="yes" ?>
+&lt;!DOCTYPE dossier [
+&lt;!ELEMENT dossier (cas*)>
+&lt;!ELEMENT cas (#PCDATA|reference)*>
+&lt;!ELEMENT reference (#PCDATA)>
+&lt;!ATTLIST cas numero ID #REQUIRED>
+&lt;!ATTLIST reference numero IDREF #REQUIRED>
+]>
+&lt;dossier>
+&lt;cas numero="c5543">La mère souffre de la
+grippe.&lt;/cas>
+&lt;cas numero="c5544">Le père est en santé.&lt;/cas>
+&lt;cas numero="c5548">L'enfant de &lt;reference
+numero="c5543" />
+et de &lt;reference numero="c5544" /> se porte
+bien.&lt;/cas>
+&lt;/dossier></p><span class=feedback id=idp140520596649936true style=display:none;font-weight:700><br>Effectivement. Tous les valeurs
+d'attribut de type « IDREF » correspondent
+à une valeur d'attribut de type « ID ».</span></li></ol><input class=button onclick='var spanel,formid="idp140520596645360",myform=document.getElementById(formid),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),inputs[inputscount].checked?/true/.test(inputs[inputscount].value)?spanel.style.color="blue":spanel.style.color="red":/true/.test(inputs[inputscount].value)?spanel.style.color="red":spanel.style.color="blue",spanel.style.display=""' type=button value="Vérifier ma réponse">
+<input class=button onclick='var inputs,spanel,formid="idp140520596645360",myform=document.getElementById(formid);myform.reset(),inputs=myform.getElementsByTagName("input");for(inputscount=0;inputscount<inputs.length;++inputscount)spanel=document.getElementById(inputs[inputscount].value),spanel.style.display="none"' type=button value=Recommencer></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 21
+</b>.
+Trouvez le terme qui se distingue.</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596652000><ol><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596652928false",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596652928false>
+XML Schema
+<span class=feedback id=idp140520596652928false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. XML Schema est une technologie permettant de valider du
+XML.</span></li><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596654384false",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596654384false>
+Relax NG
+<span class=feedback id=idp140520596654384false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. Relax NG est une technologie permettant de valider du
+XML.</span></li><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596656176false",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596656176false>
+DTD
+<span class=feedback id=idp140520596656176false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. DTD est une technologie permettant de valider du XML.</span></li><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596657664false",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596657664false>
+Schematron
+<span class=feedback id=idp140520596657664false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. Schematron est une technologie permettant de valider du
+XML.</span></li><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596659168true",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596659168true>
+XML
+<span class=feedback id=idp140520596659168true style=display:none;font-weight:700><br>(Réponse correcte!)
+Non. Le XML n'est pas une technologie de validation.</span></li><li><input name=idp140520596652000 onclick='var Click_MenuId="idp140520596660640false",formid="idp140520596652000",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596660640false>
+<i>Examplotron
+</i><span class=feedback id=idp140520596660640false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. Examplotron est une technologie permettant de valider
+du XML.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 22
+</b>.
+Je dois définir des entités, quelle technologie est-ce que je dois
+utiliser?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596662640><ol><li><input name=idp140520596662640 onclick='var Click_MenuId="idp140520596663712false",formid="idp140520596662640",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596663712false>
+XML Schema
+<span class=feedback id=idp140520596663712false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. XML Schema ne permet pas de définir des entités.</span></li><li><input name=idp140520596662640 onclick='var Click_MenuId="idp140520596665312false",formid="idp140520596662640",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596665312false>
+Relax NG
+<span class=feedback id=idp140520596665312false style=display:none;font-weight:700><br>(Réponse incorrecte!)
+Non. Relax NG ne permet pas de définir des entités.</span></li><li><input name=idp140520596662640 onclick='var Click_MenuId="idp140520596667280true",formid="idp140520596662640",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596667280true>
+DTD
+<span class=feedback id=idp140520596667280true style=display:none;font-weight:700><br>(Réponse correcte!)
+Effectivement. DTD permet la définition des entités.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 23
+</b>.
+Quelle est la signification de DTD?</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596668960><ol><li><input name=idp140520596668960 onclick='var Click_MenuId="idp140520596669824true",formid="idp140520596668960",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596669824true>
+Document
+Type Definition
+<span class=feedback id=idp140520596669824true style=display:none;font-weight:700><br>(Réponse correcte!) Effectivement.</span></li><li><input name=idp140520596668960 onclick='var Click_MenuId="idp140520596671232false",formid="idp140520596668960",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596671232false>
+Document
+Type Declaration
+<span class=feedback id=idp140520596671232false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596668960 onclick='var Click_MenuId="idp140520596672672false",formid="idp140520596668960",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596672672false>
+Dynamic
+Type Definition
+<span class=feedback id=idp140520596672672false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 24
+</b>.
+Choisissez la meilleure réponse</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596674240><ol><li><input name=idp140520596674240 onclick='var Click_MenuId="idp140520596675232true",formid="idp140520596674240",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596675232true>
+La
+spécification DTD fait partie intégrante du XML.
+<span class=feedback id=idp140520596675232true style=display:none;font-weight:700><br>(Réponse correcte!) Effectivement.</span></li><li><input name=idp140520596674240 onclick='var Click_MenuId="idp140520596676752false",formid="idp140520596674240",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596676752false>
+Le
+nom des éléments doit être en minuscule.
+<span class=feedback id=idp140520596676752false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li><li><input name=idp140520596674240 onclick='var Click_MenuId="idp140520596678224false",formid="idp140520596674240",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596678224false>
+Tous
+les documents doivent avoir une DTD.
+<span class=feedback id=idp140520596678224false style=display:none;font-weight:700><br>(Réponse incorrecte!) Non.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><div style=margin-left:1cm><div style=background-color:#e0eaf0><b>Question 25
+</b>.
+Choisissez la meilleure réponse</div><p style=width:90%>Choisissez la bonne réponse parmi les suivantes.</p><form id=idp140520596679808><ol><li><input name=idp140520596679808 onclick='var Click_MenuId="idp140520596680800true",formid="idp140520596679808",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596680800true>
+Toutes
+ces réponses sont vraies
+<span class=feedback id=idp140520596680800true style=display:none;font-weight:700><br>(Réponse correcte!) Effectivement.</span></li><li><input name=idp140520596679808 onclick='var Click_MenuId="idp140520596682288false",formid="idp140520596679808",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596682288false>
+Le
+XML est sensible à la casse des cararactères
+<span class=feedback id=idp140520596682288false style=display:none;font-weight:700><br>(Réponse incorrecte!) Oui, mais ce
+n'est pas tout.</span></li><li><input name=idp140520596679808 onclick='var Click_MenuId="idp140520596683808false",formid="idp140520596679808",Click_Menu=document.getElementById(Click_MenuId),myform=document.getElementById(formid),spans=myform.getElementsByTagName("span");for(spancount=0;spancount<spans.length;++spancount)spans[spancount].style.display="none";/true/.test(Click_MenuId)?Click_Menu.style.color="blue":Click_Menu.style.color="red",Click_Menu.style.display=""' type=radio value=idp140520596683808false>
+Tous
+les documents XML doivent avoir un élément-racine.
+<span class=feedback id=idp140520596683808false style=display:none;font-weight:700><br>(Réponse incorrecte!) Oui, mais ce
+n'est pas tout.</span></li></ol></form></div><hr style=margin-bottom:1cm;margin-top:1cm;color:#0f0;background-color:#ccc;height:5px><p style=text-align:right>Vous avez maintenant terminé votre autoévaluation.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Validation de documents XML">
+<span>Validation de documents XML</span>
+</a><a href=/inf6450-hugo/docs/semaines/semaine_3/espace_de_nom/ class="flex align-center float-right book-icon"><span>Espace de nom</span>
+<img src=/inf6450-hugo/svg/forward.svg alt=Next title="Espace de nom"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
