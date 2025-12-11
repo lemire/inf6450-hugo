@@ -74,8 +74,6 @@ public class JsonSimple {
 
 Nous recommandons comme référence pour la programmation Java le manuel [Java pas à pas](https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/) de Godin et Lemire.
 
-![Java pas à pas](https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg)
-
 
 
 ## Mathématiques
