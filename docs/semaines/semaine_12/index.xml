@@ -222,33 +222,7 @@ Les implémentations JavaScript supportent bien l&amp;rsquo;API DOM en général
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#0550ae"&gt;ul&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#0550ae"&gt;body&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#1f2328"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#0550ae"&gt;html&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dans cet exemple, la fonction &lt;code&gt;chargeDocument&lt;/code&gt; utilise &lt;code&gt;XMLHttpRequest&lt;/code&gt; pour effectuer une requête GET asynchrone vers une URI. Lorsque la réponse est reçue (readyState === 4 et status === 200), elle appelle &lt;code&gt;afficheTitre&lt;/code&gt; qui extrait le contenu de l&amp;rsquo;élément &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; du document XML chargé et l&amp;rsquo;ajoute dynamiquement à la page.&lt;/p&gt;</description></item><item><title>JSON</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/json/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/json/</guid><description>&lt;p&gt;
- Malheureusement, le traitement d’un document XML en JavaScript est parfois inutilement lourd. Pour cette raison, on remplace souvent le XML par du
- &lt;a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank"&gt;
- JSON
- &lt;/a&gt;
- (JavaScript Object Notation).
-&lt;/p&gt;
-&lt;p&gt;
- JSON a supplanté le XML dans plusieurs applications quant il s’agit de
- transmettre des informations simples, surtout lors que le récipiendaire
- utilise le JavaScript.
-&lt;/p&gt;
-&lt;p&gt;
- On peut voir le JSON comme une forme très limitée de JavaScript où on peut
- utiliser que des « objets » et des tableaux. Un
- « objets » en JavaScript est une structure de clés-valeurs avec la
- syntaxe «
- &lt;i&gt;
- clef1 : valeur1, clef2:valeur2
- &lt;/i&gt;
- » alors
- qu’un tableau est une simple liste de valeurs avec la syntaxe [ valeur1,
- valeur2 ] . Les clés doivent être des chaînes de caractères, mais les
- valeurs peuvent être d’autres objets, des tableaux, des chaînes de
- caractères, des nombres, des valeurs Booléennes ou la valeur spéciale
- « null ».
-&lt;/p&gt;</description></item><item><title>YAML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/yaml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/yaml/</guid><description>&lt;h1&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dans cet exemple, la fonction &lt;code&gt;chargeDocument&lt;/code&gt; utilise &lt;code&gt;XMLHttpRequest&lt;/code&gt; pour effectuer une requête GET asynchrone vers une URI. Lorsque la réponse est reçue (readyState === 4 et status === 200), elle appelle &lt;code&gt;afficheTitre&lt;/code&gt; qui extrait le contenu de l&amp;rsquo;élément &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; du document XML chargé et l&amp;rsquo;ajoute dynamiquement à la page.&lt;/p&gt;</description></item><item><title>YAML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/yaml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/yaml/</guid><description>&lt;h1&gt;
  YAML
 &lt;/h1&gt;
 &lt;p&gt;
@@ -262,8 +236,14 @@ Les implémentations JavaScript supportent bien l&amp;rsquo;API DOM en général
  Nous vous invitons maintenant à faire notre activité de création de documents Word
  &lt;/a&gt;
  .
-&lt;/p&gt;</description></item><item><title>Travail 4</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>Méthode On-Demand avec simdjson (C++)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/simdjson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/simdjson/</guid><description>&lt;h1 id="traitement-on-demand-du-json-en-c-avec-simdjson-activité-optionnelle"&gt;
+ Traitement on-demand du JSON en C++ avec simdjson (activité optionnelle)
+ &lt;a class="anchor" href="#traitement-on-demand-du-json-en-c-avec-simdjson-activit%c3%a9-optionnelle"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;simdjson est la bibliothèque JSON la plus rapide au monde (2025). Elle est conçue dès le départ pour le parsing &lt;strong&gt;on-demand&lt;/strong&gt; (aussi appelé &lt;strong&gt;zero-copy&lt;/strong&gt; ou &lt;strong&gt;lazy parsing&lt;/strong&gt;) : elle ne construit les objets C++ que pour les parties du JSON que vous consultez réellement. Si vous maîtriser le C++, il s&amp;rsquo;agit d&amp;rsquo;une librairie à connaître.&lt;/p&gt;
+&lt;p&gt;Site officiel : &lt;a href="https://github.com/simdjson/simdjson"&gt;https://github.com/simdjson/simdjson&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Travail 4</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</guid><description>&lt;h1 id="travail-4"&gt;
  Travail 4
+ &lt;a class="anchor" href="#travail-4"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;h2&gt;
  Consignes générales
@@ -285,7 +265,7 @@ Les implémentations JavaScript supportent bien l&amp;rsquo;API DOM en général
  cours et votre nom comme ceci :
  &lt;pre&gt;
  /**
- * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+ * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 26
  */&lt;/pre&gt;
  &lt;/li&gt;
  &lt;li&gt;

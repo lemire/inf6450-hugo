@@ -35,27 +35,16 @@
  xml-stylesheet
  &lt;/code&gt;
  . C'est une alternative pratique pour programmer et expérimenter avec XSLT sans charger de fichiers externes.
-&lt;/p&gt;</description></item><item><title>Un peu plus de XSLT : fonctionnement de base, template et value-of</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</guid><description>&lt;h1&gt;
- Un peu plus de XSLT : fonctionnement de base, template et value-of
+&lt;/p&gt;</description></item><item><title>Un peu plus de XSLT : fonctionnement de base, template et value-of</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</guid><description>&lt;h1 id="un-peu-plus-de-xslt--fonctionnement-de-base-template-et-value-of"&gt;
+ Un peu plus de XSLT : fonctionnement de base, template et value-of
+ &lt;a class="anchor" href="#un-peu-plus-de-xslt--fonctionnement-de-base-template-et-value-of"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- « Éléments xsl:template »
+&lt;h2 id="-éléments-xsltemplate-"&gt;
+ « Éléments xsl:template »
+ &lt;a class="anchor" href="#-%c3%a9l%c3%a9ments-xsltemplate-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Modifions maintenant le fichier « xslt.xml » de façon à rendre l'expérience plus intéressante. 
- Tout d'abord, traitons tous les éléments « facture » du document XML. 
- Pour obtenir le résultat, il faut placer un élément « &amp;lt;xsl:template match="facture"&amp;gt; » 
- dans l'élément-racine du document XSLT comme ceci :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;xsl:stylesheet version="1.0" 
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
- &amp;lt;xsl:template match="facture"&amp;gt;
- On doit mettre quelque chose ici!!!
- &amp;lt;/xsl:template&amp;gt;
- &amp;lt;/xsl:stylesheet&amp;gt;
-&lt;/p&gt;</description></item><item><title>Les valeurs d’attribut</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/</guid><description>&lt;h1 id="les-valeurs-dattribut"&gt;
+&lt;p&gt;Dans cette section, nous explorons les éléments xsl:template, qui sont essentiels pour définir des règles de transformation personnalisées dans les feuilles de style XSLT.&lt;/p&gt;
+&lt;p&gt;Modifions maintenant le fichier « xslt.xml » de façon à rendre l&amp;rsquo;expérience plus intéressante. Tout d&amp;rsquo;abord, traitons tous les éléments « facture » du document XML. Pour obtenir le résultat, il faut placer un élément « &amp;lt;xsl:template match=&amp;ldquo;facture&amp;rdquo;&amp;gt; » dans l&amp;rsquo;élément-racine du document XSLT comme ceci :&lt;/p&gt;</description></item><item><title>Les valeurs d’attribut</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/</guid><description>&lt;h1 id="les-valeurs-dattribut"&gt;
  Les valeurs d’attribut
  &lt;a class="anchor" href="#les-valeurs-dattribut"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -78,119 +67,118 @@
  &lt;a class="anchor" href="#modularit%c3%a9-avec-les-%c3%a9l%c3%a9ments--xslapply-templates-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Cette section explique comment utiliser l&amp;rsquo;élément xsl:apply-templates pour rendre les feuilles de style XSLT plus modulaires et réutilisables, en évitant la répétition de code.&lt;/p&gt;
-&lt;p&gt;Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle &lt;em&gt;facture&lt;/em&gt;. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :&lt;/p&gt;</description></item><item><title>Les noms d’éléments</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</guid><description>&lt;h1&gt;
+&lt;p&gt;Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle &lt;em&gt;facture&lt;/em&gt;. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :&lt;/p&gt;</description></item><item><title>Les noms d’éléments</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</guid><description>&lt;h1 id="les-noms-déléments"&gt;
  Les noms d’éléments
+ &lt;a class="anchor" href="#les-noms-d%c3%a9l%c3%a9ments"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Capturer le nom d'un élément
+&lt;h2 id="capturer-le-nom-dun-élément"&gt;
+ Capturer le nom d&amp;rsquo;un élément
+ &lt;a class="anchor" href="#capturer-le-nom-dun-%c3%a9l%c3%a9ment"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Supposons que nous voulions afficher uniquement les noms des éléments (sans
- leur contenu). Nous pouvons
- obtenir ce résultat avec la fonction XPath « name » qui donne le
- nom de l'élément.
- La fonction name inclut le préfixe de l'espace de noms. Si on souhaite le
- nom de l'élément sans
- le préfixe, on peut utiliser la fonction « local-name ». La
- fonction
- « namespace-uri » donne l'URI de l'espace de noms de l'élément.
-&lt;/p&gt;</description></item><item><title>Attribut mode</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</guid><description>&lt;h1&gt;
+&lt;p&gt;Dans cette section, nous apprenons à capturer et afficher les noms des éléments XML en utilisant les fonctions XPath name, local-name et namespace-uri.&lt;/p&gt;
+&lt;p&gt;Supposons que nous voulions afficher uniquement les noms des éléments (sans
+leur contenu). Nous pouvons
+obtenir ce résultat avec la fonction XPath « name » qui donne le
+nom de l&amp;rsquo;élément.
+La fonction name inclut le préfixe de l&amp;rsquo;espace de noms. Si on souhaite le
+nom de l&amp;rsquo;élément sans
+le préfixe, on peut utiliser la fonction « local-name ». La
+fonction
+« namespace-uri » donne l&amp;rsquo;URI de l&amp;rsquo;espace de noms de l&amp;rsquo;élément.&lt;/p&gt;</description></item><item><title>Attribut mode</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</guid><description>&lt;h1 id="attribut-mode"&gt;
  Attribut mode
+ &lt;a class="anchor" href="#attribut-mode"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2&gt;
- Utilisation de l'attribut « mode »
+&lt;h2 id="utilisation-de-lattribut--mode-"&gt;
+ Utilisation de l&amp;rsquo;attribut « mode »
+ &lt;a class="anchor" href="#utilisation-de-lattribut--mode-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Il arrive que nous voulions définir plus d'un modèle pour un élément donné.
- Nous pouvons ajouter des modèles en utilisant l'attribut « mode »
- qui s'applique aux
- éléments « xsl:apply-templates » et « xsl:template ». La
- règle est très simple :
- si votre élément « xsl:apply-templates » a une valeur d'attribut
- pour « mode », alors
- seuls les éléments « xsl:template » ayant la même valeur
- d'attribut pour « mode » s'appliquent.
- On utilise souvent l'attribut « mode » pour faire des tables des
- matières.
-&lt;/p&gt;</description></item><item><title>La fonction generate-id</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous explorons l&amp;rsquo;utilisation de l&amp;rsquo;attribut mode en XSLT, qui permet de définir plusieurs modèles pour le même élément et de les appliquer sélectivement pour créer des vues différentes du document XML.&lt;/p&gt;
+&lt;p&gt;Il arrive que nous voulions définir plus d&amp;rsquo;un modèle pour un élément donné.
+Nous pouvons ajouter des modèles en utilisant l&amp;rsquo;attribut « mode »
+qui s&amp;rsquo;applique aux
+éléments « xsl:apply-templates » et « xsl:template ». La
+règle est très simple :
+si votre élément « xsl:apply-templates » a une valeur d&amp;rsquo;attribut
+pour « mode », alors
+seuls les éléments « xsl:template » ayant la même valeur
+d&amp;rsquo;attribut pour « mode » s&amp;rsquo;appliquent.
+On utilise souvent l&amp;rsquo;attribut « mode » pour faire des tables des
+matières.&lt;/p&gt;</description></item><item><title>La fonction generate-id</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</guid><description>&lt;h1 id="la-fonction-generate-id"&gt;
  La fonction generate-id
+ &lt;a class="anchor" href="#la-fonction-generate-id"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Fonction « generate-id »
+&lt;h2 id="fonction--generate-id-"&gt;
+ Fonction « generate-id »
+ &lt;a class="anchor" href="#fonction--generate-id-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- La fonction XSLT « generate-id » génère un « nom » unique
- pour chaque élément d'un document XML.
- Ce nom sera toujours le même pour un même élément, même si nous le
- rencontrons à plusieurs reprises.
- Si nous reprenons la liste des cours de l'exemple précédent sur
- l'utilisation de l'attribut « mode »,
- nous pourrions générer un identifiant unique pour chaque cours et l'afficher
- comme dans l'exemple de document XSLT qui suit :
-&lt;/p&gt;</description></item><item><title>Les tests</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous découvrons la fonction generate-id en XSLT, qui permet de générer des identifiants uniques pour les éléments XML, utiles pour créer des références ou des ancres dans les documents transformés.&lt;/p&gt;
+&lt;p&gt;La fonction XSLT « generate-id » génère un « nom » unique
+pour chaque élément d&amp;rsquo;un document XML.
+Ce nom sera toujours le même pour un même élément, même si nous le
+rencontrons à plusieurs reprises.
+Si nous reprenons la liste des cours de l&amp;rsquo;exemple précédent sur
+l&amp;rsquo;utilisation de l&amp;rsquo;attribut « mode »,
+nous pourrions générer un identifiant unique pour chaque cours et l&amp;rsquo;afficher
+comme dans l&amp;rsquo;exemple de document XSLT qui suit :&lt;/p&gt;</description></item><item><title>Les tests</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</guid><description>&lt;h1 id="les-tests"&gt;
  Les tests
+ &lt;a class="anchor" href="#les-tests"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
+&lt;h2 id="utilisation-des-tests"&gt;
  Utilisation des tests
+ &lt;a class="anchor" href="#utilisation-des-tests"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Nous pouvons tester des conditions à l'aide d'expressions XPath contenant
- les symboles « &amp;lt; », « = », « != »,
- « or », « and », « &amp;gt; »,
- « &amp;gt;= », « &amp;lt;= ».
- Nous utilisons les tests en XSLT avec les éléments « xsl:choose »
- et « xsl:if ».
- Par exemple, faire quelque chose de particulier, si le nom de l'élément
- courant est « montant ».
-&lt;/p&gt;</description></item><item><title>Les boucles</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous apprenons à utiliser les tests conditionnels en XSLT avec les éléments xsl:if et xsl:choose, permettant de contrôler le flux de transformation basé sur des conditions XPath.&lt;/p&gt;
+&lt;p&gt;Nous pouvons tester des conditions à l&amp;rsquo;aide d&amp;rsquo;expressions XPath contenant
+les symboles « &amp;lt; », « = », « != »,
+« or », « and », « &amp;gt; »,
+« &amp;gt;= », « &amp;lt;= ».
+Nous utilisons les tests en XSLT avec les éléments « xsl:choose »
+et « xsl:if ».
+Par exemple, faire quelque chose de particulier, si le nom de l&amp;rsquo;élément
+courant est « montant ».&lt;/p&gt;</description></item><item><title>Les boucles</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</guid><description>&lt;h1 id="les-boucles"&gt;
  Les boucles
+ &lt;a class="anchor" href="#les-boucles"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Utiliser XSLT comme base de données et éléments
- « for-each »
+&lt;h2 id="utiliser-xslt-comme-base-de-données-et-éléments--for-each-"&gt;
+ Utiliser XSLT comme base de données et éléments « for-each »
+ &lt;a class="anchor" href="#utiliser-xslt-comme-base-de-donn%c3%a9es-et-%c3%a9l%c3%a9ments--for-each-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- L'exemple de la liste des clients avec leur numéro de téléphone nous permet
- de faire plus. Tout d'abord, l'expression « //client » donne une
- séquence de tous les éléments « client »
- dans le nœud courant.
- Avec l'expression XPath « //client[nom='Sylvain'] », nous pouvons
- obtenir la séquence de tous les
- éléments « client » ayant pour nom « Sylvain ». Dans ce
- cas précis, il y a plus d'un élément
- dans la réponse. Pour visiter l'ensemble des éléments dans la séquence,
- il suffit d'utiliser l'élément « xsl:for-each » comme ceci :
-&lt;/p&gt;</description></item><item><title>Clés et aggrégation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous explorons l&amp;rsquo;utilisation de XSLT pour traiter des séquences d&amp;rsquo;éléments avec l&amp;rsquo;élément xsl:for-each, permettant de boucler sur des nœuds sélectionnés par XPath et d&amp;rsquo;effectuer des opérations répétitives.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;exemple de la liste des clients avec leur numéro de téléphone nous permet
+de faire plus. Tout d&amp;rsquo;abord, l&amp;rsquo;expression « //client » donne une
+séquence de tous les éléments « client »
+dans le nœud courant.
+Avec l&amp;rsquo;expression XPath « //client[nom=&amp;lsquo;Sylvain&amp;rsquo;] », nous pouvons
+obtenir la séquence de tous les
+éléments « client » ayant pour nom « Sylvain ». Dans ce
+cas précis, il y a plus d&amp;rsquo;un élément
+dans la réponse. Pour visiter l&amp;rsquo;ensemble des éléments dans la séquence,
+il suffit d&amp;rsquo;utiliser l&amp;rsquo;élément « xsl:for-each » comme ceci :&lt;/p&gt;</description></item><item><title>Clés et aggrégation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</guid><description>&lt;h1 id="clés-et-aggrégation"&gt;
  Clés et aggrégation
+ &lt;a class="anchor" href="#cl%c3%a9s-et-aggr%c3%a9gation"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Obtenir l'aggrégation avec la fonction
- « generate-id »
+&lt;h2 id="obtenir-laggrégation-avec-la-fonction--generate-id-"&gt;
+ Obtenir l&amp;rsquo;aggrégation avec la fonction « generate-id »
+ &lt;a class="anchor" href="#obtenir-laggr%c3%a9gation-avec-la-fonction--generate-id-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Supposons qu'on veuille calculer le total des
- éléments « quantite », mais en faisant l'aggrégation
- pour chaque valeur de l'attribut « type » dans l'exemple suivant.
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;?xml-stylesheet href="produits.xsl" type="text/xsl" ?&amp;gt;
- &amp;lt;produits&amp;gt;
- &amp;lt;france&amp;gt;
- &amp;lt;quantite type="bain"&amp;gt;53&amp;lt;/quantite&amp;gt;
- &amp;lt;quantite type="chambre"&amp;gt;12&amp;lt;/quantite&amp;gt;
- &amp;lt;/france&amp;gt;
- &amp;lt;canada&amp;gt;
- &amp;lt;quantite type="bain"&amp;gt;14&amp;lt;/quantite&amp;gt;
- &amp;lt;quantite type="chambre"&amp;gt;12&amp;lt;/quantite&amp;gt;
- &amp;lt;/canada&amp;gt;
- &amp;lt;/produits&amp;gt;
-&lt;/p&gt;
-&lt;p&gt;
- On pourrait tenter de résoudre ce problème avec une expression
- XPath de la forme « sum(//quantite[@type=current()/@type]) ».
- Malheureusement, on risque
- alors de calculer plusieurs fois la même somme. Par exemple, tentez
- d'appliquer
- la transformation suivante :
-&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Supposons qu&amp;rsquo;on veuille calculer le total des
+éléments « quantite », mais en faisant l&amp;rsquo;aggrégation
+pour chaque valeur de l&amp;rsquo;attribut « type » dans l&amp;rsquo;exemple suivant.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;?xml-stylesheet href=&amp;#34;produits.xsl&amp;#34; type=&amp;#34;text/xsl&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;produits&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;france&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;bain&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;53&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;chambre&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;12&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/france&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;canada&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;bain&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;14&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;chambre&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;12&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/canada&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/produits&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On pourrait tenter de résoudre ce problème avec une expression
+XPath de la forme « sum(//quantite[@type=current()/@type]) ».
+Malheureusement, on risque
+alors de calculer plusieurs fois la même somme. Par exemple, tentez
+d&amp;rsquo;appliquer
+la transformation suivante :&lt;/p&gt;</description></item></channel></rss>

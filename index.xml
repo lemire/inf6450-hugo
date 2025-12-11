@@ -147,43 +147,32 @@ nous avons deux &lt;strong&gt;vocabulaires XML&lt;/strong&gt;.&lt;/p&gt;</descri
  Le SGML (&lt;em&gt;Standardized General Markup Language&lt;/em&gt;)
  &lt;a class="anchor" href="#le-sgml-standardized-general-markup-language"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;En 1969, Charles Goldfarb, Edward Mosher et Raymond Lorie ont inventé le GML (&lt;em&gt;Generalized Markup Language&lt;/em&gt;). Chercheurs chez IBM, ils voulaient faciliter l&amp;rsquo;échange d&amp;rsquo;informations entre les outils d&amp;rsquo;édition, de formatage et de recherche de documents. Le GML possédait déjà un concept de « type de documents » similaire aux documents DTD modernes. Chez IBM, le GML a été utilisé pour la production d&amp;rsquo;environ 90 % des documents électroniques.&lt;/p&gt;</description></item><item><title>Générer des noeuds dynamiquement</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;En 1969, Charles Goldfarb, Edward Mosher et Raymond Lorie ont inventé le GML (&lt;em&gt;Generalized Markup Language&lt;/em&gt;). Chercheurs chez IBM, ils voulaient faciliter l&amp;rsquo;échange d&amp;rsquo;informations entre les outils d&amp;rsquo;édition, de formatage et de recherche de documents. Le GML possédait déjà un concept de « type de documents » similaire aux documents DTD modernes. Chez IBM, le GML a été utilisé pour la production d&amp;rsquo;environ 90 % des documents électroniques.&lt;/p&gt;</description></item><item><title>Générer des noeuds dynamiquement</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/generer_des_noeuds_dynamiquement/</guid><description>&lt;h1 id="générer-des-noeuds-dynamiquement"&gt;
  Générer des noeuds dynamiquement
+ &lt;a class="anchor" href="#g%c3%a9n%c3%a9rer-des-noeuds-dynamiquement"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
+&lt;h2 id="générer-un-commentaire"&gt;
  Générer un commentaire
+ &lt;a class="anchor" href="#g%c3%a9n%c3%a9rer-un-commentaire"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Il arrive qu'on veuille produire un commentaire dans la sortie XML. Rien
- de plus simple ! Il suffit d'utiliser l'instruction xsl:comment comme
- dans cet
- exemple :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;xsl:stylesheet version="1.0"
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
- &amp;lt;xsl:comment&amp;gt;Ceci est un commentaire.&amp;lt;/xsl:comment&amp;gt;
- &amp;lt;/xsl:stylesheet&amp;gt;
-&lt;/p&gt;
-&lt;p&gt;
- Le résultat devrait ressembler à ceci :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;!--Ceci est un commentaire.--&amp;gt;
-&lt;/p&gt;
-&lt;h3 class="recall"&gt;
- Créer des éléments dynamiquement avec
- « xsl:element »
+&lt;p&gt;Cette section explique comment générer des commentaires dans la sortie XML à l&amp;rsquo;aide de XSLT.&lt;/p&gt;
+&lt;p&gt;Il arrive qu&amp;rsquo;on veuille produire un commentaire dans la sortie XML. Rien
+de plus simple ! Il suffit d&amp;rsquo;utiliser l&amp;rsquo;instruction xsl:comment comme
+dans cet
+exemple :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span style="color:#1f2328"&gt;version=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlns:xsl=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;http://www.w3.org/1999/XSL/Transform&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;xsl:comment&amp;gt;&lt;/span&gt;Ceci est un commentaire.&lt;span style="color:#0550ae"&gt;&amp;lt;/xsl:comment&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Le résultat devrait ressembler à ceci :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;!--Ceci est un commentaire.--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="créer-des-éléments-dynamiquement-avec--xslelement-"&gt;
+ Créer des éléments dynamiquement avec « xsl:element »
+ &lt;a class="anchor" href="#cr%c3%a9er-des-%c3%a9l%c3%a9ments-dynamiquement-avec--xslelement-"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;
- Il est parfois utile de créer dynamiquement un élément avec
- « xsl:element » et de créer des attributs avec
- « xsl:attribute ».
- Dans l'exemple suivant, on va créer un élément dont le nom nous est fourni
- par un paramètre.
-&lt;/p&gt;</description></item><item><title>Installation d’un navigateur moderne</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</guid><description>&lt;h1 id="installation-dun-navigateur-moderne"&gt;
+&lt;p&gt;Cette section montre comment créer des éléments XML dynamiquement en utilisant xsl:element et xsl:attribute.&lt;/p&gt;</description></item><item><title>Installation d’un navigateur moderne</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/</guid><description>&lt;h1 id="installation-dun-navigateur-moderne"&gt;
  Installation d’un navigateur moderne
  &lt;a class="anchor" href="#installation-dun-navigateur-moderne"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -265,8 +254,39 @@ vit le jour en 1990.
  XQuery
  &lt;a class="anchor" href="#xquery"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;XSLT peut servir pour extraire des informations d&amp;rsquo;un document XML. On peut trouver tous les noms des étudiants répondant à certains critères. Dans un sens, XSLT peut être utilisé comme langage dans le contexte des bases de données. Cependant, pour cette fin spécifique, un nouveau langage appelé XQuery a été proposé. La syntaxe du XQuery est un mélange de XPath et de &lt;a href="http://fr.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; et ressemble davantage à ce que les spécialistes des bases de données connaissent bien.&lt;/p&gt;</description></item><item><title>Activité JSON/XML avec Jackson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</guid><description>&lt;h1&gt;
+&lt;p&gt;XSLT peut servir pour extraire des informations d&amp;rsquo;un document XML. On peut trouver tous les noms des étudiants répondant à certains critères. Dans un sens, XSLT peut être utilisé comme langage dans le contexte des bases de données. Cependant, pour cette fin spécifique, un nouveau langage appelé XQuery a été proposé. La syntaxe du XQuery est un mélange de XPath et de &lt;a href="http://fr.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; et ressemble davantage à ce que les spécialistes des bases de données connaissent bien.&lt;/p&gt;</description></item><item><title>JSON</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/json/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/json/</guid><description>&lt;h1 id="json"&gt;
+ JSON
+ &lt;a class="anchor" href="#json"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;
+ Malheureusement, le traitement d’un document XML est parfois inutilement lourd. Pour cette raison, on remplace souvent le XML par du
+ &lt;a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank"&gt;
+ JSON
+ &lt;/a&gt;
+ (JavaScript Object Notation).
+&lt;/p&gt;
+&lt;p&gt;
+ JSON a supplanté le XML dans plusieurs applications quant il s’agit de
+ transmettre des informations simples, surtout lors que le récipiendaire
+ utilise le JavaScript.
+&lt;/p&gt;
+&lt;p&gt;
+ On peut voir le JSON comme une forme très limitée de JavaScript où on peut
+ utiliser que des « objets » et des tableaux. Un
+ « objets » en JavaScript est une structure de clés-valeurs avec la
+ syntaxe «
+ &lt;i&gt;
+ clef1 : valeur1, clef2:valeur2
+ &lt;/i&gt;
+ » alors
+ qu’un tableau est une simple liste de valeurs avec la syntaxe [ valeur1,
+ valeur2 ] . Les clés doivent être des chaînes de caractères, mais les
+ valeurs peuvent être d’autres objets, des tableaux, des chaînes de
+ caractères, des nombres, des valeurs Booléennes ou la valeur spéciale
+ « null ».
+&lt;/p&gt;</description></item><item><title>Activité JSON/XML avec Jackson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</guid><description>&lt;h1 id="activité-jsonxml-avec-jackson"&gt;
  Activité JSON/XML avec Jackson
+ &lt;a class="anchor" href="#activit%c3%a9-jsonxml-avec-jackson"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javajackson"&gt;
@@ -627,8 +647,27 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
  xml-stylesheet
  &lt;/code&gt;
  . C'est une alternative pratique pour programmer et expérimenter avec XSLT sans charger de fichiers externes.
-&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
+ Laboratoire pratique avec jq (optionnel)
+ &lt;a class="anchor" href="#laboratoire-pratique-avec-jq-optionnel"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;jq est un petit programme qui permet de lire, filtrer, modifier et formater des fichiers JSON directement dans le terminal. Il peut servir d&amp;rsquo;équivalent JSON
+aux approches de traitement XML comme XSLT, XQuery et XPath.&lt;/p&gt;
+&lt;p&gt;Il faut d&amp;rsquo;abord installer jq sur votre machine.&lt;/p&gt;
+&lt;h2 id="installation-sur-windows"&gt;
+ Installation sur Windows
+ &lt;a class="anchor" href="#installation-sur-windows"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Il y a plusieurs méthodes. Voici les deux plus simples pour un débutant.&lt;/p&gt;
+&lt;h3 id="méthode-1--la-plus-simple--télécharger-lexécutable-officiel"&gt;
+ Méthode 1 – La plus simple : télécharger l’exécutable officiel
+ &lt;a class="anchor" href="#m%c3%a9thode-1--la-plus-simple--t%c3%a9l%c3%a9charger-lex%c3%a9cutable-officiel"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Ouvrez votre navigateur et allez ici : &lt;a href="https://github.com/jqlang/jq/releases"&gt;https://github.com/jqlang/jq/releases&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</guid><description>&lt;h1 id="autoévaluation-dom"&gt;
  Autoévaluation DOM
+ &lt;a class="anchor" href="#auto%c3%a9valuation-dom"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;
  Le bouton « Vérifier ma réponse » donne accès à un script qui, en
@@ -690,25 +729,11 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
  et vous devez l'ignorer lors de votre lecture. Par ailleurs, si vous
  copiez-collez du contenu des exercices et des exemples, vous devez adapter
  le code manuellement.
-&lt;/p&gt;</description></item><item><title>CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</guid><description>&lt;h1 id="css"&gt;
  CSS
+ &lt;a class="anchor" href="#css"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;
- La norme CSS a d'abord été proposée par Håkon Lie du CERN en Suisse en 1994
- (environ 4 ans après l'apparition de la première page web). Cette norme a
- été acceptée
- comme recommandation officielle du W3C deux ans plus tard, soit en 1996, et
- la seconde version (CSS 2.0)
- est devenue une recommandation du W3C l'année suivante, soit en 1997. Une
- troisième version (CSS 3) a été adoptée à compter de 2011. À
- l'origine, les instructions CSS étaient destinées uniquement à indiquer aux
- navigateurs comment présenter
- le HTML (couleurs, polices, etc.); on s'est vite rendu compte qu'on pouvait
- aussi l'appliquer
- au XML et on considère maintenant les CSS comme une technologie qui
- s'applique
- autant au HTML qu'au XML (et aussi, évidemment, au XHTML).
-&lt;/p&gt;</description></item><item><title>Des pages web dynamiques avec JavaScript</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;La norme CSS a d&amp;rsquo;abord été proposée par Håkon Lie du CERN en Suisse en 1994 (environ 4 ans après l&amp;rsquo;apparition de la première page web). Cette norme a été acceptée comme recommandation officielle du W3C deux ans plus tard, soit en 1996, et la seconde version (CSS 2.0) est devenue une recommandation du W3C l&amp;rsquo;année suivante, soit en 1997. Une troisième version (CSS 3) a été adoptée à compter de 2011. À l&amp;rsquo;origine, les instructions CSS étaient destinées uniquement à indiquer aux navigateurs comment présenter le HTML (couleurs, polices, etc.) ; on s&amp;rsquo;est vite rendu compte qu&amp;rsquo;on pouvait aussi l&amp;rsquo;appliquer au XML et on considère maintenant les CSS comme une technologie qui s&amp;rsquo;applique autant au HTML qu&amp;rsquo;au XML (et aussi, évidemment, au XHTML).&lt;/p&gt;</description></item><item><title>Des pages web dynamiques avec JavaScript</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_6/des_pages_web_dynamiques_avec_javascript/</guid><description>&lt;h1 class=""&gt;
  Des pages web dynamiques avec JavaScript
 &lt;/h1&gt;
 &lt;div class=""&gt;
@@ -769,23 +794,24 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</descr
 &lt;div&gt;
  &lt;p&gt;
  Le Mathematical Markup Language (MathML) est un langage basé sur XML conçu pour représenter et afficher des expressions mathématiques de manière structurée sur le web. Contrairement aux images statiques ou aux approximations textuelles, MathML permet de décrire la sémantique et la présentation des formules mathématiques, offrant une accessibilité accrue et une intégration dynamique avec HTML. Il est particulièrement utilisé dans les contextes éducatifs, scientifiques et techniques pour rendre des équations complexes de façon précise et adaptable.
- &lt;/p&gt;</description></item><item><title>Mise en forme</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>Mise en forme</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/mise_en_forme/</guid><description>&lt;h1 id="mise-en-forme"&gt;
  Mise en forme
+ &lt;a class="anchor" href="#mise-en-forme"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2&gt;
+&lt;h2 id="format-et-mise-en-forme"&gt;
  Format et mise en forme
+ &lt;a class="anchor" href="#format-et-mise-en-forme"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Par défaut, le document créé par une transformation XSLT est en XML, sauf si
- le nœud-racine est nommé HTML et qu'il est précédé uniquement d'espaces et
- de retours de charriot, auquel cas le document créé est un document HTML.
- L'instruction xsl:output permet de spécifier explicitement le format du
- document
- nouvellement créé comme étant en XML, en HTML ou même au format texte (sans
- balise). On peut aussi spécifier l'encodage des caractères ainsi que
- l'indentation
- des éléments. Voici des exemples :
-&lt;/p&gt;</description></item><item><title>Problèmes résolus</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/</guid><description>&lt;h1&gt;
+&lt;p&gt;Cette section explique comment contrôler le format de sortie des transformations XSLT.&lt;/p&gt;
+&lt;p&gt;Par défaut, le document créé par une transformation XSLT est en XML, sauf si
+le nœud-racine est nommé HTML et qu&amp;rsquo;il est précédé uniquement d&amp;rsquo;espaces et
+de retours de charriot, auquel cas le document créé est un document HTML.
+L&amp;rsquo;instruction xsl:output permet de spécifier explicitement le format du
+document
+nouvellement créé comme étant en XML, en HTML ou même au format texte (sans
+balise). On peut aussi spécifier l&amp;rsquo;encodage des caractères ainsi que
+l&amp;rsquo;indentation
+des éléments. Voici des exemples :&lt;/p&gt;</description></item><item><title>Problèmes résolus</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/</guid><description>&lt;h1&gt;
  Problèmes résolus
 &lt;/h1&gt;
 &lt;h2&gt;
@@ -829,27 +855,16 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</descr
  &lt;/strong&gt;
  Il s'agit d'un travail personnel et vous ne devez pas partager vos
  solutions.
-&lt;/p&gt;</description></item><item><title>Un peu plus de XSLT : fonctionnement de base, template et value-of</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</guid><description>&lt;h1&gt;
- Un peu plus de XSLT : fonctionnement de base, template et value-of
+&lt;/p&gt;</description></item><item><title>Un peu plus de XSLT : fonctionnement de base, template et value-of</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/</guid><description>&lt;h1 id="un-peu-plus-de-xslt--fonctionnement-de-base-template-et-value-of"&gt;
+ Un peu plus de XSLT : fonctionnement de base, template et value-of
+ &lt;a class="anchor" href="#un-peu-plus-de-xslt--fonctionnement-de-base-template-et-value-of"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- « Éléments xsl:template »
+&lt;h2 id="-éléments-xsltemplate-"&gt;
+ « Éléments xsl:template »
+ &lt;a class="anchor" href="#-%c3%a9l%c3%a9ments-xsltemplate-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Modifions maintenant le fichier « xslt.xml » de façon à rendre l'expérience plus intéressante. 
- Tout d'abord, traitons tous les éléments « facture » du document XML. 
- Pour obtenir le résultat, il faut placer un élément « &amp;lt;xsl:template match="facture"&amp;gt; » 
- dans l'élément-racine du document XSLT comme ceci :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;xsl:stylesheet version="1.0" 
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
- &amp;lt;xsl:template match="facture"&amp;gt;
- On doit mettre quelque chose ici!!!
- &amp;lt;/xsl:template&amp;gt;
- &amp;lt;/xsl:stylesheet&amp;gt;
-&lt;/p&gt;</description></item><item><title>XPath : second laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous explorons les éléments xsl:template, qui sont essentiels pour définir des règles de transformation personnalisées dans les feuilles de style XSLT.&lt;/p&gt;
+&lt;p&gt;Modifions maintenant le fichier « xslt.xml » de façon à rendre l&amp;rsquo;expérience plus intéressante. Tout d&amp;rsquo;abord, traitons tous les éléments « facture » du document XML. Pour obtenir le résultat, il faut placer un élément « &amp;lt;xsl:template match=&amp;ldquo;facture&amp;rdquo;&amp;gt; » dans l&amp;rsquo;élément-racine du document XSLT comme ceci :&lt;/p&gt;</description></item><item><title>XPath : second laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</guid><description>&lt;h1 class=""&gt;
  XPath : second laboratoire
 &lt;/h1&gt;
 &lt;div class=""&gt;
@@ -858,7 +873,33 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</descr
  &lt;/p&gt;
  &lt;p&gt;
  Instructions : il suffit de saisir un document XML source et une expression XPath et d'appuyer sur le bouton. Le contenu textuel de chaque résultat est retourné. L'expression XPath est toujours appliquée à partir du noeud-racine. Cette petite application est limitée: elle suppose que le résultat prend une certaine forme (un ensemble de noeuds ou node set).
- &lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>CSS (partie 2)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css2/</guid><description>&lt;h1 id="css-partie-2"&gt;
+ CSS (partie 2)
+ &lt;a class="anchor" href="#css-partie-2"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="mais-que-se-passe-t-il-en-cas-de-conflit-"&gt;
+ Mais que se passe-t-il en cas de conflit ?
+ &lt;a class="anchor" href="#mais-que-se-passe-t-il-en-cas-de-conflit-"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Plusieurs instructions peuvent s&amp;rsquo;appliquer en même temps : un texte peut être en rouge et souligné. Il peut arriver cependant que deux instructions CSS se contredisent. Par exemple, un texte ne peut être à la fois en rouge et en bleu. Dans ce cas, la sélection la plus spécifique l’emporte. Ainsi, dans l’exemple qui suit :&lt;/p&gt;</description></item><item><title>CSS (partie 3)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css3/</guid><description>&lt;h1 id="css-partie-3"&gt;
+ CSS (partie 3)
+ &lt;a class="anchor" href="#css-partie-3"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="quand-le-contenu-excède-le-contenant"&gt;
+ Quand le contenu excède le contenant
+ &lt;a class="anchor" href="#quand-le-contenu-exc%c3%a8de-le-contenant"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Il arrive qu’une image ou qu’un texte excède la taille de l’élément dans lequel il a été placé. Par défaut, ce contenu déborde visiblement (&lt;code&gt;overflow: visible&lt;/code&gt;). La propriété &lt;code&gt;overflow: hidden&lt;/code&gt; permet de contrôler ce comportement :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;overflow: hidden&lt;/code&gt; masque la partie qui dépasse.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow: scroll&lt;/code&gt; ajoute des barres de défilement (même si le contenu tient dans la boîte).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow: auto&lt;/code&gt; n’ajoute les barres que si nécessaire.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="encodage-des-caractères"&gt;
+ Encodage des caractères
+ &lt;a class="anchor" href="#encodage-des-caract%c3%a8res"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Il peut être utile de préciser l’encodage utilisé dans le fichier CSS en plaçant au tout premier ligne :&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/autoevaluation/</guid><description>&lt;h1&gt;
  Autoévaluation
 &lt;/h1&gt;
 &lt;div class=""&gt;
@@ -916,47 +957,29 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</descr
  &lt;/div&gt;
  &lt;p style="width:90%;"&gt;
  Choisissez la bonne réponse parmi les suivantes.
- &lt;/p&gt;</description></item><item><title>Espaces de noms</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/</guid><description>&lt;h1 class=""&gt;
+ &lt;/p&gt;</description></item><item><title>Espaces de noms</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/espaces_de_noms/</guid><description>&lt;h1 id="espaces-de-noms"&gt;
  Espaces de noms
+ &lt;a class="anchor" href="#espaces-de-noms"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
+&lt;h2 id="espaces-de-noms-1"&gt;
  Espaces de noms
+ &lt;a class="anchor" href="#espaces-de-noms-1"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Les espaces de noms sont supportés et ne posent pas de problème. Il suffit
- de définir les préfixes, comme on le fait habituellement. Par exemple,
- considérons le code XML suivant :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml
- version="1.0" encoding="ISO-8859-1" ?&amp;gt;
- &amp;lt;?xml-stylesheet href="class2.xsl" type="text/xsl" ?&amp;gt;
- &amp;lt;université&amp;gt;
- &amp;lt;étudiant&amp;gt;
- &amp;lt;n:nom xmlns:n="http://www.mondomaine.com/"&amp;gt;Réjean
- Tremblay&amp;lt;/n:nom&amp;gt;
- &amp;lt;/étudiant&amp;gt;
- &amp;lt;/université&amp;gt;
-&lt;/p&gt;
-&lt;p&gt;
- Pour afficher le nom de l'étudiant, il suffira d'utiliser
- le document XSLT suivant :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;xsl:stylesheet version="1.0"
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
- xmlns:n="http://www.mondomaine.com/"&amp;gt;
- &amp;lt;xsl:template match="université" &amp;gt;
- &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;
- &amp;lt;xsl:apply-templates select="étudiant/n:nom" /&amp;gt;
- &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
- &amp;lt;/xsl:template&amp;gt;
- &amp;lt;xsl:template match="n:nom" &amp;gt;
- &amp;lt;p&amp;gt;&amp;lt;xsl:value-of select="." /&amp;gt;&amp;lt;/p&amp;gt;
- &amp;lt;/xsl:template&amp;gt;
- &amp;lt;/xsl:stylesheet&amp;gt;
-&lt;/p&gt;</description></item><item><title>Laboratoire CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</guid><description>&lt;h1&gt;
+&lt;p&gt;Cette section explique comment travailler avec les espaces de noms XML en XSLT.&lt;/p&gt;
+&lt;p&gt;Les espaces de noms sont supportés et ne posent pas de problème. Il suffit
+de définir les préfixes, comme on le fait habituellement. Par exemple,
+considérons le code XML suivant :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt; version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;?xml-stylesheet href=&amp;#34;class2.xsl&amp;#34; type=&amp;#34;text/xsl&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;université&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;étudiant&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;n:nom&lt;/span&gt; &lt;span style="color:#1f2328"&gt;xmlns:n=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;http://www.mondomaine.com/&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;Réjean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Tremblay&lt;span style="color:#0550ae"&gt;&amp;lt;/n:nom&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/étudiant&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/université&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pour afficher le nom de l&amp;rsquo;étudiant, il suffira d&amp;rsquo;utiliser
+le document XSLT suivant :&lt;/p&gt;</description></item><item><title>Laboratoire CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</guid><description>&lt;h1&gt;
  Laboratoire CSS
 &lt;/h1&gt;
 &lt;p&gt;
@@ -1530,67 +1553,43 @@ d'énoncer des procédures.
  Le langage Prolog est un exemple de langage déclaratif parce que le
 programmeur ne fait que saisir des relations sans définir comment
 l'ordinateur doit combiner ses relations:
-&lt;/p&gt;</description></item><item><title>Les noms d’éléments</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>Les noms d’éléments</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/</guid><description>&lt;h1 id="les-noms-déléments"&gt;
  Les noms d’éléments
+ &lt;a class="anchor" href="#les-noms-d%c3%a9l%c3%a9ments"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Capturer le nom d'un élément
+&lt;h2 id="capturer-le-nom-dun-élément"&gt;
+ Capturer le nom d&amp;rsquo;un élément
+ &lt;a class="anchor" href="#capturer-le-nom-dun-%c3%a9l%c3%a9ment"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Supposons que nous voulions afficher uniquement les noms des éléments (sans
- leur contenu). Nous pouvons
- obtenir ce résultat avec la fonction XPath « name » qui donne le
- nom de l'élément.
- La fonction name inclut le préfixe de l'espace de noms. Si on souhaite le
- nom de l'élément sans
- le préfixe, on peut utiliser la fonction « local-name ». La
- fonction
- « namespace-uri » donne l'URI de l'espace de noms de l'élément.
-&lt;/p&gt;</description></item><item><title>Attribut mode</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</guid><description>&lt;h1&gt;
+&lt;p&gt;Dans cette section, nous apprenons à capturer et afficher les noms des éléments XML en utilisant les fonctions XPath name, local-name et namespace-uri.&lt;/p&gt;
+&lt;p&gt;Supposons que nous voulions afficher uniquement les noms des éléments (sans
+leur contenu). Nous pouvons
+obtenir ce résultat avec la fonction XPath « name » qui donne le
+nom de l&amp;rsquo;élément.
+La fonction name inclut le préfixe de l&amp;rsquo;espace de noms. Si on souhaite le
+nom de l&amp;rsquo;élément sans
+le préfixe, on peut utiliser la fonction « local-name ». La
+fonction
+« namespace-uri » donne l&amp;rsquo;URI de l&amp;rsquo;espace de noms de l&amp;rsquo;élément.&lt;/p&gt;</description></item><item><title>Attribut mode</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/attribut_mode/</guid><description>&lt;h1 id="attribut-mode"&gt;
  Attribut mode
+ &lt;a class="anchor" href="#attribut-mode"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2&gt;
- Utilisation de l'attribut « mode »
+&lt;h2 id="utilisation-de-lattribut--mode-"&gt;
+ Utilisation de l&amp;rsquo;attribut « mode »
+ &lt;a class="anchor" href="#utilisation-de-lattribut--mode-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Il arrive que nous voulions définir plus d'un modèle pour un élément donné.
- Nous pouvons ajouter des modèles en utilisant l'attribut « mode »
- qui s'applique aux
- éléments « xsl:apply-templates » et « xsl:template ». La
- règle est très simple :
- si votre élément « xsl:apply-templates » a une valeur d'attribut
- pour « mode », alors
- seuls les éléments « xsl:template » ayant la même valeur
- d'attribut pour « mode » s'appliquent.
- On utilise souvent l'attribut « mode » pour faire des tables des
- matières.
-&lt;/p&gt;</description></item><item><title>JSON</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/json/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/json/</guid><description>&lt;p&gt;
- Malheureusement, le traitement d’un document XML en JavaScript est parfois inutilement lourd. Pour cette raison, on remplace souvent le XML par du
- &lt;a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank"&gt;
- JSON
- &lt;/a&gt;
- (JavaScript Object Notation).
-&lt;/p&gt;
-&lt;p&gt;
- JSON a supplanté le XML dans plusieurs applications quant il s’agit de
- transmettre des informations simples, surtout lors que le récipiendaire
- utilise le JavaScript.
-&lt;/p&gt;
-&lt;p&gt;
- On peut voir le JSON comme une forme très limitée de JavaScript où on peut
- utiliser que des « objets » et des tableaux. Un
- « objets » en JavaScript est une structure de clés-valeurs avec la
- syntaxe «
- &lt;i&gt;
- clef1 : valeur1, clef2:valeur2
- &lt;/i&gt;
- » alors
- qu’un tableau est une simple liste de valeurs avec la syntaxe [ valeur1,
- valeur2 ] . Les clés doivent être des chaînes de caractères, mais les
- valeurs peuvent être d’autres objets, des tableaux, des chaînes de
- caractères, des nombres, des valeurs Booléennes ou la valeur spéciale
- « null ».
-&lt;/p&gt;</description></item><item><title>Laboratoire XSLT</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Dans cette section, nous explorons l&amp;rsquo;utilisation de l&amp;rsquo;attribut mode en XSLT, qui permet de définir plusieurs modèles pour le même élément et de les appliquer sélectivement pour créer des vues différentes du document XML.&lt;/p&gt;
+&lt;p&gt;Il arrive que nous voulions définir plus d&amp;rsquo;un modèle pour un élément donné.
+Nous pouvons ajouter des modèles en utilisant l&amp;rsquo;attribut « mode »
+qui s&amp;rsquo;applique aux
+éléments « xsl:apply-templates » et « xsl:template ». La
+règle est très simple :
+si votre élément « xsl:apply-templates » a une valeur d&amp;rsquo;attribut
+pour « mode », alors
+seuls les éléments « xsl:template » ayant la même valeur
+d&amp;rsquo;attribut pour « mode » s&amp;rsquo;appliquent.
+On utilise souvent l&amp;rsquo;attribut « mode » pour faire des tables des
+matières.&lt;/p&gt;</description></item><item><title>Laboratoire XSLT</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_9/laboratoire_xslt/</guid><description>&lt;h1 class=""&gt;
  Laboratoire XSLT
 &lt;/h1&gt;
 &lt;p&gt;
@@ -1695,22 +1694,23 @@ l'ordinateur doit combiner ses relations:
  PDF, RTF ou en format texte) en fichier attaché.
  Il s'agit d'un travail personnel et vous ne devez pas partager vos
  solutions. Cette activité notée compte pour 15% de la note globale.
-&lt;/p&gt;</description></item><item><title>La fonction generate-id</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</guid><description>&lt;h1 class=""&gt;
+&lt;/p&gt;</description></item><item><title>La fonction generate-id</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/la_fonction_generate-id/</guid><description>&lt;h1 id="la-fonction-generate-id"&gt;
  La fonction generate-id
+ &lt;a class="anchor" href="#la-fonction-generate-id"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Fonction « generate-id »
+&lt;h2 id="fonction--generate-id-"&gt;
+ Fonction « generate-id »
+ &lt;a class="anchor" href="#fonction--generate-id-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- La fonction XSLT « generate-id » génère un « nom » unique
- pour chaque élément d'un document XML.
- Ce nom sera toujours le même pour un même élément, même si nous le
- rencontrons à plusieurs reprises.
- Si nous reprenons la liste des cours de l'exemple précédent sur
- l'utilisation de l'attribut « mode »,
- nous pourrions générer un identifiant unique pour chaque cours et l'afficher
- comme dans l'exemple de document XSLT qui suit :
-&lt;/p&gt;</description></item><item><title>Laboratoire sur la structure en arbre des documents XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</guid><description>&lt;h1&gt;
+&lt;p&gt;Dans cette section, nous découvrons la fonction generate-id en XSLT, qui permet de générer des identifiants uniques pour les éléments XML, utiles pour créer des références ou des ancres dans les documents transformés.&lt;/p&gt;
+&lt;p&gt;La fonction XSLT « generate-id » génère un « nom » unique
+pour chaque élément d&amp;rsquo;un document XML.
+Ce nom sera toujours le même pour un même élément, même si nous le
+rencontrons à plusieurs reprises.
+Si nous reprenons la liste des cours de l&amp;rsquo;exemple précédent sur
+l&amp;rsquo;utilisation de l&amp;rsquo;attribut « mode »,
+nous pourrions générer un identifiant unique pour chaque cours et l&amp;rsquo;afficher
+comme dans l&amp;rsquo;exemple de document XSLT qui suit :&lt;/p&gt;</description></item><item><title>Laboratoire sur la structure en arbre des documents XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/</guid><description>&lt;h1&gt;
  Laboratoire sur la structure en arbre des documents XML
 &lt;/h1&gt;
 &lt;p&gt;
@@ -1739,22 +1739,23 @@ qui comprend une petite application Python capable de traiter du XSLT et du XML.
  Nous vous invitons maintenant à faire notre activité de création de documents Word
  &lt;/a&gt;
  .
-&lt;/p&gt;</description></item><item><title>Les tests</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</guid><description>&lt;h1 class=""&gt;
+&lt;/p&gt;</description></item><item><title>Les tests</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_tests/</guid><description>&lt;h1 id="les-tests"&gt;
  Les tests
+ &lt;a class="anchor" href="#les-tests"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
+&lt;h2 id="utilisation-des-tests"&gt;
  Utilisation des tests
+ &lt;a class="anchor" href="#utilisation-des-tests"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Nous pouvons tester des conditions à l'aide d'expressions XPath contenant
- les symboles « &amp;lt; », « = », « != »,
- « or », « and », « &amp;gt; »,
- « &amp;gt;= », « &amp;lt;= ».
- Nous utilisons les tests en XSLT avec les éléments « xsl:choose »
- et « xsl:if ».
- Par exemple, faire quelque chose de particulier, si le nom de l'élément
- courant est « montant ».
-&lt;/p&gt;</description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</guid><description>&lt;h1&gt;
+&lt;p&gt;Dans cette section, nous apprenons à utiliser les tests conditionnels en XSLT avec les éléments xsl:if et xsl:choose, permettant de contrôler le flux de transformation basé sur des conditions XPath.&lt;/p&gt;
+&lt;p&gt;Nous pouvons tester des conditions à l&amp;rsquo;aide d&amp;rsquo;expressions XPath contenant
+les symboles « &amp;lt; », « = », « != »,
+« or », « and », « &amp;gt; »,
+« &amp;gt;= », « &amp;lt;= ».
+Nous utilisons les tests en XSLT avec les éléments « xsl:choose »
+et « xsl:if ».
+Par exemple, faire quelque chose de particulier, si le nom de l&amp;rsquo;élément
+courant est « montant ».&lt;/p&gt;</description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</guid><description>&lt;h1&gt;
  Petit guide d’usage du courriel efficace
 &lt;/h1&gt;
 &lt;p&gt;
@@ -1789,7 +1790,12 @@ elle de définir de nouvelles fonctions qui pourront être utilisées au sein de
 expressions XPath. L'instruction « xsl:for-each-group » permet 
  de visiter les nœuds par groupes : on peut ainsi visiter
 tous les éléments etudiant en les regroupant selon la valeur de leur attribut nom.
-&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</guid><description>&lt;style&gt;
+&lt;/p&gt;</description></item><item><title>Méthode On-Demand avec simdjson (C++)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/simdjson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/simdjson/</guid><description>&lt;h1 id="traitement-on-demand-du-json-en-c-avec-simdjson-activité-optionnelle"&gt;
+ Traitement on-demand du JSON en C++ avec simdjson (activité optionnelle)
+ &lt;a class="anchor" href="#traitement-on-demand-du-json-en-c-avec-simdjson-activit%c3%a9-optionnelle"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;simdjson est la bibliothèque JSON la plus rapide au monde (2025). Elle est conçue dès le départ pour le parsing &lt;strong&gt;on-demand&lt;/strong&gt; (aussi appelé &lt;strong&gt;zero-copy&lt;/strong&gt; ou &lt;strong&gt;lazy parsing&lt;/strong&gt;) : elle ne construit les objets C++ que pour les parties du JSON que vous consultez réellement. Si vous maîtriser le C++, il s&amp;rsquo;agit d&amp;rsquo;une librairie à connaître.&lt;/p&gt;
+&lt;p&gt;Site officiel : &lt;a href="https://github.com/simdjson/simdjson"&gt;https://github.com/simdjson/simdjson&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/</guid><description>&lt;style&gt;
  .intro {background: #e3f2fd; padding: 20px; border-radius: 8px; margin-bottom: 30px; border-left: 5px solid #2196f3;}
  .question {background: white; padding: 20px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
  pre {background: #f4f4f4; padding: 12px; border-radius: 5px; overflow-x: auto; font-size: 0.95em; margin: 10px 0;}
@@ -1833,26 +1839,27 @@ tous les éléments etudiant en les regroupant selon la valeur de leur attribut 
  comprendre votre erreur.
  Puis, essayez de nouveau en cliquant sur le bouton
  « Recommencer ».
-&lt;/p&gt;</description></item><item><title>Les boucles</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</guid><description>&lt;h1 class=""&gt;
+&lt;/p&gt;</description></item><item><title>Les boucles</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_boucles/</guid><description>&lt;h1 id="les-boucles"&gt;
  Les boucles
+ &lt;a class="anchor" href="#les-boucles"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Utiliser XSLT comme base de données et éléments
- « for-each »
+&lt;h2 id="utiliser-xslt-comme-base-de-données-et-éléments--for-each-"&gt;
+ Utiliser XSLT comme base de données et éléments « for-each »
+ &lt;a class="anchor" href="#utiliser-xslt-comme-base-de-donn%c3%a9es-et-%c3%a9l%c3%a9ments--for-each-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- L'exemple de la liste des clients avec leur numéro de téléphone nous permet
- de faire plus. Tout d'abord, l'expression « //client » donne une
- séquence de tous les éléments « client »
- dans le nœud courant.
- Avec l'expression XPath « //client[nom='Sylvain'] », nous pouvons
- obtenir la séquence de tous les
- éléments « client » ayant pour nom « Sylvain ». Dans ce
- cas précis, il y a plus d'un élément
- dans la réponse. Pour visiter l'ensemble des éléments dans la séquence,
- il suffit d'utiliser l'élément « xsl:for-each » comme ceci :
-&lt;/p&gt;</description></item><item><title>Travail 4</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</guid><description>&lt;h1&gt;
+&lt;p&gt;Dans cette section, nous explorons l&amp;rsquo;utilisation de XSLT pour traiter des séquences d&amp;rsquo;éléments avec l&amp;rsquo;élément xsl:for-each, permettant de boucler sur des nœuds sélectionnés par XPath et d&amp;rsquo;effectuer des opérations répétitives.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;exemple de la liste des clients avec leur numéro de téléphone nous permet
+de faire plus. Tout d&amp;rsquo;abord, l&amp;rsquo;expression « //client » donne une
+séquence de tous les éléments « client »
+dans le nœud courant.
+Avec l&amp;rsquo;expression XPath « //client[nom=&amp;lsquo;Sylvain&amp;rsquo;] », nous pouvons
+obtenir la séquence de tous les
+éléments « client » ayant pour nom « Sylvain ». Dans ce
+cas précis, il y a plus d&amp;rsquo;un élément
+dans la réponse. Pour visiter l&amp;rsquo;ensemble des éléments dans la séquence,
+il suffit d&amp;rsquo;utiliser l&amp;rsquo;élément « xsl:for-each » comme ceci :&lt;/p&gt;</description></item><item><title>Travail 4</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/travail_4/</guid><description>&lt;h1 id="travail-4"&gt;
  Travail 4
+ &lt;a class="anchor" href="#travail-4"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;h2&gt;
  Consignes générales
@@ -1874,7 +1881,7 @@ tous les éléments etudiant en les regroupant selon la valeur de leur attribut 
  cours et votre nom comme ceci :
  &lt;pre&gt;
  /**
- * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+ * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 26
  */&lt;/pre&gt;
  &lt;/li&gt;
  &lt;li&gt;
@@ -1918,40 +1925,35 @@ tous les éléments etudiant en les regroupant selon la valeur de leur attribut 
 &lt;/ol&gt;
 &lt;p&gt;
  Cette activité notée compte pour 15 % de la note globale.
-&lt;/p&gt;</description></item><item><title>Clés et aggrégation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</guid><description>&lt;h1 class=""&gt;
+&lt;/p&gt;</description></item><item><title>Clés et aggrégation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/cles_et_aggregation/</guid><description>&lt;h1 id="clés-et-aggrégation"&gt;
  Clés et aggrégation
+ &lt;a class="anchor" href="#cl%c3%a9s-et-aggr%c3%a9gation"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 class="recall"&gt;
- Obtenir l'aggrégation avec la fonction
- « generate-id »
+&lt;h2 id="obtenir-laggrégation-avec-la-fonction--generate-id-"&gt;
+ Obtenir l&amp;rsquo;aggrégation avec la fonction « generate-id »
+ &lt;a class="anchor" href="#obtenir-laggr%c3%a9gation-avec-la-fonction--generate-id-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Supposons qu'on veuille calculer le total des
- éléments « quantite », mais en faisant l'aggrégation
- pour chaque valeur de l'attribut « type » dans l'exemple suivant.
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
- &amp;lt;?xml-stylesheet href="produits.xsl" type="text/xsl" ?&amp;gt;
- &amp;lt;produits&amp;gt;
- &amp;lt;france&amp;gt;
- &amp;lt;quantite type="bain"&amp;gt;53&amp;lt;/quantite&amp;gt;
- &amp;lt;quantite type="chambre"&amp;gt;12&amp;lt;/quantite&amp;gt;
- &amp;lt;/france&amp;gt;
- &amp;lt;canada&amp;gt;
- &amp;lt;quantite type="bain"&amp;gt;14&amp;lt;/quantite&amp;gt;
- &amp;lt;quantite type="chambre"&amp;gt;12&amp;lt;/quantite&amp;gt;
- &amp;lt;/canada&amp;gt;
- &amp;lt;/produits&amp;gt;
-&lt;/p&gt;
-&lt;p&gt;
- On pourrait tenter de résoudre ce problème avec une expression
- XPath de la forme « sum(//quantite[@type=current()/@type]) ».
- Malheureusement, on risque
- alors de calculer plusieurs fois la même somme. Par exemple, tentez
- d'appliquer
- la transformation suivante :
-&lt;/p&gt;</description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</guid><description>&lt;h1&gt;
+&lt;p&gt;Supposons qu&amp;rsquo;on veuille calculer le total des
+éléments « quantite », mais en faisant l&amp;rsquo;aggrégation
+pour chaque valeur de l&amp;rsquo;attribut « type » dans l&amp;rsquo;exemple suivant.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;?xml-stylesheet href=&amp;#34;produits.xsl&amp;#34; type=&amp;#34;text/xsl&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;produits&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;france&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;bain&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;53&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;chambre&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;12&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/france&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;canada&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;bain&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;14&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;quantite&lt;/span&gt; &lt;span style="color:#1f2328"&gt;type=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;chambre&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;12&lt;span style="color:#0550ae"&gt;&amp;lt;/quantite&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/canada&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/produits&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;On pourrait tenter de résoudre ce problème avec une expression
+XPath de la forme « sum(//quantite[@type=current()/@type]) ».
+Malheureusement, on risque
+alors de calculer plusieurs fois la même somme. Par exemple, tentez
+d&amp;rsquo;appliquer
+la transformation suivante :&lt;/p&gt;</description></item><item><title>Évaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/evaluation/</guid><description>&lt;h1&gt;
  Évaluation
 &lt;/h1&gt;
 &lt;p&gt;
@@ -2091,7 +2093,7 @@ tous les éléments etudiant en les regroupant selon la valeur de leur attribut 
 &lt;dl&gt;
 &lt;dt&gt;&lt;strong&gt;&lt;!ATTLIST nomElementX nomAttributY ...&gt;&lt;/strong&gt;&lt;/dt&gt;
 &lt;dd&gt;
-&lt;p&gt;Spécifie qu’un élément &lt;code&gt;nomElementX&lt;/code&gt; possède l’attribut &lt;code&gt;nomAttributY&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Pense-bête DTD</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</guid><description>&lt;h1 id="à-propos-du-professeur"&gt;
+&lt;p&gt;Spécifie qu’un élément &lt;code&gt;nomElementX&lt;/code&gt; possède l’attribut &lt;code&gt;nomAttributY&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Professeur</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</guid><description>&lt;h1 id="à-propos-du-professeur"&gt;
  À propos du professeur
  &lt;a class="anchor" href="#%c3%a0-propos-du-professeur"&gt;#&lt;/a&gt;
 &lt;/h1&gt;

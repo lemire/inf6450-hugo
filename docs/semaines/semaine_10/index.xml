@@ -9,25 +9,37 @@ Rendez vous sur le site
 &lt;a href="https://github.com/lemire/xquerypy"&gt;
  xquerypy
 &lt;/a&gt;
-qui comprend une petite application Python capable de traiter du XQuery et du XML. Suivez les consignes.</description></item><item><title>CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</guid><description>&lt;h1&gt;
+qui comprend une petite application Python capable de traiter du XQuery et du XML. Suivez les consignes.</description></item><item><title>CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css/</guid><description>&lt;h1 id="css"&gt;
  CSS
+ &lt;a class="anchor" href="#css"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;
- La norme CSS a d'abord été proposée par Håkon Lie du CERN en Suisse en 1994
- (environ 4 ans après l'apparition de la première page web). Cette norme a
- été acceptée
- comme recommandation officielle du W3C deux ans plus tard, soit en 1996, et
- la seconde version (CSS 2.0)
- est devenue une recommandation du W3C l'année suivante, soit en 1997. Une
- troisième version (CSS 3) a été adoptée à compter de 2011. À
- l'origine, les instructions CSS étaient destinées uniquement à indiquer aux
- navigateurs comment présenter
- le HTML (couleurs, polices, etc.); on s'est vite rendu compte qu'on pouvait
- aussi l'appliquer
- au XML et on considère maintenant les CSS comme une technologie qui
- s'applique
- autant au HTML qu'au XML (et aussi, évidemment, au XHTML).
-&lt;/p&gt;</description></item><item><title>Laboratoire CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</guid><description>&lt;h1&gt;
+&lt;p&gt;La norme CSS a d&amp;rsquo;abord été proposée par Håkon Lie du CERN en Suisse en 1994 (environ 4 ans après l&amp;rsquo;apparition de la première page web). Cette norme a été acceptée comme recommandation officielle du W3C deux ans plus tard, soit en 1996, et la seconde version (CSS 2.0) est devenue une recommandation du W3C l&amp;rsquo;année suivante, soit en 1997. Une troisième version (CSS 3) a été adoptée à compter de 2011. À l&amp;rsquo;origine, les instructions CSS étaient destinées uniquement à indiquer aux navigateurs comment présenter le HTML (couleurs, polices, etc.) ; on s&amp;rsquo;est vite rendu compte qu&amp;rsquo;on pouvait aussi l&amp;rsquo;appliquer au XML et on considère maintenant les CSS comme une technologie qui s&amp;rsquo;applique autant au HTML qu&amp;rsquo;au XML (et aussi, évidemment, au XHTML).&lt;/p&gt;</description></item><item><title>CSS (partie 2)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css2/</guid><description>&lt;h1 id="css-partie-2"&gt;
+ CSS (partie 2)
+ &lt;a class="anchor" href="#css-partie-2"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="mais-que-se-passe-t-il-en-cas-de-conflit-"&gt;
+ Mais que se passe-t-il en cas de conflit ?
+ &lt;a class="anchor" href="#mais-que-se-passe-t-il-en-cas-de-conflit-"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Plusieurs instructions peuvent s&amp;rsquo;appliquer en même temps : un texte peut être en rouge et souligné. Il peut arriver cependant que deux instructions CSS se contredisent. Par exemple, un texte ne peut être à la fois en rouge et en bleu. Dans ce cas, la sélection la plus spécifique l’emporte. Ainsi, dans l’exemple qui suit :&lt;/p&gt;</description></item><item><title>CSS (partie 3)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/css3/</guid><description>&lt;h1 id="css-partie-3"&gt;
+ CSS (partie 3)
+ &lt;a class="anchor" href="#css-partie-3"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;h3 id="quand-le-contenu-excède-le-contenant"&gt;
+ Quand le contenu excède le contenant
+ &lt;a class="anchor" href="#quand-le-contenu-exc%c3%a8de-le-contenant"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Il arrive qu’une image ou qu’un texte excède la taille de l’élément dans lequel il a été placé. Par défaut, ce contenu déborde visiblement (&lt;code&gt;overflow: visible&lt;/code&gt;). La propriété &lt;code&gt;overflow: hidden&lt;/code&gt; permet de contrôler ce comportement :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;overflow: hidden&lt;/code&gt; masque la partie qui dépasse.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow: scroll&lt;/code&gt; ajoute des barres de défilement (même si le contenu tient dans la boîte).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;overflow: auto&lt;/code&gt; n’ajoute les barres que si nécessaire.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="encodage-des-caractères"&gt;
+ Encodage des caractères
+ &lt;a class="anchor" href="#encodage-des-caract%c3%a8res"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Il peut être utile de préciser l’encodage utilisé dans le fichier CSS en plaçant au tout premier ligne :&lt;/p&gt;</description></item><item><title>Laboratoire CSS</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/laboratoire_css/</guid><description>&lt;h1&gt;
  Laboratoire CSS
 &lt;/h1&gt;
 &lt;p&gt;

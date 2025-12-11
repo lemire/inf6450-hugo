@@ -7,16 +7,66 @@
  Traitement du XML comme du texte
  &lt;a class="anchor" href="#traitement-du-xml-comme-du-texte"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Le traitement du XML comme du texte consiste à manipuler les fichiers XML en utilisant les fonctions de traitement de chaînes de caractères disponibles dans les langages de programmation. Cette approche est simple à implémenter mais peut être source d&amp;rsquo;erreurs si le XML n&amp;rsquo;est pas correctement formé.&lt;/p&gt;</description></item><item><title>Activité JSON/XML avec Jackson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</guid><description>&lt;h1&gt;
+&lt;p&gt;Le traitement du XML comme du texte consiste à manipuler les fichiers XML en utilisant les fonctions de traitement de chaînes de caractères disponibles dans les langages de programmation. Cette approche est simple à implémenter mais peut être source d&amp;rsquo;erreurs si le XML n&amp;rsquo;est pas correctement formé.&lt;/p&gt;</description></item><item><title>JSON</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/json/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/json/</guid><description>&lt;h1 id="json"&gt;
+ JSON
+ &lt;a class="anchor" href="#json"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;
+ Malheureusement, le traitement d’un document XML est parfois inutilement lourd. Pour cette raison, on remplace souvent le XML par du
+ &lt;a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank"&gt;
+ JSON
+ &lt;/a&gt;
+ (JavaScript Object Notation).
+&lt;/p&gt;
+&lt;p&gt;
+ JSON a supplanté le XML dans plusieurs applications quant il s’agit de
+ transmettre des informations simples, surtout lors que le récipiendaire
+ utilise le JavaScript.
+&lt;/p&gt;
+&lt;p&gt;
+ On peut voir le JSON comme une forme très limitée de JavaScript où on peut
+ utiliser que des « objets » et des tableaux. Un
+ « objets » en JavaScript est une structure de clés-valeurs avec la
+ syntaxe «
+ &lt;i&gt;
+ clef1 : valeur1, clef2:valeur2
+ &lt;/i&gt;
+ » alors
+ qu’un tableau est une simple liste de valeurs avec la syntaxe [ valeur1,
+ valeur2 ] . Les clés doivent être des chaînes de caractères, mais les
+ valeurs peuvent être d’autres objets, des tableaux, des chaînes de
+ caractères, des nombres, des valeurs Booléennes ou la valeur spéciale
+ « null ».
+&lt;/p&gt;</description></item><item><title>Activité JSON/XML avec Jackson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/activite_jsonxml_avec_jackson/</guid><description>&lt;h1 id="activité-jsonxml-avec-jackson"&gt;
  Activité JSON/XML avec Jackson
+ &lt;a class="anchor" href="#activit%c3%a9-jsonxml-avec-jackson"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javajackson"&gt;
  Nous vous invitons maintenant à faire une activité avec la librairie Java Jackson.
  &lt;/a&gt;
  Dans cette activité, vous verrez comment on peut créer et analyser des documents JSON et XML avec une librairie dédiée en Java.
-&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
+ Laboratoire pratique avec jq (optionnel)
+ &lt;a class="anchor" href="#laboratoire-pratique-avec-jq-optionnel"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;jq est un petit programme qui permet de lire, filtrer, modifier et formater des fichiers JSON directement dans le terminal. Il peut servir d&amp;rsquo;équivalent JSON
+aux approches de traitement XML comme XSLT, XQuery et XPath.&lt;/p&gt;
+&lt;p&gt;Il faut d&amp;rsquo;abord installer jq sur votre machine.&lt;/p&gt;
+&lt;h2 id="installation-sur-windows"&gt;
+ Installation sur Windows
+ &lt;a class="anchor" href="#installation-sur-windows"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Il y a plusieurs méthodes. Voici les deux plus simples pour un débutant.&lt;/p&gt;
+&lt;h3 id="méthode-1--la-plus-simple--télécharger-lexécutable-officiel"&gt;
+ Méthode 1 – La plus simple : télécharger l’exécutable officiel
+ &lt;a class="anchor" href="#m%c3%a9thode-1--la-plus-simple--t%c3%a9l%c3%a9charger-lex%c3%a9cutable-officiel"&gt;#&lt;/a&gt;
+&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Ouvrez votre navigateur et allez ici : &lt;a href="https://github.com/jqlang/jq/releases"&gt;https://github.com/jqlang/jq/releases&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/autoevaluation/</guid><description>&lt;h1 id="autoévaluation-dom"&gt;
  Autoévaluation DOM
+ &lt;a class="anchor" href="#auto%c3%a9valuation-dom"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;
  Le bouton « Vérifier ma réponse » donne accès à un script qui, en
