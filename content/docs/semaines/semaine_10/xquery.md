@@ -103,7 +103,7 @@ On peut attribuer un compteur aux nœuds :
     { $b/nom }
     </etudiant>
     }
-    </maliste>
+</maliste>
 ```
 
 Le résultat sera alors :
@@ -137,7 +137,7 @@ On peut combiner les requêtes FLWOR, comme dans cet exemple :
     }
     </etudiant>
     }
-    </maliste>
+</maliste>
 ```
 
 Cette requête va considérer chaque élément etudiant du document XML et créer une liste de notes obtenues pour cet étudiant, dans ce cas, le résultat sera :
@@ -153,7 +153,7 @@ Cette requête va considérer chaque élément etudiant du document XML et crée
     <note>46</note>
     </etudiant>
     <etudiant nom="Pouf"/>
-    </maliste>
+</maliste>
 ```
 
 L'expression suivante va calculer la moyenne de notes (50) :
