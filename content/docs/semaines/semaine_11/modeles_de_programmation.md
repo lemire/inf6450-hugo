@@ -6,9 +6,11 @@ weight: 20
 # Modèles de programmation XML
 
 Il y a plusieurs façons de traiter du XML. Chaque méthode a ses avantages et ses inconvénients. Bien que ce module s'intéresse surtout à l'approche DOM, il est important de connaître l'ensemble des méthodologies possibles et d'avoir une idée des forces et faiblesses relatives de chacune.
+
+
 ### Traitement du XML comme du texte
 
-Un fichier XML est d'abord un fichier texte. Comme certains langages, tel Java, savent bien traiter les fichiers en format texte, ils peuvent directement traiter le XML.
+Le traitement du XML comme du texte consiste à manipuler les fichiers XML en utilisant les fonctions de traitement de chaînes de caractères disponibles dans les langages de programmation. Cette approche est simple à implémenter mais peut être source d'erreurs si le XML n'est pas correctement formé.
 
 ```java
 int montant = 10;
@@ -38,9 +40,10 @@ Cependant, comment savoir si le XML produit est bien formé ? Dans l'exemple pr�
 <facture><montant>432</montant><nom>Gérard Beauford</nom></facture>
 ```
 
+
 ### Traitement événementiel
 
-Le traitement événementiel (SAX, XNI…) lit le document séquentiellement et déclenche des événements.
+Le traitement événementiel, comme SAX, lit le document XML de manière séquentielle et génère des événements à chaque élément rencontré. Cette méthode est efficace pour les gros fichiers mais nécessite une gestion manuelle de l'état.
 
 Pour le document suivant :
 
@@ -94,9 +97,11 @@ public class MonApplicationSAX extends DefaultHandler {
 }
 ```
 
+
+
 ### Traitement avec itérateurs (StAX)
 
-StAX propose une approche « pull » plus intuitive.
+StAX (Streaming API for XML) offre une approche "pull" plus intuitive que SAX, permettant au programmeur de contrôler la lecture du document XML de manière itérative.
 
 ```java
 import javax.xml.stream.*;
@@ -132,8 +137,11 @@ public class staxex {
 }
 ```
 
+
+
 ### Traitement avec modèle en arbre (DOM)
 
+Le modèle DOM (Document Object Model) charge l'intégralité du document XML en mémoire sous forme d'arbre d'objets, permettant une navigation et une manipulation faciles mais consommatrice de ressources.
 Un document XML peut être vu comme un arbre. Le DOM charge tout le document en mémoire sous forme d'objets.
 
 ```xml
@@ -152,13 +160,17 @@ Représentation en arbre :
      └─ nom (surnom="Joe") → "Gérard Beauford"
 ```
 
+
 ### Transformations (XSLT)
 
+XSLT (eXtensible Stylesheet Language Transformations) est un langage de transformation XML qui permet de convertir des documents XML vers d'autres formats comme HTML ou texte de manière déclarative.
 XSLT est idéal pour les transformations simples (XML → HTML, XML → texte…). Pour des traitements complexes avec bases de données, il est insuffisant.
 
-### XPath
 
-XPath permet d'extraire très simplement des données depuis Java :
+
+### XPath
+XPath est un langage d'expression qui permet de naviguer et d'extraire des données spécifiques dans un document XML de manière concise et puissante.
+XPath permet d'extraire très simplement des données depuis Java.
 
 ```java
 import javax.xml.parsers.*;
@@ -172,24 +184,18 @@ XPath xpath = XPathFactory.newInstance().newXPath();
 String title = xpath.evaluate("//nom/text()", doc);
 ```
 
-### XML comme extension d'un langage (E4X)
-```
-
-JavaScript for XML permet d'écrire directement du XML dans le code :
-
-```xml
- var sales = <sales vendor="John">
-  <item type="peas" price="4" quantity="6"/>
-  <item type="carrot" price="3" quantity="10"/>
-  <item type="chips" price="5" quantity="3"/>
-</sales>;
-```
 
 ### Traitement par abstraction
 
+Le traitement par abstraction utilise des bibliothèques de haut niveau qui masquent la complexité du XML, permettant de travailler avec des objets métier sans se soucier du format de sérialisation.
 De nombreuses bibliothèques (JAXB, bases de données, frameworks) manipulent du XML sans jamais vous forcer à écrire du XML à la main.
 
-### Sérialisation XML (Java Beans)
+
+
+### Sérialisation XML
+
+La sérialisation XML d'objet Java permet de convertir des objets Java en XML et vice-versa, facilitant la persistance et l'échange de données.
+
 ```java
 import java.beans.*;
 import java.io.*;
@@ -208,6 +214,7 @@ public class Serialization {
     }
 }
 ```
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="21" class="java.beans.XMLDecoder">
@@ -215,7 +222,12 @@ public class Serialization {
 </java>
 ```
 
+
 ### Services web
+
+
+
+Les services web REST utilisent les méthodes HTTP standard pour exposer des ressources XML via des API web, permettant l'interopérabilité entre différentes plateformes.
 
 Les services web REST utilisent simplement HTTP (GET, POST, PUT, DELETE).
 | Méthode | Description |
@@ -225,22 +237,52 @@ Les services web REST utilisent simplement HTTP (GET, POST, PUT, DELETE).
 | PUT | Créer/remplacer une ressource à l'URI donnée |
 | DELETE | Supprimer une ressource |
 
-Exemple de requête vers la Library of Congress :
+
+Le programme Java suivant interroge le service de recherche SRU (Search/Retrieve via URL) de la Bibliothèque du Congrès américain pour récupérer l’enregistrement bibliographique MARC21 correspondant au titre exact « First Impressions of the New World ». Il construit une requête HTTP contenant les paramètres nécessaires (opération de recherche, version du protocole, critère de recherche sur le titre Dublin Core, limitation à un seul résultat et demande du format MARCXML), ouvre la connexion réseau, télécharge la réponse XML directement depuis l’URL, la parse en tenant compte des espaces de noms, puis utilise une expression XPath pour extraire précisément la chaîne du « leader » (les 24 premiers caractères de l’enregistrement MARC qui décrivent le type de document, son statut, sa longueur, etc.) et l’affiche dans la console. En résumé, il effectue une recherche catalographique distante et récupère un élément technique clé de la notice MARC correspondante.
 
 
 {{<inlineJava path="example.java">}}
-import org.w3c.dom.*;
+import org.w3c.dom.Document;
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
+import javax.xml.namespace.NamespaceContext;
+import java.net.URL;
+import java.util.Iterator;
 
-public class example {
+public class Exemple {
     public static void main(String[] args) throws Exception {
         String base = "http://z3950.loc.gov:7090/voyager?";
-        String query = "operation=searchRetrieve&version=1.1&query=(dc.title=%22First Impressions of the New World%22)";
-        Document doc = DocumentBuilderFactory.newInstance()
-            .newDocumentBuilder().parse(base + query);
+        String requete = "operation=searchRetrieve&version=1.1" +
+                         "&query=(dc.title=%22First%20Impressions%20of%20the%20New%20World%22)" +
+                         "&maximumRecords=1&recordSchema=marcxml";
+
+        String urlComplete = base + requete;
+
+        // Création du parseur XML avec prise en charge des espaces de noms
+        DocumentBuilderFactory fabrique = DocumentBuilderFactory.newInstance();
+        fabrique.setNamespaceAware(true); // Indispensable pour les réponses MARCXML/SRU
+        Document document = fabrique.newDocumentBuilder().parse(new URL(urlComplete).openStream());
+
         XPath xpath = XPathFactory.newInstance().newXPath();
-        System.out.println("leader : " + xpath.evaluate("//leader/text()", doc));
+
+        // Définition de l'espace de noms MARC21
+        xpath.setNamespaceContext(new NamespaceContext() {
+            @Override
+            public String getNamespaceURI(String prefixe) {
+                return "marc".equals(prefixe) ? "http://www.loc.gov/MARC21/slim" : null;
+            }
+
+            @Override
+            public String getPrefix(String uri) { return null; }
+
+            @Override
+            public Iterator<String> getPrefixes(String uri) { return null; }
+        });
+
+        // Extraction du leader MARC
+        String leader = xpath.evaluate("//marc:leader/text()", document);
+
+        System.out.println("Leader MARC : " + leader);
     }
 }
 {{</inlineJava>}}
