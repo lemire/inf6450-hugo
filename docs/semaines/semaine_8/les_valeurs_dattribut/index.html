@@ -9,7 +9,7 @@
 Nous savons maintenant comment aller chercher la valeur d&rsquo;un attribut en utilisant une expression XPath contenant le symbole « @ ». Cependant, qu&rsquo;en est-il de la spécification des valeurs d&rsquo;attributs? Supposons le document suivant :
 <facture>
    <montant>10.10</montant>
-   </facture>
+</facture>
 Nous voulons le simplifier pour n&rsquo;avoir que :
 <facture montant="10.10" />
 Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer une valeur XPath comme valeur d&rsquo;attribut, de la façon suivante :'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="Les valeurs d’attribut"><meta property="og:description" content='Les valeurs d’attribut # Spécifier les valeurs d’attributs # Nous savons maintenant comment aller chercher la valeur d’un attribut en utilisant une expression XPath contenant le symbole « @ ». Cependant, qu’en est-il de la spécification des valeurs d’attributs? Supposons le document suivant :
@@ -34,15 +34,15 @@ Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer une 
 <a class=anchor href=#les-valeurs-dattribut>#</a></h1><h2 id=spécifier-les-valeurs-dattributs>Spécifier les valeurs d&rsquo;attributs
 <a class=anchor href=#sp%c3%a9cifier-les-valeurs-dattributs>#</a></h2><p>Nous savons maintenant comment aller chercher la valeur d&rsquo;un attribut en utilisant une expression XPath contenant le symbole « @ ». Cependant, qu&rsquo;en est-il de la spécification des valeurs d&rsquo;attributs? Supposons le document suivant :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;facture&gt;</span>
 </span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;montant&gt;</span>10.10<span style=color:#0550ae>&lt;/montant&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/facture&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/facture&gt;</span>
 </span></span></code></pre></div><p>Nous voulons le simplifier pour n&rsquo;avoir que :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;facture</span> <span style=color:#1f2328>montant=</span><span style=color:#0a3069>&#34;10.10&#34;</span> <span style=color:#0550ae>/&gt;</span>
 </span></span></code></pre></div><p>Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer une valeur XPath comme valeur d&rsquo;attribut, de la façon suivante :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:stylesheet</span> <span style=color:#1f2328>version=</span><span style=color:#0a3069>&#34;1.0&#34;</span>
-</span></span><span style=display:flex><span>   <span style=color:#1f2328>xmlns:xsl=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/XSL/Transform&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;facture&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;facture</span> <span style=color:#1f2328>montant=</span><span style=color:#0a3069>&#34;{montant}&#34;</span> <span style=color:#0550ae>/&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:stylesheet&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:stylesheet</span> <span style=color:#1f2328>version=</span><span style=color:#0a3069>&#34;1.0&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>xmlns:xsl=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/XSL/Transform&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;facture&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;facture</span> <span style=color:#1f2328>montant=</span><span style=color:#0a3069>&#34;{montant}&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/xsl:stylesheet&gt;</span>
 </span></span></code></pre></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_8/un_peu_plus_de_xslt_fonctionnement_de_base_template_et_value-of/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Un peu plus de XSLT : fonctionnement de base, template et value-of">
 <span>Un peu plus de XSLT : fonctionnement de base, template et value-of</span>
 </a><a href=/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/ class="flex align-center float-right book-icon"><span>XSLT modulaire</span>
