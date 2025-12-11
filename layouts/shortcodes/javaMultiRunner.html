@@ -105,8 +105,14 @@ Chaque nom de fichier est séparé par un point-virgule. Le contenu est chargé 
         try { data = JSON.parse(data); } catch(e) { resultDiv.textContent = data; return; }
       }
       if (data.status === 'ran_successfully') {
+        // Fonction d'échappement HTML simple
+        function escapeHtml(str) {
+          return str.replace(/[&<>"']/g, function(c) {
+            return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c];
+          });
+        }
         resultDiv.innerHTML = '<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;">' +
-          (data.output || '').replace(/\n/g, '<br>') + '</pre>';
+          escapeHtml(data.output || '') + '</pre>';
         // Nettoie les erreurs précédentes
         root.querySelectorAll('.export-file-block').forEach(block => {
           if (block._cm) {
