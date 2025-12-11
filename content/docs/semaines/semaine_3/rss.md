@@ -37,13 +37,15 @@ Prenez le temps de consulter les sources suivantes.
    https://www.lapresse.ca/rss.php  
    (flux généraux et par section, par exemple : https://www.lapresse.ca/actualites/rss.xml)
 
-4. **Journal de Montréal (groupe Quebecor) – format RSS 2.0  
+4. **Journal de Montréal** (groupe Quebecor) – format RSS 2.0  
    https://www.journaldemontreal.com/rss  
 
 
 
 #### Exemple Java
 
+Prenez quelques secondes pour exécuter ce programme qui charge les dernières nouvelles de Radio-Canada 
+en utilisant le XML.
 
 {{<inlineJava path="RadioCanadaCinqDernieres.java">}}
 import java.io.InputStream;

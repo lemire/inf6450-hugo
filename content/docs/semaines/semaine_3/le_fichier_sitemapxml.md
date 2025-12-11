@@ -43,7 +43,9 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :
 ```
 ## Activité
 
-Pouvez-vous vérifier si le site de teluq.ca a un fichier sitemap.xml?
+Pouvez-vous vérifier si le site de teluq.ca a un fichier sitemap.xml&nbsp;?
+
+Prenez quelques secondes pour exécuter le programme suivant dans votre navigateur.
 
 {{<inlineJava path="SitemapViewer.java">}}
 import java.io.BufferedReader;

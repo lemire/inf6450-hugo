@@ -19,7 +19,7 @@ Avant de suivre ce cours, vous devez normalement avoir un suivi au moins un cour
 
 ## Attention : Java
 
-Ce cours suppose que vous êtes capable d'utiliser et de compiler un programme Java en ligne de commande. Avant de commencer le cours, créez un fichier intitulé « HelloWorld.java » avec le contenu suivant :
+Ce cours suppose que vous êtes capable d'utiliser et de compiler un programme Java en ligne de commande. Avant de commencer le cours, créez un fichier intitulé « HelloWorld.java » avec le contenu suivant.
 
 {{<inlineJava path="HelloWorld.java">}}
 public class HelloWorld {
@@ -31,7 +31,8 @@ public class HelloWorld {
 
 
 Il est de votre responsabilité de vous assurer que vous avez les connaissances requises pour réussir ce cours.
-Vous ne devriez pas être intimidé par l'exemple suivant.
+Vous ne devriez pas être intimidé par l'exemple suivant. Prenez quelques secondes pour l'exécuter dans
+votre navigateur.
 
 
 {{<inlineJava path="JsonSimple.java">}}
