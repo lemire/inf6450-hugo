@@ -1306,43 +1306,16 @@ Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application 
  &lt;/a&gt;
  avec les fonctions matches, replace, et tokenize. XPath 2.0 intègre maintenant
  la fonction « document » qui était une fonction XSLT.
- &lt;/p&gt;</description></item><item><title>XSLT modulaire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>XSLT modulaire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/</guid><description>&lt;h1 id="xslt-modulaire"&gt;
  XSLT modulaire
+ &lt;a class="anchor" href="#xslt-modulaire"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2&gt;
- Modularité avec les éléments « xsl:apply-templates »
+&lt;h2 id="modularité-avec-les-éléments--xslapply-templates-"&gt;
+ Modularité avec les éléments « xsl:apply-templates »
+ &lt;a class="anchor" href="#modularit%c3%a9-avec-les-%c3%a9l%c3%a9ments--xslapply-templates-"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;
- Notre fichier « xslt.xml » se complexifie et devient 
- plus difficile à comprendre. Tout est dans un seul modèle, le modèle
- &lt;i&gt;
- facture
- &lt;/i&gt;
- . 
- Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :
-&lt;/p&gt;
-&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
- &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
- &amp;lt;?xml-stylesheet href="xslt.xml" type="application/xml"?&amp;gt;
- &amp;lt;facture&amp;gt;
- &amp;lt;montant&amp;gt;10.10&amp;lt;/montant&amp;gt;
- &amp;lt;recipiendaire&amp;gt;
- &amp;lt;personne&amp;gt;
- &amp;lt;sexe&amp;gt;M&amp;lt;/sexe&amp;gt;
- &amp;lt;nom&amp;gt;Rochond&amp;lt;/nom&amp;gt;
- &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
- &amp;lt;/personne&amp;gt;
- &amp;lt;/recipiendaire&amp;gt;
- &amp;lt;commercant&amp;gt;
- &amp;lt;personne&amp;gt;
- &amp;lt;sexe&amp;gt;F&amp;lt;/sexe&amp;gt;
- &amp;lt;nom&amp;gt;Ladouce&amp;lt;/nom&amp;gt;
- &amp;lt;prenom&amp;gt;Jeanne&amp;lt;/prenom&amp;gt;
- &amp;lt;/personne&amp;gt;
- &amp;lt;/commercant&amp;gt;
- &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
- &amp;lt;/facture&amp;gt;
-&lt;/p&gt;</description></item><item><title>Asynchronous JavaScript And XML (AJAX)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/</guid><description>&lt;h1 id="asynchronous-javascript-and-xml-ajax"&gt;
+&lt;p&gt;Cette section explique comment utiliser l&amp;rsquo;élément xsl:apply-templates pour rendre les feuilles de style XSLT plus modulaires et réutilisables, en évitant la répétition de code.&lt;/p&gt;
+&lt;p&gt;Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle &lt;em&gt;facture&lt;/em&gt;. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :&lt;/p&gt;</description></item><item><title>Asynchronous JavaScript And XML (AJAX)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/</guid><description>&lt;h1 id="asynchronous-javascript-and-xml-ajax"&gt;
  Asynchronous JavaScript And XML (AJAX)
  &lt;a class="anchor" href="#asynchronous-javascript-and-xml-ajax"&gt;#&lt;/a&gt;
 &lt;/h1&gt;

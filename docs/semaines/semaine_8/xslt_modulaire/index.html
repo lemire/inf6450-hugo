@@ -1,40 +1,14 @@
-<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='
- XSLT modulaire
+<!doctype html><html lang=fr dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  XSLT modulaire
+  #
 
 
- Modularité avec les éléments « xsl:apply-templates »
+  Modularité avec les éléments « xsl:apply-templates »
+  #
 
-
- Notre fichier « xslt.xml » se complexifie et devient 
-    plus difficile à comprendre. Tout est dans un seul modèle, le modèle
- 
-  facture
- 
- . 
-    Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :
-
-
- <?xml version="1.0" encoding="ISO-8859-1" ?>
-     <?xml-stylesheet href="xslt.xml" type="application/xml"?>
-     <facture>
-      <montant>10.10</montant>
-     <recipiendaire>
-      <personne>
-      <sexe>M</sexe>
-      <nom>Rochond</nom>
-      <prenom>Jean</prenom>
-      </personne>
-     </recipiendaire>
-     <commercant>
-      <personne>
-      <sexe>F</sexe>
-      <nom>Ladouce</nom>
-      <prenom>Jeanne</prenom>
-      </personne>
-      </commercant>
-      <raison>Achat d&#39;ordinateur</raison>
-      </facture>
-'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="XSLT modulaire"><meta property="og:description" content='XSLT modulaire Modularité avec les éléments « xsl:apply-templates » Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle facture . Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme : <?xml version="1.0" encoding="ISO-8859-1" ?> <?xml-stylesheet href="xslt.xml" type="application/xml"?> <facture> <montant>10.10</montant> <recipiendaire> <personne> <sexe>M</sexe> <nom>Rochond</nom> <prenom>Jean</prenom> </personne> </recipiendaire> <commercant> <personne> <sexe>F</sexe> <nom>Ladouce</nom> <prenom>Jeanne</prenom> </personne> </commercant> <raison>Achat d&#39;ordinateur</raison> </facture>'><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>XSLT modulaire | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.beef94347e189c5787b963fc813b04f83c18c2f4741ef4225205fb3e53d0755f.js integrity="sha256-vu+UNH4YnFeHuWP8gTsE+DwYwvR0HvQiUgX7PlPQdV8=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+Cette section explique comment utiliser l&rsquo;élément xsl:apply-templates pour rendre les feuilles de style XSLT plus modulaires et réutilisables, en évitant la répétition de code.
+Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle facture. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/"><meta property="og:site_name" content="INF 6450 - Gestion de l'information avec XML"><meta property="og:title" content="XSLT modulaire"><meta property="og:description" content="XSLT modulaire # Modularité avec les éléments « xsl:apply-templates » # Cette section explique comment utiliser l’élément xsl:apply-templates pour rendre les feuilles de style XSLT plus modulaires et réutilisables, en évitant la répétition de code.
+Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle facture. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :"><meta property="og:locale" content="fr"><meta property="og:type" content="article"><meta property="article:section" content="docs"><title>XSLT modulaire | INF 6450 - Gestion de l'information avec XML</title><link rel=icon href=/inf6450-hugo/favicon.png><link rel=manifest href=/inf6450-hugo/manifest.json><link rel=canonical href=https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_modulaire/><link rel=stylesheet href=/inf6450-hugo/book.min.a006656c8516e75b9916bf87553cdae09b7d022a0ef8c51fcafcb935e4e3d410.css integrity="sha256-oAZlbIUW51uZFr+HVTza4Jt9AioO+MUfyvy5NeTj1BA=" crossorigin=anonymous><script defer src=/inf6450-hugo/fuse.min.js></script><script defer src=/inf6450-hugo/fr.search.min.5b509f21282df04a7179b40659388f25c60f962c0bfd85882023fbfc568959dc.js integrity="sha256-W1CfISgt8EpxebQGWTiPJcYPliwL/YWIICP7/FaJWdw=" crossorigin=anonymous></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/inf6450-hugo/><img src=/inf6450-hugo/xml.jpg alt=Logo class=book-icon><span>INF 6450 - Gestion de l'information avec XML</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Rechercher aria-label=Rechercher maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><span>Semaines</span><ul><li><input type=checkbox id=section-662cc567f710f13ba33a8b95f1c4774b class=toggle>
 <label for=section-662cc567f710f13ba33a8b95f1c4774b class=flex><a href=/inf6450-hugo/docs/semaines/semaine_1/ class=flex-auto>Semaine 1</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_1/installation_dun_navigateur_moderne/>Installation d’un navigateur moderne</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/creer_un_fichier_xml/>Créer un fichier XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/introduction_a_xml/>Introduction à XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/principes_du_xml/>Principes du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/encodage_des_caracteres_unicode/>Encodage des caractères Unicode</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/>Mise en forme du XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/laboratoire_sur_la_structure_en_arbre_des_documents_xml/>Laboratoire sur la structure en arbre des documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/>Petit guide d’usage du courriel efficace</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_1/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-c76990db7973ec20e567f82efc226c40 class=toggle>
 <label for=section-c76990db7973ec20e567f82efc226c40 class=flex><a role=button class=flex-auto>Semaine 2</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_2/definition_de_type_de_document/>Définition de type de document</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/>Validation de documents XML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_2/autoevaluation/>Autoévaluation</a></li></ul></li><li><input type=checkbox id=section-210d14d44c656daf110a7cf2152571c8 class=toggle>
@@ -50,121 +24,95 @@
 <label for=section-15328d8e9bed4b287b48fee1d849daea class=flex><a role=button class=flex-auto>Semaine 12</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom/>DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/autoevaluation_dom/>Autoévaluation DOM</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/problemes_resolus/>Problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/>Solutions aux problèmes résolus</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/dom_javascript_et_autres_langages/>DOM : JavaScript et autres langages</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/asynchronous_javascript_and_xml_ajax/>Asynchronous JavaScript And XML (AJAX)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/json/>JSON</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/yaml/>YAML</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/docx_microsoft_word/>Docx (Microsoft Word)</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_12/travail_4/>Travail 4</a></li></ul></li><li><input type=checkbox id=section-4978957121bd63cf0228c9834e06fa0b class=toggle>
 <label for=section-4978957121bd63cf0228c9834e06fa0b class=flex><a role=button class=flex-auto>Semaine 13</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_13/du_xml_aux_graphes/>Du XML aux graphes</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_13/introduction_au_rdf/>Introduction au RDF</a></li></ul></li><li><input type=checkbox id=section-4b52c904429784d0d6f61687b23e71ab class=toggle>
 <label for=section-4b52c904429784d0d6f61687b23e71ab class=flex><a role=button class=flex-auto>Semaine 14</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/>Applications du RDF</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/>Autoévaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_14/travail_5/>Travail 5</a></li></ul></li><li><input type=checkbox id=section-0970d75389f23d3a6141226436ccccb5 class=toggle>
-<label for=section-0970d75389f23d3a6141226436ccccb5 class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li><li><a href=/inf6450-hugo/docs/semaines/professeur/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>XSLT modulaire</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class="markdown book-article"><h1>XSLT modulaire</h1><h2>Modularité avec les éléments « xsl:apply-templates »</h2><p>Notre fichier « xslt.xml » se complexifie et devient
-plus difficile à comprendre. Tout est dans un seul modèle, le modèle
-<i>facture
-</i>.
-Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1" ?>
-&lt;?xml-stylesheet href="xslt.xml" type="application/xml"?>
-&lt;facture>
-&lt;montant>10.10&lt;/montant>
-&lt;recipiendaire>
-&lt;personne>
-&lt;sexe>M&lt;/sexe>
-&lt;nom>Rochond&lt;/nom>
-&lt;prenom>Jean&lt;/prenom>
-&lt;/personne>
-&lt;/recipiendaire>
-&lt;commercant>
-&lt;personne>
-&lt;sexe>F&lt;/sexe>
-&lt;nom>Ladouce&lt;/nom>
-&lt;prenom>Jeanne&lt;/prenom>
-&lt;/personne>
-&lt;/commercant>
-&lt;raison>Achat d'ordinateur&lt;/raison>
-&lt;/facture></p><p>Dans ce nouveau document XML, se trouvent deux éléments « personne ». Il serait bête,
-dans le document XSLT, de répéter le travail chaque fois qu'on veut afficher un élément « personne ».
-Regardons ce que cela pourrait donner en pratique :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
-&lt;xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-&lt;xsl:template match="facture">
-&lt;html>
-&lt;head>
-&lt;title>Facture de &lt;xsl:value-of select="personne" />&lt;/title>
-&lt;/head>
-&lt;body>
-&lt;p>Ceci est une facture pour
-&lt;xsl:value-of select="recipiendaire/personne/prenom" />
-&lt;xsl:text> &lt;/xsl:text>
-&lt;xsl:value-of select="recipiendaire/personne/nom" />
-de &lt;xsl:value-of select="montant" />$ pour:
-&lt;xsl:value-of select="raison" />.&lt;/p>
-&lt;p>Votre commerçant:
-&lt;xsl:value-of select="commercant/personne/prenom" />
-&lt;xsl:text> &lt;/xsl:text>
-&lt;xsl:value-of select="commercant/personne/nom" /> &lt;/p>
-&lt;/body>
-&lt;/html>
-&lt;/xsl:template>
-&lt;/xsl:stylesheet></p><p>Observez comment on répète le texte suivant à deux reprises :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;xsl:value-of select="recipiendaire/personne/prenom" />
-&lt;xsl:text> &lt;/xsl:text>
-&lt;xsl:value-of select="recipiendaire/personne/nom" /></p><p>Voici une autre solution, plus élégante, qui donne le même résultat :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
-&lt;xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform"><pre><code> &amp;lt;!-- d'abord un modèle pour les éléments facture --&amp;gt;
- &amp;lt;xsl:template match=&quot;facture&quot;&amp;gt;
- &amp;lt;html&amp;gt;
- &amp;lt;head&amp;gt;
- &amp;lt;title&amp;gt;Facture de &amp;lt;xsl:value-of select=&quot;recipiendaire/personne&quot; /&amp;gt;&amp;lt;/title&amp;gt;
- &amp;lt;/head&amp;gt;
- &amp;lt;body&amp;gt;
-  &amp;lt;p&amp;gt;Ceci est une facture pour 
-  &amp;lt;xsl:apply-templates select=&quot;recipiendaire&quot; /&amp;gt; 
-  de &amp;lt;xsl:value-of select=&quot;montant&quot; /&amp;gt;$ pour: 
-  &amp;lt;xsl:value-of select=&quot;raison&quot; /&amp;gt;.&amp;lt;/p&amp;gt;
-  &amp;lt;p&amp;gt;Votre commerçant: &amp;lt;xsl:apply-templates select=&quot;commercant&quot; /&amp;gt; &amp;lt;/p&amp;gt;
- &amp;lt;/body&amp;gt;
- &amp;lt;/html&amp;gt;
- &amp;lt;/xsl:template&amp;gt;
-
- &amp;lt;!-- le modèle pour les éléments facture 
- utilise un modèle pour les éléments personne --&amp;gt;
- &amp;lt;xsl:template match=&quot;personne&quot;&amp;gt;
-        &amp;lt;xsl:value-of select=&quot;prenom&quot; /&amp;gt;
-        &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
-        &amp;lt;xsl:value-of select=&quot;nom&quot; /&amp;gt;
- &amp;lt;/xsl:template&amp;gt;
- &amp;lt;/xsl:stylesheet&amp;gt;
-</code></pre></p><p>Quelques éléments « xsl:value-of » ont été remplacés par des
-éléments « xsl:apply-templates ». Un élément « xsl:apply-templates » prend le contenu
-et, au lieu d'insérer le contenu textuel comme le fait « xsl:value-of » à l'endroit prévu, il insère plutôt le résultat
-obtenu par l'application de modèles (éléments « xsl:template »).
-Ainsi, dans l'exemple que nous venons de voir,
-chaque fois que le processeur XSLT rencontre
-l'instruction « &lt;xsl:apply-templates select="recipiendaire" /> », il
-prend l'élément « recipiendaire » et essaie d'appliquer ses modèles. Comme il n'a pas de modèle pour
-les éléments « recipiendaire », il explore le contenu de l'élément et y trouve immédiatement un
-élément « personne ». Puisqu'il dispose d'un modèle pour ce type d'élément, il va l'appliquer.
-Par ailleurs, comme les éléments « recipiendaire » et « commercant »
-ne contiennent qu'un élément « personne »,
-c'est donc le modèle défini pour les éléments « personne » qui s'appliquera
-dans les deux cas.</p><p>Normalement, les éléments « xsl:apply-templates » sont utilisés
-au sein des éléments « xsl:template ». On peut aussi les
-utiliser au sein d'autres éléments que nous discuterons prochainement,
-« xsl:param » et « xsl:variable ».</p><p>Notre fichier « xslt.xml » est maintenant plus modulaire,
-parce qu'il contient deux modèles (éléments « xsl:template »).</p><p><b>En résumé, il est souvent préférable d'utiliser un élément « xsl:apply-templates »
-qu'un élément « xsl:value-of » quand la complexité du modèle augmente; ceci permet d'assurer
-la modularité et de garder la simplicité du document XSLT.</b></p><p>Par défaut, l'instruction apply-templates traite les nœuds dans l'ordre où ils
-se présentent dans le document original. On peut forcer le XSLT à trier les éléments
-avant de le traiter avec l'instruction xsl:sort. Dans notre exemple, on peut
-remplacer l'élément &lt;xsl:apply-templates select="recipiendaire" /> par cet élément
-si on veut que les individus soient triés par leur nom de famille.</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;xsl:apply-templates select="étudiant" >
-&lt;xsl:sort select="personne/nom" order="ascending" data-type="text" />
-&lt;/xsl:apply-templates></p><p>Si on souhaite un tri sur la valeur numérique d'une expression, on
-remplacera data-type="text" par data-type="number".</p><p>On peut aussi importer un autre fichier XSLT avec l'instruction xsl:import. Celle-ci
-doit apparaître au tout début du fichier XSLT comme premier sous-élément de l'élément
-xsl:stylesheet comme dans cet exemple :</p><p style="border:solid 1px #000;white-space:pre;font-size:.85em">&lt;?xml version="1.0" encoding="ISO-8859-1"?>
-&lt;xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-&lt;xsl:import href="mesregles.xsl"/>
-&lt;xsl:template match="facture">
-&lt;html>
-&lt;head>
-&lt;title>Facture de &lt;xsl:value-of select="personne" />&lt;/title>
-&lt;/head>
-&lt;/xsl:template>
-&lt;/xsl:stylesheet></p><p>En cas de conflit entre les règles de fichier XSLT principal et
-celles du fichier importé, les règles du fichier XSLT principal l'emporte.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Les valeurs d’attribut">
+<label for=section-0970d75389f23d3a6141226436ccccb5 class=flex><a role=button class=flex-auto>Semaine 15</a></label><ul><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen_preparatoire/>Examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/solutions_a_lexamen_preparatoire/>Solutions à l’examen préparatoire</a></li><li><a href=/inf6450-hugo/docs/semaines/semaine_15/examen/>Examen</a></li></ul></li><li><a href=/inf6450-hugo/docs/semaines/evaluation/>Évaluation</a></li><li><a href=/inf6450-hugo/docs/semaines/glossaire/>Glossaire</a></li><li><a href=/inf6450-hugo/docs/semaines/pense-bete_dtd/>Pense-bête DTD</a></li><li><a href=/inf6450-hugo/docs/semaines/professeur/>Pense-bête DTD</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/inf6450-hugo/svg/menu.svg class=book-icon alt=Menu></label><h3>XSLT modulaire</h3><label for=toc-control><img src=/inf6450-hugo/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#modularité-avec-les-éléments--xslapply-templates->Modularité avec les éléments « xsl:apply-templates »</a></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=xslt-modulaire>XSLT modulaire
+<a class=anchor href=#xslt-modulaire>#</a></h1><h2 id=modularité-avec-les-éléments--xslapply-templates->Modularité avec les éléments « xsl:apply-templates »
+<a class=anchor href=#modularit%c3%a9-avec-les-%c3%a9l%c3%a9ments--xslapply-templates->#</a></h2><p>Cette section explique comment utiliser l&rsquo;élément xsl:apply-templates pour rendre les feuilles de style XSLT plus modulaires et réutilisables, en évitant la répétition de code.</p><p>Notre fichier « xslt.xml » se complexifie et devient plus difficile à comprendre. Tout est dans un seul modèle, le modèle <em>facture</em>. Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34; ?&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#57606a>&lt;?xml-stylesheet href=&#34;xslt.xml&#34; type=&#34;application/xml&#34;?&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;facture&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;montant&gt;</span>10.10<span style=color:#0550ae>&lt;/montant&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;recipiendaire&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;personne&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;sexe&gt;</span>M<span style=color:#0550ae>&lt;/sexe&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;nom&gt;</span>Rochond<span style=color:#0550ae>&lt;/nom&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/personne&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/recipiendaire&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;commercant&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;personne&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;sexe&gt;</span>F<span style=color:#0550ae>&lt;/sexe&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;nom&gt;</span>Ladouce<span style=color:#0550ae>&lt;/nom&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#0550ae>&lt;prenom&gt;</span>Jeanne<span style=color:#0550ae>&lt;/prenom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/personne&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;/commercant&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;raison&gt;</span>Achat d&#39;ordinateur<span style=color:#0550ae>&lt;/raison&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;/facture&gt;</span>
+</span></span></code></pre></div><p>Dans ce nouveau document XML, se trouvent deux éléments « personne ». Il serait bête, dans le document XSLT, de répéter le travail chaque fois qu&rsquo;on veut afficher un élément « personne ». Regardons ce que cela pourrait donner en pratique :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:stylesheet</span> <span style=color:#1f2328>version=</span><span style=color:#0a3069>&#34;1.0&#34;</span> 
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>xmlns:xsl=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/XSL/Transform&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;facture&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;html&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;title&gt;</span>Facture de <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;personne&#34;</span> <span style=color:#0550ae>/&gt;&lt;/title&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;body&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;p&gt;</span>Ceci est une facture pour 
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire/personne/prenom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:text&gt;</span> <span style=color:#0550ae>&lt;/xsl:text&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire/personne/nom&#34;</span> <span style=color:#0550ae>/&gt;</span> 
+</span></span><span style=display:flex><span>     de <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;montant&#34;</span> <span style=color:#0550ae>/&gt;</span>$ pour:
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;raison&#34;</span> <span style=color:#0550ae>/&gt;</span>.<span style=color:#0550ae>&lt;/p&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;p&gt;</span>Votre commerçant: 
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;commercant/personne/prenom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:text&gt;</span> <span style=color:#0550ae>&lt;/xsl:text&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;commercant/personne/nom&#34;</span> <span style=color:#0550ae>/&gt;</span> <span style=color:#0550ae>&lt;/p&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/body&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/html&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:stylesheet&gt;</span>
+</span></span></code></pre></div><p>Observez comment on répète le texte suivant à deux reprises :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire/personne/prenom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>           <span style=color:#0550ae>&lt;xsl:text&gt;</span> <span style=color:#0550ae>&lt;/xsl:text&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire/personne/nom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span></code></pre></div><p>Voici une autre solution, plus élégante, qui donne le même résultat :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:stylesheet</span> <span style=color:#1f2328>version=</span><span style=color:#0a3069>&#34;1.0&#34;</span> 
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>xmlns:xsl=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/XSL/Transform&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#57606a>&lt;!-- d&#39;abord un modèle pour les éléments facture --&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;facture&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;html&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;title&gt;</span>Facture de <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire/personne&#34;</span> <span style=color:#0550ae>/&gt;&lt;/title&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;body&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;p&gt;</span>Ceci est une facture pour 
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:apply-templates</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;recipiendaire&#34;</span> <span style=color:#0550ae>/&gt;</span> 
+</span></span><span style=display:flex><span>     de <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;montant&#34;</span> <span style=color:#0550ae>/&gt;</span>$ pour: 
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;raison&#34;</span> <span style=color:#0550ae>/&gt;</span>.<span style=color:#0550ae>&lt;/p&gt;</span>
+</span></span><span style=display:flex><span>     <span style=color:#0550ae>&lt;p&gt;</span>Votre commerçant: <span style=color:#0550ae>&lt;xsl:apply-templates</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;commercant&#34;</span> <span style=color:#0550ae>/&gt;</span> <span style=color:#0550ae>&lt;/p&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/body&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/html&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#57606a>&lt;!-- le modèle pour les éléments facture 
+</span></span></span><span style=display:flex><span><span style=color:#57606a>    utilise un modèle pour les éléments personne --&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;personne&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>           <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;prenom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>           <span style=color:#0550ae>&lt;xsl:text&gt;</span> <span style=color:#0550ae>&lt;/xsl:text&gt;</span>
+</span></span><span style=display:flex><span>           <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;nom&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:stylesheet&gt;</span>
+</span></span></code></pre></div><p>Quelques éléments « xsl:value-of » ont été remplacés par des éléments « xsl:apply-templates ». Un élément « xsl:apply-templates » prend le contenu et, au lieu d&rsquo;insérer le contenu textuel comme le fait « xsl:value-of » à l&rsquo;endroit prévu, il insère plutôt le résultat obtenu par l&rsquo;application de modèles (éléments « xsl:template »). Ainsi, dans l&rsquo;exemple que nous venons de voir, chaque fois que le processeur XSLT rencontre l&rsquo;instruction « &lt;xsl:apply-templates select=&ldquo;recipiendaire&rdquo; /> », il prend l&rsquo;élément « recipiendaire » et essaie d&rsquo;appliquer ses modèles. Comme il n&rsquo;a pas de modèle pour les éléments « recipiendaire », il explore le contenu de l&rsquo;élément et y trouve immédiatement un élément « personne ». Puisqu&rsquo;il dispose d&rsquo;un modèle pour ce type d&rsquo;élément, il va l&rsquo;appliquer. Par ailleurs, comme les éléments « recipiendaire » et « commercant » ne contiennent qu&rsquo;un élément « personne », c&rsquo;est donc le modèle défini pour les éléments « personne » qui s&rsquo;appliquera dans les deux cas.</p><p>Normalement, les éléments « xsl:apply-templates » sont utilisés au sein des éléments « xsl:template ». On peut aussi les utiliser au sein d&rsquo;autres éléments que nous discuterons prochainement, « xsl:param » et « xsl:variable ».</p><p>Notre fichier « xslt.xml » est maintenant plus modulaire, parce qu&rsquo;il contient deux modèles (éléments « xsl:template »).</p><p><strong>En résumé, il est souvent préférable d&rsquo;utiliser un élément « xsl:apply-templates » qu&rsquo;un élément « xsl:value-of » quand la complexité du modèle augmente; ceci permet d&rsquo;assurer la modularité et de garder la simplicité du document XSLT.</strong></p><p>Par défaut, l&rsquo;instruction apply-templates traite les nœuds dans l&rsquo;ordre où ils se présentent dans le document original. On peut forcer le XSLT à trier les éléments avant de le traiter avec l&rsquo;instruction xsl:sort. Dans notre exemple, on peut remplacer l&rsquo;élément &lt;xsl:apply-templates select=&ldquo;recipiendaire&rdquo; /> par cet élément si on veut que les individus soient triés par leur nom de famille.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:apply-templates</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;étudiant&#34;</span> <span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:sort</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;personne/nom&#34;</span> <span style=color:#1f2328>order=</span><span style=color:#0a3069>&#34;ascending&#34;</span> <span style=color:#1f2328>data-type=</span><span style=color:#0a3069>&#34;text&#34;</span> <span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:apply-templates&gt;</span>
+</span></span></code></pre></div><p>Si on souhaite un tri sur la valeur numérique d&rsquo;une expression, on remplacera data-type=&ldquo;text&rdquo; par data-type=&ldquo;number&rdquo;.</p><p>On peut aussi importer un autre fichier XSLT avec l&rsquo;instruction xsl:import. Celle-ci doit apparaître au tout début du fichier XSLT comme premier sous-élément de l&rsquo;élément xsl:stylesheet comme dans cet exemple :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#57606a>&lt;?xml version=&#34;1.0&#34; encoding=&#34;ISO-8859-1&#34;?&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:stylesheet</span> <span style=color:#1f2328>version=</span><span style=color:#0a3069>&#34;1.0&#34;</span> 
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>xmlns:xsl=</span><span style=color:#0a3069>&#34;http://www.w3.org/1999/XSL/Transform&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:import</span> <span style=color:#1f2328>href=</span><span style=color:#0a3069>&#34;mesregles.xsl&#34;</span><span style=color:#0550ae>/&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;facture&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;html&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;title&gt;</span>Facture de <span style=color:#0550ae>&lt;xsl:value-of</span> <span style=color:#1f2328>select=</span><span style=color:#0a3069>&#34;personne&#34;</span> <span style=color:#0550ae>/&gt;&lt;/title&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/head&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:stylesheet&gt;</span>
+</span></span></code></pre></div><p>En cas de conflit entre les règles de fichier XSLT principal et celles du fichier importé, les règles du fichier XSLT principal l&rsquo;emporte.</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><div class="flex flex-wrap justify-between"><a href=/inf6450-hugo/docs/semaines/semaine_8/les_valeurs_dattribut/ class="flex align-center float-left book-icon"><img src=/inf6450-hugo/svg/backward.svg alt=Previous title="Les valeurs d’attribut">
 <span>Les valeurs d’attribut</span>
 </a><a href=/inf6450-hugo/docs/semaines/semaine_8/les_noms_delements/ class="flex align-center float-right book-icon"><span>Les noms d’éléments</span>
-<img src=/inf6450-hugo/svg/forward.svg alt=Next title="Les noms d’éléments"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
+<img src=/inf6450-hugo/svg/forward.svg alt=Next title="Les noms d’éléments"></a></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#modularité-avec-les-éléments--xslapply-templates->Modularité avec les éléments « xsl:apply-templates »</a></li></ul></nav></div></aside></main></body></html>
