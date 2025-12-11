@@ -99,17 +99,8 @@ Un cours en ligne est beaucoup plus qu'un simple site web. Par exemple, le prés
 
 **Navigation**
 
-Le menu à gauche de l'écran présente les rubriques « Présentation de la semaine », etc. Il s'agit du menu de la semaine courante. Vous êtes invité à faire les activités proposées en ordre séquentiel.
-
-À l'extrême gauche de l'écran, un autre menu vous permet de naviguer de la première à la dernière des 15 semaines que dure le cours. Une fois les travaux de la semaine terminés, vous pourrez passer à la semaine suivante et ainsi de suite.
-
-**Les liens externes**
-
-Certains liens vous amènent à un document ou pointent vers un site à l'extérieur du cours. Si vous ne voulez pas quitter la page où vous êtes, vous pouvez toujours cliquer sur le lien avec le bouton droit de la souris et choisir « Ouvrir dans une nouvelle fenêtre » (ou l'équivalent).
-
-**Lecture des documents PDF**
-
-Si vous chargez un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l'ouvrir au sein d'un outil dédié (par ex. Adobe Acrobat). Il n'est pas très pratique de lire un document PDF au sein d'un navigateur web.
+Le menu à gauche de l'écran présente l'organisation du cours en semaines. Vous devez suivre le cours
+de la première semaine à le dernière.
 
 ## L'approche pédagogique du cours
 
@@ -138,8 +129,6 @@ Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Co
 - Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA ? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.
 
 - Assurez-vous de bien expliquer vos résultats, en vos propres mots.
-
-
 
 
 
