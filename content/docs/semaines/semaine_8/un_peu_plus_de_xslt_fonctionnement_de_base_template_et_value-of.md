@@ -159,7 +159,7 @@ Le XSLT applique de préférence vos règles plutôt que celles par défaut. Ain
 ```xml
 <xsl:template match="*">
       <xsl:value-of select="."/>
-    </xsl:template>
+</xsl:template>
 ```
 
 ... alors elle s'appliquera quand l'élément-racine (ou tout autre élément) de votre document sera visité. Comme cette règle n'indique pas de visiter les sous-éléments (par l'instruction apply-templates), ceux-ci ne seront pas visités. Dans un tel cas, tout ce qui sera produit sera la valeur textuelle de l'élément-racine. Le traitement XSLT s'arrêtera alors.

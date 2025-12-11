@@ -20,9 +20,9 @@ Nous pouvons tester des conditions à l'aide d'expressions XPath contenant
 
 ```xml
 <xsl:template match="*">
-   <xsl:if test="name(.) = 'montant'">
-   Il s'agit d'un élément nommé «montant».
-   </xsl:if>
+    <xsl:if test="name(.) = 'montant'">
+    Il s'agit d'un élément nommé «montant».
+    </xsl:if>
    </xsl:template>
 ```
 
@@ -36,17 +36,17 @@ Nous pouvons aussi traiter plusieurs tests dans un seul élément
    « xsl:choose » comme ceci :
 ```xml
 <xsl:template match="*">
-   <xsl:choose>
-   <xsl:when test="name(.)='montant'">
-   Il y a une balise "montant"
-   </xsl:when>
-   <xsl:when test="name(.)='facture'">
-   J'ai trouvé une "facture"
-   </xsl:when>
-   <xsl:otherwise>
-   Je ne connais pas cet élément
-   </xsl:otherwise>
-   </xsl:choose>
+    <xsl:choose>
+        <xsl:when test="name(.)='montant'">
+        Il y a une balise "montant"
+        </xsl:when>
+        <xsl:when test="name(.)='facture'">
+        J'ai trouvé une "facture"
+        </xsl:when>
+        <xsl:otherwise>
+        Je ne connais pas cet élément
+        </xsl:otherwise>
+    </xsl:choose>
    </xsl:template>
 ```
 
@@ -55,18 +55,18 @@ On peut aussi combiner plusieurs tests avec les opérateurs logiques
 ```xml
 <xsl:template match="*">
    <xsl:choose>
-   <xsl:when test="name(.)='montant' or name(.)='facture'">
-   Il y a une balise "montant" ou une
-   balise "facture"
-   </xsl:when>
-   <xsl:when test="not(name(.)='argent')">
-   Ce n'est ni montant, ni facture, ni argent.
-   </xsl:when>
-   <xsl:otherwise>
-   Je ne connais pas cet élément.
-   </xsl:otherwise>
+    <xsl:when test="name(.)='montant' or name(.)='facture'">
+    Il y a une balise "montant" ou une
+    balise "facture"
+    </xsl:when>
+    <xsl:when test="not(name(.)='argent')">
+    Ce n'est ni montant, ni facture, ni argent.
+    </xsl:when>
+    <xsl:otherwise>
+    Je ne connais pas cet élément.
+    </xsl:otherwise>
    </xsl:choose>
-   </xsl:template>
+</xsl:template>
 ```
 
 On peut aussi tester la langue d'un élément avec la fonction
