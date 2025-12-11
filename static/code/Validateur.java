@@ -1,4 +1,4 @@
-import org.xml.sax.SAXException;
+import org.xml.sax.*;
 import javax.xml.parsers.*;
 import java.io.IOException;
 
