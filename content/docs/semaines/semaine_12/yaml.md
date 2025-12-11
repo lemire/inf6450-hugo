@@ -239,7 +239,7 @@ hobbies:
       status.textContent = '';
       jsonOutput.textContent = '';
       if (text.trim() === '') {
-        jsonOutput.textContent = '// Entrez du YAML à gauche';
+        jsonOutput.textContent = '// Entrez du YAML en haut';
         return;
       }
       try {

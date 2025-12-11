@@ -230,6 +230,7 @@ avec l'élément xsl:key et sa
    la fréquence
    de chaque client comme à la question précédente, mais en utilisant un
    tableau associatif :
+
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1"?>
    <xsl:stylesheet version="1.0"

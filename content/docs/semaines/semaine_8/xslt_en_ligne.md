@@ -104,3 +104,14 @@ document.getElementById('sol').textContent='Cliquez sur « Transformer ».';
 document.getElementById('error').style.display='none';
 }
 </script>
+
+
+
+
+
+## Demonstration Java
+
+
+Vous pouvez transformer le fichier XML en ligne en utilisant java, en appuyant sur le bouton *exécuter*.
+
+{{< javaMultiRunner files="Validateur.java;fichieravalider.xml;monfichier.dtd" >}}
