@@ -16,35 +16,35 @@ Pour rendre nos exemples plus concrets, prenez le fichier etu.xml suivant.
 ```xml
 <liste>
     <etudiant>
-    <nom>Laroche</nom>
-    <prenom>Pierre</prenom>
-    <statut>inscrit</statut>
-    <cours>
-    <sigle>INF 6460</sigle>
-    <note>54</note>
-    </cours>
-    <cours>
-    <sigle>INF 6450</sigle>
-    <note>44</note>
-    </cours>
+        <nom>Laroche</nom>
+        <prenom>Pierre</prenom>
+        <statut>inscrit</statut>
+        <cours>
+        <sigle>INF 6460</sigle>
+        <note>54</note>
+        </cours>
+        <cours>
+        <sigle>INF 6450</sigle>
+        <note>44</note>
+        </cours>
     </etudiant>
     <etudiant>
-    <nom>Aaron</nom>
-    <prenom>Jean</prenom>
-    <statut>inscrit</statut>
-    <cours>
-    <sigle>INF 6460</sigle>
-    <note>56</note>
-    </cours>
-    <cours>
-    <sigle>INF 6450</sigle>
-    <note>46</note>
-    </cours>
+        <nom>Aaron</nom>
+        <prenom>Jean</prenom>
+        <statut>inscrit</statut>
+        <cours>
+        <sigle>INF 6460</sigle>
+        <note>56</note>
+        </cours>
+        <cours>
+        <sigle>INF 6450</sigle>
+        <note>46</note>
+        </cours>
     </etudiant>
     <etudiant>
-    <nom>Pouf</nom>
-    <prenom>Jean</prenom>
-    <statut>non-inscrit</statut>
+        <nom>Pouf</nom>
+        <prenom>Jean</prenom>
+        <statut>non-inscrit</statut>
     </etudiant>
 </liste>
 ```
@@ -72,7 +72,7 @@ Voici un exemple de requête XQuery pour extraire d'un document XML tous les ét
     { $b/prenom }
     { $b/nom }
     </etudiant>}
-    </maliste>
+</maliste>
 ```
 
 Cet exemple est une requête de type FLWOR parce qu'elle ne contient que des instructions « for », « let », « where », « order by », et « return ». L'instruction « for » sert à définir une boucle, l'instruction « where » sert à poser une condition, l'instruction « order by » permet de trier le résultat, alors que l'instruction « return » définit le résultat. L'instruction « let » permet de définir une constante. Notez que XQuery utilise les accolades pour distinguer les requêtes XQuery et XPath du texte. La requête considère tous les éléments etudiant contenus dans l'élément-racine liste, pour chacun d'entre eux, elle vérifie qu'il contient un élément statut contenant le texte « inscrit », puis elle donne la liste des noms et prénoms triée selon le nom. Voici quel sera le résultat :
@@ -122,7 +122,7 @@ Le résultat sera alors :
     <prenom>Jean</prenom>
     <nom>Aaron</nom>
     </etudiant>
-    </maliste>
+</maliste>
 ```
 
 On peut combiner les requêtes FLWOR, comme dans cet exemple :
