@@ -1860,14 +1860,9 @@ weight: 40
  La syntaxe CSS est beaucoup plus riche que ce que nous venons de voir. Pour
     plus d'information, nous vous invitons
     à lire le document de référence
- <a href="http://www.yoyodesign.org/doc/w3c/css2/" shape="rect">
-  http://www.yoyodesign.org/doc/w3c/css2/
- </a>
- ou les articles du site mozilla.org (
  <a href="http://developer.mozilla.org/en/docs/CSS" shape="rect">
   http://developer.mozilla.org/en/docs/CSS
- </a>
- ).
+ </a>.
 </p>
 .
 <h3 class="recall">
