@@ -11,14 +11,52 @@ Bienvenue ! Mon nom est [Daniel Lemire](http://lemire.me/fr/). Je travaille comm
 
 Ce cours porte sur le XML et les concepts associés (CSS, XSLT, HTML, MathML, etc.).
 Le XML vous permet de générer des graphiques de grande qualité (SVG) que vous pouvez inclure au sein de pages web ou de document Word. Le XML vous permet de produire des équations mathématiques. 
-Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comment créez un document Word à partir d'un programme Java. Bref, le cours fait le tour généralement des formats de données et de documents.
+Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comment créez un document Word à partir d'un programme Java en produisant du XML. Vous apprendrez comment récupérer les dernières nouvelles de Radio-Canada avec un programme analysant du XML. Bref, le cours fait le tour généralement des formats de données et de documents.
+À la fin du cours, vous pourrez comprendre, analyser, filtrer et transformer des documents informatiques XML et JSON.
 
-Avant de suivre ce cours, vous devez normalement avoir un suivi au moins un cours de Java ou l'équivalent.
+
+### XML
+
+```xml
+<person>
+  <name>Alice Dupont</name>
+  <age>32</age>
+  <isDeveloper>true</isDeveloper>
+  <address>
+    <street>12 rue des Lilas</street>
+    <city>Paris</city>
+    <country>France</country>
+  </address>
+  <hobbies>
+    <hobby>lecture</hobby>
+    <hobby>escalade</hobby>
+    <hobby>photographie</hobby>
+  </hobbies>
+</person>
+```
+
+
+### JSON
+
+```json
+{
+  "name": "Alice Dupont",
+  "age": 32,
+  "isDeveloper": true,
+  "address": {
+    "street": "12 rue des Lilas",
+    "city": "Paris",
+    "country": "France"
+  },
+  "hobbies": ["lecture", "escalade", "photographie"]
+}
+```
 
 
 
 ## Attention : Java
 
+Avant de suivre ce cours, vous devez normalement avoir un suivi au moins un cours de Java ou l'équivalent.
 Ce cours suppose que vous êtes capable d'utiliser et de compiler un programme Java en ligne de commande. Avant de commencer le cours, créez un fichier intitulé « HelloWorld.java » avec le contenu suivant.
 
 {{<inlineJava path="HelloWorld.java">}}
