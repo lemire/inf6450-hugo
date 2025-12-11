@@ -283,7 +283,8 @@ Les implémentations JavaScript supportent bien l&amp;rsquo;API DOM en général
  &lt;li&gt;
  Chaque fichier Java doit débuter par un commentaire donnant le sigle du
  cours et votre nom comme ceci :
- &lt;pre&gt;/**
+ &lt;pre&gt;
+ /**
  * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
  */&lt;/pre&gt;
  &lt;/li&gt;
