@@ -22,35 +22,35 @@ XSLT peut servir pour extraire des informations d&rsquo;un document XML. On peut
 <a class=anchor href=#xquery>#</a></h1><p>XSLT peut servir pour extraire des informations d&rsquo;un document XML. On peut trouver tous les noms des étudiants répondant à certains critères. Dans un sens, XSLT peut être utilisé comme langage dans le contexte des bases de données. Cependant, pour cette fin spécifique, un nouveau langage appelé XQuery a été proposé. La syntaxe du XQuery est un mélange de XPath et de <a href=http://fr.wikipedia.org/wiki/SQL>SQL</a> et ressemble davantage à ce que les spécialistes des bases de données connaissent bien.</p><p>Pour tester les requêtes XQuery, Saxon est un outil pratique écrit en java. Pour utiliser Saxon,
 suivez d&rsquo;abord les consignes à l&rsquo;adresse <a href=https://github.com/lemire/javasaxon>https://github.com/lemire/javasaxon</a>.</p><p>Pour rendre nos exemples plus concrets, prenez le fichier etu.xml suivant.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;liste&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;etudiant&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;nom&gt;</span>Laroche<span style=color:#0550ae>&lt;/nom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;prenom&gt;</span>Pierre<span style=color:#0550ae>&lt;/prenom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;statut&gt;</span>inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6460<span style=color:#0550ae>&lt;/sigle&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;note&gt;</span>54<span style=color:#0550ae>&lt;/note&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6450<span style=color:#0550ae>&lt;/sigle&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;note&gt;</span>44<span style=color:#0550ae>&lt;/note&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;nom&gt;</span>Laroche<span style=color:#0550ae>&lt;/nom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;prenom&gt;</span>Pierre<span style=color:#0550ae>&lt;/prenom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;statut&gt;</span>inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6460<span style=color:#0550ae>&lt;/sigle&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;note&gt;</span>54<span style=color:#0550ae>&lt;/note&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6450<span style=color:#0550ae>&lt;/sigle&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;note&gt;</span>44<span style=color:#0550ae>&lt;/note&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/cours&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/etudiant&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;etudiant&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;nom&gt;</span>Aaron<span style=color:#0550ae>&lt;/nom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;statut&gt;</span>inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6460<span style=color:#0550ae>&lt;/sigle&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;note&gt;</span>56<span style=color:#0550ae>&lt;/note&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;cours&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6450<span style=color:#0550ae>&lt;/sigle&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;note&gt;</span>46<span style=color:#0550ae>&lt;/note&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;nom&gt;</span>Aaron<span style=color:#0550ae>&lt;/nom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;statut&gt;</span>inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6460<span style=color:#0550ae>&lt;/sigle&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;note&gt;</span>56<span style=color:#0550ae>&lt;/note&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;cours&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;sigle&gt;</span>INF 6450<span style=color:#0550ae>&lt;/sigle&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;note&gt;</span>46<span style=color:#0550ae>&lt;/note&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/cours&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/etudiant&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;etudiant&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;nom&gt;</span>Pouf<span style=color:#0550ae>&lt;/nom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;statut&gt;</span>non-inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;nom&gt;</span>Pouf<span style=color:#0550ae>&lt;/nom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;statut&gt;</span>non-inscrit<span style=color:#0550ae>&lt;/statut&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/etudiant&gt;</span>
 </span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/liste&gt;</span>
 </span></span></code></pre></div><p>Vous pouvez créer un fichier etu.xml sur votre disque dans le même dossier que le fichier query, et remplacer partout l&rsquo;URI par le nom du fichier (tel que « etu.xml »).</p><p>Parce que XQuery, tout comme XSLT 2.0, s&rsquo;appuie sur XPath 2.0, il est facile de calculer la liste des cours :</p><pre tabindex=0><code class=language-xquery data-lang=xquery>for $s in distinct-values(doc(&#34;etu.xml&#34;)//sigle)
@@ -64,7 +64,7 @@ suivez d&rsquo;abord les consignes à l&rsquo;adresse <a href=https://github.com
     { $b/prenom }
     { $b/nom }
     &lt;/etudiant&gt;}
-    &lt;/maliste&gt;
+&lt;/maliste&gt;
 </code></pre><p>Cet exemple est une requête de type FLWOR parce qu&rsquo;elle ne contient que des instructions « for », « let », « where », « order by », et « return ». L&rsquo;instruction « for » sert à définir une boucle, l&rsquo;instruction « where » sert à poser une condition, l&rsquo;instruction « order by » permet de trier le résultat, alors que l&rsquo;instruction « return » définit le résultat. L&rsquo;instruction « let » permet de définir une constante. Notez que XQuery utilise les accolades pour distinguer les requêtes XQuery et XPath du texte. La requête considère tous les éléments etudiant contenus dans l&rsquo;élément-racine liste, pour chacun d&rsquo;entre eux, elle vérifie qu&rsquo;il contient un élément statut contenant le texte « inscrit », puis elle donne la liste des noms et prénoms triée selon le nom. Voici quel sera le résultat :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;maliste&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;etudiant&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
@@ -99,7 +99,7 @@ suivez d&rsquo;abord les consignes à l&rsquo;adresse <a href=https://github.com
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;prenom&gt;</span>Jean<span style=color:#0550ae>&lt;/prenom&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;nom&gt;</span>Aaron<span style=color:#0550ae>&lt;/nom&gt;</span>
 </span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/etudiant&gt;</span>
-</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/maliste&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/maliste&gt;</span>
 </span></span></code></pre></div><p>On peut combiner les requêtes FLWOR, comme dans cet exemple :</p><pre tabindex=0><code class=language-xquery data-lang=xquery>&lt;maliste&gt;
     {for $e in doc(&#34;http://universite.com/etu.xml&#34;)//etudiant
     return
