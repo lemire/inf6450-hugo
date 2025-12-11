@@ -41,9 +41,9 @@ Nous utilisons les tests en XSLT avec les éléments « xsl:choose »
 et « xsl:if ».
 Par exemple, faire quelque chose de particulier, si le nom de l&rsquo;élément
 courant est « montant ».</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;*&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:if</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.) = &#39;montant&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   Il s&#39;agit d&#39;un élément nommé «montant».
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:if&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:if</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.) = &#39;montant&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    Il s&#39;agit d&#39;un élément nommé «montant».
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:if&gt;</span>
 </span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
 </span></span></code></pre></div><p>La syntaxe de l&rsquo;élément « xsl:if » est très simple; si la valeur de
 l&rsquo;expression XPath
@@ -51,33 +51,33 @@ contenue dans l&rsquo;attribut « test » est vraie, le contenu de
 l&rsquo;élément « xsl:if » s&rsquo;applique,
 sinon, on l&rsquo;omet. Notez qu&rsquo;il n&rsquo;y a pas d&rsquo;élément « xsl:else »</p><p>Nous pouvons aussi traiter plusieurs tests dans un seul élément
 « xsl:choose » comme ceci :</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;*&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:choose&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;montant&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   Il y a une balise &#34;montant&#34;
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;facture&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   J&#39;ai trouvé une &#34;facture&#34;
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:otherwise&gt;</span>
-</span></span><span style=display:flex><span>   Je ne connais pas cet élément
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:otherwise&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:choose&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:choose&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;montant&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>        Il y a une balise &#34;montant&#34;
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;facture&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>        J&#39;ai trouvé une &#34;facture&#34;
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;xsl:otherwise&gt;</span>
+</span></span><span style=display:flex><span>        Je ne connais pas cet élément
+</span></span><span style=display:flex><span>        <span style=color:#0550ae>&lt;/xsl:otherwise&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:choose&gt;</span>
 </span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
 </span></span></code></pre></div><p>On peut aussi combiner plusieurs tests avec les opérateurs logiques
 and, or et not comme le montre le prochain exemple.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#0550ae>&lt;xsl:template</span> <span style=color:#1f2328>match=</span><span style=color:#0a3069>&#34;*&#34;</span><span style=color:#0550ae>&gt;</span>
 </span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:choose&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;montant&#39; or name(.)=&#39;facture&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   Il y a une balise &#34;montant&#34; ou une
-</span></span><span style=display:flex><span>   balise &#34;facture&#34;
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;not(name(.)=&#39;argent&#39;)&#34;</span><span style=color:#0550ae>&gt;</span>
-</span></span><span style=display:flex><span>   Ce n&#39;est ni montant, ni facture, ni argent.
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;xsl:otherwise&gt;</span>
-</span></span><span style=display:flex><span>   Je ne connais pas cet élément.
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:otherwise&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;name(.)=&#39;montant&#39; or name(.)=&#39;facture&#39;&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    Il y a une balise &#34;montant&#34; ou une
+</span></span><span style=display:flex><span>    balise &#34;facture&#34;
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:when</span> <span style=color:#1f2328>test=</span><span style=color:#0a3069>&#34;not(name(.)=&#39;argent&#39;)&#34;</span><span style=color:#0550ae>&gt;</span>
+</span></span><span style=display:flex><span>    Ce n&#39;est ni montant, ni facture, ni argent.
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:when&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;xsl:otherwise&gt;</span>
+</span></span><span style=display:flex><span>    Je ne connais pas cet élément.
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&lt;/xsl:otherwise&gt;</span>
 </span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:choose&gt;</span>
-</span></span><span style=display:flex><span>   <span style=color:#0550ae>&lt;/xsl:template&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>&lt;/xsl:template&gt;</span>
 </span></span></code></pre></div><p>On peut aussi tester la langue d&rsquo;un élément avec la fonction
 XPath « lang ». L&rsquo;expression « count(//p[lang(&rsquo;en&rsquo;)]) »
 compte le nombre d&rsquo;élément « p » ayant été déclaré comme contenant
