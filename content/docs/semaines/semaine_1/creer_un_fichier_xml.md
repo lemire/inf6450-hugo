@@ -122,49 +122,6 @@ recopiez ce code dans un fichier nommé
  </code>
  , ouvrez-le avec votre navigateur → vous devez voir « Bonjour le monde ! » s’afficher.
 </p>
-<h2>
- Assistance par intelligence artificielle (facultatif)
-</h2>
-<p>
- Pour bénéficier d’une aide intelligente pendant que vous écrivez du XML/HTML/JavaScript, vous pouvez installer
- <strong>
-  GitHub Copilot
- </strong>
- dans Visual Studio Code :
-</p>
-<ol>
- <li>
-  Créez un compte sur
-  <a href="https://github.com">
-   github.com
-  </a>
- </li>
- <li>
-  Téléchargez et installez
-  <a href="https://code.visualstudio.com">
-   Visual Studio Code
-  </a>
- </li>
- <li>
-  Ouvrez VS Code → cliquez sur l’icône Extensions (carré divisé en 4) dans la barre latérale
- </li>
- <li>
-  Cherchez « GitHub Copilot » → installez l’extension officielle
- </li>
- <li>
-  Connectez-vous avec votre compte GitHub quand on vous le demande
- </li>
- <li>
-  Copilot est prêt ! Il vous suggérera du code en temps réel (acceptez avec
-  <kbd>
-   Tab
-  </kbd>
-  )
- </li>
-</ol>
-<p>
- Note : GitHub Copilot est gratuit pendant une période d’essai, puis nécessite un abonnement payant.
-</p>
 <p>
  Vous savez maintenant créer, enregistrer et visualiser des fichiers XML.  
 C’est la première étape essentielle avant de passer à des structures plus complexes !
