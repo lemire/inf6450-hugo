@@ -279,7 +279,7 @@ jq '[ .bibliotheque.livres[] | {id, titre, auteur, disponible: .empruntable}]' b
 cat access.log | jq 'select(.status == 404) | .ip + " " + .url'
 ```
 
-### 5. Mini-projet
+### Mini-projet
 
 À partir de `bibliotheque.json`, produisez un fichier `rapport.md` en Markdown contenant :
 
