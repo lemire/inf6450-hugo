@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorateur de code Java</title>
+
+  <!-- Prism.js CSS (Default light theme for better Word compatibility) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+
+  <!-- Prism.js Core + Java plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: system-ui, sans-serif; margin: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; background: #f5f5f5; color: #333;">
+
+<div style="display: flex; flex-direction: column;">
+  <div style="padding: 12px 20px; background: #007acc; color: white; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;">Écrivez ou collez du code Java ici</div>
+  <textarea id="input" spellcheck="false" autofocus style="resize: none; font-family: 'Fira Code', 'Consolas', monospace; font-size: 15px; padding: 20px; border: none; outline: none; background: #ffffff; color: #000000; line-height: 1.5; height: 10cm;">// Exemple: Hello World
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+        
+        // Essayez de taper quelque chose ci-dessous...
+        String name = "Java";
+        int version = 21;
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("Count: %d%n", i);
+        }
+    }
+}</textarea>
+</div>
+
+<div style="display: flex; flex-direction: column; flex: 1;">
+  <div style="padding: 12px 20px; background: #007acc; color: white; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; align-items: center;">
+    Résultat formaté
+    <button style="background: #005a9e; color: white; border: none; padding: 5px 10px; cursor: pointer; font-size: 12px; border-radius: 3px;" id="copyBtn">Copier vers Word</button>
+  </div>
+  <pre style="margin: 0; padding: 20px; overflow: auto; background: #ffffff; height: 15cm;"><code class="language-java" id="highlighted" style="height: 100%;"></code></pre>
+</div>
+
+<script>
+  const input = document.getElementById('input');
+  const highlighted = document.getElementById('highlighted');
+
+  function update() {
+    // Escape HTML to prevent XSS when pasting malicious code
+    const escaped = input.value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+    highlighted.textContent = escaped || ' '; // Prism needs at least one character
+    Prism.highlightElement(highlighted);
+  }
+
+  // Initial highlight
+  update();
+
+  // Live update as you type
+  input.addEventListener('input', update);
+  input.addEventListener('scroll', () => {
+    document.querySelector('pre').scrollTop = input.scrollTop;
+  });
+
+  // Copy to clipboard by selecting the formatted text
+  document.getElementById('copyBtn').addEventListener('click', () => {
+    const highlighted = document.getElementById('highlighted');
+    
+    // Select the text
+    const range = document.createRange();
+    range.selectNodeContents(highlighted);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    
+    // Copy to clipboard
+    try {
+      document.execCommand('copy');
+      alert('Texte sélectionné et copié dans le presse-papiers ! Vous pouvez maintenant coller dans Word.');
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+      alert('Échec de la copie. Veuillez sélectionner le texte manuellement et le copier.');
+    }
+  });
+</script>
+
+</body>
+</html>

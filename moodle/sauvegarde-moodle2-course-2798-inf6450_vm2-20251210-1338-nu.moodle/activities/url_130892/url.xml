@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="6341" moduleid="130892" modulename="url" contextid="970001">
+  <url id="6341">
+    <name>Présentation de la semaine</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <externalurl>$@COURSEVIEWBYID*2798@$</externalurl>
+    <display>0</display>
+    <displayoptions>a:1:{s:10:"printintro";i:1;}</displayoptions>
+    <parameters>a:0:{}</parameters>
+    <timemodified>1708465086</timemodified>
+  </url>
+</activity>

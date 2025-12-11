@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72296" moduleid="131144" modulename="page" contextid="970271">
+  <page id="72296">
+    <name>Évaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Évaluation&lt;/h1&gt;
+&lt;p&gt;Pour évaluer vos apprentissages dans ce cours, nous avons préparé 5 travaux
+    notés et un examen. Le tableau qui suit les présente sommairement.&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table class="table spip"&gt;
+        &lt;tbody&gt;
+            &lt;tr class="row_odd odd"&gt;
+                &lt;td&gt;Activités notées&lt;/td&gt;
+                &lt;td&gt;Pondération&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_even even"&gt;
+                &lt;td&gt;Travail noté 1 (les fondements du XML)&lt;/td&gt;
+                &lt;td&gt;10&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_odd odd"&gt;
+                &lt;td&gt;Travail noté 2 (les documents)&lt;/td&gt;
+                &lt;td&gt;10&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_even even"&gt;
+                &lt;td&gt;Travail noté 3 (CSS, XPath et XSLT)&lt;/td&gt;
+                &lt;td&gt;15&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_odd odd"&gt;
+                &lt;td&gt;Travail noté 4 (Java)&lt;/td&gt;
+                &lt;td&gt;15&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_even even"&gt;
+                &lt;td&gt;Travail noté 5 (RDF)&lt;/td&gt;
+                &lt;td&gt;10&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_odd odd"&gt;
+                &lt;td&gt;Examen&lt;/td&gt;
+                &lt;td&gt;40&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="row_even even"&gt;
+                &lt;td&gt;Total&lt;/td&gt;
+                &lt;td&gt;100&amp;nbsp;%&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;En suivant le cours, semaine par semaine, vous serez invité à effectuer les
+    travaux en temps venu.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741902177</timemodified>
+  </page>
+</activity>

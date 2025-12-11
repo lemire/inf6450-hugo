@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72215" moduleid="131063" modulename="page" contextid="970184">
+  <page id="72215">
+    <name>XSLT 2.0 et 3.0</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;XSLT 2.0 et 3.0&lt;/h1&gt;
+&lt;p&gt;Nous nous sommes concentrés sur la version 1.0 du XSLT car elle est la plus répandue et la mieux supportée.&lt;/p&gt;
+
+&lt;p&gt;Une nouvelle version du XSLT est disponible, nommée XSLT 2.0. Elle ajoute
+notamment la possibilité de générer plusieurs documents plutôt qu'un seul
+avec l'instruction xslt:result-document. On peut aussi traiter
+non seulement des fichiers XML, mais aussi d'autres types de fichiers
+dont les fichiers CSV (comma-separated values) générés par les
+chiffriers électroniques et bases de données. L'instruction «&amp;nbsp;xsl:analyze-string&amp;nbsp;» 
+permet de prendre appui sur les nouvelles possibilités du traitement des chaînes
+de caractères de XPath&amp;nbsp;2.0. L'instruction «&amp;nbsp;xsl:function&amp;nbsp;» permet quant à
+elle de définir de nouvelles fonctions qui pourront être utilisées au sein des
+expressions XPath. L'instruction «&amp;nbsp;xsl:for-each-group&amp;nbsp;» permet 
+ de visiter les nœuds par groupes&amp;nbsp;: on peut ainsi visiter
+tous les éléments etudiant en les regroupant selon la valeur de leur attribut nom.&lt;/p&gt;
+&lt;p&gt;Elliotte Rusty Harold a publié  une  &lt;a href="http://www.cafeconleche.org/slides/sd2002west/xslt2/XSLT_2.0_and_Beyond.html" shape="rect"&gt;page sur XSLT 2.0&lt;/a&gt; qui présente quelques exemples.&lt;/p&gt;
+
+&lt;p&gt;La version 3.0 du XSLT permet de traiter de grands volumes de données en évitant le chargement en mémoire de la totalité des documents. À cette fin, elle introduit des instructions comme xsl:iterate et xsl:stream.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741895321</timemodified>
+  </page>
+</activity>

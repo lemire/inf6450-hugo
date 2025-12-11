@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="90844" moduleid="164629" modulename="page" contextid="1092580">
+  <page id="90844">
+    <name>MathML</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;MathML&lt;/h1&gt;
+&lt;style&gt;
+td {padding:0.1em;}
+&lt;/style&gt;
+
+&lt;div&gt;
+    &lt;p&gt;Le Mathematical Markup Language (MathML) est un langage basé sur XML conçu pour représenter et afficher des expressions mathématiques de manière structurée sur le web. Contrairement aux images statiques ou aux approximations textuelles, MathML permet de décrire la sémantique et la présentation des formules mathématiques, offrant une accessibilité accrue et une intégration dynamique avec HTML. Il est particulièrement utilisé dans les contextes éducatifs, scientifiques et techniques pour rendre des équations complexes de façon précise et adaptable.&lt;/p&gt;
+    &lt;p&gt;MathML gagne en popularité pour afficher des formules mathématiques dans des documents web ou des logiciels spécialisés. Vous pouvez intégrer des éléments MathML directement dans un document HTML, comme nous allons le voir.&lt;/p&gt;
+    &lt;p&gt;La syntaxe MathML repose sur deux approches principales : la présentation (pour l’affichage visuel) et le contenu (pour la sémantique). Les éléments de présentation, comme mrow, mfrac, msup ou msqrt, organisent visuellement les expressions, tandis que les éléments de contenu, comme apply ou plus, décrivent leur structure logique. Les formules sont construites à partir d’éléments comme mi (identifiants), mn (nombres) et mo (opérateurs), placés dans une balise math. Les attributs comme display (block ou inline) contrôlent le rendu, et les styles CSS peuvent personnaliser l’apparence. MathML utilise un modèle arborescent où chaque élément imbriqué définit une partie de l’expression, garantissant une grande précision pour des formules complexes.&lt;/p&gt;
+    &lt;p&gt;Les attributs en MathML jouent un rôle essentiel pour ajuster l’apparence et le comportement des expressions. Par exemple, l’attribut mathvariant permet de définir le style des identifiants (par exemple, italic pour les variables). Les attributs comme numalign ou denomalign dans mfrac contrôlent l’alignement des fractions. Pour les exposants ou indices (msup, msub), l’attribut scriptlevel ajuste la taille du texte. Les éléments de présentation comme mtable permettent de créer des matrices avec des attributs comme rowspacing ou columnalign pour l’espacement et l’alignement. Enfin, l’attribut id facilite l’interaction avec CSS ou JavaScript, et xmlns garantit la compatibilité XML. Ces attributs offrent une flexibilité pour un rendu précis et accessible.&lt;/p&gt;
+
+
+&lt;h2&gt;Principales balises de présentation MathML&lt;/h2&gt;
+
+&lt;p&gt;Voici une description détaillée des balises les plus couramment utilisées en MathML de présentation (MathML-Presentation). Toutes ces balises doivent être placées à l’intérieur de l’élément racine &lt;code&gt;&amp;lt;math&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;table border="1" style="border-collapse: collapse; width: 100%; margin: 20px 10px;"&gt;
+    &lt;thead&gt;
+        &lt;tr style="background-color: #f0f0f0;"&gt;
+            &lt;th&gt;Balise&lt;/th&gt;
+            &lt;th&gt;Description&lt;/th&gt;
+            &lt;th&gt;Exemple d’utilisation&lt;/th&gt;
+            &lt;th&gt;Rendu approximatif&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;math&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Élément racine obligatoire de toute expression MathML. L’attribut &lt;code&gt;display="block"&lt;/code&gt; ou &lt;code&gt;"inline"&lt;/code&gt; contrôle le mode d’affichage.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;math display="block"&amp;gt;…&amp;lt;/math&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;—&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mi&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Identifiant (variable, constante, fonction). Par défaut en italique.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&lt;/code&gt; ou &lt;code&gt;&amp;lt;mi mathvariant="normal"&amp;gt;sin&amp;lt;/mi&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x, sin&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mn&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Nombre.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mn&amp;gt;123.45&amp;lt;/mn&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;123.45&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mo&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Opérateur, symbole ou séparateur (+, −, ×, =, (, etc.). L’espacement est géré automatiquement.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mo&amp;gt;+&amp;lt;/mo&amp;gt;&lt;/code&gt; ou &lt;code&gt;&amp;lt;mo fence="true"&amp;gt;(&amp;lt;/mo&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;+ , (&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mtext&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Texte brut (non mathématique), utile pour les unités ou commentaires.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mtext&amp;gt;kg&amp;lt;/mtext&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;kg&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mrow&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Groupe horizontal d’éléments. Sert à structurer l’arbre sans effet visuel particulier.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mrow&amp;gt;&amp;lt;mi&amp;gt;a&amp;lt;/mi&amp;gt;&amp;lt;mo&amp;gt;+&amp;lt;/mo&amp;gt;&amp;lt;mi&amp;gt;b&amp;lt;/mi&amp;gt;&amp;lt;/mrow&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;a + b&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mfrac&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Fraction. Attributs utiles : &lt;code&gt;bevelled="true"&lt;/code&gt;, &lt;code&gt;numalign&lt;/code&gt;, &lt;code&gt;denomalign&lt;/code&gt;.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mfrac&amp;gt;&amp;lt;mi&amp;gt;a&amp;lt;/mi&amp;gt;&amp;lt;mi&amp;gt;b&amp;lt;/mi&amp;gt;&amp;lt;/mfrac&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;a/b&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msqrt&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Racine carrée.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msqrt&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;/msqrt&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;√x&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mroot&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Racine n-ième (indice en premier enfant).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mroot&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mn&amp;gt;3&amp;lt;/mn&amp;gt;&amp;lt;/mroot&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;³√x&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msup&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Exposant.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msup&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mn&amp;gt;2&amp;lt;/mn&amp;gt;&amp;lt;/msup&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x²&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msub&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Indice.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msub&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mn&amp;gt;1&amp;lt;/mn&amp;gt;&amp;lt;/msub&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x₁&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msubsup&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Indice et exposant simultanés.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;msubsup&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mn&amp;gt;1&amp;lt;/mn&amp;gt;&amp;lt;mn&amp;gt;2&amp;lt;/mn&amp;gt;&amp;lt;/msubsup&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x₁²&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;munder&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Élément placé sous le premier enfant (ex. limite).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;munder&amp;gt;&amp;lt;mi&amp;gt;lim&amp;lt;/mi&amp;gt;&amp;lt;mrow&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mo&amp;gt;→&amp;lt;/mo&amp;gt;&amp;lt;mn&amp;gt;0&amp;lt;/mn&amp;gt;&amp;lt;/mrow&amp;gt;&amp;lt;/munder&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;lim sous x→0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mover&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Élément placé au-dessus (ex. barre, vecteur).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mover&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;mo&amp;gt;→&amp;lt;/mo&amp;gt;&amp;lt;/mover&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x avec flèche au-dessus&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;munderover&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Sous et au-dessus (ex. somme, intégrale).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;munderover&amp;gt;&amp;lt;mo&amp;gt;∑&amp;lt;/mo&amp;gt;&amp;lt;mrow&amp;gt;&amp;lt;mi&amp;gt;i&amp;lt;/mi&amp;gt;&amp;lt;mo&amp;gt;=&amp;lt;/mo&amp;gt;&amp;lt;mn&amp;gt;1&amp;lt;/mn&amp;gt;&amp;lt;/mrow&amp;gt;&amp;lt;mi&amp;gt;n&amp;lt;/mi&amp;gt;&amp;lt;/munderover&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;∑ avec i=1 en bas et n en haut&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mtable&amp;gt;, &amp;lt;mtr&amp;gt;, &amp;lt;mtd&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Tableau ou matrice. Fonctionne comme un tableau HTML.&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mtable&amp;gt;&amp;lt;mtr&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;mn&amp;gt;1&amp;lt;/mn&amp;gt;&amp;lt;/mtd&amp;gt;&amp;lt;mtd&amp;gt;&amp;lt;/mtr&amp;gt;&amp;lt;/mtable&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Matrice&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mspace&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Espace vide personnalisé (attributs width, height, depth).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;mspace width="1em"/&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;—&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;menclose&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;Encadre ou décore une expression (longdiv, circle, box, etc.).&lt;/td&gt;
+            &lt;td&gt;&lt;code&gt;&amp;lt;menclose notation="box"&amp;gt;&amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;&amp;lt;/menclose&amp;gt;&lt;/code&gt;&lt;/td&gt;
+            &lt;td&gt;x encadré&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Cette liste couvre environ 90 % des besoins courants en MathML de présentation. Pour des cas plus avancés (opérateurs extensibles, annotations sémantiques, MathML-Content), il existe de nombreuses autres balises, mais celles-ci constituent la base indispensable pour commencer à écrire des formules complexes directement dans une page web.&lt;/p&gt;
+
+
+&lt;h2&gt;Laboratoire en ligne&lt;/h2&gt;
+
+
+    &lt;p&gt;Je vous invite à éditer le code MathML dans la boîte suivante pour observer le résultat.&lt;/p&gt;
+
+    &lt;h2&gt;Code MathML&lt;/h2&gt;
+    &lt;textarea id="mathmlCode" style="width:100%; height:400px"&gt;&amp;lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&amp;gt;
+    &amp;lt;mrow&amp;gt;
+        &amp;lt;mi&amp;gt;x&amp;lt;/mi&amp;gt;
+        &amp;lt;mo&amp;gt;=&amp;lt;/mo&amp;gt;
+        &amp;lt;mfrac&amp;gt;
+            &amp;lt;mrow&amp;gt;
+                &amp;lt;mo&amp;gt;-&amp;lt;/mo&amp;gt;
+                &amp;lt;mi&amp;gt;b&amp;lt;/mi&amp;gt;
+                &amp;lt;mo&amp;gt;±&amp;lt;/mo&amp;gt;
+                &amp;lt;msqrt&amp;gt;
+                    &amp;lt;msup&amp;gt;&amp;lt;mi&amp;gt;b&amp;lt;/mi&amp;gt;&amp;lt;mn&amp;gt;2&amp;lt;/mn&amp;gt;&amp;lt;/msup&amp;gt;
+                    &amp;lt;mo&amp;gt;-&amp;lt;/mo&amp;gt;
+                    &amp;lt;mn&amp;gt;4&amp;lt;/mn&amp;gt;
+                    &amp;lt;mi&amp;gt;a&amp;lt;/mi&amp;gt;
+                    &amp;lt;mi&amp;gt;c&amp;lt;/mi&amp;gt;
+                &amp;lt;/msqrt&amp;gt;
+            &amp;lt;/mrow&amp;gt;
+            &amp;lt;mrow&amp;gt;
+                &amp;lt;mn&amp;gt;2&amp;lt;/mn&amp;gt;
+                &amp;lt;mi&amp;gt;a&amp;lt;/mi&amp;gt;
+            &amp;lt;/mrow&amp;gt;
+        &amp;lt;/mfrac&amp;gt;
+    &amp;lt;/mrow&amp;gt;
+&amp;lt;/math&amp;gt;
+        &lt;/textarea&gt;
+&lt;/div&gt;
+
+&lt;div class="render-container"&gt;
+    &lt;h2&gt;Rendu MathML&lt;/h2&gt;
+    &lt;div id="mathmlRender"&gt;
+        &lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;
+            &lt;mrow&gt;
+                &lt;mi&gt;x&lt;/mi&gt;
+                &lt;mo&gt;=&lt;/mo&gt;
+                &lt;mfrac&gt;
+                    &lt;mrow&gt;
+                        &lt;mo&gt;-&lt;/mo&gt;
+                        &lt;mi&gt;b&lt;/mi&gt;
+                        &lt;mo&gt;±&lt;/mo&gt;
+                        &lt;msqrt&gt;
+                            &lt;msup&gt;
+                                &lt;mi&gt;b&lt;/mi&gt;
+                                &lt;mn&gt;2&lt;/mn&gt;
+                            &lt;/msup&gt;
+                            &lt;mo&gt;-&lt;/mo&gt;
+                            &lt;mn&gt;4&lt;/mn&gt;
+                            &lt;mi&gt;a&lt;/mi&gt;
+                            &lt;mi&gt;c&lt;/mi&gt;
+                        &lt;/msqrt&gt;
+                    &lt;/mrow&gt;
+                    &lt;mrow&gt;
+                        &lt;mn&gt;2&lt;/mn&gt;
+                        &lt;mi&gt;a&lt;/mi&gt;
+                    &lt;/mrow&gt;
+                &lt;/mfrac&gt;
+            &lt;/mrow&gt;
+        &lt;/math&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    const textarea = document.getElementById('mathmlCode');
+    const renderDiv = document.getElementById('mathmlRender');
+
+    textarea.addEventListener('input', () =&gt; {
+        try {
+            renderDiv.innerHTML = textarea.value;
+        } catch (error) {
+            console.error('Erreur MathML:', error);
+        }
+    });
+&lt;/script&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>6</revision>
+    <timemodified>1764359510</timemodified>
+  </page>
+</activity>

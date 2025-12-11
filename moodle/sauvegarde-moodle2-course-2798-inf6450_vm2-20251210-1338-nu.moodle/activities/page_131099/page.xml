@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72251" moduleid="131099" modulename="page" contextid="970220">
+  <page id="72251">
+    <name>Problèmes résolus</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Problèmes résolus&lt;/h1&gt;
+&lt;h2&gt;Deux problèmes avec solution&lt;/h2&gt;
+&lt;p&gt;Pour vous aider à maîtriser le modèle DOM, nous vous proposons deux problèmes
+    et une solution possible pour chacun.&lt;/p&gt;
+&lt;h3&gt;Problème 1&lt;/h3&gt;
+&lt;p&gt;Créez une classe «&amp;nbsp;Arbre&amp;nbsp;» (fichier «&amp;nbsp;Arbre.java&amp;nbsp;») qui
+    donne
+    l'arbre DOM d'un document XML. Pour chaque nœud, donnez son nom et sa valeur
+    (indices&amp;nbsp;: «&amp;nbsp;getNodeName&amp;nbsp;», «&amp;nbsp;get NodeValue&amp;nbsp;»).
+    Enfin, indentez les nœuds
+    selon le nombre de parents qu'ils ont.&lt;/p&gt;
+&lt;p&gt;Ainsi, étant donné le fichier «&amp;nbsp;test.xml&amp;nbsp;» suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;joueur&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt; &lt;span style="color:#274796; "&gt;surnom&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;jojo&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;buts&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;32&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;buts&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;joueur&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;La commande «&amp;nbsp;java Arbre test.xml&amp;nbsp;» devrait afficher à l'écran le
+    résultat
+    suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt; Nom: #document Valeur: null
+    Nom: joueur Valeur: null
+    Nom: nom Valeur: null
+    Nom: #text Valeur: Jean
+    Nom: buts Valeur: null
+    Nom: #text Valeur: 32
+&lt;/pre&gt;
+&lt;h3&gt;Problème 2&lt;/h3&gt;
+&lt;p&gt;Nous pouvons utiliser un fichier XML comme archive d'une base de données
+    primitive.
+    Cette fois-ci, nous vous demandons d'écrire un programme qui permet de
+    chercher,
+    d'effacer et d'ajouter des noms dans un bottin téléphonique.&lt;/p&gt;
+&lt;p&gt;Stockez les numéros dans un fichier XML nommé «&amp;nbsp;bottin.xml&amp;nbsp;» et
+    ayant le contenu qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;bottin&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt; &lt;span style="color:#274796; "&gt;nom&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Jean
+        Réjean&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;téléphone&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;432-4421&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt; &lt;span style="color:#274796; "&gt;nom&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Jules
+        Desche&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;téléphone&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;432-4332&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;bottin&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Concevez un programme dont le code source sera contenu dans un fichier nommé
+    «&amp;nbsp;Bottin.java&amp;nbsp;».
+    Votre programme doit posséder les trois fonctions suivantes&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;«&amp;nbsp;java Bottin efface "Jean Réjean"&amp;nbsp;»&amp;nbsp;: élimine du fichier
+        «&amp;nbsp;bottin.xml&amp;nbsp;»
+        tout élément «&amp;nbsp;personne&amp;nbsp;» ayant comme attribut
+        «&amp;nbsp;nom="Jean Réjean"&amp;nbsp;».&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;java Bottin cherche "Jean Réjean"&amp;nbsp;»&amp;nbsp;: donne le numéro
+        de téléphone correspondant
+        au nom donné à partir du contenu du fichier «&amp;nbsp;bottin.xml&amp;nbsp;», et
+        ne retourne rien si le nom donné n'est pas trouvé.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;java Bottin ajoute "Jean Réjean" 432-4421&amp;nbsp;»&amp;nbsp;: fait en
+        sorte que le nom «&amp;nbsp;Jean Réjean&amp;nbsp;»
+        soit associé au seul numéro de téléphone «&amp;nbsp;432-4421&amp;nbsp;».&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vous pouvez supposer que le fichier «&amp;nbsp;bottin.xml&amp;nbsp;» existe et se
+    trouve dans le même répertoire
+    que le fichier «&amp;nbsp;Bottin.java&amp;nbsp;». Vous pouvez également supposer que
+    l'élément-racine est «&amp;nbsp;bottin&amp;nbsp;».&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741900846</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72254" moduleid="131102" modulename="page" contextid="970223">
+  <page id="72254">
+    <name>Solutions aux problèmes résolus</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Solutions aux problèmes résolus&lt;/h1&gt;
+
+&lt;h2&gt;Solution du problème 1&lt;/h2&gt;
+&lt;p&gt;Voici une solution possible (affichage récursif de l’arbre DOM avec indentation) :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Arbre&lt;/span&gt; {
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;traite&lt;/span&gt;(Node node, &lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; niveau) {
+        String indent = &lt;span style="color:#98c379;"&gt;""&lt;/span&gt;;
+        &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; niveau; i++) indent += &lt;span style="color:#98c379;"&gt;"  "&lt;/span&gt;;
+
+        System.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(indent + &lt;span style="color:#98c379;"&gt;"Nom : "&lt;/span&gt; + node.&lt;span style="color:#61afef;"&gt;getNodeName&lt;/span&gt;() +
+                                   &lt;span style="color:#98c379;"&gt;" | Valeur : "&lt;/span&gt; + node.&lt;span style="color:#61afef;"&gt;getNodeValue&lt;/span&gt;());
+
+        NodeList enfants = node.&lt;span style="color:#61afef;"&gt;getChildNodes&lt;/span&gt;();
+        &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (enfants != &lt;span style="color:#c678dd;"&gt;null&lt;/span&gt;) {
+            &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; enfants.&lt;span style="color:#61afef;"&gt;getLength&lt;/span&gt;(); i++) {
+                traite(enfants.&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(i), niveau + &lt;span style="color:#d19a66;"&gt;2&lt;/span&gt;);
+            }
+        }
+    }
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;]);
+
+        traite(doc, &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;);
+    }
+}&lt;/pre&gt;
+
+&lt;h3&gt;Solution du problème 2&lt;/h3&gt;
+&lt;p&gt;Gestion d’un bottin téléphonique XML (recherche, ajout, suppression) :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.dom.DOMSource;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.stream.StreamResult;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Bottin&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        factory.&lt;span style="color:#61afef;"&gt;setNamespaceAware&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;true&lt;/span&gt;);
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"bottin.xml"&lt;/span&gt;);
+        Element racine = doc.&lt;span style="color:#61afef;"&gt;getDocumentElement&lt;/span&gt;();
+        NodeList personnes = racine.&lt;span style="color:#61afef;"&gt;getChildNodes&lt;/span&gt;();
+
+        &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;].&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"efface"&lt;/span&gt;)) {
+            &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; personnes.&lt;span style="color:#61afef;"&gt;getLength&lt;/span&gt;(); i++) {
+                Node n = personnes.&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(i);
+                &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (n.&lt;span style="color:#61afef;"&gt;getNodeType&lt;/span&gt;() == Node.ELEMENT_NODE) {
+                    Element e = (Element) n;
+                    &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (e.&lt;span style="color:#61afef;"&gt;getAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;).&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;1&lt;/span&gt;])) {
+                        e.&lt;span style="color:#61afef;"&gt;getParentNode&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;removeChild&lt;/span&gt;(e);
+                    }
+                }
+            }
+        }
+        &lt;span style="color:#c678dd;"&gt;else&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;].&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"cherche"&lt;/span&gt;)) {
+            &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; personnes.&lt;span style="color:#61afef;"&gt;getLength&lt;/span&gt;(); i++) {
+                Node n = personnes.&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(i);
+                &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (n.&lt;span style="color:#61afef;"&gt;getNodeType&lt;/span&gt;() == Node.ELEMENT_NODE) {
+                    Element e = (Element) n;
+                    &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (e.&lt;span style="color:#61afef;"&gt;getAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;).&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;1&lt;/span&gt;])) {
+                        System.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(e.&lt;span style="color:#61afef;"&gt;getAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"téléphone"&lt;/span&gt;));
+                    }
+                }
+            }
+        }
+        &lt;span style="color:#c678dd;"&gt;else&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;].&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"ajoute"&lt;/span&gt;)) {
+            &lt;span style="color:#e06c75;"&gt;boolean&lt;/span&gt; existe = &lt;span style="color:#c678dd;"&gt;false&lt;/span&gt;;
+            &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; personnes.&lt;span style="color:#61afef;"&gt;getLength&lt;/span&gt;(); i++) {
+                Node n = personnes.&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(i);
+                &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (n.&lt;span style="color:#61afef;"&gt;getNodeType&lt;/span&gt;() == Node.ELEMENT_NODE) {
+                    Element e = (Element) n;
+                    &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (e.&lt;span style="color:#61afef;"&gt;getAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;).&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;1&lt;/span&gt;])) {
+                        e.&lt;span style="color:#61afef;"&gt;setAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"téléphone"&lt;/span&gt;, args[&lt;span style="color:#d19a66;"&gt;2&lt;/span&gt;]);
+                        existe = &lt;span style="color:#c678dd;"&gt;true&lt;/span&gt;;
+                    }
+                }
+            }
+            &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (!existe) {
+                Element p = doc.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"personne"&lt;/span&gt;);
+                p.&lt;span style="color:#61afef;"&gt;setAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;, args[&lt;span style="color:#d19a66;"&gt;1&lt;/span&gt;]);
+                p.&lt;span style="color:#61afef;"&gt;setAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"téléphone"&lt;/span&gt;, args[&lt;span style="color:#d19a66;"&gt;2&lt;/span&gt;]);
+                racine.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(p);
+            }
+        }
+
+        &lt;span style="color:#5c6370;"&gt;// Sauvegarde du fichier modifié&lt;/span&gt;
+        TransformerFactory tf = TransformerFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        Transformer t = tf.&lt;span style="color:#61afef;"&gt;newTransformer&lt;/span&gt;();
+        t.&lt;span style="color:#61afef;"&gt;setOutputProperty&lt;/span&gt;(OutputKeys.ENCODING, &lt;span style="color:#98c379;"&gt;"ISO-8859-1"&lt;/span&gt;);
+        DOMSource source = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; DOMSource(doc);
+        StreamResult result = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; StreamResult(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileWriter(&lt;span style="color:#98c379;"&gt;"bottin.xml"&lt;/span&gt;));
+        t.&lt;span style="color:#61afef;"&gt;transform&lt;/span&gt;(source, result);
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;Utilisation :&lt;/p&gt;
+&lt;ul style="margin: 1em 0; padding-left: 2em;"&gt;
+    &lt;li&gt;&lt;code&gt;java Bottin cherche Dupont&lt;/code&gt; → affiche le téléphone&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;java Bottin ajoute Martin 555-1234&lt;/code&gt; → ajoute ou met à jour&lt;/li&gt;
+    &lt;li&gt;&lt;code&gt;java Bottin efface Martin&lt;/code&gt; → supprime la personne&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1764380548</timemodified>
+  </page>
+</activity>

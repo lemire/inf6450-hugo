@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72167" moduleid="131015" modulename="page" contextid="970136">
+  <page id="72167">
+    <name>Un peu plus de XSLT : fonctionnement de base, template et value-of</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Un peu plus de XSLT&amp;nbsp;: fonctionnement de base, template et value-of&lt;/h1&gt;
+&lt;h2 class="recall"&gt;«&amp;nbsp;Éléments xsl:template&amp;nbsp;»&lt;/h2&gt;
+    &lt;p&gt;Modifions maintenant le fichier «&amp;nbsp;xslt.xml&amp;nbsp;» de façon à rendre l'expérience plus intéressante. 
+     Tout d'abord, traitons tous les éléments «&amp;nbsp;facture&amp;nbsp;» du document&amp;nbsp;XML. 
+     Pour obtenir le résultat, il faut placer un élément «&amp;nbsp;&amp;lt;xsl:template match="facture"&amp;gt;&amp;nbsp;» 
+     dans l'élément-racine du document XSLT comme ceci&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     On doit mettre quelque chose ici!!!
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;
+                     &lt;/p&gt;
+    &lt;p&gt;Il faut voir l'élément «&amp;nbsp;xsl:template&amp;nbsp;» comme une règle 
+       qui dit&amp;nbsp;: à chaque fois qu'on rencontre un élément qui s'appelle «&amp;nbsp;facture&amp;nbsp;», faisons ceci. 
+       Le modèle est inclus dans l'élément «&amp;nbsp;xsl:template&amp;nbsp;». Dans l'exemple de 
+       document XSLT que nous venons de voir, le processeur XSLT remplacerait tous les 
+       éléments «&amp;nbsp;facture&amp;nbsp;» qu'il rencontre par le texte «&amp;nbsp;On doit mettre quelque chose ici!!!&amp;nbsp;», 
+       ce qui donnerait comme résultat le fichier suivant (le résultat exact peut varier un peu selon le processeur XSLT)&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+      On doit mettre quelque chose ici!!!
+      &lt;/p&gt;
+    &lt;p&gt;Malheureusement, ce n'est pas du HTML valable et votre navigateur devrait n'afficher 
+     qu'un écran vide ou une erreur si vous tentez d'ouvrir le fichier «&amp;nbsp;test.xml&amp;nbsp;» avec un lien 
+     vers un tel fichier&amp;nbsp;XSLT. (En pratique, le navigateur peut interpréter le résultat différemment.) Notre laboratoire XSLT en ligne risque d'ailleurs de vous donner une erreur, car il ne comprendra pas que vous génériez autre chose que du XML ou du HTML (mais on peut remédier à ce problème avec une instruction output, nous y reviendrons). Nous allons donc modifier le fichier XSLT, en ajoutant des balises, comme ceci&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;On doit mettre quelque chose ici!!!&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;
+            &lt;/p&gt;
+    &lt;p&gt;Cette fois, si vous ouvrez le document «&amp;nbsp;test.xml&amp;nbsp;», vous devriez voir le texte «&amp;nbsp;On doit 
+     mettre quelque chose ici!!!&amp;nbsp;» s'afficher dans votre navigateur. Faites l'expérience.&lt;/p&gt;
+    &lt;p&gt;Dans les exemples que nous allons proposer, nous omettons les éléments «&amp;nbsp;html&amp;nbsp;» et «&amp;nbsp;body&amp;nbsp;» 
+     par souci de simplicité. La présence de ces éléments n'est pas nécessaire et n'est utile que pour 
+     afficher le résultat dans un navigateur. À vous de les ajouter si vous désirez afficher le résultat.&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Pour résumer, chaque fois que le processeur XSLT rencontre un élément «&amp;nbsp;facture&amp;nbsp;», 
+     il applique le modèle qui se trouve dans l'élément «&amp;nbsp;&amp;lt;xsl:template match="facture"&amp;gt;&amp;nbsp;».&lt;/b&gt; 
+     Notez que si l'élément «&amp;nbsp;facture&amp;nbsp;» contient lui-même des éléments, ils ne sont pas automatiquement 
+     visités par le processeur&amp;nbsp;XSLT. Ce dernier considère que dès qu'un modèle est appliqué à un élément, 
+     il peut alors parcourir le reste du document sans se soucier du contenu de cet élément 
+     qui est maintenant «&amp;nbsp;couvert&amp;nbsp;», à moins qu'on lui dise explicitement de traiter les noeuds-enfants avec une instruction comme apply-template. Le XSLT est très bête: il part de la racine et applique les règles à ce qu'il rencontre.&lt;/p&gt;
+    &lt;h3 class="recall"&gt;«&amp;nbsp;Éléments xsl:value-of&amp;nbsp;»&lt;/h3&gt;
+    &lt;p&gt;Jusqu'à présent, le résultat n'est pas très fascinant parce que 
+     les éléments «&amp;nbsp;xsl:template&amp;nbsp;» ont été utilisés comme des outils pour faire du «&amp;nbsp;Rechercher/Remplacer&amp;nbsp;». 
+     Le contenu de l'élément «&amp;nbsp;facture&amp;nbsp;» n'est pas traité, on le remplace bêtement par autre chose. &lt;/p&gt;
+    &lt;p&gt;Nous pouvons traiter le contenu d'un élément à l'aide d'un élément «&amp;nbsp;xsl:value-of&amp;nbsp;» 
+     avec la syntaxe &amp;lt;xsl:value-of select="..." /&amp;gt;. La valeur de l'élément «&amp;nbsp;select&amp;nbsp;» 
+     est une expression XPath.
+            Par exemple, si le processeur traite un élément «&amp;nbsp;facture&amp;nbsp;» qui contient un élément «&amp;nbsp;montant&amp;nbsp;», 
+     alors l'élément &amp;lt;xsl:value-of select="montant" /&amp;gt; nous donne le contenu de l'élément «&amp;nbsp;montant&amp;nbsp;».
+            C'est ainsi que nous pouvons trouver le nom de la personne devant recevoir une facture, 
+     en utilisant &amp;lt;xsl:value-of select="personne" /&amp;gt;.
+            &lt;/p&gt;
+    &lt;p&gt;Voyons maintenant un exemple plus complexe de fichier&amp;nbsp;XSLT&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     &amp;lt;html&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Facture de &amp;lt;xsl:value-of select="personne" /&amp;gt;&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+     &amp;lt;p&amp;gt;Ceci est une facture pour &amp;lt;xsl:value-of select="personne" /&amp;gt;
+      de &amp;lt;xsl:value-of select="montant" /&amp;gt;$ pour: 
+     &amp;lt;xsl:value-of select="raison" /&amp;gt;.&amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;
+            &lt;/p&gt;
+    &lt;p&gt;Si vous modifiez le fichier «&amp;nbsp;xslt.xml&amp;nbsp;» et que vous ouvrez le fichier «&amp;nbsp;test.xml&amp;nbsp;» 
+          dans un navigateur supportant le XSLT, vous devriez voir s'afficher à l'écran 
+          la ligne «&amp;nbsp;Ceci est une facture pour Jean Rochond de 10.10$ pour: Achat d'ordinateur.&amp;nbsp;».
+          Il faut avouer que c'est déjà beaucoup plus intéressant comme application!&lt;/p&gt;
+    &lt;p&gt;Ce qui se passe, c'est que le nouveau document XSLT transforme notre document XML en un document HTML&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+         &amp;lt;html&amp;gt;
+         &amp;lt;head&amp;gt;
+         &amp;lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&amp;gt;
+         &amp;lt;title&amp;gt;Facture de  Jean Rochond&amp;lt;/title&amp;gt;
+         &amp;lt;/head&amp;gt;
+         &amp;lt;body&amp;gt;&amp;lt;p&amp;gt;Ceci est une facture pour Jean Rochond
+         de 10.10$ pour: Achat d'ordinateur.&amp;lt;/p&amp;gt;&amp;lt;/body&amp;gt;
+         &amp;lt;/html&amp;gt; 
+         &lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;Pour résumer, nous pouvons aller chercher le contenu textuel d'une expression XPath avec une 
+     instruction comme «&amp;nbsp;&amp;lt;xsl:value-of select="..." /&amp;gt;&amp;nbsp;» où «&amp;nbsp;...&amp;nbsp;» est une expression XPath comme le nom 
+     de l'élément.&lt;/b&gt;&lt;/p&gt;
+    
+    
+    
+    &lt;h3 class="recall"&gt;Modèle de traitement XSLT&lt;/h3&gt;
+    &lt;p&gt;Une source de confusion commune avec le XSLT est une mauvaise appréciation du modèle de traitement. Certains s'imaginent que le XSLT visite les règles une à une, les appliquant à tout le document. Ainsi, la  règle  de type «xsl:template match="facture"» devrait, selon eux, s'appliquer à tous les éléments de type facture. Or, ce n'est pas le cas du tout en général. Le processeur XSLT visite les noeuds un à un. Quand il visite un noeud, il cherche la règle qui s'applique. Il est donc parfaitement possible que plusieurs des règles inscrites dans un document XSLT ne s'appliquent jamais.&lt;/p&gt;
+    
+    &lt;p&gt;Un processeur XSLT traite un fichier XML en partant du début et en appliquant ses règles 
+    au fur et à mesure qu'il rencontre des noeuds. Rappelons que  
+    si le processeur XSLT rencontre un élément pour lequel il n'a aucune règle (modèle),
+    il visite les sous-éléments à leur tour, c'est une de ses règles par défaut. &lt;/p&gt;
+    &lt;p&gt;Une autre façon de décrire ce comportement est de dire que le XSLT utilise un modèle de 
+    fichiers&amp;nbsp;XML «&amp;nbsp;en arbre de nœuds&amp;nbsp;». Imaginons un arbre où, à la racine, se trouve un nœud 
+    spécial représentant le document dans son ensemble. Avec&amp;nbsp;XPath, nous pouvons pointer 
+    directement sur le nœud-racine (le document lui-même) en utilisant la barre oblique «&amp;nbsp;/&amp;nbsp;» que nous 
+    plaçons au début de l'expression XPath, comme dans «&amp;nbsp;&amp;lt;xsl:value-of select="/" /&amp;gt;&amp;nbsp;». 
+    Dans ce cas, «&amp;nbsp;&amp;lt;xsl:value-of select="/jean" /&amp;gt;&amp;nbsp;» donne la valeur de l'élément-racine, 
+    si celui-ci se nomme «&amp;nbsp;jean&amp;nbsp;».&lt;/p&gt;
+    &lt;p&gt;Le nœud-racine contient lui-même l'élément-racine. Chaque élément et chaque élément de texte 
+    sont aussi des nœuds dans ce modèle d'arbre&amp;nbsp;XSLT. Alors que les nœuds de texte ne 
+    peuvent pas contenir d'autres nœuds, les nœuds d'élément peuvent contenir plusieurs autres nœuds 
+    dont d'autres nœuds d'élément et de texte.&lt;/p&gt;
+    &lt;p&gt;Ainsi, par défaut, le processeur XSLT qui atteint un élément visite tous les  éléments et les nœuds de texte qu'il contient. 
+    Un nœud de texte rencontré est simplement recopié, par défaut, alors que pour les éléments, 
+    on visite également leur contenu. C'est ce qui explique que, par défaut, s'il n'y a aucune règle dans le document XSLT, 
+    un document XML est recopié sans les balises.&lt;/p&gt;
+    &lt;p&gt;D'autres nœuds existent comme les nœuds de commentaire, les nœuds 
+    d'instructions de traitement et les nœuds d'espaces de noms,   
+    mais ils sont moins importants que le nœud du document (nœud-racine), 
+    les nœuds d'attribut, les nœuds de texte ou les nœuds d'élément. Dans le modèle d'arbre, les nœuds d'espaces de noms et
+    les nœuds d'attribut sont attachés à l'élément, mais ne sont pas
+    un enfant («&amp;nbsp;child&amp;nbsp;»).&lt;/p&gt;
+    &lt;p&gt;Nous avons déjà vu que «&amp;nbsp;*&amp;nbsp;» et «&amp;nbsp;@*&amp;nbsp;» permettaient de sélectionner les sous-éléments et attributs d'un élément. On peut sélectionner 
+    les nœuds de texte avec la fonction XPath «&amp;nbsp;text()&amp;nbsp;». Notons aussi que l'élément «&amp;nbsp;&amp;lt;xsl:apply-templates/&amp;gt;&amp;nbsp;» signifie que les modèles s'appliquent à tous les nœuds contenus dans le nœud courant. Les règles
+    par défaut qui s'appliquent en XSLT sont&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;xsl:template match="*|/"&amp;gt;
+       &amp;lt;xsl:apply-templates/&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+    
+     &amp;lt;xsl:template match="text()|@*"&amp;gt;
+       &amp;lt;xsl:value-of select="."/&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+    
+     &amp;lt;xsl:template match="processing-instruction()|comment()"  /&amp;gt;
+    
+    &lt;/p&gt;
+    
+    &lt;p&gt;La première règle (ou instruction) indique que si on rencontre un élément ou la racine du document, on applique tout simplement les autres instructions aux noeuds que l'on y trouve. La seconde règle indique que si on trouve un noeud de texte ou un attribut, on retourne tout simplement la valeur textuelle du noeud. Finalement, la dernière règle indique que si on trouve un commentaire ou une instruction de traitement, on n'en traite pas le contenu. &lt;/p&gt;
+    &lt;p&gt;Un processeur&amp;nbsp;XSLT représente un document XML comme un arbre et 
+    tente de le visiter de la racine vers les feuilles. Lorsqu'il rencontre un modèle pour un nœud, 
+    il l'applique et ne poursuit pas automatiquement la visite des nœuds qui y sont contenus, 
+    à moins de rencontrer un élément «&amp;nbsp;xsl:apply-templates&amp;nbsp;».&lt;/p&gt;
+    &lt;p&gt;Par défaut, un traitement XSLT va extraire le contenu textuel du document XML provenant des noeuds de texte et des attributs. Le produit final sera un aggrégat de tout le contenu textuel ainsi extrait.&lt;/p&gt;
+    
+    
+    
+    &lt;p&gt;Récapitulons. Le XSLT fait ce qu'on lui dit de faire, rien de plus, rien de moins. Il commence avec la racine du document et applique les règles. Il est muni de règles de base lui indiquant quoi faire avec des éléments, des attributs, etc. Vous pouvez ajouter de nouvelles règles ou remplacer les règles de base. &lt;/p&gt;
+    
+    &lt;p&gt;Si vous utilisez la règle suivant, indiquant au XSLT de ne rien faire à partir de la racine, alors il ne fera rien (rien ne sera généré).&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt; &amp;lt;xsl:template match="/"&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+    &lt;/p&gt;
+    
+    
+    &lt;p&gt;Le XSLT applique de préférence vos règles plutôt que celles par défaut. Ainsi donc, si vous ajoutez la règle suivante...&lt;/p&gt;
+    
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt; &amp;lt;xsl:template match="*"&amp;gt;
+       &amp;lt;xsl:value-of select="."/&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+    &lt;/p&gt;
+    
+    &lt;p&gt;... alors elle s'appliquera quand l'élément-racine (ou tout autre élément) de votre document sera visité. Comme cette règle n'indique pas de visiter les sous-éléments (par l'instruction apply-templates), ceux-ci ne seront pas visités. Dans un tel cas, tout ce qui sera produit sera la valeur textuelle de l'élément-racine. Le traitement XSLT s'arrêtera alors.&lt;/p&gt;
+    
+    &lt;p&gt;Cela illustre que le XSLT ne génère pas nécessairement du XML valable. Certains moteurs XSLT s'attendent à obtenir du XML ou du HTML (si l'élément-racine est nommé en conséquence) et peuvent générer une erreur dans le cas contraire. Certains moteurs peuvent même modifier le résultat de manière à ce qu'il s'agisse de XML ou du HTML valable. D'autres processeurs vont refuser de produire autre chose que du XML ou du HTML, à moins d'indication contraire.&lt;/p&gt;
+    
+    &lt;p&gt;Les règles s'appliquent selon un ordre de priorité. Vos règles s'appliquent avant celles par défaut. Les règles spécifiques (nommant un élément XML par son nom) s'appliquent avant les règles génériques (par exemple, celles spécifiant le type de noeud comme « * »). Une disjonction ( « | ») est traitée comme un ensemble de règles distinctes.  Si deux règles ont une priorité égale, le moteur XSLT peut choisir arbitrairement un des deux règles ou générer une erreur.  &lt;/p&gt;
+    
+    &lt;h3&gt;Un exemple&lt;/h3&gt;
+    
+    &lt;p&gt;Pour illustrer le fonctionnement du XSLT, prenons un example. Soit ce document XML: &lt;/p&gt;
+    &lt;!-- HTML generated using hilite.me --&gt;&lt;div style="background: #ffffff; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"&gt;&lt;pre style="margin: 0; line-height: 125%"&gt;&lt;span style="color: #007700"&gt;&amp;lt;racine&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;element&amp;gt;&lt;/span&gt;
+            &lt;span style="color: #007700"&gt;&amp;lt;souselement&amp;gt;&lt;/span&gt;
+            &lt;span style="color: #007700"&gt;&amp;lt;/souselement&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;/element&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;element2&amp;gt;&lt;/span&gt;
+            &lt;span style="color: #007700"&gt;&amp;lt;souselement2&amp;gt;&lt;/span&gt;
+            &lt;span style="color: #007700"&gt;&amp;lt;/souselement2&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;/element2&amp;gt;&lt;/span&gt;
+    &lt;span style="color: #007700"&gt;&amp;lt;/racine&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;&lt;/div&gt;
+    
+    
+    &lt;p&gt;Soit ce document XSLT: &lt;/p&gt;
+    
+    &lt;!-- HTML generated using hilite.me --&gt;&lt;div style="background: #ffffff; overflow:auto;width:auto;border-width:.1em .1em .1em .8em;padding:.2em .6em;"&gt;&lt;pre style="margin: 0; line-height: 125%"&gt;&lt;span style="color: #007700"&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span style="color: #0000CC"&gt;version=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"1.0"&lt;/span&gt;
+      &lt;span style="color: #0000CC"&gt;xmlns:xsl=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"http://www.w3.org/1999/XSL/Transform"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span style="color: #0000CC"&gt;match=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"element"&lt;/span&gt; &lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+            Transformation 1
+        &lt;span style="color: #007700"&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span style="color: #0000CC"&gt;match=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"souselement"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+            Transformation 2
+        &lt;span style="color: #007700"&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span style="color: #0000CC"&gt;match=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"souselement2"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+            transformation3
+        &lt;span style="color: #007700"&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+    &lt;span style="color: #007700"&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;&lt;/div&gt;
+    
+    &lt;p&gt;Par souci de simplicité, nous allons ignorer les noeuds de texte de cet exemple. Il n'y a donc que des éléments.&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;&lt;p&gt;Le processeur débute au noeud racine. La règle par défaut s'applique et on l'instruit (avec apply-templates) de traiter tous les noeuds qu'il contient en séquence.&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Le processeur trouve alors l'élément nommé « racine ». La règle par défaut s'applique encore et le processeur visite simplement les noeuds contenus. Dans ce cas, il y en a deux (deux éléments).&lt;/p&gt;
+    &lt;ol&gt;
+    &lt;li&gt;Le processeur va alors traiter l'élément nommé « element ». Dans ce cas, la règle que nous avons introduite dans notre document XSLT s'applique et le processeur XSLT émet la chaîne de caractères « Transformation 1 ». Notez que l'élément nommé souselement ne sera pas traité.&lt;/li&gt;
+    &lt;li&gt;Le processeur traite alors l'élément nommé « element2 ». La règle par défaut s'applique. Il visite donc l'élément «souselement2». La règle que nous avons introduite s'applique et le processeur émet «transformation3 ».&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;/ol&gt;
+    
+    &lt;p&gt;Le résultat produit sera donc la chaîne de caractères «Transformation 1 transformation3 ».&lt;/p&gt;
+    
+    
+    &lt;p&gt;Vous pouvez mettre cet exemple en marche dans votre navigateur:&lt;/p&gt;
+    &lt;form action=""&gt;
+    &lt;p&gt;Fichier XML:&lt;/p&gt;
+    &lt;textarea id="xmlsource" rows="15" cols="75"&gt;&amp;lt;?xml version="1.0" ?&amp;gt; 
+    &amp;lt;racine&amp;gt;
+        &amp;lt;element&amp;gt;
+            &amp;lt;souselement&amp;gt;
+            &amp;lt;/souselement&amp;gt;
+        &amp;lt;/element&amp;gt;
+        &amp;lt;element2&amp;gt;
+            &amp;lt;souselement2&amp;gt;
+            &amp;lt;/souselement2&amp;gt;
+        &amp;lt;/element2&amp;gt;
+    &amp;lt;/racine&amp;gt;
+    &lt;/textarea&gt;
+    &lt;p&gt;Transformation XML:&lt;/p&gt;
+    &lt;textarea id="xstlsource" rows="15" cols="75"&gt;&amp;lt;?xml version="1.0" ?&amp;gt; 
+    &amp;lt;xsl:stylesheet version="1.0"
+      xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:output method="text" /&amp;gt;  
+        
+    &amp;lt;xsl:template match="element" &amp;gt;
+            Transformation 1
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="souselement"&amp;gt;
+            Transformation 2
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="souselement2"&amp;gt;
+            transformation3
+        &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+    &lt;/textarea&gt;
+    &lt;p&gt;Résultat : &lt;/p&gt;
+    &lt;p id="sol" style="width:300px;background:#ccc"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+    &amp;lt;head&amp;gt;&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;
+    &amp;lt;pre&amp;gt;
+        
+            Transformation 1
+        
+        
+            
+            transformation3
+        
+        &amp;lt;/pre&amp;gt;
+    &amp;lt;/body&amp;gt;
+    &amp;lt;/html&amp;gt;&lt;/p&gt;
+    &lt;br&gt;
+    &lt;input type="button" value="Transformer" onclick=""&gt;
+    &lt;/form&gt;
+    
+    &lt;p&gt;Notez que nous avons ajouté une instruction «output» spécifiant un contenu textuel. Sans cette instruction, plusieurs processeurs XSLT seront confus par le résultat généré (celui-ci n'étant pas du XML) et ils peuvent générer une erreur. Vous noterez peut-être aussi que votre navigateur met le résultat textuel dans un document HTML. C'est un cas particulier où le processeur prend sur lui d'imposer un format. Dans le cas d'un navigateur web, il est justifiable d'exiger que le document produit soit du XML ou du HTML.&lt;/p&gt;
+    
+    &lt;p&gt;Assurez-vous de bien comprendre cet exemple avant de continuer. Vous devez avoir une bonne représentation mentale de la manière dont fonctionne un processeur XSLT.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741881143</timemodified>
+  </page>
+</activity>

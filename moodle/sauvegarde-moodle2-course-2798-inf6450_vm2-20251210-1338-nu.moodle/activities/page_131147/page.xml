@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72299" moduleid="131147" modulename="page" contextid="970274">
+  <page id="72299">
+    <name>Glossaire</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Glossaire&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Appel d’entité&amp;nbsp;:&lt;/strong&gt; Un appel d’entité est une suite de
+    caractères (bout de texte) qui commence par une esperluette ( &amp;amp; ) et se
+    termine par un point-virgule (&amp;nbsp;; ). Les appels d’entité suivants font
+    partie de la définition du XML&amp;nbsp;:&lt;/p&gt;
+
+&lt;div class="tableau style1"&gt;
+    &lt;table class="test4" border="1"&gt;
+        &lt;colgroup&gt;
+            &lt;col&gt;
+            &lt;col&gt;
+        &lt;/colgroup&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&lt;b&gt;appel d’entité&lt;/b&gt;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&lt;b&gt;résultat&lt;/b&gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;lt&amp;nbsp;;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;lt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;amp&amp;nbsp;;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;gt&amp;nbsp;;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;gt;&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;quot&amp;nbsp;;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;"&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;p&gt;&amp;amp;apos&amp;nbsp;;&lt;/p&gt;
+                &lt;/td&gt;
+                &lt;td&gt;
+                    &lt;p&gt;’&lt;/p&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Attribut&amp;nbsp;:&lt;/strong&gt; Un attribut est un nom XML qui doit
+    respecter les &lt;br class="autobr"&gt;
+    mêmes règles que les noms XML des balises&amp;nbsp;; il est immédiatement suivi
+    d’un signe d’égalité ( = ) &lt;br class="autobr"&gt;
+    et d’une valeur placée entre guillemets. Par exemple, la&lt;br class="autobr"&gt;
+    balise &amp;lt;lavie age="5"&amp;gt; a un attribut (age="5") dont le &lt;br class="autobr"&gt;
+    nom XML est "age". Une balise peut avoir plusieurs attributs, comme &lt;br class="autobr"&gt;
+    &amp;lt;lavie age="5" sexe="M"&amp;gt;, mais chacun doit avoir un nom &lt;br class="autobr"&gt;
+    XML différent&amp;nbsp;; la balise &amp;lt;lavie age="5" age="7"&amp;gt; n’est pas &lt;br class="autobr"&gt;
+    autorisée.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Balise&amp;nbsp;:&lt;/strong&gt; Une balise est un texte commençant par le
+    signe &lt;br class="autobr"&gt;
+    &amp;lt; et se terminant par le signe &amp;gt;, délimitant un élément. Il existe
+    trois types de balises en XML&amp;nbsp;: les&lt;br class="autobr"&gt;
+    balises qui commencent un élément, les balises qui terminent un élément&lt;br class="autobr"&gt;
+    et les balises d’élément vide. Par exemple, &amp;lt;lavie&amp;gt; est une&lt;br class="autobr"&gt;
+    balise qui ouvre un élément. Une balise qui commence par &amp;lt;/ est une
+    balise de fin, &lt;br class="autobr"&gt;
+    qui termine un élément, comme &amp;lt;/lavie&amp;gt;. Finalement, une balise qui se
+    termine par /&amp;gt;&lt;br class="autobr"&gt;
+    marque que l’élément est vide, comme &amp;lt;lavie /&amp;gt;. &lt;br class="autobr"&gt;
+    Une déclaration de type de document (&amp;lt;&amp;nbsp;!DOCTYPE&amp;gt;), une
+    déclaration XML (&amp;lt;&amp;nbsp;?xml&amp;nbsp;?&amp;gt;), un commentaire &lt;br class="autobr"&gt;
+    (&amp;lt;&amp;nbsp;!— —&amp;gt;) ou une région CDATA (&amp;lt;&amp;nbsp;![CDATA[ ]]&amp;gt;) ne sont
+    pas&lt;br class="autobr"&gt;
+    des balises.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bien formé&amp;nbsp;:&lt;/strong&gt; Un document XML bien formé respecte la &lt;br class="autobr"&gt;
+    grammaire XML et il peut être lu par n’importe quel parseur XML&lt;br class="autobr"&gt;
+    générique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Commentaire&amp;nbsp;:&lt;/strong&gt; Un commentaire commence par &amp;lt;&amp;nbsp;!—
+    et se termine&lt;br class="autobr"&gt;
+    par —&amp;gt;&amp;nbsp;; entre ces deux bornes, il ne peut y avoir deux tirets
+    successifs (—), &lt;br class="autobr"&gt;
+    mais n’importe quoi d’autre peut s’y retrouver.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CSS&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;Cascading&lt;br class="autobr"&gt;
+        StyleSheet&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Déclaration de type de document&amp;nbsp;:&lt;/strong&gt; &lt;br class="autobr"&gt;
+    Une déclaration de type de document prend la forme &amp;lt;&amp;nbsp;!DOCTYPE ...
+    SYSTEM ... &amp;gt; , &lt;br class="autobr"&gt;
+    où l’on met à la place des premiers trois points le nom XML de
+    l’élément-racine que &lt;br class="autobr"&gt;
+    le document doit avoir, et à la place des deuxièmes trois points, une URL
+    vers le document DTD.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Déclaration XML&amp;nbsp;:&lt;/strong&gt; La déclaration XML&lt;br class="autobr"&gt;
+    ressemble à s’y méprendre à une instruction de traitement et&lt;br class="autobr"&gt;
+    prend la forme &amp;lt;&amp;nbsp;?xml ...&amp;nbsp;?&amp;gt;. Le contenu d’une
+    déclaration&lt;br class="autobr"&gt;
+    XML comporte généralement au maximum trois &lt;em&gt;attributs&lt;/em&gt;&amp;nbsp;:&lt;br class="autobr"&gt;
+    version="...", encoding="..." et standalone="...". La version du&lt;br class="autobr"&gt;
+    XML la plus utilisée est la 1.0&amp;nbsp;; bien que la version 1.1 existe,&lt;br class="autobr"&gt;
+    elle est fort peu utilisée. On utilisera souvent une déclaration&lt;br class="autobr"&gt;
+    XML avec «&amp;nbsp;encoding="ISO-8859-1"&amp;nbsp;» pour pouvoir utiliser les&lt;br class="autobr"&gt;
+    accents dans le document&amp;nbsp;; par défaut, on ne peut pas utiliser les&lt;br class="autobr"&gt;
+    accents dans un document XML, sans des outils supportant les normes&lt;br class="autobr"&gt;
+    UTF-8/UTF-16. L’attribut «&amp;nbsp;standalone&amp;nbsp;» prend les&lt;br class="autobr"&gt;
+    valeurs &lt;i&gt;yes&lt;/i&gt; ou &lt;i&gt;no&lt;/i&gt;, selon que l’on veut que la DTD externe soit
+    lue&lt;br class="autobr"&gt;
+    ou pas. La déclaration XML&lt;br class="autobr"&gt;
+    doit obligatoirement être au tout début du document ou être&lt;br class="autobr"&gt;
+    carrément absente&amp;nbsp;: même un espace avant n’est pas permis.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DocBook&amp;nbsp;:&lt;/strong&gt; C’est un format de&lt;br class="autobr"&gt;
+    document souvent utilisé pour la documentation&lt;br class="autobr"&gt;
+    technique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DOM (&lt;i&gt;Document Object Model&lt;/i&gt;)&amp;nbsp;:&lt;/strong&gt; Le terme
+    «&amp;nbsp;DOM&amp;nbsp;»&lt;br class="autobr"&gt;
+    a deux significations&amp;nbsp;: un ensemble d’API utilisant un modèle en arbre
+    ou un&lt;br class="autobr"&gt;
+    certain modèle en arbre.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DTD (&lt;i&gt;Définition de Type Document&lt;/i&gt;)&amp;nbsp;:&lt;/strong&gt;&lt;br class="autobr"&gt;
+    Une DTD permet de définir un type de document XML en spécifiant&lt;br class="autobr"&gt;
+    des contraintes sur les éléments, les attributs et leur contenu.&lt;br class="autobr"&gt;
+    Un document XML qui satisfait ces contraintes et qui est bien formé est dit
+    valable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Élément&amp;nbsp;:&lt;/strong&gt; Un élément est l’ensemble du texte borné par
+    deux&lt;br class="autobr"&gt;
+    balises ayant le même nom XML, comme &amp;lt;lavie&amp;gt; et &amp;lt;/lavie&amp;gt;. &lt;br class="autobr"&gt;
+    On dit que l’élément &amp;lt;lavie&amp;gt;&amp;lt;/lavie&amp;gt; a le nom&lt;br class="autobr"&gt;
+    XML «&amp;nbsp;lavie&amp;nbsp;». L’élément hérite des attributs de sa balise de&lt;br class="autobr"&gt;
+    départ&amp;nbsp;: l’élément &amp;lt;lavie age="5"&amp;gt;&amp;lt;/lavie&amp;gt; possède&lt;br class="autobr"&gt;
+    l’attribut «&amp;nbsp;age="5"&amp;nbsp;». Il est à noter que la casse est
+    significative&lt;br class="autobr"&gt;
+    en XML&amp;nbsp;: les balises &amp;lt; A &amp;gt; et &amp;lt; a &amp;gt; n’ont pas le même nom
+    XML. &lt;br class="autobr"&gt;
+    Lorsque l’élément est vide, c’est-à-dire sans contenu, on&lt;br class="autobr"&gt;
+    peut remplacer &amp;lt;lavie&amp;gt;&amp;lt;/lavie&amp;gt; par &amp;lt;lavie /&amp;gt;,&lt;br class="autobr"&gt;
+    pour être plus bref. Par ailleurs, un élément peut contenir d’autres&lt;br class="autobr"&gt;
+    éléments, comme dans&lt;br class="autobr"&gt;
+    &amp;lt;lavie&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/lavie&amp;gt;, ou du texte ou&lt;br class="autobr"&gt;
+    du texte et des éléments, comme&lt;br class="autobr"&gt;
+    &amp;lt;lavie&amp;gt;fd&amp;lt;a&amp;gt;fsd&amp;lt;/a&amp;gt;fd&amp;lt;/lavie&amp;gt;. Si un&lt;br class="autobr"&gt;
+    élément contient l’élément de début ou de fin d’un élément, alors&lt;br class="autobr"&gt;
+    il doit aussi contenir l’autre. Ainsi, un élément peut être&lt;br class="autobr"&gt;
+    contenu par un autre ou non, mais deux éléments ne peuvent se&lt;br class="autobr"&gt;
+    &lt;em&gt;chevaucher&lt;/em&gt;, comme &amp;lt;b&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;,&lt;br class="autobr"&gt;
+    qui est du XML mal formé.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Élément-racine&amp;nbsp;:&lt;/strong&gt; Tout document XML bien formé doit
+    avoir un&lt;br class="autobr"&gt;
+    élément-racine, et un seul. Tous les autres&lt;br class="autobr"&gt;
+    éléments doivent être contenus dans cet&lt;br class="autobr"&gt;
+    élément-racine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Espace de noms&amp;nbsp;:&lt;/strong&gt; Les espaces de noms&lt;br class="autobr"&gt;
+    permettent d’utiliser plusieurs vocabulaires XML en même&lt;br class="autobr"&gt;
+    temps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Extensible&amp;nbsp;:&lt;/strong&gt; Voir &lt;strong&gt;&lt;i&gt;Métalangage&lt;/i&gt;.&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graphe&amp;nbsp;:&lt;/strong&gt; Un graphe est un ensemble de nœuds liés par
+    des&lt;br class="autobr"&gt;
+    relations d’un nœud à un autre.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graphe dirigé&amp;nbsp;:&lt;/strong&gt; Un graphe est dirigé&lt;br class="autobr"&gt;
+    si les relations sont à sens unique.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graphe annoté&amp;nbsp;:&lt;/strong&gt; Un graphe est annoté&lt;br class="autobr"&gt;
+    si les relations entre deux nœuds peuvent être de&lt;br class="autobr"&gt;
+    différentes natures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HTML (&lt;i&gt;HyperText Markup&lt;br class="autobr"&gt;
+            Language&lt;/i&gt;)&amp;nbsp;:&lt;/strong&gt; Le HTML est un&lt;br class="autobr"&gt;
+    langage à base de balises. La majorité des documents&lt;br class="autobr"&gt;
+    sur le web sont écrits en HTML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Instruction de traitement&amp;nbsp;:&lt;/strong&gt;&lt;br class="autobr"&gt;
+    L’instruction de traitement ne fait rien en&lt;br class="autobr"&gt;
+    soit, mais peut indiquer aux programmes comment obtenir un&lt;br class="autobr"&gt;
+    certain résultat. Une instruction de traitement débute par
+    «&amp;nbsp;&amp;lt;&amp;nbsp;?&amp;nbsp;»&lt;br class="autobr"&gt;
+    et se termine par «&amp;nbsp;?&amp;gt;&amp;nbsp;»&amp;nbsp;; immédiatement après le
+    «&amp;nbsp;&amp;lt;&amp;nbsp;?&amp;nbsp;», un nom XML&lt;br class="autobr"&gt;
+    valable doit apparaître et tous les noms XML valables sont&lt;br class="autobr"&gt;
+    autorisés à l’exception de xml, Xml, XMl, XML, XmL, xMl, xML et&lt;br class="autobr"&gt;
+    xmL. Ainsi n’importe quel autre texte peut être utilisé, mais il faut&lt;br class="autobr"&gt;
+    faire des appels d’entités pour «&amp;nbsp;&amp;lt;&amp;nbsp;» et «&amp;nbsp;&amp;amp;&amp;nbsp;»,
+    comme pour n’importe&lt;br class="autobr"&gt;
+    quel contenu textuel XML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Métalangage&amp;nbsp;:&lt;/strong&gt; Le XML est un «&amp;nbsp;métalangage&amp;nbsp;»
+    permettant d’échanger&lt;br class="autobr"&gt;
+    de l’information, principalement sur le web. On dit que c’est un&lt;br class="autobr"&gt;
+    «&amp;nbsp;métalangage&amp;nbsp;» parce qu’il permet de créer de&lt;br class="autobr"&gt;
+    nouveaux &lt;em&gt;langages&lt;/em&gt; pour l’échange d’informations, mais&lt;br class="autobr"&gt;
+    qu’il ne constitue pas un langage en soi. On dit donc que le&lt;br class="autobr"&gt;
+    XML est «&amp;nbsp;extensible&amp;nbsp;» (peut être étendu) et que c’est un&lt;br class="autobr"&gt;
+    métalangage&amp;nbsp;: les deux affirmations ont le même sens et notent la&lt;br class="autobr"&gt;
+    capacité du XML à s’adapter à des besoins différents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nom XML&amp;nbsp;:&lt;/strong&gt; Le nom XML d’une balise&lt;br class="autobr"&gt;
+    est le texte suivant le symbole «&amp;nbsp;&amp;lt;&amp;nbsp;» ou «&amp;nbsp;&amp;lt;/&amp;nbsp;»
+    pour une balise de&lt;br class="autobr"&gt;
+    fin&amp;nbsp;; il peut contenir n’importe quelle lettre (a, b,...) ou&lt;br class="autobr"&gt;
+    chiffre (0,1,2,...) et les signes de ponctuation suivants&amp;nbsp;: la barre de
+    soulignement ( _ ), &lt;br class="autobr"&gt;
+    le trait d’union ( - ) et le point ( . )&amp;nbsp;; il ne peut contenir ni les
+    autres signes de ponctuation&lt;br class="autobr"&gt;
+    ni un espace. En outre, un nom XML ne peut pas commencer par un nombre, un
+    trait d’union &lt;br class="autobr"&gt;
+    ou un point. Par exemple, le nom XML de la balise&lt;br class="autobr"&gt;
+    &amp;lt;lavie&amp;gt; est «&amp;nbsp;lavie&amp;nbsp;», alors que la balise &amp;lt;7lavie&amp;gt;
+    ne&lt;br class="autobr"&gt;
+    serait pas autorisée.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RDF (&lt;em&gt;Resource Description&lt;br class="autobr"&gt;
+            Framework&lt;/em&gt;)&amp;nbsp;:&lt;/strong&gt; Le RDF est un langage pour les
+    métadonnées sur le web, &lt;br class="autobr"&gt;
+    c’est-à-dire un langage pour énoncer ce que l’on sait&lt;br class="autobr"&gt;
+    sur quelque chose ou quelqu’un.&lt;/p&gt;
+&lt;p&gt;
+    &lt;strong&gt;SGML&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;Standard Generalized Markup Language&lt;/i&gt;.
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Syntaxe&amp;nbsp;:&lt;/strong&gt; La syntaxe XML est la&lt;br class="autobr"&gt;
+    manière d’écrire les informations dans un document &lt;br class="autobr"&gt;
+    XML. Les notions importantes de la&lt;br class="autobr"&gt;
+    syntaxe de base du XML sont la &lt;i&gt;balise&lt;/i&gt;, l’&lt;i&gt;élément&lt;/i&gt;,&lt;br class="autobr"&gt;
+    l’&lt;i&gt;élément-racine&lt;/i&gt; et l’&lt;i&gt;attribut&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;URI&amp;nbsp;:&lt;/strong&gt; C’est une adresse Internet&lt;br class="autobr"&gt;
+    fictive. L’URI agit un peu comme le&lt;br class="autobr"&gt;
+    numéro d’assurance sociale des vocabulaires XML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Valable&amp;nbsp;:&lt;/strong&gt;&amp;nbsp;: Un document est valable s’il répond à
+    certains critères&lt;br class="autobr"&gt;
+    de base de l’application XML. Un document XML qui est bien formé, qui en
+    plus&lt;br class="autobr"&gt;
+    satisfait aux contraintes dictant quels éléments et attributs&lt;br class="autobr"&gt;
+    peuvent être utilisés, et dans quel ordre et avec quel contenu,&lt;br class="autobr"&gt;
+    est dit valable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Vocabulaire XML&amp;nbsp;:&lt;/strong&gt;&lt;br class="autobr"&gt;
+    Un «&amp;nbsp;vocabulaire XML&amp;nbsp;» est un ensemble de noms de balises et&lt;br class="autobr"&gt;
+    d’attributs ayant une signification donnée. Un vocabulaire XML&lt;br class="autobr"&gt;
+    peut être associé à un document DTD.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XHTML&amp;nbsp;:&lt;/strong&gt; Le XHTML est un format&lt;br class="autobr"&gt;
+    hybride&amp;nbsp;: il tient à la fois du HTML et du XML.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XML&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;eXtensible MarkupLanguage&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XSL&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;eXtensible Stylesheet&lt;br class="autobr"&gt;
+        Language&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;XSLT&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;XSL&lt;br class="autobr"&gt;
+        Transformations&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;
+    &lt;strong&gt;XSL-FO&amp;nbsp;:&lt;/strong&gt; &lt;i&gt;eXtensible Stylesheet Language&lt;br class="autobr"&gt;
+        Formatting Objects&lt;/i&gt;.
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741902372</timemodified>
+  </page>
+</activity>

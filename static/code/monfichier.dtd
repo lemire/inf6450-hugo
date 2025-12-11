@@ -1,0 +1,4 @@
+<!ELEMENT etudiant (numero, nom, age)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT age (#PCDATA)>

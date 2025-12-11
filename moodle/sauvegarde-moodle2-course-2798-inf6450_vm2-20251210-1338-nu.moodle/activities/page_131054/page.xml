@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72206" moduleid="131054" modulename="page" contextid="970175">
+  <page id="72206">
+    <name>Les axes</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Les axes&lt;/h1&gt;
+&lt;h2 class="recall"&gt;Les axes&lt;/h2&gt;
+&lt;p&gt;Par défaut, l'expression XPath «&amp;nbsp;nom&amp;nbsp;» désigne les éléments
+    «&amp;nbsp;nom&amp;nbsp;» qui sont des enfants du nœud courant. On peut aussi
+    écrire «&amp;nbsp;child::nom&amp;nbsp;». De la même manière, «&amp;nbsp;nom[2]&amp;nbsp;» ou
+    «&amp;nbsp;child::nom[2]&amp;nbsp;» désigne le second enfant du nœud courant.
+    Il est possible
+    de changer ce comportement en choisissant un axe différent.
+&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;«&amp;nbsp;child&amp;nbsp;»&amp;nbsp;: il s'agit de l'axe par défaut,
+        «&amp;nbsp;child::nom[3]&amp;nbsp;» désigne le troisième élément
+        «&amp;nbsp;nom&amp;nbsp;» enfant du nœud courant.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;parent&amp;nbsp;»&amp;nbsp;: l'axe «&amp;nbsp;parent&amp;nbsp;» est pratiquement
+        inutile, «&amp;nbsp;parent::nom&amp;nbsp;» désigne l'élément parent si celui-ci
+        se nomme «&amp;nbsp;nom&amp;nbsp;». En général, il est plus simple d'utiliser la
+        syntaxe «&amp;nbsp;..&amp;nbsp;» qui est équivalente à
+        «&amp;nbsp;parent::node()&amp;nbsp;».&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;attribute&amp;nbsp;»&amp;nbsp;: la syntaxe «&amp;nbsp;attribute::&amp;nbsp;»
+        n'est pas utilisée, on préfère la notation «&amp;nbsp;@nom&amp;nbsp;» qui
+        signifie la même chose que «&amp;nbsp;attribute::nom&amp;nbsp;». &lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;ancestor&amp;nbsp;»&amp;nbsp;: la syntaxe «&amp;nbsp;ancestor::nom&amp;nbsp;»
+        désigne les éléments de nom «&amp;nbsp;nom&amp;nbsp;» dans lesquels le nœud
+        courant est contenu. On peut tester si le nœud courant est contenu dans
+        un paragraphe avec la syntaxe &amp;lt;xsl:if
+        test="ancestor::paragraphe"&amp;gt;...&amp;lt;/xsl:if&amp;gt;.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;ancestor-or-self&amp;nbsp;»&amp;nbsp;: idem que l'axe ancestor exception
+        faite que l'on inclut le nœud courant, on pourrait donc tester si nœud
+        courant est contenu dans un paragraphe ou s'il est lui-même un
+        paragraphe avec la syntaxe &amp;lt;xsl:if
+        test="ancestor-or-self::paragraphe"&amp;gt;...&amp;lt;/xsl:if&amp;gt;.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;preceding-sibling&amp;nbsp;»&amp;nbsp;: cet axe consulte en séquence les
+        frères du nœud courant, c'est-à-dire les nœud ayant le même parent, qui
+        apparaissent avant le nœud courant. Par exemple,
+        «&amp;nbsp;preceding-sibling::nom[2]&amp;nbsp;» cherche le second élément-frère
+        apparaissant avant le nœud courant.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;following-sibling&amp;nbsp;»&amp;nbsp;: voir l'axe
+        «&amp;nbsp;preceding-sibling&amp;nbsp;», mais à l'envers (&lt;b&gt;après&lt;/b&gt; le nœud
+        courant). &lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;preceding&amp;nbsp;»&amp;nbsp;: cet axe est similaire à
+        «&amp;nbsp;preceding-sibling&amp;nbsp;», mais on traverse tous les nœuds qui se
+        sont terminés avant nœud courant. Par exemple,
+        «&amp;nbsp;preceding::nom[2]&amp;nbsp;» cherche le second élément apparaissant
+        avant le nœud courant, même s'il n'a pas le même parent.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;following&amp;nbsp;»&amp;nbsp;: voir l'axe «&amp;nbsp;preceding&amp;nbsp;», mais
+        à l'envers. &lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;descendant &amp;nbsp;»&amp;nbsp;: voir l'axe «&amp;nbsp;ancestor&amp;nbsp;», mais
+        à l'envers.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;descendant-or-self&amp;nbsp;»&amp;nbsp;: voir l'axe
+        «&amp;nbsp;ancestor-or-self&amp;nbsp;», mais à l'envers. &lt;/li&gt;
+&lt;/ul&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741893428</timemodified>
+  </page>
+</activity>

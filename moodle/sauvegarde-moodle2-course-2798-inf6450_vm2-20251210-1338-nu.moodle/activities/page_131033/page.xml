@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72185" moduleid="131033" modulename="page" contextid="970154">
+  <page id="72185">
+    <name>Les tests</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Les tests&lt;/h1&gt;
+&lt;h2 class="recall"&gt;Utilisation des tests&lt;/h2&gt;
+&lt;p&gt;Nous pouvons tester des conditions à l'aide d'expressions XPath contenant
+    les symboles «&amp;nbsp;&amp;lt;&amp;nbsp;», «&amp;nbsp;=&amp;nbsp;», «&amp;nbsp;!=&amp;nbsp;»,
+    «&amp;nbsp;or&amp;nbsp;», «&amp;nbsp;and&amp;nbsp;», «&amp;nbsp;&amp;gt;&amp;nbsp;»,
+    «&amp;nbsp;&amp;gt;=&amp;nbsp;», «&amp;nbsp;&amp;lt;=&amp;nbsp;».
+    Nous utilisons les tests en XSLT avec les éléments «&amp;nbsp;xsl:choose&amp;nbsp;»
+    et «&amp;nbsp;xsl:if&amp;nbsp;».
+    Par exemple, faire quelque chose de particulier, si le nom de l'élément
+    courant est «&amp;nbsp;montant&amp;nbsp;».&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;xsl:template match="*"&amp;gt;
+    &amp;lt;xsl:if test="name(.) = 'montant'"&amp;gt;
+    Il s'agit d'un élément nommé «montant».
+    &amp;lt;/xsl:if&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;La syntaxe de l'élément «&amp;nbsp;xsl:if&amp;nbsp;» est très simple; si la valeur de
+    l'expression XPath
+    contenue dans l'attribut «&amp;nbsp;test&amp;nbsp;» est vraie, le contenu de
+    l'élément «&amp;nbsp;xsl:if&amp;nbsp;» s'applique,
+    sinon, on l'omet. Notez qu'il n'y a pas d'élément «&amp;nbsp;xsl:else&amp;nbsp;»&lt;/p&gt;
+&lt;p&gt;Nous pouvons aussi traiter plusieurs tests dans un seul élément
+    «&amp;nbsp;xsl:choose&amp;nbsp;» comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;xsl:template match="*"&amp;gt;
+    &amp;lt;xsl:choose&amp;gt;
+    &amp;lt;xsl:when test="name(.)='montant'"&amp;gt;
+    Il y a une balise "montant"
+    &amp;lt;/xsl:when&amp;gt;
+    &amp;lt;xsl:when test="name(.)='facture'"&amp;gt;
+    J'ai trouvé une "facture"
+    &amp;lt;/xsl:when&amp;gt;
+    &amp;lt;xsl:otherwise&amp;gt;
+    Je ne connais pas cet élément
+    &amp;lt;/xsl:otherwise&amp;gt;
+    &amp;lt;/xsl:choose&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;On peut aussi combiner plusieurs tests avec les opérateurs logiques
+    and, or et not comme le montre le prochain exemple.&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;xsl:template match="*"&amp;gt;
+    &amp;lt;xsl:choose&amp;gt;
+    &amp;lt;xsl:when test="name(.)='montant' or name(.)='facture'"&amp;gt;
+    Il y a une balise "montant" ou une
+    balise "facture"
+    &amp;lt;/xsl:when&amp;gt;
+    &amp;lt;xsl:when test="not(name(.)='argent')"&amp;gt;
+    Ce n'est ni montant, ni facture, ni argent.
+    &amp;lt;/xsl:when&amp;gt;
+    &amp;lt;xsl:otherwise&amp;gt;
+    Je ne connais pas cet élément.
+    &amp;lt;/xsl:otherwise&amp;gt;
+    &amp;lt;/xsl:choose&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;On peut aussi tester la langue d'un élément avec la fonction
+    XPath «&amp;nbsp;lang&amp;nbsp;». L'expression «&amp;nbsp;count(//p[lang('en')])&amp;nbsp;»
+    compte le nombre d'élément «&amp;nbsp;p&amp;nbsp;» ayant été déclaré comme contenant
+    du
+    texte en langue anglaise.&lt;/p&gt;
+&lt;p&gt;Observez qu'un élément «&amp;nbsp;xsl:choose&amp;nbsp;» contient plusieurs éléments
+    «&amp;nbsp;xsl:when&amp;nbsp;»
+    qui sont testés tour à tour, jusqu'à ce qu'une condition soit vraie;
+    l'élément «&amp;nbsp;xsl:otherwise&amp;nbsp;»
+    est présent pour l'éventualité où tous les tests échouent.
+    Tous les tests sont réalisés en séquence et
+    dès qu'une condition est vraie, les tests s'arrêtent et le contenu
+    de l'élément «&amp;nbsp;xsl:when&amp;nbsp;» est évalué.&lt;/p&gt;
+&lt;p&gt;En XSLT, il ne faut pas abuser des tests; il est préférable
+    d'utiliser des éléments «&amp;nbsp;xsl:template&amp;nbsp;» qui sont plus modulaires.
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741891467</timemodified>
+  </page>
+</activity>

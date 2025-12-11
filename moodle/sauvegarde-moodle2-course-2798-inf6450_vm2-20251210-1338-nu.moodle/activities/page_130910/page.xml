@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72080" moduleid="130910" modulename="page" contextid="970019">
+  <page id="72080">
+    <name>Principes du XML</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Principes du XML&lt;/h1&gt;
+&lt;h2&gt;Quelques principes et notions importantes du XML&lt;/h2&gt;
+
+&lt;p&gt;Rappelons qu'une &lt;b&gt;balise&lt;/b&gt; est un segment de texte commençant par&amp;nbsp;&amp;lt; et se terminant par&amp;nbsp;&amp;gt;. Par exemple, &amp;lt;lavie&amp;gt; est une balise qui marque le début de l'élément &lt;i&gt;lavie&lt;/i&gt;. Une balise commençant par&amp;nbsp;&amp;lt;/, comme &amp;lt;/lavie&amp;gt;, est une balise de fin; dans cet exemple, elle termine l'élément &lt;i&gt;lavie&lt;/i&gt;. &lt;/p&gt;
+
+&lt;p&gt;Le &lt;b&gt;nom XML&lt;/b&gt; de la balise est le texte suivant le symbole &amp;lt; (ou &amp;lt;/ pour une balise de fin) et pouvant contenir n'importe quelle lettre ou chiffre (a,&amp;nbsp;b,... 0,&amp;nbsp;1,&amp;nbsp;2,...) ou les quatre symboles de ponctuation, soit la marque de soulignement&amp;nbsp;(&amp;nbsp;_&amp;nbsp;), le trait d'union&amp;nbsp;(&amp;nbsp;-&amp;nbsp;), les deux-points (:) ou le point&amp;nbsp;(.); un nom&amp;nbsp;XML ne peut contenir d'autres caractères spéciaux, ni un espace". En outre, il ne peut pas commencer par un chiffre, un trait d'union ou un point. Par exemple, le nom XML de la balise &amp;lt;lavie&amp;gt; est «&amp;nbsp;lavie&amp;nbsp;», alors que la balise &amp;lt;7lavie&amp;gt; ne serait pas autorisée. On réserve les noms débutant par xml, Xml, xMl, xmL, XMl, xML,Xml et XML pour les spécifications XML. Ainsi, la balise &amp;lt;xmldanslavie&amp;gt; est à éviter.&lt;/p&gt;
+&lt;p&gt;Pour les balises de début, aussi dites d'ouverture, on peut ajouter un &lt;b&gt;attribut&lt;/b&gt; au nom&amp;nbsp;XML de la balise. Un attribut porte un nom&amp;nbsp;XML qui doit respecter les mêmes règles que les noms&amp;nbsp;XML des balises; il est suivi du symbole «&amp;nbsp;=&amp;nbsp;» et d'une valeur placée entre guillemets ou apostrophes. Par exemple, la balise &amp;lt;lavie age="5"&amp;gt; indique que l'élément &lt;i&gt;lavie&lt;/i&gt; a un attribut (age="5") qui a comme nom XML «&amp;nbsp;age&amp;nbsp;» et comme valeur «&amp;nbsp;5&amp;nbsp;». Une balise peut avoir plusieurs attributs, comme &amp;lt;lavie age="5" sexe="M"&amp;gt;, mais ils doivent tous porter des noms XML différents&amp;nbsp;: &amp;lt;lavie age="5" age="7"&amp;gt; n'est pas autorisée.&lt;/p&gt;
+&lt;p&gt;Par convention, on réserve l'attribut «&amp;nbsp;xml:lang&amp;nbsp;» à la spécification de la langue dans laquelle le texte est écrit. Cette spécification est optionnelle et assez rarement utilisée. Si on veut indiquer que le contenu d'un élément est en français, on fera comme dans cet exemple&amp;nbsp;: «&amp;nbsp;&amp;lt;explication xml:lang="fr"&amp;gt;J'avais besoin d'une voiture.&amp;lt;/explication&amp;gt;&amp;nbsp;». On peut ajouter au code de la langue, un code de région comme dans «&amp;nbsp;fr-CA&amp;nbsp;» ou «&amp;nbsp;en-US&amp;nbsp;». Le code de la langue et le code de la région doivent être séparés par un tiret. Les codes de langue ou de région qui peuvent être utilisées sont disponibles à l'URL &lt;a href="http://www.iana.org/assignments/language-subtag-registry" shape="rect"&gt;http://www.iana.org/assignments/language-subtag-registry&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Un &lt;b&gt;élément&lt;/b&gt; est l'ensemble du texte borné par deux balises ayant le même nom XML, comme &amp;lt;lavie&amp;gt; et &amp;lt;/lavie&amp;gt;. On dit que l'élément &amp;lt;lavie&amp;gt;&amp;lt;/lavie&amp;gt; a pour nom XML «&amp;nbsp;lavie&amp;nbsp;». L'élément hérite des attributs de sa balise de départ&amp;nbsp;: l'élément &amp;lt;lavie age="5"&amp;gt;&amp;lt;/lavie&amp;gt; a l'attribut «&amp;nbsp;age="5"&amp;nbsp;». Il est à noter que la casse est significative en&amp;nbsp;XML&amp;nbsp;: les balises &amp;lt;A&amp;gt; et &amp;lt;a&amp;gt; n'ont pas le même nom&amp;nbsp;XML. Dans le cas particulier où l'élément est vide (sans contenu), on peut remplacer &amp;lt;lavie&amp;gt;&amp;lt;/lavie&amp;gt; par &amp;lt;lavie/&amp;gt; pour abréger. Un élément peut contenir d'autres éléments, comme dans &amp;lt;lavie&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/lavie&amp;gt;, ou du texte, ou du texte et des éléments comme&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;lavie&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fd&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fsd&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fd&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;lavie&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;. &lt;/pre&gt;
+
+&lt;p&gt;Si un élément contient d'autres éléments, il doit aussi contenir, entre ses balises de début et de fin, les balises de début et de fin de chaque élément. Notez, de plus, que deux éléments ne peuvent se &lt;i&gt;chevaucher&lt;/i&gt;, comme &amp;lt;b&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;; avant de passer à un autre élément, il faut terminer le premier avec sa balise de fin. L'exemple précédent est du XML mal formé!&lt;/p&gt;
+
+&lt;p&gt;Pour bien comprendre, illustrons notre propos par un exemple. Un document XML prend la forme suivante&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.google.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un moteur de recherche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Dans ce document, il y a &lt;b&gt;trois éléments&lt;/b&gt;. Tout d'abord, il y a &lt;b&gt;l'élément-racine&lt;/b&gt; qui comprend tout ce qui est entre les balises &amp;lt;racine&amp;gt; et &amp;lt;/racine&amp;gt;. La première balise marque le début de l'élément-racine. Tout document XML bien formé doit avoir un élément-racine et un seul élément-racine. Tous les autres éléments doivent être contenus dans cet élément-racine. Dans notre exemple, cet élément a deux sous-éléments&amp;nbsp;: &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.google.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt;et&lt;/p&gt;
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un moteur de recherche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt; On peut ajouter un attribut à un des éléments de la façon suivante&amp;nbsp;: &lt;/p&gt;
+&lt;pre&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt; &lt;span style="color:#274796; "&gt;date&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;aujourd'hui&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.google.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un moteur de recherche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Le texte &lt;i&gt;date="aujourd'hui"&lt;/i&gt; est un attribut de l'élément-racine avec pour nom «&amp;nbsp;date&amp;nbsp;» et comme valeur d'attribut «&amp;nbsp;aujourd'hui&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Tout le texte qui ne se trouve pas dans une balise, mais qui se trouve dans l'élément-racine se décompose en nœuds de texte. Par exemple, le document suivant contient un élément contenant un nœud de texte.&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;mon texte&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;Points importants dans la syntaxe de base&lt;/h3&gt;
+&lt;p&gt;Un document XML ne doit avoir qu'un et un seul élément appelé «&amp;nbsp;élément-racine&amp;nbsp;», qui doit contenir tous les autres éléments.&lt;/p&gt;
+&lt;p&gt;Il faut correctement ouvrir et fermer les éléments en séquence, ainsi &amp;lt;a&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/b&amp;gt; n'a aucun sens en XML, il faut plutôt écrire &amp;lt;a&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt; ou alors &amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;.&lt;/p&gt;
+
+&lt;p&gt; Les éléments peuvent eux aussi avoir des attributs, par exemple &amp;lt;a att="test"&amp;gt;&amp;lt;/a&amp;gt;, mais il faut obligatoirement mettre la valeur de l'attribut entre guillemets (") ou apostrophes (').&lt;/p&gt;
+
+&lt;h3&gt;Dans l'ordre ou dans le désordre&lt;/h3&gt;
+
+&lt;p&gt;Dans un document XML, l'ordre dans lequel les éléments sont présentés importe. Par exemple, les deux documents XML suivants ne sont pas équivalents.&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.google.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un moteur de recherche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un moteur de recherche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.google.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;element1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Par contre, l'ordre dans lequel les attributs sont présentés est sans importance. Les deux documents XML suivants sont donc équivalents.&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt; &lt;span style="color:#274796; "&gt;attr1&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;test&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;attr2&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;retest&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt; &lt;span style="color:#274796; "&gt;attr2&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;retest&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;attr1&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;test&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h3&gt;Appels d'entités&lt;/h3&gt;
+&lt;p&gt;Un élément peut contenir du texte, mais ne peut contenir le symbole &amp;lt;, comme dans l'exemple &amp;lt;a&amp;gt;&amp;lt;&amp;lt;/a&amp;gt;, parce que cela mène à de la confusion. On ne peut non plus y trouver le symbole &amp;amp; ou la séquence «&amp;nbsp;]]&amp;gt;&amp;nbsp;». Que faire alors s'il faut utiliser le caractère &amp;lt; dans un texte mathématique, par exemple? Il faut utiliser un &lt;b&gt;appel d'entité&lt;/b&gt;. Un appel d'entité est un bout de texte qui commence par une esperluette (&amp;nbsp;&amp;amp;&amp;nbsp;) et se termine par un point-virgule (&amp;nbsp;;&amp;nbsp;). Nous verrons plus tard que nous pouvons définir nos propres appels d'entités; les appels d'entités suivants font partie de la définition du&amp;nbsp;XML&amp;nbsp;: &lt;/p&gt;
+
+&lt;div class="tableau style1"&gt;
+    &lt;table&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;appel d'entité&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;résultat&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;lt;&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;lt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;amp;&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;gt;&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;quot;&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td rowspan="1" colspan="1"&gt;&amp;amp;apos;&lt;/td&gt;
+                &lt;td rowspan="1" colspan="1"&gt;'&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Ainsi, si le nom de votre compagnie est John&amp;amp;Smith, vous ne devrez pas utiliser un élément comme ceci &amp;lt;nom&amp;gt;John&amp;amp;Smith&amp;lt;/nom&amp;gt;; il vous faudra plutôt utiliser &lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;nom&amp;gt;John&amp;amp;amp;Smith&amp;lt;/nom&amp;gt;.&lt;/pre&gt;
+
+&lt;p&gt;Le texte «&amp;nbsp;]]&amp;gt;&amp;nbsp;» s'écrit «&amp;nbsp;]]&amp;amp;gt;&amp;nbsp;».&lt;/p&gt;
+
+&lt;p&gt;On utilise aussi les appels d'entités pour noter les valeurs des attributs. Supposons que la valeur d'un attribut est une apostrophe suivi d'un guillemet ('"). Les deux choix possibles &amp;lt;nom att="'""&amp;gt; et &amp;lt;nom att=''"'&amp;gt; ne sont pas valables. Dans ce cas, il faudra écrire &amp;lt;nom att="'&amp;amp;quot;"&amp;gt;, &amp;lt;nom att='&amp;amp;apos;"'&amp;gt;, &amp;lt;nom att="&amp;amp;apos;&amp;amp;quot;"&amp;gt; ou &amp;lt;nom att='&amp;amp;apos;&amp;amp;quot;'&amp;gt;.&lt;/p&gt;
+
+&lt;p&gt;Prenez le temps de mémoriser ces appels d'entités et retenez bien dans quel cas on peut être obligé de les utiliser.&lt;/p&gt;
+&lt;p&gt;Il arrive parfois qu'il soit trop lourd d'utiliser des appels d'entités, et on peut alors utiliser un segment «&amp;nbsp;CDATA&amp;nbsp;». Un tel segment débute par «&amp;nbsp;&amp;lt;![CDATA[&amp;nbsp;» et se termine par «&amp;nbsp;]]&amp;gt;&amp;nbsp;». Tout le texte au sein du segment est rendu verbatim. Ainsi, le texte «&amp;nbsp;&amp;lt;![CDATA[&amp;lt;monelement /&amp;gt;]]&amp;gt;&amp;nbsp;» est équivalent à «&amp;nbsp;&amp;lt;monelement /&amp;gt;&amp;nbsp;».&lt;/p&gt;
+
+&lt;h3&gt;Les commentaires&lt;/h3&gt;
+&lt;p&gt;Dans un document XML, on peut ajouter un commentaire qui est normalement destiné à être lu par un humain. Par exemple, dans un fichier de configuration&amp;nbsp;XML, les commentaires pourraient être utilisés pour expliquer la signification des différents éléments pour qu'un humain puisse faire des modifications au besoin.&lt;/p&gt;
+&lt;p&gt;Un commentaire commence par &amp;lt;!-- et se termine par --&amp;gt; et ne doit pas contenir deux tirets de suite (--) entre ces deux bornes, il ne doit pas se terminer par un tiret, mais peut contenir n'importe quel autre texte. Un commentaire peut apparaître avant ou après l'élément-racine, dans un élément, entre deux éléments, etc. Cependant, un commentaire ne peut pas apparaître au sein d'une balise, comme &amp;lt;a &amp;lt;!--ceci est la balise a--&amp;gt;&amp;gt;. C'est du&amp;nbsp;XML mal formé! &lt;/p&gt;
+
+&lt;h3&gt;Les instructions de traitement&lt;/h3&gt;
+&lt;p&gt;En pratique, il serait parfois utile d'appeler des fonctions externes (ou programmes) à partir du&amp;nbsp;XML. Par exemple, vous pourriez avoir un programme «&amp;nbsp;cout&amp;nbsp;» qui donne le prix d'un produit à partir de son numéro de série&amp;nbsp;: pourquoi ne pas appeler ce programme directement du&amp;nbsp;XML? &lt;b&gt;Le&amp;nbsp;XML ne permet pas de le faire&amp;nbsp;: le XML n'est qu'un métalangage pour produire des documents.&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Par contre, en&amp;nbsp;XML, on peut utiliser des instructions de traitement. L'instruction de traitement ne fait rien en soi, mais peut indiquer à vos programmes comment trouver un certain résultat. L'exemple suivant décrit un produit portant le numéro de série 423890 et dont le prix pourrait être déterminé par une application appelée «&amp;nbsp;cout&amp;nbsp;». &lt;/p&gt;
+
+&lt;pre&gt;    &amp;lt;?cout 423890?&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;La syntaxe d'une telle instruction de traitement est simple. L'instruction débute par&amp;nbsp;&amp;lt;? et se termine par&amp;nbsp;?&amp;gt;; immédiatement après&amp;nbsp;&amp;lt;?, un nom XML valable doit apparaître (tous les noms XML valables sont autorisés à l'exception de xml, Xml, XMl, XML, XmL, xMl, xML et xmL). Rappelons que, comme pour n'importe quel contenu textuel&amp;nbsp;XML, il faut faire des appels d'entités pour &amp;lt; et &amp;amp;. Une instruction de traitement n'est pas une balise ou un élément.&lt;/p&gt;
+
+&lt;p&gt;Notez que le langage informatique &lt;i&gt;PHP&lt;/i&gt; utilise les instructions de traitement avec comme nom «&amp;nbsp;php&amp;nbsp;». Voyons l'exemple suivant&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;    &amp;lt;?php echo "Hello World"; ?&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;Tout comme les commentaires, on peut mettre les instructions de traitement partout dans un document XML, sauf à l'intérieur d'une balise.&lt;/p&gt;
+
+&lt;h3&gt;Jeux de caractères&lt;/h3&gt;
+
+&lt;p&gt;Historiquement, on a longtemps représenté les caractères en utilisant des octets (8 bits). Aux États-Unis, on utilisait la norme ASCII qui utilisait les sept premiers bits de chaque octet. Avec le temps, les normes ISO se sont imposées. En français, on utilise souvent le jeu de caractères «&amp;nbsp;ISO-8859-1&amp;nbsp;». Historiquement, l'outil Bloc-note de Microsoft utilise par défaut un jeu de caractères qui est très similaire à ISO-8859-1 (qu'ils nomment parfois ANSI) sur les PC vendus en Amérique du Nord. Malheureusement, n'utiliser que 8 bits pour représenter les caractères signifie qu'il est impossible de tenir compte des langues asiatiques, par exemple, et qu'on ne peut mélanger un texte français avec de l'arabe. Pour cette raison, en 1991, la norme Unicode fut proposée.&lt;/p&gt;
+&lt;p&gt;La norme &lt;a href="http://unicode.org" shape="rect"&gt;Unicode&lt;/a&gt; est de plus en plus utilisée et elle est popularisée en partie par son utilisation dans le XML. En effet, par défaut, un document XML utilise Unicode (spécifiquement UTF-8 ou&amp;nbsp;UTF-16) et ce sont les seuls jeux de caractères qu'un processeur XML est requis de connaître. L'avantage principal d'Unicode est sa richesse&amp;nbsp;: la version 5.0 du format Unicode permet de représenter 99&amp;nbsp;000 caractères différents incluant les caractères Klingon de Star Trek. En comparaison, le jeu de caractères ISO-8859-1 permet de représenter moins de 255 caractères (8&amp;nbsp;bits).&lt;/p&gt;
+
+&lt;p&gt;UTF-8 et UTF-16 sont les deux encodages Unicode les plus utilisés en XML. UTF-8 est un encodage à longueur variable qui représente les caractères ASCII (les 128 premiers) sur un seul octet, exactement comme l’ancien ASCII, ce qui le rend totalement rétrocompatible avec les innombrables fichiers et outils qui supposent encore cet encodage ; les caractères accentués latins occupent deux octets, et les caractères plus rares (asiatiques, émojis, etc.) jusqu’à quatre octets. Cette économie fait d’UTF-8 l’encodage par défaut sur le web, dans les bases de données modernes et dans la majorité des fichiers XML actuels. UTF-16, quant à lui, utilise des unités de deux octets (16 bits) pour chaque caractère de base ; les caractères du plan multilangue supplémentaire nécessitent alors une paire de substituts (surrogate pairs) et occupent donc quatre octets. Il est plus compact que UTF-8 pour les textes majoritairement asiatiques, mais consomme davantage d’espace pour les textes latins et pose des problèmes de compatibilité avec les outils qui s’attendent à un octet = un caractère. En XML, un parseur doit obligatoirement comprendre les deux, mais UTF-8 reste très largement dominant grâce à sa compatibilité et à sa robustesse.&lt;/p&gt;
+
+&lt;p&gt;Les caractères de la langue anglaise (ASCII) sont toujours stockés de la même façon, qu'on utilise UTF-8 ou ISO-8859-1, en utilisant 7 bits. C'est donc dire que les programmeurs anglophones travaillant pour des utilisateurs anglophones peuvent, jusqu'à un certain point, ignorer les questions d'encodage des caractères. &lt;/p&gt;
+
+&lt;p&gt;La plupart des logiciels récents supportent la norme Unicode. D'ailleurs, depuis le tout début, une chaîne de caractères en Java est représentée en utilisant la norme Unicode. Par contre, il restera toujours des logiciels utilisant d'autres jeux de caractères.&lt;/p&gt;
+
+&lt;h3&gt;La déclaration XML&lt;/h3&gt;
+&lt;p&gt;La déclaration XML ressemble à s'y méprendre à une instruction de traitement et prend la forme &amp;lt;?xml ... ?&amp;gt;. Une déclaration XML n'est pas une balise ou un élément. Le contenu d'une déclaration&amp;nbsp;XML comporte généralement au maximum trois &lt;i&gt;attributs&lt;/i&gt;&amp;nbsp;: version="...", encoding="..." et standalone="...". La version&amp;nbsp;1.0 du&amp;nbsp;XML est la plus utilisée; bien que la version&amp;nbsp;1.1 existe, elle est fort peu utilisée. Selon l'un des inventeurs du XML, Tim Bray, il est peu probable qu'il y ait une version&amp;nbsp;2.0 du XML&amp;nbsp;.&lt;/p&gt;
+
+&lt;blockquote style="background:#ccc;"&gt;
+    &lt;p&gt;Je ne pense pas qu'il y aura de XML&amp;nbsp;2.0. Les obstacles politiques seraient effrayants -&amp;nbsp;tout le monde voudra sa part du gâteau&amp;nbsp;-, et la base installée de logiciels qui reconnaissent XML comprend aujourd'hui à peu près tous les ordinateurs liés à Internet, donc une transition me semblerait trop onéreuse. (&lt;a href="http://developpeur.journaldunet.com/itws/070129-itw-sun-bray.shtml" shape="rect"&gt;Interview de Tim Bray&lt;/a&gt;, JDN Développeurs, 29 janvier 2007)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sur un disque ou dans un réseau, un document XML n'est rien donc qu'une chaîne d'octets. Pour interpréter cette chaîne comme du texte, il faut spécifier l'encodage des caractères. Par défaut, le XML suppose que nous avons un encodage des caractères de type Unicode. On utilise souvent une déclaration&amp;nbsp;XML avec «&amp;nbsp;encoding="ISO-8859-1"&amp;nbsp;» pour pouvoir utiliser les accents dans le document&amp;nbsp;en conjonction des outils logiciels n'ayant pas été mis à jour au vingt-et-unième siècle. Seuls les caractères de la langue anglaise (ASCII) ne changent pas entre ISO-8859-1 et unicode. L'utilisation des accents en français sans la déclaration «&amp;nbsp;encoding="ISO-8859-1"&amp;nbsp;» peut alors entraîner des problèmes si le document a été enregistré avec l'encodage ISO-8859-1. &lt;/p&gt;
+
+&lt;p&gt;Un même document XML peut être enregistré sous plusieurs jeux de caractères. Cependant, il faut que la déclaration correspondent au format utilisé lors de l'enregistrement du fichier, sinon les caractères accentués (par exemple) seront pervertis. Par exemple, ouvrez les documents suivants dans un programme capable de visualiser des documents XML (comme, peut-être, votre navigateur): &lt;a href="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/dossier%20zip/testiso88591.xml?forcedownload=1"&gt;testiso88591.xml&lt;/a&gt; et &lt;a href="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/dossier%20zip/testutf8.xml?forcedownload=1"&gt;testutf8.xml&lt;/a&gt;. Les deux documents sont identiques à l'exception des jeux de caractères. Ils devraient tous les deux être traités correctement, car les jeux de caractères sont bien déclarés.&lt;/p&gt;
+
+&lt;p&gt; L'attribut «&amp;nbsp;standalone&amp;nbsp;» prend la valeur &lt;i&gt;yes&lt;/i&gt; ou &lt;i&gt;no&lt;/i&gt;, selon que l'on veut que la DTD externe soit lue ou non. Nous traiterons des DTD, plus tard.&lt;/p&gt;
+&lt;p&gt;Il est important de prendre en compte l'encodage des caractères. Le document&amp;nbsp;XML suivant, si on l'enregistre en ISO-8859-1, ne serait pas bien formé, car il utilise des accents&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;&amp;lt;&lt;/span&gt;étudiant&amp;gt;
+     Jean
+    &lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;&amp;lt;&lt;/span&gt;/étudiant&amp;gt;
+    &lt;/pre&gt;
+
+&lt;p&gt;Par contre, le document&amp;nbsp;XML qui suit est bien formé lorsqu'on l'enregistre en ISO-8859-1&amp;nbsp;: &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;étudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     Jean
+     &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;étudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+
+&lt;p&gt;La déclaration&amp;nbsp;XML doit &lt;b&gt;obligatoirement être au tout début du document&lt;/b&gt; ou être carrément absente&amp;nbsp;: même un espace n'est pas permis.&lt;/p&gt;
+
+&lt;h3&gt;Les espaces&lt;/h3&gt;
+
+&lt;p&gt;En XML, les espaces entre les balises comptent, qu'il s'agisse d'un retour de charriot, d'une &lt;a href="http://fr.wikipedia.org/wiki/Tabulation" shape="rect"&gt;tabulation&lt;/a&gt; ou d'un simple espace. Ainsi, le document suivant se décompose en 7&amp;nbsp;parties ou nœuds&amp;nbsp;: un élément-racine nommé html qui contient d'abord un nœud de texte (le retour de charriot) suivi d'un élément produit contenant le nœud de texte «1», suivi d'un autre nœud de texte (le retour de charriot), suivi d'un élément serie (vide), suivi d'un quatrième nœud de texte (le retour de charriot). &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;1&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;serie&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+
+&lt;p&gt;Par contre ce document ne contient que 4&amp;nbsp;nœuds (3 éléments et 1 nœud de texte)&amp;nbsp;: &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;1&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;serie&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+
+&lt;p&gt;En effet, comme il n'y a pas d'espace ou de retour de charriot entre les balises, il n'y a qu'un seul nœud de texte. Si on omet les attributs, les nœuds débutent et se terminent généralement avec les balises.&lt;/p&gt;
+
+&lt;p&gt;On peut indiquer que les espaces entre les éléments sont significatifs avec l'attribut xml:space qui peut prendre la valeur default ou la valeur preserve. Dans cet exemple, on souhaite indiquer que les espaces sont significatifs&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;space&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;preserve&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;1&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;serie&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+
+&lt;h3&gt;Les fins de ligne&lt;/h3&gt;
+
+&lt;p&gt;Les fichiers de texte sont souvent organisés en lignes. Selon le système d'exploitation, il y a plusieurs façon de représenter une fin de ligne. Les systèmes d'exploitation Microsoft utilisent deux caractères («&amp;nbsp;retour de charriot&amp;nbsp;» et «&amp;nbsp;nouvelle ligne&amp;nbsp;») à la fin de chaque ligne. Les autres système utilisent généralement un seul caractère («&amp;nbsp;nouvelle ligne&amp;nbsp;»). Les processeurs XML sont requis de normaliser la situation et de remplacer les deux caractères utilisés par les systèmes Microsoft par un seul caractère lors de la lecture du fichier. Ainsi, peu importe comment l'on note les fins de ligne, un processeur XML ne vera qu'un caractère «&amp;nbsp;nouvelle ligne&amp;nbsp;».&lt;/p&gt;
+
+&lt;h3&gt;Les hyperliens&lt;/h3&gt;
+&lt;p&gt;Il arrive fréquemment qu'on utilise des hyperliens dans les documents XML. On distingue deux types d'hyperliens&amp;nbsp;: les hyperliens contenant une adresse absolue (telle que http://domaine.ca/pong.png) et les hyperliens contenant des adresses relatives (pong.png). On reconnaît les adresses relatives parce qu'elles ne débutent pas par un protocole tel que http ou ftp. Pour compléter les adresses relatives et les transformer en adresses absolues, on utilise fréquemment l'adresse du document. Ainsi, si le document suivant se trouve à l'adresse http://domaine.ca/fichier.xml, alors un logiciel pourra charger une image située à l'adresse http://domaine.ca/pong.png&amp;nbsp;: &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    adresse relative:
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;image&lt;/span&gt; &lt;span style="color:#274796; "&gt;lien&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;pong.png&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+
+
+&lt;p&gt;Le XML permet de spécifier un attribut xml:base qui sert à interpréter les adresses relatives remplaçant l'adresse du document. Le document suivant pointe vers une image à l'adresse http://domaine.ca/image/pong.png&amp;nbsp;: &lt;/p&gt;
+
+&lt;pre&gt;    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;base&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;domaine.ca&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;base&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;image/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;image&lt;/span&gt; &lt;span style="color:#274796; "&gt;lien&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;pong.png&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;racine&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;h3&gt;Documents bien formés&lt;/h3&gt;
+&lt;p&gt;Un document XML qui respecte ces règles de base est dit «&amp;nbsp;bien formé&amp;nbsp;». Pour éviter la confusion, il ne faut pas utiliser des synonymes comme «&amp;nbsp;correct&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;La terminologie utilisée peut sembler très aride. Cependant, la rigueur qu'exige le XML est aussi garante de la cohérence. Comme tous les termes sont bien définis, il est plus facile de s'entendre entre experts. Comme le&amp;nbsp;XML est surtout utilisé pour la communication entre les logiciels, la rigueur évitera plus tard les bogues et les incompréhensions.
+&lt;/p&gt;
+&lt;p&gt;Pouvoir reconnaître un document XML bien formé ou comprendre pourquoi un document n'est pas bien formé, permet de s'assurer qu'un logiciel pourra traiter les informations, et qu'on saura quoi faire en cas de problème.&lt;/p&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>22</revision>
+    <timemodified>1763410847</timemodified>
+  </page>
+</activity>

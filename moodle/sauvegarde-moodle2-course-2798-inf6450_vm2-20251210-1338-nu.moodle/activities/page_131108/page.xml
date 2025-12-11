@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72260" moduleid="131108" modulename="page" contextid="970229">
+  <page id="72260">
+    <name>Asynchronous JavaScript And XML (AJAX)</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Asynchronous JavaScript And XML (AJAX)&lt;/h1&gt;
+
+&lt;p&gt;Normalement, pour récupérer des données sur le serveur (description d’un produit, horaire, etc.), il faut recharger une nouvelle page. Avec &lt;strong&gt;AJAX&lt;/strong&gt; (&lt;em&gt;Asynchronous JavaScript And XML&lt;/em&gt;), un script JavaScript peut charger un fichier XML (ou JSON) en arrière-plan, sans recharger la page. L’utilisateur a l’impression que l’application est beaucoup plus rapide.&lt;/p&gt;
+
+&lt;p&gt;Exemples célèbres : Gmail, Google Maps, Facebook (à l’époque), etc.&lt;/p&gt;
+
+&lt;h2&gt;Exemple simple : charger et afficher le titre d’un document XHTML&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#7f9fbf;"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;html&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;xmlns&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"http://www.w3.org/1999/xhtml"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Exemple AJAX&lt;span style="color:#e06c75;"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#5c6370;"&gt;// Charge un document XML/XHTML et appelle afficheTitre()&lt;/span&gt;
+      &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;chargeDocument&lt;/span&gt;(uri) {
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; xmlhttp = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; XMLHttpRequest();
+        xmlhttp.&lt;span style="color:#61afef;"&gt;open&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"GET"&lt;/span&gt;, uri, &lt;span style="color:#d19a66;"&gt;true&lt;/span&gt;);
+        xmlhttp.&lt;span style="color:#61afef;"&gt;onreadystatechange&lt;/span&gt; = &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt;() {
+          &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (xmlhttp.&lt;span style="color:#61afef;"&gt;readyState&lt;/span&gt; === &lt;span style="color:#d19a66;"&gt;4&lt;/span&gt; &amp;&amp; xmlhttp.&lt;span style="color:#61afef;"&gt;status&lt;/span&gt; === &lt;span style="color:#d19a66;"&gt;200&lt;/span&gt;) {
+            &lt;span style="color:#61afef;"&gt;afficheTitre&lt;/span&gt;(xmlhttp.&lt;span style="color:#61afef;"&gt;responseXML&lt;/span&gt;);
+          }
+        };
+        xmlhttp.&lt;span style="color:#61afef;"&gt;send&lt;/span&gt;(&lt;span style="color:#d19a66;"&gt;null&lt;/span&gt;);
+      }
+
+      &lt;span style="color:#5c6370;"&gt;// Affiche le contenu de l'élément &amp;lt;title&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;afficheTitre&lt;/span&gt;(doc) {
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; titre = doc.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"title"&lt;/span&gt;)[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;];
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; texte = titre.&lt;span style="color:#61afef;"&gt;firstChild&lt;/span&gt; ? titre.&lt;span style="color:#61afef;"&gt;firstChild&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;nodeValue&lt;/span&gt; : &lt;span style="color:#98c379;"&gt;""&lt;/span&gt;;
+
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; p = document.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"p"&lt;/span&gt;);
+        p.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(document.&lt;span style="color:#61afef;"&gt;createTextNode&lt;/span&gt;(texte));
+        document.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"body"&lt;/span&gt;)[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;].&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(p);
+      }
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Cliquez plusieurs fois sur les liens ci-dessous :&lt;span style="color:#e06c75;"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;ul&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#e06c75;"&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;href&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"javascript:chargeDocument('domtutoriel.xhtml')"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;domtutoriel.xhtml&lt;span style="color:#e06c75;"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#e06c75;"&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;href&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"javascript:chargeDocument('travail5.xhtml')"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;travail5.xhtml&lt;span style="color:#e06c75;"&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Exemple avancé : afficher les titres d’un flux RSS (Le Devoir)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#7f9fbf;"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;html&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;xmlns&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"http://www.w3.org/1999/xhtml"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Exemple AJAX – Flux RSS&lt;span style="color:#e06c75;"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;script&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;chargeDocument&lt;/span&gt;(uri) {
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; xmlhttp = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; XMLHttpRequest();
+        xmlhttp.&lt;span style="color:#61afef;"&gt;open&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"GET"&lt;/span&gt;, uri, &lt;span style="color:#d19a66;"&gt;true&lt;/span&gt;);
+        xmlhttp.&lt;span style="color:#61afef;"&gt;onreadystatechange&lt;/span&gt; = &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt;() {
+          &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (xmlhttp.&lt;span style="color:#61afef;"&gt;readyState&lt;/span&gt; === &lt;span style="color:#d19a66;"&gt;4&lt;/span&gt; &amp;&amp; xmlhttp.&lt;span style="color:#61afef;"&gt;status&lt;/span&gt; === &lt;span style="color:#d19a66;"&gt;200&lt;/span&gt;) {
+            &lt;span style="color:#61afef;"&gt;afficheTitres&lt;/span&gt;(xmlhttp.&lt;span style="color:#61afef;"&gt;responseXML&lt;/span&gt;);
+          }
+        };
+        xmlhttp.&lt;span style="color:#61afef;"&gt;send&lt;/span&gt;(&lt;span style="color:#d19a66;"&gt;null&lt;/span&gt;);
+      }
+
+      &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;afficheTitres&lt;/span&gt;(doc) {
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; titres = doc.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"title"&lt;/span&gt;);
+        &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; ol = document.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"ol"&lt;/span&gt;);
+
+        &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; titres.&lt;span style="color:#61afef;"&gt;length&lt;/span&gt;; i++) {
+          &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; li = document.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"li"&lt;/span&gt;);
+          li.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(document.&lt;span style="color:#61afef;"&gt;createTextNode&lt;/span&gt;(titres[i].&lt;span style="color:#61afef;"&gt;firstChild&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;nodeValue&lt;/span&gt;));
+          ol.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(li);
+        }
+        document.&lt;span style="color:#61afef;"&gt;body&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(ol);
+      }
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;a&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;href&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"javascript:chargeDocument('ledevoir.xml')"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;Charger les manchettes du Devoir&lt;span style="color:#e06c75;"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#e06c75;"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Utiliser importNode() pour insérer tout un fragment XML&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;afficheListe&lt;/span&gt;(doc) {
+  &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; ul = doc.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"ul"&lt;/span&gt;)[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;];
+  &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; copie = document.&lt;span style="color:#61afef;"&gt;importNode&lt;/span&gt;(ul, &lt;span style="color:#d19a66;"&gt;true&lt;/span&gt;);   &lt;span style="color:#5c6370;"&gt;// true = copie profonde&lt;/span&gt;
+  document.&lt;span style="color:#61afef;"&gt;body&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(copie);
+}&lt;/pre&gt;
+
+&lt;h2&gt;Chargement de fichiers locaux (Chrome, Edge, etc.)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#e06c75;"&gt;&amp;lt;input&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;type&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"file"&lt;/span&gt; &lt;span style="color:#56b6c2;"&gt;onchange&lt;/span&gt;=&lt;span style="color:#98c379;"&gt;"chargeFichier(this.files[0])"&lt;/span&gt;&lt;span style="color:#e06c75;"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;function&lt;/span&gt; &lt;span style="color:#61afef;"&gt;chargeFichier&lt;/span&gt;(fichier) {
+  &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; lecteur = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileReader();
+  lecteur.&lt;span style="color:#61afef;"&gt;onload&lt;/span&gt; = &lt;span style="color:#c678dd;"&gt;function&lt;/span&gt;(e) {
+    &lt;span style="color:#c678dd;"&gt;var&lt;/span&gt; doc = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; DOMParser().&lt;span style="color:#61afef;"&gt;parseFromString&lt;/span&gt;(e.&lt;span style="color:#61afef;"&gt;target&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;result&lt;/span&gt;, &lt;span style="color:#98c379;"&gt;"application/xml"&lt;/span&gt;);
+    &lt;span style="color:#61afef;"&gt;afficheTitres&lt;/span&gt;(doc);
+  };
+  lecteur.&lt;span style="color:#61afef;"&gt;readAsText&lt;/span&gt;(fichier);
+}&lt;/pre&gt;
+
+&lt;h2&gt;En résumé&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;AJAX = &lt;code&gt;XMLHttpRequest&lt;/code&gt; + DOM + un peu de JavaScript&lt;/li&gt;
+    &lt;li&gt;Très simple avec les navigateurs modernes (Firefox, Chrome, Edge)&lt;/li&gt;
+    &lt;li&gt;Problèmes de compatibilité avec les anciennes versions d’Internet Explorer&lt;/li&gt;
+    &lt;li&gt;De nos jours, on utilise souvent &lt;code&gt;fetch()&lt;/code&gt; ou des bibliothèques comme &lt;strong&gt;jQuery&lt;/strong&gt;, &lt;strong&gt;axios&lt;/strong&gt; ou &lt;strong&gt;React&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1764380734</timemodified>
+  </page>
+</activity>

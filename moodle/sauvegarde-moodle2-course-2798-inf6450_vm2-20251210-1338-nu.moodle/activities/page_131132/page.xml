@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72284" moduleid="131132" modulename="page" contextid="970259">
+  <page id="72284">
+    <name>Examen préparatoire</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Examen préparatoire&lt;/h1&gt;
+&lt;p&gt;Afin de bien vous préparer à l’examen final de ce cours, nous vous invitons à répondre aux questions d’un &lt;a href="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/dossier%20zip/examenfactice.pdf"&gt;examen préparatoire&lt;/a&gt;.&lt;/p&gt;
+
+
+
+    &lt;div style="max-width: 600px; margin: 20px auto; padding: 20px; font-family: Arial, sans-serif; color: #333;"&gt;
+        &lt;h2 style="text-align: center;"&gt;Vous avez aimé le cours ?&lt;/h2&gt;
+        &lt;p&gt;Si vous avez aimé le cours, voici quelques façons de le montrer :&lt;/p&gt;
+&lt;ul&gt;
+        &lt;li&gt;Parlez du cours autour de vous et partagez vos commentaires positifs en ligne.&lt;/li&gt;
+        &lt;li&gt;Visitez la &lt;a href="https://www.teluq.ca/siteweb/univ/dlemire.html" target="_blank" rel="noopener noreferrer"&gt;page du professeur&lt;/a&gt; pour découvrir les autres cours qu’il a conçus.&lt;/li&gt;
+        &lt;li&gt;Si vous avez un compte GitHub, &lt;a href="https://github.com/lemire" target="_blank" rel="noopener noreferrer"&gt;suivez le professeur&lt;/a&gt; en cliquant sur le bouton « follow ».&lt;/li&gt;
+        &lt;li&gt;Si vous lisez l’anglais, &lt;a href="https://lemire.me/blog/" target="_blank" rel="noopener noreferrer"&gt;abonnez-vous au blog du professeur&lt;/a&gt;.&lt;/li&gt;
+        &lt;li&gt;Suivez le professeur sur &lt;a href="https://x.com/lemire" target="_blank" rel="noopener noreferrer"&gt;X&lt;/a&gt;.&lt;/li&gt;
+        &lt;li&gt;Découvrez les &lt;a href="https://www.amazon.ca/stores/Daniel-Lemire/author/B0CR7YMZT2" target="_blank" rel="noopener noreferrer"&gt;livres écrits par le professeur&lt;/a&gt;.&lt;/li&gt;
+
+&lt;/ul&gt;
+    &lt;/div&gt;
+&lt;div style="border: 2px solid #b91c1c; padding: 16px; border-radius: 8px; background-color: #fef2f2; max-width: 600px; margin: 0 auto;"&gt;
+  &lt;h2 style="color: #7f1d1d; font-size: 1.5rem; margin-bottom: 12px;"&gt;Un problème ou une suggestion ?&lt;/h2&gt;
+  &lt;p style="line-height: 1.6; color: #4b1c1c;"&gt;Vous pouvez à tout moment soumettre un commentaire anonyme concernant le cours via &lt;a href="https://docs.google.com/forms/d/1emnei-XQua_DaLPXxMby-SCI9UMbQgSiilKOCRNhUZQ/viewform" rel="noopener noreferrer" target="_blank" style="color: #b91c1c; text-decoration: underline;"&gt;ce formulaire dédié&lt;/a&gt;. Cela nous permet de réagir rapidement en cas de problème. Vous pouvez également en discuter directement avec la personne qui vous encadre.&lt;/p&gt;
+  &lt;p style="line-height: 1.6; color: #4b1c1c; margin-top: 12px;"&gt;Nous accordons une grande importance à vos retours et travaillons continuellement à l’amélioration du cours.&lt;/p&gt;
+&lt;/div&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1752801750</timemodified>
+  </page>
+</activity>

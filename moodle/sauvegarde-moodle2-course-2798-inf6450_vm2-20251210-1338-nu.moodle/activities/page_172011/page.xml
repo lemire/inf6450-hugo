@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94599" moduleid="172011" modulename="page" contextid="1138689">
+  <page id="94599">
+    <name>Activité JSON/XML avec Jackson</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Activité JSON/XML avec Jackson&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/lemire/javajackson"&gt;Nous vous invitons maintenant à faire une activité avec la librairie Java Jackson.&lt;/a&gt;
+Dans cette activité, vous verrez comment on peut créer et analyser des documents JSON et XML avec une librairie dédiée en Java.
+
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1765390189</timemodified>
+  </page>
+</activity>

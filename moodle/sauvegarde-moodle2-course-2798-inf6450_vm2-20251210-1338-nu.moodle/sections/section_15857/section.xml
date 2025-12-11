@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section id="15857">
+  <number>0</number>
+  <name>Semaine 1</name>
+  <summary>&lt;h1&gt;Présentation de la semaine&lt;/h1&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/biMsiwqAfso?si=8bXeRIqs_H6XYH7n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+
+&lt;p&gt;Bienvenue&amp;nbsp;! Mon nom est &lt;a href="http://lemire.me/fr/" rel="noopener noreferrer external" target="_blank"&gt;Daniel Lemire&lt;/a&gt;. Je travaille comme professeur et chercheur
+    en informatique.&lt;/p&gt;
+&lt;p&gt;Ce cours porte sur le XML. Il s’agit d’une technologie omniprésente dans nos vies. Le XML est la norme dans les
+    documents informatiques (des documents Word aux livres électroniques). Pratiquement tous les systèmes informatiques
+    d’envergure utilisent le XML, notamment pour permettre à différents serveurs d’échanger des informations
+    semi-structurées. Comme vous pourrez le constater, il s’agit d’un sujet riche et plus difficile qu’il n’y paraît.
+&lt;/p&gt;
+&lt;p&gt;Dans ce cours, vous apprendrez à&amp;nbsp;:&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Utiliser un «&amp;nbsp;vocabulaire&amp;nbsp;» ou une application XML pour
+    présenter des informations en format XML.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Déterminer si un document XML est bien formé ou valable.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Apprécier les coûts de développement de solutions XML au sein
+    d’une organisation.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Appliquer la méthodologie orientée objet pour l’utilisation, la
+    fusion et le filtrage des fichiers XML.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Produire et interpréter des fichiers XML.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Utiliser des transformations XSLT et des instructions CSS.
+    &lt;br&gt;&lt;span&gt;&lt;b&gt;–&lt;/b&gt;&lt;/span&gt;&amp;nbsp;Traduire, au sein de son organisation, sa compréhension du XML
+    dans la gestion des informations.
+&lt;/p&gt;
+&lt;p&gt;Le XML vous permet de générer des graphiques de grande qualité (SVG) que vous pouvez inclure au sein de pages web ou de document Word. Le XML vous permet de produire des équations mathématiques. Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comment créez un document Word à partir d'un programme Java.&lt;/p&gt;
+&lt;p&gt;Avant de suivre ce cours, vous devez normalement avoir un suivi au moins un cours de Java ou l’équivalent.&lt;/p&gt;
+&lt;p&gt;Il n’y a pas de contact de démarrage dans ce cours. Vous devez commencer le cours immédiatement.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;À propos du professeur&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Daniel Lemire est professeur d’informatique à l’Université TÉLUQ. Il a aussi été un chercheur au conseil national de
+    recherche du Canada et un entrepreneur. Il est l’auteur de plus de 80 publications arbitrées, incluant plus de 55
+    articles parus dans des revues internationales. Il a écrit plusieurs livres. Il détient des subventions de recherche
+    depuis plus de 20 ans. Il est éditeur de la revue Software&amp;nbsp;: Practice and Experience, fondée en 1971. Il
+    participe aux comités scientifiques de plusieurs conférences prestigieuses en informatique (par exemple, ACM CIKM,
+    WWW, ACM WSDM, ACM SIGIR, ACM RecSys). Ses logiciels sont utilisés par de grandes sociétés comme Google et Facebook.
+    En 2020 et 2021, Daniel Lemire était co-président du comité informatique du CRSNG. Il a reçu le prix d’excellence de
+    l’Université du Québec 2020 en recherche et création pour une réalisation en recherche (tous secteurs confondus)
+    concernant ses travaux sur l’accélération du traitement des fichiers JSON. Il est parmi les 2% de scientifiques les
+    plus cités au monde selon le classement de l’Université Stanford.&lt;/p&gt;
+&lt;p&gt;À lire&amp;nbsp;: &lt;a href="https://www.journaldemontreal.com/2024/10/18/les-geants-du-numerique-raffolent-des-algorithmes-de-ce-prof-quebecois" rel="noopener noreferrer external" target="_blank"&gt;Les géants du numérique raffolent des
+        algorithmes de ce prof québécois&lt;/a&gt; (Journal de Montréal).&lt;/p&gt;
+
+
+&lt;h3&gt;Quelques-uns des travaux de Daniel Lemire&lt;/h3&gt;
+
+&lt;p&gt;Avec Geoff Langdale, John Keiser, Paul Dreik et d’autres, il est l’auteur de la bibliothèque JSON la plus rapide au monde : simdjson. C’est la première bibliothèque capable de parser plusieurs gigaoctets de JSON par seconde. Elle est utilisée par de nombreux systèmes importants tels que Meta Velox, le runtime Node.js, ClickHouse, WatermelonDB, Apache Doris, Milvus, StarRocks. En 2024, l’article On-demand JSON: A better way to parse documents? a été l’article le plus lu des cinq dernières années dans la revue Software: Practice and Experience.&lt;/p&gt;
+&lt;p&gt;Avec Yagiz Nizipli et d’autres, il est l’auteur d’Ada URL parser, le parseur d’URL de Node.js et des Cloudflare Workers. Nous pensons qu’il s’agit du parseur conforme WHATWG le plus rapide au monde. Leur article de 2024 dans Software: Practice and Experience est le quatrième article le plus lu des cinq dernières années selon l’éditeur (Wiley).
+Avec Robert Clausecker, Wojciech Muła, John Keiser, Paul Dreik et d’autres, il a écrit la bibliothèque simdutf, la bibliothèque la plus rapide au monde pour le transcodage Unicode et le base64. Elle accélère deux des principaux runtimes JavaScript (Node.js et Bun). Elle fait également partie de WebKit, le moteur derrière le navigateur Safari, et de Chromium, le moteur derrière Google Chrome et Microsoft Edge. L’algorithme de validation UTF-8 qu’il a conçu avec Keiser est également intégré à l’interpréteur PHP et à de nombreuses bibliothèques standard.&lt;/p&gt;
+&lt;p&gt;Il a joué un rôle déterminant dans la conception de l’algorithme de parsing de nombres le plus rapide au monde. Avec des collaborateurs, il a écrit la bibliothèque fast_float qui fait partie de GCC. Elle est également présente dans WebKit, le moteur de Safari, le navigateur web d’Apple. Elle a aussi été adoptée par Chromium, le moteur derrière Google Chrome et Microsoft Edge. Cette approche de parsing des nombres est intégrée aux bibliothèques runtime de Go, C# et Rust. Elle est utilisée dans MySQL. Pour la première fois, elle a permis de parser des nombres à plus d’un gigaoctet par seconde.&lt;/p&gt;
+&lt;p&gt;Il a conçu le format Roaring bitmap comme format d’index bitmap efficace. Ce format est devenu un standard. Il est utilisé par Apache Lucene et les systèmes dérivés tels que Solr et Elasticsearch, Apache Druid, etc. Le moteur SQL de YouTube, Google Procella, utilise les Roaring bitmaps pour l’indexation. Avec des ingénieurs comme Richard Startin, il a contribué de manière déterminante à de nombreuses implémentations, notamment RoaringBitmap (Java), roaring (Go) et CRoaring (C et C++).&lt;/p&gt;
+
+&lt;h2&gt;Ce que ce cours offre, ce qu’il n’offre pas...&lt;/h2&gt;
+&lt;p&gt;Ce cours offre une introduction complète à la technologie XML est aux technologies apparentées (CSS, XSLT, HTML,
+    JSON, etc.). Il comprend près d’une centaine d’articles avec des centaines d’exemples et questions
+    d’auto-évaluation. Après avoir terminé ce cours, vous pourrez rapidement être productif avec ces technologies.&lt;/p&gt;
+&lt;p&gt;Par contre, ce cours ne remplace pas l’Internet. Il existe littéralement des centaines de milliers d’articles sur le
+    XML et les technologies apparentées sur le web. Par exemple, &lt;a href="http://www.w3schools.com/" rel="noopener noreferrer external" target="_blank"&gt;w3schools&lt;/a&gt; offre des centaines d’articles très pertinentsª
+    sur le sujet du cours. Un peu partout dans le cours, on vous encourage à accéder à ces autres ressources. Dans bien
+    des cas, elles offrent une information plus détaillées. En développant ce cours, nous n’avons pas visé à développer
+    une encyclopédie exhaustive et constamment mise à jour sur le sujet... il s’agit plutôt d’un point d’entrée sur la
+    question.&lt;/p&gt;
+&lt;p&gt;Vous avez trouvé une ressource géniale hors du site du cours qui vous a beaucoup aidé&amp;nbsp;? Bravo&amp;nbsp;! Si nous
+    n’offrons pas de lien vers la ressource, n’hésitez pas à nous le faire savoir, nous pourrons en faire bénéficier les
+    autres étudiants.&lt;/p&gt;
+&lt;p&gt;Ce cours ne présente pas non plus tous les points de vue techniques. Par exemple, certains étudiants aimeraient
+    retrouver un traitement des technologies offertes par une société en particulier (comme Microsoft ou Oracle).
+    D’autres encore voudraient que le cours se spécialise sur le développement web et adopte une librairie ou
+    plate-forme particulière (par ex., jQuery). Si le cours tente de couvrir tous les sujets importants, il ne
+    s’aventure pas pour autant dans de telles spécialisations. On vise plutôt à offrir les fondements à partir desquels
+    vous pouvez explorer davantage par vous-même peu importe votre domaine d’application.&lt;/p&gt;
+&lt;h2 class="spip"&gt;Quelque chose vous déplaît&amp;nbsp;? Vous avez remarqué une erreur&amp;nbsp;?&lt;/h2&gt;
+&lt;p&gt;En tout temps, vous pouvez laisser un mot anonyme au sujet du cours sur &lt;a href="https://docs.google.com/forms/d/1emnei-XQua_DaLPXxMby-SCI9UMbQgSiilKOCRNhUZQ/viewform" rel="noopener noreferrer external" target="_blank"&gt;le formulaire prévu à cet effet&lt;/a&gt;. Ce formulaire nous
+    permet de réagir rapidement quand un problème survient dans le cadre du cours. Bien entendu, vous pouvez aussi
+    aviser la personne qui vous encadre de tout problème que vous rencontrez.&lt;/p&gt;
+&lt;p&gt;Nous portons attention à tous vos commentaires et tâchons d’améliorer le cours en conséquence.&lt;/p&gt;
+&lt;h2&gt;Mathématiques&lt;/h2&gt;
+&lt;p&gt;Ce cours ne nécessite pas beaucoup de mathématiques en dehors de celles déjà couvertes au secondaire. Par exemple, il
+    faut être familier avec la théorie des ensembles (incluant les notions d’union et d’intersection) et la théorie des
+    graphes.&lt;/p&gt;
+&lt;p&gt;Un site d’aide aux devoirs pour les étudiants du secondaires comme &lt;a href="https://www.alloprof.qc.ca" rel="noopener noreferrer external" target="_blank"&gt;Allô prof&lt;/a&gt; devrait vous permettre de
+    faire une rapide mise à niveau si ces notions ne vous sont plus familières.&lt;/p&gt;
+&lt;h2&gt;Attention&amp;nbsp;: Java&lt;/h2&gt;
+&lt;p&gt;Ce cours suppose que vous êtes capable d’utiliser et de compiler un programme Java en ligne de commande. Avant de
+    commencer le cours, créez un fichier intitulé «&amp;nbsp;HelloWorld.java&amp;nbsp;» avec le contenu suivant&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello World!");
+        }
+    }
+    &lt;/pre&gt;
+
+&lt;p&gt;Assurez-vous d’avoir un JDK sur votre machine. Allez en &lt;a href="http://fr.wikipedia.org/wiki/Interpr%C3%A9teur_de_commandes#Sous_Microsoft_Windows" rel="noopener noreferrer external" target="_blank"&gt;ligne de commande&lt;/a&gt;, allez dans le dossier où vous avez
+    créé HelloWorld.java puis tapez «&amp;nbsp;javac HelloWorld.java&amp;nbsp;» suivi de «&amp;nbsp;java HelloWord&amp;nbsp;». Si vous
+    n’êtes pas capable de réaliser cette opération avec succès, même après quelques recherches en ligne, vous ne pourrez
+    pas réussir ce cours. Le contenu du cours tente de vous accompagner le plus possible, mais on prend pour acquis que
+    les rudiments techniques du Java sont acquis.&lt;/p&gt;
+&lt;p&gt;Il est de votre responsabilité de vous assurer que vous avez les connaissances requises pour réussir ce cours.&lt;/p&gt;
+
+&lt;p&gt;Nous recommandons comme référence pour la programmation Java le manuel &lt;a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"&gt;Java pas à pas&lt;/a&gt; de Godin et Lemire.&lt;/p&gt;
+
+&lt;div&gt;
+    &lt;a href="https://www.amazon.ca/Java-pas-Introduction-programmation-langage/dp/B0CR7RW87Y/"&gt;&lt;img style="margin-left: auto; margin-right: auto;" src="https://m.media-amazon.com/images/I/61tnblFlmmL._SL1499_.jpg" alt="" width="250px"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2&gt;Charge de travail&lt;/h2&gt;
+&lt;p&gt;Le cours exige une charge de travail d’environ 9 heures par semaine pendant 15 semaines. Vous devez donc prévoir une
+    à deux journées pleine à consacrer au cours par semaine.&lt;/p&gt;
+&lt;p&gt;Il est de votre responsabilité de vous assurer que vous avez assez de temps dans votre horaire pour réussir ce cours.
+&lt;/p&gt;
+&lt;h2&gt;Politique concernant le plagiat&lt;/h2&gt;
+&lt;p&gt;L’utilisation de textes ou de travaux écrits par autrui sans attribution, est du plagiat, même dans le cas où
+    l’emprunt se limite à des fragments. En cas de plagiat, une note de zéro peut être accordée. De plus, l’offense peut
+    être rapportée à l’Université qui appliquera des mesures disciplinaires.&lt;/p&gt;
+&lt;h2&gt;L’environnement technologique du cours&lt;/h2&gt;
+&lt;p&gt;Un cours en ligne est beaucoup plus qu’un simple site web. Par exemple, le présent cours comprend des dizaine
+    d’articles, plus d’une centaine de problèmes avec solutions, beaucoup de logiciel, des dizaines d’exemples, et des
+    dizaines de liens vers des sites externes. Le professeur ou une personne tutrice sera également à votre disposition
+    pour répondre à vos questions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Navigation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Le menu à gauche de l’écran présente les rubriques «&amp;nbsp;Présentation de la semaine&amp;nbsp;», etc. Il s’agit du menu
+    de la semaine courante. Vous êtes invité à faire les activités proposées en ordre séquentiel.&lt;/p&gt;
+&lt;p&gt;À l’extrême gauche de l’écran, un autre menu vous permet de naviguer de la première à la dernière des
+    15&amp;nbsp;semaines que dure le cours. Une fois les travaux de la semaine terminés, vous pourrez passer à la semaine
+    suivante et ainsi de suite.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Les liens externes&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Certains liens vous amènent à un document ou pointent vers un site à l’extérieur du cours. Si vous ne voulez pas
+    quitter la page où vous êtes, vous pouvez toujours cliquer sur le lien avec le bouton droit de la souris et choisir
+    «&amp;nbsp;Ouvrir dans une nouvelle fenêtre&amp;nbsp;» (ou l’équivalent).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lecture des documents PDF&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Si vous chargez un document PDF, nous vous encourageons à charger le fichier sur votre machine et à l’ouvrir au sein
+    d’un outil dédié (par ex. Adobe Acrobat). Il n’est pas très pratique de lire un document PDF au sein d’un navigateur
+    web.&lt;/p&gt;
+&lt;h2&gt;L’approche pédagogique du cours&lt;/h2&gt;
+&lt;p&gt;Le présent cours repose sur des lectures qui sont suivies d’activités d’autoévaluation. Contrairement à un cours
+    donné en salle de classe, vous pouvez progresser à votre rythme et travailler où vous le voulez. Le cours
+    s’échelonne sur 15&amp;nbsp;semaines, comme un cours en salle de classe, pour vous donner une idée du travail à faire
+    par tranches successives. Si vous n’avez jamais suivi de cours en ligne, vous constaterez rapidement que la formule
+    présente des avantages et se rapproche du travail en milieu professionnel.&lt;/p&gt;
+&lt;p&gt;Un cours en ligne n’est pas pour autant plus facile. Si votre progression est trop lente ou que vous sautez trop
+    d’étapes, vous risquez de vous décourager&amp;nbsp;: le cours a été conçu pour que vous progressiez régulièrement
+    pendant les 15&amp;nbsp;semaines de sa durée.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Les activités d’autoévaluation sont obligatoires. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;L’une des plus grandes sources de frustration est la difficulté des travaux notés. Plusieurs étudiants espèrent
+    gagner du temps en faisant rapidement les lectures et en omettant les activités d’autoévaluation. C’est une mauvaise
+    idée, parce que vous arriverez alors aux activités notées mal préparé.&lt;/p&gt;
+&lt;p&gt;Lorsque vous passerez l’examen à la fin du cours, il sera tenu pour acquis que vous aurez fait toutes les activités
+    d’autoévaluation et que vous en maîtriserez donc la matière.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note sur l’encadrement&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En tout temps, vous pourrez communiquer avec le professeur ou la personne tutrice par courriel. Pour lui permettre de
+    classer rapidement ses messages, inscrivez le sigle du cours dans l’objet de votre message
+    («&amp;nbsp;[INF6450]&amp;nbsp;»).&lt;/p&gt;
+&lt;p&gt;Il n’y a pas de contact de démarrage dans ce cours contrairement à ce que la documentation de la Télé-université peut
+    suggérer. Vous devez commencer le cours dès que possible.&lt;/p&gt;
+
+
+&lt;div style="padding:4em"&gt;
+
+&lt;h1 style="font-size: 2em; color: #d97706; border-bottom: 2px solid #fbbf24; padding-bottom: 10px;"&gt;Intelligence artificielle&lt;/h1&gt;
+    
+    &lt;p style="margin-bottom: 1.2em;"&gt;Dans ce cours, l'utilisation de l'intelligence artificielle (Claude, ChatGPT, Copilot, Grok, etc.) est permise et même recommandée (mais optionnelle). Cependant, vous devez l'utiliser de manière responsable :&lt;/p&gt;
+    
+    &lt;ul style="padding-left: 20px; margin-bottom: 1.2em;"&gt;
+        &lt;li style="margin-bottom: 0.8em;"&gt;Décrivez votre utilisation de l'IA. Une utilisation de l'IA sans déclaration peut être considérée comme une forme de faute. Contrairement à ce que vous pourriez croire, déclarer votre utilisation de l'IA vous protège.&lt;/li&gt;
+        &lt;li style="margin-bottom: 0.8em;"&gt;Expliquez votre démarche. Qu'est-ce que vous avez fait avec l'IA ? Nous vous encourageons à inclure des copies des résultats de vos interactions avec l'IA.&lt;/li&gt;
+        &lt;li style="margin-bottom: 0.8em;"&gt;Assurez-vous de bien expliquer vos résultats, en vos propres mots.&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;Les erreurs&lt;/strong&gt;&lt;/p&gt;
+&lt;div style="border: 2px solid #b91c1c; padding: 16px; border-radius: 8px; background-color: #fef2f2; max-width: 600px; margin: 0 auto;"&gt;
+  &lt;h2 style="color: #7f1d1d; font-size: 1.5rem; margin-bottom: 12px;"&gt;Un problème ou une suggestion ?&lt;/h2&gt;
+  &lt;p style="line-height: 1.6; color: #4b1c1c;"&gt;Vous pouvez à tout moment soumettre un commentaire anonyme concernant le cours via &lt;a href="https://docs.google.com/forms/d/1emnei-XQua_DaLPXxMby-SCI9UMbQgSiilKOCRNhUZQ/viewform" rel="noopener noreferrer" target="_blank" style="color: #b91c1c; text-decoration: underline;"&gt;ce formulaire dédié&lt;/a&gt;. Cela nous permet de réagir rapidement en cas de problème. Vous pouvez également en discuter directement avec la personne qui vous encadre.&lt;/p&gt;
+  &lt;p style="line-height: 1.6; color: #4b1c1c; margin-top: 12px;"&gt;Nous accordons une grande importance à vos retours et travaillons continuellement à l’amélioration du cours.&lt;/p&gt;
+&lt;/div&gt;</summary>
+  <summaryformat>1</summaryformat>
+  <sequence>130892,130898,130901,130904,130907,130910,171387,171555,130913,130916,130919</sequence>
+  <visible>1</visible>
+  <availabilityjson>{"op":"&amp;","c":[],"showc":[]}</availabilityjson>
+  <timemodified>1765225890</timemodified>
+</section>

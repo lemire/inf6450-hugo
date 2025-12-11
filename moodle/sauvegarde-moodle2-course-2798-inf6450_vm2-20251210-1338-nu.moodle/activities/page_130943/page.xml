@@ -1,0 +1,893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72110" moduleid="130943" modulename="page" contextid="970061">
+  <page id="72110">
+    <name>XHTML</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>
+    	&lt;h1 class=""&gt;				XHTML
+				&lt;/h1&gt;
+								
+		&lt;div class=""&gt;&lt;h2&gt;Qu'est-ce que le XHTML?&lt;/h2&gt;
+
+&lt;p&gt;Le HTML a été inventé par Tim Berners-Lee, alors qu'il travaillait pour le centre de recherche
+CERN en Suisse. L'intention de Berners-Lee était de proposer un système révolutionnaire de
+gestion de l'information qu'il appela &lt;i&gt;World Wide Web&lt;/i&gt;. Comme pièce maîtresse de son architecture,
+il avait besoin d'un format de documents qu'il appela HTML (&lt;i&gt;HyperText Markup Language&lt;/i&gt;).
+La première page web, dont l'adresse était http://nxoc01.cern.ch/hypertext/WWW/TheProject.html, 
+vit le jour en&amp;nbsp;1990.&lt;/p&gt;
+
+&lt;p&gt;Le HTML est un langage à base de balises, un peu comme une application&amp;nbsp;XML.
+En fait, il existe une application&amp;nbsp;XML appelée&amp;nbsp;XHTML, qui est à la fois du&amp;nbsp;HTML
+et du&amp;nbsp;XML. Le document que vous lisez en ce moment en est un exemple. 
+&lt;b&gt;En effet, le document que vous lisez est à la fois du&amp;nbsp;XML bien formé et valable, mais aussi du&amp;nbsp;HTML.&lt;/b&gt;&lt;/p&gt;
+
+
+&lt;p&gt;Rappelons qu'une «&amp;nbsp;application XML&amp;nbsp;» est un ensemble de balises et d'attributs, 
+c'est-à-dire un vocabulaire&amp;nbsp;XML, avec des conventions d'usage dont certaines
+peuvent être représentées par un document&amp;nbsp;DTD.&lt;/p&gt;
+
+&lt;p&gt;La très grande majorité des documents sur le web sont écrits en&amp;nbsp;HTML et, de plus en plus,
+en&amp;nbsp;XHTML. Une des raisons principales de l'utilisation du&amp;nbsp;XHTML, c'est que les outils qui
+traitent le XML peuvent aussi traiter du XHTML puisque ce dernier est 
+aussi du XML. Il est donc possible, dans une organisation, de combiner le contenu web&amp;nbsp;(HTML) avec
+le stockage des informations en&amp;nbsp;XML. Comme nous le verrons plus tard dans le cours 
+(module 3, section portant sur le XSLT),  on
+peut même transformer automatiquement le XML en&amp;nbsp;XHTML.&lt;/p&gt;
+
+&lt;p&gt;Si on dit «&amp;nbsp;HTML&amp;nbsp;» tout court, ce n'est pas nécessairement du&amp;nbsp;XML et
+il se peut que les outils conçus pour le XML ne puissent être utilisés pour le traiter. 
+Cependant, si on dit «&amp;nbsp;XHTML&amp;nbsp;», alors il s'agit à la fois de&amp;nbsp;HTML et de&amp;nbsp;
+XML et on peut utiliser les outils destinés au&amp;nbsp;XML pour en traiter le contenu. 
+Voici quelques différences entre le&amp;nbsp;HTML et le&amp;nbsp;XHTML&amp;nbsp;:&lt;/p&gt;
+
+&lt;p&gt;Les serveurs web distinguent le contenu en fournissant aux navigateurs différents codes MIME (Multipurpose Internet Mail Extensions), alors que le HTML a le code MIME «&amp;nbsp;text/html&amp;nbsp;», on utilise le code MIME «&amp;nbsp;application/xml&amp;nbsp;» ou «&amp;nbsp;application/xhtml+xml&amp;nbsp;» pour le XHTML. Avec le serveur web Apache, on obtient le résultat désiré en
+ajoutant un fichier «&amp;nbsp;.htaccess&amp;nbsp;», dans le même répertoire que nos fichiers XHTML, contenant la ligne «&amp;nbsp;AddType application/xml .xhtml&amp;nbsp;».&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;En HTML traditionnel, on n'a pas à fermer les
+éléments. Ainsi, le code suivant «&amp;nbsp;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;i&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;texte&lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;/&lt;/span&gt;&lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&amp;nbsp;» est 
+acceptable en HTML, mais en XHTML, il faut écrire 
+«&amp;nbsp;&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;i&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;texte&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;i&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;».&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;Les valeurs d'attributs en HTML n'ont pas à être entre des guillemets ou apostrophes. 
+Ainsi, le code «&amp;nbsp;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt; &lt;span style="color:#274796; "&gt;border&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;0&lt;/span&gt;&lt;span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;» est acceptable
+en HTML, mais en XHTML, il faut écrire «&amp;nbsp;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt; &lt;span style="color:#274796; "&gt;border&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;».&lt;/li&gt;
+
+&lt;li&gt;En HTML, la casse des noms est sans importance. Ainsi, on peut remplacer
+«&amp;nbsp;&amp;lt;p&amp;gt;&amp;nbsp;» par «&amp;nbsp;&amp;lt;P&amp;gt;&amp;nbsp;», alors que ce n'est pas permis en XHTML.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dans ce cours, nous nous intéresserons surtout au XHTML. Un document XHTML prend la forme suivante&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+Voici mon document.
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;On reconnaît d'abord la déclaration XML qui n'a rien de particulier&amp;nbsp;: &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;. 
+Comme pour tout document&amp;nbsp;XML, on peut omettre la déclaration&amp;nbsp;XML d'un document&amp;nbsp;XHTML, 
+mais si nous voulons écrire en français avec des lettres accentuées, il est nettement préférable 
+d'avoir la déclaration XML de notre exemple.&lt;/p&gt;
+&lt;p&gt;On reconnaît ensuite la déclaration de type de document&amp;nbsp;:  &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;. 
+Observez qu'elle apparaît sur deux lignes, que c'est souvent le cas, mais que c'est un choix purement esthétique. 
+La déclaration de type de document est un peu particulière&amp;nbsp;: il s'agit d'une déclaration utilisant 
+un identifiant public. On doit utiliser un tel identifiant 
+quand on veut signifier qu'il s'agit d'une application&amp;nbsp;XML commune; on évite ainsi 
+que des milliers de personnes aillent chercher des documents&amp;nbsp;DTD à l'adresse 
+«&amp;nbsp;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&amp;nbsp;». 
+On s'attend qu'un logiciel qui dépend d'une application&amp;nbsp;XML commune 
+n'ait pas besoin d'aller chercher les documents DTD, chaque fois que le document XML est lu.
+Un navigateur ne tient généralement pas compte de la DTD externe, on peut donc omettre
+la déclaration DOCTYPE sans problème.&lt;/p&gt;
+  
+&lt;p&gt;Le reste du document est simplement un élément-racine «&amp;nbsp;html&amp;nbsp;» contenant deux éléments&amp;nbsp;: 
+un élément &lt;i&gt;head&lt;/i&gt; et un élément &lt;i&gt;body&lt;/i&gt;. L'élément &lt;i&gt;head&lt;/i&gt; doit contenir 
+un élément &lt;i&gt;title&lt;/i&gt;, alors que l'élément &lt;i&gt;body&lt;/i&gt; peut être vide, mais peut aussi posséder du 
+contenu&amp;nbsp;XML mixte (texte et diverses balises&amp;nbsp;XHTML). L'espace de nom ayant l'URI «&amp;nbsp;http://www.w3.org/1999/xhtml&amp;nbsp;» 
+est utilisé.&lt;/p&gt;
+
+
+&lt;p&gt;Si vous copiez le texte qui précède dans un éditeur de texte comme &lt;i&gt;Bloc-notes&lt;/i&gt; et que vous enregistrez le fichier 
+sous un nom comme «&amp;nbsp;test.xhtml&amp;nbsp;», vous devriez être capable d'ouvrir le fichier dans votre 
+navigateur et de voir le texte «&amp;nbsp;Voici mon document.&amp;nbsp;» s'afficher à l'écran. Les documents HTML sont tous des 
+documents en format texte et l'extension du fichier est arbitraire&amp;nbsp;: on utilise tout aussi bien
+«&amp;nbsp;.htm&amp;nbsp;» que «&amp;nbsp;.html&amp;nbsp;», «&amp;nbsp;.xhtml&amp;nbsp;» ou même «&amp;nbsp;.xml&amp;nbsp;». L'avantage de 
+l'extension «&amp;nbsp;.xhtml&amp;nbsp;» est d'informer le navigateur qu'il s'agit d'un document&amp;nbsp;XHTML, 
+donc un document&amp;nbsp;HTML et un document&amp;nbsp;XML.&lt;/p&gt;
+
+&lt;h2&gt;La structure du document XHTML&amp;nbsp;: &lt;i&gt;head&lt;/i&gt; et &lt;i&gt;body&lt;/i&gt;&lt;/h2&gt;
+
+&lt;p&gt;Comme nous le disions, l'élément-racine d'un document XHTML est nommé «&amp;nbsp;html&amp;nbsp;». Cet élément contient 
+&lt;b&gt;deux et exactement deux&lt;/b&gt; sous-éléments&amp;nbsp;: &lt;i&gt;head&lt;/i&gt; et &lt;i&gt;body&lt;/i&gt;. L'élément &lt;i&gt;head&lt;/i&gt;
+n'est pas affiché directement dans le navigateur et contient des métadonnées, c'est-à-dire une description du contenu. 
+Un élément &lt;i&gt;head&lt;/i&gt; doit au minimum contenir un élément &lt;i&gt;title&lt;/i&gt; qui donne le titre du 
+document&amp;nbsp;XHTML. Par la suite, l'élément &lt;i&gt;body&lt;/i&gt; contient un ensemble de balises et 
+du texte (contenu mixte) qui sera affiché directement dans le navigateur.&lt;/p&gt;
+
+&lt;h2&gt;Les paragraphes en HTML&lt;/h2&gt;
+
+&lt;p&gt;L'élément &lt;i&gt;body&lt;/i&gt; contient des balises et du texte. Les retours de ligne sont traités
+comme des espaces normaux. Ainsi, les deux documents suivants seront affichés
+de la même manière par un navigateur.&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+Voici mon document.
+Voici ma vie.
+Voici mon chat.
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+Voici mon document.
+
+Voici ma vie.
+
+Voici mon chat.
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;La question qui se pose alors est&amp;nbsp;: Comment faire des paragraphes? En effet, dans les deux documents plus haut, le
+texte s'affichera sur une seule ligne (vous pouvez le tester!). La solution consiste à utiliser l'élément «&amp;nbsp;p&amp;nbsp;» pour
+«&amp;nbsp;paragraphe&amp;nbsp;». Pour avoir trois paragraphes, on remplace le document&amp;nbsp;HTML précédent par celui qui suit. Observez
+que chaque balise «&amp;nbsp;p&amp;nbsp;» ouverte doit être fermée.&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voici mon document.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voici ma vie.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voici mon chat.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h2&gt;Les listes en HTML&lt;/h2&gt;
+
+&lt;p&gt;Supposons que l'on veuille faire une liste, comme ceci&amp;nbsp;:&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;Premier point&amp;nbsp;: le chat est noir.&lt;/li&gt;
+&lt;li&gt;Second point&amp;nbsp;: le chat est blanc.&lt;/li&gt;
+&lt;li&gt;Dernier point&amp;nbsp;: le chat est marron.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;On peut obtenir ce résultat avec un élément «&amp;nbsp;ul&amp;nbsp;» pour &lt;i&gt;unordered list&lt;/i&gt; (liste sans ordre),
+contenant des éléments «&amp;nbsp;li&amp;nbsp;». Observez que chaque balise «&amp;nbsp;li&amp;nbsp;» ouverte doit être fermée.&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ul&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Premier point: le chat est noir.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Second point: le chat est blanc.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Dernier point: le chat est marron.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ul&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Supposons maintenant que nous voulions une liste avec un compteur&amp;nbsp;:&lt;/p&gt;
+
+&lt;ol&gt;&lt;li&gt;Le chat est noir.&lt;/li&gt;
+&lt;li&gt;Le chat est blanc.&lt;/li&gt;
+&lt;li&gt;Le chat est marron.&lt;/li&gt;&lt;/ol&gt;
+
+&lt;p&gt;Il suffit alors de remplacer l'élément «&amp;nbsp;ul&amp;nbsp;» par l'élément «&amp;nbsp;ol&amp;nbsp;» 
+pour &lt;i&gt;ordered list&lt;/i&gt; (liste ordonnée)&amp;nbsp;:&lt;/p&gt;
+
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ol&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le chat est noir.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le chat est blanc.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le chat est marron.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ol&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h2&gt;Les tableaux en HTML&lt;/h2&gt;
+
+&lt;p&gt;Supposons maintenant que nous voulions produire un tableau. On peut l'obtenir à l'aide d'un élément
+«&amp;nbsp;table&amp;nbsp;». Cet élément contiendra plusieurs éléments «&amp;nbsp;tr&amp;nbsp;» (éléments correspondant à une ligne) qui eux-mêmes
+contiennent des éléments «&amp;nbsp;td&amp;nbsp;» (éléments correspondant à une cellule). Ainsi, pour obtenir un tableau comme celui-ci&amp;nbsp;:&lt;/p&gt;
+
+&lt;table border="0" class="tabblanc"&gt;&lt;!-- border='0' est un convention pour le traitement XSLT --&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Nom&lt;/td&gt;
+&lt;td&gt;Valeur&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Mustang&lt;/td&gt;
+&lt;td&gt;50&amp;nbsp;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ferrari&lt;/td&gt;
+&lt;td&gt;500&amp;nbsp;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+
+&lt;p&gt;On utilise le code suivant&amp;nbsp;:&lt;/p&gt;
+
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nom&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Valeur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Mustang&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;50 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ferrari&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;500 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;Supposons maintenant que l'on veuille un tableau avec des lignes pour marquer et diviser les cellules. Il suffit alors
+d'utiliser l'attribut «&amp;nbsp;border&amp;nbsp;». Sa valeur numérique représente l'épaisseur en pixels de la bordure.
+Ainsi, pour obtenir ce résultat&amp;nbsp;: &lt;/p&gt;
+
+&lt;table border="1" class="tabblanc"&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td style="border-style: solid;"&gt;Nom&lt;/td&gt;
+&lt;td style="border-style: solid;"&gt;Valeur&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border-style: solid;"&gt;Mustang&lt;/td&gt;
+&lt;td style="border-style: solid;"&gt;50&amp;nbsp;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border-style: solid;"&gt;Ferrari&lt;/td&gt;
+&lt;td style="border-style: solid;"&gt;500&amp;nbsp;$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;On utilisera le code XHTML suivant&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt; &lt;span style="color:#274796; "&gt;border&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nom&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Valeur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Mustang&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;50 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ferrari&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;500 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;Tous les tableaux ne sont pas si simples. On peut faire en sorte
+qu'une même cellule occupe deux colonnes
+(&amp;lt;td colspan="2"&amp;gt;) ou deux rangées (&amp;lt;td rowspan="2"&amp;gt;). 
+Aussi, souvent, on utilise l'élément «&amp;nbsp;th&amp;nbsp;» au lieu de l'élément «&amp;nbsp;td&amp;nbsp;» pour désigner
+la première rangée d'un tableau lorsque celle-ci forme l'entête 
+descriptive du tableau. Il est aussi possible d'utiliser 
+un élément «&amp;nbsp;caption&amp;nbsp;» au sein d'un tableau pour
+noter le titre du tableau&amp;nbsp;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt; &lt;span style="color:#274796; "&gt;border&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;caption&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Valeur de différents véhicule&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;caption&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;th&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nom&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;th&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;th&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Valeur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;th&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Mustang&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;50 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ferrari&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;500 $&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;td&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;tr&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;table&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Les caractères italiques et gras&lt;/h2&gt;
+
+&lt;p&gt;On peut très facilement utiliser des effets de polices de caractères en&amp;nbsp;HTML. Pour obtenir des caractères en italique, 
+par exemple &lt;i&gt;maman&lt;/i&gt;, il suffit d'utiliser un élément «&amp;nbsp;i&amp;nbsp;» comme ceci&amp;nbsp;: &amp;lt;i&amp;gt;maman&amp;lt;/i&amp;gt;. 
+Pour des caractères en gras, comme &lt;b&gt;maman&lt;/b&gt;, il suffit d'utiliser un élément «&amp;nbsp;b&amp;nbsp;» comme ceci&amp;nbsp;: 
+&amp;lt;b&amp;gt;maman&amp;lt;/b&amp;gt;. On peut également combiner les deux, comme &lt;b&gt;&lt;i&gt;maman&lt;/i&gt;&lt;/b&gt;, en écrivant &amp;lt;i&amp;gt;&amp;lt;b&amp;gt;maman&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt; 
+ou bien &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;maman&amp;lt;/i&amp;gt;&amp;lt;/b&amp;gt;. Il est cependant préférable d'utiliser
+«&amp;nbsp;em&amp;nbsp;» (emphase) au lieu de «&amp;nbsp;i&amp;nbsp;» et «&amp;nbsp;strong&amp;nbsp;» (fort) au lieu de «&amp;nbsp;b&amp;nbsp;»&amp;nbsp;: le navigateur choisira alors de 
+rendre le texte dans un élément  «&amp;nbsp;em&amp;nbsp;» avec un italique ou une autre technique appropriée, et de rendre le texte dans un élément «&amp;nbsp;strong&amp;nbsp;» en caractères gras ou une autre technique appropriée. On évite ainsi de confondre la présentation (italique ou gras) et la sémantique (emphase ou point fort). Dans le cas où un terme est défini, vous devriez utiliser un élément «&amp;nbsp;dfn&amp;nbsp;» (définition) comme dans cet exemple: «&amp;nbsp;La &amp;lt;dfn&amp;gt;mort&amp;lt;/dfn&amp;gt; est la fin de la vie&amp;nbsp;». La plupart des navigateurs afficheront alors le mot «&amp;nbsp;mort&amp;nbsp;» en caratères italiques.&lt;/p&gt;
+
+
+&lt;h2&gt;Les listes de définitions&lt;/h2&gt;
+
+&lt;p&gt;Supposons que nous voulions une liste de définitions comme celle qui suit&amp;nbsp;:&lt;/p&gt;
+
+&lt;dl&gt;
+&lt;dt&gt;Voiture&lt;/dt&gt;
+&lt;dd&gt;Véhicule sur roues. &lt;/dd&gt;
+&lt;dt&gt;Chat&lt;/dt&gt;
+&lt;dd&gt;Bête sauvage qui se nourrit de lait. &lt;/dd&gt;
+&lt;dt&gt;Éléphant&lt;/dt&gt;
+&lt;dd&gt;Bête sauvage de couleur rose. &lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;On obtient ce résultat en XHTML avec un élément «&amp;nbsp;dl&amp;nbsp;» pour &lt;i&gt;definition list&lt;/i&gt; contenant 
+une série d'éléments «&amp;nbsp;dt&amp;nbsp;» et «&amp;nbsp;dd&amp;nbsp;» en paire, où l'élément «&amp;nbsp;dt&amp;nbsp;» fournit le terme à définir 
+et l'élément «&amp;nbsp;dd&amp;nbsp;» sa définition. &lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#004a43; "&gt;&amp;lt;!&lt;/span&gt;&lt;span style="color:#004a43; "&gt;DOCTYPE&lt;/span&gt; &lt;span style="color:#004a43; "&gt;html&lt;/span&gt; &lt;span style="color:#800000; font-weight:bold; "&gt;PUBLIC&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"-//W3C//DTD XHTML 1.0 Strict//EN"&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Titre de mon document&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dl&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voiture&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Véhicule sur roues. &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Chat&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Bête sauvage qui se nourrit de lait. &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Éléphant&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dt&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Bête sauvage de couleur rose. &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;dl&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;h2&gt;Les lignes horizontales&lt;/h2&gt;
+
+&lt;p&gt;Pour obtenir une ligne horizontale, on utilise l'élément «&amp;nbsp;hr&amp;nbsp;» qui doit être vide. On 
+doit donc écrire &amp;lt;hr&amp;gt;&amp;lt;/hr&amp;gt; ou plus simplement &amp;lt;hr /&amp;gt;. Voici une ligne horizontale&amp;nbsp;:&lt;/p&gt;
+
+&lt;hr&gt;
+
+
+&lt;h2&gt;Les images&lt;/h2&gt;
+&lt;p&gt;Au moment d'écrire ces lignes, on trouve un logo de l'UQAM à l'URL&lt;/p&gt;
+&lt;pre&gt;https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg.&lt;/pre&gt;
+&lt;p&gt;Pour insérer une image dans un document HTML, il suffit d'utiliser une balise «&amp;nbsp;img&amp;nbsp;» 
+avec comme attribut «&amp;nbsp;src&amp;nbsp;» pour source, soit l'URL. Par 
+exemple, le code&lt;/p&gt;&lt;pre&gt;&amp;lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg"&amp;gt;&lt;/pre&gt;
+&lt;p&gt;ou&lt;/p&gt;&lt;pre&gt;&amp;lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg" /&amp;gt;&lt;/pre&gt;&lt;p&gt; permettra d'insérer le logo de l'UQAM 
+dans un document. Il est préférable de prévoir que l'image
+pourrait ne pas être trouvée ou affichée en ajoutant un attribut «&amp;nbsp;alt&amp;nbsp;» qui contient 
+du texte décrivant le contenu de l'image; si l'image n'est pas disponible, le texte contenu 
+dans l'attribut «&amp;nbsp;alt&amp;nbsp;» s'affichera. &lt;!-- est-ce que le contenu de alt s'affiche à la place de 
+l'image si elle n'est pas disponible ? --&gt; Le résultat final prend la forme
+&amp;lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg" alt="logo de l'UQAM" /&amp;gt;
+ce qui donne&amp;nbsp;:&lt;/p&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Université_du_Québec_à_Montréal_Logo.svg" alt="logo de l'UQAM"&gt;
+
+&lt;h2&gt;Les hyperliens&lt;/h2&gt;
+
+&lt;p&gt;Pour inclure un hyperlien, comme dans l'exemple de la &lt;a href="http://www.uqam.ca/"&gt;page de l'UQAM&lt;/a&gt; 
+[lien vers http://www.uqam.ca/], il suffit d'utiliser 
+la syntaxe «&amp;nbsp;&amp;lt;a href="http://www.uqam.ca/"&amp;gt;page de l'UQAM&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;On peut également ajouter des marqueurs dans une page web en utilisant 
+la syntaxe «&amp;nbsp;&amp;lt;a name="point1"&amp;gt;Premier point de mon document&amp;lt;/a&amp;gt;&amp;nbsp;».
+Contrairement à la syntaxe «&amp;nbsp;&amp;lt;a href="..."&amp;gt;&amp;nbsp;», l'attribut «&amp;nbsp;name&amp;nbsp;» 
+n'ajoute pas un hyperlien, mais un marqueur généralement invisible dans la page. 
+Par exemple, si la page contient plusieurs sections, on peut ajouter un marqueur au début de chaque section. 
+On pourra alors faire des liens non seulement vers le document, mais aussi vers la section marquée dans le document. 
+Ainsi, l'hyperlien «&amp;nbsp;&amp;lt;a href="pageweb.html#point1"&amp;gt;aller vers le premier point du document pageweb.html&amp;lt;/a&amp;gt;&amp;nbsp;» 
+mènera l'utilisateur dans le document «&amp;nbsp;pageweb.html&amp;nbsp;», précisément au marqueur du «&amp;nbsp;point&amp;nbsp;1&amp;nbsp;», 
+s'il existe, évidemment.&lt;/p&gt;
+
+&lt;h2&gt;Les abbréviations&lt;/h2&gt;
+
+&lt;p&gt;On utilise parfois des abbréviations dans une page web tel que «&amp;nbsp;etc.&amp;nbsp;» ou «&amp;nbsp;no&amp;nbsp;». On peut indiquer au navigateur qu'il
+s'agit d'une abbréviation avec un élément abbr comme ceci&amp;nbsp;: «&amp;nbsp;&amp;lt;abbr&amp;gt;no&amp;lt;/abbr&amp;gt;&amp;nbsp;». Il est parfois utile d'utiliser
+l'attribut «&amp;nbsp;title&amp;nbsp;» pour décrire l'abbréviation en question
+comme dans ceci&amp;nbsp;: «&amp;nbsp;&amp;lt;abbr title="numéro"&amp;gt;no&amp;lt;/abbr&amp;gt;&amp;nbsp;». De la même façon, on peut noter les acronymes avec un élément «&amp;nbsp;acronym&amp;nbsp;» comme 
+ceci&amp;nbsp;: «&amp;nbsp;&amp;lt;acronym title="Organisation du traité de l'Atlantique Nord"&amp;gt;OTAN&amp;lt;/acronym&amp;gt;&amp;nbsp;».&lt;/p&gt;
+
+&lt;h2&gt;Les adresses&lt;/h2&gt;
+
+&lt;p&gt;Il est fréquent qu'une page web contienne un adresse. Le XHTML nous permet
+d'indiquer au navigateur qu'il s'agit bien d'une adresse avec l'élément «&amp;nbsp;address&amp;nbsp;», comme ceci&amp;nbsp;:
+«&amp;nbsp;&amp;lt;address&amp;gt;
+Daniel Lemire&amp;lt;br /&amp;gt;
+100, rue Sherbrooke
+&amp;lt;/address&amp;gt;&amp;nbsp;». Ici, l'élément «&amp;nbsp;br&amp;nbsp;» sert à noter un retour de charriot.&lt;/p&gt;
+
+&lt;h2&gt;Les indices et exposants&lt;/h2&gt;
+
+&lt;p&gt;Dans un texte, il arrive qu'on veuille utiliser des exposants
+et des indices. Les éléments «&amp;nbsp;sup&amp;nbsp;» et «&amp;nbsp;sub&amp;nbsp;» servent à cette fonction.
+Par exemple, «&amp;nbsp;premier&amp;nbsp;» peut s'écrit «&amp;nbsp;1&lt;sup&gt;er&lt;/sup&gt;&amp;nbsp;». Il n'est malheureusement pas possible de noter automatiquement des notes en bas de page en HTML ou XHTML.&lt;/p&gt;
+
+&lt;h2&gt;Le code et les exemples&lt;/h2&gt;
+
+&lt;p&gt;Il y a plusieurs éléments permettant de traiter de la programmation informatique ou des mathématiques. Le code informatique peut s'écrire dans un élément «&amp;nbsp;code&amp;nbsp;».
+Le texte saisi à l'écran par un utilisateur peut s'écrire dans un élément «&amp;nbsp;kbd&amp;nbsp;».
+Les exemples de sortie à l'écran peuvent s'écrire dans un élément «&amp;nbsp;samp&amp;nbsp;» (pour sample) et les variables peuvent s'écrire dans un élément «&amp;nbsp;var&amp;nbsp;». Voici un exemple&amp;nbsp;: «&amp;nbsp;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;La valeur de la variable &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;var&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;i&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;var&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; est obtenue avec ce code:&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;code&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;int i = 1; i+=1&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;code&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;On s'attend à ce que l'utilisateur tape &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;kbd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Yes&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;kbd&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; pour oui. Voici un exemple de résultat: &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;samp&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Error!&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;samp&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;». &lt;/p&gt;
+
+&lt;h2&gt;Les citations&lt;/h2&gt;
+
+&lt;p&gt;Pour citer quelqu'un, on peut utiliser un élément  «&amp;nbsp;q&amp;nbsp;» lorsqu'il s'agit d'un courte citation au sein d'un paragraphe ou élément  «&amp;nbsp;blockquote&amp;nbsp;» lorsque la citation doit former un court paragraphe. Plusieurs navigateur mettent automatiquement le contenu de l'élément  «&amp;nbsp;q&amp;nbsp;» entre guillemets et le contenu de l'élément  «&amp;nbsp;blockquote&amp;nbsp;» en retrait. Voici un exemple&amp;nbsp;: «&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; Jean a dit: &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;q&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;mon cher!&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;q&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;. Par la suite, je lui ai lu ce texte fatidique.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;blockquote&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Oh! Comme la mer a merée! Oh! Comme j'ai jéjé!&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;blockquote&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;». &lt;/p&gt;
+
+
+
+&lt;h2&gt;Les révisions&lt;/h2&gt;
+
+&lt;p&gt;Les éléments del et ins permettent de noter un retrait et un ajout, respectivement, comme dans cet exemple: 
+
+&lt;/p&gt;&lt;pre&gt;J'ai &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;del&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;marié&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;del&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ins&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;épousé&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ins&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; ta mère
+&lt;/pre&gt;
+ Le navigateur se
+chargera d'afficher les retraits et les ajouts de manière compréhensible.&lt;p&gt;&lt;/p&gt;    
+
+
+&lt;h2&gt;La langue&lt;/h2&gt;
+
+&lt;p&gt;Le XHTML respecte la spécification XML voulant qu'on indique
+la langue dans laquelle est écrite un texte avec l'attribute «&amp;nbsp;xml:lang&amp;nbsp;». Cet attribut est optionnel, mais peut 
+s'avérer pratique. Dans le cas où un texte 
+en langue étrangère est présent dans un paragraphe, on peut utiliser
+l'élément «&amp;nbsp;span&amp;nbsp;» pour en indiquer la langue.
+Voici un exemple&amp;nbsp;:
+«&amp;nbsp;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;lang&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;fr-CA&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean aime les &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;span&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;lang&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;en-US&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;computers&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;span&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&amp;nbsp;». L'élément «&amp;nbsp;span&amp;nbsp;» 
+ne sert  qu'à nous permettre de sélectionner un texte
+au sein d'un autre élément.
+&lt;/p&gt;
+
+&lt;h2&gt;Les commentaires&lt;/h2&gt;
+
+&lt;p&gt;Ajouter des commentaires en XHTML est facile. Les commentaires
+du XML s'appliquent: il suffit de débuter le commentaire par &amp;lt;!-- et
+de le terminer par --&amp;gt;. Il n'est pas permis d'inclure au sein d'un
+commentaire deux tirets (--) ni de terminer un commentaire par un tiret.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Séparation du contenu et de la présentation&lt;/h2&gt;
+
+&lt;p&gt;Avec le XHTML, on peut contrôler en partie l'apparence du texte, en utilisant
+des italiques ou en plaçant des bordures dans nos tableaux. Ce contrôle est cependant limité&amp;nbsp;: 
+on ne peut pas ajuster l'indentation des paragraphes et on ne peut que difficilement ajuster les marges de la page. 
+Nous verrons au module&amp;nbsp;3, dans la section sur le&amp;nbsp;CSS, qu'il existe une façon élégante d'y arriver. &lt;/p&gt;
+
+&lt;h2&gt;Convertir du HTML mal formé&lt;/h2&gt;
+
+&lt;p&gt;Dans une organisation, il est fréquent d'avoir à composer avec des sites web
+qui ne respectent pas les normes les plus élémentaires. Réécrire le HTML en XHTML
+peut sembler une tâche très ardue. Heureusement, il existe des outils gratuits
+pour corriger du HTML mal formé et générer automatiquement un XHTML valable, comme
+par exemple HTMLTidy (&lt;a href="http://tidy.sourceforge.net/"&gt;http://tidy.sourceforge.net/&lt;/a&gt;).
+Le W3C rend aussi disponible un outil de vérification en ligne des sites web pour
+s'assurer de leur conformité avec les normes (&lt;a href="http://validator.w3.org/"&gt;http://validator.w3.org/&lt;/a&gt;).
+Vous pourrez facilement constater que plusieurs pages à l'UQAM ne sont pas du HTML valable,
+y compris certaines pages web de ce cours&amp;nbsp;!
+&lt;/p&gt;
+&lt;h2&gt;Spécification Relax NG&lt;/h2&gt;
+
+&lt;p&gt;Il existe des définitions de type de document
+officielle pour le XHML, mais elles sont longues et 
+peu lisible. Sean B. Palmer a écrit une spécification
+Relax NG pour un sous-ensemble du XHTML que je
+reproduis ici avec permission.
+Je vous invite à vérifier que vous pouvez
+en comprendre l'essentiel.&lt;/p&gt;
+
+&lt;pre&gt;default namespace html &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.w3.org/1999/xhtml&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;
+
+# Common Attributes
+
+Core&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs &lt;span style="color:#808030; "&gt;=&lt;/span&gt; 
+   attribute id &lt;span style="color:#808030; "&gt;{&lt;/span&gt; xsd&lt;span style="color:#808030; "&gt;:&lt;/span&gt;ID &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;
+   attribute class &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;
+   attribute style &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute title &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;
+
+I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs &lt;span style="color:#808030; "&gt;=&lt;/span&gt; 
+   attribute xml&lt;span style="color:#808030; "&gt;:&lt;/span&gt;lang &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;
+   attribute dir &lt;span style="color:#808030; "&gt;{&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ltr&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#808030; "&gt;|&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;rtl&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;
+
+Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs &lt;span style="color:#808030; "&gt;=&lt;/span&gt; 
+   Core&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute onclick &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;
+
+# Content Models
+
+BlockMinusForm &lt;span style="color:#808030; "&gt;=&lt;/span&gt; 
+   &lt;span style="color:#808030; "&gt;(&lt;/span&gt;address &lt;span style="color:#808030; "&gt;|&lt;/span&gt; blockquote &lt;span style="color:#808030; "&gt;|&lt;/span&gt; del &lt;span style="color:#808030; "&gt;|&lt;/span&gt; div&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;elem &lt;span style="color:#808030; "&gt;|&lt;/span&gt; dl &lt;span style="color:#808030; "&gt;|&lt;/span&gt; h1 &lt;span style="color:#808030; "&gt;|&lt;/span&gt; h2 &lt;span style="color:#808030; "&gt;|&lt;/span&gt; 
+    h3 &lt;span style="color:#808030; "&gt;|&lt;/span&gt; hr &lt;span style="color:#808030; "&gt;|&lt;/span&gt; ins &lt;span style="color:#808030; "&gt;|&lt;/span&gt; ol &lt;span style="color:#808030; "&gt;|&lt;/span&gt; p &lt;span style="color:#808030; "&gt;|&lt;/span&gt; pre &lt;span style="color:#808030; "&gt;|&lt;/span&gt; script &lt;span style="color:#808030; "&gt;|&lt;/span&gt; table &lt;span style="color:#808030; "&gt;|&lt;/span&gt; ul&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;*&lt;/span&gt;
+Block &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#808030; "&gt;(&lt;/span&gt;BlockMinusForm &lt;span style="color:#808030; "&gt;|&lt;/span&gt; form&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;*&lt;/span&gt;
+
+InlineMinusMedia &lt;span style="color:#808030; "&gt;=&lt;/span&gt; 
+   &lt;span style="color:#808030; "&gt;(&lt;/span&gt;a &lt;span style="color:#808030; "&gt;|&lt;/span&gt; abbr &lt;span style="color:#808030; "&gt;|&lt;/span&gt; br &lt;span style="color:#808030; "&gt;|&lt;/span&gt; cite &lt;span style="color:#808030; "&gt;|&lt;/span&gt; code &lt;span style="color:#808030; "&gt;|&lt;/span&gt; del &lt;span style="color:#808030; "&gt;|&lt;/span&gt; em &lt;span style="color:#808030; "&gt;|&lt;/span&gt; input &lt;span style="color:#808030; "&gt;|&lt;/span&gt; ins &lt;span style="color:#808030; "&gt;|&lt;/span&gt; 
+    label &lt;span style="color:#808030; "&gt;|&lt;/span&gt; script &lt;span style="color:#808030; "&gt;|&lt;/span&gt; span &lt;span style="color:#808030; "&gt;|&lt;/span&gt; strong &lt;span style="color:#808030; "&gt;|&lt;/span&gt; sub &lt;span style="color:#808030; "&gt;|&lt;/span&gt; sup &lt;span style="color:#808030; "&gt;|&lt;/span&gt; textarea &lt;span style="color:#808030; "&gt;|&lt;/span&gt; text&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;*&lt;/span&gt;
+Inline &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#808030; "&gt;(&lt;/span&gt;InlineMinusMedia &lt;span style="color:#808030; "&gt;|&lt;/span&gt; img &lt;span style="color:#808030; "&gt;|&lt;/span&gt; object&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;*&lt;/span&gt;
+
+Flow &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#808030; "&gt;(&lt;/span&gt;Block &lt;span style="color:#808030; "&gt;|&lt;/span&gt; Inline&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;*&lt;/span&gt;
+
+# Elements
+
+start &lt;span style="color:#808030; "&gt;=&lt;/span&gt; html
+
+html &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element html &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   head&lt;span style="color:#808030; "&gt;,&lt;/span&gt; body
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+head &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element head &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute profile &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   title&lt;span style="color:#808030; "&gt;,&lt;/span&gt; base&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; &lt;span style="color:#808030; "&gt;(&lt;/span&gt;script&lt;span style="color:#808030; "&gt;*&lt;/span&gt; &lt;span style="color:#808030; "&gt;&amp;amp;&lt;/span&gt; style&lt;span style="color:#808030; "&gt;*&lt;/span&gt; &lt;span style="color:#808030; "&gt;&amp;amp;&lt;/span&gt; meta&lt;span style="color:#808030; "&gt;*&lt;/span&gt; &lt;span style="color:#808030; "&gt;&amp;amp;&lt;/span&gt; link&lt;span style="color:#808030; "&gt;*&lt;/span&gt;&lt;span style="color:#808030; "&gt;)&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+title &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element title &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   text
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+base &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element base &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   attribute href &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+meta &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element meta &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute content &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute name &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+link &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element link &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute href &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute rel &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute type &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+style &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element style &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   I18n&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute type &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute title &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   text
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+script &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element script &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   attribute type &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute src &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   text
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+body &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element body &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute onload &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Block
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+div&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;elem &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element div &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+p &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element p &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+h1 &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element h1 &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+h2 &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element h2 &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+h3 &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element h3 &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+ul &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element ul &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   li&lt;span style="color:#808030; "&gt;+&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+ol &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element ol &lt;span style="color:#808030; "&gt;{&lt;/span&gt;
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   li&lt;span style="color:#808030; "&gt;+&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+li &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element li &lt;span style="color:#808030; "&gt;{&lt;/span&gt;
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+dl &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element dl &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   &lt;span style="color:#808030; "&gt;(&lt;/span&gt;dt&lt;span style="color:#808030; "&gt;,&lt;/span&gt; dd&lt;span style="color:#808030; "&gt;+&lt;/span&gt;&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;+&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+dt &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element dt &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+dd &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element dd &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+address &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element address &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+hr &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element hr &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+pre &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element pre &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   InlineMinusMedia
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+blockquote &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element blockquote &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute cite &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Block
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+ins &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element ins &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute cite &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+del &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element del &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute cite &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+a &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element a &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute href &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute rel &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   &lt;span style="color:#808030; "&gt;(&lt;/span&gt;text &lt;span style="color:#808030; "&gt;&amp;amp;&lt;/span&gt; img&lt;span style="color:#808030; "&gt;*&lt;/span&gt; &lt;span style="color:#808030; "&gt;&amp;amp;&lt;/span&gt; span&lt;span style="color:#808030; "&gt;*&lt;/span&gt;&lt;span style="color:#808030; "&gt;)&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+span &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element span &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+br &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element br &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Core&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+em &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element em &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+strong &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element strong &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+code &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element code &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+cite &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element cite &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+abbr &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element abbr &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+sub &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element sub &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+sup &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element sup &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+object &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element object &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute data &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute type &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+img &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element img &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute alt &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute src &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute height &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute width &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+form &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element form &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute action &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute method &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   BlockMinusForm
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+label &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element label &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+input &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element input &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute type &lt;span style="color:#808030; "&gt;{&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#808030; "&gt;|&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;submit&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#808030; "&gt;|&lt;/span&gt; &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;hidden&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute name &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute size &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute value &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   empty
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+textarea &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element textarea &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute cols &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute rows &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   attribute name &lt;span style="color:#808030; "&gt;{&lt;/span&gt; text &lt;span style="color:#808030; "&gt;}&lt;/span&gt;&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   text
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+table &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element table &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   caption&lt;span style="color:#808030; "&gt;?&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt; tr&lt;span style="color:#808030; "&gt;+&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+caption &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element caption &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Inline
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+tr &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element tr &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   &lt;span style="color:#808030; "&gt;(&lt;/span&gt;th &lt;span style="color:#808030; "&gt;|&lt;/span&gt; td&lt;span style="color:#808030; "&gt;)&lt;/span&gt;&lt;span style="color:#808030; "&gt;+&lt;/span&gt;
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+th &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element th &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+
+td &lt;span style="color:#808030; "&gt;=&lt;/span&gt; element td &lt;span style="color:#808030; "&gt;{&lt;/span&gt; 
+   Main&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;attrs&lt;span style="color:#808030; "&gt;,&lt;/span&gt; 
+   Flow
+&lt;span style="color:#808030; "&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Le XHTML est un vocabulaire XML.  
+Vous pouvez en consulter la DTD en ligne, à l'adresse http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd; 
+il ne s'agit pas d'une DTD facile à lire, mais elle est néanmoins disponible. 
+Notez qu'il existe de très bons livres de référence pour approfondir le XHTML, mais
+pour ce cours, il suffit de connaître les quelques balises présentées dans ce document. &lt;/p&gt;
+
+&lt;p&gt;Un des avantages importants du XHTML sur des pages web traditionnelles (souvent mal formées)
+est qu'on peut facilement traiter des pages XHTML avec des outils destinés au XML.  En somme, on peut plus facilement extraire et traiter l'information d'une page XHTML
+que l'on peut le faire d'une page HTML mal formée.&lt;/p&gt;
+
+&lt;h2&gt;Livres de référence&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Jennifer Robbins, &lt;a href="http://www.amazon.ca/HTML-XHTML-Pocket-Reference-Robbins/dp/0596527276/sr=1-6/qid=1159624221/ref=sr_1_6/702-1271204-2832035?ie=UTF8&amp;amp;s=books"&gt;HTML and XHTML Pocket Reference&lt;/a&gt;, O'Reilly Media, 2006, 97 pages.&lt;/li&gt;
+&lt;li&gt;Jean Engels, &lt;a href="http://www.amazon.ca/Xhtml-css-exercices-Jean-Engels/dp/2212116373/sr=1-1/qid=1159624092/ref=sr_1_1/702-1271204-2832035?ie=UTF8&amp;amp;s=books-en-francais"&gt;XHTML et css : cours et exercices&lt;/a&gt;, Eyrolles, 2006.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;Activité d'autoévaluation&lt;/h2&gt;
+
+&lt;p&gt;Afin de vous assurez d'avoir bien compris les notions présentées dans cette leçon, vous devez créer un document XHTML valable, utilisant les différents éléments que nous avons étudiés. Afin que votre navigateur reconnaisse le document comme étant du XHTML, vous devriez utiliser l'extension «&amp;nbsp;xhtml&amp;nbsp;». Si vous déposez le fichier sur un serveur web Apache, il peut être nécessaire de créer aussi un fichier «&amp;nbsp;.htaccess&amp;nbsp;» et de le déposer dans
+le même répertoire que votre fichier XHTML afin que le serveur puisse reconnaître
+les fichiers XHTML. Votre fichier «&amp;nbsp;.htaccess&amp;nbsp;» pourrait avoir le contenu suivant&amp;nbsp;:
+&lt;/p&gt;
+&lt;pre&gt;DirectoryIndex index.xhtml index.html index.php index.pl index.cgi
+AddType application/xml .xhtml
+&lt;/pre&gt;&lt;/div&gt;
+		&lt;hr&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741807087</timemodified>
+  </page>
+</activity>

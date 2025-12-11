@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72119" moduleid="130961" modulename="page" contextid="970079">
+  <page id="72119">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>
+	
+    	&lt;h1 class=""&gt;				Autoévaluation
+				&lt;/h1&gt;
+
+
+								
+		&lt;div class=""&gt;&lt;p&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en plus de vous permettre 
+	de vérifier vos réponses, fournit une courte explication. 
+	Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c'est que vous avez la bonne réponse; 
+	sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour comprendre votre erreur. 
+	Puis, essayez de nouveau en cliquant sur le bouton «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 1&lt;/b&gt;.
+		Parmi les documents suivants, lesquels sont du XHTML valable?
+  &lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+				 &lt;/p&gt;
+&lt;form id="idp140549857061152"&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549857061920false" name="idp140549857061152"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;p&amp;gt;Voici mon document
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;span id="idp140549857061920false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. La balise «&amp;nbsp;p&amp;nbsp;» doit être fermée.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549857064080false" name="idp140549857061152"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;P&amp;gt;Voici mon document&amp;lt;/P&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;span id="idp140549857064080false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. La balise «&amp;nbsp;P&amp;nbsp;» n'existe pas en XHTML&amp;nbsp;: le XML tient compte 
+de la casse et l'élément «&amp;nbsp;p&amp;nbsp;» n'est pas la même chose que l'élément «&amp;nbsp;P&amp;nbsp;».&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549857066656true" name="idp140549857061152"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" [
+ &amp;lt;!ENTITY texte  "&amp;lt;p&amp;gt;Note légale: vous pouvez faire ce que vous voulez&amp;lt;/p&amp;gt;
+ &amp;lt;p&amp;gt;Copyright 2004&amp;lt;/p&amp;gt;"&amp;gt;
+ ]&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;amp;texte;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;span id="idp140549857066656true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Oui. L'entité contient deux éléments bien formés et le résultat est du XHTML valable.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549857069264false" name="idp140549857061152"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" [
+ &amp;lt;!ENTITY texte  "Voici mon document&amp;lt;/p&amp;gt;"&amp;gt;
+ ]&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;p&amp;gt;&amp;amp;texte;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;span id="idp140549857069264false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Une entité doit être du XML bien formé et si une entité contient des balises, 
+il doit s'agir d'éléments avec balise ouvrante et balise fermante.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854439456false" name="idp140549857061152"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" &amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;img src=http://www.uqam.ca/img/logo/logo.jpg 
+ alt="logo de l'UQÀM" /&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;span id="idp140549854439456false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non, les attributs doivent être entre guillemets comme ceci&amp;nbsp;:
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" &amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Un titre&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;img src="http://www.uqam.ca/img/logo/logo.jpg" 
+ alt="logo de l'UQÀM" /&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140549857061152';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140549857061152';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 2&lt;/b&gt;.
+		Quel énoncé décrit le mieux le XHTML?
+  &lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+&lt;form id="idp140549854443296"&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854444064true" name="idp140549854443296" onclick="javascript:var Click_MenuId='idp140549854444064true';var formid='idp140549854443296'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Un document XHTML est du XML bien formé.&lt;span id="idp140549854444064true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) 
+  Effectivement. Du XHTML doit absolument être bien formé.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854445088false" name="idp140549854443296" onclick="javascript:var Click_MenuId='idp140549854445088false';var formid='idp140549854443296'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le document XHTML devrait être du XML bien formé, 
+  mais le navigateur va tolérer de petites erreurs comme des balises 
+  croisées &amp;lt;b&amp;gt;&amp;lt;i&amp;gt;test&amp;lt;/b&amp;gt;&amp;lt;/i&amp;gt;. &lt;span id="idp140549854445088false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Justement pas&amp;nbsp;: 
+  on ne tolère pas de telles erreurs en XHTML, car cela rend la vie plus difficile aux machines 
+  et mène à des problèmes de compatibilité entre les navigateurs.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854446656false" name="idp140549854443296" onclick="javascript:var Click_MenuId='idp140549854446656false';var formid='idp140549854443296'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le XHTML est une nouvelle technologie qui exige un 
+  investissement important et une conversion coûteuse des documents.&lt;span id="idp140549854446656false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) 
+  Non. Le XHTML est très similaire au HTML.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 3&lt;/b&gt;.
+		Par rapport au XHTML, les énoncés suivants sont-ils justes?
+  &lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+				 &lt;/p&gt;
+&lt;form id="idp140549854448032"&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854448944true" name="idp140549854448032"&gt;Si mon entreprise utilise déjà beaucoup le&amp;nbsp;XML, le&amp;nbsp;XHTML est un 
+  choix plus facile. &lt;span id="idp140549854448944true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Effectivement. On peut facilement transformer le XML en&amp;nbsp;XHTML 
+  et si vous connaissez les outils&amp;nbsp;XML, vous pouvez les utiliser avec le&amp;nbsp;XHTML.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854450608false" name="idp140549854448032"&gt;Les navigateurs ne supportent pas encore&amp;nbsp;XHTML.&lt;span id="idp140549854450608false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+  C'est faux. La plupart des navigateurs supportent bien le&amp;nbsp;XHTML, mais tous ne supportent pas 
+  l'ensemble des normes&amp;nbsp;XML.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854451872true" name="idp140549854448032"&gt;Le XHTML est une technologie favorisant la pérennité des 
+  documents.&lt;span id="idp140549854451872true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Effectivement. Comme le XHTML suit une&amp;nbsp;DTD fixe, 
+  il sera possible dans le futur de bien interpréter les documents&amp;nbsp;XHTML, alors que le&amp;nbsp;HTML que 
+  l'on trouve sur le web est souvent désuet après quelques mises à jour des navigateurs.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140549854448032';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140549854448032';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 4&lt;/b&gt;.
+		Quels énoncés, parmi les suivants, décrivent bien le XHTML dans le contexte du XML?
+  &lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+				 &lt;/p&gt;
+&lt;form id="idp140549854453536"&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854454496true" name="idp140549854453536"&gt;On peut utiliser les balises XHTML dans nos propres DTD. 
+  &lt;span id="idp140549854454496true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;C'est sans problème. On peut recopier les parties des DTD XHTML et 
+  les utiliser dans nos propres DTD. Cela peut être utile si un document XML doit être transformé en XHTML plus tard.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854455872false" name="idp140549854453536"&gt;On peut utiliser nos propres balises en XHTML.&lt;span id="idp140549854455872false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+  Pas si nous utilisons les DTD officielles. Si nous écrivons vos propres DTD, il est possible 
+  que notre navigateur ne reconnaisse pas le contenu comme étant du XHTML.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854457216true" name="idp140549854453536"&gt;On peut définir ses propres entités en XHTML.&lt;span id="idp140549854457216true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+  Effectivement. Nous avons vu plus haut que les entités pouvaient être utilisées pour marquer le titre d'un 
+  livre ou le nom d'un auteur, mais on peut aussi définir des entités 
+  pour obtenir des caractères spéciaux, et ainsi de suite.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140549854453536';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140549854453536';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 5&lt;/b&gt;.
+		Parmi les énoncés suivants, lesquels s'appliquent à un document XHTML?&lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+				 &lt;/p&gt;
+&lt;form id="idp140549854458928"&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854459952true" name="idp140549854458928"&gt;Il s'agit d'un document HTML pouvant s'afficher dans un navigateur.&lt;span id="idp140549854459952true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Oui. D'ailleurs, le texte d'introduction à HTML en est un exemple.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854461472true" name="idp140549854458928"&gt;Il s'agit d'un document XML bien formé.&lt;span id="idp140549854461472true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Effectivement.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="checkbox" value="idp140549854462944true" name="idp140549854458928"&gt;Il s'agit d'un document XML valable.&lt;span id="idp140549854462944true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Effectivement, avec une déclaration de type de document utilisant un identifiant public.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140549854458928';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140549854458928';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 6&lt;/b&gt;.
+		Combien de paragraphes compte le document XHTML suivant?
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ L'enfant pleure dans la rue. Subitement, le Soleil se lève.
+ 
+ Ah! Que la vie est belle!
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+&lt;form id="idp140549854464640"&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854466608true" name="idp140549854464640" onclick="javascript:var Click_MenuId='idp140549854466608true';var formid='idp140549854464640'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;1&lt;span id="idp140549854466608true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854468272false" name="idp140549854464640" onclick="javascript:var Click_MenuId='idp140549854468272false';var formid='idp140549854464640'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;2&lt;span id="idp140549854468272false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854469648false" name="idp140549854464640" onclick="javascript:var Click_MenuId='idp140549854469648false';var formid='idp140549854464640'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;3&lt;span id="idp140549854469648false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854471024false" name="idp140549854464640" onclick="javascript:var Click_MenuId='idp140549854471024false';var formid='idp140549854464640'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Aucune de ces réponses&lt;span id="idp140549854471024false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 7&lt;/b&gt;.
+		Combien de paragraphes compte le document XHTML suivant?
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;p&amp;gt;L'enfant pleure dans la rue.
+ Subitement, le Soleil se lève.&amp;lt;p&amp;gt;
+ 
+ &amp;lt;p&amp;gt;Ah! Que la vie est belle!&amp;lt;/P&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+&lt;form id="idp140549854472400"&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854474368false" name="idp140549854472400" onclick="javascript:var Click_MenuId='idp140549854474368false';var formid='idp140549854472400'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;1&lt;span id="idp140549854474368false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Il ne s'agit pas de XHTML valable; la balise &amp;lt;/P&amp;gt; est incorrecte.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854476176false" name="idp140549854472400" onclick="javascript:var Click_MenuId='idp140549854476176false';var formid='idp140549854472400'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;2&lt;span id="idp140549854476176false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait vrai s'il s'agissait de XHTML valable.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854477552false" name="idp140549854472400" onclick="javascript:var Click_MenuId='idp140549854477552false';var formid='idp140549854472400'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;3&lt;span id="idp140549854477552false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854478928true" name="idp140549854472400" onclick="javascript:var Click_MenuId='idp140549854478928true';var formid='idp140549854472400'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Aucune de ces réponses&lt;span id="idp140549854478928true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Il ne s'agit pas de XHTML valable, la seconde balise paragraphe se terminant 
+      par &amp;lt;/P&amp;gt;. Un logiciel compatible avec XHTML comme Google Chrome ou Firefox peut très bien ne rien afficher à l'écran.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 8&lt;/b&gt;.
+		Combien de lignes horizontales sont représentées par ce document XHTML?
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;hr /&amp;gt;
+ &amp;lt;hr&amp;gt;&amp;lt;/hr&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+&lt;form id="idp140549854481952"&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854483072false" name="idp140549854481952" onclick="javascript:var Click_MenuId='idp140549854483072false';var formid='idp140549854481952'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;1&lt;span id="idp140549854483072false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854485440true" name="idp140549854481952" onclick="javascript:var Click_MenuId='idp140549854485440true';var formid='idp140549854481952'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;2&lt;span id="idp140549854485440true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854486720false" name="idp140549854481952" onclick="javascript:var Click_MenuId='idp140549854486720false';var formid='idp140549854481952'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;3&lt;span id="idp140549854486720false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854488096false" name="idp140549854481952" onclick="javascript:var Click_MenuId='idp140549854488096false';var formid='idp140549854481952'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Aucune de ces réponses&lt;span id="idp140549854488096false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+&lt;div style="background-color:#E0EAF0"&gt;
+&lt;b&gt;Question 9&lt;/b&gt;.
+		Comment représente-t-on une liste numérotée en XHTML?
+  
+  &lt;/div&gt;
+&lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+&lt;form id="idp140549854489472"&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854490464false" name="idp140549854489472" onclick="javascript:var Click_MenuId='idp140549854490464false';var formid='idp140549854489472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ 
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+ &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;li&amp;gt;
+  &amp;lt;ul&amp;gt;élément&amp;lt;/ul&amp;gt;
+  &amp;lt;ul&amp;gt;élément&amp;lt;/ul&amp;gt;
+  &amp;lt;/li&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+ 
+ &lt;/p&gt;
+&lt;span id="idp140549854490464false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Ce n'est pas du XHTML valable.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854493008false" name="idp140549854489472" onclick="javascript:var Click_MenuId='idp140549854493008false';var formid='idp140549854489472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+     &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+     &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+     &amp;lt;li&amp;gt;
+      &amp;lt;ol&amp;gt;élément&amp;lt;/ol&amp;gt;
+  &amp;lt;ol&amp;gt;élément&amp;lt;/ol&amp;gt;
+  &amp;lt;/li&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+  
+  &lt;/p&gt;
+&lt;span id="idp140549854493008false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce n'est pas du XHTML valable.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854495648true" name="idp140549854489472" onclick="javascript:var Click_MenuId='idp140549854495648true';var formid='idp140549854489472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+     &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+     &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+     &amp;lt;ol&amp;gt;
+      &amp;lt;li&amp;gt;élément&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;élément&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+  &lt;/p&gt;
+&lt;span id="idp140549854495648true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui.&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;input type="radio" value="idp140549854498160false" name="idp140549854489472" onclick="javascript:var Click_MenuId='idp140549854498160false';var formid='idp140549854489472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+     &amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+     &amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Titre de mon document&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+     &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;élément&amp;lt;/li&amp;gt;
+  &amp;lt;li&amp;gt;élément&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+  
+  &lt;/p&gt;
+&lt;span id="idp140549854498160false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. C'est bien du XHTML valable, mais la liste n'est pas numérotée.&lt;/span&gt;
+&lt;/li&gt;
+&lt;/ol&gt;&lt;/form&gt;&lt;/div&gt;
+		&lt;hr&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741807216</timemodified>
+  </page>
+</activity>

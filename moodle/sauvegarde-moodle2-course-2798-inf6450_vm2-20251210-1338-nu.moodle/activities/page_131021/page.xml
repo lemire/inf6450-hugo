@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72173" moduleid="131021" modulename="page" contextid="970142">
+  <page id="72173">
+    <name>XSLT modulaire</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;XSLT modulaire&lt;/h1&gt;
+
+&lt;h2&gt;Modularité avec les éléments «&amp;nbsp;xsl:apply-templates&amp;nbsp;»&lt;/h2&gt;
+    &lt;p&gt;Notre fichier «&amp;nbsp;xslt.xml&amp;nbsp;» se complexifie et devient 
+    plus difficile à comprendre. Tout est dans un seul modèle, le modèle &lt;i&gt;facture&lt;/i&gt;. 
+    Pour simuler un problème probable, imaginons que notre XML est plus complexe et prend la forme&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+     &amp;lt;?xml-stylesheet href="xslt.xml" type="application/xml"?&amp;gt;
+     &amp;lt;facture&amp;gt;
+      &amp;lt;montant&amp;gt;10.10&amp;lt;/montant&amp;gt;
+     &amp;lt;recipiendaire&amp;gt;
+      &amp;lt;personne&amp;gt;
+      &amp;lt;sexe&amp;gt;M&amp;lt;/sexe&amp;gt;
+      &amp;lt;nom&amp;gt;Rochond&amp;lt;/nom&amp;gt;
+      &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+      &amp;lt;/personne&amp;gt;
+     &amp;lt;/recipiendaire&amp;gt;
+     &amp;lt;commercant&amp;gt;
+      &amp;lt;personne&amp;gt;
+      &amp;lt;sexe&amp;gt;F&amp;lt;/sexe&amp;gt;
+      &amp;lt;nom&amp;gt;Ladouce&amp;lt;/nom&amp;gt;
+      &amp;lt;prenom&amp;gt;Jeanne&amp;lt;/prenom&amp;gt;
+      &amp;lt;/personne&amp;gt;
+      &amp;lt;/commercant&amp;gt;
+      &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
+      &amp;lt;/facture&amp;gt;                 
+      &lt;/p&gt;
+    &lt;p&gt;Dans ce nouveau document XML, se trouvent deux éléments «&amp;nbsp;personne&amp;nbsp;». Il serait bête, 
+    dans le document XSLT, de répéter le travail chaque fois qu'on veut afficher un élément «&amp;nbsp;personne&amp;nbsp;». 
+    Regardons ce que cela pourrait donner en pratique&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     &amp;lt;html&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Facture de &amp;lt;xsl:value-of select="personne" /&amp;gt;&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+      &amp;lt;p&amp;gt;Ceci est une facture pour 
+      &amp;lt;xsl:value-of select="recipiendaire/personne/prenom" /&amp;gt;
+      &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+      &amp;lt;xsl:value-of select="recipiendaire/personne/nom" /&amp;gt; 
+      de &amp;lt;xsl:value-of select="montant" /&amp;gt;$ pour:
+      &amp;lt;xsl:value-of select="raison" /&amp;gt;.&amp;lt;/p&amp;gt;
+      &amp;lt;p&amp;gt;Votre commerçant: 
+      &amp;lt;xsl:value-of select="commercant/personne/prenom" /&amp;gt;
+      &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+      &amp;lt;xsl:value-of select="commercant/personne/nom" /&amp;gt; &amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;
+    
+    &lt;/p&gt;
+    &lt;p&gt;Observez comment on répète le texte suivant à deux reprises&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+      &amp;lt;xsl:value-of select="recipiendaire/personne/prenom" /&amp;gt;
+            &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+     &amp;lt;xsl:value-of select="recipiendaire/personne/nom" /&amp;gt; 
+     &lt;/p&gt;
+    &lt;p&gt;Voici une autre solution, plus élégante, qui donne le même résultat&amp;nbsp;:&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    
+     &amp;lt;!-- d'abord un modèle pour les éléments facture --&amp;gt;
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     &amp;lt;html&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Facture de &amp;lt;xsl:value-of select="recipiendaire/personne" /&amp;gt;&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;body&amp;gt;
+      &amp;lt;p&amp;gt;Ceci est une facture pour 
+      &amp;lt;xsl:apply-templates select="recipiendaire" /&amp;gt; 
+      de &amp;lt;xsl:value-of select="montant" /&amp;gt;$ pour: 
+      &amp;lt;xsl:value-of select="raison" /&amp;gt;.&amp;lt;/p&amp;gt;
+      &amp;lt;p&amp;gt;Votre commerçant: &amp;lt;xsl:apply-templates select="commercant" /&amp;gt; &amp;lt;/p&amp;gt;
+     &amp;lt;/body&amp;gt;
+     &amp;lt;/html&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+    
+     &amp;lt;!-- le modèle pour les éléments facture 
+     utilise un modèle pour les éléments personne --&amp;gt;
+     &amp;lt;xsl:template match="personne"&amp;gt;
+            &amp;lt;xsl:value-of select="prenom" /&amp;gt;
+            &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+            &amp;lt;xsl:value-of select="nom" /&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;        
+            &lt;/p&gt;
+    &lt;p&gt;Quelques éléments «&amp;nbsp;xsl:value-of&amp;nbsp;» ont été remplacés par des 
+    éléments «&amp;nbsp;xsl:apply-templates&amp;nbsp;». Un élément «&amp;nbsp;xsl:apply-templates&amp;nbsp;» prend le contenu 
+    et, au lieu d'insérer le contenu textuel comme le fait «&amp;nbsp;xsl:value-of&amp;nbsp;» à l'endroit prévu, il insère plutôt le résultat 
+    obtenu par l'application de modèles (éléments «&amp;nbsp;xsl:template&amp;nbsp;»).
+    Ainsi, dans l'exemple que nous venons de voir, 
+    chaque fois que le processeur XSLT rencontre 
+    l'instruction «&amp;nbsp;&amp;lt;xsl:apply-templates select="recipiendaire" /&amp;gt;&amp;nbsp;», il 
+    prend l'élément «&amp;nbsp;recipiendaire&amp;nbsp;» et essaie d'appliquer ses modèles. Comme il n'a pas de modèle pour
+    les éléments «&amp;nbsp;recipiendaire&amp;nbsp;», il explore le contenu de l'élément et y trouve immédiatement un
+    élément «&amp;nbsp;personne&amp;nbsp;». Puisqu'il dispose d'un modèle pour ce type d'élément, il va l'appliquer.
+    Par ailleurs, comme les éléments «&amp;nbsp;recipiendaire&amp;nbsp;» et «&amp;nbsp;commercant&amp;nbsp;» 
+    ne contiennent qu'un élément «&amp;nbsp;personne&amp;nbsp;»,
+    c'est donc le modèle défini pour les éléments «&amp;nbsp;personne&amp;nbsp;» qui s'appliquera
+    dans les deux cas.&lt;/p&gt;
+    &lt;p&gt;Normalement, les éléments  «&amp;nbsp;xsl:apply-templates&amp;nbsp;» sont utilisés 
+    au sein des éléments «&amp;nbsp;xsl:template&amp;nbsp;». On peut aussi les
+    utiliser au sein d'autres éléments que nous discuterons prochainement,
+    «&amp;nbsp;xsl:param&amp;nbsp;» et «&amp;nbsp;xsl:variable&amp;nbsp;».&lt;/p&gt;
+    &lt;p&gt;Notre fichier «&amp;nbsp;xslt.xml&amp;nbsp;» est maintenant plus modulaire, 
+    parce qu'il contient deux modèles (éléments «&amp;nbsp;xsl:template&amp;nbsp;»).&lt;/p&gt;
+    &lt;p&gt;&lt;b&gt;En résumé, il est souvent préférable d'utiliser un élément «&amp;nbsp;xsl:apply-templates&amp;nbsp;» 
+    qu'un élément «&amp;nbsp;xsl:value-of&amp;nbsp;» quand la complexité du modèle augmente; ceci permet d'assurer 
+    la modularité et de garder la simplicité du document&amp;nbsp;XSLT.&lt;/b&gt;&lt;/p&gt;
+    &lt;p&gt;Par défaut, l'instruction apply-templates traite les nœuds dans l'ordre où ils
+    se présentent dans le document original. On peut forcer le XSLT à trier les éléments
+    avant de le traiter avec l'instruction xsl:sort. Dans notre exemple, on peut 
+    remplacer l'élément &amp;lt;xsl:apply-templates select="recipiendaire" /&amp;gt; par cet élément
+    si on veut que les individus soient triés par leur nom de famille.&lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;&amp;lt;xsl:apply-templates select="étudiant" &amp;gt;
+    &amp;lt;xsl:sort select="personne/nom" order="ascending" data-type="text" /&amp;gt;
+    &amp;lt;/xsl:apply-templates&amp;gt;
+    &lt;/p&gt;
+    &lt;p&gt;Si on souhaite un tri sur la valeur numérique d'une expression, on
+    remplacera data-type="text" par data-type="number".&lt;/p&gt;
+    &lt;p&gt;On peut aussi importer un autre fichier XSLT avec l'instruction xsl:import. Celle-ci
+    doit apparaître au tout début du fichier XSLT comme premier sous-élément de l'élément 
+    xsl:stylesheet comme dans cet exemple&amp;nbsp;: &lt;/p&gt;
+    &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+     &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+     &amp;lt;xsl:stylesheet version="1.0" 
+     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    
+    &amp;lt;xsl:import href="mesregles.xsl"/&amp;gt;
+    
+     &amp;lt;xsl:template match="facture"&amp;gt;
+     &amp;lt;html&amp;gt;
+     &amp;lt;head&amp;gt;
+     &amp;lt;title&amp;gt;Facture de &amp;lt;xsl:value-of select="personne" /&amp;gt;&amp;lt;/title&amp;gt;
+     &amp;lt;/head&amp;gt;
+     &amp;lt;/xsl:template&amp;gt;
+     &amp;lt;/xsl:stylesheet&amp;gt;        
+    &lt;/p&gt;
+    &lt;p&gt;En cas de conflit entre les règles de fichier XSLT principal et 
+    celles du fichier importé, les règles du fichier XSLT principal l'emporte.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741881726</timemodified>
+  </page>
+</activity>

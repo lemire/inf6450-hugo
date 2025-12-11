@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94572" moduleid="171972" modulename="page" contextid="1138221">
+  <page id="94572">
+    <name>Le fichier AndroidManifest.xml</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Le fichier AndroidManifest.xml&lt;/h1&gt;
+
+&lt;p&gt;Le fichier AndroidManifest.xml est le cœur de toute application Android. Il s'agit d'un fichier XML obligatoire situé à la racine du projet qui décrit les composants essentiels de l'application au système Android. Il déclare notamment le package de l'application, les activités (Activity), services, récepteurs de diffusion (Broadcast Receiver) et fournisseurs de contenu (Content Provider). Sans ce fichier correctement configuré, l'application ne peut pas être installée ni exécutée sur un appareil ou un émulateur.&lt;/p&gt;
+
+&lt;p&gt;Ce manifeste sert également à déclarer les permissions nécessaires (par exemple l'accès à Internet, à la caméra, au stockage), les fonctionnalités matérielles requises (comme la présence d'un capteur GPS ou d'une caméra), la version minimale et cible de l'API Android, ainsi que des métadonnées comme l'icône de l'application, le label affiché dans le launcher, le thème, ou encore si l'application supporte le mode portrait/seulement paysage. Depuis Android 12 et plus, certaines déclarations comme les activités exportées doivent être explicites pour des raisons de sécurité.&lt;/p&gt;
+
+&lt;p&gt;Voici un exemple simple d'un AndroidManifest.xml pour une application basique contenant une seule activité :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="utf-8"?&amp;gt;
+&amp;lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.monapplication"&amp;gt;
+
+    &amp;lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.MonApplication"&amp;gt;
+
+        &amp;lt;activity
+            android:name=".MainActivity"
+            android:exported="true"&amp;gt;
+            &amp;lt;intent-filter&amp;gt;
+                &amp;lt;action android:name="android.intent.action.MAIN" /&amp;gt;
+                &amp;lt;category android:name="android.intent.category.LAUNCHER" /&amp;gt;
+            &amp;lt;/intent-filter&amp;gt;
+        &amp;lt;/activity&amp;gt;
+
+    &amp;lt;/application&amp;gt;
+
+&amp;lt;/manifest&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dans cet exemple, l'activité MainActivity est déclarée comme point d'entrée principal grâce au filtre d'intention MAIN et LAUNCHER, et android:exported="true" est obligatoire lorsqu'il y a un intent-filter (règle de sécurité à partir d'Android 12).&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1764992699</timemodified>
+  </page>
+</activity>

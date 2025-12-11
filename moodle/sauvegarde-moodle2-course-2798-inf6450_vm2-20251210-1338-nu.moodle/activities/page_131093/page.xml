@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72245" moduleid="131093" modulename="page" contextid="970214">
+  <page id="72245">
+    <name>DOM</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;DOM&lt;/h1&gt;
+
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Nous supposons que vous disposez d’un environnement de développement Java et que vous ferez les exemples de ce tutoriel afin de mieux comprendre. Notre objectif est avant tout de vous rendre suffisamment à l’aise avec DOM pour pouvoir l’utiliser ; nous vous invitons toutefois à naviguer sur le web pour en apprendre davantage sur le sujet, au besoin.&lt;/p&gt;
+&lt;p&gt;L’API Java elle-même est disponible sur le &lt;a href="http://docs.oracle.com/javase/8/docs/api/"&gt;site d’Oracle&lt;/a&gt;. Pour pouvoir faire vos propres programmes, consultez l’API Java qui comprend tous les objets et fonctions du tutoriel.&lt;/p&gt;
+
+&lt;h2&gt;Notions de base&lt;/h2&gt;
+&lt;p&gt;On dit qu’un modèle DOM est une structure en arbre. En informatique, un arbre est un graphe ou une structure constituée de nœuds, de façon telle que chaque nœud a un et un seul parent — ou aucun —, lequel a un seul ou plusieurs enfants. Un seul nœud est autorisé à ne pas avoir de parent : c’est le nœud-racine.&lt;/p&gt;
+
+&lt;h2&gt;Point de vue critique&lt;/h2&gt;
+&lt;p&gt;L’API DOM est très utilisée et supportée dans de nombreux langages (Java, JavaScript, C#, C++, etc.). Cependant, elle consomme beaucoup de mémoire et nécessite souvent beaucoup de code pour des opérations simples. Malgré ces défauts, sa large adoption en fait une référence incontournable.&lt;/p&gt;
+
+&lt;h2&gt;Un document XML&lt;/h2&gt;
+&lt;p&gt;Créons d’abord un document XML nommé « test.xml » :&lt;/p&gt;
+
+&lt;div class="xmlblock"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+&amp;lt;liste&amp;gt;
+    &amp;lt;joueur&amp;gt;
+        &amp;lt;nom surnom="jojo"&amp;gt;Jean&amp;lt;/nom&amp;gt;
+        &amp;lt;buts&amp;gt;32&amp;lt;/buts&amp;gt;
+    &amp;lt;/joueur&amp;gt;
+    &amp;lt;joueur&amp;gt;
+        &amp;lt;nom surnom="Ma"&amp;gt;Marie&amp;lt;/nom&amp;gt;
+        &amp;lt;buts&amp;gt;54&amp;lt;/buts&amp;gt;
+    &amp;lt;/joueur&amp;gt;
+&amp;lt;/liste&amp;gt;&lt;/div&gt;
+
+&lt;h2&gt;Charger un document XML en Java&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Test&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;]);
+    }
+}&lt;/pre&gt;
+
+&lt;h2&gt;Accès à l’élément-racine&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Test&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;]);
+
+        Element racine = doc.&lt;span style="color:#61afef;"&gt;getDocumentElement&lt;/span&gt;();
+        System.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(racine.&lt;span style="color:#61afef;"&gt;getTagName&lt;/span&gt;()); &lt;span style="color:#5c6370;"&gt;// affiche : liste&lt;/span&gt;
+    }
+}&lt;/pre&gt;
+
+&lt;h2&gt;L’interface Node&lt;/h2&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Type de nœud&lt;/th&gt;&lt;th&gt;getNodeName()&lt;/th&gt;&lt;th&gt;getNodeValue()&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Attribut&lt;/td&gt;&lt;td&gt;nom de l’attribut&lt;/td&gt;&lt;td&gt;valeur de l’attribut&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Élément&lt;/td&gt;&lt;td&gt;nom de l’élément&lt;/td&gt;&lt;td&gt;null&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Texte&lt;/td&gt;&lt;td&gt;#text&lt;/td&gt;&lt;td&gt;le texte&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;h2&gt;Parcourir les enfants&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Test&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;]);
+
+        Element racine = doc.&lt;span style="color:#61afef;"&gt;getDocumentElement&lt;/span&gt;();
+        NodeList joueurs = racine.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"joueur"&lt;/span&gt;);
+
+        &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; i = &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;; i &amp;lt; joueurs.&lt;span style="color:#61afef;"&gt;getLength&lt;/span&gt;(); i++) {
+            Element joueur = (Element) joueurs.&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(i);
+            Element nom = (Element) joueur.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;).&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;);
+            Element buts = (Element) joueur.&lt;span style="color:#61afef;"&gt;getElementsByTagName&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"buts"&lt;/span&gt;).&lt;span style="color:#61afef;"&gt;item&lt;/span&gt;(&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;);
+
+            String nomJoueur = nom.&lt;span style="color:#61afef;"&gt;getFirstChild&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;getNodeValue&lt;/span&gt;();
+            String surnom = nom.&lt;span style="color:#61afef;"&gt;getAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"surnom"&lt;/span&gt;);
+            String nbButs = buts.&lt;span style="color:#61afef;"&gt;getFirstChild&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;getNodeValue&lt;/span&gt;();
+
+            System.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(nomJoueur + &lt;span style="color:#98c379;"&gt;" ("&lt;/span&gt; + surnom + &lt;span style="color:#98c379;"&gt;") : "&lt;/span&gt; + nbButs + &lt;span style="color:#98c379;"&gt;" buts"&lt;/span&gt;);
+        }
+    }
+}&lt;/pre&gt;
+
+&lt;h2&gt;Création d’un document XML depuis zéro&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.dom.DOMSource;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.transform.stream.StreamResult;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.FileWriter;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;CreationDOM&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        DocumentBuilder builder = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        Document doc = builder.&lt;span style="color:#61afef;"&gt;newDocument&lt;/span&gt;();
+
+        Element liste = doc.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"liste"&lt;/span&gt;);
+        doc.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(liste);
+
+        Element joueur1 = doc.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"joueur"&lt;/span&gt;);
+        Element nom1 = doc.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"nom"&lt;/span&gt;);
+        nom1.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(doc.&lt;span style="color:#61afef;"&gt;createTextNode&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Jean"&lt;/span&gt;));
+        nom1.&lt;span style="color:#61afef;"&gt;setAttribute&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"surnom"&lt;/span&gt;, &lt;span style="color:#98c379;"&gt;"jojo"&lt;/span&gt;);
+        Element buts1 = doc.&lt;span style="color:#61afef;"&gt;createElement&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"buts"&lt;/span&gt;);
+        buts1.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(doc.&lt;span style="color:#61afef;"&gt;createTextNode&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"32"&lt;/span&gt;));
+
+        joueur1.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(nom1);
+        joueur1.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(buts1);
+        liste.&lt;span style="color:#61afef;"&gt;appendChild&lt;/span&gt;(joueur1);
+
+        TransformerFactory tf = TransformerFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        Transformer t = tf.&lt;span style="color:#61afef;"&gt;newTransformer&lt;/span&gt;();
+        t.&lt;span style="color:#61afef;"&gt;setOutputProperty&lt;/span&gt;(OutputKeys.ENCODING, &lt;span style="color:#98c379;"&gt;"ISO-8859-1"&lt;/span&gt;);
+        t.&lt;span style="color:#61afef;"&gt;setOutputProperty&lt;/span&gt;(OutputKeys.INDENT, &lt;span style="color:#98c379;"&gt;"yes"&lt;/span&gt;);
+
+        DOMSource source = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; DOMSource(doc);
+        StreamResult result = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; StreamResult(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileWriter(&lt;span style="color:#98c379;"&gt;"nouveau.xml"&lt;/span&gt;));
+        t.&lt;span style="color:#61afef;"&gt;transform&lt;/span&gt;(source, result);
+    }
+}&lt;/pre&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1764380427</timemodified>
+  </page>
+</activity>

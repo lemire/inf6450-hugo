@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72113" moduleid="130955" modulename="page" contextid="970073">
+  <page id="72113">
+    <name>HTML 5</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt; HTML 5
+&lt;/h1&gt;
+
+&lt;div class=""&gt;
+    &lt;p&gt;Un document HTML&amp;nbsp;5 peut
+        prendre la forme d'un document XML ou d'un document HTML. La déclaration doctype n'est utilisée que
+        dans le cas où le document n'est pas un document XML et a été grandement simplifiée&amp;nbsp;: il suffit d'inclure
+        la ligne &amp;lt;!DOCTYPE html&amp;gt; au début du fichier. Voici un exemple de document HTML&amp;nbsp;5&amp;nbsp;:&lt;/p&gt;
+    &lt;pre style=" white-space: pre-wrap;    "&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;meta&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;charset&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"UTF-8"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ceci est un exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voici un paragraphe&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+    &lt;p&gt;Un document HTML&amp;nbsp;5 en XML ne nécessite pas de déclaration doctype&amp;nbsp;:&lt;/p&gt;
+
+    &lt;pre&gt;&amp;lt;?xml version="&lt;span style="color:#008c00; "&gt;1.0&lt;/span&gt;" encoding="UTF-&lt;span style="color:#008c00; "&gt;8&lt;/span&gt;"?&amp;gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#274796; "&gt; xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"http://www.w3.org/1999/xhtml"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ceci est un exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Voici un paragraphe&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+    &lt;p&gt;En HTML&amp;nbsp;5, on n'utilise plus les éléments acronym et plusieurs autres
+        éléments moins utiles (basefont, big, center, s, strike, tt, u, frame, frameset, noframe, applet, isindex, dir).
+        Plusieurs nouveaux éléments ont été ajoutés notamment les éléments section et article. Ces éléments permettent d'organiser le contenu de manière logique.&lt;/p&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;Élément section: permet de regrouper du contenu dans une section contenant peut-être plusieurs paragraphes ou articles ayant un thème commun.&lt;/li&gt;
+        &lt;li&gt;Élément article: permet d'indiquer que le contenu est un article. Un article peut disposer d'une entête (header) comprenant un titre.&lt;/li&gt;
+        &lt;li&gt;Élément aside: permet d'ajouter une note optionnelle au contenu.&lt;/li&gt;
+        &lt;li&gt;Élément footer: permet d'indiquer une section dédiée aux métadonnées du document. Chaque section peut avoir son élément footer.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Voici un exemple de HTML 5 valable:&lt;/p&gt;
+
+    &lt;pre&gt;&amp;lt;?xml version="&lt;span style="color:#008c00; "&gt;1.0&lt;/span&gt;" encoding="UTF-&lt;span style="color:#008c00; "&gt;8&lt;/span&gt;"?&amp;gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#274796; "&gt; xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"http://www.w3.org/1999/xhtml"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ceci est un exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un article sur le XML&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;section&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;article&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;header&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;La magie du XML&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h2&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;J'aime le XML&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;header&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nous aimons tous le XML&lt;span style="color:#008c00; "&gt;...&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;article&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;section&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;footer&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h3&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Une annexe&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h3&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Cet article a été écrit par Daniel&lt;span style="color:#008c00; "&gt;...&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;footer&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;aside&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+En passant, ce n'est pas un vrai article&lt;span style="color:#008c00; "&gt;...&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;aside&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+    &lt;p&gt;On peut facilement créer des indicateurs de progression:&lt;/p&gt;
+
+
+    &lt;meter value="2" min="0" max="10"&gt;2 sur 10&lt;/meter&gt;&lt;br&gt;
+    &lt;meter value="0.66"&gt;66%&lt;/meter&gt;
+    &lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meter&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"2"&lt;/span&gt;&lt;span style="color:#274796; "&gt; min&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"0"&lt;/span&gt;&lt;span style="color:#274796; "&gt; max&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"10"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#008c00; "&gt;2&lt;/span&gt; sur &lt;span style="color:#008c00; "&gt;10&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meter&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br /&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meter&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"0.66"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#008c00; "&gt;66&lt;/span&gt;%&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meter&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+    &lt;p&gt;On peut
+        aussi ajouter une figure à un document avec une légende:
+    &lt;/p&gt;
+
+
+    &lt;figure&gt;
+        &lt;img src="https://www.teluq.ca/siteweb/univ/fichiers/images/profs/dlemire.jpg"&gt;
+        &lt;legend&gt;Photo du professeur&lt;/legend&gt;
+    &lt;/figure&gt;
+
+    &lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;figure&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+ &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;img&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;src&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"http://lemire.me/fr/images/JPG/profile2011B_152.jpg"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+ &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;legend&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Photo du professeur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;legend&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;figure&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+    &lt;p&gt;On peut aussi créer rapidement des formulaires en ligne:&lt;/p&gt;
+
+    &lt;form id="inscription" onsubmit="return false;"&gt;
+        &lt;h1&gt;Inscription au cours de XML&lt;/h1&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;Information personnelle&lt;/legend&gt;
+            &lt;label&gt;Nom
+                &lt;input id="nom" name="nom" type="text" placeholder="Votre nom" required="" autofocus=""&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Date de naissance
+                &lt;input id="courriel" name="ddn" type="date" required=""&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Courriel
+                &lt;input id="courriel" name="courriel" type="email" placeholder="lemire@jo.com" required=""&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Site personnel
+                &lt;input id="url" name="url" type="url" placeholder="http://monsite.com"&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Téléphone
+                &lt;input id="telephone" name="telephone" type="tel" placeholder="Par ex. 450 111-4444" required=""&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Nombre de cours suivis précédemment
+                &lt;input id="cours" name="cours" type="number" min="0" max="50" step="0.5" value="1"&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Aptitude en informatique
+                &lt;input id="aptitude" name="aptitude" type="range" min="1" max="100" value="0"&gt;
+                &lt;output name="output" onforminput="value=a.value"&gt;0&lt;/output&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Adresse
+                &lt;textarea id="adresse" name="address" rows="5" required=""&gt;&lt;/textarea&gt;
+            &lt;/label&gt;
+            &lt;br&gt;
+            &lt;label&gt;Pays
+                &lt;input id="pays" name="pays" list="nomsdepays" type="text" required=""&gt;
+                &lt;datalist id="nomsdepays"&gt;
+                    &lt;option label="États-Unis" value="us"&gt;&lt;/option&gt;
+                    &lt;option label="Canada" value="ca"&gt;&lt;/option&gt;
+                    &lt;option label="France" value="fr"&gt;&lt;/option&gt;
+                &lt;/datalist&gt;
+            &lt;/label&gt;
+        &lt;/fieldset&gt;
+        &lt;fieldset&gt;
+            &lt;button type="submit"&gt;S'inscrire&lt;/button&gt;
+        &lt;/fieldset&gt;
+    &lt;/form&gt;
+
+
+    &lt;pre style=" white-space: pre-wrap;    "&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;form&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"inscription"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Inscription au cours de XML&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;h1&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;fieldset&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;legend&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Information personnelle&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;legend&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nom
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"nom"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"nom"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"text"&lt;/span&gt;&lt;span style="color:#274796; "&gt; placeholder&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"Votre nom"&lt;/span&gt;&lt;span style="color:#274796; "&gt; required autofocus&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt; 
+    	&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Date de naissance
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"courriel"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"ddn"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"date"&lt;/span&gt;&lt;span style="color:#274796; "&gt; required&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Courriel 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"courriel"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"courriel"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"email"&lt;/span&gt;&lt;span style="color:#274796; "&gt; placeholder&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"lemire@jo.com"&lt;/span&gt;&lt;span style="color:#274796; "&gt; required&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;  
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Site personnel 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"url"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"url"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"url"&lt;/span&gt;&lt;span style="color:#274796; "&gt; placeholder&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"http://monsite.com"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt; 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Téléphone  
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"telephone"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"telephone"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"tel"&lt;/span&gt;&lt;span style="color:#274796; "&gt; placeholder&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"Par ex. 450 111-4444"&lt;/span&gt;&lt;span style="color:#274796; "&gt; required&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;  
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nombre de cours suivis précédemment
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"cours"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"cours"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"number"&lt;/span&gt;&lt;span style="color:#274796; "&gt; min&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"0"&lt;/span&gt;&lt;span style="color:#274796; "&gt; max&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"50"&lt;/span&gt;&lt;span style="color:#274796; "&gt; step&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"0.5"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"1"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt; 
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Aptitude en informatique 
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"aptitude"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"aptitude"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"range"&lt;/span&gt;&lt;span style="color:#274796; "&gt; min&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"1"&lt;/span&gt;&lt;span style="color:#274796; "&gt; max&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"100"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"0"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;output&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"output"&lt;/span&gt;&lt;span style="color:#274796; "&gt; onforminput&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"value=a.value"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#008c00; "&gt;0&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;output&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt; 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Adresse 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;textarea&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"adresse"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"address"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;rows&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#008c00; "&gt;5&lt;/span&gt;&lt;span style="color:#274796; "&gt; required&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;textarea&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;br&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;  
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pays
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;input&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"pays"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;name&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"pays"&lt;/span&gt;&lt;span style="color:#274796; "&gt; list&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"nomsdepays"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"text"&lt;/span&gt;&lt;span style="color:#274796; "&gt; required&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;datalist&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"nomsdepays"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        	&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;label&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"États-Unis"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"us"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        	&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;label&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"Canada"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"ca"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        	&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;label&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"France"&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;value&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"fr"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;option&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+        &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;datalist&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+		&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;fieldset&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;fieldset&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+	    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;button&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#274796; "&gt;submit&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;S'inscrire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;button&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;fieldset&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; 
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;form&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+
+
+    &lt;p&gt;Les éléments canvas, video et audio sont aussi ajoutés&amp;nbsp;: le HTML devient pleinement multimédia.&lt;/p&gt;
+
+    &lt;p&gt;Pour en savoir plus, consulter le guide du &lt;a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/HTML5"&gt;HTML 5 chez Mozilla&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1741873667</timemodified>
+  </page>
+</activity>

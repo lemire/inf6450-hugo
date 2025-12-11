@@ -1,0 +1,29 @@
+baseURL = 'https://lemire.github.io/inf6450-hugo/'
+languageCode = 'fr'
+defaultContentLanguage = 'fr'
+
+title = "INF 6450 - Gestion de l'information avec XML"
+theme = 'hugo-book-teluq'
+
+# --- Paramètres du thème hugo-book ---
+[params]
+BookMenuBundle = "book"
+BookToC = true
+BookSearch = true
+#javaRunnerEndpoint = "https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"
+javaRunnerEndpoint = "http://192.168.50.86:5123/run"
+math = true
+BookLogo = "xml.jpg"
+
+[markup]
+  [markup.highlight]
+    style = 'github'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]

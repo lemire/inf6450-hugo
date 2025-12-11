@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72266" moduleid="131114" modulename="page" contextid="970235">
+  <page id="72266">
+    <name>Travail 4</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Travail 4&lt;/h1&gt;
+&lt;h2&gt;Consignes générales&lt;/h2&gt;
+&lt;ol&gt;
+    &lt;li&gt;Utilisez les noms des fichiers spécifiés dans chaque exercice.&lt;/li&gt;
+    &lt;li&gt;Vous n'avez droit qu'à un seul fichier «&amp;nbsp;.java&amp;nbsp;» par exercice
+        et
+        il ne doit pas contenir plus de 500 lignes de code. Tous les problèmes
+        peuvent être résolus en moins de 100 lignes!
+        Rappelons qu'une «&amp;nbsp;ligne&amp;nbsp;» de code comprend un maximum de 80
+        caractères.&lt;/li&gt;
+    &lt;li&gt;Chaque fichier Java doit débuter par un commentaire donnant le sigle du
+        cours et votre nom comme ceci&amp;nbsp;:
+        &lt;pre&gt;/**
+            * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+            */&lt;/pre&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Vous devriez pouvoir accéder à la version de votre SDK, en tapant
+        «&amp;nbsp;javac -version&amp;nbsp;» ou «&amp;nbsp;java -version&amp;nbsp;»
+        dans une ligne de commande.&lt;/li&gt;
+    &lt;li&gt;Ne traitez pas les cas d'exception, comme les fichiers qui n'existent
+        pas ou ne peuvent être ouverts.
+        Par contre, votre code doit produire un résultat correct dans des
+        conditions normales.
+        Par exemple, si on vous demande de produire du XML, il doit s'agir de
+        XML bien formé.
+        Si on vous demande de lire du XML, vous devez pouvoir lire tout XML qui
+        se conforme aux spécifications décrites dans l'exercice.
+        Vous devez utiliser l'API DOM. &lt;/li&gt;
+    &lt;li&gt;Il est impératif que vos fichiers compilent avec le SDK (le plus
+        récent), sans utiliser de librairies particulières.
+        &lt;strong&gt;Un fichier Java qui ne compile pas ne sera pas noté.&lt;/strong&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Lorsque vous aurez terminé les exercices, vous devez transmettre à votre
+        personne tutrice,
+        en utilisant l'outil de dépôt de l'Université, l'ensemble des fichiers
+        avec l'extension Java comme fichiers attachés. Vous devez aussi remettre
+        un fichier XML ainsi qu'un document (Word 97/2000/XP, &lt;a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office"&gt;ODF&lt;/a&gt;,
+        PDF, RTF ou en format texte) clairement identifié à votre nom contenant
+        l'analyse demandée à la première question du travail.
+        Il s'agit d'un travail personnel et vous ne devez pas partager vos
+        solutions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Cette activité notée compte pour 15 % de la note globale.&lt;/p&gt;
+&lt;br&gt;
+&lt;h2&gt;Exercice 1&lt;/h2&gt;
+&lt;p&gt; Supposons une liste de transactions avec un attribut «&amp;nbsp;montant&amp;nbsp;»
+    pour chaque client,
+    comme dans le document XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;liste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;client&lt;/span&gt; &lt;span style="color:#274796; "&gt;nom&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Jean
+        Charles&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;transaction&lt;/span&gt; &lt;span style="color:#274796; "&gt;montant&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;500&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;question&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Quelle est la dernière marque?&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;question&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;transaction&lt;/span&gt; &lt;span style="color:#274796; "&gt;montant&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1200&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;client&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;client&lt;/span&gt; &lt;span style="color:#274796; "&gt;nom&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Pierre
+        Élisabeth&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;transaction&lt;/span&gt; &lt;span style="color:#274796; "&gt;montant&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;600&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;transaction&lt;/span&gt; &lt;span style="color:#274796; "&gt;montant&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;800&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;question&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Où puis-je trouver le modèle
+    2002?&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;question&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;transaction&lt;/span&gt; &lt;span style="color:#274796; "&gt;montant&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;2000&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;client&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;liste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Supposons que le fichier se nomme «&amp;nbsp;&lt;b&gt;transactions.xml&lt;/b&gt;&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Nous ne savons pas combien de transactions il peut y avoir par client; nous
+    ne savons pas combien de clients nous avons;
+    de plus, nous ne connaissons pas les noms des clients d'avance. Nous
+    supposons que l'élément-racine est toujours «&amp;nbsp;liste&amp;nbsp;»;
+    que tous les éléments «&amp;nbsp;transaction&amp;nbsp;» ont un attribut
+    «&amp;nbsp;montant&amp;nbsp;»;
+    que tous les éléments «&amp;nbsp;transaction&amp;nbsp;» sont dans des éléments
+    «&amp;nbsp;client&amp;nbsp;»; que les éléments
+    «&amp;nbsp;client&amp;nbsp;» sont tous dans l'élément-racine et ont tous un attribut
+    «&amp;nbsp;nom&amp;nbsp;».
+    Nous supposons également qu'il n'y aura pas deux attributs «&amp;nbsp;nom&amp;nbsp;»
+    avec la même valeur (même nom).
+    Enfin, nous supposons que toutes les valeurs d'attribut de
+    «&amp;nbsp;montant&amp;nbsp;» sont des entiers («&amp;nbsp;int&amp;nbsp;» en Java). &lt;/p&gt;
+&lt;p&gt;Écrivez un programme qui calcule la somme des valeurs de l'attribut
+    «&amp;nbsp;montant&amp;nbsp;» pour chaque
+    client (seuls les attributs «&amp;nbsp;montant&amp;nbsp;» des éléments
+    «&amp;nbsp;transaction&amp;nbsp;»).
+    Nous supposons qu'il s'agit de nombres entiers, des dollars par exemple.
+    Le code source de votre programme sera dans un fichier nommé
+    «&amp;nbsp;&lt;b&gt;Transactions.java&lt;/b&gt;&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Ainsi, la commande «&amp;nbsp;java Transactions transactions.xml&amp;nbsp;» devra
+    donner&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt; Nom du client: Jean Charles
+    Somme: 1700
+    Nom du client: Pierre Élisabeth
+    Somme: 3400&lt;/pre&gt;
+&lt;p&gt;Comparez la solution que vous obtenez en utilisant DOM avec ce qui est
+    possible de faire avec XSLT, en fonction du temps de développement.
+    Donnez au moins un avantage de l'approche DOM sur l'approche XSLT et un
+    avantage
+    de l'approche XSLT sur DOM. Vous devez
+    remettre une solution XSLT sous la forme d'un document XML. Vous pouvez
+    mettre des commentaires dans votre code Java, mais la comparaison entre DOM
+    et XSLT
+    doit être faite dans un document à part.&lt;/p&gt;
+&lt;h2&gt;Exercice 2&lt;/h2&gt;
+&lt;p&gt;Avec XSLT, nous pouvons combiner plusieurs documents en utilisant la fonction
+    «&amp;nbsp;document&amp;nbsp;» qui permet
+    de charger plusieurs documents&amp;nbsp;XML. Mais que se passe-t-il lorsque nous
+    devons combiner plusieurs documents,
+    dont certains ne sont pas en&amp;nbsp;XML? À ce moment, l'utilisation d'un
+    langage comme Java et de DOM peut être très avantageuse.&lt;/p&gt;
+&lt;p&gt;Supposons qu'un serveur enregistre les achats effectués sur le site, dans un
+    fichier texte, en plaçant
+    chaque achat sur une ligne avec des informations séparées par des virgules.
+    Le fichier se nomme «&amp;nbsp;&lt;b&gt;achats.txt&lt;/b&gt;&amp;nbsp;»&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt; Jean Charles, 3214324565, 321, 2
+    Yvan Richard, 5435435545, 321, 1
+    Yvette Gagnon, 4324324243, 1, 12&lt;/pre&gt;
+&lt;p&gt;Sur chaque ligne, se trouvent le nom du client, son numéro de carte de
+    crédit, le code du produit acheté et la quantité achetée.
+    Nous supposons que le serveur est un logiciel commercial et qu'il n'est pas
+    possible de le modifier
+    pour obtenir le format des données en&amp;nbsp;XML.&lt;/p&gt;
+&lt;p&gt;Par ailleurs, nous avons un document XML contenant notre inventaire; le
+    fichier se nomme «&amp;nbsp;&lt;b&gt;inventaire.xml&lt;/b&gt;&amp;nbsp;».
+    Le voici&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;432.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;43&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;100&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;321&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;31.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;200&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Écrivez un programme qui met à jour l'inventaire en tenant compte des achats
+    de la journée,
+    contenus dans le fichier «&amp;nbsp;&lt;b&gt;achats.txt&amp;nbsp;&lt;/b&gt;».
+    Votre code source devra se trouver dans le fichier
+    «&amp;nbsp;&lt;b&gt;Inventaire.java&lt;/b&gt;&amp;nbsp;» et
+    la commande «&amp;nbsp;java Inventaire achats.txt inventaire.xml» va modifier le
+    fichier
+    «&amp;nbsp;inventaire&amp;nbsp;» pour y soustraire les produits achetés ce qui, dans
+    le cas qui nous concerne,
+    donnera un fichier «&amp;nbsp;inventaire.xml&amp;nbsp;» ayant le contenu
+    suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;432.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;31&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;100&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;321&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;31.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;197&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Nous pouvons supposer que le fichier «&amp;nbsp;inventaire.xml&amp;nbsp;» ne contient
+    qu'un seul élément
+    «&amp;nbsp;produit&amp;nbsp;» pour chaque valeur d'attribut «&amp;nbsp;code&amp;nbsp;». Nous
+    pouvons aussi supposer
+    qu'aucun code invalide n'apparaît dans le fichier «&amp;nbsp;achats.txt&amp;nbsp;».
+    Par contre, nous ne savons pas combien
+    de produits nous avons et combien d'achats il y aura. Évidemment, il est
+    possible d'avoir un nombre négatif de produits
+    dans notre inventaire.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Indice.-&lt;/b&gt; Il est parfaitement possible d'écrire un tel programme en
+    moins de 50 lignes.&lt;/p&gt;
+&lt;h2&gt;Exercice 3&lt;/h2&gt;
+&lt;p&gt;Il est parfois pénible d'utiliser l'interface DOM
+    quand on cherche une seule information précise.
+    Écrivez un programme Java qui permet d'extraire
+    le prix correspondant à l'item ayant le code
+    de produit 321 dans un fichier XML ayant la
+    forme suivante en utilisant &lt;strong&gt;une expression XPath&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;432.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;43&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;32.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;100&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;produit&lt;/span&gt; &lt;span style="color:#274796; "&gt;code&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;321&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;prix&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;31.00&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;quantité&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;200&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;inventaire&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Exercice 4&lt;/h2&gt;
+&lt;p&gt;En utilisant AJAX, on peut rendre une page
+    web dynamique. Malheureusement, pour des raisons de sécurité,
+    un script dans une page
+    web ne peut charger un fichier qui se trouve dans
+    un domaine autre que celui d'origine. On vous demande
+    donc de déposer le fichier RSS &lt;a href="https://www.ledevoir.com/rss/edition_complete.xml"&gt;https://www.ledevoir.com/rss/edition_complete.xml&lt;/a&gt;
+    (il faut enregister le contenu sur votre disque) sur votre machine et de
+    créer
+    une page web AJAX capable de charger le fichier XML en question
+    et d'afficher tant le titre des nouvelles que leur description
+    complète. Attention, il ne faut récupérer que le contenu des
+    éléments au sein des éléments item.
+    Vous pouvez supposer que les titres et descriptions ne contiennent
+    que du texte, sans éléments HTML.
+&lt;/p&gt;
+&lt;p&gt;Certains étudiants trouvent utile d'utiliser la syntaxe
+    «&amp;nbsp;try { } catch(e) {}&amp;nbsp;» de l'ECMAScript (qui fonctionne
+    comme en Java) pour traiter les erreurs. Cependant, cette
+    syntaxe n'est pas nécessaire.&lt;/p&gt;
+&lt;!-- HTML generated using hilite.me --&gt;
+&lt;div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"&gt;
+    &lt;pre style="margin: 0; line-height: 125%"&gt;&lt;span style="color: #557799"&gt;&amp;lt;?xml version="1.0" ?&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;html&lt;/span&gt; &lt;span style="color: #0000CC"&gt;xmlns=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"http://www.w3.org/1999/xhtml"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;meta&lt;/span&gt; &lt;span style="color: #0000CC"&gt;charset=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"UTF-8"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Exemple AJAX&lt;span style="color: #007700"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;script &lt;/span&gt;&lt;span style="color: #0000CC"&gt;language=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"JavaScript"&lt;/span&gt;&lt;span style="color: #007700"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #008800; font-weight: bold"&gt;function&lt;/span&gt;
+        afficheTitres(doc) {
+        titres &lt;span style="color: #333333"&gt;=&lt;/span&gt;
+        doc.getElementsByTagName(&lt;span style="background-color: #fff0f0"&gt;"title"&lt;/span&gt;);
+        elementol &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #007020"&gt;document&lt;/span&gt;.createElement(&lt;span style="background-color: #fff0f0"&gt;"ol"&lt;/span&gt;);
+        &lt;span style="color: #008800; font-weight: bold"&gt;var&lt;/span&gt; longueur
+        &lt;span style="color: #333333"&gt;=&lt;/span&gt; titres.length;
+        &lt;span style="color: #008800; font-weight: bold"&gt;for&lt;/span&gt; ( k &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #0000DD; font-weight: bold"&gt;0&lt;/span&gt;; k &lt;span style="color: #333333"&gt;&amp;lt;&lt;/span&gt; longueur ; &lt;span style="color: #333333"&gt;++&lt;/span&gt;k) {
+        elementli &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #007020"&gt;document&lt;/span&gt;.createElement(&lt;span style="background-color: #fff0f0"&gt;"li"&lt;/span&gt;);
+        elementli.appendChild(&lt;span style="color: #007020"&gt;document&lt;/span&gt;.createTextNode(titres[k].firstChild.nodeValue));
+        elementol.appendChild(elementli);
+        }
+        body &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #007020"&gt;document&lt;/span&gt;.getElementsByTagName(&lt;span style="background-color: #fff0f0"&gt;"body"&lt;/span&gt;).item(&lt;span style="color: #0000DD; font-weight: bold"&gt;0&lt;/span&gt;);
+        body.appendChild(elementol);
+        }
+        &lt;span style="color: #008800; font-weight: bold"&gt;function&lt;/span&gt;
+        chargeDocument(f) {
+        &lt;span style="color: #008800; font-weight: bold"&gt;var&lt;/span&gt; fileReader
+        &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #008800; font-weight: bold"&gt;new&lt;/span&gt; FileReader();
+        fileReader.onload &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #008800; font-weight: bold"&gt;function&lt;/span&gt;(evt) {
+        &lt;span style="color: #008800; font-weight: bold"&gt;var&lt;/span&gt; doc &lt;span style="color: #333333"&gt;=&lt;/span&gt; &lt;span style="color: #008800; font-weight: bold"&gt;new&lt;/span&gt;
+        DOMParser().parseFromString(&lt;span style="color: #008800; font-weight: bold"&gt;this&lt;/span&gt;.result, &lt;span style="background-color: #fff0f0"&gt;'application/xml'&lt;/span&gt;);
+        afficheTitres(doc);
+        }
+        fileReader.readAsText(f[&lt;span style="color: #0000DD; font-weight: bold"&gt;0&lt;/span&gt;]);
+        }
+        &lt;span style="color: #007700"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Récupére et affiche
+        les nouvelles du devoir: &lt;span style="color: #007700"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;input&lt;/span&gt; &lt;span style="color: #0000CC"&gt;type=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"file"&lt;/span&gt; &lt;span style="color: #0000CC"&gt;onchange=&lt;/span&gt;&lt;span style="background-color: #fff0f0"&gt;"chargeDocument(this.files)"&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;gt;&amp;lt;/input&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+        &lt;span style="color: #007700"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2&gt;Exercice 5&lt;/h2&gt;
+&lt;p&gt;Pour les cas simples, on peut convertir les documents XML en JSON, et vice
+    versa avec une simple familiarité avec les formats. Convertissez le fichier
+    suivant en fichier JSON. &lt;a href="https://jsonlint.com/"&gt;Vérifiez que votre
+        document JSON est un document JSON valable&lt;/a&gt;.&lt;/p&gt;
+&lt;pre style="color:#000000;background:#ffffff;"&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;joueur&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pierrot Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cote&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;3 étoiles&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cote&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;parent&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pierrette Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pierre Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;parent&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;joueur&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1743431195</timemodified>
+  </page>
+</activity>

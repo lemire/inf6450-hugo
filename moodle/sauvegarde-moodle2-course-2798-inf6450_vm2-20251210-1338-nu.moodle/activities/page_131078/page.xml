@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72230" moduleid="131078" modulename="page" contextid="970199">
+  <page id="72230">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Autoévaluation&lt;/h1&gt;
+&lt;p&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en
+    plus de vous permettre
+    de vérifier vos réponses, fournit une courte explication.
+    Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c'est
+    que vous avez la bonne réponse;
+    sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour
+    comprendre votre erreur.
+    Puis, essayez de nouveau en cliquant sur le bouton
+    «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 1&lt;/b&gt;.
+        Quelle affirmation décrit le mieux un document CSS?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815387776"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815388656false" name="idp140216815387776" onclick="javascript:var Click_MenuId='idp140216815388656false';var formid='idp140216815387776'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Un
+                document CSS doit être un document XML valable.&lt;span id="idp140216815388656false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. En fait, un
+                    document CSS n'est pas du&amp;nbsp;XML.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815390192false" name="idp140216815387776" onclick="javascript:var Click_MenuId='idp140216815390192false';var formid='idp140216815387776'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Un
+                document CSS doit spécifier le document XML auquel il se
+                rattache.&lt;span id="idp140216815390192false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. En général,
+                    un document CSS peut être utilisé par plusieurs
+                    documents&amp;nbsp;XML.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815391904true" name="idp140216815387776" onclick="javascript:var Click_MenuId='idp140216815391904true';var formid='idp140216815387776'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Un
+                document CSS précise une façon de présenter certains
+                éléments&amp;nbsp;XML.&lt;span id="idp140216815391904true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui, c'est une
+                    façon de décrire ce qu'est un document&amp;nbsp;CSS.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 2&lt;/b&gt;.
+        Supposons que j'applique un fichier CSS vide au document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;facture&amp;gt;
+            &amp;lt;personne&amp;gt;Marc Popowich&amp;lt;/personne&amp;gt;
+            &amp;lt;montant&amp;gt;1010.24&amp;lt;/montant&amp;gt;
+            &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
+            &amp;lt;/facture&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce que le navigateur devrait afficher?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815393664"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815395456false" name="idp140216815393664" onclick="javascript:var Click_MenuId='idp140216815395456false';var formid='idp140216815393664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien.&lt;span id="idp140216815395456false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Par défaut,
+                    un texte devrait s'afficher. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815397056true" name="idp140216815393664" onclick="javascript:var Click_MenuId='idp140216815397056true';var formid='idp140216815393664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Marc
+                Popowich 1010.24 Achat d'ordinateur&lt;span id="idp140216815397056true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Exact. La
+                    présentation par défaut affiche le texte en ligne,
+                    normalement.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815398640false" name="idp140216815393664" onclick="javascript:var Click_MenuId='idp140216815398640false';var formid='idp140216815393664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Marc
+                    Popowich &lt;/i&gt;&lt;u&gt;1010.24&lt;/u&gt;&lt;i&gt; Achat d'ordinateur&lt;/i&gt;&lt;span id="idp140216815398640false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815400736false" name="idp140216815393664" onclick="javascript:var Click_MenuId='idp140216815400736false';var formid='idp140216815393664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Marc
+                    Popowich 1010.24 Achat d'ordinateur&lt;/i&gt;&lt;span id="idp140216815400736false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, il n'y a
+                    aucune raison pour que le texte soit en italique.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815402368false" name="idp140216815393664" onclick="javascript:var Click_MenuId='idp140216815402368false';var formid='idp140216815393664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Marc
+                Popowich&lt;span id="idp140216815402368false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 3&lt;/b&gt;.
+        Supposons que j'applique le fichier CSS suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            * {
+            font-style: italic;
+            }
+            montant {
+            text-decoration: underline;
+            }
+        &lt;/p&gt;
+        au document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;facture&amp;gt;
+            &amp;lt;personne&amp;gt;Marc Popowich&amp;lt;/personne&amp;gt;
+            &amp;lt;montant&amp;gt;1010.24&amp;lt;/montant&amp;gt;
+            &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
+            &amp;lt;/facture&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce que le navigateur devrait afficher?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815403920"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815406224false" name="idp140216815403920" onclick="javascript:var Click_MenuId='idp140216815406224false';var formid='idp140216815403920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien.&lt;span id="idp140216815406224false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815407600false" name="idp140216815403920" onclick="javascript:var Click_MenuId='idp140216815407600false';var formid='idp140216815403920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Marc
+                Popowich 1010.24 Achat d'ordinateur&lt;span id="idp140216815407600false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815409056true" name="idp140216815403920" onclick="javascript:var Click_MenuId='idp140216815409056true';var formid='idp140216815403920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Marc
+                    Popowich &lt;u&gt;1010.24&lt;/u&gt; Achat d'ordinateur&lt;/i&gt;&lt;span id="idp140216815409056true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Exact. Tous les
+                    éléments sont en italique et l'élément «&amp;nbsp;montant&amp;nbsp;»
+                    est souligné.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815411056false" name="idp140216815403920" onclick="javascript:var Click_MenuId='idp140216815411056false';var formid='idp140216815403920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Marc
+                    Popowich 1010.24 Achat d'ordinateur&lt;/i&gt;&lt;span id="idp140216815411056false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, l'élément
+                    montant est en italique, mais il n'est pas souligné.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815412704false" name="idp140216815403920" onclick="javascript:var Click_MenuId='idp140216815412704false';var formid='idp140216815403920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Marc
+                Popowich&lt;span id="idp140216815412704false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 4&lt;/b&gt;.
+        Étant donné le document XML suivant&amp;nbsp;:
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+            &amp;lt;facture&amp;gt;
+            &amp;lt;personne&amp;gt;
+            &amp;lt;prenom&amp;gt;Marc&amp;lt;/prenom&amp;gt;
+            &amp;lt;prenom&amp;gt;Antoine&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Popowich&amp;lt;/nom&amp;gt;
+            &amp;lt;/personne&amp;gt;
+            &amp;lt;/facture&amp;gt;
+        &lt;/p&gt;
+        Quels documents CSS mettront «&amp;nbsp;Marc&amp;nbsp;» et «&amp;nbsp;Antoine&amp;nbsp;»
+        en rouge, et rien d'autre.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis
+        appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+    &lt;/p&gt;
+    &lt;form id="idp140216815414512"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815416416true" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    personne prenom {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815416416true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Correct. Ce code met en rouge tous les
+                    éléments «&amp;nbsp;prenom&amp;nbsp;» contenus dans des éléments
+                    «&amp;nbsp;personne&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815418528false" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    prenom personne {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815418528false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Ce code ne met en rouge que les
+                    éléments «&amp;nbsp;personne&amp;nbsp;» qui suivent des éléments
+                    «&amp;nbsp;prenom&amp;nbsp;»,
+                    ce qui ne se produit pas dans le document XML fourni.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815420512true" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    facture prenom {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815420512true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Correct. Ce code met en rouge tous les
+                    éléments «&amp;nbsp;prenom&amp;nbsp;» contenus
+                    dans des éléments «&amp;nbsp;facture&amp;nbsp;», même si c'est au
+                    deuxième niveau, par l'élément
+                    «&amp;nbsp;personne&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815422608false" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    facture &amp;gt; prenom {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815422608false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Ce code ne met en rouge que les
+                    éléments «&amp;nbsp;prenom&amp;nbsp;» contenus au premier niveau,
+                    soit dans l'élément «&amp;nbsp;facture&amp;nbsp;», mais pas dans un
+                    autre élément.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815424736true" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    personne &amp;gt; prenom {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815424736true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Oui. Ce code ne met en rouge que les
+                    éléments «&amp;nbsp;prenom&amp;nbsp;»
+                    contenus au premier niveau, soit dans l'élément
+                    «&amp;nbsp;personne&amp;nbsp;», mais pas dans un autre
+                    élément.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815426864false" name="idp140216815414512"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    prenom + prenom {
+                    color: red;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815426864false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Dans ce cas, seul le second
+                    élément «&amp;nbsp;prenom&amp;nbsp;» rencontré sera en rouge.
+                    En effet, le symbole «&amp;nbsp;+&amp;nbsp;» fonctionne de la
+                    manière suivante&amp;nbsp;: si on a
+                    «&amp;nbsp;&amp;lt;A&amp;gt;a&amp;lt;/A&amp;gt;&amp;lt;B&amp;gt;b&amp;lt;/B&amp;gt;&amp;nbsp;»,
+                    alors la clause CSS «&amp;nbsp;A+B {propriete: valeur}&amp;nbsp;» ne
+                    s'applique qu'à l'élément «&amp;nbsp;B&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140216815414512';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140216815414512';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 5&lt;/b&gt;.
+        Étant donné le document XML suivant&amp;nbsp;:
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+            &amp;lt;facture&amp;gt;
+            &amp;lt;personne&amp;gt;
+            &amp;lt;prenom num="1"&amp;gt;Marc&amp;lt;/prenom&amp;gt;
+            &amp;lt;prenom num="2" special="vrai"&amp;gt;Antoine&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom lang="inconnu"&amp;gt;Popowich&amp;lt;/nom&amp;gt;
+            &amp;lt;/personne&amp;gt;
+            &amp;lt;/facture&amp;gt;
+        &lt;/p&gt;
+        Quels documents CSS permettent d'afficher uniquement «&amp;nbsp;Marc
+        Popowich&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis
+        appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+    &lt;/p&gt;
+    &lt;form id="idp140216815429120"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815430112false" name="idp140216815429120"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    prenom {
+                    display: none;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815430112false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+                    Non. Si on utilise ce fichier CSS, seulement le nom
+                    «&amp;nbsp;Popowich&amp;nbsp;» s'affichera.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815432832true" name="idp140216815429120"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    prenom[special] {
+                    display: none;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815432832true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+                    Oui. Seuls les éléments «&amp;nbsp;prenom&amp;nbsp;» avec un
+                    attribut ayant pour nom «&amp;nbsp;special&amp;nbsp;» seront cachés.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815434800false" name="idp140216815429120"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    prenom[num] {
+                    display: none;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815434800false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+                    Non. Si on utilise ce fichier CSS, on n'affichera que le nom
+                    Popowich
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815436640true" name="idp140216815429120"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    *[special] {
+                    display: none;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815436640true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+                    Oui. Seuls les éléments avec un attribut ayant pour nom
+                    «&amp;nbsp;special&amp;nbsp;» seront cachés.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140216815438608true" name="idp140216815429120"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    *[num="2"] {
+                    display: none;
+                    }
+                &lt;/p&gt;
+                &lt;span id="idp140216815438608true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;
+                    Oui. Seuls les éléments avec l'attribut
+                    «&amp;nbsp;num="2"&amp;nbsp;» seront cachés.
+                &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140216815429120';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140216815429120';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 6&lt;/b&gt;.
+        Quelle instruction CSS sélectionnera les éléments «&amp;nbsp;facture&amp;nbsp;»
+        et «&amp;nbsp;montant&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815440592"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815441584false" name="idp140216815440592" onclick="javascript:var Click_MenuId='idp140216815441584false';var formid='idp140216815440592'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                facture | montant {}&lt;span id="idp140216815441584false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Le symbole «&amp;nbsp;|&amp;nbsp;» n'est pas permis.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815442752false" name="idp140216815440592" onclick="javascript:var Click_MenuId='idp140216815442752false';var formid='idp140216815440592'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                facture &amp;gt; montant {}&lt;span id="idp140216815442752false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Cette instruction ne sélectionne que les éléments
+                    «&amp;nbsp;montant&amp;nbsp;» qui sont immédiatement contenus dans
+                    un élément «&amp;nbsp;facture&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815444128false" name="idp140216815440592" onclick="javascript:var Click_MenuId='idp140216815444128false';var formid='idp140216815440592'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                facture + montant {}&lt;span id="idp140216815444128false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Cette instruction ne sélectionne que les éléments
+                    «&amp;nbsp;montant&amp;nbsp;» qui suivent immédiatement un élément
+                    «&amp;nbsp;facture&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815445424true" name="idp140216815440592" onclick="javascript:var Click_MenuId='idp140216815445424true';var formid='idp140216815440592'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                facture, montant {}&lt;span id="idp140216815445424true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Effectivement. Cela est équivalent à deux
+                    instructions&amp;nbsp;: l'une avec «&amp;nbsp;facture&amp;nbsp;» et
+                    l'autre avec «&amp;nbsp;montant&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 7&lt;/b&gt;.
+        Quelle instruction CSS ne sélectionnera que les éléments nommés
+        «&amp;nbsp;racine&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815446816"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815447856true" name="idp140216815446816" onclick="javascript:var Click_MenuId='idp140216815447856true';var formid='idp140216815446816'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                racine {}&lt;span id="idp140216815447856true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    C'est juste. Seuls les éléments «&amp;nbsp;racine&amp;nbsp;» sont
+                    sélectionnés.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815448944false" name="idp140216815446816" onclick="javascript:var Click_MenuId='idp140216815448944false';var formid='idp140216815446816'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                * racine { }&lt;span id="idp140216815448944false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Cette syntaxe sélectionne tous les éléments
+                    «&amp;nbsp;racine&amp;nbsp;», sauf s'ils sont un
+                    élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815450080false" name="idp140216815446816" onclick="javascript:var Click_MenuId='idp140216815450080false';var formid='idp140216815446816'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                #racine {}&lt;span id="idp140216815450080false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Dans le contexte du XHTML, cette instruction sélectionne
+                    tous les éléments qui ont un attribut
+                    «&amp;nbsp;id="racine"&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815451360false" name="idp140216815446816" onclick="javascript:var Click_MenuId='idp140216815451360false';var formid='idp140216815446816'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                racine ()&lt;span id="idp140216815451360false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Cette instruction
+                    n'est pas valable en CSS.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 8&lt;/b&gt;.
+        Quelle instruction CSS ne sélectionnera que les éléments
+        «&amp;nbsp;input&amp;nbsp;» avec l'attribut «&amp;nbsp;type="text"&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815452480"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815453520true" name="idp140216815452480" onclick="javascript:var Click_MenuId='idp140216815453520true';var formid='idp140216815452480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                input[type="text"] {}&lt;span id="idp140216815453520true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Oui.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815454544false" name="idp140216815452480" onclick="javascript:var Click_MenuId='idp140216815454544false';var formid='idp140216815452480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                input[.text] {}&lt;span id="idp140216815454544false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Cette instruction n'est pas valable&amp;nbsp;: elle
+                    sélectionnerait les éléments «&amp;nbsp;input&amp;nbsp;»
+                    ayant un attribut nommé «&amp;nbsp;.text&amp;nbsp;», mais ce nom
+                    n'est pas permis pour les attributs.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815455936false" name="idp140216815452480" onclick="javascript:var Click_MenuId='idp140216815455936false';var formid='idp140216815452480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                input.text {}&lt;span id="idp140216815455936false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Dans le contexte du&amp;nbsp;XHTML, cette instruction
+                    sélectionnera les éléments «&amp;nbsp;input&amp;nbsp;»
+                    ayant un attribut «&amp;nbsp;class="text"&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815457152false" name="idp140216815452480" onclick="javascript:var Click_MenuId='idp140216815457152false';var formid='idp140216815452480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                input[type:"text"] {}&lt;span id="idp140216815457152false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Cette syntaxe n'est pas valable en&amp;nbsp;CSS.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 9&lt;/b&gt;.
+        Quelle instruction CSS ne sélectionnera que les éléments
+        «&amp;nbsp;a&amp;nbsp;», «&amp;nbsp;b&amp;nbsp;» et «&amp;nbsp;c&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815458288"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815459312false" name="idp140216815458288" onclick="javascript:var Click_MenuId='idp140216815459312false';var formid='idp140216815458288'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                a | b | c {}&lt;span id="idp140216815459312false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Le symbole «&amp;nbsp;|&amp;nbsp;» n'est pas permis.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815460416true" name="idp140216815458288" onclick="javascript:var Click_MenuId='idp140216815460416true';var formid='idp140216815458288'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                a, b, c {}&lt;span id="idp140216815460416true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Oui. En effet, on peut combiner plus de deux éléments avec
+                    des virgules.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815461632false" name="idp140216815458288" onclick="javascript:var Click_MenuId='idp140216815461632false';var formid='idp140216815458288'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                a b c {}&lt;span id="idp140216815461632false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Bien qu'il s'agisse de CSS valable, cette instruction ne
+                    sélectionnerait que les éléments «&amp;nbsp;c&amp;nbsp;»,
+                    à certaines conditions («&amp;nbsp;c&amp;nbsp;» contenu dans
+                    «&amp;nbsp;b&amp;nbsp;», lui-même contenu dans
+                    «&amp;nbsp;a&amp;nbsp;»).&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815463296false" name="idp140216815458288" onclick="javascript:var Click_MenuId='idp140216815463296false';var formid='idp140216815458288'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                a + b + c {}&lt;span id="idp140216815463296false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Bien qu'il s'agisse de CSS valable, cette instruction ne
+                    sélectionnerait que les éléments «&amp;nbsp;c&amp;nbsp;»,
+                    à certaines conditions («&amp;nbsp;c&amp;nbsp;» qui suit
+                    «&amp;nbsp;b&amp;nbsp;» qui suit «&amp;nbsp;a&amp;nbsp;»).&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 10&lt;/b&gt;.
+        Quelle instruction CSS sélectionnera les éléments «&amp;nbsp;p&amp;nbsp;» qui
+        sont contenus dans un élément «&amp;nbsp;li&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815464416"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815465424false" name="idp140216815464416" onclick="javascript:var Click_MenuId='idp140216815465424false';var formid='idp140216815464416'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li &amp;lt; p {}&lt;span id="idp140216815465424false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Le symbole «&amp;nbsp;&amp;lt;&amp;nbsp;» n'est pas permis. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815466528true" name="idp140216815464416" onclick="javascript:var Click_MenuId='idp140216815466528true';var formid='idp140216815464416'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li p {}&lt;span id="idp140216815466528true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Oui.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815467536false" name="idp140216815464416" onclick="javascript:var Click_MenuId='idp140216815467536false';var formid='idp140216815464416'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li.p {}&lt;span id="idp140216815467536false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Dans le contexte du XHTML, cette instruction sélectionnerait
+                    les éléments «&amp;nbsp;li&amp;nbsp;» ayant l'attribut
+                    «&amp;nbsp;class="p"&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 11&lt;/b&gt;.
+        Quelle instruction CSS sélectionnera les éléments «&amp;nbsp;p&amp;nbsp;»
+        directement contenus
+        dans un élément «&amp;nbsp;li&amp;nbsp;» («&amp;nbsp;p&amp;nbsp;» est un enfant immédiat
+        de «&amp;nbsp;li&amp;nbsp;»)?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140216815468912"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815470160false" name="idp140216815468912" onclick="javascript:var Click_MenuId='idp140216815470160false';var formid='idp140216815468912'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li p {}&lt;span id="idp140216815470160false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Non. Elle ne requiert pas que «&amp;nbsp;p&amp;nbsp;» soit
+                    immédiatement dans «&amp;nbsp;li&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815471312true" name="idp140216815468912" onclick="javascript:var Click_MenuId='idp140216815471312true';var formid='idp140216815468912'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li &amp;gt; p {}&lt;span id="idp140216815471312true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Oui.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815472304false" name="idp140216815468912" onclick="javascript:var Click_MenuId='idp140216815472304false';var formid='idp140216815468912'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li &amp;lt; p {}&lt;span id="idp140216815472304false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Le symbole «&amp;nbsp;&amp;lt;&amp;nbsp;» n'est pas permis.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140216815473488false" name="idp140216815468912" onclick="javascript:var Click_MenuId='idp140216815473488false';var formid='idp140216815468912'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                li.p {}&lt;span id="idp140216815473488false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!)
+                    Dans le contexte du XHTML, cette instruction sélectionnerait
+                    les éléments «&amp;nbsp;li&amp;nbsp;» ayant l'attribut
+                    «&amp;nbsp;class="p"&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741896399</timemodified>
+  </page>
+</activity>

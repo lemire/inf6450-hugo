@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72131" moduleid="130979" modulename="page" contextid="970097">
+  <page id="72131">
+    <name>Familiarisation avec EPUB</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt; Familiarisation avec EPUB
+&lt;/h1&gt;
+    &lt;p&gt;La semaine prochaine, nous étudierons le format EPUB. Afin de préparer ces travaux, nous vous invitons à faire les lectures préparatoires suivantes&amp;nbsp;:&lt;/p&gt;
+    &lt;ol class="spip"&gt;
+        &lt;li&gt; &lt;a href="https://fr.wikipedia.org/wiki/Livre_num%C3%A9rique" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;La page Wikipedia sur les livres électroniques&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt; &lt;a href="https://fr.wikipedia.org/wiki/EPUB_(format)" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;La page Wikipedia sur EPUB&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt; &lt;a href="https://fr.wikipedia.org/wiki/Projet_Gutenberg" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;La page Wikipedia sur Projet Gutenberg&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;p&gt;Par ailleurs, vous devriez visiter le site du projet Gutenberg et consulter quelques livres électroniques.&lt;/p&gt;
+&lt;hr&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1741882747</timemodified>
+  </page>
+</activity>

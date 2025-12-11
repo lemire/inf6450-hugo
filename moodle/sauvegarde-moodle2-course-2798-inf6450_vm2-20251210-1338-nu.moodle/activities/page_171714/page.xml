@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94398" moduleid="171714" modulename="page" contextid="1137177">
+  <page id="94398">
+    <name>Laboratoire XSLT avec Python (optionnel)</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Laboratoire XSLT avec Python (optionnel)&lt;/h1&gt;
+
+
+Rendez vous sur le site &lt;a href="https://github.com/lemire/xsltpy"&gt;xsltpy&lt;/a&gt; qui comprend une petite application Python capable de traiter du XSLT et du XML. Suivez les consignes.</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1764378743</timemodified>
+  </page>
+</activity>

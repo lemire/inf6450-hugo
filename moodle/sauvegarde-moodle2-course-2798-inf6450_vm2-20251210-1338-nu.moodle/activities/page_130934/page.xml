@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72101" moduleid="130934" modulename="page" contextid="970052">
+  <page id="72101">
+    <name>Espace de nom</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>
+	
+    	&lt;h1 class=""&gt;				Espace de nom
+				&lt;/h1&gt;
+						
+		&lt;div class=""&gt;&lt;h3 class="recall"&gt;Les vocabulaires XML&lt;/h3&gt;
+&lt;p&gt;Un «&amp;nbsp;vocabulaire XML&amp;nbsp;» est un ensemble de noms de balises et d'attributs ayant une signification donnée. 
+ Par exemple, les gens de la comptabilité au sein d'une entreprise pourraient avoir un vocabulaire&amp;nbsp;XML pour décrire 
+ certaines transactions, alors que les ingénieurs pourraient avoir leur propre vocabulaire pour 
+ décrire certains processus techniques. Les deux équipes pourraient utiliser les mêmes noms d'élément, 
+ comme «&amp;nbsp;échéance&amp;nbsp;», mais avec des significations différentes. On dira alors que 
+ nous avons deux &lt;b&gt;vocabulaires XML&lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt;Voyons un autre exemple. Imaginez que votre institution ait un vocabulaire XML pour les 
+ expéditions de marchandise et un vocabulaire XML pour la rédaction des factures. 
+ Un document XML combinant à la fois de l'information concernant une expédition et une facture 
+ devra utiliser deux vocabulaires.&lt;/p&gt;
+&lt;p&gt; Un vocabulaire XML peut être associé à un document DTD; il peut aussi être 
+ associé à un espace de noms.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les identificateurs de ressources uniformes (URI)&lt;/h3&gt;
+&lt;p&gt;Un identificateur de ressources uniformes (&lt;i&gt;Uniform Resource Identifier &lt;/i&gt; ou &lt;i&gt;URI&lt;/i&gt;) est une adresse Internet 
+composée d'un nom de protocole ou «&amp;nbsp;schéma&amp;nbsp;», comme file, http, ftp, news, mailto, gopher, urn,  suivi d'un 
+deux-points «&amp;nbsp;:&amp;nbsp;», lui-même suivi d'un chemin, comme «&amp;nbsp;www.mondomain.com/fichier&amp;nbsp;». 
+Un URI ne pointe pas nécessairement vers un fichier, mais peut très bien être une adresse purement fictive 
+ou une adresse pointant vers une application logicielle sur un serveur.&lt;/p&gt;
+&lt;p&gt;Par exemple, «&amp;nbsp;http://www.mondomain.com/fichier&amp;nbsp;» et «&amp;nbsp;mailto:billg@microsoft.com&amp;nbsp;» 
+ sont des URI. Les URI ne doivent pas contenir d'accents, et la casse est significative sauf pour ce qui est du nom du protocole (HTTP versus http) et du nom de domaine (xerox.com versus XEROX.COM). Nous reviendrons sur les URI dans le module 5.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les espaces de noms&lt;/h3&gt;
+&lt;p&gt;Un espace de noms est identifié par un URI; il y a correspondance unique entre 
+ les espaces de noms et les URI. Deux espaces de noms ayant le même URI sont identiques. 
+ Tous les utilisateurs d'un même vocabulaire&amp;nbsp;XML devraient s'entendre sur un même&amp;nbsp;URI. 
+ Par exemple, l'URI de l'espace de noms du XHTML est «&amp;nbsp;http://www.w3.org/1999/xhtml&amp;nbsp;». 
+ &lt;b&gt;L'URI agit un peu comme le numéro d'assurance sociale des vocabulaires XML.&lt;/b&gt; 
+ Il s'agit d'une analogie un peu étrange, voire originale, mais c'est ainsi.&lt;/p&gt;
+&lt;p&gt;Évidemment, la notion d'espace de noms n'a de sens que si l'on considère plusieurs espaces de noms 
+ et, par conséquent, plusieurs vocabulaires.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les DTD et les espaces de noms&lt;/h3&gt;
+&lt;p&gt;Avant de préciser le lien entre les DTD et les espaces de noms, il importe de comprendre 
+ que les espaces de noms furent proposés après l'adoption des DTD. Il y a donc une certaine 
+ incompatibilité entre les DTD et les espaces de noms. C'est d'ailleurs l'une des raisons 
+ pour laquelle plusieurs organismes, dont OASIS et le W3C, tentent de proposer 
+ des solutions de remplacement pour les&amp;nbsp;DTD.&lt;/p&gt;
+&lt;p&gt;Rappelons que l'on donne une DTD à un document, en ajoutant une déclaration de type de document, 
+ immédiatement après la déclaration XML, et dont la forme est&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;!DOCTYPE balise SYSTEM "http://www.mondomain.com/madtd.dtd"&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt; C'est la même chose avec les espaces de noms. Si vous avez, par exemple, un vocabulaire pour 
+ les expéditions et un vocabulaire pour les factures, définis respectivement par des DTD situées à&amp;nbsp;: &lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;http://www.mondomain.com/expedition.dtd&lt;/pre&gt;
+&lt;p&gt;et&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;http://www.mondomain.com/facture.dtd,&lt;/pre&gt;
+&lt;p&gt; 
+ vous &lt;b&gt;ne pourriez pas&lt;/b&gt; combiner les deux vocabulaires ainsi&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;!DOCTYPE balise SYSTEM "http://www.mondomain.com/expedition.dtd"
+ "http://www.mondomain.com/facture.dtd"&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;Même si l'on pouvait combiner deux DTD de la sorte, cela aurait plusieurs inconvénients&amp;nbsp;: 
+ quoi faire si les deux DTD définissent un élément «&amp;nbsp;client&amp;nbsp;», mais de façon différente? 
+ La solution est de créer un nouveau vocabulaire&amp;nbsp;XML qui combine
+ les deux et traite chaque vocabulaire comme un «&amp;nbsp;espace de noms&amp;nbsp;». &lt;/p&gt;
+&lt;p&gt; Dans l'exemple qui suit, nous considérons deux vocabulaires, «&amp;nbsp;facture&amp;nbsp;» et «&amp;nbsp;expedition&amp;nbsp;»
+ qui ont les DTD suivantes&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;!ELEMENT facture (montant, nom)&amp;gt;
+ &amp;lt;!ELEMENT nom (#PCDATA)&amp;gt;
+ &amp;lt;!ELEMENT montant (#PCDATA)&amp;gt;
+ &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;!ELEMENT expedition (nom)&amp;gt;
+ &amp;lt;!ELEMENT nom (prenom, nomfamille, adresse)&amp;gt;
+ &amp;lt;!ELEMENT prenom (#PCDATA)&amp;gt; 
+ &amp;lt;!ELEMENT nomfamille (#PCDATA)&amp;gt;
+ &amp;lt;!ELEMENT adresse (#PCDATA)&amp;gt;
+ &lt;/p&gt;
+&lt;h3 class="recall"&gt;Déclaration de l'espace de noms&lt;/h3&gt;
+&lt;p&gt;On peut utiliser le symbole «&amp;nbsp;:&amp;nbsp;» dans les noms&amp;nbsp;XML, mais on ne l'utilise généralement 
+ qu'une seule fois dans un nom donné. Tout ce qui précède le deux-points est appelé le «&amp;nbsp;préfixe&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;On a vu qu'un espace de noms est identifié par un URI. À leur tour, les URI peuvent être associés à un «&amp;nbsp;préfixe&amp;nbsp;». 
+ Tout attribut ou élément qui utilise un préfixe donné fait automatiquement partie de l'espace de noms 
+ identifié par l'URI. Seul l'URI identifie un espace de noms&amp;nbsp;: le choix du préfixe est sans importance.
+ Un document peut avoir un seul espace de noms, mais douze préfixes différents.&lt;/p&gt;
+&lt;p&gt; On définit un «&amp;nbsp;préfixe&amp;nbsp;» à l'aide d'un attribut ayant comme préfixe «&amp;nbsp;xmlns&amp;nbsp;». 
+ La définition du préfixe est alors valable pour l'ensemble de l'élément, y compris la balise où se situe 
+ l'attribut «&amp;nbsp;xmlns:&amp;nbsp;». Ainsi, dans le document&amp;nbsp;XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:montant&amp;gt;10$&amp;lt;/fact:montant&amp;gt;
+ &amp;lt;fact:nom&amp;gt;Jean&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;on reconnaît que l'élément «&amp;nbsp;fact:facture&amp;nbsp;» et tout son contenu utilisent l'espace de 
+ noms «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;» que nous avons décrit par une DTD plus haut. 
+ Le préfixe «&amp;nbsp;fact&amp;nbsp;» est ici associé à l'URI «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;» et 
+ tous les éléments et attributs ayant le préfixe «&amp;nbsp;fact&amp;nbsp;» sont considérés faire partie de 
+ l'espace de noms «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Il est «&amp;nbsp;illégal&amp;nbsp;» d'utiliser un préfixe qui n'a pas été défini... 
+ Ainsi, le document suivant est bien formé, mais il ne respecte pas les conventions des espaces de noms&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture&amp;gt;
+ &amp;lt;fact:montant&amp;gt;10$&amp;lt;/fact:montant&amp;gt;
+ &amp;lt;fact:nom&amp;gt;Jean&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;Avez-vous remarqué que ces derniers documents n'ont pas de déclaration de type de document et ne peuvent 
+ donc pas être des documents XML valables? La plupart des documents XML utilisant les espaces 
+ de noms sont dans ce cas. Si jamais nous avions une déclaration de type de document, il faudrait une 
+ DTD qui contiennent les éléments «&amp;nbsp;fact:facture&amp;nbsp;», «&amp;nbsp;fact:montant&amp;nbsp;» et «&amp;nbsp;fact:nom&amp;nbsp;». 
+ En d'autres mots, ce nouveau document XML ne peut utiliser la DTD facture décrite plus haut. 
+ Nous ne traiterons pas de cette approche ici, car on combine rarement les DTD de la sorte.&lt;/p&gt;
+&lt;p&gt;Le choix du préfixe «&amp;nbsp;fact:&amp;nbsp;» est arbitraire. On peut changer le nom du préfixe, 
+ car seul l'URI identifie de façon unique l'espace de noms. Par exemple, le document&amp;nbsp;XML suivant est équivalent
+ à celui que nous venons de décrire.&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;facture:facture xmlns:facture="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;facture:montant&amp;gt;10$&amp;lt;/facture:montant&amp;gt;
+ &amp;lt;facture:nom&amp;gt;Jean&amp;lt;/facture:nom&amp;gt;
+ &amp;lt;/facture:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;On peut aussi redéfinir un préfixe comme dans l'exemple qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;facture:facture xmlns:facture="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;facture:montant xmlns:facture="http://www.domaine.com/facture2"&amp;gt;
+ 10$&amp;lt;/facture:montant&amp;gt;
+ &amp;lt;facture:nom&amp;gt;Jean&amp;lt;/facture:nom&amp;gt;
+ &amp;lt;/facture:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;Dans ce dernier cas, on dira que l'élément «&amp;nbsp;montant&amp;nbsp;» est dans l'espace de noms «&amp;nbsp;http://www.domaine.com/facture2&amp;nbsp;»
+ et non pas dans l'espace de noms «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;». Tout élément et attribut, utilisant le préfixe 
+ «&amp;nbsp;facture&amp;nbsp;» dans l'élément «&amp;nbsp;montant&amp;nbsp;», seraient eux aussi dans l'espace de 
+ noms «&amp;nbsp;http://www.domaine.com/facture2&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;L'endroit où apparaît la déclaration d'espace de noms est aussi sans conséquence. Par exemple, 
+  les deux documents suivants sont équivalents&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;enveloppe xmlns:facture="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;facture:facture &amp;gt;
+ &amp;lt;facture:montant&amp;gt;10$&amp;lt;/facture:montant&amp;gt;
+ &amp;lt;facture:nom&amp;gt;Jean&amp;lt;/facture:nom&amp;gt;
+ &amp;lt;/facture:facture&amp;gt;  
+ &amp;lt;/enveloppe&amp;gt;
+  &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;enveloppe&amp;gt;
+ &amp;lt;facture:facture xmlns:facture="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;facture:montant&amp;gt;10$&amp;lt;/facture:montant&amp;gt;
+ &amp;lt;facture:nom&amp;gt;Jean&amp;lt;/facture:nom&amp;gt;
+ &amp;lt;/facture:facture&amp;gt;  
+ &amp;lt;/enveloppe&amp;gt;
+  &lt;/p&gt;
+&lt;p&gt;On dit que deux documents sont équivalents, au sens des espaces de noms, s'ils ne diffèrent 
+  que par les préfixes d'espaces de noms et par les endroits où apparaissent les déclarations d'espaces de noms.&lt;/p&gt;
+&lt;p&gt;Évidemment, avec les espaces de noms, on peut combiner plusieurs vocabulaires. 
+  Par exemple, si nous voulons décrire une commande en utilisant les vocabulaires «&amp;nbsp;facture&amp;nbsp;» et «&amp;nbsp;expedition&amp;nbsp;», 
+  on peut très bien le faire comme le montre l'exemple suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:montant&amp;gt;10$&amp;lt;/fact:montant&amp;gt;
+ &amp;lt;fact:nom&amp;gt;Jean&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;exp:expedition xmlns:exp="http://www.domaine.com/expedition"&amp;gt;
+ &amp;lt;exp:nom&amp;gt;
+ &amp;lt;exp:prenom&amp;gt;Jean&amp;lt;/exp:prenom&amp;gt;
+ &amp;lt;exp:nomfamille&amp;gt;Bertrand&amp;lt;/exp:nomfamille&amp;gt;
+ &amp;lt;exp:adresse&amp;gt;1040, rue Jean&amp;lt;/exp:adresse&amp;gt;
+ &amp;lt;/exp:nom&amp;gt;
+ &amp;lt;/exp:expedition&amp;gt; 
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;En outre, on pourrait même combiner les espaces de noms de façon arbitraire 
+ comme le montre le prochain exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:montant&amp;gt;10$&amp;lt;/fact:montant&amp;gt;
+ &amp;lt;fact:nom&amp;gt;Jean&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;exp:nom xmlns:exp="http://www.domaine.com/expedition"&amp;gt;
+ &amp;lt;exp:prenom&amp;gt;Jean&amp;lt;/exp:prenom&amp;gt;
+ &amp;lt;exp:nomfamille&amp;gt;Bertrand&amp;lt;/exp:nomfamille&amp;gt;
+ &amp;lt;exp:adresse&amp;gt;1040, rue Jean&amp;lt;/exp:adresse&amp;gt;
+ &amp;lt;/exp:nom&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;h3 class="recall"&gt;Les déclarations croisées&lt;/h3&gt;
+&lt;p&gt;La déclaration d'espace de noms n'est valable qu'au sein de l'élément. Pour
+déterminer l'espace de nom auquel appartient un élément, il ne suffit donc pas
+de remonter et de s'arrêter à la première déclaration que l'on trouve. Voyez
+si vous pouvez voir pourquoi l'espace de nom de l'élément «&amp;nbsp;fact:montant&amp;nbsp;» dans 
+l'exemple suivant est «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;» et non «&amp;nbsp;http://www.domaine.com/facture2&amp;nbsp;».&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture2"&amp;gt;
+ &amp;lt;/fact:facture&amp;gt;
+ &amp;lt;fact:montant /&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;h3 class="recall"&gt;Le préfixe par défaut&lt;/h3&gt;
+&lt;p&gt;On peut utiliser le préfixe par défaut, c'est-à-dire ne pas mettre de préfixe du tout. 
+ L'utilisation du préfixe par défaut est optionnelle dans un document XML. Comme tout autre préfixe, 
+ le préfixe par défaut peut être réutilisé, redéfini plusieurs fois dans un même document. 
+ Voici un exemple de préfixe par défaut&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:montant&amp;gt;10$&amp;lt;/fact:montant&amp;gt;
+ &amp;lt;nom xmlns="http://www.domaine.com/expedition"&amp;gt;
+ &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+ &amp;lt;nomfamille&amp;gt;Bertrand&amp;lt;/nomfamille&amp;gt;
+ &amp;lt;adresse&amp;gt;1040, rue Jean&amp;lt;/adresse&amp;gt;
+ &amp;lt;/nom&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &lt;/p&gt;
+&lt;p&gt;Notons cependant que le préfixe par défaut ne s'utilise que pour les éléments&amp;nbsp;: &lt;strong&gt;les attributs sans préfixe 
+ ne sont dans aucun espace de noms, et cela sans exception.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 class="recall"&gt;Rappel des notions formelles&lt;/h3&gt;
+&lt;p&gt;La définition d'un préfixe d'espace de noms inclut l'élément où le préfixe 
+ est défini et tout son contenu, et rien d'autre. 
+ Le document qui suit fait une utilisation incorrecte des espaces de noms&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;expedition&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;/fact:facture&amp;gt;
+ &amp;lt;fact:nom&amp;gt;&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;/expedition&amp;gt;
+ &lt;/p&gt;
+&lt;p&gt;parce que le préfixe «&amp;nbsp;fact&amp;nbsp;» n'est défini qu'au sein de l'élément «&amp;nbsp;facture&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Bien que cela ne soit pas recommandable, il est possible de redéfinir les préfixes d'espace de noms. 
+ C'est simple si l'on se rappelle que la définition d'un préfixe inclut l'élément où 
+ la définition est faite. Ainsi, dans l'exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;expedition&amp;gt;
+ &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt;
+ &amp;lt;fact:nom xmlns:fact="http://www.domaine.com/nom"&amp;gt;&amp;lt;/fact:nom&amp;gt;
+ &amp;lt;/fact:facture&amp;gt; 
+ &amp;lt;/expedition&amp;gt;
+ &lt;/p&gt;
+&lt;p&gt;l'élément «&amp;nbsp;nom&amp;nbsp;» appartient à l'espace de noms «&amp;nbsp;http://www.domaine.com/nom&amp;nbsp;» et 
+ non à l'espace de noms «&amp;nbsp;http://www.domaine.com/facture&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Par convention, on doit toujours accorder à un préfixe d'espace de noms un URI 
+ et il serait incorrect d'écrire  &amp;lt;fact:facture /&amp;gt; 
+ au lieu de &amp;lt;fact:facture xmlns:fact="http://www.domaine.com/facture"&amp;gt; 
+ dans l'exemple précédent.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les espaces de noms et Relax NG&lt;/h3&gt;
+&lt;p&gt;Alors que les DTD ne permettent pas de traiter les espaces
+   de noms, les spécifications Relax NG et XML Schema le permettent.
+   L'utilisation des espaces de noms en Relax NG est particulièrement
+   simple comme le montre cet exemple. 
+ &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+  namespace fact = "http://www.domaine.com/facture"
+  namespace fact2 = "http://www.domaine.com/facture2"
+ 
+  element fact:facture {
+      element fact:nom {text},
+      element fact:montant {text},
+      element fact2:id {text}
+    }*
+  }
+ &lt;/p&gt;
+&lt;p&gt; Le document XML suivant sera alors valable.&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+ &amp;lt;f:facture xmlns:f="http://www.domaine.com/facture"&amp;gt;
+   &amp;lt;f:nom&amp;gt;Daniel&amp;lt;/f:nom&amp;gt;
+   &amp;lt;f:montant&amp;gt;10,80$&amp;lt;/f:montant&amp;gt;
+   &amp;lt;f2:id xmlns:f2="http://www.domaine.com/facture2"&amp;gt;10,80$&amp;lt;/f2:id&amp;gt;
+ &amp;lt;/f:facture&amp;gt;
+ &lt;/p&gt;
+&lt;p&gt;Par défaut, il n'y a pas d'espace de noms lorsqu'un préfixe
+  n'est pas utilisé, mais on peut définir l'espace de noms par défaut
+  comme ceci&amp;nbsp;:
+ &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+  namespace fact = "http://www.domaine.com/facture"
+  default namespace = "http://www.domaine.com/facture2"
+ 
+  element fact:facture {
+      element fact:nom {text},
+      element fact:montant {text},
+      element id {text}
+    }*
+  }
+ &lt;/p&gt;
+&lt;p&gt;Les deux exemples précédents de Relax NG sont d'ailleurs équivalents.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Le préfixe «&amp;nbsp;xml&amp;nbsp;»&lt;/h3&gt;
+&lt;p&gt;Par convention, le préfixe «&amp;nbsp;xml&amp;nbsp;» est réservé à des
+   applications telles que la déclaration de la langue utilisée («&amp;nbsp;xml:lang&amp;nbsp;»)
+   ou le traitement des espaces («&amp;nbsp;xml:space&amp;nbsp;»). Il n'est pas nécessaire d'y associer
+   explicitement un 
+   URI&amp;nbsp;: l'URI «&amp;nbsp;http://www.w3.org/XML/1998/namespace&amp;nbsp;» y est automatiquement associé.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Rappel&amp;nbsp;: des espaces de noms pour les attributs?&lt;/h3&gt;
+&lt;p&gt;Les choses se corsent un peu quand on considère les attributs. 
+ Alors qu'un élément sans préfixe tombe dans l'espace de noms par défaut si 
+ celui-ci a été défini par un attribut «&amp;nbsp;xmlns="..."&amp;nbsp;», ce n'est pas le cas 
+ pour les attributs. Un attribut sans préfixe n'est dans 
+ aucun espace de noms; pour y être, un attribut doit être muni d'un préfixe.&lt;/p&gt;
+&lt;h3 class="recall"&gt;En résumé, qu'est-ce que les espaces de noms?&lt;/h3&gt;
+&lt;p&gt;Une DTD définit un ensemble fixe d'éléments, ensemble qui ne peut être recombiné avec d'autres DTD; 
+ c'est un instrument rigide. Par contre, les espaces de noms permettent de recombiner 
+ des éléments provenant de différentes applications; ils permettent donc une grande flexibilité.&lt;/p&gt;
+&lt;p&gt;Alors que la DTD définit des éléments et comment les utiliser ensemble, 
+ les espaces de noms ne permettent d'établir qu'un lien entre un élément et un URI, 
+ mais sans indiquer les contraintes d'utilisation.&lt;/p&gt;&lt;/div&gt;
+		&lt;hr&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741806907</timemodified>
+  </page>
+</activity>

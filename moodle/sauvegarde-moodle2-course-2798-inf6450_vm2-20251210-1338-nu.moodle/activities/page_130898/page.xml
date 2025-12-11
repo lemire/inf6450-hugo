@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72068" moduleid="130898" modulename="page" contextid="970007">
+  <page id="72068">
+    <name>Installation d’un navigateur moderne</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Installation d’un navigateur moderne&lt;/h1&gt;
+
+&lt;p&gt;Si le système d’exploitation de votre ordinateur est Windows et que vous n’avez pas mis à jour votre système depuis très, très
+    longtemps, vous utilisez peut-être Internet Explorer (IE). Malheureusement, ce navigateur ne supporte pas pleinement
+    le XML. Nous vous demandons de télécharger un autre navigateur moderne&amp;nbsp;: par exemple Google Chrome, Brave, Firefox,
+    Safari ou Microsoft Edge.&lt;/p&gt;
+&lt;p&gt;Pour installer Google Chrome, rendez-vous à l’adresse &lt;a href="https://www.google.ca/chrome/" rel="noopener noreferrer nofollow external" target="_blank"&gt;https://www.google.ca/chrome/&lt;/a&gt;; lisez les informations, sélectionnez le fichier
+    correspondant à votre système d’exploitation et téléchargez-le&amp;nbsp;; lancez ensuite la procédure d’installation et
+    suivez bien les directives données. Sous Windows, il est possible que vous deviez faire redémarrer votre ordinateur
+    après l’installation.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>6</revision>
+    <timemodified>1762439125</timemodified>
+  </page>
+</activity>

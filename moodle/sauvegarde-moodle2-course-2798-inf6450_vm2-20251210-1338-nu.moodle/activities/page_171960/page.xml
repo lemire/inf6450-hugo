@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94560" moduleid="171960" modulename="page" contextid="1138098">
+  <page id="94560">
+    <name>Docx (Microsoft Word)</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Création d'un document Microsoft Word (docx)&lt;/h1&gt;
+
+&lt;p&gt;Un document Word n'est rien d'autre que des fichiers XML dans une archive zip. &lt;a href="https://github.com/lemire/javaword"&gt;Nous vous invitons maintenant à faire notre activité de création de documents Word&lt;/a&gt;.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1764879980</timemodified>
+  </page>
+</activity>

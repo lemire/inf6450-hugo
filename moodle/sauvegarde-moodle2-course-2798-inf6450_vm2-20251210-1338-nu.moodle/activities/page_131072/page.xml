@@ -1,0 +1,1299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72224" moduleid="131072" modulename="page" contextid="970193">
+  <page id="72224">
+    <name>CSS</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;CSS&lt;/h1&gt;
+&lt;p&gt;La norme CSS a d'abord été proposée par Håkon Lie du CERN en Suisse en 1994
+    (environ 4 ans après l'apparition de la première page web). Cette norme a
+    été acceptée
+    comme recommandation officielle du W3C deux ans plus tard, soit en 1996, et
+    la seconde version (CSS&amp;nbsp;2.0)
+    est devenue une recommandation du W3C l'année suivante, soit en 1997. Une
+    troisième version (CSS 3) a été adoptée à compter de 2011. À
+    l'origine, les instructions CSS étaient destinées uniquement à indiquer aux
+    navigateurs comment présenter
+    le HTML (couleurs, polices, etc.); on s'est vite rendu compte qu'on pouvait
+    aussi l'appliquer
+    au XML et on considère maintenant les CSS comme une technologie qui
+    s'applique
+    autant au HTML qu'au XML (et aussi, évidemment, au XHTML).&lt;/p&gt;
+&lt;p&gt;Nous avons vu que le XSLT permettait de transformer
+    du XML en HTML pour l'affichage dans un navigateur. En général, le XSLT
+    permet de transformer
+    tout document XML en un autre format (HTML, XML ou autre). &lt;/p&gt;
+&lt;p&gt;Un fichier CSS est beaucoup plus limité dans la mesure où il ne transforme
+    pas le document XML.
+    Il permet seulement de spécifier comment le contenu du document XML sera
+    affiché.
+    Le fichier XSLT est un outil de transformation, alors que le fichier CSS est
+    un outil de formatage. Un document
+    CSS permet de rendre un document XML plus lisible. D'un autre côté, le
+    fichier CSS permet
+    de contrôler avec beaucoup de finesse la présentation du document XML, alors
+    qu'il peut être difficile et fastidieux d'obtenir
+    le même résultat en XSLT, sans utiliser les CSS. Les fichiers CSS tendent
+    aussi à être plus simples que les fichiers
+    XSLT; il peut donc être plus facile de les modifier et de les garder à jour.
+    Finalement, on
+    peut utiliser à la fois des fichiers CSS et des fichiers XSLT, en combinant
+    les avantages
+    des deux (présentation et transformation). &lt;/p&gt;
+&lt;h2 class="recall"&gt;Point de vue critique&lt;/h2&gt;
+&lt;p&gt;CSS est un langage déclaratif relativement limité.
+    Il n'est pas possible de définir des variables, des fonctions ou de
+    faire de l'arithmétique en CSS. On peut, par contre, redéfinir à volonté des
+    règles, ce qui peut rendre le comportement final difficile à comprendre pour
+    un humain. Il n'est pas facile, en CSS, de détecter le navigateur utilisé
+    alors que tous les
+    navigateurs ne traitent pas les règles de la même façon.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Notions de base&lt;/h3&gt;
+&lt;p&gt;Pour l'essentiel, le langage CSS prend la forme d'une succession
+    d'affirmations de la
+    forme &lt;i&gt;élément {propriété: valeur; autrepropriété: valeur;}&lt;/i&gt;. Il s'agit
+    d'une syntaxe très simple. &lt;/p&gt;
+&lt;p&gt; Supposons un document XML comme celui-ci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;comptearecevoir&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;personne&amp;gt;Jean Rochond&amp;lt;/personne&amp;gt;
+    &amp;lt;montant&amp;gt;10.10&amp;lt;/montant&amp;gt;
+    &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;personne&amp;gt;Madeleine Bédard&amp;lt;/personne&amp;gt;
+    &amp;lt;montant&amp;gt;20.10&amp;lt;/montant&amp;gt;
+    &amp;lt;raison&amp;gt;Achat d'un crayon&amp;lt;/raison&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;/comptearecevoir&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Certains navigateurs affichent
+    le XML brut sans formatage, ce qui n'est pas
+    très accessible. D'autres navigateurs
+    affichent le document sans les balises&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    Jean Rochond
+    10.10
+    Achat d'ordinateur
+    Madeleine Bédard
+    20.10
+    Achat d'un crayon
+&lt;/p&gt;
+&lt;p&gt;Ce document XML est difficile à lire, même sans les balises, surtout si vous
+    n'êtes pas un expert
+    en XML. Sans le transformer, il est possible de l'afficher avec de la
+    couleur ou de l'italique, comme
+    ceci&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Jean Rochond &lt;span style="color:red"&gt;10.10&lt;/span&gt;
+        &lt;p&gt;&lt;i&gt;Achat d'ordinateur&lt;/i&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Madeleine Bédard &lt;span style="color:red"&gt;20.10&lt;/span&gt;
+        &lt;p&gt;&lt;i&gt;Achat d'un crayon&lt;/i&gt;&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voilà qui est nettement plus lisible! Nous pouvons obtenir ce résultat à
+    l'aide du fichier CSS suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    facture {
+    display: block;
+    margin-bottom: 30pt;
+    }
+    montant {
+    color: red;
+    }
+    raison {
+    display: block;
+    font-style: italic;
+    margin-left: 1cm;
+    }
+&lt;/p&gt;
+&lt;p&gt;Pour vérifier que c'est bien le cas, il suffit de créer un fichier
+    «&amp;nbsp;chap12.css&amp;nbsp;»
+    avec le contenu CSS précédent et de modifier le fichier XML en y ajouter une
+    ligne
+    pointant vers le fichier CSS (&amp;lt;?xml-stylesheet type="text/css"
+    href="chap12.css"?&amp;gt;), comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;?xml-stylesheet type="text/css" href="chap12.css"?&amp;gt;
+    &amp;lt;comptearecevoir&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;personne&amp;gt;Jean Rochond&amp;lt;/personne&amp;gt;
+    &amp;lt;montant&amp;gt;10.10&amp;lt;/montant&amp;gt;
+    &amp;lt;raison&amp;gt;Achat d'ordinateur&amp;lt;/raison&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;personne&amp;gt;Madeleine Bédard&amp;lt;/personne&amp;gt;
+    &amp;lt;montant&amp;gt;20.10&amp;lt;/montant&amp;gt;
+    &amp;lt;raison&amp;gt;Achat d'un crayon&amp;lt;/raison&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;/comptearecevoir&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Si le fichier XML est dans le même répertoire que le fichier CSS, votre
+    navigateur
+    devrait vous présenter le document XML avec le montant en rouge et le
+    commentaire (raison) en italique,
+    comme nous l'avons présenté plus haut.&lt;/p&gt;
+&lt;p&gt;Notez que dans le laboratoire de cette semaine, vous pourrez expérimenter
+    avec CSS au sein de votre navigateur sans devoir créer de fichiers.&lt;/p&gt;
+&lt;p&gt;Examinons maintenant les différentes instructions du fichier CSS.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;L'instruction «&amp;nbsp;display: block;&amp;nbsp;» déclare que l'élément
+        devrait
+        former son propre paragraphe. L'instruction «&amp;nbsp;display: none;&amp;nbsp;»
+        rend l'élément invisible.&lt;/li&gt;
+    &lt;li&gt;Les instructions «&amp;nbsp;margin-bottom: 30pt;&amp;nbsp;» et
+        «&amp;nbsp;margin-left: 1cm;&amp;nbsp;» définissent des marges
+        en bas et à gauche de 30&amp;nbsp;points et de 1&amp;nbsp;cm respectivement.
+    &lt;/li&gt;
+    &lt;li&gt;L'instruction «&amp;nbsp;color: red;&amp;nbsp;» affirme que le contenu de
+        l'élément devrait être écrit en rouge,
+        alors que «&amp;nbsp;font-style: italic;&amp;nbsp;» nous dit que le texte de
+        l'élément devrait être en italique. On pourrait
+        aussi contrôler la couleur de fond avec un instruction comme
+        «&amp;nbsp;background-color:red&amp;nbsp;». &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dans l'éventualité où nous voulons choisir une couleur très précise, et non
+    les
+    couleurs courantes comme «&amp;nbsp;red&amp;nbsp;», «&amp;nbsp;green&amp;nbsp;»,
+    «&amp;nbsp;blue&amp;nbsp;», «&amp;nbsp;yellow&amp;nbsp;», «&amp;nbsp;white&amp;nbsp;»,
+    «&amp;nbsp;black&amp;nbsp;», etc.,
+    nous pouvons la spécifier selon sa composition avec les couleurs de base
+    («&amp;nbsp;red&amp;nbsp;»,
+    «&amp;nbsp;green&amp;nbsp;, «&amp;nbsp;blue&amp;nbsp;») avec une instruction
+    comme «&amp;nbsp;background-color:rgb(200,200,200);&amp;nbsp;», où chaque valeur
+    numérique est entre 0 et 255 inclusivement.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les unités de mesure&lt;/h3&gt;
+&lt;p&gt;En CSS, on peut spécifier la taille d'un objet avec plusieurs unités de
+    mesure, par exemple cm pour centimètre ou px pour pixel. Ainsi donc
+    l'instruction « width:1px » spécifie une largeur de 1 pixel. On peut aussi
+    utiliser des unités relatives comme « em », « rem » ou « % ». Une mesure de
+    « 50 % » indique que l'objet devrait occuper la moitié de l'espace
+    disponible. Une mesure de « 1em » correspond à la taille de la police de
+    caractère dans l'élément courant alors que « 1rem » correspond à la taille
+    de la police de caractère dans l'élément-racine du document. On peut aussi
+    combiner les unités... par exemple, pour spécifier une dimension
+    correspondant à tout l'espace disponible moins 80 pixels, on peut utiliser
+    la valeur «calc(100% - 80px)». Pour bien comprendre, l'idéal est de faire
+    des expériences.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Contenu en ligne ou en bloc&amp;nbsp;?&lt;/h3&gt;
+&lt;p&gt;Par défault, les éléments s'affichent en ligne, un à la suite de l'autre. On
+    peut contrôler comment s'affiche un élément avec la propriété
+    «&amp;nbsp;display&amp;nbsp;» qui peut prendre plusieurs valeurs dont
+    celles-ci&amp;nbsp;:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;«&amp;nbsp;display: none&amp;nbsp;»: l'élément ne doit pas s'afficher. Par
+        exemple, l'instruction «&amp;nbsp;img{display: none;}&amp;nbsp;» fait en sorte
+        que les images ne s'affichent plus en HTML. Il est fréquent qu'avec du
+        ECMAScript, on cache et affiche tour à tour des éléments pour donner
+        l'impression que la page est dynamique.
+    &lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;display: inline&amp;nbsp;»: l'élément s'affiche à la suite du
+        précédent comme s'il s'agissait d'un caractère.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;display: block&amp;nbsp;»: l'élément s'affiche dans un bloc distinct,
+        comme un nouveau paragraphe, par exemple.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;display: list-item&amp;nbsp;»: l'élément s'affiche comme un élément
+        d'une liste.&lt;/li&gt;
+    &lt;li&gt;«&amp;nbsp;display: flex&amp;nbsp;» ou «&amp;nbsp;display: inline-flex&amp;nbsp;»: les
+        éléments contenus s'affichent selon un modèle flexible (voir
+        https://css-tricks.com/snippets/css/a-guide-to-flexbox/).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Voici un exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p { display: block }
+    strong { display: inline }
+    li { display: list-item }
+    img { display: none }
+&lt;/p&gt;
+&lt;p&gt;On peut aussi définir la propriété «&amp;nbsp;float&amp;nbsp;» d'un élément qui lui
+    permet de sortir du flot normal des éléments et de se placer à gauche ou à
+    droite. Par exemple, une image en XHTML s'affiche normalement comme un bloc.
+    On peut forcer l'image à s'intégrer au paragraphe suivant avec l'instruction
+    «&amp;nbsp;float: right&amp;nbsp;» ou «&amp;nbsp;float: left&amp;nbsp;». On peut aussi
+    utiliser la propriété «&amp;nbsp;float&amp;nbsp;» pour créer plusieurs colonnes
+    de texte comme dans un journal. Je vous invite à faire différentes
+    expériences pour mieux comprendre l'utilisation de cette instruction.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Centrer un élément&lt;/h3&gt;
+&lt;p&gt;Bien qu'on puisse changer la justification du texte avec une instruction
+    comme «&amp;nbsp;text-align: center&amp;nbsp;», centrer un élément requiert plutôt
+    une manipulation des marges avec la valeur spéciale «&amp;nbsp;auto&amp;nbsp;»,
+    comme dans cet exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p { width: 5cm;
+    margin-left: auto;
+    margin-right: auto;}
+&lt;/p&gt;
+&lt;p&gt;Il aurait été sans doute préférable d'avoir une instruction dédiée pour
+    centrer les éléments comme il s'agit d'une opération courante.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les commentaires&lt;/h3&gt;
+&lt;p&gt;Tout comme en Java, on peut ajouter des commentaires à un fichier CSS qui
+    sont systématiquement ignorés par la machine. Un bloc de commentaire
+    débute par «&amp;nbsp;/*&amp;nbsp;» et se termine par «&amp;nbsp;*/&amp;nbsp;».&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    /* mon fichier css */
+    montant {
+    color: red; /* la couleur rouge */
+    }
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélectionner le premier caractère ou la première ligne&lt;/h3&gt;
+&lt;p&gt;On peut sélectionner la première ligne d'un élément s'affichant en mode
+    «&amp;nbsp;block&amp;nbsp;» et le premier caractère de tout élément avec
+    les sélecteurs «&amp;nbsp;:first-line&amp;nbsp;» et :«&amp;nbsp;:first-letter&amp;nbsp;»
+    respectivement. Voici
+    un exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p:first-line {text-transform: uppercase}
+    p:first-letter {font-size: 200%;float: left;}
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Ajouter du contenu avant et après un élément&lt;/h3&gt;
+&lt;p&gt;Avec CSS, on peut demander qu'une certaine chaîne de caractères apparaisse
+    avant ou après un élément. Par exemple, si on veut ajouter automatiquement
+    des guillemets avant et après un élément, on peut procéder comme ceci&amp;nbsp;:
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    blockquote:before {content:"«";}
+    blockquote:after {content:"»";}
+&lt;/p&gt;
+&lt;p&gt;Nous ne sommes pas limités au texte cependant. Il est possible, par exemple,
+    d'ajouter automatiquement une image avant chaque élément comme ceci&amp;nbsp;:
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p:before {content:url("monimage.png";}
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Qu'est-ce qu'un pseudo-élément?&lt;/h3&gt;
+&lt;p&gt;Les instructions first-line, first-letter, before et after que nous venons de
+    présenter
+    sont les principaux exemples de pseudo-éléments.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélecteurs d'interaction&lt;/h3&gt;
+&lt;p&gt;Certains sélecteurs n'agissent qu'en réponse aux comportements de
+    l'utilisateur. Par exemple, le sélecteur «&amp;nbsp;p:hover&amp;nbsp;» sélectionne
+    les éléments «&amp;nbsp;p&amp;nbsp;» qui sont survolés par le curseur de la souris.
+    Il existe plusieurs sélecteurs d'interaction dont «&amp;nbsp;:link&amp;nbsp;» (lien
+    non visité), «&amp;nbsp;:visited&amp;nbsp;» (lien visité), «&amp;nbsp;active&amp;nbsp;»
+    (l'utilisateur utilise un élément), «&amp;nbsp;:focus&amp;nbsp;» (l'élément est
+    sélectionné par l'utilisateur). On peut aussi combiner les sélecteurs comme
+    dans cet exemple&amp;nbsp;: «&amp;nbsp;a:hover:focus&amp;nbsp;».
+    On appelle aussi ces sélecteurs de pseudo-classes.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Règles par défaut&lt;/h3&gt;
+&lt;p&gt;Dans le cas du HTML ou du XHTML, les navigateurs utilisent une liste de
+    règles par
+    défaut. Ces règles vont varier d'un navigateur à l'autre, mais voici un
+    exemple de règles
+    utilisées par des navigateurs&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    html, div {
+    display: block;
+    }
+    body {
+    display: block;
+    margin: 8px;
+    }
+    p, dl, multicol {
+    display: block;
+    margin: 1em 0;
+    }
+    blockquote {
+    display: block;
+    margin: 1em 40px;
+    }
+    h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin: .67em 0;
+    }
+    h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: .83em 0;
+    }
+    pre {
+    display: block;
+    white-space: pre;
+    margin: 1em 0;
+    }
+    b, strong {
+    font-weight: bolder;
+    }
+    i, cite, em, var, dfn {
+    font-style: italic;
+    }
+    u, ins {
+    text-decoration: underline;
+    }
+    s, strike, del {
+    text-decoration: line-through;
+    }
+    big {
+    font-size: larger;
+    }
+    small {
+    font-size: smaller;
+    }
+    sub {
+    vertical-align: sub;
+    font-size: smaller;
+    line-height: normal;
+    }
+    sup {
+    vertical-align: super;
+    font-size: smaller;
+    line-height: normal;
+    }
+    ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0;
+    }
+    ol {
+    display: block;
+    list-style-type: decimal;
+    margin: 1em 0;
+    }
+    li {
+    display: list-item;
+    }
+    area, base, basefont, head, meta, script, style, title,
+    noembed, param {
+    display: none;
+    }
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;L'astérisque&lt;/h3&gt;
+&lt;p&gt;L'astérisque nous permet d'appliquer une règle à tous les éléments, comme
+    dans cet exemple&amp;nbsp;:
+    «&amp;nbsp;* {color:red;}&amp;nbsp;».&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélection sur la base des attributs&lt;/h3&gt;
+&lt;p&gt;Avec les CSS, en utilisant les crochets, nous pouvons sélectionner tous les
+    éléments ayant un attribut donné.
+    Par exemple, l'instruction «&amp;nbsp;*[monattribut] { color:red;}&amp;nbsp;» mettra
+    en rouge tous les éléments
+    ayant un attribut portant le nom «&amp;nbsp;monattribut&amp;nbsp;». Nous pouvons
+    aussi, bien sûr, limiter la sélection à des
+    éléments portant un nom donné comme dans cet exemple&amp;nbsp;:
+    «&amp;nbsp;maman[monattribut] { color:red;}&amp;nbsp;»
+    où les éléments «&amp;nbsp;maman&amp;nbsp;» ayant un attribut
+    «&amp;nbsp;monattribut&amp;nbsp;» seront en rouge.
+    Finalement, nous pouvons de plus limiter la sélection à des attributs ayant
+    une certaine valeur,
+    comme dans «&amp;nbsp;maman[monattribut="papa"] { color:red;}&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Il arrive fréquemment qu'une valeur d'attribut contiennent plusieurs
+    mots, comme dans «&amp;nbsp;&amp;lt;amerique pays="États-Unis Canada" /&amp;gt;&amp;nbsp;».
+    Pour sélectionner tous les élément dont un attribut
+    contiennent un mot particulier, on remplace «&amp;nbsp;=&amp;nbsp;» par
+    «&amp;nbsp;~=&amp;nbsp;» comme dans l'instruction «&amp;nbsp;*[pays~="Canada"] {
+    color:red;}&amp;nbsp;» qui mettra en rouge tout élément dont l'attribut
+    «&amp;nbsp;pays&amp;nbsp;» contient le mot «&amp;nbsp;Canada&amp;nbsp;». Les mots
+    doivent être séparés par des espaces. Dans l'éventualité où les mots
+    sont séparés par des tirets, comme dans «&amp;nbsp;&amp;lt;amerique
+    pays="Mexique-Canada" /&amp;gt;&amp;nbsp;», on peut obtenir le même résultat
+    avec «&amp;nbsp;|=&amp;nbsp;» comme dans «&amp;nbsp;*[pays|="Canada"] {
+    color:red;}&amp;nbsp;».&lt;/p&gt;
+&lt;h3 class="recall"&gt;Les espaces de noms&lt;/h3&gt;
+&lt;p&gt;Les espaces de noms ne sont pas supportés en CSS&amp;nbsp;1 ou CSS&amp;nbsp;2.
+    Ainsi «&amp;nbsp;monelement { color:red;}&amp;nbsp;» met en rouge le
+    contenu de tous les éléments monelement, peu importe leur espace de noms.
+    Il est incorrect d'utiliser la syntaxe
+    «&amp;nbsp;xhtml:monelement { color:red;}&amp;nbsp;».
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélection de la langue&lt;/h3&gt;
+&lt;p&gt;On a vu qu'il est possible en XML de spécifier la langue dans laquelle est
+    écrit un texte avec l'attribut «&amp;nbsp;xml:lang.&amp;nbsp;». On pourrait penser
+    que pour mettre le texte déclaré comme étant en anglais en rouge,
+    il suffirait de l'instruction «&amp;nbsp;*[lang="fr"] { color:red;}&amp;nbsp;», mais
+    que se passera-t-il si on a utilisé un code
+    de région avec la langue comme «&amp;nbsp;fr-CA&amp;nbsp;»? Une solution
+    plus élégante consiste alors à utiliser la sélection sur la langue
+    avec une instruction comme «&amp;nbsp;:lang(en) { color:red;}&amp;nbsp;».&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélection de plusieurs éléments&lt;/h3&gt;
+&lt;p&gt;Supposons maintenant que nous voulions afficher en rouge tous les éléments
+    «&amp;nbsp;facture&amp;nbsp;» et «&amp;nbsp;maison&amp;nbsp;».
+    Nous pouvons le faire avec deux instructions&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    facture { color:red;}
+    maison { color:red;}
+&lt;/p&gt;
+&lt;p&gt;En pratique cependant, il est préférable d'utiliser la virgule pour grouper
+    les éléments, comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    facture, maison { color:red;}
+&lt;/p&gt;
+&lt;p&gt;Les deux instructions et cette dernière forme sont exactement équivalentes.
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélection sur la base de la relation entre les éléments&lt;/h3&gt;
+&lt;p&gt;Supposons maintenant que nous ne voulions pas afficher tous les éléments
+    «&amp;nbsp;personne&amp;nbsp;» en rouge,
+    mais seulement les éléments «&amp;nbsp;personne&amp;nbsp;» contenus dans un élément
+    «&amp;nbsp;facture&amp;nbsp;».
+    Nous obtiendrons ce résultat en plaçant les deux noms d'élément côte-à-côte
+    (séparé par un espace). Ainsi, l'instruction
+    «&amp;nbsp;facture personne { color:red;}&amp;nbsp;» affichera en rouge tous les
+    éléments «&amp;nbsp;personne&amp;nbsp;»
+    contenus dans un élément «&amp;nbsp;facture&amp;nbsp;», comme dans l'exemple qui
+    suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;?xml-stylesheet type="text/css" href="chap12.css"?&amp;gt;
+    &amp;lt;comptearecevoir&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;personne&amp;gt;Jean Rochond&amp;lt;/personne&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;/comptearecevoir&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;ou dans ce deuxième exemple...&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;?xml-stylesheet type="text/css" href="chap12.css"?&amp;gt;
+    &amp;lt;comptearecevoir&amp;gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;client&amp;gt;&amp;lt;personne&amp;gt;Jean Rochond&amp;lt;/personne&amp;gt;&amp;lt;/client&amp;gt;
+    &amp;lt;/facture&amp;gt;
+    &amp;lt;/comptearecevoir&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous pourrions vouloir que seuls les éléments immédiatement contenus
+    dans l'élément «&amp;nbsp;facture&amp;nbsp;», comme dans le premier exemple, soient
+    en rouge,
+    et non pas ceux qui sont contenus dans des éléments eux-mêmes dans un
+    élément «&amp;nbsp;facture&amp;nbsp;» (deuxième exemple).
+    Nous pouvons obtenir ce résultat avec l'instruction «&amp;nbsp;facture &amp;gt;
+    personne { color:red;}&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;En somme, la règle «&amp;nbsp;a b { color:red;}&amp;nbsp;» s'applique à l'élément
+    «&amp;nbsp;b&amp;nbsp;»,
+    si l'élément «&amp;nbsp;b&amp;nbsp;» est contenu dans un élément «&amp;nbsp;a&amp;nbsp;»
+    comme dans
+    «&amp;nbsp;&amp;lt;a&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;&amp;nbsp;» ou
+    «&amp;nbsp;&amp;lt;a&amp;gt;&amp;lt;c&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/c&amp;gt;&amp;lt;/a&amp;gt;&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Par contre, la règle «&amp;nbsp;a &amp;gt; b { color:red;}&amp;nbsp;» s'applique à
+    l'élément «&amp;nbsp;b&amp;nbsp;»,
+    si et seulement si l'élément «&amp;nbsp;b&amp;nbsp;» est immédiatement contenu dans
+    un élément «&amp;nbsp;a&amp;nbsp;»,
+    comme dans «&amp;nbsp;&amp;lt;a&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/a&amp;gt;&amp;nbsp;». Elle ne
+    s'applique toutefois pas si «&amp;nbsp;b&amp;nbsp;»
+    est contenu dans un élément lui-même contenu dans «&amp;nbsp;a&amp;nbsp;», comme
+    dans
+    «&amp;nbsp;&amp;lt;a&amp;gt;&amp;lt;c&amp;gt;&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&amp;lt;/c&amp;gt;&amp;lt;/a&amp;gt;&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Supposons maintenant, dans l'exemple suivant, que nous voulions indenter le
+    premier
+    paragraphe (élément «&amp;nbsp;p&amp;nbsp;») suivant le titre (élément
+    «&amp;nbsp;titre&amp;nbsp;»)&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;titre&amp;gt;Mon histoire&amp;lt;/titre&amp;gt;
+    &amp;lt;p&amp;gt;C'est triste.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;Oui, c'est triste.&amp;lt;/p&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Ce résultat s'obtient avec l'instruction «&amp;nbsp;titre + p { text-indent:
+    0cm;}&amp;nbsp;».
+    La syntaxe «&amp;nbsp;a + b { ... }&amp;nbsp;» s'applique à l'élément
+    «&amp;nbsp;b&amp;nbsp;»
+    quand les éléments «&amp;nbsp;a&amp;nbsp;» et «&amp;nbsp;b&amp;nbsp;» sont contenus dans le
+    même élément, et que «&amp;nbsp;b&amp;nbsp;» est
+    immédiatement après «&amp;nbsp;a&amp;nbsp;». Notez que la règle «&amp;nbsp;a + b { ...
+    }&amp;nbsp;» s'applique
+    à «&amp;nbsp;b&amp;nbsp;», mais ne s'applique pas à&amp;nbsp;«&amp;nbsp;a&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Supposons que nous désirions indenter le premier
+    paragraphe (élément «&amp;nbsp;p&amp;nbsp;») dans l'élément
+    «&amp;nbsp;section&amp;nbsp;»&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;section titre="Mon histoire" &amp;gt;
+    &amp;lt;p&amp;gt;C'est triste.&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;Oui, c'est triste.&amp;lt;/p&amp;gt;
+    &amp;lt;/titre&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;On peut obtenir ce résultat avec le sélecteur «&amp;nbsp;section &amp;gt;
+    p:first-child { ... }&amp;nbsp;» où «&amp;nbsp;:first-child&amp;nbsp;» signifie que
+    seuls les éléments «&amp;nbsp;p&amp;nbsp;» étant le premier élément au sein d'un
+    autre élément sont sélectionnés. En fait, dans cet exemple particulier, on
+    obtiendrait aussi le résultat voulu avec le sélecteur «&amp;nbsp;p:first-child {
+    ... }&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Par ailleurs, nous pouvons combiner les espaces, les «&amp;nbsp;+&amp;nbsp;», les
+    virgules et les «&amp;nbsp;&amp;gt;&amp;nbsp;»
+    dans un même sélecteur. Par exemple, «&amp;nbsp;a + b, c { ... }&amp;nbsp;»
+    s'applique aux éléments «&amp;nbsp;c&amp;nbsp;»
+    et aux éléments «&amp;nbsp;b&amp;nbsp;» qui suivent immédiatement un élément
+    «&amp;nbsp;a&amp;nbsp;».&lt;/p&gt;
+&lt;h3 class="recall"&gt;Sélection d'élément par valeur ID&lt;/h3&gt;
+&lt;p&gt;Si vous avez des éléments ayant des attributs ayant une valeur de type
+    «&amp;nbsp;ID&amp;nbsp;»,
+    on sait alors que leur valeur est un nom XML et qu'elle ne doit être
+    utilisée qu'une seule
+    fois. C'est le cas des attributs de la forme «&amp;nbsp;id="xxx"&amp;nbsp;» que l'on
+    peut utiliser
+    avec pratiquement tous les éléments XHTML. On peut sélectionner un élément
+    basé sur la
+    valeur d'un tel attribut en utilisant le symbole «&amp;nbsp;#&amp;nbsp;»&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    #xxx {
+    color: red;
+    }
+&lt;/p&gt;
+&lt;p&gt;Dans ce cas, le contenu d'un élément comme une balise XHTML «&amp;nbsp;&amp;lt;p
+    id='xxx'&amp;gt;test&amp;lt;/p&amp;gt;&amp;nbsp;» s'affichera
+    en rouge. On peut combiner les sélecteurs «&amp;nbsp;#&amp;nbsp;» avec les autres
+    règles que nous avons traitées&amp;nbsp;, par exemple,
+    le code suivant ne mettra en rouge que les éléments «&amp;nbsp;i&amp;nbsp;» contenus
+    dans un élément ayant un attribut
+    de type «&amp;nbsp;ID&amp;nbsp;» avec pour valeur «&amp;nbsp;xxx&amp;nbsp;»&amp;nbsp;: &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    #xxx i{
+    color: red;
+    }
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Mais que se passe-t-il en cas de conflit?&lt;/h3&gt;
+&lt;p&gt;Plusieurs instructions peuvent s'appliquer en même temps: un texte peut être
+    en rouge
+    et souligné. Il peut arriver cependant que deux instructions CSS se
+    contredisent. Par exemple, un texte
+    ne peut être à la fois en rouge et en bleu. Dans ce cas,
+    la sélection la plus spécifique l'emporte. Ainsi, dans l'exemple qui suit...
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    * {
+    color: black;
+    }
+    montant {
+    color: red;
+    }
+    montant &amp;gt; montant {
+    color: yellow;
+    }
+&lt;/p&gt;
+&lt;p&gt;les éléments «&amp;nbsp;montant&amp;nbsp;» seront en rouge, sauf s'ils sont
+    immédiatement
+    contenus dans un autre élément «&amp;nbsp;montant&amp;nbsp;», auquel cas ils seront
+    en jaune.&lt;/p&gt;
+&lt;p&gt;Par ailleurs, si deux sélections de même spécificité sont rencontrées, c'est
+    la dernière qui l'emporte.
+    Ainsi, dans l'exemple qui suit... &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    montant {
+    color: red;
+    }
+    montant {
+    color: black;
+    }
+&lt;/p&gt;
+&lt;p&gt;les éléments «&amp;nbsp;montant&amp;nbsp;» seront en noir.&lt;/p&gt;
+&lt;p&gt;On peut cependant forcer le navigateur à considérer une règle qui apparaît
+    avant une autre
+    comme ayant tout de même priorité (à spécificité égale). Il suffit
+    d'utiliser la mention !important...&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    montant {
+    color: red !important;
+    }
+    montant {
+    color: black;
+    }
+&lt;/p&gt;
+&lt;p&gt;les éléments «&amp;nbsp;montant&amp;nbsp;» seront en rouge.
+    Notez que la mention !important permet souvent d'ignorer la spécificité de
+    la règle: les
+    règles avec cette mention l'emportent toujours sur les autres. (Si une autre
+    règle avec la mention !important a une plus grande spécificité, elle aura
+    bien sûr priorité.)&lt;/p&gt;
+&lt;p&gt;Les règles par défaut utilisées par votre navigateur dans le cas du HTML ou
+    du XHTML
+    sont lues en premier. De cette manières, toutes les règles qui vous stipulez
+    dans
+    vos propres fichiers CSS et à même le XML ou HTML ont priorité pour une même
+    spécificité. On peut considérer que
+    les règles
+    avec la mention !important sont lues en dernier dans la mesure où elles
+    l'emportent toujours sur les autres.&lt;/p&gt;
+&lt;p&gt;Calculer la &lt;a href="http://www.w3.org/TR/CSS21/cascade.html#specificity" shape="rect"&gt;spécificité des règles&lt;/a&gt; n'est pas une mince affaire,
+    mais c'est pourtant nécessaire dans certains cas difficiles. La spécificité
+    se mesure avec
+    une valeur à 4 chiffres (a,b,c,d). Lorsqu'on compare deux spécificités
+    (a1,b1,c1,d1) et (a2,b2,c2,d2), on
+    utilise l'ordre lexicographique pour déterminer lequel est supérieur. Ainsi,
+    si a1 est plus grand que a2,
+    alors (a1,b1,c1,d1) a une plus grande spécificité que (a2,b2,c2,d2), si a1
+    est égal à a2, alors on
+    compare b1 et b2, et ainsi de suite.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;La première valeur (a) vaut 1 si et seulement si la règle apparaît dans
+        le fichier XML, HTML ou XHTML dans un
+        attribut style. Par exemple, si on a un élément paragraphe en HTML de
+        cette forme &amp;lt;p style="color:red" &amp;gt;, alors la règle color:red aura
+        une très grande spécificité.&lt;/li&gt;
+    &lt;li&gt;La seconde valeur (b) est le nombre de sélections sur la valeur ID
+        utilisée par la règle. Ainsi, la règle
+        #x {color:red} pourra avoir une spécificité de 0,1,0,0. En pratique, la
+        sélection par valeur ID l'emporte souvent
+        sur les autres règles. &lt;/li&gt;
+    &lt;li&gt;La troisième valeur (c) est le nombre de valeurs d'attributs utilisées
+        par la règle (excluant l'attribut ID). Ainsi, la règle
+        *[monattribut] { color:red;} pourrait avoir comme spécificité 0,0,1,0.
+        Les pseudo-classes comptent comme des attributs.&lt;/li&gt;
+    &lt;li&gt;La quatrième valeur (c) est le nombre d'éléments utilisés par la règle.
+        Ainsi, la règle
+        p[monattribut] { color:red;} pourrait avoir comme spécificité 0,0,1,1.
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour mieux comprendre, prenons un exemple concret...&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;z[x] &amp;gt; a[i] {color: blue;}
+    z z[x] a {text-decoration: underline;}
+    z &amp;gt; z a , z z z + a { color: red ;}
+&lt;/pre&gt;
+&lt;p&gt;Il est plus facile de comptabiliser la spécificité si on écrit les règles
+    individuellement (sans la virgule).
+    Voyez si vous êtes capable de voir pourquoi les différentes règles ont les
+    spécificités annoncées
+    dans les commentaires...&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;/* spécificité: 0,0,2,2 */
+    z[x] &amp;gt; a[i] {color: blue;}
+    /* spécificité: 0,0,0,3 */
+    z &amp;gt; z a { color: red ; }
+    /* spécificité: 0,0,0,4 */
+    z z z + a { color: red; }
+    /* spécificité: 0,0,1,3 */
+    z z[x] a {text-decoration: underline;}
+&lt;/pre&gt;
+&lt;p&gt;
+    Prenons maintenant un fichier XML auquel on applique les instructions
+    CSS précédente. L'élément a dans le fichier suivant est sélectionné par
+    les 4 règles du fichier CSS. Comment sera affiché le texte dans
+    votre navigateur?
+&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;?xml-stylesheet type="text/css" href="test.css"?&amp;gt;
+    &amp;lt;z&amp;gt;&amp;lt;z x="x"&amp;gt;
+    &amp;lt;z /&amp;gt;
+    &amp;lt;a i="x"&amp;gt;mon texte&amp;lt;/a&amp;gt;
+    &amp;lt;/z&amp;gt;
+    &amp;lt;/z&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt; Le texte apparaîtra en bleu et sera souligné. Si on ajoute une instruction
+    avec la mention !important comme «&amp;nbsp;* {color: black !important;}&amp;nbsp;»
+    alors
+    on peut faire en sorte que le texte soit noir.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Le modèle de boîte CSS&lt;/h3&gt;
+&lt;p&gt;En CSS, on peut spécifier la hauteur et la largeur d'un objet à l'aide
+    des instructions «&amp;nbsp;width&amp;nbsp;» et «&amp;nbsp;height&amp;nbsp;». Par exemple,
+    pour indiquer qu'un paragraphe devrait n'avoir qu'une largeur de
+    20&amp;nbsp;pixels,
+    on utilise un sélecteur comme celui-ci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p{
+    width: 20px;
+    }
+&lt;/p&gt;
+&lt;p&gt;Le CSS supporte plusieurs unités de mesure outre les pixels dont les pouces
+    (in), les centimètres (cm), pourcentage (%), etc.&lt;/p&gt;
+&lt;p&gt;On peut ensuite définir une marge (&lt;i&gt;margin&lt;/i&gt; en anglais) autour de tout
+    objet. La marge est une région où rien ne peut apparaître, incluant un autre
+    objet. Mais la marge ne fait pas partie de l'objet lui-même. Ainsi, si un
+    objet fait 10&amp;nbsp;pixels de hauteur et de largeur, et que vous définissez
+    une marge de 10&amp;nbsp;pixels tout autour de l'objet, un espace d'une
+    superficie de 900&amp;nbsp;pixels sera occupée sur l'écran. Voici un exemple de
+    marge&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p{
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-right:10px;
+    margin-left:10px;
+    }
+&lt;/p&gt;
+&lt;p&gt;Outre la marge, on peut aussi définir une région d'espacement (&lt;i&gt;padding&lt;/i&gt;
+    en anglais). Contrairement à la marge, la région d'espacement fait partie de
+    l'objet dans la mesure où, si vous
+    définissez une couleur de fond pour l'objet, la région d'espacement sera
+    colorée, car elle fait partie de l'objet. Tout comme la marge, rien n'occupe
+    cette région et elle n'est pas comptabilisée dans la hauteur et la largeur
+    de l'objet. &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+    padding-left:10px;
+    }
+&lt;/p&gt;
+&lt;p&gt; On peut définir une bordure (&lt;i&gt;border&lt;/i&gt; en anglais) afin de tracer
+    un ligne tout autour de l'objet. La bordure se place entre la région
+    d'espacement et la marge. La bordure peut prendre différente épaisseurs
+    (telles que &lt;i&gt;thin&lt;/i&gt;, &lt;i&gt;medium&lt;/i&gt;, et &lt;i&gt;thick&lt;/i&gt;) et aussi une
+    couleur. &lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p{
+    border-color: black;
+    border-width: medium;
+    }
+&lt;/p&gt;
+&lt;p&gt;Voici un diagramme qui résume les différentes définitions&amp;nbsp;:&lt;/p&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" width="1000" height="350"&gt;
+    &lt;g style="stroke-width:.025in; stroke:black; fill:none" transform="scale(0.07) translate(-1500,-300)"&gt;
+        ../module3/box.pdf
+        &lt;defs&gt;
+            &lt;pattern id="tile1" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 -100 200 16"&gt;&lt;/path&gt;
+                &lt;path d="M 0 -60 200 56"&gt;&lt;/path&gt;
+                &lt;path d="M 0 -20 200 96"&gt;&lt;/path&gt;
+                &lt;path d="M 0 20 200 136"&gt;&lt;/path&gt;
+                &lt;path d="M 0 60 200 176"&gt;&lt;/path&gt;
+                &lt;path d="M 0 100 200 216"&gt;&lt;/path&gt;
+                &lt;path d="M 0 140 200 256"&gt;&lt;/path&gt;
+                &lt;path d="M 0 180 200 296"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile2" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 200 -100 0 16"&gt;&lt;/path&gt;
+                &lt;path d="M 200 -60 0 56"&gt;&lt;/path&gt;
+                &lt;path d="M 200 -20 0 96"&gt;&lt;/path&gt;
+                &lt;path d="M 200 20 0 136"&gt;&lt;/path&gt;
+                &lt;path d="M 200 60 0 176"&gt;&lt;/path&gt;
+                &lt;path d="M 200 100 0 216"&gt;&lt;/path&gt;
+                &lt;path d="M 200 140 0 256"&gt;&lt;/path&gt;
+                &lt;path d="M 200 180 0 296"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile3" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 -100 200 16"&gt;&lt;/path&gt;
+                &lt;path d="M 200 -100 0 16"&gt;&lt;/path&gt;
+                &lt;path d="M 0 -60 200 56"&gt;&lt;/path&gt;
+                &lt;path d="M 200 -60 0 56"&gt;&lt;/path&gt;
+                &lt;path d="M 0 -20 200 96"&gt;&lt;/path&gt;
+                &lt;path d="M 200 -20 0 96"&gt;&lt;/path&gt;
+                &lt;path d="M 0 20 200 136"&gt;&lt;/path&gt;
+                &lt;path d="M 200 20 0 136"&gt;&lt;/path&gt;
+                &lt;path d="M 0 60 200 176"&gt;&lt;/path&gt;
+                &lt;path d="M 200 60 0 176"&gt;&lt;/path&gt;
+                &lt;path d="M 0 100 200 216"&gt;&lt;/path&gt;
+                &lt;path d="M 200 100 0 216"&gt;&lt;/path&gt;
+                &lt;path d="M 0 140 200 256"&gt;&lt;/path&gt;
+                &lt;path d="M 200 140 0 256"&gt;&lt;/path&gt;
+                &lt;path d="M 0 180 200 296"&gt;&lt;/path&gt;
+                &lt;path d="M 200 180 0 296"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile4" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 100 0 200 100"&gt;&lt;/path&gt;
+                &lt;path d="M 0 0 200 200"&gt;&lt;/path&gt;
+                &lt;path d="M 0 100 100 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile5" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 100 0 0 100"&gt;&lt;/path&gt;
+                &lt;path d="M 200 0 0 200"&gt;&lt;/path&gt;
+                &lt;path d="M 200 100 100 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile6" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 100 0 200 100"&gt;&lt;/path&gt;
+                &lt;path d="M 0 0 200 200"&gt;&lt;/path&gt;
+                &lt;path d="M 0 100 100 200"&gt;&lt;/path&gt;
+                &lt;path d="M 100 0 0 100"&gt;&lt;/path&gt;
+                &lt;path d="M 200 0 0 200"&gt;&lt;/path&gt;
+                &lt;path d="M 200 100 100 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile7" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 0 0 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 100 50 100 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 0 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile8" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 0 50 0"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 50 100 150 100"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 150 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 200 0"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile9" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 200 150"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile10" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 50 0 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 150 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile11" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 150 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile12" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 0 25 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 100 50 125 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 25 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile13" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 200 0 175 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 100 50 75 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 200 150 175 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile14" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 0 50 25"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 50 100 150 125"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 150 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 200 25"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile15" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 25 50 0"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 50 125 150 100"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 150 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 25 200 0"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile16" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 50 A 50 50 0 1 0 100 50"&gt;&lt;/path&gt;
+                &lt;path d="M 100 50 A 50 50 0 1 0 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 50 100 A 50 50 0 1 0 150 100"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 A 50 50 0 0 0 50 100"&gt;&lt;/path&gt;
+                &lt;path d="M 150 100 A 50 50 0 1 0 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 A 50 50 0 1 0 150 0"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 A 50 50 0 0 0 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 A 50 50 0 0 0 50 0"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 A 50 50 0 1 0 100 150"&gt;&lt;/path&gt;
+                &lt;path d="M 100 150 A 50 50 0 1 0 200 150"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile17" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"&gt;
+                &lt;g transform="scale(0.5)"&gt;
+                    &lt;path d="M 0 50 A 50 50 0 1 0 100 50"&gt;&lt;/path&gt;
+                    &lt;path d="M 100 50 A 50 50 0 1 0 200 50"&gt;&lt;/path&gt;
+                    &lt;path d="M 50 100 A 50 50 0 1 0 150 100"&gt;&lt;/path&gt;
+                    &lt;path d="M 0 150 A 50 50 0 0 0 50 100"&gt;&lt;/path&gt;
+                    &lt;path d="M 150 100 A 50 50 0 1 0 200 50"&gt;&lt;/path&gt;
+                    &lt;path d="M 50 0 A 50 50 0 1 0 150 0"&gt;&lt;/path&gt;
+                    &lt;path d="M 150 0 A 50 50 0 0 0 200 50"&gt;&lt;/path&gt;
+                    &lt;path d="M 0 50 A 50 50 0 0 0 50 0"&gt;&lt;/path&gt;
+                    &lt;path d="M 0 150 A 50 50 0 1 0 100 150"&gt;&lt;/path&gt;
+                    &lt;path d="M 100 150 A 50 50 0 1 0 200 150"&gt;&lt;/path&gt;
+                &lt;/g&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile18" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;circle cx="100" cy="100" r="100"&gt;&lt;/circle&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile19" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 50 45 0 105 0 140 50 200 50 "&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 45 100 105 100 140 50 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 45 100 105 100 140 150 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 45 200 105 200 140 150 200 150"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile20" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 70 65 0 140 0 200 70 "&gt;&lt;/path&gt;
+                &lt;path d="M 0 70 0 130 65 200 140 200 200 130 200 70"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile21" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 50 0 75 25 100 0 M 150 0 175 25 200 0"&gt;&lt;/path&gt;
+                &lt;path d="M 0 50 25 25 75 75 125 25 175 75 200 50"&gt;&lt;/path&gt;
+                &lt;path d="M 0 100 25 75 75 125 125 75 175 125 200 100"&gt;&lt;/path&gt;
+                &lt;path d="M 0 150 25 125 75 175 125 125 175 175 200 150"&gt;&lt;/path&gt;
+                &lt;path d="M 0 200 25 175 75 225 125 175 175 225 200 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+            &lt;pattern id="tile22" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse"&gt;
+                &lt;path d="M 0 50 25 75 0 100 M 0 150 25 175 0 200"&gt;&lt;/path&gt;
+                &lt;path d="M 50 0 25 25 75 75 25 125 75 175 50 200"&gt;&lt;/path&gt;
+                &lt;path d="M 100 0 75 25 125 75 75 125 125 175 100 200"&gt;&lt;/path&gt;
+                &lt;path d="M 150 0 125 25 175 75 125 125 175 175 150 200"&gt;&lt;/path&gt;
+                &lt;path d="M 200 0 175 25 225 75 175 125 225 175 200 200"&gt;&lt;/path&gt;
+            &lt;/pattern&gt;
+        &lt;/defs&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 2700,1350 7650,1350 7650,3375 2700,3375 2700,1350 " style="stroke:#000000;stroke-width:75; fill:#00ffff; "&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 2250,975 8250,975 8250,3825 2250,3825 2250,975 " style="stroke:#000000;stroke-width:15; stroke-dasharray:50 50; "&gt;
+        &lt;/path&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 8775,1575 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 7125,2925 7125,4425 " style="stroke:#000000;stroke-width:15; stroke-dasharray:10 10 10; "&gt;
+        &lt;/path&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 7125,2925 8850,2925 " style="stroke:#000000;stroke-width:15; stroke-dasharray:10 10 10; "&gt;
+        &lt;/path&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 7125,1800 8850,1800 " style="stroke:#000000;stroke-width:15; stroke-dasharray:10 10 10; "&gt;
+        &lt;/path&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 3300,4425 7050,4425 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on endpoint --&gt;
+        &lt;path d="M 6914 4455 7034 4425 6914 4395 6914 4455 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on startpoint --&gt;
+        &lt;path d="M 3436 4395 3316 4425 3436 4455 3436 4395 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 3300,3000 3300,4425 " style="stroke:#000000;stroke-width:15; stroke-dasharray:10 10 10; "&gt;
+        &lt;/path&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 8550,2850 8550,1800 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on endpoint --&gt;
+        &lt;path d="M 8580 1936 8550 1816 8520 1936 8580 1936 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on startpoint --&gt;
+        &lt;path d="M 8520 2714 8550 2834 8580 2714 8520 2714 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 3450,600 3450,1275 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on endpoint --&gt;
+        &lt;path d="M 3420 1138 3450 1258 3480 1138 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;&lt;!-- Text --&gt;&lt;text x="3300" y="3075" fill="#ff0000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            espacement (padding): espace laissé&lt;/text&gt;&lt;!-- Text --&gt;
+        &lt;g transform="translate(7500,2850) rotate(-90)"&gt;&lt;text x="0" y="0" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+                padding-right&lt;/text&gt;&lt;/g&gt;&lt;!-- Text --&gt;&lt;text x="2850" y="3675" fill="#ff00ff" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            marge (margin): rien ne peut apparaître ici&lt;/text&gt;&lt;!-- Text --&gt;&lt;text x="3975" y="4350" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            largeur de l'objet (width)&lt;/text&gt;&lt;!-- Text --&gt;&lt;text x="3600" y="2700" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="600" text-anchor="start"&gt;
+            Contenu ici&lt;/text&gt;&lt;!-- Text --&gt;&lt;text x="4050" y="1650" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            padding-top&lt;/text&gt;&lt;!-- Text --&gt;
+        &lt;g transform="translate(2475,2775) rotate(-90)"&gt;&lt;text x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+                margin-left&lt;/text&gt;&lt;/g&gt;&lt;!-- Text --&gt;&lt;text x="6300" y="3675" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            margin:bottom&lt;/text&gt;&lt;!-- Text --&gt;
+        &lt;g transform="translate(8025,2550) rotate(-90)"&gt;&lt;text x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+                rmargin-right&lt;/text&gt;&lt;/g&gt;&lt;!-- Text --&gt;&lt;text x="4275" y="1200" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            margin-top&lt;/text&gt;&lt;!-- Text --&gt;&lt;text x="3375" y="3300" fill="#ff0000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            vacant&lt;/text&gt;&lt;!-- Text --&gt;
+        &lt;g transform="translate(9000,2850) rotate(-90)"&gt;&lt;text x="0" y="0" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+                hauteur de l'objet (height)&lt;/text&gt;&lt;/g&gt;&lt;!-- Text --&gt;&lt;text x="3150" y="450" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="214" text-anchor="start"&gt;
+            bordure (border)&lt;/text&gt;&lt;!-- Text --&gt;
+        &lt;g transform="translate(3075,2775) rotate(-90)"&gt;&lt;text x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="214" text-anchor="start"&gt;
+                padding-left&lt;/text&gt;&lt;/g&gt;&lt;!-- Line --&gt;
+        &lt;path d="M 5625,1425 5625,1725 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on endpoint --&gt;
+        &lt;path d="M 5595 1656 5625 1716 5655 1656 5595 1656 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on startpoint --&gt;
+        &lt;path d="M 5655 1494 5625 1434 5595 1494 5655 1494 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 6600,3000 6600,3300 " style="stroke:#000000;stroke-width:15; "&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on endpoint --&gt;
+        &lt;path d="M 6570 3231 6600 3291 6630 3231 6570 3231 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Arrowhead on startpoint --&gt;
+        &lt;path d="M 6630 3069 6600 3009 6570 3069 6630 3069 Z " style="stroke:#000000;stroke-width:15; fill:white;"&gt;&lt;/path&gt;
+        &lt;!-- Line --&gt;
+        &lt;path d="M 3300,1800 7125,1800 7125,2925 3300,2925 3300,1800 " style="stroke:#000000;stroke-width:15; stroke-dasharray:10 10 10; "&gt;
+        &lt;/path&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;p&gt;(Comme il se doit, ce diagramme est XML par l'entremise du SVG.)&lt;/p&gt;
+&lt;h3 class="recall"&gt;Quand le contenu excède le contenant&lt;/h3&gt;
+&lt;p&gt;Il arrive qu'une image ou qu'un texte excède la taille de
+    l'élément dans lequel il a été placé. Par défaut, ce texte
+    ou cet image s'affichera au-delà du cadre de sa boîte
+    («&amp;nbsp;overflow:visible&amp;nbsp;»). L'instruction
+    «&amp;nbsp;overflow:hidden&amp;nbsp;» permet de faire disparaître
+    la partie d'un texte ou d'une image qui excède la boîte, alors
+    que l'instruction «&amp;nbsp;overflow:scroll&amp;nbsp;» va faire
+    apparaître des barres de défilement pour permettre à l'utilisateur
+    d'avoir accès à tout le contenu sans pour autant avoir un
+    dépassement..&lt;/p&gt;
+&lt;h3 class="recall"&gt;Encodage des caractères&lt;/h3&gt;
+&lt;p&gt;Il peut être utile de spécifier l'encodage des caractères utilisé pour créer
+    le document CSS. Il suffit d'inclure une instruction «&amp;nbsp;@charset&amp;nbsp;»
+    au tout début du document. Voici deux exemples&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    @charset "UTF-8";
+    @charset "ISO-8859-1";
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Différentes règles pour différents média&lt;/h3&gt;
+&lt;p&gt;Il arrive qu'on veuille qu'une page s'affiche différemment selon qu'on
+    utilise un écran, qu'on l'imprime sur papier ou qu'on utilise un
+    téléphone cellulaire. L'instruction «&amp;nbsp;@media&amp;nbsp;» permet de
+    préciser quel médium est concerné par la règle CSS. Plusieurs média sont
+    reconnus dont «&amp;nbsp;handheld&amp;nbsp;» (appareil portable comme un téléphone
+    cellulaire), «&amp;nbsp;screen&amp;nbsp;» (à l'écran), «&amp;nbsp;tv&amp;nbsp;» (sur un
+    téléviseur), «&amp;nbsp;print&amp;nbsp;» (sur papier), etc. Lorsque l'instruction
+    «&amp;nbsp;@media&amp;nbsp;» n'est pas précisée, la règle s'applique tout le temps.
+    Voici un exemple&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    @media print, handheld {
+    img { display: none }
+    h1 {color: black }
+    }
+    @media screen, tv {
+    h1 {color: blue }
+    }
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Inclure d'autres fichiers CSS&lt;/h3&gt;
+&lt;p&gt;Il arrive parfois qu'on veuille adopter une approche modulaire et
+    créer plusieurs petits fichiers CSS. L'instruction
+    «&amp;nbsp;@import&amp;nbsp;» apparaissant avant le début des règles, mais après une
+    éventuelle instruction «&amp;nbsp;@charset&amp;nbsp;» permet d'inclure un ou
+    plusieurs
+    fichiers CSS. On peut aussi spécifier le type de médium concerné.&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    @import "mineure.css";
+    @import "print-mineure.css" print;
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Indentation de la première ligne d'un paragraphe&lt;/h3&gt;
+&lt;p&gt;On peut indenter la première ligne d'un paragraphe avec
+    l'instruction «&amp;nbsp;text-indent&amp;nbsp;». Par exemple, pour indenter la
+    première ligne de tous les paragraphes par 1 cm, on peut utiliser
+    l'instruction «&amp;nbsp;text-indent: 1cm&amp;nbsp;».&lt;/p&gt;
+&lt;h3 class="recall"&gt;Modifier la casse du texte&lt;/h3&gt;
+&lt;p&gt;L'instruction «&amp;nbsp;text-transform&amp;nbsp;» permet de modifier la casse du
+    texte
+    ce qui est particulièrement utile avec les titres. Par exemple,
+    «&amp;nbsp;text-transform: capitalize&amp;nbsp;» modifie le texte de manière à ce
+    que le premier caractère de chaque mot soit en majuscule. Les instructions
+    «&amp;nbsp;text-transform: uppercase&amp;nbsp;» et «&amp;nbsp;text-transform:
+    lowercase&amp;nbsp;» permettent de passer à une casse uniforme (majuscule ou
+    minuscule). &lt;/p&gt;
+&lt;h3 class="recall"&gt;Autres variantes des polices&lt;/h3&gt;
+&lt;p&gt; Il est possible de modifier de diverses façons les polices&amp;nbsp;:
+    «&amp;nbsp;font-style:italic&amp;nbsp;», «&amp;nbsp;font-style:oblique&amp;nbsp;»
+    «&amp;nbsp;font-family: sans-serif&amp;nbsp;», «&amp;nbsp;font-family: serif&amp;nbsp;»,
+    «&amp;nbsp;font-weight: bold&amp;nbsp;», «&amp;nbsp;font-weight: bolder&amp;nbsp;»,
+    «&amp;nbsp;font-weight: lighter&amp;nbsp;». On peut modifier la taille des
+    caractères&amp;nbsp;: «&amp;nbsp;font-size: large&amp;nbsp;», «&amp;nbsp;font-size:
+    small&amp;nbsp;». On peut
+    ajouter des lignes sous, sur ou au dessus le texte, ou faire clignoter le
+    texte&amp;nbsp;: «&amp;nbsp;text-decoration: underline&amp;nbsp;»,
+    «&amp;nbsp;text-decoration: overline&amp;nbsp;»,
+    «&amp;nbsp;text-decoration: line-through&amp;nbsp;»,
+    «&amp;nbsp;text-decoration: blink&amp;nbsp;».
+    Vous pouvez aussi spécifier
+    l'apparence que prendra le curseur
+    avec l'attribut «&amp;nbsp;cursor&amp;nbsp;» qui prend la
+    valeur «&amp;nbsp;text&amp;nbsp;» par défaut, et la valeur
+    «&amp;nbsp;pointer&amp;nbsp;» pour les hyperliens.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Ajouter des compteurs&lt;/h3&gt;
+&lt;p&gt;On peut définir des compteurs pour, par exemple, numéroter des chapitres
+    ou paragraphes. Ce premier exemple numérote les paragraphes (éléments
+    «&amp;nbsp;p&amp;nbsp;») contenus entre
+    chaque élément «&amp;nbsp;h1&amp;nbsp;» avec des nombres romains&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    p {counter-increment: par-num}
+    h1 {counter-reset: par-num}
+    p:before {content: counter(par-num, upper-roman) ". "}
+&lt;/p&gt;
+&lt;p&gt;Ce second exemple numérote les éléments «&amp;nbsp;h1&amp;nbsp;» avec des
+    nombres arabes&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    h1 {counter-increment: h1-num}
+    h1:before {content: counter(h1-num, decimal) ". "}
+&lt;/p&gt;
+&lt;p&gt;Ce troisième exemple «&amp;nbsp;numérote&amp;nbsp;» les éléments «&amp;nbsp;h1&amp;nbsp;» et
+    «&amp;nbsp;h2&amp;nbsp;» avec des
+    lettres (a,b,c,...)&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    h1 {counter-reset: h2counter; counter-increment: h1counter}
+    h2 {counter-increment: h1counter}
+    h1:before {content: counter(h1counter, lower-latin) ". "}
+    h2:before {
+    content: counter(h1counter, lower-latin) "."
+    counter(h2counter, lower-latin) ". " }
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;Traitement des retours de chariot&lt;/h3&gt;
+&lt;p&gt;Par défaut, le contenu textuel d'un élément est affiché sans tenir compte des
+    retours de chariot présents dans le fichier XML, mais en insérant plutôt des
+    retours de chariot au besoin. Avec l'instruction «&amp;nbsp;white-space :
+    pre&amp;nbsp;», on force le maintient des retours de chariot là où ils sont, ce
+    qui est très utile pour présenter du code informatique. L'instruction
+    «&amp;nbsp;white-space : nowrap&amp;nbsp;» élimine toute utilisation des retours de
+    chariot, alors que l'instruction«&amp;nbsp;white-space : normal&amp;nbsp;»
+    correspond au comportement pas défaut.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Des nouveautés en CSS 3&lt;/h3&gt;
+&lt;p&gt;La nouvelles version du CSS, CSS 3, apporte de nombreuses améliorations. En
+    particulier, elle ajoute plusieurs sélecteurs. Voici un tableau qui résume
+    certains des sélecteurs les plus utilisés ainsi que le niveau CSS
+    correspondant.&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table class="selectorsReview"&gt;
+        &lt;!--&lt;thead&gt;
+     &lt;tr&gt;
+       &lt;th class="pattern"&gt;Sélecteur&lt;/th&gt;
+       &lt;th class="meaning"&gt;Signification&lt;/th&gt;
+       &lt;th class="origin"&gt;Version CSS&lt;/th&gt;&lt;/tr&gt;
+     &lt;/thead&gt;
+     &lt;tbody&gt;--&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;Sélecteur&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;Signification&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;Niveau CSS&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;*&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;tout élément&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément de nom E
+                &lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;1&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo dont la valeur est «&amp;nbsp;bar&amp;nbsp;»&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo~="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo dont la valeur contient le mot
+                    «&amp;nbsp;bar&amp;nbsp;»
+                    séparé par des espaces&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo^="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo débute par le texte «&amp;nbsp;bar&amp;nbsp;»&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;3&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo$="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo se termine par le texte «&amp;nbsp;bar&amp;nbsp;»&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;3&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo*="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo dont la valeur contient le texte
+                    «&amp;nbsp;bar&amp;nbsp;»
+                &lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;3&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E[foo|="bar"]&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément E ayant
+                    un
+                    attribut foo dont la valeur contient le mot
+                    «&amp;nbsp;bar&amp;nbsp;»
+                    séparé par des tirets&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E F&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément F contenu
+                    dans un élément E&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;1&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E &amp;gt; F&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément F contenu
+                    directement dans un élément E&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E + F&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément F précédé
+                    immédiatement par un élément-voisin E&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;2&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td class="pattern" rowspan="1" colspan="1"&gt;E ~ F&lt;/td&gt;
+                &lt;td class="meaning" rowspan="1" colspan="1"&gt;un élément F précédé
+                    par
+                    un élément-voisin E&lt;/td&gt;
+                &lt;td class="origin" rowspan="1" colspan="1"&gt;3&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Avec CSS 3, il devient donc possible, par exemple, de sélectionner tous les
+    hyperliens ayant une adresse (attribut «&amp;nbsp;href&amp;nbsp;») débutant par
+    «&amp;nbsp;http&amp;nbsp;» avec le
+    sélecteur «&amp;nbsp;a[href^="http"]&amp;nbsp;», ce qui pourrait être utilisé pour
+    indiquer
+    visuellement les liens externes.&lt;/p&gt;
+&lt;p&gt;CSS 3 ajoute aussi la possibilité d'entourer du texte comme dans cet exemple:
+&lt;/p&gt;
+&lt;pre style="white-space: pre-wrap"&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;span&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;style&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+    &lt;/span&gt;&lt;span style="color:#bb7977; font-weight:bold; "&gt;border&lt;/span&gt;&lt;span style="color:#808030; "&gt;:&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+    &lt;/span&gt;&lt;span style="color:#008c00; "&gt;2&lt;/span&gt;&lt;span style="color:#006600; "&gt;px&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;solid&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#797997; "&gt;blue&lt;/span&gt;&lt;span style="color:#800080; "&gt;;&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+        border-radius &lt;/span&gt;&lt;span style="color:#808030; "&gt;:&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#008c00; "&gt;25&lt;/span&gt;&lt;span style="color:#006600; "&gt;px&lt;/span&gt;&lt;span style="color:#800080; "&gt;;&lt;/span&gt;&lt;span style="color:#bb7977; font-weight:bold; "&gt;padding&lt;/span&gt;&lt;span style="color:#808030; "&gt;:&lt;/span&gt;&lt;span style="color:#008c00; "&gt;2&lt;/span&gt;&lt;span style="color:#006600; "&gt;px&lt;/span&gt;&lt;span style="color:#800080; "&gt;;&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Entoure-moi!&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;span&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;span style=" border: 2px solid blue; border-radius : 25px;padding:2px;"&gt;Entoure-moi!&lt;/span&gt;
+&lt;/p&gt;
+&lt;p&gt;Par le passé, il était nécessaire de créer une image pour obtenir un tel
+    effet. Ilest beaucoup plus efficace d'utiliser une simple instruction CSS.
+&lt;/p&gt;
+&lt;p&gt;On peut aussi transformer géométriquement le texte. Par exemple, on peut le
+    tourner de 180 degré ou faire un effet miroir comme dans cet exemple:&lt;/p&gt;
+&lt;pre style="white-space:pre-wrap"&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;style&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#274796; "&gt;transform&lt;/span&gt;&lt;span style="color:#808030; "&gt;:&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+        rotate(&lt;/span&gt;&lt;span style="color:#008c00; "&gt;180&lt;/span&gt;&lt;span style="color:#006600; "&gt;deg&lt;/span&gt;&lt;span style="color:#274796; "&gt;)&lt;/span&gt;&lt;span style="color:#800080; "&gt;;&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;On peut maintenant retourner le
+    texte&lt;span style="color:#008c00; "&gt;.&lt;/span&gt; N'est-ce pas superbement
+    mignon?&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#274796; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;style&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#274796; "&gt;transform&lt;/span&gt;&lt;span style="color:#808030; "&gt;:&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+        scale(&lt;/span&gt;&lt;span style="color:#808030; "&gt;-&lt;/span&gt;&lt;span style="color:#008c00; "&gt;1&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;&lt;span style="color:#274796; "&gt;
+    &lt;/span&gt;&lt;span style="color:#008c00; "&gt;1&lt;/span&gt;&lt;span style="color:#274796; "&gt;)&lt;/span&gt;&lt;span style="color:#800080; "&gt;;&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;On peut aussi faire un effet
+    miroir&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p style="transform: rotate(180deg);"&gt;On peut maintenant retourner le texte.
+    N'est-ce pas superbement mignon?&lt;/p&gt;
+&lt;p style="transform: scale(-1, 1);"&gt;On peut aussi faire un effet miroir.&lt;/p&gt;
+&lt;p&gt;Le CSS est maintenant très riche et nous nous contentons d'illustrer quelques
+    possibilités..&lt;/p&gt;
+&lt;h3 class="recall"&gt;Optimisation des fichiers CSS&lt;/h3&gt;
+&lt;p&gt;Il y a plusieurs façons d'écrire un même ensemble d'instructions.
+    Par exemple, ce fichier CSS est trop long et difficile à comprendre&amp;nbsp;:
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    montant {
+    color: red;
+    font-weight: bold;
+    background:white;
+    font-style: normal;
+    text-align: center;
+    }
+    nom {
+    color: white;
+    background:white;
+    font-style: normal;
+    text-align: left;
+    }
+    texte {
+    color: black;
+    text-align: center;
+    font-style: normal;
+    background:white;
+    text-align: left;
+    }
+&lt;/p&gt;
+&lt;p&gt;On peut le réécrire dans un format plus concis et plus clair&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    montant {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    }
+    nom {
+    color: white;
+    text-align: left;
+    }
+    texte {
+    color: black;
+    text-align: left;
+    }
+    montant, nom, texte {
+    background: white;
+    font-style: normal;
+    }
+&lt;/p&gt;
+&lt;p&gt;Il existe de nombreux outils pour optimiser les fichiers CSS dont
+    &lt;a href="http://csstidy.sourceforge.net/" shape="rect"&gt;CSSTidy&lt;/a&gt; qui est
+    &lt;a href="http://cdburnerxp.se/cssparse/css_optimiser.php" shape="rect"&gt;disponible en ligne&lt;/a&gt;.
+&lt;/p&gt;
+&lt;h3 class="recall"&gt;En terminant&lt;/h3&gt;
+&lt;p&gt;La syntaxe CSS est beaucoup plus riche que ce que nous venons de voir. Pour
+    plus d'information, nous vous invitons
+    à lire le document de référence &lt;a href="http://www.yoyodesign.org/doc/w3c/css2/" shape="rect"&gt;http://www.yoyodesign.org/doc/w3c/css2/&lt;/a&gt;
+    ou les articles du site mozilla.org (&lt;a href="http://developer.mozilla.org/en/docs/CSS" shape="rect"&gt;http://developer.mozilla.org/en/docs/CSS&lt;/a&gt;).&lt;/p&gt;.
+&lt;h3 class="recall"&gt;Livres de référence&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt; David Sawyer McFarland, &lt;a href="https://www.amazon.ca/CSS-Missing-David-Sawyer-McFarland/dp/1491918055/ref=dp_ob_image_bk" shape="rect"&gt;CSS: The Missing Manual&lt;/a&gt;, O'Reilly Media, 2015, 718
+        pages.&lt;/li&gt;
+&lt;/ul&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1741896089</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72290" moduleid="131138" modulename="page" contextid="970265">
+  <page id="72290">
+    <name>Solutions à l’examen préparatoire</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Solutions à l’examen préparatoire&lt;/h1&gt;
+
+&lt;p&gt;Maintenant que vous avez pris la peine de compléter l’examen préparatoire, vérifiez vos réponses en les comparant avec &lt;a href="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/dossier%20zip/examenfactice-2.pdf"&gt;les solutions proposées&lt;/a&gt;.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741897998</timemodified>
+  </page>
+</activity>

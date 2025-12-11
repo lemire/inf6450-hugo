@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72218" moduleid="131066" modulename="page" contextid="970187">
+  <page id="72218">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Autoévaluation&lt;/h1&gt;
+&lt;h2&gt;Questionnaire d'autoévaluation&lt;/h2&gt;
+&lt;p&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en
+    plus de vous permettre
+    de vérifier vos réponses, fournit une courte explication.
+    Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c'est
+    que vous avez la bonne réponse;
+    sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour
+    comprendre votre erreur.
+    Puis, essayez de nouveau en cliquant sur le bouton
+    «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 1&lt;/b&gt;.
+        Parmi les suivants, quels sont les documents XSLT corrects?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis
+        appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+    &lt;/p&gt;
+    &lt;form id="idp140293223359968"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140293223360736true" name="idp140293223359968"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+                    &amp;lt;xsl:stylesheet version="1.0"
+                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+                    &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+                    &amp;lt;/xsl:stylesheet&amp;gt;
+                &lt;/p&gt;
+                &lt;span id="idp140293223360736true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Oui, c'est correct&amp;nbsp;: le résultat
+                    sera un document vide (contenant un espace).&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140293223363008false" name="idp140293223359968"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+                &lt;/p&gt;
+                &lt;span id="idp140293223363008false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Ce n'est pas un document&amp;nbsp;XML
+                    bien formé, car il n'y a pas d'élément-racine.
+                    Un document XSLT doit être un document&amp;nbsp;XML bien
+                    formé.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140293223365088false" name="idp140293223359968"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+                    &amp;lt;xsl:text
+                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;&amp;lt;/xsl:text&amp;gt;
+                &lt;/p&gt;
+                &lt;span id="idp140293223365088false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Non. Bien qu'il s'agisse d'un
+                    document&amp;nbsp;XML bien formé,
+                    l'élément-racine «&amp;nbsp;text&amp;nbsp;» n'est pas autorisé, il
+                    devrait être «&amp;nbsp;transform&amp;nbsp;»
+                    ou bien «&amp;nbsp;stylesheet&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140293223367200true" name="idp140293223359968"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+                    &amp;lt;xsl:transform
+                    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+                    &amp;lt;/xsl:transform&amp;gt;
+                &lt;/p&gt;
+                &lt;span id="idp140293223367200true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Oui. Il s'agit d'un document XML bien
+                    formé et l'élément-racine est «&amp;nbsp;transform&amp;nbsp;», ce
+                    qui est autorisé.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140293223359968';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140293223359968';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 2&lt;/b&gt;.
+        Étant donné le document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;source&amp;gt;
+            &amp;lt;employe&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Graton&amp;lt;/nom&amp;gt;
+            &amp;lt;/employe&amp;gt;
+            &amp;lt;/source&amp;gt;
+        &lt;/p&gt;
+        et le fichier XSLT suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version = '1.0'
+            xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&amp;gt;
+            &amp;lt;xsl:template match="employe"&amp;gt;
+            &amp;lt;b&amp;gt;
+            &amp;lt;xsl:value-of select="."/&amp;gt;
+            &amp;lt;/b&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="prenom"&amp;gt;
+            &amp;lt;i&amp;gt;
+            &amp;lt;xsl:value-of select="."/&amp;gt;
+            &amp;lt;/i&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce qui s'affichera à l'écran?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223369360"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223371216true" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223371216true';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean
+                    Graton&lt;/b&gt;&lt;span id="idp140293223371216true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Le
+                    modèle «&amp;nbsp;employe&amp;nbsp;» sera utilisé, mais pas le
+                    modèle «&amp;nbsp;prenom&amp;nbsp;».
+                    Il y aura bel et bien un espace entre «&amp;nbsp;Jean&amp;nbsp;» et
+                    «&amp;nbsp;Graton&amp;nbsp;», parce qu'il y a un
+                    retour de chariot entre les éléments «&amp;nbsp;prenom&amp;nbsp;» et
+                    «&amp;nbsp;nom&amp;nbsp;». Par défaut, les espaces et les retours de
+                    chariot
+                    entre les éléments ne sont pas ignorés dans le document XML
+                    qui est traité, mais ils le sont
+                    dans le document&amp;nbsp;XSLT. Un retour de chariot, en HTML ou
+                    XHTML, s'affiche à l'écran comme un espace.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223374000false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223374000false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;JeanGraton&lt;/b&gt;&lt;span id="idp140293223374000false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.
+                    L'instruction «&amp;nbsp;value-of&amp;nbsp;» va reproduire le
+                    contenu de l'élément, moins les balises,
+                    mais en respectant les espaces entre les éléments. Il n'y
+                    aurait pas d'espace entre les éléments
+                    si le document XML avait pris le forme
+                    «&amp;nbsp;&amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;&amp;lt;nom&amp;gt;Graton&amp;lt;/nom&amp;gt;&amp;nbsp;»
+                    (sans espace entre les deux éléments).&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223376016false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223376016false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean
+                    &lt;i&gt;Graton&lt;/i&gt;&lt;/b&gt;&lt;span id="idp140293223376016false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;prénom&amp;nbsp;» n'est pas utilisé.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223377808false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223377808false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean
+                Graton&lt;span id="idp140293223377808false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé; le texte sera donc en
+                    caractères gras. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223379280false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223379280false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean&lt;/b&gt;&lt;i&gt;Graton&lt;/i&gt;&lt;span id="idp140293223379280false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé; il n'y aura donc pas
+                    d'italique. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223381360false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223381360false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean&lt;/b&gt;
+                Graton&lt;span id="idp140293223381360false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé; on n'aura donc pas un
+                    mélange de texte normal
+                    et de texte en caractères gras. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223383280false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223383280false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien&lt;span id="idp140293223383280false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé et «&amp;nbsp;value-of&amp;nbsp;»
+                    donnera
+                    le contenu textuel sans les balises.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223384784false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223384784false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;&lt;i&gt;Jean&lt;/i&gt;&lt;/b&gt;&lt;span id="idp140293223384784false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé; on n'aura donc pas de
+                    texte en italique.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223386608false" name="idp140293223369360" onclick="javascript:var Click_MenuId='idp140293223386608false';var formid='idp140293223369360'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Graton&lt;span id="idp140293223386608false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;employe&amp;nbsp;» sera utilisé; «&amp;nbsp;value-of&amp;nbsp;»
+                    sélectionne
+                    tout le texte, et non seulement «&amp;nbsp;Graton&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 3&lt;/b&gt;.
+        Étant donné le document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;source&amp;gt;
+            &amp;lt;employe&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Graton&amp;lt;/nom&amp;gt;
+            &amp;lt;/employe&amp;gt;
+            &amp;lt;/source&amp;gt;
+        &lt;/p&gt;
+        et le fichier XSLT suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version = '1.0'
+            xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&amp;gt;
+            &amp;lt;xsl:template match="employe"&amp;gt;
+            &amp;lt;b&amp;gt;
+            &amp;lt;xsl:apply-templates select="prenom"/&amp;gt;
+            &amp;lt;/b&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="prenom"&amp;gt;
+            &amp;lt;i&amp;gt;
+            &amp;lt;xsl:value-of select="."/&amp;gt;
+            &amp;lt;/i&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce qui s'affichera à l'écran?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223388368"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223390224false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223390224false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean
+                    Graton&lt;/b&gt;&lt;span id="idp140293223390224false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223392272false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223392272false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean
+                    &lt;i&gt;Graton&lt;/i&gt;&lt;/b&gt;&lt;span id="idp140293223392272false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223394032false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223394032false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean
+                Graton&lt;span id="idp140293223394032false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223395408false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223395408false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean&lt;/b&gt;&lt;i&gt;Graton&lt;/i&gt;&lt;span id="idp140293223395408false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223397296false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223397296false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;Jean&lt;/b&gt;
+                Graton&lt;span id="idp140293223397296false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223398928false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223398928false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien&lt;span id="idp140293223398928false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223400304true" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223400304true';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;&lt;i&gt;Jean&lt;/i&gt;&lt;/b&gt;&lt;span id="idp140293223400304true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Le
+                    modèle «&amp;nbsp;employe&amp;nbsp;» est appelé et lui-même appelle
+                    le modèle «&amp;nbsp;prenom&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223402160false" name="idp140293223388368" onclick="javascript:var Click_MenuId='idp140293223402160false';var formid='idp140293223388368'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Graton&lt;span id="idp140293223402160false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 4&lt;/b&gt;.
+        Étant donné le document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;source&amp;gt;
+            &amp;lt;employe&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Graton&amp;lt;/nom&amp;gt;
+            &amp;lt;/employe&amp;gt;
+            &amp;lt;/source&amp;gt;
+        &lt;/p&gt;
+        et le fichier XSLT suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version = '1.0'
+            xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&amp;gt;
+            &amp;lt;xsl:template match="prenom"&amp;gt;
+            &amp;lt;i&amp;gt;
+            &amp;lt;xsl:value-of select="."/&amp;gt;
+            &amp;lt;/i&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce qui s'affichera à l'écran?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223403664"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223405520false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223405520false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Jean
+                    Graton&lt;/i&gt;&lt;span id="idp140293223405520false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223407472false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223407472false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Jean
+                    &lt;i&gt;Graton&lt;/i&gt;&lt;/i&gt;&lt;span id="idp140293223407472false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223409232false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223409232false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean
+                Graton&lt;span id="idp140293223409232false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223410608false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223410608false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Jean&lt;/i&gt;&lt;i&gt;Graton&lt;/i&gt;&lt;span id="idp140293223410608false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223412496true" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223412496true';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;i&gt;Jean&lt;/i&gt;
+                Graton&lt;span id="idp140293223412496true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.
+                    Comme il n'y a pas de modèle pour l'élément
+                    «&amp;nbsp;nom&amp;nbsp;»,
+                    le modèle par défaut s'applique et le contenu du texte est
+                    reproduit. Par contre, le modèle «&amp;nbsp;prenom&amp;nbsp;» est
+                    utilisé. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223414752false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223414752false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien&lt;span id="idp140293223414752false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223416128false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223416128false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&lt;b&gt;&lt;i&gt;Jean&lt;/i&gt;&lt;/b&gt;&lt;span id="idp140293223416128false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223417760false" name="idp140293223403664" onclick="javascript:var Click_MenuId='idp140293223417760false';var formid='idp140293223403664'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Graton&lt;span id="idp140293223417760false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 5&lt;/b&gt;.
+        Étant donné le document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;budget&amp;gt;
+            &amp;lt;item montant="50 $"&amp;gt;
+            &amp;lt;titre&amp;gt;lait&amp;lt;/titre&amp;gt;
+            &amp;lt;description&amp;gt;Je dois acheter beaucoup de
+            lait.&amp;lt;/description&amp;gt;
+            &amp;lt;/item&amp;gt;
+            &amp;lt;item montant="20 $"&amp;gt;
+            &amp;lt;titre&amp;gt;pomme de terre&amp;lt;/titre&amp;gt;
+            &amp;lt;description&amp;gt;Même si la pomme de terre est mauvaise pour la
+            santé,
+            je dois en acheter beaucoup.&amp;lt;/description&amp;gt;
+            &amp;lt;/item&amp;gt;
+            &amp;lt;/budget&amp;gt;
+        &lt;/p&gt;
+        et le fichier XSLT suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="budget"&amp;gt;
+            &amp;lt;ul&amp;gt;
+            &amp;lt;xsl:apply-templates select="item" /&amp;gt;
+            &amp;lt;/ul&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="item"&amp;gt;
+            &amp;lt;li&amp;gt;
+            &amp;lt;xsl:value-of select="titre" /&amp;gt;
+            (&amp;lt;xsl:value-of select="@montant" /&amp;gt;)
+            &amp;lt;/li&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+        Qu'est-ce qui s'affichera à l'écran?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223419264"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223421360false" name="idp140293223419264" onclick="javascript:var Click_MenuId='idp140293223421360false';var formid='idp140293223419264'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                lait (50 $) pomme de terre &lt;span id="idp140293223421360false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;budget&amp;nbsp;» s'applique; il doit y avoir création
+                    d'une liste.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223423376true" name="idp140293223419264" onclick="javascript:var Click_MenuId='idp140293223423376true';var formid='idp140293223419264'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;lait
+                        (50 $)
+                    &lt;/li&gt;
+                    &lt;li&gt;pomme de terre
+                        (20 $)
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;span id="idp140293223423376true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Le
+                    modèle «&amp;nbsp;budget&amp;nbsp;» s'applique et il y a création
+                    d'une liste.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223425472false" name="idp140293223419264" onclick="javascript:var Click_MenuId='idp140293223425472false';var formid='idp140293223419264'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;lait
+                        (50 $)Je dois acheter beaucoup de lait.
+                    &lt;/li&gt;
+                    &lt;li&gt;pomme de terre
+                        (20 $)Même si la pomme de terre est mauvaise pour la
+                        santé,
+                        je dois en acheter beaucoup.
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;span id="idp140293223425472false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Les éléments
+                    «&amp;nbsp;item&amp;nbsp;» sont traités par le modèle
+                    «&amp;nbsp;item&amp;nbsp;»
+                    qui n'inclut pas l'élément «&amp;nbsp;description&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 6&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;xsl:apply-templates select="." mode="a" /&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="*" mode="a"&amp;gt;
+            &amp;lt;xsl:apply-templates select="." mode="b" /&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="*" mode="b"&amp;gt;
+            &amp;lt;xsl:value-of select="." /&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223427872"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223429568false" name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223429568false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                va produire la liste des balises des documents XML.&lt;span id="idp140293223429568false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Au
+                    contraire, car «&amp;nbsp;value-of&amp;nbsp;» enlève toutes les
+                    balises.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223431200false" name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223431200false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                va produire des documents vides.&lt;span id="idp140293223431200false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le modèle
+                    «&amp;nbsp;b&amp;nbsp;» s'applique.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223432320true" name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223432320true';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                va produire des versions des documents XML, mais sans les
+                balises.&lt;span id="idp140293223432320true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Exactement. Le
+                    modèle «&amp;nbsp;b&amp;nbsp;» s'applique, après l'application du
+                    modèle par défaut et du
+                    modèle&amp;nbsp;«&amp;nbsp;a&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223433776false" name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223433776false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Ce
+                document XSLT n'est pas valable.&lt;span id="idp140293223433776false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il s'agit d'un
+                    document XSLT valable.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223434992false" name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223434992false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Ce
+                document XSLT est valable, mais ne pourra pas s'exécuter.&lt;span id="idp140293223434992false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) L'utilisation de
+                    «&amp;nbsp;mode&amp;nbsp;» est effectivement dangereuse et peut
+                    mener à des boucles sans fin,
+                    mais ce n'est pas le cas pour ce document.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 7&lt;/b&gt;.
+        Si on applique le document XSLT suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;xsl:value-of select="count(cours)"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+        au document XML suivant...
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+            &amp;lt;universite&amp;gt;
+            &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 102 Introduction avancée&amp;lt;/nom&amp;gt;
+            &amp;lt;lien&amp;gt;&amp;lt;cours&amp;gt;INF 101
+            Introduction&amp;lt;/cours&amp;gt;&amp;lt;/lien&amp;gt;
+            &amp;lt;description&amp;gt;Un cours d'introduction à l'informatique pour
+            futurs
+            ingénieurs.&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+            &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 101 Introduction&amp;lt;/nom&amp;gt;
+            &amp;lt;description&amp;gt;Un cours d'introduction à l'informatique pour les
+            étudiants en éducation.&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+            &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 103 Java&amp;lt;/nom&amp;gt;
+            description&amp;gt;Un cours d'introduction au
+            Java&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+            &amp;lt;/universite&amp;gt;
+        &lt;/p&gt;
+        Quel sera le résultat?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223436768"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223437824false" name="idp140293223436768" onclick="javascript:var Click_MenuId='idp140293223437824false';var formid='idp140293223436768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le
+                chiffre «&amp;nbsp;1&amp;nbsp;».&lt;span id="idp140293223437824false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Le modèle compte
+                    le nombre d'éléments «&amp;nbsp;cours&amp;nbsp;» dans
+                    l'élément-racine et il y a plus d'un élément
+                    «&amp;nbsp;cours&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223440896false" name="idp140293223436768" onclick="javascript:var Click_MenuId='idp140293223440896false';var formid='idp140293223436768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le
+                chiffre «&amp;nbsp;2&amp;nbsp;».&lt;span id="idp140293223440896false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Le modèle compte
+                    le nombre d'éléments «&amp;nbsp;cours&amp;nbsp;» dans
+                    l'élément-racine et il y a plus de deux éléments
+                    «&amp;nbsp;cours&amp;nbsp;». &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223442320true" name="idp140293223436768" onclick="javascript:var Click_MenuId='idp140293223442320true';var formid='idp140293223436768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le
+                chiffre «&amp;nbsp;3&amp;nbsp;».&lt;span id="idp140293223442320true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Comme le modèle
+                    «&amp;nbsp;*&amp;nbsp;» ne s'applique qu'à l'élément-racine qui
+                    contient 3&amp;nbsp;éléments «&amp;nbsp;cours&amp;nbsp;»,
+                    le résultat sera effectivement le chiffre 3.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223443584false" name="idp140293223436768" onclick="javascript:var Click_MenuId='idp140293223443584false';var formid='idp140293223436768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le
+                chiffre «&amp;nbsp;4&amp;nbsp;».&lt;span id="idp140293223443584false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il y a bien 4
+                    éléments «&amp;nbsp;cours&amp;nbsp;», mais le modèle «&amp;nbsp;*&amp;nbsp;»
+                    ne s'applique
+                    qu'à l'élément-racine qui lui contient 3&amp;nbsp;éléments
+                    «&amp;nbsp;cours&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223444960false" name="idp140293223436768" onclick="javascript:var Click_MenuId='idp140293223444960false';var formid='idp140293223436768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Un
+                document vide.&lt;span id="idp140293223444960false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.
+                    L'instruction «&amp;nbsp;&amp;lt;xsl:value-of
+                    select="count(cours)"/&amp;gt;&amp;nbsp;» sera exécutée
+                    et le résultat doit être un nombre.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 8&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;xsl:value-of select="name(.)"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223446448"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223448016false" name="idp140293223446448" onclick="javascript:var Click_MenuId='idp140293223448016false';var formid='idp140293223446448'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de tous les éléments dans le document.&lt;span id="idp140293223448016false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Le modèle
+                    «&amp;nbsp;*&amp;nbsp;» ne s'applique qu'à l'élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223449568false" name="idp140293223446448" onclick="javascript:var Click_MenuId='idp140293223449568false';var formid='idp140293223446448'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de tous les éléments et attributs dans le
+                document.&lt;span id="idp140293223449568false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Le modèle
+                    «&amp;nbsp;*&amp;nbsp;» ne s'applique qu'à l'élément-racine et la
+                    fonction «&amp;nbsp;name&amp;nbsp;»,
+                    appliquée à un élément, ne donne que le nom de
+                    l'élément.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223451008true" name="idp140293223446448" onclick="javascript:var Click_MenuId='idp140293223451008true';var formid='idp140293223446448'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de l'élément-racine.&lt;span id="idp140293223451008true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) C'est vrai. Le
+                    modèle «&amp;nbsp;*&amp;nbsp;» ne s'applique qu'à
+                    l'élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223452320false" name="idp140293223446448" onclick="javascript:var Click_MenuId='idp140293223452320false';var formid='idp140293223446448'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de l'élément-racine et de tout attribut qu'il
+                pourrait avoir.&lt;span id="idp140293223452320false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) La fonction
+                    «&amp;nbsp;name&amp;nbsp;» appliquée à un élément ne donne que le
+                    nom de l'élément.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 9&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="cours|universite"&amp;gt;
+            &amp;lt;xsl:value-of select="name(.)"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223453920"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223455488false" name="idp140293223453920" onclick="javascript:var Click_MenuId='idp140293223455488false';var formid='idp140293223453920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le contenu textuel (sans les balises) de tous les éléments
+                «&amp;nbsp;cours&amp;nbsp;»
+                ou «&amp;nbsp;universite&amp;nbsp;» du document&amp;nbsp;XML.&lt;span id="idp140293223455488false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Si un
+                    élément «&amp;nbsp;cours&amp;nbsp;» ou «&amp;nbsp;universite&amp;nbsp;» est
+                    rencontré, seul son nom s'affiche. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223457072false" name="idp140293223453920" onclick="javascript:var Click_MenuId='idp140293223457072false';var formid='idp140293223453920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne «&amp;nbsp;cours&amp;nbsp;» si l'élément-racine est de type
+                «&amp;nbsp;cours&amp;nbsp;».&lt;span id="idp140293223457072false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223458192false" name="idp140293223453920" onclick="javascript:var Click_MenuId='idp140293223458192false';var formid='idp140293223453920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne «&amp;nbsp;cours&amp;nbsp;» ou «&amp;nbsp;universite&amp;nbsp;», autant de
+                fois qu'il y a d'éléments
+                «&amp;nbsp;cours&amp;nbsp;» ou «&amp;nbsp;universite&amp;nbsp;» dans le
+                document, et rien d'autre.&lt;span id="idp140293223458192false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. La règle par
+                    défaut s'applique aux autres éléments et leur contenu
+                    textuel sera affiché.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223459744true" name="idp140293223453920" onclick="javascript:var Click_MenuId='idp140293223459744true';var formid='idp140293223453920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne «&amp;nbsp;cours&amp;nbsp;» ou «&amp;nbsp;universite&amp;nbsp;», autant de
+                fois qu'il y a
+                d'éléments «&amp;nbsp;cours&amp;nbsp;» ou «&amp;nbsp;universite&amp;nbsp;» dans
+                le document, et le contenu textuel de tous les
+                autres éléments qui ne sont pas contenus dans un élément
+                «&amp;nbsp;cours&amp;nbsp;» ou dans un élément
+                «&amp;nbsp;université&amp;nbsp;».&lt;span id="idp140293223459744true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Exactement. La
+                    règle par défaut s'applique à tous les éléments, sauf aux
+                    éléments «&amp;nbsp;cours&amp;nbsp;»
+                    dont on ne visite pas les nœuds.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 10&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:value-of select="name(*)" /&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223461968"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223463440false" name="idp140293223461968" onclick="javascript:var Click_MenuId='idp140293223463440false';var formid='idp140293223461968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de tous les éléments contenus dans
+                l'élément-racine.&lt;span id="idp140293223463440false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, car
+                    «&amp;nbsp;/&amp;nbsp;» est le nœud-racine (le document lui-même) et
+                    non pas l'élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223465072true" name="idp140293223461968" onclick="javascript:var Click_MenuId='idp140293223465072true';var formid='idp140293223461968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de l'élément-racine.&lt;span id="idp140293223465072true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, car
+                    «&amp;nbsp;/&amp;nbsp;» est le nœud-racine (le document lui-même)
+                    qui ne contient qu'un seul élément&amp;nbsp;:
+                    l'élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223466496false" name="idp140293223461968" onclick="javascript:var Click_MenuId='idp140293223466496false';var formid='idp140293223461968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de tous les éléments du document&amp;nbsp;XML.&lt;span id="idp140293223466496false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Comme nous
+                    avons une règle qui est appliquée au nœud-racine, le
+                    traitement du processeur&amp;nbsp;XSLT
+                    va s'arrêter immédiatement après l'application du seul
+                    modèle contenu dans le document&amp;nbsp;XSLT.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 11&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            [&amp;lt;xsl:value-of select="generate-id(.)" /&amp;gt;]
+            &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+            &amp;lt;xsl:apply-templates select="*" mode="a"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;xsl:template match="*" mode="a"&amp;gt;
+            [&amp;lt;xsl:value-of select="generate-id(.)"
+            /&amp;gt;]&amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223468480"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223470048false" name="idp140293223468480" onclick="javascript:var Click_MenuId='idp140293223470048false';var formid='idp140293223468480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne une liste d'identifiants, un et un seul identifiant pour
+                chaque élément du document&amp;nbsp;XML.
+                Il n'y a pas deux identifiants égaux. &lt;span id="idp140293223470048false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. À cause de
+                    l'utilisation du «&amp;nbsp;mode&amp;nbsp;», certains identifiants
+                    sont répétés deux fois.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223471920false" name="idp140293223468480" onclick="javascript:var Click_MenuId='idp140293223471920false';var formid='idp140293223468480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne une liste d'identifiants, chacun étant répété deux
+                fois.&lt;span id="idp140293223471920false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Pour
+                    l'élément-racine, il n'est pas répété deux fois.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223473216true" name="idp140293223468480" onclick="javascript:var Click_MenuId='idp140293223473216true';var formid='idp140293223468480'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne une liste d'identifiants dont certains sont répétés deux
+                fois.&lt;span id="idp140293223473216true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui. Ils sont tous
+                    répétés deux fois, sauf pour l'élément-racine.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 12&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;xsl:choose&amp;gt;
+            &amp;lt;xsl:when test="name(.)='universite'" &amp;gt;
+            &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+            &amp;lt;/xsl:when&amp;gt;
+            &amp;lt;xsl:when test="name(.)='cours'" &amp;gt;
+            &amp;lt;xsl:value-of select="nom" /&amp;gt;
+            &amp;lt;/xsl:when&amp;gt;
+            &amp;lt;xsl:otherwise /&amp;gt;
+            &amp;lt;/xsl:choose&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223474768"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223476464false" name="idp140293223474768" onclick="javascript:var Click_MenuId='idp140293223476464false';var formid='idp140293223474768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le contenu textuel de tous les éléments «&amp;nbsp;nom&amp;nbsp;»
+                immédiatement contenus
+                dans des éléments «&amp;nbsp;cours&amp;nbsp;»&lt;span id="idp140293223476464false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Si un
+                    élément «&amp;nbsp;cours&amp;nbsp;» était contenu dans un autre
+                    élément «&amp;nbsp;cours&amp;nbsp;», il ne serait
+                    jamais visité.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223478464false" name="idp140293223474768" onclick="javascript:var Click_MenuId='idp140293223478464false';var formid='idp140293223474768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le contenu textuel de tous les éléments «&amp;nbsp;nom&amp;nbsp;»
+                immédiatement contenus
+                dans des éléments «&amp;nbsp;cours&amp;nbsp;», eux-mêmes immédiatement
+                contenus dans des éléments «&amp;nbsp;universite&amp;nbsp;».&lt;span id="idp140293223478464false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Si l'élément
+                    «&amp;nbsp;universite&amp;nbsp;» n'est pas l'élément-racine, il ne
+                    sera jamais visité.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223480144false" name="idp140293223474768" onclick="javascript:var Click_MenuId='idp140293223480144false';var formid='idp140293223474768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne un document vide.&lt;span id="idp140293223480144false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Seulement si les
+                    éléments «&amp;nbsp;cours&amp;nbsp;» rencontrés dans les éléments
+                    «&amp;nbsp;universite&amp;nbsp;»
+                    n'ont pas de contenu textuel dans leurs éléments
+                    «&amp;nbsp;nom&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223481376true" name="idp140293223474768" onclick="javascript:var Click_MenuId='idp140293223481376true';var formid='idp140293223474768'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le contenu textuel de tous les éléments «&amp;nbsp;nom&amp;nbsp;»
+                immédiatement
+                contenus dans des éléments «&amp;nbsp;cours&amp;nbsp;», eux-mêmes
+                immédiatement contenus dans l'élément-racine
+                «&amp;nbsp;universite&amp;nbsp;».&lt;span id="idp140293223481376true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Il
+                    n'y a qu'un seul cas où d'autres éléments que
+                    l'élément-racine sont visités
+                    et c'est lorsque l'élément-racine est l'élément
+                    «&amp;nbsp;universite&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 13&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;xsl:if test="count(.)=1" &amp;gt;
+            &amp;lt;xsl:value-of select="name(.)" /&amp;gt;
+            &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+            &amp;lt;/xsl:if&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223483376"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223484848true" name="idp140293223483376" onclick="javascript:var Click_MenuId='idp140293223484848true';var formid='idp140293223483376'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de tous les éléments.&lt;span id="idp140293223484848true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, car
+                    «&amp;nbsp;.&amp;nbsp;» n'est que l'élément courant (donc un
+                    ensemble d'un seul élément);
+                    «&amp;nbsp;count(.)&amp;nbsp;» vaut donc «&amp;nbsp;1&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223486448false" name="idp140293223483376" onclick="javascript:var Click_MenuId='idp140293223486448false';var formid='idp140293223483376'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le nom de l'élément-racine.&lt;span id="idp140293223486448false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Oui, mais aussi
+                    le nom des autres éléments.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223487664false" name="idp140293223483376" onclick="javascript:var Click_MenuId='idp140293223487664false';var formid='idp140293223483376'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne un document vide.&lt;span id="idp140293223487664false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Comme
+                    «&amp;nbsp;count(.)&amp;nbsp;» vaut toujours «&amp;nbsp;1&amp;nbsp;», c'est
+                    plutôt le nom de tous les éléments qui est donné.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 14&lt;/b&gt;.
+        Qu'est-ce qui décrit le mieux le document XSLT suivant?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="*"&amp;gt;
+            &amp;lt;a valeur="{name(.)}"&amp;gt;
+            &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+            &amp;lt;/a&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223489152"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223490720false" name="idp140293223489152" onclick="javascript:var Click_MenuId='idp140293223490720false';var formid='idp140293223489152'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le document XML original, où les éléments ont tous été
+                remplacés par des éléments de nom «&amp;nbsp;a&amp;nbsp;».&lt;span id="idp140293223490720false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le contenu
+                    textuel ne sera jamais modifié.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223492368true" name="idp140293223489152" onclick="javascript:var Click_MenuId='idp140293223492368true';var formid='idp140293223489152'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                remplace le document XML original par un document ne contenant
+                que
+                des éléments «&amp;nbsp;a&amp;nbsp;» sans contenu textuel.&lt;span id="idp140293223492368true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Le
+                    nom des éléments originaux est donné par la valeur de
+                    l'attribut «&amp;nbsp;valeur&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223493872false" name="idp140293223489152" onclick="javascript:var Click_MenuId='idp140293223493872false';var formid='idp140293223489152'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                donne le document XML original.&lt;span id="idp140293223493872false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Absolument
+                    pas&amp;nbsp;: il n'y a plus que des éléments
+                    «&amp;nbsp;a&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 15&lt;/b&gt;.
+        Que signifie XSL?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223557968"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223558880true" name="idp140293223557968" onclick="javascript:var Click_MenuId='idp140293223558880true';var formid='idp140293223557968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;eXtensible
+                Stylesheet Language&lt;span id="idp140293223558880true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223560320false" name="idp140293223557968" onclick="javascript:var Click_MenuId='idp140293223560320false';var formid='idp140293223557968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;eXtensible
+                Style Language&lt;span id="idp140293223560320false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223561760false" name="idp140293223557968" onclick="javascript:var Click_MenuId='idp140293223561760false';var formid='idp140293223557968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;eXtensible
+                Style Laboratory&lt;span id="idp140293223561760false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 16&lt;/b&gt;.
+        Comment fait-on appel à un fichier XSLT?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223563328"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223564336false" name="idp140293223563328" onclick="javascript:var Click_MenuId='idp140293223564336false';var formid='idp140293223563328'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&amp;lt;stylesheet
+                type="text/xsl" href="mystyle.xsl" /&amp;gt;&lt;span id="idp140293223564336false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223565856true" name="idp140293223563328" onclick="javascript:var Click_MenuId='idp140293223565856true';var formid='idp140293223563328'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&amp;lt;?xml-stylesheet
+                type="text/xsl" href="mystyle.xsl" ?&amp;gt;&lt;span id="idp140293223565856true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Effectivement.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223567344false" name="idp140293223563328" onclick="javascript:var Click_MenuId='idp140293223567344false';var formid='idp140293223563328'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;&amp;lt;link
+                type="text/xsl" href="mystyle.xsl" /&amp;gt;&lt;span id="idp140293223567344false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 17&lt;/b&gt;.
+        Le XSLT transforme les documents XML en d'autres documents XML.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223575312"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223576176false" name="idp140293223575312" onclick="javascript:var Click_MenuId='idp140293223576176false';var formid='idp140293223575312'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140293223576176false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le XSLT n'a
+                    pas à produire du XML. On peut déclarer que l'on souhaite
+                    produire
+                    du texte avec une telle instruction&amp;nbsp;:
+                    &amp;lt;xslt:output method="text" omit-xml-declaration="yes"
+                    /&amp;gt;.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223577856true" name="idp140293223575312" onclick="javascript:var Click_MenuId='idp140293223577856true';var formid='idp140293223575312'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140293223577856true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Effectivement.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 18&lt;/b&gt;.
+        Le XSLT ne s'applique qu'à des fichiers XML valide.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223583920"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223584896false" name="idp140293223583920" onclick="javascript:var Click_MenuId='idp140293223584896false';var formid='idp140293223583920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140293223584896false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Il suffit
+                    que le fichier XML soit bien formé.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223586496true" name="idp140293223583920" onclick="javascript:var Click_MenuId='idp140293223586496true';var formid='idp140293223583920'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140293223586496true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Effectivement.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 19&lt;/b&gt;.
+        Étant donné le fichier XML suivant.
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+            &amp;lt;addresses&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;/addresses&amp;gt; &lt;/p&gt;
+        Quel sera le résultat de la transformation XSLT suivante?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:variable name="var"
+            select="/addresses/vendeur[prenom='Jean']"/&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:value-of select="$var"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt; &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223588016"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223590256false" name="idp140293223588016" onclick="javascript:var Click_MenuId='idp140293223590256false';var formid='idp140293223588016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien
+                du tout&lt;span id="idp140293223590256false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223591696false" name="idp140293223588016" onclick="javascript:var Click_MenuId='idp140293223591696false';var formid='idp140293223588016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean&lt;span id="idp140293223591696false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) La variable
+                    sélectionne plutôt l'élément vendeur.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223592800false" name="idp140293223588016" onclick="javascript:var Click_MenuId='idp140293223592800false';var formid='idp140293223588016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;vendeur&amp;gt;
+                    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+                    &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+                    &amp;lt;/vendeur&amp;gt; &lt;/p&gt;
+                &lt;span id="idp140293223592800false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il s'agit bien du
+                    contenu de la variable, mais l'instruction value-of
+                    va extraire le contenu du texte.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223594256true" name="idp140293223588016" onclick="javascript:var Click_MenuId='idp140293223594256true';var formid='idp140293223588016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                Jean
+                Coutu&lt;span id="idp140293223594256true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Correct.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 20&lt;/b&gt;.
+        Étant donné le fichier XML suivant.
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+            &amp;lt;addresses&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;/addresses&amp;gt; &lt;/p&gt;
+        Quel sera le résultat de la transformation XSLT suivante?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:variable name="var"
+            select="/addresses/vendeur[prenom='Jean']"/&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:copy-of select="$var"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt; &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223595504"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223597680false" name="idp140293223595504" onclick="javascript:var Click_MenuId='idp140293223597680false';var formid='idp140293223595504'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien
+                du tout&lt;span id="idp140293223597680false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223599120false" name="idp140293223595504" onclick="javascript:var Click_MenuId='idp140293223599120false';var formid='idp140293223595504'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean&lt;span id="idp140293223599120false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) La variable
+                    sélectionne plutôt l'élément vendeur.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223600224false" name="idp140293223595504" onclick="javascript:var Click_MenuId='idp140293223600224false';var formid='idp140293223595504'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Jean
+                Coutu&lt;span id="idp140293223600224false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce n'est pas
+                    l'effet de l'instruction copy-of.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223601344true" name="idp140293223595504" onclick="javascript:var Click_MenuId='idp140293223601344true';var formid='idp140293223595504'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;vendeur&amp;gt;
+                    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+                    &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+                    &amp;lt;/vendeur&amp;gt; &lt;/p&gt;
+                &lt;span id="idp140293223601344true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement,
+                    l'instruction copy-of donne une copie intégrale du contenu
+                    de la variable.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 21&lt;/b&gt;.
+        Étant donné le fichier XML suivant.
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+            &amp;lt;addresses&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Marie&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Vanasse&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Pierre&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;/addresses&amp;gt; &lt;/p&gt;
+        Quel sera le résultat de la transformation XSLT suivante?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:value-of select="//vendeur"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt; &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223603200"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223605472false" name="idp140293223603200" onclick="javascript:var Click_MenuId='idp140293223605472false';var formid='idp140293223603200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien
+                du tout&lt;span id="idp140293223605472false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223606880false" name="idp140293223603200" onclick="javascript:var Click_MenuId='idp140293223606880false';var formid='idp140293223603200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                Jean
+                Coutu
+                Marie
+                Vanasse
+                Pierre
+                Coutu
+                &lt;span id="idp140293223606880false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce n'est pas
+                    l'effet de l'instruction value-of.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223608080true" name="idp140293223603200" onclick="javascript:var Click_MenuId='idp140293223608080true';var formid='idp140293223603200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                Jean
+                Coutu
+                &lt;span id="idp140293223608080true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, seul
+                    le contenu textuel du premier élément vendeur sera
+                    donné.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 22&lt;/b&gt;.
+        Étant donné le fichier XML suivant.
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+            &amp;lt;addresses&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Marie&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Vanasse&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Pierre&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;/addresses&amp;gt; &lt;/p&gt;
+        Quel sera le résultat de la transformation XSLT suivante?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:value-of select="//vendeur[preceding::vendeur/nom=nom]"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223609472"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223611744false" name="idp140293223609472" onclick="javascript:var Click_MenuId='idp140293223611744false';var formid='idp140293223609472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien
+                du tout&lt;span id="idp140293223611744false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223613184false" name="idp140293223609472" onclick="javascript:var Click_MenuId='idp140293223613184false';var formid='idp140293223609472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                Jean
+                Coutu
+                &lt;span id="idp140293223613184false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, seul le
+                    dernier élément vendeur est sélectionné, car lui seul est
+                    précédé par un élément vendeur ayant un sous-élément nom de
+                    même valeur.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223614496true" name="idp140293223609472" onclick="javascript:var Click_MenuId='idp140293223614496true';var formid='idp140293223609472'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                Pierre
+                Coutu
+                &lt;span id="idp140293223614496true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, seul
+                    le dernier élément vendeur est sélectionné.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 23&lt;/b&gt;.
+        Étant donné le fichier XML suivant.
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+            &amp;lt;addresses&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Marie&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Vanasse&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;vendeur&amp;gt;
+            &amp;lt;prenom&amp;gt;Pierre&amp;lt;/prenom&amp;gt;
+            &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+            &amp;lt;/vendeur&amp;gt;
+            &amp;lt;/addresses&amp;gt; &lt;/p&gt;
+        Quel sera le résultat de la transformation XSLT suivante?
+        &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+            &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+            &amp;lt;xsl:stylesheet version="1.0"
+            xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+            &amp;lt;xsl:template match="/"&amp;gt;
+            &amp;lt;xsl:copy-of
+            select="//vendeur[not(preceding::vendeur/nom=nom)]"/&amp;gt;
+            &amp;lt;/xsl:template&amp;gt;
+            &amp;lt;/xsl:stylesheet&amp;gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223615888"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223618208false" name="idp140293223615888" onclick="javascript:var Click_MenuId='idp140293223618208false';var formid='idp140293223615888'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Rien
+                du tout&lt;span id="idp140293223618208false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223619648false" name="idp140293223615888" onclick="javascript:var Click_MenuId='idp140293223619648false';var formid='idp140293223615888'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;vendeur&amp;gt;
+                    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+                    &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+                    &amp;lt;/vendeur&amp;gt;&lt;/p&gt;
+                &lt;span id="idp140293223619648false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, le deuxième
+                    élément est aussi sélectionné.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223621216true" name="idp140293223615888" onclick="javascript:var Click_MenuId='idp140293223621216true';var formid='idp140293223615888'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;
+                &lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+                    &amp;lt;vendeur&amp;gt;
+                    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+                    &amp;lt;nom&amp;gt;Coutu&amp;lt;/nom&amp;gt;
+                    &amp;lt;/vendeur&amp;gt;&amp;lt;vendeur&amp;gt;
+                    &amp;lt;prenom&amp;gt;Marie&amp;lt;/prenom&amp;gt;
+                    &amp;lt;nom&amp;gt;Vanasse&amp;lt;/nom&amp;gt;
+                    &amp;lt;/vendeur&amp;gt;&lt;/p&gt;
+                &lt;span id="idp140293223621216true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, le
+                    dernier élément n'est pas sélectionné.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 24&lt;/b&gt;.
+        Que vaut l'expression «&amp;nbsp;//a[1]=current()&amp;nbsp;»?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140293223628896"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223629872false" name="idp140293223628896" onclick="javascript:var Click_MenuId='idp140293223629872false';var formid='idp140293223628896'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai
+                si le nœud courant est le premier élément a rencontré, faux
+                autrement.&lt;span id="idp140293223629872false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. L'égalité
+                    compare plutôt le contenu des éléments, pas la position dans
+                    le document.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223631440false" name="idp140293223628896" onclick="javascript:var Click_MenuId='idp140293223631440false';var formid='idp140293223628896'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai
+                si le nœud courant est le premier élément a rencontré au sein
+                d'un même élément, faux autrement.&lt;span id="idp140293223631440false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. L'égalité
+                    compare plutôt le contenu des éléments, pas la position au
+                    sein d'un élément.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140293223632992true" name="idp140293223628896" onclick="javascript:var Click_MenuId='idp140293223632992true';var formid='idp140293223628896'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Aucune
+                de ces réponses.&lt;span id="idp140293223632992true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement,
+                    l'expression n'a la valeur vraie que si l'élément courant
+                    est un élément «&amp;nbsp;a&amp;nbsp;» ayant le même contenu que le
+                    premier élément «&amp;nbsp;a&amp;nbsp;» dans le document.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1743520474</timemodified>
+  </page>
+</activity>

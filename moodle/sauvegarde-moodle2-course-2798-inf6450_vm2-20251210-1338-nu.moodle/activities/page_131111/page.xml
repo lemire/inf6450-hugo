@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72263" moduleid="131111" modulename="page" contextid="970232">
+  <page id="72263">
+    <name>JSON</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;p&gt;Malheureusement, le traitement d’un document XML en JavaScript est parfois    inutilement lourd. Pour cette raison, on remplace souvent le XML par du &lt;a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank"&gt;JSON&lt;/a&gt; (JavaScript Object Notation).&lt;/p&gt;
+&lt;p&gt;JSON a supplanté le XML dans plusieurs applications quant il s’agit de
+    transmettre des informations simples, surtout lors que le récipiendaire
+    utilise le JavaScript.&lt;/p&gt;
+&lt;p&gt;On peut voir le JSON comme une forme très limitée de JavaScript où on peut
+    utiliser que des «&amp;nbsp;objets&amp;nbsp;» et des tableaux. Un
+    «&amp;nbsp;objets&amp;nbsp;» en JavaScript est une structure de clés-valeurs avec la
+    syntaxe «&amp;nbsp;&lt;i&gt;clef1&amp;nbsp;: valeur1, clef2:valeur2 &lt;/i&gt;&amp;nbsp;» alors
+    qu’un tableau est une simple liste de valeurs avec la syntaxe [ valeur1,
+    valeur2 ] . Les clés doivent être des chaînes de caractères, mais les
+    valeurs peuvent être d’autres objets, des tableaux, des chaînes de
+    caractères, des nombres, des valeurs Booléennes ou la valeur spéciale
+    «&amp;nbsp;null&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Parce qu’un objet ou un tableau peuvent, eux-mêmes, comprendre des objets et
+    des tableaux, la syntaxe JSON permet des structures en arbre ressemblant au
+    XML.&lt;/p&gt;
+&lt;p&gt;Voici, par exemple, les mêmes données présentées à la fois en JSON et en
+    XML&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#800080; "&gt;{&lt;/span&gt;
+    &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;nom&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;
+    &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Daniel
+        Lemire&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;
+    &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;âge&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;
+    &lt;span style="color:#008c00; "&gt;72&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;
+    &lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;téléphone&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;
+    &lt;span style="color:#808030; "&gt;[&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;442-4321&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#808030; "&gt;,&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;442-4323&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#808030; "&gt;]&lt;/span&gt;&lt;span style="color:#808030; "&gt;&lt;/span&gt;
+    &lt;span style="color:#800080; "&gt;}&lt;/span&gt;
+&lt;/pre&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Daniel Lemire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;age&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;72&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;age&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;telephone&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;442-4321&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;telephone&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;telephone&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;442-4323&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;telephone&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Le chargement d’une chaîne de caractères au format JSON en JavaScript est
+    aisé, il suffit d’utiliser la fonction&amp;nbsp;: «&amp;nbsp;var monjson =
+    JSON.parse(machaine)&amp;nbsp;;&amp;nbsp;». La fonction retourne l’objet JavaScript
+    correspondant. Par exemple, je pourrait faire monjson["nom"] dans l’exemple
+    précédent pour obtenir le résultat «&amp;nbsp;Daniel Lemire&amp;nbsp;». Nul besoin
+    d’une API DOM.&lt;/p&gt;
+&lt;p&gt;Bien que JSON représente une excellente idée, il s’agit d’une idée plus
+    simple que le XML... il n’y a pas, par exemple, d’équivalent du XSLT ou du
+    CSS en JSON. Bien qu’on le pourrait en théorie, personne ne préconise
+    d’utiliser JSON comme format de base pour les documents de bureautique (par
+    ex., Microsoft Office).&lt;/p&gt;
+
+
+&lt;div style="max-width: 800px; margin: 0 auto; background-color: #ffffff; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"&gt;
+        &lt;h1 style="font-size: 24px; font-weight: bold; margin-bottom: 16px; color: #1f2937;"&gt;Application d'Arborescence JSON&lt;/h1&gt;
+        &lt;p style="margin-bottom: 16px; color: #4b5563;"&gt;
+            Entrez un contenu JSON dans le champ ci-dessous, puis cliquez sur "Dessine" pour afficher l'arborescence sous forme de liste hiérarchique. Exemple :
+        &lt;/p&gt;
+        &lt;pre style="background-color: #e6f4ea; padding: 12px; border: 1px solid #15803d; border-radius: 4px; font-family: monospace; font-size: 14px; color: #374151; margin-bottom: 16px;"&gt;{
+    "library": {
+        "books": [
+            {
+                "id": 1,
+                "genre": "fiction",
+                "title": "The Hobbit",
+                "author": "J.R.R. Tolkien"
+            },
+            {
+                "id": 2,
+                "genre": "non-fiction",
+                "title": "Sapiens",
+                "author": "Yuval Noah Harari"
+            }
+        ]
+    }
+}
+        &lt;/pre&gt;
+
+        &lt;div style="background-color: #f9fafb; padding: 16px; border: 1px solid #e5e7eb; border-radius: 8px;"&gt;
+            &lt;div style="margin-bottom: 16px;"&gt;
+                &lt;label for="jsonInput" style="display: block; font-size: 14px; font-weight: medium; color: #374151;"&gt;Contenu JSON :&lt;/label&gt;
+                &lt;textarea id="jsonInput" style="width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 4px; min-height: 100px;"&gt;{
+    "library": {
+        "books": [
+            {
+                "id": 1,
+                "genre": "fiction",
+                "title": "The Hobbit",
+                "author": "J.R.R. Tolkien"
+            },
+            {
+                "id": 2,
+                "genre": "non-fiction",
+                "title": "Sapiens",
+                "author": "Yuval Noah Harari"
+            }
+        ]
+    }
+}
+                &lt;/textarea&gt;
+            &lt;/div&gt;
+
+            &lt;button onclick="drawTree()" style="width: 100%; background-color: #2563eb; color: #ffffff; padding: 8px; border: none; border-radius: 4px; cursor: pointer; transition: background-color 0.2s;"&gt;
+                Dessine
+            &lt;/button&gt;
+
+            &lt;div id="error" style="margin-top: 16px; color: #dc2626; font-size: 14px;"&gt;&lt;/div&gt;
+            &lt;div id="tree" style="margin-top: 16px; padding: 12px; border: 1px solid #d1d5db; border-radius: 4px;"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        function drawTree() {
+            const jsonInput = document.getElementById('jsonInput').value.trim();
+            const errorDiv = document.getElementById('error');
+            const treeDiv = document.getElementById('tree');
+
+            // Réinitialiser
+            errorDiv.innerHTML = '';
+            treeDiv.innerHTML = '';
+
+            if (!jsonInput) {
+                errorDiv.innerHTML = 'Erreur : Veuillez entrer un contenu JSON.';
+                return;
+            }
+
+            try {
+                const jsonObj = JSON.parse(jsonInput);
+
+                // Fonction récursive pour construire la liste
+                function buildTree(obj, key = 'root') {
+                    const ul = document.createElement('ul');
+                    ul.style.listStyleType = 'none';
+                    ul.style.paddingLeft = '20px';
+                    ul.style.borderLeft = '2px solid #15803d';
+                    ul.style.margin = '0';
+
+                    const li = document.createElement('li');
+                    li.style.margin = '8px 0';
+                    li.style.position = 'relative';
+
+                    const nodeSpan = document.createElement('span');
+                    let displayText = key;
+
+                    // Afficher la valeur si c'est une feuille
+                    if (typeof obj !== 'object' || obj === null) {
+                        displayText += `: ${obj === null ? 'null' : obj}`;
+                    }
+
+                    nodeSpan.textContent = displayText;
+                    nodeSpan.style.display = 'inline-block';
+                    nodeSpan.style.padding = '4px 8px';
+                    nodeSpan.style.backgroundColor = '#e6f4ea';
+                    nodeSpan.style.border = '1px solid #15803d';
+                    nodeSpan.style.borderRadius = '4px';
+                    nodeSpan.style.color = '#374151';
+                    nodeSpan.style.fontSize = '14px';
+
+                    li.appendChild(nodeSpan);
+
+                    // Ajouter les enfants si objet ou tableau
+                    if (typeof obj === 'object' &amp;&amp; obj !== null) {
+                        const childUl = buildTreeChildren(obj);
+                        li.appendChild(childUl);
+                    }
+
+                    ul.appendChild(li);
+                    return ul;
+
+                    function buildTreeChildren(parent) {
+                        const childUl = document.createElement('ul');
+                        childUl.style.listStyleType = 'none';
+                        childUl.style.paddingLeft = '20px';
+                        childUl.style.borderLeft = '2px solid #15803d';
+                        childUl.style.margin = '0';
+
+                        if (Array.isArray(parent)) {
+                            parent.forEach((item, index) =&gt; {
+                                const childLi = document.createElement('li');
+                                childLi.style.margin = '8px 0';
+                                childLi.style.position = 'relative';
+
+                                const childSpan = document.createElement('span');
+                                childSpan.textContent = `[${index}]`;
+                                childSpan.style.display = 'inline-block';
+                                childSpan.style.padding = '4px 8px';
+                                childSpan.style.backgroundColor = '#e6f4ea';
+                                childSpan.style.border = '1px solid #15803d';
+                                childSpan.style.borderRadius = '4px';
+                                childSpan.style.color = '#374151';
+                                childSpan.style.fontSize = '14px';
+
+                                childLi.appendChild(childSpan);
+
+                                if (typeof item === 'object' &amp;&amp; item !== null) {
+                                    const grandChildUl = buildTreeChildren(item);
+                                    childLi.appendChild(grandChildUl);
+                                } else {
+                                    const valueSpan = document.createElement('span');
+                                    valueSpan.textContent = `: ${item === null ? 'null' : item}`;
+                                    valueSpan.style.color = '#374151';
+                                    valueSpan.style.fontSize = '14px';
+                                    childLi.appendChild(valueSpan);
+                                }
+
+                                childUl.appendChild(childLi);
+                            });
+                        } else {
+                            for (let childKey in parent) {
+                                const childLi = document.createElement('li');
+                                childLi.style.margin = '8px 0';
+                                childLi.style.position = 'relative';
+
+                                const childSpan = document.createElement('span');
+                                childSpan.textContent = childKey;
+                                childSpan.style.display = 'inline-block';
+                                childSpan.style.padding = '4px 8px';
+                                childSpan.style.backgroundColor = '#e6f4ea';
+                                childSpan.style.border = '1px solid #15803d';
+                                childSpan.style.borderRadius = '4px';
+                                childSpan.style.color = '#374151';
+                                childSpan.style.fontSize = '14px';
+
+                                childLi.appendChild(childSpan);
+
+                                if (typeof parent[childKey] === 'object' &amp;&amp; parent[childKey] !== null) {
+                                    const grandChildUl = buildTreeChildren(parent[childKey]);
+                                    childLi.appendChild(grandChildUl);
+                                } else {
+                                    const valueSpan = document.createElement('span');
+                                    valueSpan.textContent = `: ${parent[childKey] === null ? 'null' : parent[childKey]}`;
+                                    valueSpan.style.color = '#374151';
+                                    valueSpan.style.fontSize = '14px';
+                                    childLi.appendChild(valueSpan);
+                                }
+
+                                childUl.appendChild(childLi);
+                            }
+                        }
+
+                        return childUl;
+                    }
+                }
+
+                // Construire et afficher l'arborescence
+                const treeUl = buildTree(jsonObj);
+                treeDiv.appendChild(treeUl);
+            } catch (e) {
+                errorDiv.innerHTML = `Erreur : ${e.message || 'Impossible de traiter le JSON.'}`;
+            }
+        }
+    &lt;/script&gt;
+
+&lt;p&gt;À lire&amp;nbsp;: &lt;a href="http://json.org/json-fr.html" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;présentation de JSON
+        sur json.org&lt;/a&gt; et &lt;a href="http://www.w3schools.com/json/" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;le
+        tutoriel JSON de w3school&lt;/a&gt;.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1752787506</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72212" moduleid="131060" modulename="page" contextid="970181">
+  <page id="72212">
+    <name>Laboratoire XSLT</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Laboratoire XSLT&lt;/h1&gt;
+
+&lt;p&gt;Vous pouvez maintenant expérimenter avec un document XSLT un peu plus
+    sophistiqué. Vous trouverez sur cette page un document DocBook et sa
+    transformation. Nous vous invitons à modifier la transformation et le
+    document XML d'origine afin de vous assurez que vous maîtrisez bien le XSLT.
+&lt;/p&gt;
+&lt;p&gt;Instructions : il suffit de saisir un fichier XML source et une
+    transformation
+    XSLT valable et d'appuyer sur le bouton.&lt;/p&gt;
+
+&lt;p style="color: #4b5563; margin-bottom: 1rem; line-height: 1.5;"&gt;&lt;strong&gt;Instructions :&lt;/strong&gt;&lt;span&gt; Saisissez un fichier XML source et une transformation XSLT valide, puis cliquez sur « Transformer ». Vous pouvez réinitialiser les champs avec le bouton « Réinitialiser ».&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;div style="margin-top: 1.5rem;"&gt;
+    &lt;div style="margin-bottom: 1.5rem;"&gt;
+        &lt;label for="xmlsource" style="display: block;  font-weight: 500; color: #374151; margin-bottom: 0.5rem;"&gt;Fichier XML :&lt;/label&gt;
+        &lt;textarea id="xmlsource" rows="10" style="width: 100%; border: 1px solid #d1d5db; border-radius: 6px; padding: 12px; line-height: 1.5; resize: vertical; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);" placeholder="Saisissez votre XML ici" aria-describedby="xmlsource-help"&gt;&amp;lt;book&amp;gt;
+        &amp;lt;bookinfo&amp;gt;
+        &amp;lt;title&amp;gt;Notre documentation&amp;lt;/title&amp;gt;
+        &amp;lt;author&amp;gt;
+        &amp;lt;firstname&amp;gt;Alexis&amp;lt;/firstname&amp;gt;
+        &amp;lt;surname&amp;gt;Letrotteur&amp;lt;/surname&amp;gt;
+        &amp;lt;/author&amp;gt;
+        &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;&amp;lt;holder&amp;gt;Bell
+        Canada&amp;lt;/holder&amp;gt;&amp;lt;/copyright&amp;gt;
+        &amp;lt;/bookinfo&amp;gt;
+        &amp;lt;chapter&amp;gt;
+        &amp;lt;title&amp;gt;Premier chapitre&amp;lt;/title&amp;gt;
+        &amp;lt;section&amp;gt;
+        &amp;lt;title&amp;gt;Première section du premier chapitre&amp;lt;/title&amp;gt;
+        &amp;lt;para&amp;gt;Mettre ici le premier paragraphe de la première
+        section.&amp;lt;/para&amp;gt;
+        &amp;lt;/section&amp;gt;
+        &amp;lt;/chapter&amp;gt;
+        &amp;lt;/book&amp;gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;div style="margin-bottom: 1.5rem;"&gt;
+        &lt;label for="xstlsource" style="display: block;  font-weight: 500; color: #374151; margin-bottom: 0.5rem;"&gt;Transformation XSLT :&lt;/label&gt;
+        &lt;textarea id="xstlsource" rows="10" style="width: 100%; border: 1px solid #d1d5db; border-radius: 6px; padding: 12px;  line-height: 1.5; resize: vertical; box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);" placeholder="Saisissez votre XSLT ici" aria-describedby="xstlsource-help"&gt;&amp;lt;?xml version="1.0"
+        encoding="ISO-8859-1"?&amp;gt;
+        &amp;lt;xsl:stylesheet version="1.0"
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+        &amp;lt;xsl:output method="html" indent="yes" encoding="ISO-8859-1" /&amp;gt;
+        &amp;lt;xsl:template match="book"&amp;gt; &amp;lt;html&amp;gt;
+        &amp;lt;head&amp;gt;&amp;lt;xsl:apply-templates select="bookinfo"/&amp;gt;&amp;lt;/head&amp;gt;
+        &amp;lt;body&amp;gt;&amp;lt;h1&amp;gt;&amp;lt;xsl:value-of select="bookinfo/title"
+        /&amp;gt;&amp;lt;/h1&amp;gt;
+        &amp;lt;p style="text-indent:1em;"&amp;gt;
+        &amp;lt;xsl:value-of select="bookinfo/author/firstname" /&amp;gt;
+        &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+        &amp;lt;xsl:value-of select="bookinfo/author/surname" /&amp;gt;
+        © &amp;lt;xsl:value-of select="bookinfo/copyright/year" /&amp;gt;
+        &amp;lt;/p&amp;gt;&amp;lt;h2&amp;gt;Table des matières&amp;lt;/h2&amp;gt;
+        &amp;lt;ul&amp;gt;&amp;lt;xsl:apply-templates select="chapter"
+        mode="tdm"/&amp;gt;&amp;lt;/ul&amp;gt;
+        &amp;lt;xsl:apply-templates select="chapter"/&amp;gt;
+        &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="bookinfo"&amp;gt;
+        &amp;lt;title&amp;gt;&amp;lt;xsl:value-of select="title" /&amp;gt;
+        par &amp;lt;xsl:value-of select="author/firstname" /&amp;gt;&amp;lt;xsl:text&amp;gt;
+        &amp;lt;/xsl:text&amp;gt;&amp;lt;xsl:value-of select="author/surname" /&amp;gt;
+        &amp;lt;/title&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="chapter" mode="tdm"&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;a href="#{generate-id(.)}"&amp;gt;
+        &amp;lt;xsl:number format="digit" lang="fr" count="chapter"/&amp;gt;.
+        &amp;lt;xsl:value-of select="title" /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;ul&amp;gt;&amp;lt;xsl:apply-templates select="section"
+        mode="tdm"/&amp;gt;&amp;lt;/ul&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="section" mode="tdm"&amp;gt;
+        &amp;lt;li&amp;gt;&amp;lt;a href="#{generate-id(.)}"&amp;gt;
+        &amp;lt;xsl:number format="digit" lang="fr"
+        count="chapter"/&amp;gt;.&amp;lt;xsl:number format="digit" lang="fr"
+        count="section"/&amp;gt;
+        &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+        &amp;lt;xsl:value-of select="title" /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="chapter"&amp;gt;
+        &amp;lt;h2&amp;gt;&amp;lt;a name="{generate-id(.)}" &amp;gt;Chapitre
+        &amp;lt;xsl:number format="digit" lang="fr"
+        count="chapter"/&amp;gt;.&amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+        &amp;lt;xsl:value-of select="title" /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+        &amp;lt;div style="margin-left:1em"&amp;gt;
+        &amp;lt;xsl:apply-templates select="section"/&amp;gt; &amp;lt;/div&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="section"&amp;gt;
+        &amp;lt;h3&amp;gt;&amp;lt;a name="{generate-id(.)}"&amp;gt;
+        &amp;lt;xsl:number format="digit" lang="fr"
+        count="chapter"/&amp;gt;.&amp;lt;xsl:number format="digit" lang="fr"
+        count="section"/&amp;gt;
+        &amp;lt;xsl:text&amp;gt; &amp;lt;/xsl:text&amp;gt;
+        &amp;lt;xsl:value-of select="title" /&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/h3&amp;gt;
+        &amp;lt;div style="margin-left:1em"&amp;gt;
+        &amp;lt;xsl:apply-templates/&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="itemizedlist"&amp;gt;
+        &amp;lt;ul style="margin-left:1em"&amp;gt;&amp;lt;xsl:apply-templates
+        /&amp;gt;&amp;lt;/ul&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="orderedlist"&amp;gt;
+        &amp;lt;ol style="margin-left:1em"&amp;gt;&amp;lt;xsl:apply-templates
+        /&amp;gt;&amp;lt;/ol&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="listitem"&amp;gt;
+        &amp;lt;li style="text-indent:0.5em"&amp;gt;&amp;lt;xsl:apply-templates
+        /&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="programlisting"&amp;gt;
+        &amp;lt;pre style="color:blue;background-color:rgb(200,200,200);
+        margin-left:1em"&amp;gt;
+        &amp;lt;code&amp;gt;
+        &amp;lt;xsl:apply-templates /&amp;gt;
+        &amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="para"&amp;gt;
+        &amp;lt;xsl:choose&amp;gt;
+        &amp;lt;xsl:when test="name(..) = 'listitem'"&amp;gt;
+        &amp;lt;xsl:apply-templates /&amp;gt;&amp;lt;/xsl:when&amp;gt;
+        &amp;lt;xsl:otherwise&amp;gt;&amp;lt;p&amp;gt;&amp;lt;xsl:apply-templates /&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/xsl:otherwise&amp;gt;
+        &amp;lt;/xsl:choose&amp;gt;
+        &amp;lt;/xsl:template&amp;gt;
+        &amp;lt;xsl:template match="title" /&amp;gt;
+        &amp;lt;/xsl:stylesheet&amp;gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+
+    &lt;div style="margin-bottom: 1.5rem;"&gt;
+        &lt;p style=" font-weight: 500; color: #374151; margin-bottom: 0.5rem;"&gt;Résultat :&lt;/p&gt;
+        &lt;div id="sol" style="min-height: 100px; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 6px; padding: 12px;  color: #1f2937; overflow: auto;" aria-live="polite"&gt;émotion&lt;/div&gt;
+        &lt;p id="error" style="color: #dc2626;  margin-top: 0.5rem; display: none;" aria-live="assertive"&gt;Erreur : Veuillez vérifier votre XML ou XSLT.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div style="text-align: center;"&gt;
+        &lt;button type="button" onclick="applyXSLT()" style="background-color: #3b82f6; color: white; font-weight: 600; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer;"&gt;Transformer&lt;/button&gt;
+        &lt;button type="button" onclick="resetFields()" style="background-color: #6b7280; color: white; font-weight: 600; padding: 8px 16px; border-radius: 6px; border: none; cursor: pointer; margin-left: 10px;"&gt;Réinitialiser&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script&gt;
+    const defaultXML = `&lt;?xml version="1.0" ?&gt; 
+&lt;monmessage&gt;
+    &lt;de&gt;Jean&lt;/de&gt; 
+    &lt;a&gt;Pierre&lt;/a&gt; 
+    &lt;titre type="émotion"&gt;Ouch!&lt;/titre&gt; 
+    &lt;corps&gt;Maman!&lt;/corps&gt; 
+&lt;/monmessage&gt;`;
+
+    const defaultXSLT = `&lt;?xml version="1.0" ?&gt; 
+&lt;xsl:stylesheet version="1.0" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+    &lt;xsl:template match="/"&gt;
+        
+            
+                &lt;xsl:value-of select="//titre/@type" /&gt;
+            
+        
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;`;
+
+    function applyXSLT() {
+        const xmlSource = document.getElementById('xmlsource').value;
+        const xsltSource = document.getElementById('xstlsource').value;
+        const resultDiv = document.getElementById('sol');
+        const errorDiv = document.getElementById('error');
+
+        // Reset previous state
+        resultDiv.innerHTML = '';
+        errorDiv.style.display = 'none';
+
+        try {
+            // Parse XML
+            const xmlParser = new DOMParser();
+            const xmlDoc = xmlParser.parseFromString(xmlSource, 'application/xml');
+            if (xmlDoc.getElementsByTagName('parsererror').length &gt; 0) {
+                throw new Error('XML invalide');
+            }
+
+            // Parse XSLT
+            const xsltDoc = xmlParser.parseFromString(xsltSource, 'application/xml');
+            if (xsltDoc.getElementsByTagName('parsererror').length &gt; 0) {
+                throw new Error('XSLT invalide');
+            }
+
+            // Create XSLT processor
+            const xsltProcessor = new XSLTProcessor();
+            xsltProcessor.importStylesheet(xsltDoc);
+
+            // Apply transformation
+            const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+
+            // Clear and append result
+            resultDiv.innerHTML = '';
+            if (resultFragment) {
+                resultDiv.appendChild(resultFragment);
+            }
+
+            // If result is empty, show a fallback message
+            if (!resultDiv.textContent.trim()) {
+                resultDiv.textContent = 'Aucun contenu généré. Vérifiez votre XSLT.';
+            }
+        } catch (error) {
+            errorDiv.textContent = `Erreur : ${error.message || 'Transformation échouée. Vérifiez votre XML ou XSLT.'}`;
+            errorDiv.style.display = 'block';
+        }
+    }
+
+    function resetFields() {
+        const xmlSource = document.getElementById('xmlsource');
+        const xsltSource = document.getElementById('xstlsource');
+        const resultDiv = document.getElementById('sol');
+        const errorDiv = document.getElementById('error');
+
+        xmlSource.value = defaultXML;
+        xsltSource.value = defaultXSLT;
+        resultDiv.innerHTML = '';
+        errorDiv.style.display = 'none';
+    }
+
+    // Real-time validation for XML
+    document.getElementById('xmlsource').addEventListener('input', function() {
+        const errorDiv = document.getElementById('error');
+        try {
+            const xmlParser = new DOMParser();
+            const xmlDoc = xmlParser.parseFromString(this.value, 'application/xml');
+            if (xmlDoc.getElementsByTagName('parsererror').length &gt; 0) {
+                errorDiv.textContent = 'Erreur : XML invalide';
+                errorDiv.style.display = 'block';
+            } else {
+                errorDiv.style.display = 'none';
+            }
+        } catch {
+            errorDiv.textContent = 'Erreur : XML invalide';
+            errorDiv.style.display = 'block';
+        }
+    });
+&lt;/script&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>8</revision>
+    <timemodified>1748474320</timemodified>
+  </page>
+</activity>

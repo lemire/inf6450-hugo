@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72182" moduleid="131030" modulename="page" contextid="970151">
+  <page id="72182">
+    <name>La fonction generate-id</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;La fonction generate-id&lt;/h1&gt;
+&lt;h2 class="recall"&gt;Fonction «&amp;nbsp;generate-id&amp;nbsp;»&lt;/h2&gt;
+&lt;p&gt;La fonction XSLT «&amp;nbsp;generate-id&amp;nbsp;» génère un «&amp;nbsp;nom&amp;nbsp;» unique
+    pour chaque élément d'un document&amp;nbsp;XML.
+    Ce nom sera toujours le même pour un même élément, même si nous le
+    rencontrons à plusieurs reprises.
+    Si nous reprenons la liste des cours de l'exemple précédent sur
+    l'utilisation de l'attribut «&amp;nbsp;mode&amp;nbsp;»,
+    nous pourrions générer un identifiant unique pour chaque cours et l'afficher
+    comme dans l'exemple de document XSLT qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="universite"&amp;gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;
+    &amp;lt;p&amp;gt;La liste des cours en bref :&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;xsl:apply-templates select="cours" mode="initial" /&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;p&amp;gt;La liste détaillée des cours :&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;xsl:apply-templates select="cours" mode="complet" /&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="cours" mode="initial"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="nom" /&amp;gt;
+    (identifiant: &amp;lt;xsl:value-of select="generate-id(.)" /&amp;gt;)&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="cours" mode="complet"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="nom" /&amp;gt; :
+    &amp;lt;xsl:value-of select="description" /&amp;gt;
+    (identifiant: &amp;lt;xsl:value-of select="generate-id(.)" /&amp;gt;)&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous pourrions alors obtenir un résultat comme celui-ci&amp;nbsp;:&lt;/p&gt;
+&lt;div style="border:solid 1px blue;padding-left:1em;"&gt;
+    &lt;p&gt;La liste des cours en bref:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;INF 102 Introduction avancée (identifiant: id2243749)&lt;/li&gt;
+        &lt;li&gt;INF 101 Introduction (identifiant: id2243760)&lt;/li&gt;
+        &lt;li&gt;INF 103 Java (identifiant: id2243686)&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;La liste détaillée des cours:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;INF 102 Introduction avancée: Un cours d'introduction à
+            l'informatique pour futurs
+            ingénieurs. (identifiant: id2243749)&lt;/li&gt;
+        &lt;li&gt;INF 101 Introduction: Un cours d'introduction à l'informatique pour
+            les
+            étudiants en éducation. (identifiant: id2243760)&lt;/li&gt;
+        &lt;li&gt;INF 103 Java: Un cours d'introduction au Java (identifiant:
+            id2243686)&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Les valeurs exactes que prennent les identifiants sont sans importance, mais
+    il importe que
+    ce soit toujours la même valeur pour un même élément. Par exemple, le cours
+    sur Java obtient toujours
+    l'identifiant «&amp;nbsp;id2243686&amp;nbsp;» dans notre exemple.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741891368</timemodified>
+  </page>
+</activity>

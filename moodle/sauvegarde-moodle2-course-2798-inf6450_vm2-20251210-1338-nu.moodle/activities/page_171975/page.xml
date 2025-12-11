@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94575" moduleid="171975" modulename="page" contextid="1138224">
+  <page id="94575">
+    <name>Le fichier sitemap.xml</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Le fichier sitemap.xml&lt;/h1&gt;
+
+&lt;p&gt;Le sitemap.xml est un fichier au format XML qui liste les URLs importantes d’un site web afin d’aider les moteurs de recherche (Google, Bing, etc.) à découvrir et indexer plus efficacement ses pages. Il est particulièrement utile pour les sites volumineux, les nouveaux sites ou ceux qui possèdent beaucoup de contenu difficilement accessible par les liens internes classiques. Bien qu’il ne garantisse pas l’indexation de toutes les pages listées, il constitue un signal fort pour les crawlers et améliore généralement la couverture du site.&lt;/p&gt;
+
+&lt;p&gt;Ce fichier doit être placé à la racine du site[](https://example.com/sitemap.xml) et suivre le protocole officiel défini sur sitemaps.org. On peut y indiquer pour chaque URL la date de dernière modification (&amp;lt;lastmod&amp;gt;), la fréquence de mise à jour estimée (&amp;lt;changefreq&amp;gt;), et une priorité relative (&amp;lt;priority&amp;gt;) entre 0.0 et 1.0. Depuis quelques années, il est aussi possible d’utiliser des sitemaps vidéo, image, news ou même des index de sitemaps quand le fichier dépasse 50 000 URLs ou 50 Mo.&lt;/p&gt;
+
+&lt;p&gt;Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&amp;gt;
+
+  &amp;lt;url&amp;gt;
+    &amp;lt;loc&amp;gt;https://www.example.com/&amp;lt;/loc&amp;gt;
+    &amp;lt;lastmod&amp;gt;2025-12-01&amp;lt;/lastmod&amp;gt;
+    &amp;lt;changefreq&amp;gt;daily&amp;lt;/changefreq&amp;gt;
+    &amp;lt;priority&amp;gt;1.0&amp;lt;/priority&amp;gt;
+  &amp;lt;/url&amp;gt;
+
+  &amp;lt;url&amp;gt;
+    &amp;lt;loc&amp;gt;https://www.example.com/a-propos/&amp;lt;/loc&amp;gt;
+    &amp;lt;lastmod&amp;gt;2025-11-15&amp;lt;/lastmod&amp;gt;
+    &amp;lt;changefreq&amp;gt;monthly&amp;lt;/changefreq&amp;gt;
+    &amp;lt;priority&amp;gt;0.8&amp;lt;/priority&amp;gt;
+  &amp;lt;/url&amp;gt;
+
+  &amp;lt;url&amp;gt;
+    &amp;lt;loc&amp;gt;https://www.example.com/blog/&amp;lt;/loc&amp;gt;
+    &amp;lt;lastmod&amp;gt;2025-12-04&amp;lt;/lastmod&amp;gt;
+    &amp;lt;changefreq&amp;gt;weekly&amp;lt;/changefreq&amp;gt;
+    &amp;lt;priority&amp;gt;0.9&amp;lt;/priority&amp;gt;
+  &amp;lt;/url&amp;gt;
+
+  &amp;lt;url&amp;gt;
+    &amp;lt;loc&amp;gt;https://www.example.com/contact/&amp;lt;/loc&amp;gt;
+    &amp;lt;changefreq&amp;gt;yearly&amp;lt;/changefreq&amp;gt;
+    &amp;lt;priority&amp;gt;0.5&amp;lt;/priority&amp;gt;
+  &amp;lt;/url&amp;gt;
+
+&amp;lt;/urlset&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h2&gt;Activité&lt;/h2&gt;
+
+&lt;p&gt;Pouvez-vous vérifier si le site de teluq.ca a un fichier sitemap.xml?</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>5</revision>
+    <timemodified>1764993550</timemodified>
+  </page>
+</activity>

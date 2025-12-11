@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72155" moduleid="131003" modulename="page" contextid="970121">
+  <page id="72155">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt; Autoévaluation
+&lt;/h1&gt;
+
+
+
+
+&lt;div class=""&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+
+            &lt;b&gt;Question 1&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;client.nom&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223495248"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223496208true" name="idp140293223495248" onclick="javascript:var Click_MenuId='idp140293223496208true';var formid='idp140293223495248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Une séquence de tous les éléments «&amp;nbsp;client.nom&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223496208true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Le point «&amp;nbsp;.&amp;nbsp;» perd ici sa signification de «&amp;nbsp;contexte actuel&amp;nbsp;»,
+                        car il fait partie d'une chaîne de caractères désignant un nom d'élément.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223497728false" name="idp140293223495248" onclick="javascript:var Click_MenuId='idp140293223497728false';var formid='idp140293223495248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Tous les éléments «&amp;nbsp;nom&amp;nbsp;» contenus dans les éléments «&amp;nbsp;client&amp;nbsp;»
+                    qui se trouvent dans le contexte actuel.&lt;span id="idp140293223497728false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait «&amp;nbsp;nom/client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223499008false" name="idp140293223495248" onclick="javascript:var Click_MenuId='idp140293223499008false';var formid='idp140293223495248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Les éléments «&amp;nbsp;client&amp;nbsp;» qui précèdent le contexte actuel,
+                    ainsi que les éléments «&amp;nbsp;nom&amp;nbsp;» qui suivent le contexte actuel.&lt;span id="idp140293223499008false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Cette explication n'a pas de sens.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 2&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;./client&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223500464"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223501424false" name="idp140293223500464" onclick="javascript:var Click_MenuId='idp140293223501424false';var formid='idp140293223500464'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément «&amp;nbsp;client&amp;nbsp;» qui se trouve dans le contexte actuel.&lt;span id="idp140293223501424false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il pourrait y avoir aucun ou plusieurs éléments «&amp;nbsp;client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223502800true" name="idp140293223500464" onclick="javascript:var Click_MenuId='idp140293223502800true';var formid='idp140293223500464'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Une séquence de tous les éléments «&amp;nbsp;client&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223502800true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, le contexte pouvant être l'élément courant, par exemple. La séquence d'éléments peut être vide.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223504240false" name="idp140293223500464" onclick="javascript:var Click_MenuId='idp140293223504240false';var formid='idp140293223500464'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Une séquence de tous les éléments et attributs «&amp;nbsp;client&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223504240false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Les attributs de nom «&amp;nbsp;client&amp;nbsp;» s'obtiennent avec la syntaxe «&amp;nbsp;@client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 3&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;client&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223505872"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223506832false" name="idp140293223505872" onclick="javascript:var Click_MenuId='idp140293223506832false';var formid='idp140293223505872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément «&amp;nbsp;client&amp;nbsp;» qui se trouve dans le contexte actuel.&lt;span id="idp140293223506832false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il pourrait y avoir aucun ou plusieurs éléments «&amp;nbsp;client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223508208true" name="idp140293223505872" onclick="javascript:var Click_MenuId='idp140293223508208true';var formid='idp140293223505872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Une séquence de tous les éléments «&amp;nbsp;client&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223508208true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, le contexte pouvant être l'élément courant, par exemple. La séquence d'éléments peut être vide.
+                        On note que c'est la même signification que pour l'expression XPath «&amp;nbsp;./client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223509792false" name="idp140293223505872" onclick="javascript:var Click_MenuId='idp140293223509792false';var formid='idp140293223505872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Une séquence de tous les éléments et attributs «&amp;nbsp;client&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223509792false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Les attributs de nom «&amp;nbsp;client&amp;nbsp;» s'obtiennent avec la syntaxe «&amp;nbsp;@client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 4&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;/client&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223511408"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223512368false" name="idp140293223511408" onclick="javascript:var Click_MenuId='idp140293223512368false';var formid='idp140293223511408'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément «&amp;nbsp;client&amp;nbsp;» voisin de l'élément courant.&lt;span id="idp140293223512368false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, c'est plutôt vers l'élément-racine qu'on pointe.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223513744false" name="idp140293223511408" onclick="javascript:var Click_MenuId='idp140293223513744false';var formid='idp140293223511408'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le premier élément «&amp;nbsp;client&amp;nbsp;» rencontré dans le document.&lt;span id="idp140293223513744false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait plutôt «&amp;nbsp;(//client)[1]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223515024true" name="idp140293223511408" onclick="javascript:var Click_MenuId='idp140293223515024true';var formid='idp140293223511408'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément-racine si celui-ci se nomme «&amp;nbsp;client&amp;nbsp;».&lt;span id="idp140293223515024true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Vrai. Il retourne un ensemble vide dans le cas contraire.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 5&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;//client&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223516432"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223517440false" name="idp140293223516432" onclick="javascript:var Click_MenuId='idp140293223517440false';var formid='idp140293223516432'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;client&amp;nbsp;» rencontré.&lt;span id="idp140293223517440false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait plutôt «&amp;nbsp;client[2]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223518720true" name="idp140293223516432" onclick="javascript:var Click_MenuId='idp140293223518720true';var formid='idp140293223516432'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;La séquence de tous les éléments «&amp;nbsp;client&amp;nbsp;» du document.&lt;span id="idp140293223518720true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. S'il n'y en a pas, cela donne un ensemble vide.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223519984false" name="idp140293223516432" onclick="javascript:var Click_MenuId='idp140293223519984false';var formid='idp140293223516432'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément-racine si celui-ci se nomme «&amp;nbsp;client&amp;nbsp;».&lt;span id="idp140293223519984false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait plutôt «&amp;nbsp;/client&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 6&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;client[current()/@telephone=@telephone]&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223521424"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223522432false" name="idp140293223521424" onclick="javascript:var Click_MenuId='idp140293223522432false';var formid='idp140293223521424'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Les éléments «&amp;nbsp;client&amp;nbsp;» dans l'élément courant ayant un attribut «&amp;nbsp;telephone&amp;nbsp;».&lt;span id="idp140293223522432false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait plutôt «&amp;nbsp;client[@telephone]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223523792true" name="idp140293223521424" onclick="javascript:var Click_MenuId='idp140293223523792true';var formid='idp140293223521424'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Les éléments «&amp;nbsp;client&amp;nbsp;» dans l'élément courant dont l'attribut «&amp;nbsp;telephone&amp;nbsp;»
+                    a la même valeur que l'attribut «&amp;nbsp;telephone&amp;nbsp;» de l'élément courant.&lt;span id="idp140293223523792true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. On pourrait aussi écrire cette expression «&amp;nbsp;client[current()/@telephone=./@telephone]&amp;nbsp;».
+                        Il s'agit d'un exemple où «&amp;nbsp;current()&amp;nbsp;» n'a pas la même valeur que «&amp;nbsp;.&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223524400false" name="idp140293223521424" onclick="javascript:var Click_MenuId='idp140293223524400false';var formid='idp140293223521424'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Les valeurs des attributs «&amp;nbsp;telephone&amp;nbsp;» de tous les éléments «&amp;nbsp;client&amp;nbsp;»
+                    dans l'élément courant.&lt;span id="idp140293223524400false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait plutôt «&amp;nbsp;client/@telephone&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 7&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;client/*|client/@*&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223527248"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223528208false" name="idp140293223527248" onclick="javascript:var Click_MenuId='idp140293223528208false';var formid='idp140293223527248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Tous les éléments contenus dans des éléments «&amp;nbsp;client&amp;nbsp;» dans le contexte actuel.&lt;span id="idp140293223528208false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait alors tout simplement «&amp;nbsp;client/*&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223529520true" name="idp140293223527248" onclick="javascript:var Click_MenuId='idp140293223529520true';var formid='idp140293223527248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Tous les éléments et attributs contenus dans des éléments «&amp;nbsp;client&amp;nbsp;»
+                    dans le contexte actuel.&lt;span id="idp140293223529520true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. S'il n'y a rien qui correspond, un ensemble vide est donné.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223531024false" name="idp140293223527248" onclick="javascript:var Click_MenuId='idp140293223531024false';var formid='idp140293223527248'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'ensemble des attributs contenus dans des éléments «&amp;nbsp;client&amp;nbsp;» enfant
+                    d'éléments contenus dans des éléments «&amp;nbsp;client&amp;nbsp;».&lt;span id="idp140293223531024false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait alors «&amp;nbsp;client/*/client/@*&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 8&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;*[@telephone]&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223532736"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223533696false" name="idp140293223532736" onclick="javascript:var Click_MenuId='idp140293223533696false';var formid='idp140293223532736'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;La valeur de l'attribut «&amp;nbsp;telephone&amp;nbsp;» de l'élément courant.&lt;span id="idp140293223533696false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait tout simplement «&amp;nbsp;@telephone&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223534976false" name="idp140293223532736" onclick="javascript:var Click_MenuId='idp140293223534976false';var formid='idp140293223532736'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément courant s'il contient un attribut «&amp;nbsp;telephone&amp;nbsp;».&lt;span id="idp140293223534976false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce serait plutôt «&amp;nbsp;.[@telephone]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223536256true" name="idp140293223532736" onclick="javascript:var Click_MenuId='idp140293223536256true';var formid='idp140293223532736'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Tous les éléments dans le contexte courant ayant un attribut «&amp;nbsp;telephone&amp;nbsp;».&lt;span id="idp140293223536256true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, ou un ensemble vide si ça ne s'applique pas.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 9&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;(vendeur/client)[2]&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223537824"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223538784true" name="idp140293223537824" onclick="javascript:var Click_MenuId='idp140293223538784true';var formid='idp140293223537824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;client&amp;nbsp;» dans la liste des éléments «&amp;nbsp;client&amp;nbsp;»
+                    contenus dans des éléments «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223538784true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. S'il n'y a pas un tel élément, un ensemble vide est donné.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223540304false" name="idp140293223537824" onclick="javascript:var Click_MenuId='idp140293223540304false';var formid='idp140293223537824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;vendeur&amp;nbsp;» dans la liste des éléments «&amp;nbsp;client&amp;nbsp;»
+                    contenus dans des éléments «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223540304false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, un élément «&amp;nbsp;client&amp;nbsp;» est donné.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223541712false" name="idp140293223537824" onclick="javascript:var Click_MenuId='idp140293223541712false';var formid='idp140293223537824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;client&amp;nbsp;» contenu dans un élément «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223541712false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait alors «&amp;nbsp;vendeur/client[2]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 10&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;vendeur/client[2]&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223543200"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223544208false" name="idp140293223543200" onclick="javascript:var Click_MenuId='idp140293223544208false';var formid='idp140293223543200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;client&amp;nbsp;» dans la liste des éléments «&amp;nbsp;client&amp;nbsp;»
+                    contenus dans des éléments «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223544208false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, ce serait plutôt «&amp;nbsp;(vendeur/client)[2]&amp;nbsp;».&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223545504false" name="idp140293223543200" onclick="javascript:var Click_MenuId='idp140293223545504false';var formid='idp140293223543200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;vendeur&amp;nbsp;» dans la liste des éléments «&amp;nbsp;client&amp;nbsp;»
+                    contenus dans des éléments «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223545504false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, un élément «&amp;nbsp;client&amp;nbsp;» est donné.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223547024true" name="idp140293223543200" onclick="javascript:var Click_MenuId='idp140293223547024true';var formid='idp140293223543200'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le deuxième élément «&amp;nbsp;client&amp;nbsp;» contenu dans un élément «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223547024true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) &lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 11&lt;/b&gt;.
+            Quelle est la valeur de l'expression XPath «&amp;nbsp;vendeur[2]/client[1]&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223548320"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223549280false" name="idp140293223548320" onclick="javascript:var Click_MenuId='idp140293223549280false';var formid='idp140293223548320'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le second élément «&amp;nbsp;client&amp;nbsp;» contenu dans le premier élément «&amp;nbsp;vendeur&amp;nbsp;» rencontré.&lt;span id="idp140293223549280false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) &lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223550448false" name="idp140293223548320" onclick="javascript:var Click_MenuId='idp140293223550448false';var formid='idp140293223548320'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Est équivalent à «&amp;nbsp;vendeur/vendeur/client[1]&amp;nbsp;».&lt;span id="idp140293223550448false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Ce type d'abréviation n'existe pas en XPath.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223551824true" name="idp140293223548320" onclick="javascript:var Click_MenuId='idp140293223551824true';var formid='idp140293223548320'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le premier élément «&amp;nbsp;client&amp;nbsp;» contenu dans le deuxième élément «&amp;nbsp;vendeur&amp;nbsp;».&lt;span id="idp140293223551824true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Si cet élément n'existe pas, un ensemble vide est obtenu.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 12&lt;/b&gt;.
+            Est-ce que «&amp;nbsp;//p=//c&amp;nbsp;» et «&amp;nbsp;//c=//z&amp;nbsp;» implique «&amp;nbsp;//p=//z&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223553424"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223554368false" name="idp140293223553424" onclick="javascript:var Click_MenuId='idp140293223554368false';var formid='idp140293223553424'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Oui&lt;span id="idp140293223554368false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) La première égalité est vraie s'il y a un élément p dont le contenu est égal au contenu d'un
+                        élément c, et la seconde est vraie s'il y a un élément de c qui est égal à un élément z, ce qui n'implique
+                        pas qu'il existe un élément p qui soit égal à un élément z&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223556432true" name="idp140293223553424" onclick="javascript:var Click_MenuId='idp140293223556432true';var formid='idp140293223553424'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Non.&lt;span id="idp140293223556432true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 13&lt;/b&gt;.
+            Que vaut «&amp;nbsp;//p=//p&amp;nbsp;»?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223569008"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223570000false" name="idp140293223569008" onclick="javascript:var Click_MenuId='idp140293223570000false';var formid='idp140293223569008'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140293223570000false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Seulement s'il existe au moins un élément p dans le document. &lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223571584false" name="idp140293223569008" onclick="javascript:var Click_MenuId='idp140293223571584false';var formid='idp140293223569008'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140293223571584false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Seulement s'il n'existe pas d'élément p dans le document.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223573120true" name="idp140293223569008" onclick="javascript:var Click_MenuId='idp140293223573120true';var formid='idp140293223569008'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Aucune de ces réponses.&lt;span id="idp140293223573120true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. L'expression //p donne une liste d'éléments. La comparaison entre deux listes est vraie s'il existe au moins un élément dans la première liste égal à un élément dans la seconde liste. Cela est vrai si et seulement s'il y a au moins un élément p. &lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 14&lt;/b&gt;.
+            Est-ce que «&amp;nbsp;//p!='jean'&amp;nbsp;» et «&amp;nbsp;not(//p='jean')&amp;nbsp;» ont la même signification?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223579392"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223580624false" name="idp140293223579392" onclick="javascript:var Click_MenuId='idp140293223580624false';var formid='idp140293223579392'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140293223580624false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. La première expression est vraie s'il y a un élément p dont le contenu est différent de 'jean', alors que la seconde est vraie seulement si tous les éléments sont est différents de 'jean'.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223582416true" name="idp140293223579392" onclick="javascript:var Click_MenuId='idp140293223582416true';var formid='idp140293223579392'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140293223582416true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+    &lt;div style="margin-left:1cm"&gt;
+        &lt;div style="background-color:#E0EAF0"&gt;
+            &lt;b&gt;Question 15&lt;/b&gt;.
+            Est-ce qu'il y a une différence entre ces deux expressions XPath:
+            "vendeur/prenom = 'Jean' and vendeur/nom = 'Coutu'" et "vendeur[prenom = 'Jean' and nom = 'Coutu']"?
+        &lt;/div&gt;
+        &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+        &lt;form id="idp140293223623184"&gt;
+            &lt;ol&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223624400false" name="idp140293223623184" onclick="javascript:var Click_MenuId='idp140293223624400false';var formid='idp140293223623184'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Non aucune.&lt;span id="idp140293223624400false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223625520false" name="idp140293223623184" onclick="javascript:var Click_MenuId='idp140293223625520false';var formid='idp140293223623184'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Oui, mais pas toujours.&lt;span id="idp140293223625520false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Ils sont toujours différents, mais si on les utilise dans une
+                        expression conditionnelle (xsl:if), ils peuvent être équivalents.&lt;/span&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input type="radio" value="idp140293223626960true" name="idp140293223623184" onclick="javascript:var Click_MenuId='idp140293223626960true';var formid='idp140293223623184'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Oui, ils sont toujours différents.&lt;span id="idp140293223626960true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                        Concernant la première requête: vendeur/prenom = Jean est une valeur booléenne (est-ce que Jean est présent dans vendeur/prenom?) tout comme vendeur/nom = Coutu. On combine les deux valeurs booléennes avec le et logique (and). Donc, la première est vraie si on trouve un élément vendeur contenant un élément prenom contenant le texte Jean et un élément nom contenant le nom Coutu, sinon elle est fausse. La seconde expression sélectionne les éléments correspondants à ce critère s'ils existent.&lt;/span&gt;
+                &lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1741905045</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94566" moduleid="171966" modulename="page" contextid="1138215">
+  <page id="94566">
+    <name>Les fichiers csproj en C#</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Les fichiers csproj en C#&lt;/h1&gt;
+
+    &lt;p&gt;Les fichiers csproj sont des fichiers de projet utilisés dans l'écosystème .NET pour les applications écrites en C#. Ils sont formatés en XML, ce qui permet une structure hiérarchique claire et lisible par les outils de développement comme Visual Studio ou dotnet CLI. Ces fichiers contiennent des informations essentielles sur le projet, telles que :&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;les dépendances NuGet&lt;/li&gt;
+        &lt;li&gt;les configurations de build&lt;/li&gt;
+        &lt;li&gt;les versions cibles du framework&lt;/li&gt;
+        &lt;li&gt;les fichiers inclus dans le projet&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;Grâce à leur format XML, ils peuvent être édités manuellement ou générés automatiquement, offrant une flexibilité pour les développeurs qui souhaitent personnaliser leur environnement de travail.&lt;/p&gt;
+
+    &lt;h2&gt;Structure XML&lt;/h2&gt;
+    &lt;p&gt;La structure XML d'un fichier csproj commence généralement par l'élément racine &lt;code&gt;&amp;lt;Project&amp;gt;&lt;/code&gt;, qui peut inclure un attribut &lt;code&gt;Sdk&lt;/code&gt; pour spécifier le type de projet (par exemple, &lt;code&gt;"Microsoft.NET.Sdk"&lt;/code&gt;).&lt;/p&gt;
+    &lt;p&gt;À l'intérieur, on trouve des groupes importants :&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            &lt;p&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/code&gt;&lt;/strong&gt; : Définit des propriétés globales telles que :&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;code&gt;TargetFramework&lt;/code&gt; (pour indiquer la version .NET ciblée)&lt;/li&gt;
+                &lt;li&gt;&lt;code&gt;OutputType&lt;/code&gt; (pour spécifier si c'est une bibliothèque ou une exécutable)&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;p&gt;&lt;strong&gt;&lt;code&gt;&amp;lt;ItemGroup&amp;gt;&lt;/code&gt;&lt;/strong&gt; : Regroupe les inclusions de fichiers et les références :&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Inclusions de fichiers (comme &lt;code&gt;&amp;lt;Compile Include="Program.cs"/&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+                &lt;li&gt;Références à d'autres projets ou paquets&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;h3&gt;Exemple de fichier csproj&lt;/h3&gt;
+
+&lt;p&gt;Voici un exemple simple d’un fichier csproj pour un projet console en C# ciblant .NET 8.0. Ce fichier illustre la structure XML basique, avec un groupe de propriétés et un groupe d’éléments pour les dépendances.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;Project Sdk="Microsoft.NET.Sdk"&amp;gt;
+
+  &amp;lt;PropertyGroup&amp;gt;
+    &amp;lt;OutputType&amp;gt;Exe&amp;lt;/OutputType&amp;gt;
+    &amp;lt;TargetFramework&amp;gt;net8.0&amp;lt;/TargetFramework&amp;gt;
+    &amp;lt;ImplicitUsings&amp;gt;enable&amp;lt;/ImplicitUsings&amp;gt;
+    &amp;lt;Nullable&amp;gt;enable&amp;lt;/Nullable&amp;gt;
+  &amp;lt;/PropertyGroup&amp;gt;
+
+  &amp;lt;ItemGroup&amp;gt;
+    &amp;lt;PackageReference Include="Newtonsoft.Json" Version="13.0.3" /&amp;gt;
+  &amp;lt;/ItemGroup&amp;gt;
+
+&amp;lt;/Project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cet exemple montre comment le XML organise les configurations : l’élément &amp;lt;Project&amp;gt; encapsule tout, &amp;lt;PropertyGroup&amp;gt; définit les paramètres du projet, et &amp;lt;ItemGroup&amp;gt; ajoute des références à des paquets NuGet. Vous pouvez l’éditer pour ajouter plus de fichiers ou de conditions.&lt;/p&gt;
+
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1764992246</timemodified>
+  </page>
+</activity>

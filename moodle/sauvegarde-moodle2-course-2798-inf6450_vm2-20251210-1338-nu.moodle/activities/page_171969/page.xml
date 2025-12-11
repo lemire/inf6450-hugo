@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94569" moduleid="171969" modulename="page" contextid="1138218">
+  <page id="94569">
+    <name>Le fichier pom.xml en Java</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Le fichier pom.xml en Java&lt;/h1&gt;
+
+&lt;p&gt;Le fichier pom.xml (Project Object Model) est le cœur de tout projet Maven. C’est un fichier de configuration écrit en XML qui décrit complètement le projet : ses coordonnées, ses dépendances, les plugins utilisés, la version de Java ciblée, les profils d’exécution, etc. Il est utilisé par Maven et par la plupart des outils de build modernes (Gradle peut aussi le lire dans certains cas) ainsi que par les IDE comme IntelliJ IDEA ou Eclipse.&lt;/p&gt;
+
+&lt;p&gt;Parmi les informations principales qu’il contient, on trouve la version du projet, le groupId et l’artifactId qui forment son identité unique, le packaging (jar, war, pom…), la liste des dépendances gérées avec leurs versions, les repositories additionnels, les plugins de compilation, de test, d’empaquetage, etc.&lt;/p&gt;
+
+&lt;h2&gt;Structure XML&lt;/h2&gt;
+
+&lt;p&gt;La racine du fichier est toujours l’élément &lt;code&gt;&amp;lt;project&amp;gt;&lt;/code&gt; avec les namespaces Maven :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd"&amp;gt;
+  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+  ...
+&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Les sections les plus courantes à l’intérieur sont :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&amp;lt;groupId&amp;gt;, &amp;lt;artifactId&amp;gt;, &amp;lt;version&amp;gt;, &amp;lt;packaging&amp;gt;&lt;/strong&gt; : les coordonnées Maven du projet.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;properties&amp;gt;&lt;/strong&gt; : permet de définir des variables réutilisables (version de Java, version des plugins, etc.).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;dependencies&amp;gt;&lt;/strong&gt; : liste toutes les bibliothèques nécessaires.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;dependencyManagement&amp;gt;&lt;/strong&gt; : centralise la gestion des versions (souvent utilisé dans un pom parent).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;lt;build&amp;gt;&lt;/strong&gt; et &amp;lt;plugins&amp;gt; : configuration du processus de compilation et des plugins Maven.&lt;/p&gt;
+
+&lt;h3&gt;Exemple de fichier pom.xml&lt;/h3&gt;
+
+&lt;p&gt;Voici un exemple simple d’un projet Java console (application Spring Boot minimaliste) utilisant Java 17 et Maven :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-xml"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd"&amp;gt;
+
+  &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+
+  &amp;lt;groupId&amp;gt;com.example&amp;lt;/groupId&amp;gt;
+  &amp;lt;artifactId&amp;gt;demo-app&amp;lt;/artifactId&amp;gt;
+  &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
+  &amp;lt;packaging&amp;gt;jar&amp;lt;/packaging&amp;gt;
+
+  &amp;lt;name&amp;gt;Demo App&amp;lt;/name&amp;gt;
+  &amp;lt;description&amp;gt;Application de démonstration&amp;lt;/description&amp;gt;
+
+  &amp;lt;properties&amp;gt;
+    &amp;lt;java.version&amp;gt;17&amp;lt;/java.version&amp;gt;
+    &amp;lt;spring-boot.version&amp;gt;3.3.0&amp;lt;/spring-boot.version&amp;gt;
+  &amp;lt;/properties&amp;gt;
+
+  &amp;lt;dependencies&amp;gt;
+    &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;${spring-boot.version}&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+
+    &amp;lt;dependency&amp;gt;
+      &amp;lt;groupId&amp;gt;com.fasterxml.jackson.core&amp;lt;/groupId&amp;gt;
+      &amp;lt;artifactId&amp;gt;jackson-databind&amp;lt;/artifactId&amp;gt;
+      &amp;lt;version&amp;gt;2.17.2&amp;lt;/version&amp;gt;
+    &amp;lt;/dependency&amp;gt;
+  &amp;lt;/dependencies&amp;gt;
+
+  &amp;lt;build&amp;gt;
+    &amp;lt;plugins&amp;gt;
+      &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.apache.maven.plugins&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;maven-compiler-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;3.13.0&amp;lt;/version&amp;gt;
+        &amp;lt;configuration&amp;gt;
+          &amp;lt;release&amp;gt;${java.version}&amp;lt;/release&amp;gt;
+        &amp;lt;/configuration&amp;gt;
+      &amp;lt;/plugin&amp;gt;
+
+      &amp;lt;plugin&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;${spring Бе-boot.version}&amp;lt;/version&amp;gt;
+      &amp;lt;/plugin&amp;gt;
+    &amp;lt;/plugins&amp;gt;
+  &amp;lt;/build&amp;gt;
+
+&amp;lt;/project&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cet exemple montre comment le XML organise toutes les informations nécessaires à Maven : coordonnées du projet, propriétés réutilisables, dépendances avec gestion de version centralisée, et configuration des plugins de compilation et d’exécution. Vous pouvez bien entendu l’étendre avec des profils, des modules enfants, des repositories personnalisés, etc.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1764992302</timemodified>
+  </page>
+</activity>

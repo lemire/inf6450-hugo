@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72179" moduleid="131027" modulename="page" contextid="970148">
+  <page id="72179">
+    <name>Attribut mode</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Attribut mode&lt;/h1&gt;
+&lt;h2&gt;Utilisation de l'attribut «&amp;nbsp;mode&amp;nbsp;»&lt;/h2&gt;
+&lt;p&gt;Il arrive que nous voulions définir plus d'un modèle pour un élément donné.
+    Nous pouvons ajouter des modèles en utilisant l'attribut «&amp;nbsp;mode&amp;nbsp;»
+    qui s'applique aux
+    éléments «&amp;nbsp;xsl:apply-templates&amp;nbsp;» et «&amp;nbsp;xsl:template&amp;nbsp;». La
+    règle est très simple&amp;nbsp;:
+    si votre élément «&amp;nbsp;xsl:apply-templates&amp;nbsp;» a une valeur d'attribut
+    pour «&amp;nbsp;mode&amp;nbsp;», alors
+    seuls les éléments «&amp;nbsp;xsl:template&amp;nbsp;» ayant la même valeur
+    d'attribut pour «&amp;nbsp;mode&amp;nbsp;» s'appliquent.
+    On utilise souvent l'attribut «&amp;nbsp;mode&amp;nbsp;» pour faire des tables des
+    matières.&lt;/p&gt;
+&lt;p&gt;Prenons, par exemple, la liste de cours suivants&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1" ?&amp;gt;
+    &amp;lt;universite&amp;gt;
+    &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 102 Introduction avancée&amp;lt;/nom&amp;gt;
+    &amp;lt;description&amp;gt;Un cours d'introduction à l'informatique pour futurs
+    ingénieurs.&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+    &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 101 Introduction&amp;lt;/nom&amp;gt;
+    &amp;lt;description&amp;gt;Un cours d'introduction à l'informatique pour les
+    étudiants en éducation.&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+    &amp;lt;cours&amp;gt;&amp;lt;nom&amp;gt;INF 103 Java&amp;lt;/nom&amp;gt;
+    &amp;lt;description&amp;gt;Un cours d'introduction au
+    Java&amp;lt;/description&amp;gt;&amp;lt;/cours&amp;gt;
+    &amp;lt;/universite&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous pourrions vouloir que s'affiche d'abord seulement la liste des noms de
+    cours et que cette dernière soit suivie d'une liste détaillée comprenant le
+    nom et la description du cours&amp;nbsp;:&lt;/p&gt;
+&lt;div style="border:solid 1px blue;padding-left:1em;"&gt;
+    &lt;p&gt;La liste des cours en bref:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;INF 102 Introduction avancée&lt;/li&gt;
+        &lt;li&gt;INF 101 Introduction&lt;/li&gt;
+        &lt;li&gt;INF 103 Java&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;La liste détaillée des cours:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;INF 102 Introduction avancée: Un cours d'introduction à
+            l'informatique pour futurs
+            ingénieurs.&lt;/li&gt;
+        &lt;li&gt;INF 101 Introduction: Un cours d'introduction à l'informatique pour
+            les
+            étudiants en éducation.&lt;/li&gt;
+        &lt;li&gt;INF 103 Java: Un cours d'introduction au Java&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous pouvons obtenir ce résultat avec le document XSLT suivant qui utilise
+    l'attribut «&amp;nbsp;mode&amp;nbsp;»&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="universite"&amp;gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;
+    &amp;lt;p&amp;gt;La liste des cours en bref:&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;xsl:apply-templates select="cours" mode="initial" /&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;p&amp;gt;La liste détaillée des cours:&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;xsl:apply-templates select="cours" mode="complet" /&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="cours" mode="initial"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="nom" /&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="cours" mode="complet"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="nom" /&amp;gt; :
+    &amp;lt;xsl:value-of select="description" /&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741891226</timemodified>
+  </page>
+</activity>

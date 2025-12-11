@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72125" moduleid="130973" modulename="page" contextid="970091">
+  <page id="72125">
+    <name>Format de document</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>    	&lt;h1 class=""&gt;				Format de document
+				&lt;/h1&gt;
+       							
+		&lt;div class=""&gt;&lt;h3 class="recall"&gt;Le SGML (&lt;i&gt;Standardized General Markup Language&lt;/i&gt;)&lt;/h3&gt;
+&lt;p&gt;En 1969, Charles Goldfarb, Edward Mosher et Raymond Lorie ont inventé le GML (&lt;i&gt;Generalized Markup Language&lt;/i&gt;). 
+ Chercheurs chez&amp;nbsp;IBM, ils voulaient faciliter l'échange d'informations entre les outils d'édition, 
+ de formatage et de recherche de documents. Le GML possédait déjà un concept de «&amp;nbsp;type de documents&amp;nbsp;» 
+ similaire aux documents DTD modernes. Chez&amp;nbsp;IBM, le GML a été utilisé pour la production d'environ 90&amp;nbsp;% 
+ des documents électroniques.&lt;/p&gt;
+&lt;p&gt;En 1978, l'American National Standards Institute&amp;nbsp;(ANSI) a travaillé sur un projet 
+  de langage de description de textes, basé sur le&amp;nbsp;GML; le projet s'est terminé en&amp;nbsp;1985 
+  par la normalisation du&amp;nbsp;SGML. Le centre de recherche&amp;nbsp;CERN a été l'une des premières institutions, 
+  outre&amp;nbsp;IBM, à mettre au point des outils pour le&amp;nbsp;SGML.&lt;/p&gt;
+&lt;p&gt;On dit souvent que le SGML est l'ancêtre du XML, dans la mesure où les créateurs 
+ du&amp;nbsp;XML connaissaient le&amp;nbsp;SGML et voulaient faire mieux. Le HTML est aussi fortement 
+ inspiré du SGML et existait au moment où le XML a été proposé. Il n'est donc pas 
+ surprenant que le XML et le HTML se ressemblent et puissent même se retrouver 
+ dans un seul format, le&amp;nbsp;XHTML. La principale difficulté avec le SGML est sa 
+ complexité. On considère généralement que partout où le SGML était utilisé, il est 
+ maintenant préférable d'utiliser le XML. Comme les deux normes sont similaires, 
+ on migre souvent du SGML au&amp;nbsp;XML. Quoiqu'il y ait de petits ennuis de conversion, 
+ le passage au XML permet de traiter les nouveaux documents avec les nombreux outils&amp;nbsp;XML 
+ et de suivre la tendance.&lt;/p&gt;
+&lt;p&gt;Le SGML n'est pas très différent du XHTML. Par exemple, les paragraphes sont 
+ spécifiés avec des éléments «&amp;nbsp;para&amp;nbsp;» de la même façon qu'ils sont spécifiés 
+ avec des éléments «&amp;nbsp;p&amp;nbsp;» en XHTML.&lt;/p&gt;
+&lt;h3 class="recall"&gt;Le XML comme format de documents&lt;/h3&gt;
+&lt;p&gt;Notons que le SGML, le HTML et le XML sont avant tout des formats de documents. 
+ On utilise maintenant le XML comme outil de programmation pour stocker et pour échanger des 
+ informations entre les logiciels; toutefois, l'objectif des créateurs du XML n'était que de créer 
+ un format de documents simple et pratique. &lt;/p&gt;
+&lt;p&gt;Pour les documents, un des avantages des nombreux formats basés sur le&amp;nbsp;XML ou le&amp;nbsp;SGML 
+ est qu'ils «&amp;nbsp;décrivent l'information&amp;nbsp;» au lieu de la présenter. Par la suite, 
+ il est facile de publier ou transformer un document XML en document PDF, HTML 
+ ou autre, selon les besoins. La séparation du contenu et de sa présentation est un facteur de 
+ productivité important parce qu'on simplifie la tâche de l'écriture, la ramenant au contenu seulement. &lt;/p&gt;
+&lt;p&gt;La séparation du contenu et de sa présentation existe, en partie, dans le XHTML. 
+ Par exemple, quand on ajoute un élément de paragraphe «&amp;nbsp;p&amp;nbsp;», on fait un choix qui s'appuie sur la logique 
+ du texte, non sur son apparence. Quant aux choix des polices, de l'espace entre les lignes, de l'espace entre les paragraphes 
+ ou des couleurs, ils ne sont généralement pas pris en compte par le&amp;nbsp;XHTML.  
+ Mais tout n'est pas parfait; l'utilisation de balises pour appeler de l'italique, soit «&amp;nbsp;i&amp;nbsp;» en XHTML, ne nous 
+ assure pas une séparation complète entre la présentation et le contenu. Par exemple, il serait plus «&amp;nbsp;logique&amp;nbsp;» 
+ d'indiquer qu'un mot appartient à une langue étrangère et qu'il apparaisse dès lors en italique. 
+ Ainsi, au lieu d'écrire «&amp;nbsp;La vie est &amp;lt;i&amp;gt;cool&amp;lt;/i&amp;gt;.&amp;nbsp;», on aimerait 
+ écrire «&amp;nbsp;La vie est &amp;lt;anglais&amp;gt;cool&amp;lt;/anglais&amp;gt;.&amp;nbsp;» ou quelque chose de similaire. 
+ Le XHTML constitue donc un compromis entre une séparation complète du contenu et de sa présentation, 
+ et l'absence de séparation.&lt;/p&gt;
+&lt;p&gt;Comme nous le verrons dans le troisième module, la façon la plus naturelle de dicter 
+ la présentation d'un document XHTML est d'utiliser un ou plusieurs fichiers&amp;nbsp;CSS. 
+ En plaçant les instructions de formatage dans des fichiers CSS, distincts des fichiers XHTML, 
+ on obtient une bonne séparation du contenu et de sa présentation. Cette approche a un grand 
+ avantage&amp;nbsp;: si on doit changer l'apparence d'un site web, on peut se contenter 
+ d'éditer quelques fichiers&amp;nbsp;CSS au lieu de modifier le contenu lui-même qui se trouve dans plusieurs fichiers&amp;nbsp;XHTML. 
+ Par exemple, si on veut que le texte contenu dans les tableaux soit en caractères gras et que 
+ le texte des listes apparaisse en rouge, on utilisera les instructions CSS suivantes&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;td {font-weight:bold;}
+li {color:red;}&lt;/pre&gt;
+&lt;p&gt;Le XML est aussi très utile pour aider à l'autodescription des informations. 
+ Par exemple, si dans un texte vous mettez tous les termes techniques en italique, 
+ il est possible que vous puissiez plus tard faire une recherche dans votre document 
+ pour tous les termes techniques. Toutefois, quelqu'un qui ne connaîtrait pas votre convention 
+ pourrait avoir beaucoup de mal à faire la même recherche. Par contre, si vous utilisez un 
+ élément particulier pour les termes techniques comme les balises &amp;lt;technique&amp;gt;&amp;lt;/technique&amp;gt;, 
+ il devient beaucoup plus facile à quelqu'un d'autre de s'y retrouver dans votre document. 
+ On pourrait objecter que l'ajout de nombreuses balises alourdira le texte qui occupera alors trop 
+ de place sur le disque; l'expérience montre que la pérennité des documents doit presque 
+ toujours être privilégiée par rapport à l'utilisation de l'espace disque.&lt;/p&gt;
+&lt;p&gt;En outre, le XML est un format ouvert&amp;nbsp;: on peut utiliser une multitude d'outils 
+  différents pour manipuler les documents&amp;nbsp;XML; nous ne sommes pas limités à des produits spécifiques 
+  à une compagnie ou institution donnée. Le XML a donc l'avantage sur plusieurs autres formats quant à sa pérennité.&lt;/p&gt;
+&lt;h3 class="recall"&gt; Le format DocBook&lt;/h3&gt;
+&lt;p&gt;Développé à partir de 1991, le format DocBook est un format de documents souvent utilisé pour la documentation technique. 
+  Le format DocBook est une application SGML qui devient une application&amp;nbsp;XML. 
+  Il existe de nombreux outils permettant de transformer un document DocBook en document HTML ou&amp;nbsp;PDF.&lt;/p&gt;
+&lt;p&gt;Le format DocBook possède de nombreux avantages pour la rédaction de documents techniques 
+ parce qu'il assure une grande séparation entre le contenu et sa présentation&amp;nbsp;: 
+ il ne permet que des balises ayant trait à la logique du texte; 
+ par exemple, il n'est pas possible de spécifier une police de caractères en DocBook. 
+ L'auteur peut alors concentrer son attention sur le contenu du document, sans perdre de temps 
+ avec le formatage, qui est une étape ultérieure. La séparation du contenu et de sa présentation 
+ permet aussi que plusieurs personnes puissent travailler sur un même projet 
+ de documentation tout en assurant une présentation uniforme, parce que DocBook ne comprend pas d'instructions de formatage.&lt;/p&gt;
+&lt;p&gt;Malheureusement, comme les autres formats hérités du SGML, plusieurs documents en format DocBook sont
+ du SGML et non du&amp;nbsp;XML; on ne peut donc pas utiliser les outils XML pour tous les
+ documents DocBook. Par contre, la situation est en train de changer; il devient plus facile de déterminer 
+ si un document est bel et bien un document&amp;nbsp;XML&amp;nbsp;: la déclaration XML placée 
+ au début d'un document DocBook nous l'indique.&lt;/p&gt;
+&lt;p&gt;Le format DocBook est fréquemment utilisé dans les projets de logiciels libres et «&amp;nbsp;open source&amp;nbsp;», 
+  ainsi que par certaines grandes sociétés, comme&amp;nbsp;IBM. En général, les avantages du format DocBook
+  sont plus visibles dans un contexte de travail d'équipe.&lt;/p&gt;
+&lt;p&gt;La création d'un document DocBook simple n'est pas très difficile. Tout d'abord, bien qu'elle puisse 
+varier selon les versions, la déclaration de type de document d'un document DocBook ressemble à ceci&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ 
+&lt;/p&gt;
+&lt;p&gt;Dans ce cas, on voit que le document DTD se trouve à l'adresse&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+  http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd
+
+&lt;/p&gt;
+&lt;p&gt;Il faut cependant noter qu'il s'agit d'un document DTD qui dépend d'autres documents DTD 
+ et que la lecture d'un tel type de document DTD n'est pas très facile.&lt;/p&gt;
+&lt;p&gt;L'élément-racine d'un document DocBook peut varier, mais les deux principales structures sont «&amp;nbsp;book&amp;nbsp;» (livre) 
+et «&amp;nbsp;article&amp;nbsp;»; notez que l'on peut commencer par l'une ou l'autre&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;book&amp;gt;
+ (...)
+ &amp;lt;/book&amp;gt;
+
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;article&amp;gt;
+ (...)
+ &amp;lt;/article&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;Ensuite, on doit ajouter un élément «&amp;nbsp;bookinfo&amp;nbsp;» ou «&amp;nbsp;articleinfo&amp;nbsp;»,
+selon que le document est un livre ou un article. Le plus souvent, les éléments en question 
+contiennent un élément «&amp;nbsp;title&amp;nbsp;» contenant le titre, ainsi qu'un élément «&amp;nbsp;author&amp;nbsp;» 
+qui contiendra les éléments «&amp;nbsp;firstname&amp;nbsp;» (prénom) et «&amp;nbsp;surname&amp;nbsp;» (nom de famille). 
+On peut aussi ajouter un élément «&amp;nbsp;copyright&amp;nbsp;» (droit d'auteur) qui contiendra un élément «&amp;nbsp;year&amp;nbsp;» (année) 
+et un élément «&amp;nbsp;holder&amp;nbsp;» (titulaire). Voici quelques structures courantes de documents DocBook&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;book&amp;gt;
+ &amp;lt;bookinfo&amp;gt;
+  &amp;lt;title&amp;gt;Notre documentation&amp;lt;/title&amp;gt;
+  &amp;lt;author&amp;gt;
+   &amp;lt;firstname&amp;gt;Alexis&amp;lt;/firstname&amp;gt;
+   &amp;lt;surname&amp;gt;Letrotteur&amp;lt;/surname&amp;gt;
+  &amp;lt;/author&amp;gt;
+  &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;&amp;lt;holder&amp;gt;Bell Canada&amp;lt;/holder&amp;gt;&amp;lt;/copyright&amp;gt;
+ &amp;lt;/bookinfo&amp;gt;
+ (...)
+ &amp;lt;/book&amp;gt;
+
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;article&amp;gt;
+ &amp;lt;articleinfo&amp;gt;
+  &amp;lt;title&amp;gt;Le sens de la vie&amp;lt;/title&amp;gt;
+  &amp;lt;author&amp;gt;
+   &amp;lt;firstname&amp;gt;Gilles&amp;lt;/firstname&amp;gt;
+   &amp;lt;surname&amp;gt;Proulx&amp;lt;/surname&amp;gt;
+  &amp;lt;/author&amp;gt;
+  &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;
+  &amp;lt;holder&amp;gt;Gouvernement du Canada&amp;lt;/holder&amp;gt;
+  &amp;lt;/copyright&amp;gt;
+ &amp;lt;/articleinfo&amp;gt;
+ (...)
+ &amp;lt;/article&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;L'élément de base d'un document DocBook est l'élément «&amp;nbsp;para&amp;nbsp;» qui note la présence d'un paragraphe. 
+Dans le cas d'un livre, on va le plus souvent faire suivre l'élément «&amp;nbsp;bookinfo&amp;nbsp;» d'éléments «&amp;nbsp;chapter&amp;nbsp;» 
+(chapitre), qui eux-mêmes peuvent contenir des éléments «&amp;nbsp;section&amp;nbsp;», comme dans l'exemple qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;book&amp;gt;
+ &amp;lt;bookinfo&amp;gt;
+  &amp;lt;title&amp;gt;Notre documentation&amp;lt;/title&amp;gt;
+  &amp;lt;author&amp;gt;
+   &amp;lt;firstname&amp;gt;Alexis&amp;lt;/firstname&amp;gt;
+   &amp;lt;surname&amp;gt;Letrotteur&amp;lt;/surname&amp;gt;
+  &amp;lt;/author&amp;gt;
+  &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;&amp;lt;holder&amp;gt;Bell Canada&amp;lt;/holder&amp;gt;&amp;lt;/copyright&amp;gt;
+ &amp;lt;/bookinfo&amp;gt;
+ &amp;lt;chapter&amp;gt;
+  &amp;lt;title&amp;gt;Premier chapitre&amp;lt;/title&amp;gt;
+  &amp;lt;section&amp;gt;
+  &amp;lt;title&amp;gt;Première section du premier chapitre&amp;lt;/title&amp;gt;
+  &amp;lt;para&amp;gt;Mettre ici le premier paragraphe de la première section.&amp;lt;/para&amp;gt;
+  &amp;lt;/section&amp;gt;
+ &amp;lt;/chapter&amp;gt;
+ &amp;lt;/book&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;Observez que tous les éléments «&amp;nbsp;chapter&amp;nbsp;», ainsi que tous les éléments «&amp;nbsp;section&amp;nbsp;» 
+débutent par un élément «&amp;nbsp;title&amp;nbsp;»&amp;nbsp;: c'est souvent suffisant. Il n'est pas permis de commencer 
+un élément «&amp;nbsp;section&amp;nbsp;» ou «&amp;nbsp;chapter&amp;nbsp;» directement par un élément «&amp;nbsp;para&amp;nbsp;». 
+Par contre, on pourrait omettre d'avoir des sections dans nos chapitres, comme dans l'exemple qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;book&amp;gt;
+ &amp;lt;bookinfo&amp;gt;
+  &amp;lt;title&amp;gt;Notre documentation&amp;lt;/title&amp;gt;
+  &amp;lt;author&amp;gt;
+   &amp;lt;firstname&amp;gt;Alexis&amp;lt;/firstname&amp;gt;
+   &amp;lt;surname&amp;gt;Letrotteur&amp;lt;/surname&amp;gt;
+  &amp;lt;/author&amp;gt;
+  &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;&amp;lt;holder&amp;gt;Bell Canada&amp;lt;/holder&amp;gt;&amp;lt;/copyright&amp;gt;
+ &amp;lt;/bookinfo&amp;gt;
+ &amp;lt;chapter&amp;gt;
+  &amp;lt;title&amp;gt;Premier chapitre&amp;lt;/title&amp;gt;
+  &amp;lt;para&amp;gt;Mettre ici le premier paragraphe du premier chapitre.&amp;lt;/para&amp;gt;  
+ &amp;lt;/chapter&amp;gt;
+ &amp;lt;/book&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;Dans le cas d'un simple article, nous n'utiliserons pas les éléments «&amp;nbsp;chapitre&amp;nbsp;» 
+et il suffit, le plus souvent, d'utiliser des éléments «&amp;nbsp;section&amp;nbsp;», comme dans l'exemple qui suit&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&amp;gt;
+ &amp;lt;!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4CR2//EN"
+  "http://www.oasis-open.org/docbook/xml/4.4CR2/docbookx.dtd"&amp;gt;
+ &amp;lt;article&amp;gt;
+ &amp;lt;articleinfo&amp;gt;
+  &amp;lt;title&amp;gt;Notre documentation&amp;lt;/title&amp;gt;
+  &amp;lt;author&amp;gt;
+   &amp;lt;firstname&amp;gt;Alexis&amp;lt;/firstname&amp;gt;
+   &amp;lt;surname&amp;gt;Letrotteur&amp;lt;/surname&amp;gt;
+   &amp;lt;/author&amp;gt;
+  &amp;lt;copyright&amp;gt;&amp;lt;year&amp;gt;2004&amp;lt;/year&amp;gt;&amp;lt;holder&amp;gt;Bell Canada&amp;lt;/holder&amp;gt;&amp;lt;/copyright&amp;gt;
+ &amp;lt;/articleinfo&amp;gt;
+ &amp;lt;section&amp;gt;
+  &amp;lt;title&amp;gt;Première section de l'article&amp;lt;/title&amp;gt;
+  &amp;lt;para&amp;gt;Mettre ici le premier paragraphe de la première section.&amp;lt;/para&amp;gt;
+ &amp;lt;/section&amp;gt;
+ &amp;lt;section&amp;gt;
+  &amp;lt;title&amp;gt;Deuxième section de l'article&amp;lt;/title&amp;gt;
+  &amp;lt;para&amp;gt;Mettre ici le premier paragraphe de la seconde section.&amp;lt;/para&amp;gt;
+ &amp;lt;/section&amp;gt;
+ &amp;lt;/article&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;On pourrait aussi utiliser les éléments «&amp;nbsp;sect1&amp;nbsp;», «&amp;nbsp;sect2&amp;nbsp;», «&amp;nbsp;setc3&amp;nbsp;» 
+et ainsi de suite, pour obtenir les notions de &lt;i&gt;section&lt;/i&gt;, &lt;i&gt;sous-section&lt;/i&gt;, &lt;i&gt;sous-sous-section&lt;/i&gt; et ainsi de suite.&lt;/p&gt;
+&lt;p&gt;Comme le format DocBook est destiné à la documentation technique, il existe plusieurs balises pour 
+décrire le code informatique. L'élément le plus simple est l'élément «&amp;nbsp;programlisting&amp;nbsp;». 
+Ainsi, pour ajouter un petit programme Java dans un document DocBook, on utilisera l'élément suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;programlisting&amp;gt;
+ public static void main(String[] arg) {
+ System.out.println("Allo!");
+ }
+ &amp;lt;/programlisting&amp;gt;
+
+&lt;/p&gt;
+&lt;p&gt;On peut également placer un élément «&amp;nbsp;programlisting&amp;nbsp;» dans les éléments «&amp;nbsp;section&amp;nbsp;», «&amp;nbsp;chapter&amp;nbsp;», 
+«&amp;nbsp;para&amp;nbsp;», etc.&lt;/p&gt;
+&lt;p&gt;Tout comme en HTML, on peut créer des listes avec les éléments «&amp;nbsp;itemizedlist&amp;nbsp;» (liste non ordonnée, 
+équivalent de «&amp;nbsp;ul&amp;nbsp;» en HTML) et «&amp;nbsp;orderedlist&amp;nbsp;» (liste ordonnée, équivalent de «&amp;nbsp;ol&amp;nbsp;» en HTML). 
+Une liste est constituée d'éléments «&amp;nbsp;listitem&amp;nbsp;» qui ne peuvent contenir directement du texte&amp;nbsp;: 
+on met généralement des éléments «&amp;nbsp;para&amp;nbsp;» dans les éléments «&amp;nbsp;listitem&amp;nbsp;». 
+Par contre, les éléments «&amp;nbsp;listitem&amp;nbsp;» ne peuvent apparaître hors des éléments «&amp;nbsp;itemizedlist&amp;nbsp;» et «&amp;nbsp;orderedlist&amp;nbsp;». 
+En outre, on place les listes dans les éléments «&amp;nbsp;chapter&amp;nbsp;», «&amp;nbsp;section&amp;nbsp;», etc. Voici quelques exemples&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;itemizedlist&amp;gt;
+  &amp;lt;listitem&amp;gt; 
+  &amp;lt;para&amp;gt;un triangle&amp;lt;/para&amp;gt;
+  &amp;lt;/listitem&amp;gt;
+  &amp;lt;listitem&amp;gt;
+  &amp;lt;para&amp;gt;un losange&amp;lt;/para&amp;gt;
+  &amp;lt;/listitem&amp;gt;
+ &amp;lt;/itemizedlist&amp;gt;
+ 
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+ &amp;lt;orderedlist&amp;gt;
+  &amp;lt;listitem&amp;gt; 
+  &amp;lt;para&amp;gt;Premier élément (numéro 1)&amp;lt;/para&amp;gt;
+  &amp;lt;/listitem&amp;gt;
+  &amp;lt;listitem&amp;gt;
+  &amp;lt;para&amp;gt;Second élément (numéro 2)&amp;lt;/para&amp;gt;
+  &amp;lt;/listitem&amp;gt;
+ &amp;lt;/orderedlist&amp;gt;
+ 
+&lt;/p&gt;
+&lt;p&gt;Le format DocBook est supporté par certains traitement de textes comme &lt;a href="http://fr.openoffice.org/" shape="rect"&gt;OpenOffice&lt;/a&gt; qui est disponible gratuitement.&lt;/p&gt;
+&lt;h3 class="recall"&gt;L'ODF (&lt;i&gt;Open Document Format&lt;/i&gt;)&lt;/h3&gt;
+&lt;p&gt;Historiquement, les formats de bureautiques ont été propriétaires, que ce soit le format WordPerfect ou
+le format Microsoft Word. Pour une institution, cela pose le problème de la pérennité des documents&amp;nbsp;: qu'est-ce qui se produit si la compagnie qui propose un format décide de ne plus supporter un ancien
+format, parce qu'elle fait faillite ou change sa stratégie commerciale&amp;nbsp;? Qu'est-ce qui se produit si
+elle décide d'augmenter le coût de ses produits&amp;nbsp;?  L'&lt;i&gt;Open Document Format&lt;/i&gt; (ODF) est une norme XML &lt;a href="http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office" shape="rect"&gt;adoptée
+en mai 2005&lt;/a&gt; par OASIS et est devenu une norme ISO (ISO&amp;nbsp;26300.2006) le 30 novembre 2006.   Le format ODF 
+est un format XML que tout le monde peut utiliser librement. Nous allons voir différentes
+techniques dans ce cours qui permettent de manipuler des documents XML et elles s'appliquent au format ODF. &lt;/p&gt;
+&lt;p&gt;Le format ODF n'est pas très différent des nouveaux formats &lt;a href="http://www.microsoft.com/office/preview/developers/fileoverview.mspx" shape="rect"&gt;Open XML&lt;/a&gt; utilisés par Microsoft Office, mais 
+au lieu de n'être soutenu que par une seule compagnie, ODF provient d'une entente entre plusieurs grandes
+sociétés&amp;nbsp;: Adobe Systems, IBM, Intel, Novell et Sun Microsystems. Dans
+les deux cas (ODF et Open XML), les fichiers XML sont mis dans une archive compressée et nous avons accès
+à la sémantique des balises XML.  Le logiciel &lt;a href="http://fr.openoffice.org/" shape="rect"&gt;OpenOffice&lt;/a&gt; utilise le format ODF et a les avantages
+d'être gratuit et disponible pour une variété de systèmes (Apple, Linux, Microsoft, etc.). Il est aussi possible de créer des documents ODF à partir de Microsoft Office 2007 à l'aide d'une composante logicielle supplémentaire (&lt;a href="http://sourceforge.net/projects/odf-converter" shape="rect"&gt;Open XML Translator&lt;/a&gt;).&lt;/p&gt;&lt;/div&gt;
+		&lt;hr&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741807294</timemodified>
+  </page>
+</activity>

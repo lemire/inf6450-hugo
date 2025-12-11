@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72176" moduleid="131024" modulename="page" contextid="970145">
+  <page id="72176">
+    <name>Les noms d’éléments</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Les noms d’éléments&lt;/h1&gt;
+&lt;h2 class="recall"&gt;Capturer le nom d'un élément&lt;/h2&gt;
+&lt;p&gt;Supposons que nous voulions afficher uniquement les noms des éléments (sans
+    leur contenu). Nous pouvons
+    obtenir ce résultat avec la fonction XPath «&amp;nbsp;name&amp;nbsp;» qui donne le
+    nom de l'élément.
+    La fonction name inclut le préfixe de l'espace de noms. Si on souhaite le
+    nom de l'élément sans
+    le préfixe, on peut utiliser la fonction «&amp;nbsp;local-name&amp;nbsp;». La
+    fonction
+    «&amp;nbsp;namespace-uri&amp;nbsp;» donne l'URI de l'espace de noms de l'élément.
+&lt;/p&gt;
+&lt;p&gt;Ainsi, le document XSLT suivant permet d'afficher tous les noms des
+    éléments&amp;nbsp;XML, sans le
+    contenu textuel de ces éléments.&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="*"&amp;gt;
+    &amp;lt;xsl:value-of select="name(.)" /&amp;gt;
+    &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous pourrions aussi vouloir afficher non seulement le nom de l'élément
+    courant, mais aussi le
+    nom de l'élément-parent, ce qu'on peut faire avec le document XSLT
+    suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="*"&amp;gt;
+    &amp;lt;xsl:value-of select="name(..)" /&amp;gt; / &amp;lt;xsl:value-of select="name(.)"
+    /&amp;gt;
+    &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741890789</timemodified>
+  </page>
+</activity>

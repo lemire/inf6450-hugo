@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roles>
+  <role_overrides>
+    <override id="28453">
+      <roleid>38</roleid>
+      <capability>mod/quiz:emailnotifysubmission</capability>
+      <permission>1</permission>
+      <timemodified>1751891667</timemodified>
+      <modifierid>159710</modifierid>
+    </override>
+    <override id="28456">
+      <roleid>4</roleid>
+      <capability>mod/quiz:emailnotifysubmission</capability>
+      <permission>1</permission>
+      <timemodified>1751891669</timemodified>
+      <modifierid>159710</modifierid>
+    </override>
+  </role_overrides>
+  <role_assignments>
+  </role_assignments>
+</roles>

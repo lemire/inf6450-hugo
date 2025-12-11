@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72095" moduleid="130928" modulename="page" contextid="970046">
+  <page id="72095">
+    <name>Validation de documents XML</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;La validation des documents XML&lt;/h1&gt;
+
+&lt;h2&gt;Objectif&lt;/h2&gt;
+&lt;p&gt;Valider des documents XML.&lt;/p&gt;
+
+&lt;h2&gt;Activité de validation&lt;/h2&gt;
+&lt;p&gt;On peut facilement vérifier si un document XML est « bien formé ». Il suffit de lui donner l’extension «&nbsp;.xml » (ou « .xhtml ») et de l’ouvrir dans un navigateur, par exemple.&lt;/p&gt;
+
+&lt;p&gt;Cependant, il arrive qu’on veuille vérifier que le document est non seulement bien formé, mais aussi valable par rapport à des documents DTD locaux. Apprenons donc à valider des documents XML, en exécutant les directives qui suivent, car cela vous sera très utile dans vos travaux en XML.&lt;/p&gt;
+
+&lt;p&gt;La procédure que nous proposons suppose que vous connaissez bien les éléments de base d’un système d’exploitation, comme l’utilisation de la ligne de commande et l’exécution de programmes. Nous ne donnons la procédure que pour Windows, mais elle est très similaire sous macOS ou Linux.&lt;/p&gt;
+
+
+&lt;h2&gt;Application de bureau (optionnelle)&lt;/h2&gt;
+
+&lt;p&gt;Nous vous invitons à mettre à l'essai notre application de bureau Java pour la validation des documents XML. &lt;a href="https://github.com/lemire/javavalid"&gt;Il vous suffit de suivre nos consignes en ligne&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Procédure pour valider des documents XML&lt;/h2&gt;
+&lt;p&gt;Avant de procéder à la validation, préparons notre environnement. Allez dans un répertoire, par exemple « C:\XML », et créez le fichier « monfichier.dtd » avec le contenu suivant, en utilisant le bloc-notes :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!ELEMENT etudiant (numero, nom, age)&amp;gt;&lt;/span&gt;
+&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!ELEMENT numero (#PCDATA)&amp;gt;&lt;/span&gt;
+&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!ELEMENT nom (#PCDATA)&amp;gt;&lt;/span&gt;
+&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!ELEMENT age (#PCDATA)&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Puis, créez un document appelé « mauvais.xml » avec le contenu suivant, toujours à l’aide du bloc-notes :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#7f9fbf;"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!DOCTYPE etudiant SYSTEM "monfichier.dtd"&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;etudiant&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;numero&amp;gt;&lt;/span&gt;123456&lt;span style="color:#e06c75;"&gt;&amp;lt;/numero&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;nom&amp;gt;&lt;/span&gt;Jean Dupont&lt;span style="color:#e06c75;"&gt;&amp;lt;/nom&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/etudiant&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il est important que les deux fichiers soient dans le même répertoire. En effet, la ligne DOCTYPE etudiant SYSTEM "monfichier.dtd" dans le fichier « mauvais.xml » indique qu’il devrait y avoir un fichier « monfichier.dtd » dans le même répertoire.&lt;/p&gt;
+
+&lt;p&gt;Vérifions maintenant si le fichier « mauvais.xml » est valable.&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;D’abord, vous devez disposer d’une machine virtuelle Java récente (Java 21 ou mieux) sur votre ordinateur, incluant le compilateur Java : « javac ». Si vous n’en avez pas, il faut effectuer un enregistrement et une installation (&lt;a href="https://adoptium.net"&gt;adoptium.net&lt;/a&gt;) d’une telle machine. En outre, vous devez avoir sur votre ordinateur le SDK (aussi appelé JDK), pas uniquement le JRE. Sur la page qui se trouve à l’adresse le téléchargement peut prendre plusieurs minutes. Il suffit ensuite de lancer le fichier exécutable que vous venez d’enregistrer sur votre ordinateur pour installer le SDK. Une fois le SDK installé, vous pouvez poursuivre l’activité de vérification. Si l’outil d’installation vous propose de modifier les variables PATH et JAVAHOME, vous devez l’y autoriser. Si vous êtes incapable d’installer un logiciel sur votre ordinateur, nous vous invitons à joindre un technicien et à obtenir de l’aide. Nous ne pouvons pas, au sein du cours, vous offrir un soutien technique spécifique à votre ordinateur.&lt;/li&gt;
+    &lt;li&gt;Placez le fichier Validateur.java dans le répertoire où se trouvent déjà vos fichiers « mauvais.xml » et « monfichier.dtd », soit dans « C:\XML ». Votre fichier « Validateur.java » devrait avoir le contenu suivant :&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.xml.sax.SAXException;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.IOException;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Validateur&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+        factory.&lt;span style="color:#61afef;"&gt;setValidating&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;true&lt;/span&gt;);
+        DocumentBuilder parser = factory.&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+        parser.&lt;span style="color:#61afef;"&gt;setErrorHandler&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; org.xml.sax.ErrorHandler() {
+            &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;warning&lt;/span&gt;(SAXParseException ex) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; SAXException {
+                System.&lt;span style="color:#61afef;"&gt;err&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Avertissement : "&lt;/span&gt; + ex.&lt;span style="color:#61afef;"&gt;getMessage&lt;/span&gt;());
+            }
+            &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;error&lt;/span&gt;(SAXParseException ex) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; SAXException {
+                System.&lt;span style="color:#61afef;"&gt;err&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Erreur : "&lt;/span&gt; + ex.&lt;span style="color:#61afef;"&gt;getMessage&lt;/span&gt;());
+            }
+            &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;fatalError&lt;/span&gt;(SAXParseException ex) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; SAXException {
+                System.&lt;span style="color:#61afef;"&gt;err&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Erreur fatale : "&lt;/span&gt; + ex.&lt;span style="color:#61afef;"&gt;getMessage&lt;/span&gt;());
+                &lt;span style="color:#c678dd;"&gt;throw&lt;/span&gt; ex;
+            }
+        });
+        parser.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;]);
+        System.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Le document est valide."&lt;/span&gt;);
+    }
+}&lt;/pre&gt;
+
+&lt;ol start="3"&gt;
+    &lt;li&gt;Ensuite, lancez la machine virtuelle Java avec une ligne de commande. Pour cela, il faut ouvrir une fenêtre de commande. Sous Windows 8 et versions ultérieures, cliquez en bas à gauche avec le bouton droit de la souris et sélectionnez « invite de commandes ». Sous les versions précédentes de Windows, dans le menu « Démarrer », cliquez sur « Exécuter » ; une fenêtre s’ouvre, tapez le nom de programme « cmd » pour ouvrir une fenêtre de commande. Notez qu’avec les versions plus anciennes de Windows, comme Windows 98, il faut taper « command.com ». Une fenêtre s’ouvre alors avec un fond noir, c’est la fenêtre de commande. Vous allez pouvoir y taper des lignes de commande pour vérifier si votre document XML est valable. Les commandes de base sont : « dir » (affiche le contenu d’un répertoire), « cd » (change de répertoire), « cd .. » (répertoire parent), « mkdir » (création d’un nouveau répertoire), « copy » (copie d’un fichier), « move » (déplacement d’un fichier), et « del » (supprime un fichier).&lt;/li&gt;
+    &lt;li&gt;Testez l’installation de votre machine virtuelle en tapant « java » suivi du retour de chariot. Vous devriez recevoir un message qui commence par quelque chose comme « Usage: java [-options] class [args...] ». Testez aussi l’installation du compilateur en tapant « javac » ; vous devriez voir un message qui commence par quelque chose comme « Usage: javac &amp;lt;options&amp;gt; &amp;lt;source files&amp;gt; ». Si ce n’est pas le cas, nous vous conseillons de vérifier l’installation de votre machine virtuelle et de procéder à sa réinstallation au besoin. Si tout est bien installé et que ça ne fonctionne toujours pas, vous devrez indiquer le chemin pour trouver le compilateur en tapant la ligne de commande « set PATH=%PATH%;adresse_du_fichier_javac.exe ». Le fichier « javac.exe » se trouve dans le dossier « bin » du dossier où vous avez installé le SDK. Par défaut, ce fichier se trouve dans le « C: ». L’adresse du répertoire contenant le fichier « javac.exe » est donc souvent de la forme « C:\Program Files\Java\jdkXXXX\bin ». Si vous ne savez plus où est installé le SDK, vous pouvez faire une recherche, à partir du menu « Démarrer » de Windows. Une fois le chemin indiqué, retapez la commande « javac » et cette fois, tout devrait fonctionner. Comme il peut être lourd de modifier la variable d’environnement PATH chaque fois, il est possible de la modifier une fois pour toutes : allez dans « Démarrer », choisissez « Paramètres », puis « Panneau de configuration », et ouvrez « Système », cliquez sur l’onglet « Avancé » ; cliquez ensuite sur le bouton « Variables d’environnement », sélectionnez « PATH » dans la liste des variables, cliquez sur le bouton « Modifier » et ajoutez, à la fin du contenu de la variable, « ;adresse_du_fichier_javac.exe », par exemple « ;C:\Program Files\Java\jdk21\bin ».&lt;/li&gt;
+    &lt;li&gt;Ensuite, placez-vous dans le dossier où se trouvent votre fichier XML et sa DTD. Vous savez toujours où vous vous trouvez dans l’arborescence de votre ordinateur, puisque chaque ligne de commande commence par l’adresse où vous êtes. La commande pour se déplacer est « cd adresse ». Par exemple, si la ligne commence par « C:\Documents and Settings\lucie&amp;gt; », vous êtes dans le dossier de lucie. Pour aller au dossier XML qui se trouve sur le disque C, il faut taper : « cd C:\XML », puis faire le retour de chariot. Une nouvelle ligne apparaît et commence par : « C:\XML&amp;gt; ». Maintenant que vous êtes dans le dossier où se trouve votre fichier XML, vous pouvez vérifier s’il est valable.&lt;/li&gt;
+    &lt;li&gt;Faites « javac Validateur.java » pour compiler le petit programme qui pourra vous servir à vérifier la validité des documents XML. Vous ne devriez pas avoir de mal avec la compilation. Par exemple, vous pourriez voir à l’écran quelque chose comme « Note: Validateur.java uses or overrides a deprecated API. Note: Recompile with -Xlint:deprecation for details. ». Vous pouvez ignorer les avertissements vous incitant à utiliser l’option « -deprecation ».&lt;/li&gt;
+    &lt;li&gt;Tapez la ligne de commande « java Validateur mauvais.xml », puis faites un retour de chariot. Il est important de respecter la casse dans les lignes de commande. Si rien de significatif ne s’affiche, votre fichier est valable, sinon, une description des erreurs s’affichera (en anglais). Si la machine virtuelle quitte avec l’erreur « java.lang.NoClassDefFoundError » alors que vous êtes bien dans le bon répertoire, faites alors « java -cp . Validateur mauvais.xml ».&lt;/li&gt;
+    &lt;li&gt;Pour quitter, vous n’avez qu’à fermer la fenêtre de commande.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;Vérification de la procédure&lt;/h2&gt;
+&lt;p&gt;Après avoir tapé la commande « java Validateur mauvais.xml » pour vérifier si le fichier « mauvais.xml » est valable, vous devriez obtenir le message d’erreur suivant indiquant qu’il manque un élément « numero » (le message exact peut varier et il pourrait être en français) :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#abb2bf;"&gt;mauvais.xml:7:1: Élément "etudiant" doit contenir un élément "numero".&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour vous assurer de bien comprendre, reprenez la procédure ; créez un autre document appelé « bon.xml » avec le contenu suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#7f9fbf;"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"?&amp;gt;&lt;/span&gt;
+&lt;span style="color:#7f9fbf;"&gt;&amp;lt;!DOCTYPE etudiant SYSTEM "monfichier.dtd"&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;etudiant&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;numero&amp;gt;&lt;/span&gt;123456&lt;span style="color:#e06c75;"&gt;&amp;lt;/numero&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;nom&amp;gt;&lt;/span&gt;Jean Dupont&lt;span style="color:#e06c75;"&gt;&amp;lt;/nom&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;age&amp;gt;&lt;/span&gt;20&lt;span style="color:#e06c75;"&gt;&amp;lt;/age&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/etudiant&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cette fois-ci, vous devriez, en vérifiant que le document est valable, obtenir le message suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#abb2bf;"&gt;Le document est valide.&lt;/span&gt;&lt;/pre&gt;
+
+&lt;div class="note"&gt;
+    &lt;p&gt;Est-ce que vous avez pu vérifier si les fichiers « mauvais.xml » et « bon.xml » étaient valables ? Si oui, passez aux autres activités, sinon cherchez encore un peu.&lt;/p&gt;
+&lt;/div&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>10</revision>
+    <timemodified>1764705259</timemodified>
+  </page>
+</activity>

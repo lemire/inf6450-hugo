@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72275" moduleid="131123" modulename="page" contextid="970250">
+  <page id="72275">
+    <name>Applications du RDF</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Applications du RDF&lt;/h1&gt;
+
+&lt;p&gt;Le RDF se retrouve un peu partout sur le web, parfois de façon
+    «&amp;nbsp;invisible&amp;nbsp;»,
+    c'est-à-dire qu'il est souvent utilisé dans les échanges automatiques entre
+    les logiciels. En outre, il est
+    utilisé au sein des portails, par exemple. Voyons maintenant
+    quatre applications RDF bien établies&amp;nbsp;: &lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;Dublin Core&lt;/dt&gt;
+    &lt;dd&gt;Il s'agit sans doute de l'utilisation la plus connue et
+        la plus répandue du RDF. La norme &lt;i&gt;Dublin Core&lt;/i&gt; est assez simple et
+        vise à
+        décrire les travaux rendus disponibles sur le web (auteur, titre, date,
+        etc.). Elle est notamment utilisée au sein des livres électroniques
+        (comme les EPUB). Cette norme s'inspire de la bibliothéconomie.&lt;/dd&gt;
+    &lt;dt&gt;Creative Commons&lt;/dt&gt;
+    &lt;dd&gt;Il s'agit d'une façon de décrire les
+        droits accordés sur le contenu placé sur le web.
+        Par exemple, vous voulez savoir si vous pouvez recopier telle ou telle
+        page web; si l'auteur a utilisé
+        la norme &lt;i&gt;Creative Commons&lt;/i&gt;, alors vous devriez pouvoir savoir ce
+        qui est permis par l'auteur.&lt;/dd&gt;
+    &lt;dt&gt;FOAF&lt;/dt&gt;
+    &lt;dd&gt;La norme &lt;i&gt;FOAF&lt;/i&gt; («&amp;nbsp;Friend Of A Friend&amp;nbsp;» - «&amp;nbsp;ami d'un
+        ami&amp;nbsp;») permet
+        de décrire un individu et les gens qu'il connaît. Cette norme sert
+        à traiter les réseaux sociaux.&lt;/dd&gt;
+    &lt;dt&gt;RSS/RDF&lt;/dt&gt;
+    &lt;dd&gt;La norme &lt;i&gt;RSS&lt;/i&gt; est utilisée par les blogues et sites de nouvelles.
+        Le site mozilla.org a plusieurs articles sur le sujet (&lt;a href="http://developer.mozilla.org/en/docs/RSS"&gt;http://developer.mozilla.org/en/docs/RSS&lt;/a&gt;).
+        En gros,
+        un document RSS/RDF contient une version XML des dernières nouvelles.
+        Par la suite,
+        plusieurs de ces fichiers XML peuvent être combinés pour créer un
+        portail de nouvelles ou
+        utilisés avec un outil-client de type «&amp;nbsp;RSS aggregator&amp;nbsp;» pour
+        obtenir
+        automatiquement les dernières nouvelles.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2&gt;Un exemple&amp;nbsp;: &lt;i&gt;Dublin Core&lt;/i&gt;&lt;/h2&gt;
+&lt;p&gt;La norme &lt;i&gt;Dublin Core&lt;/i&gt; définit plusieurs «&amp;nbsp;verbes&amp;nbsp;» (au sein
+    du RDF);
+    on peut en consulter la liste à l'adresse &lt;a href="http://dublincore.org/documents/dcmi-terms/"&gt;
+        http://dublincore.org/documents/dcmi-terms/&lt;/a&gt; (en anglais).
+    Cette norme a été publiée pour la première fois
+    en juillet&amp;nbsp;1999.&lt;/p&gt;
+&lt;p&gt;Le préfixe de la norme &lt;i&gt;Dublin Core&lt;/i&gt; est
+    «&amp;nbsp;http://purl.org/dc/elements/1.1/&amp;nbsp;», du moins pour les
+    éléments de base présentés ici. Voici les URI complets et leur
+    signification&amp;nbsp;:&lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/creator &lt;/dt&gt;
+    &lt;dd&gt;Personne ou organisme qui est l'auteur du travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/contributor &lt;/dt&gt;
+    &lt;dd&gt;Personne ou organisme qui a contribué à un travail, mais sans en être
+        l'auteur.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/coverage &lt;/dt&gt;
+    &lt;dd&gt;Lieu et période correspondant au travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/date &lt;/dt&gt;
+    &lt;dd&gt;Date associée au travail, généralement sous la forme AAAA-MM-JJ. Il peut
+        s'agir de
+        la date de publication, de création ou de la dernière révision.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/description &lt;/dt&gt;
+    &lt;dd&gt;Brève description du travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/format &lt;/dt&gt;
+    &lt;dd&gt;Format sous lequel est publié le travail. Si le travail est publié en
+        HTML, alors on utilisera souvent «&amp;nbsp;text/html&amp;nbsp;» pour décrire le
+        format.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/identifier &lt;/dt&gt;
+    &lt;dd&gt;Code ou URI qui correspond de façon unique au travail.
+        Si un travail est publié à une adresse web, on peut utiliser
+        cette adresse comme URI; si c'est un livre avec un ISBN, on peut
+        utiliser un URI de la forme «&amp;nbsp;urn:ISBN:0-123-12345-1&amp;nbsp;».&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/language &lt;/dt&gt;
+    &lt;dd&gt;Code ISO-639/ISO-3166 décrivant le travail. Si le travail est publié en
+        français,
+        on peut utiliser «&amp;nbsp;fr-CA&amp;nbsp;»; sinon, en anglais, ce serait
+        «&amp;nbsp;en-CA&amp;nbsp;» (CA signifie Canada).&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/publisher &lt;/dt&gt;
+    &lt;dd&gt;Organisme responsable de la publication du travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/relation &lt;/dt&gt;
+    &lt;dd&gt;Ressource liée au travail. Par exemple, pour un travail fait en classe,
+        on peut établir un lien avec l'exposé du travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/rights &lt;/dt&gt;
+    &lt;dd&gt;Contient souvent une affirmation permettant de savoir qui est
+        propriétaire du travail (détenteur du droit d'auteur).&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/source &lt;/dt&gt;
+    &lt;dd&gt;Résumé du travail de quelqu'un d'autre. Cet URI permet de pointer vers
+        la source originale.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/subject &lt;/dt&gt;
+    &lt;dd&gt;Généralement, une liste de mots clés.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/title &lt;/dt&gt;
+    &lt;dd&gt;Titre du travail.&lt;/dd&gt;
+    &lt;dt&gt;http://purl.org/dc/elements/1.1/type &lt;/dt&gt;
+    &lt;dd&gt;Type de la ressource (texte, image, etc.). Notons que le
+        «&amp;nbsp;type&amp;nbsp;» est différent du «&amp;nbsp;format&amp;nbsp;».
+        Par exemple, une image peut être en format Jpeg ou Gif, un texte peut
+        être en format Word ou ASCII.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Voyons comment nous pouvons décrire ce texte que vous êtes en train de lire,
+    en utilisant la norme &lt;i&gt;Dublin Core&lt;/i&gt;.
+    Attribuons-lui l'URI «&amp;nbsp;http://teluq.ca/rdfexemples.html&amp;nbsp;».&lt;/p&gt;
+
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1" class="tabNormal"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sujet&lt;/td&gt;
+                &lt;td&gt;Verbe&lt;/td&gt;
+                &lt;td&gt;Objet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/creator&lt;/td&gt;
+                &lt;td&gt;http://lemire.me/fr/&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/date&lt;/td&gt;
+                &lt;td&gt;"2004-07-27"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/title &lt;/td&gt;
+                &lt;td&gt;"Introduction au RDF"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/type&lt;/td&gt;
+                &lt;td&gt;"text"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/Language&lt;/td&gt;
+                &lt;td&gt;"fr-CA"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/subject&lt;/td&gt;
+                &lt;td&gt;"RDF, Dublin Core, Creative Commons, FOAF, RSS/RDF"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/rights&lt;/td&gt;
+                &lt;td&gt;"Copyright 2005 Daniel Lemire"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/description&lt;/td&gt;
+                &lt;td&gt;"Un document comprenant des exemples d'utilisation du RDF en
+                    gestion des connaissances."&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/format&lt;/td&gt;
+                &lt;td&gt;"text/html"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/identifier&lt;/td&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous pouvons aussi représenter ce tableau en XML comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://lemire.me/fr/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;date&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;2004-07-27&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;date&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Introduction au RDF&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;type&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;text&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;type&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fr-CA&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subject&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;RDF, Dublin Core, Creative Commons,
+    FOAF, RSS/RDF&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subject&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;rights&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Copyright 2005 Daniel Lemire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;rights&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un document comprenant des exemples
+    d'utilisation du RDF en gestion des connaissances.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;format&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;text/html&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;format&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;identifier&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Nous pouvons aussi représenter ce tableau sous la forme d'un graphe&amp;nbsp;:
+&lt;/p&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="500" contentstyletype="text/css" version="1.0" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" font-size="0.7em"&gt;
+    ../module5/dc.pdf
+    &lt;g id="graph0" transform="scale(1)" class="graph"&gt;
+        &lt;!-- 0 --&gt;
+        &lt;g class="node" id="node1"&gt;
+            &lt;a xlink:type="simple" xlink:actuate="onRequest" xlink:title="rdfexemples.html" xlink:show="replace" xlink:href="http%3A//www.uquebec.ca/rdfexemples.html"&gt;
+                &lt;ellipse cy="239" style="fill:none;stroke:black;" cx="67" rx="62" ry="18"&gt;&lt;/ellipse&gt;
+                &lt;text y="244" x="67" text-anchor="middle"&gt;rdfexemples.html&lt;/text&gt;
+            &lt;/a&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;0 --&gt;
+        &lt;g class="edge" id="edge20"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M30,224C17,214 30,203 67,203 93,203 107,208 109,215"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="112,217 104,224 106,214 112,217"&gt;&lt;/polygon&gt;
+            &lt;text y="200" x="67" text-anchor="middle"&gt;identifier&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 1 --&gt;
+        &lt;g class="node" id="node2"&gt;
+            &lt;ellipse cy="23" style="fill:none;stroke:black;" cx="388" rx="106" ry="18"&gt;&lt;/ellipse&gt;
+            &lt;text y="28" x="388" text-anchor="middle" font-size="0.9em"&gt;http://lemire.me/fr/&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;1 --&gt;
+        &lt;g class="edge" id="edge2"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M73,221C84,191 109,131 147,93 182,59 233,41 280,32"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="280,29 290,30 281,35 280,29"&gt;&lt;/polygon&gt;
+            &lt;text y="52" x="179" text-anchor="middle"&gt;creator&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 2 --&gt;
+        &lt;g class="node" id="node4"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="428,59 348,59 348,95 428,95 428,59"&gt;&lt;/polygon&gt;
+            &lt;text y="82" x="388" text-anchor="middle"&gt;2004-07-27&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;2 --&gt;
+        &lt;g class="edge" id="edge4"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M79,221C93,201 119,167 147,145 202,102 285,86 337,80"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="337,77 347,79 337,83 337,77"&gt;&lt;/polygon&gt;
+            &lt;text y="110" x="179" text-anchor="middle"&gt;date&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 3 --&gt;
+        &lt;g class="node" id="node6"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="454,113 322,113 322,149 454,149 454,113"&gt;&lt;/polygon&gt;
+            &lt;text y="136" x="388" text-anchor="middle"&gt;Introduction au
+                RDF&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;3 --&gt;
+        &lt;g class="edge" id="edge6"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M92,222C108,212 128,200 147,190 183,173 192,169 229,158 255,151 285,145 311,141"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="311,138 321,139 312,144 311,138"&gt;&lt;/polygon&gt;
+            &lt;text y="162" x="179" text-anchor="middle"&gt;title&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 4 --&gt;
+        &lt;g class="node" id="node8"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="415,167 361,167 361,203 415,203 415,167"&gt;&lt;/polygon&gt;
+            &lt;text y="190" x="388" text-anchor="middle"&gt;text&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;4 --&gt;
+        &lt;g class="edge" id="edge8"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M114,227C125,224 136,221 147,219 220,206 303,195 351,189"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="351,186 361,188 351,192 351,186"&gt;&lt;/polygon&gt;
+            &lt;text y="207" x="179" text-anchor="middle"&gt;type&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 5 --&gt;
+        &lt;g class="node" id="node10"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="415,221 361,221 361,257 415,257 415,221"&gt;&lt;/polygon&gt;
+            &lt;text y="244" x="388" text-anchor="middle"&gt;fr-CA&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;5 --&gt;
+        &lt;g class="edge" id="edge10"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M129,239C195,239 296,239 351,239"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="351,235 361,239 351,242 351,235"&gt;&lt;/polygon&gt;
+            &lt;text y="236" x="179" text-anchor="middle"&gt;Language&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 6 --&gt;
+        &lt;g class="node" id="node12"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="415,275 361,275 361,311 415,311 415,275"&gt;&lt;/polygon&gt;
+            &lt;text y="298" x="388" text-anchor="middle"&gt;RDF&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;6 --&gt;
+        &lt;g class="edge" id="edge12"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M113,251C124,254 136,257 147,259 220,273 303,283 351,289"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="351,286 361,290 351,292 351,286"&gt;&lt;/polygon&gt;
+            &lt;text y="256" x="179" text-anchor="middle"&gt;subject&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 7 --&gt;
+        &lt;g class="node" id="node14"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="482,329 294,329 294,365 482,365 482,329"&gt;&lt;/polygon&gt;
+            &lt;text y="352" x="388" text-anchor="middle"&gt;Copyright 2005 Daniel
+                Lemire&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;7 --&gt;
+        &lt;g class="edge" id="edge14"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M90,256C105,267 127,281 147,291 190,312 240,325 283,333"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="284,330 293,335 283,336 284,330"&gt;&lt;/polygon&gt;
+            &lt;text y="288" x="179" text-anchor="middle"&gt;rights&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 8 --&gt;
+        &lt;g class="node" id="node16"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="547,383 229,383 229,423 547,423 547,383"&gt;&lt;/polygon&gt;
+            &lt;text y="400" x="388" text-anchor="middle" font-size="0.9em"&gt;Un
+                document comprenant des exemples&lt;/text&gt;
+            &lt;text y="416" x="388" text-anchor="middle" font-size="0.9em"&gt;
+                d'utilisation du RDF en gestion des connaissances.&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;8 --&gt;
+        &lt;g class="edge" id="edge16"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M78,257C92,278 118,314 147,337 172,357 203,370 234,380"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="235,377 244,383 233,383 235,377"&gt;&lt;/polygon&gt;
+            &lt;text y="334" x="179" text-anchor="middle"&gt;description&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 9 --&gt;
+        &lt;g class="node" id="node18"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="415,441 361,441 361,477 415,477 415,441"&gt;&lt;/polygon&gt;
+            &lt;text y="464" x="388" text-anchor="middle"&gt;html&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;9 --&gt;
+        &lt;g class="edge" id="edge18"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M73,257C83,288 107,352 147,391 203,444 298,457 351,459"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="351,455 361,459 351,462 351,455"&gt;&lt;/polygon&gt;
+            &lt;text y="388" x="179" text-anchor="middle"&gt;format&lt;/text&gt;
+        &lt;/g&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;p&gt;Évidemment, &lt;i&gt;Dublin Core&lt;/i&gt; est une norme RDF et non pas une norme XML.
+    Il est donc possible d'exprimer du contenu &lt;i&gt;Dublin Core&lt;/i&gt; sans passer
+    par le XML.
+    Nous pourrions très bien nous en tenir au tableau sujet/verbe/complément ou
+    utiliser une
+    autre syntaxe. Un syntaxe plus populaire que le XML est sans doute celle
+    décrite par la &lt;a href="http://www.ietf.org/rfc/rfc2731.txt"&gt;RFC 2731&lt;/a&gt;.
+    Elle est facile à comprendre: il suffit d'utiliser des éléments meta avec
+    les attributs name et content. La convention est que si l'attribute débute
+    par le préfixe « DC.» ce qui suit est une information Dublin Core. Voici un
+    exemple:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.date&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;2004-07-27&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.title&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Introduction au RDF&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.type&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.Language&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;fr-CA&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.subject&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;RDF,
+        Dublin Core, Creative Commons, FOAF, RSS/RDF&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.rights&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Copyright
+        2005 Daniel Lemire&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.description&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Un
+        document comprenant des exemples&lt;/span&gt;
+    &lt;span style="color:#0000e6; "&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;d'utilisation du
+        RDF en gestion des connaissances.&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;meta&lt;/span&gt; &lt;span style="color:#274796; "&gt;name&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;DC.format&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;content&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text/html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Notons aussi que les conventions d'espace de noms s'appliquent et que l'ordre
+    n'est pas important.
+    Nous pouvons donc remplacer le XML précédent par celui-ci&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://lemire.me/fr/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Introduction au RDF&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;date&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;2004-07-27&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;date&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;type&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;text&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;type&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subject&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;RDF, Dublin Core, Creative Commons,
+    FOAF, RSS/RDF&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subject&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;rights&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Copyright 2005 Daniel Lemire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;rights&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un document comprenant des exemples
+    d'utilisation du RDF en gestion des connaissances.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;format&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;text/html&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;format&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;identifier&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fr-CA&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Il existe des applications plus sophistiquées de la norme &lt;i&gt;Dublin Core&lt;/i&gt;,
+    mais nous avons ici l'essentiel.
+    Vous pouvez dès maintenant cataloguer les ressources d'une entreprise en
+    utilisant simplement ce que nous venons de présenter.
+    Comme la norme est utilisée partout dans le monde, il sera possible
+    d'échanger ces
+    descriptions ou d'utiliser des logiciels communs pour le traitement ou
+    l'affichage des informations.&lt;/p&gt;
+&lt;h2&gt;Un exemple&amp;nbsp;: &lt;i&gt;Creative Commons&lt;/i&gt;&lt;/h2&gt;
+&lt;p&gt;Une des limites apparentes de la norme &lt;i&gt;Dublin Core&lt;/i&gt; est son incapacité
+    à spécifier de façon précise
+    les droits accordés sur un travail. Le problème est particulièrement
+    fréquent sur le web&amp;nbsp;:
+    a-t-on le droit d'utiliser telle ou telle image gratuitement, de la
+    reproduire, de la modifier,
+    et ainsi de suite.&lt;/p&gt;
+&lt;p&gt;Pour résoudre cette difficulté, les gens font appel à la norme &lt;i&gt;Creative
+        Commons&lt;/i&gt;, qui
+    utilise le préfixe «&amp;nbsp;http://web.resource.org/cc/&amp;nbsp;». Cette norme
+    définit
+    une classe «&amp;nbsp;Work&amp;nbsp;» (travail, en anglais, ici au sens d'oœuvre),
+    mais emprunte pratiquement tout le reste
+    à &lt;i&gt;Dublin Core&lt;/i&gt; qu'elle vient compléter. La norme &lt;i&gt;Creative
+        Commons&lt;/i&gt; a été proposée en&amp;nbsp;2001
+    par James Boyle, Michael Carroll, Lawrence Lessig, Hal Abelson, Eric
+    Saltzman et Eric Eldred.&lt;/p&gt;
+&lt;p&gt;Voici un exemple très simple d'une description utilisant
+    la norme &lt;i&gt;Creative Commons&lt;/i&gt;&amp;nbsp;:&lt;/p&gt;
+
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1" class="tabNormal"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sujet&lt;/td&gt;
+                &lt;td&gt;Verbe&lt;/td&gt;
+                &lt;td&gt;Objet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://www.w3.org/1999/ 02/22-rdf-syntax-ns#type&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Work&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/title&lt;/td&gt;
+                &lt;td&gt;"Le RDF par l'exemple"&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Et voici la version XML correspondante&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;web.resource.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/cc/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le RDF par l'exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Tout ce que nous avons affirmé dans ce dernier document, c'est que la page
+    actuelle
+    appartient à la classe «&amp;nbsp;Work&amp;nbsp;». Dans l'état actuel des choses,
+    nous affirmons par défaut qu'il
+    n'est pas permis d'utiliser cette page, car nous n'avons attribué aucune
+    permission.&lt;/p&gt;
+&lt;p&gt;Supposons que l'auteur désire accorder le droit au lecteur de redistribuer,
+    de modifier et
+    de partager cette page, pour autant qu'il utilise la même licence. Nous
+    pourrions alors utiliser la licence
+    «&amp;nbsp;Attribution-ShareAlike 2.0&amp;nbsp;» dont l'URI est
+    «&amp;nbsp;http://creativecommons.org/licenses/by-sa/2.0/&amp;nbsp;».
+    Évidemment, nous pouvons aussi créer notre licence de toute pièce, mais dans
+    l'exemple,
+    nous utiliserons la licence «&amp;nbsp;Attribution-ShareAlike 2.0&amp;nbsp;».
+    Pour faire un lien entre notre travail et une licence, nous utilisons le
+    verbe dont
+    l'URI est «&amp;nbsp;http://web.resource.org/cc/license&amp;nbsp;»,
+    comme ce qui suit; observez bien la dernière ligne du tableau. &lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1" class="tabNormal"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sujet&lt;/td&gt;
+                &lt;td&gt;Verbe&lt;/td&gt;
+                &lt;td&gt;Objet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://www.w3.org/1999/ 02/22-rdf-syntax-ns#type&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Work&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://purl.org/ dc/elements/1.1/title&lt;/td&gt;
+                &lt;td&gt;"Le RDF par l'exemple"&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://teluq.ca/ rdfexemples.html&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/license&lt;/td&gt;
+                &lt;td&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous pouvons aussi utiliser le XML correspondant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;web.resource.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/cc/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le RDF par l'exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;license&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Voici la représentation sous la forme d'un graphe&amp;nbsp;:&lt;/p&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" version="1.0" zoomAndPan="magnify" font-size="0.7em" height="150" width="600"&gt;
+    &lt;g id="graph0" transform="scale(1)" class="graph"&gt;
+        ../module5/cc.pdf
+        &lt;!-- 0 --&gt;
+        &lt;g class="node" id="node1"&gt;
+            &lt;a xlink:type="simple" xlink:actuate="onRequest" xlink:title="rdfexemples.html\n{Work}" xlink:show="replace" xlink:href="http%3A//teluq.ca/rdfexemples.html"&gt;
+                &lt;ellipse cy="50" style="fill:none;stroke:black;" cx="71" rx="64" ry="28"&gt;&lt;/ellipse&gt;
+                &lt;text y="47" x="71" text-anchor="middle"&gt;rdfexemples.html&lt;/text&gt;
+                &lt;text y="63" x="71" text-anchor="middle"&gt;{Work}&lt;/text&gt;
+            &lt;/a&gt;
+        &lt;/g&gt;
+        &lt;!-- 1 --&gt;
+        &lt;g class="node" id="node2"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="427,5 287,5 287,41 427,41 427,5"&gt;&lt;/polygon&gt;
+            &lt;text y="28" x="357" text-anchor="middle"&gt;Le RDF par
+                l'exemple&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;1 --&gt;
+        &lt;g class="edge" id="edge2"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M135,44C177,40 232,35 277,31"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="277,28 287,30 277,34 277,28"&gt;&lt;/polygon&gt;
+            &lt;text y="37" x="175" text-anchor="middle"&gt;title&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 2 --&gt;
+        &lt;g class="node" id="node4"&gt;
+            &lt;ellipse cy="77" style="fill:none;stroke:black;" cx="357" rx="143" ry="18"&gt;&lt;/ellipse&gt;
+            &lt;text y="82" x="357" text-anchor="middle" font-size="0.9em"&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;2 --&gt;
+        &lt;g class="edge" id="edge4"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M132,60C140,61 148,62 155,63 175,66 195,67 215,69"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="215,66 225,70 215,72 215,66"&gt;&lt;/polygon&gt;
+            &lt;text y="60" x="175" text-anchor="middle"&gt;license&lt;/text&gt;
+        &lt;/g&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;p&gt;Nous avons alors un document &lt;i&gt;Creative Commons&lt;/i&gt; complet. Cependant, un
+    problème demeure.
+    Supposons qu'un logiciel fasse automatiquement une recherche pour vous et
+    que vous ne désiriez obtenir
+    que les textes que vous pouvez modifier librement. Il n'est pas évident pour
+    une machine
+    de comprendre que l'URI
+    «&amp;nbsp;http://creativecommons.org/licenses/by-sa/2.0/&amp;nbsp;» vous donne ce
+    droit;
+    d'ailleurs, une telle recherche n'est peut-être pas très simple pour un
+    humain... &lt;/p&gt;
+&lt;p&gt;&lt;i&gt;Creative Commons&lt;/i&gt; définit trois verbes et des objets permettant de
+    décrire une licence et une classe.
+    Toutes les licences appartiennent à la classe ayant pour URI
+    «&amp;nbsp;http://web.resource.org/cc/License&amp;nbsp;».
+    Les URI des trois verbes sont&amp;nbsp;:&lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;http://web.resource.org/cc/permits&lt;/dt&gt;
+    &lt;dd&gt;&lt;b&gt;La licence le permet.&lt;/b&gt; &lt;i&gt;Creative Commons&lt;/i&gt; définit trois URI
+        pouvant être utilisés comme objet de ce verbe.
+        Il y a d'abord «&amp;nbsp;http://web.resource.org/cc/Reproduction&amp;nbsp;», le
+        droit de reproduire en tout ou en partie le travail.
+        Il y a ensuite «&amp;nbsp;http://web.resource.org/cc/Distribution&amp;nbsp;», le
+        droit de redistribuer le travail.
+        Finalement, il y a
+        «&amp;nbsp;http://web.resource.org/cc/DerivativeWorks&amp;nbsp;», le droit de
+        modifier le travail.
+        Évidemment, il est possible de définir ses propres objets.
+    &lt;/dd&gt;
+    &lt;dt&gt;http://web.resource.org/cc/requires&lt;/dt&gt;
+    &lt;dd&gt;&lt;b&gt;La licence pose comme condition.&lt;/b&gt; &lt;i&gt;Creatives Commons&lt;/i&gt; définit
+        quatre URI pouvant être utilisés
+        comme objet de ce verbe&amp;nbsp;:
+        «&amp;nbsp;http://web.resource.org/cc/Notice&amp;nbsp;» pour spécifier qu'il
+        faut reproduire
+        intégralement les notes légales (licence et droits d'auteurs);
+        «&amp;nbsp;http://web.resource.org/cc/Attribution&amp;nbsp;» pour spécifier
+        qu'il
+        faut attribuer à l'auteur le crédit du travail;
+        «&amp;nbsp;http://web.resource.org/cc/ShareAlike&amp;nbsp;» pour spécifier que
+        si l'on redistribue le travail, il faut
+        le faire en gardant la même licence;
+        «&amp;nbsp;http://web.resource.org/cc/SourceCode&amp;nbsp;»
+        pour spécifier que le code source doit être redistribué.
+    &lt;/dd&gt;
+    &lt;dt&gt;http://web.resource.org/cc/prohibits&lt;/dt&gt;
+    &lt;dd&gt;&lt;b&gt;La licence interdit.&lt;/b&gt; Il n'y a qu'un seul URI défini par
+        &lt;i&gt;Creative Commons&lt;/i&gt; qui peut être utilisé
+        avec ce verbe&amp;nbsp;:
+        «&amp;nbsp;http://web.resource.org/cc/CommercialUse&amp;nbsp;»; cela permet
+        d'interdire l'utilisation à des fins
+        commerciales. Encore une fois, il est possible de définir ses propres
+        objets.&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Dans le cas de la licence «&amp;nbsp;Attribution-ShareAlike 2.0&amp;nbsp;», nous
+    pouvons la décrire comme suit&amp;nbsp;:&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1" class="tabNormal"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sujet&lt;/td&gt;
+                &lt;td&gt;Verbe&lt;/td&gt;
+                &lt;td&gt;Objet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://www.w3.org/1999/ 02/22-rdf-syntax-ns#type&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/License&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/permits&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Reproduction&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/permits&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Distribution&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/requires&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Notice&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/requires&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/Attribution&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/permits&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/DerivativeWorks&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;http://creativecommons.org/ licenses/by-sa/2.0/&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/requires&lt;/td&gt;
+                &lt;td&gt;http://web.resource.org/ cc/ShareAlike&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Nous pouvons aussi utiliser le XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;web.resource.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/cc/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;License&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Reproduction&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Distribution&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Notice&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Attribution&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/DerivativeWorks&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/ShareAlike&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;License&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;En pratique, nous combinons souvent le tout (description du travail et
+    description de la licence) pour obtenir le XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;web.resource.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/cc/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://teluq.ca/rdfexemples.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Le RDF par l'exemple&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;license&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Work&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;License&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://creativecommons.org/licenses/by-sa/2.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Reproduction&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Distribution&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Notice&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/Attribution&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;permits&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/DerivativeWorks&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;requires&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://web.resource.org/cc/ShareAlike&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;License&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Voilà! De cette manière, une machine pourra automatiquement déterminer quels
+    droits l'utilisateur a sur une œuvre.
+    Un logiciel pourrait automatiquement avertir l'utilisateur de ses
+    obligations si jamais il tentait d'enregistrer sur son
+    disque une copie de l'œuvre. Dans le cas d'une entreprise qui utilise
+    beaucoup de contenu multimédia,
+    l'utilisation de cette norme pourrait être très utile pour détecter
+    automatiquement les violations des droits d'auteur.&lt;/p&gt;
+&lt;h2&gt;Un exemple&amp;nbsp;: &lt;i&gt;FOAF&lt;/i&gt;&lt;/h2&gt;
+&lt;p&gt;Les personnes sont souvent ce qu'il y a de plus important dans une
+    organisation; il n'est donc pas étonnant
+    qu'on veuille utiliser le RDF pour les décrire. Pour ce faire, on utilise
+    souvent la norme &lt;i&gt;FOAF&lt;/i&gt;
+    pour «&amp;nbsp;Friend-Of-A-Friend&amp;nbsp;», ou un ami d'un ami, en français,
+    (préfixe http://xmlns.com/foaf/0.1/)
+    qui définit la classe «&amp;nbsp;Person&amp;nbsp;» (personne, en anglais). &lt;/p&gt;
+&lt;p&gt;Le projet &lt;i&gt;FOAF&lt;/i&gt; a été lancé de façon informelle par Daniel Brickley en
+    1998. À l'époque, il
+    avait mis un texte RDF ressemblant à ceci sur sa page personnelle&amp;nbsp;:
+    (&lt;b&gt;Attention.- Il ne s'agit pas de RDF/XML valable.&lt;/b&gt;)&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;RDF&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;vocabdemo.rdf&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    xmlns:rdf="http://www.w3.org/TR/WD-rdf-syntax#"&amp;gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Person&lt;/span&gt; &lt;span style="color:#274796; "&gt;ID&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;dan&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; Dan Brickley &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Email&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt; daniel.brickley@bristol.ac.uk &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Email&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;telephone&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;phone:44-1-+44(0)117-9287493&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;pager&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt; &lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;phone:44-1-+44(0)2523-1781115&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;homePage&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://purl.org/net/danbri/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;homePage&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt; &lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.ilrt.bris.ac.uk/about/staff/dan.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Person&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;RDF&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;La norme &lt;i&gt;FOAF&lt;/i&gt; est très riche; mais à la base, on trouve les verbes
+    suivants&amp;nbsp;:&lt;/p&gt;
+&lt;dl&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/name&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers le nom de la personne (John Smith)&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/nick&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers le surnom informel de la personne (joblo).&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/title&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers le titre de la personne (docteur, monsieur, madame).
+    &lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/homepage&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers la page personnelle de la personne.&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/mbox&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers l'adresse électronique de la personne.&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/img&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers une image de la personne, la représentant
+        spécifiquement.&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/depiction&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers une image représentant la personne. Contrairement à
+        «&amp;nbsp;img&amp;nbsp;», l'image
+        peut être une photo de groupe.&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/family_name&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers le nom de famille de la personne (Smith).&lt;/dd&gt;
+    &lt;dt&gt;http://xmlns.com/foaf/0.1/givenname&lt;/dt&gt;
+    &lt;dd&gt;Verbe pointant vers le prénom de la personne (John).&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;En XML, une description de l'auteur de ce document pourrait se présenter
+    comme suit&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;foaf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;xmlns.com&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/foaf/0.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Person&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;givenname&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Daniel&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;givenname&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;family_name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Lemire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;family_name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;homepage&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://lemire.me/fr/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;mbox&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;lemire@uqam.ca&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;mbox&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;img&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://lemire.me/fr/images/GIF/zel2p.gif&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;foaf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Person&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Voici le graphe équivalent&amp;nbsp;:&lt;/p&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="300" width="500" contentstyletype="text/css" version="1.0" preserveAspectRatio="xMidYMid meet" zoomAndPan="magnify" font-size="0.7em"&gt;
+    &lt;g id="graph0" transform="scale(1)" class="graph"&gt;
+        &lt;!-- 0 --&gt;
+        ../module5/foaf.pdf
+        &lt;g class="node" id="node1"&gt;
+            &lt;a xlink:type="simple" xlink:actuate="onRequest" xlink:title="Anonymous\nPerson" xlink:show="replace" xlink:href="http%3A//4suite.org/rdf/anonymous/61841b36-5a83-4833-9526-85153a4c3704"&gt;
+                &lt;ellipse cy="131" style="fill:none;stroke:black;" cx="56" rx="50" ry="28"&gt;&lt;/ellipse&gt;
+                &lt;text y="128" x="56" text-anchor="middle"&gt;(anonyme)&lt;/text&gt;
+                &lt;text y="144" x="56" text-anchor="middle"&gt;Person&lt;/text&gt;
+            &lt;/a&gt;
+        &lt;/g&gt;
+        &lt;!-- 1 --&gt;
+        &lt;g class="node" id="node2"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="350,5 296,5 296,41 350,41 350,5"&gt;&lt;/polygon&gt;
+            &lt;text y="28" x="323" text-anchor="middle"&gt;Daniel&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;1 --&gt;
+        &lt;g class="edge" id="edge2"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M83,107C95,97 110,86 125,78 177,51 244,36 285,29"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="285,26 295,27 286,32 285,26"&gt;&lt;/polygon&gt;
+            &lt;text y="50" x="162" text-anchor="middle"&gt;givenname&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 2 --&gt;
+        &lt;g class="node" id="node4"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="351,59 295,59 295,95 351,95 351,59"&gt;&lt;/polygon&gt;
+            &lt;text y="82" x="323" text-anchor="middle"&gt;Lemire&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;2 --&gt;
+        &lt;g class="edge" id="edge4"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M101,117C109,115 117,113 125,111 180,98 244,88 284,82"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="284,79 294,81 284,85 284,79"&gt;&lt;/polygon&gt;
+            &lt;text y="95" x="162" text-anchor="middle"&gt;family_name&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 3 --&gt;
+        &lt;g class="node" id="node6"&gt;
+            &lt;ellipse cy="131" style="fill:none;stroke:black;" cx="323" rx="106" ry="18"&gt;&lt;/ellipse&gt;
+            &lt;text y="136" x="323" text-anchor="middle" font-size="0.9em"&gt;http://lemire.me/fr/&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;3 --&gt;
+        &lt;g class="edge" id="edge6"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M107,131C135,131 172,131 207,131"&gt;&lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="207,127 217,131 207,134 207,127"&gt;&lt;/polygon&gt;
+            &lt;text y="128" x="162" text-anchor="middle"&gt;homepage&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 4 --&gt;
+        &lt;g class="node" id="node8"&gt;
+            &lt;polygon style="fill:none;stroke:black;" points="379,167 267,167 267,203 379,203 379,167"&gt;&lt;/polygon&gt;
+            &lt;text y="190" x="323" text-anchor="middle"&gt;lemire@uqam.ca&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;4 --&gt;
+        &lt;g class="edge" id="edge8"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M101,145C109,147 117,149 125,151 169,161 218,170 257,175"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="258,172 267,177 257,178 258,172"&gt;&lt;/polygon&gt;
+            &lt;text y="148" x="162" text-anchor="middle"&gt;mbox&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 5 --&gt;
+        &lt;g class="node" id="node10"&gt;
+            &lt;ellipse cy="239" style="fill:none;stroke:black;" cx="323" rx="38" ry="18"&gt;&lt;/ellipse&gt;
+            &lt;text y="244" x="323" text-anchor="middle"&gt;zel2p.gif&lt;/text&gt;
+        &lt;/g&gt;
+        &lt;!-- 0&amp;#45;&amp;gt;5 --&gt;
+        &lt;g class="edge" id="edge10"&gt;
+            &lt;path style="fill:none;stroke:black;" d="M81,156C93,167 109,179 125,187 174,212 235,226 276,232"&gt;
+            &lt;/path&gt;
+            &lt;polygon style="fill:black;stroke:black;" points="277,229 286,234 276,235 277,229"&gt;&lt;/polygon&gt;
+            &lt;text y="184" x="162" text-anchor="middle"&gt;img&lt;/text&gt;
+        &lt;/g&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;p&gt;Notez que la balise «&amp;nbsp;Person&amp;nbsp;» n'a pas d'attribut
+    «&amp;nbsp;rdf:about&amp;nbsp;». Actuellement, il existe
+    un débat sur cette question&amp;nbsp;: Peut-on attribuer un URI unique à chaque
+    individu et si oui,
+    comment le choisir? C'est un cas où l'URI du sujet est
+    «&amp;nbsp;implicite&amp;nbsp;»&amp;nbsp;: cela signifie que dans les triplets
+    sujet/verbe/objet, le sujet a un URI «&amp;nbsp;fictif&amp;nbsp;», qui n'est valable
+    que dans le cadre du document
+    que l'on traite. Autrement dit, le programme qui traite le document doit
+    allouer dynamiquement un URI au sujet
+    pour la durée du traitement. Rappelons-nous, en effet, que la norme RDF
+    permet d'omettre le sujet,
+    mais que si le sujet est spécifié, il doit être un URI.
+&lt;/p&gt;
+&lt;p&gt;Nous pouvons imaginer que la norme &lt;i&gt;FOAF&lt;/i&gt; sera éventuellement utilisée
+    pour représenter les réseaux sociaux, les
+    organisations, et ainsi de suite. Une fois l'information sociale représentée
+    de façon formelle, nous pouvons croire qu'il
+    sera possible de poser des questions à un ordinateur de l'ordre
+    suivant&amp;nbsp;: Est-ce que je connais quelqu'un
+    qui connaît quelqu'un travaillant chez IBM?&lt;/p&gt;
+&lt;h2&gt;Un exemple&amp;nbsp;: &lt;i&gt;RSS/RDF&lt;/i&gt;&lt;/h2&gt;
+&lt;p&gt;La version 1.0 de la norme &lt;i&gt;RSS&lt;/i&gt; est un exemple de RDF. Cette norme dont
+    l'acronyme n'a pas de définition établie,
+    sert à représenter des fils de nouvelles. Elle a été imaginée par la
+    compagnie Netscape et servait alors à la
+    production du portail Netscape (1999). Elle est devenue très populaire et on
+    trouve maintenant des milliers
+    de fils de nouvelles en format &lt;i&gt;RSS&lt;/i&gt; dans le monde. Par exemple,
+    sur &lt;a href="http://www.yulblog.org/"&gt;http://www.yulblog.org/&lt;/a&gt;, il y a
+    des centaines de
+    blogues écrits par des Montréalais et la plupart ont un fil de nouvelles en
+    format &lt;i&gt;RSS&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Une nouvelle, appelée «&amp;nbsp;item&amp;nbsp;» en &lt;i&gt;RSS&lt;/i&gt;, prend la forme
+    suivante&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/rss/1.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;La bourse fait faillite&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.nouvelles.com/nouvelles1.html&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Aujourd'hui, on a appris que la bourse a fait faillite.
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Nous constatons qu'il y a une classe (item) et trois verbes (title, link,
+    description) qui représentent
+    respectivement le titre, l'URL et le contenu de la nouvelle.&lt;/p&gt;
+&lt;p&gt;Un document &lt;i&gt;RSS&lt;/i&gt; est une liste d'items. Voici un document
+    &lt;i&gt;RSS&lt;/i&gt;&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/rss/1.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;channel&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles.rss&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un site de nouvelles&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.nouvelles.com/&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Nouvelles.com est un superbe site de nouvelles
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;lt;!--&lt;/span&gt;&lt;span style="color:#696969; "&gt;
+        Ensuite, on place une séquence de nouvelles,&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;les unes après les
+        autres&lt;/span&gt;&lt;span style="color:#696969; "&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;items&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Seq&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;lt;!--&lt;/span&gt;&lt;span style="color:#696969; "&gt;
+        chaque nouvelle a un URI &lt;/span&gt;&lt;span style="color:#696969; "&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles2&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Seq&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;items&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;channel&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Nous constatons une classe «&amp;nbsp;channel&amp;nbsp;» (canal, en anglais) qui
+    contient un titre, un URL (link) et une description.
+    Il y a aussi une liste de nouvelles (item). Généralement, nous combinons le
+    tout dans un seul fichier, comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/rss/1.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;channel&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles.rss&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un site de nouvelles&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.nouvelles.com/&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Nouvelles.com est un superbe site de nouvelles
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;lt;!--&lt;/span&gt;&lt;span style="color:#696969; "&gt;
+        Ensuite, on place une séquence de nouvelles,&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;les unes après les
+        autres&lt;/span&gt;&lt;span style="color:#696969; "&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;items&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Seq&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#696969; "&gt;&amp;lt;!--&lt;/span&gt;&lt;span style="color:#696969; "&gt;
+        chaque nouvelle a un URI &lt;/span&gt;&lt;span style="color:#696969; "&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;li&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles2&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Seq&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;items&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;channel&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;La bourse fait faillite&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.nouvelles.com/nouvelles1.html&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Aujourd'hui, on a appris que la bourse a fait faillite.
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles2&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Rien ne va plus à l'école&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;http://www.nouvelles.com/nouvelles2.html&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Un étudiant se serait rendu coupable d'apprentissage.
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Les applications du &lt;i&gt;RSS&lt;/i&gt; sont multiples. Supposons que votre
+    organisation collabore avec plusieurs autres organisations
+    et que vous vouliez rendre disponibles, sur une seule page web, toutes les
+    nouvelles
+    de toutes les organisations dont vous faites partie. Si chaque organisation
+    rend disponible sur le web un document
+    &lt;i&gt;RSS&lt;/i&gt; toujours mis à jour, vous pouvez facilement récupérer les
+    nouvelles de chacun et les afficher à un
+    seul endroit. Au lieu de solliciter tous les membres par courriel, les fils
+    de nouvelles &lt;i&gt;RSS&lt;/i&gt; permettent
+    à une machine de faire un tri et de personnaliser le contenu.
+&lt;/p&gt;
+&lt;p&gt;La norme RSS est en voie d'être remplacée par la norme &lt;a href="http://en.wikipedia.org/wiki/Atom_(standard)"&gt;Atom&lt;/a&gt;. Un des
+    avantages du nouveau format Atom est que chaque nouvelle doit avoir un
+    identifiant unique ce qui permet d'éviter les doublons. Cependant, la norme
+    RSS risque d'être toujours utile pendant bien des années. Atom n'est pas en
+    RDF/XML. En voici un exemple&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;utf-8&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;feed&lt;/span&gt; &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/2005/Atom&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Un site de nouvelles&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subtitle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Nouvelles.com est un superbe site de
+    nouvelles&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;subtitle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;updated&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;2003-12-13T18:30:02Z&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;updated&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;author&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;John Doe&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;name&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;email&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;johndoe@example.com&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;email&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;author&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;id&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;urn:uuid:60a76c80-d399-11d9-b91C-0003939e0af6&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;id&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;entry&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;La bourse fait faillite&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;link&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;http://www.nouvelles.com/nouvelles1.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;id&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;id&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;updated&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;2003-12-13T18:30:02Z&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;updated&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;summary&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Aujourd'hui, on a appris que la
+    bourse a fait faillite.
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;summary&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;entry&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;feed&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Nous avons étudié quatre applications importantes du RDF sur le web.
+    Le nombre d'applications est toutefois beaucoup plus important. Par exemple,
+    Facebook fait la promotion de la norme &lt;a href="http://ogp.me"&gt;Open
+        Graph&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Il faut garder à l'esprit que le RDF n'est pas le XML et que le XML ne sert
+    qu'à représenter le RDF
+    (et encore, ce n'est pas toujours possible). &lt;/p&gt;
+&lt;p&gt;Pour en apprendre davantage sur le RDF, nous vous suggérons le livre de
+    Shelley Powers, &lt;i&gt;&lt;a href="http://www.amazon.ca/Practical-RDF-Shelley-Powers/dp/0596002637"&gt;Practical
+            RDF&lt;/a&gt;&lt;/i&gt;,
+    publié chez O'Reilly.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741898339</timemodified>
+  </page>
+</activity>

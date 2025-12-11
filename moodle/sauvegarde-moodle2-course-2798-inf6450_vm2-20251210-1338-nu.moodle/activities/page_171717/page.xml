@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94401" moduleid="171717" modulename="page" contextid="1137180">
+  <page id="94401">
+    <name>Laboratoire XQuery avec Python (optionnel)</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>&lt;h1&gt;Laboratoire XQuery avec Python (optionnel)&lt;/h1&gt;
+
+
+Rendez vous sur le site &lt;a href="https://github.com/lemire/xquerypy"&gt; xquerypy &lt;/a&gt; qui comprend une petite application Python capable de traiter du XQuery et du XML. Suivez les consignes.</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>1</revision>
+    <timemodified>1764379515</timemodified>
+  </page>
+</activity>

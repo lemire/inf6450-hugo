@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72281" moduleid="131129" modulename="page" contextid="970256">
+  <page id="72281">
+    <name>Travail 5</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Travail 5&lt;/h1&gt;
+&lt;h2&gt;Consignes&lt;/h2&gt;
+&lt;p&gt;Lorsque vous aurez terminé le travail, transmettez à votre personne tutrice,
+    un seul document (Word 97/2000/XP, &lt;a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office"&gt;ODF&lt;/a&gt;,
+    PDF, RTF ou en format texte) comprenant,
+    pour chaque exercice, le tableau, le code ou le contenu de votre document
+    XSLT.
+    &lt;strong&gt;Ne transmettez pas vos solutions en plusieurs fichiers. Ne
+        transmettez pas
+        une archive
+        compressée (zip ou autre).&lt;/strong&gt;
+    Il s'agit d'un travail personnel et vous ne devez pas partager vos
+    solutions.
+&lt;/p&gt;
+&lt;p&gt;Vous devez transmettre votre travail en utilisant l'outil de dépôt de
+    l'Université.&lt;/p&gt;
+&lt;p&gt;Cette activité notée compte pour 10% de la note globale.&lt;/p&gt;
+&lt;p&gt;Dans un tableau de triplets, les objets qui ne sont pas des URI, doivent être
+    placés entre guillements (" "). &lt;/p&gt;
+&lt;h2&gt;Exercice 1&lt;/h2&gt;
+&lt;p&gt;Représentez, dans un tableau de triplets (sujet, verbe, objet), le document
+    RDF/XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;md&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.mondomaine.com&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://www.uqam.ca/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;md&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;titre&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Site de l'UQAM&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;md&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;titre&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;md&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;autre&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://www.uqam.ca/index.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Exercice 2&lt;/h2&gt;
+&lt;p&gt;Écrivez un programme Java qui utilise l'API DOM pour extraire tous les titres
+    des items d'un document RSS 1.0. Vous pouvez supposer que le fichier
+    réside sur votre disque. Ne joignez pas un fichier à l'extension java.&lt;/p&gt;
+&lt;h2&gt;Exercice 3&lt;/h2&gt;
+&lt;p&gt;Représentez, dans un tableau de triplets (sujet, verbe, objet), l'exemple en
+    RDF qui suit et qui provient
+    de la norme &lt;a href="https://en.wikipedia.org/wiki/Publishing_Requirements_for_Industry_Standard_Metadata"&gt;PRISM&lt;/a&gt;.
+&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;UTF-8&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;rdf&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/02/22-rdf-syntax-ns&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;#&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;pcv&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;prismstandard.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/namespaces/pcv/1.0/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;dc&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;purl.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/dc/elements/1.1/&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://wanderlust.com/2000/08/Corfu.jpg&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;identifier&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:resource&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://wanderlust.com/content/2357845&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Descriptor&lt;/span&gt; &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://wanderlust.com/emp3845&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;John Peterson &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Descriptor&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;coverage&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Descriptor&lt;/span&gt;
+    &lt;span style="color:#274796; "&gt;rdf:about&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;https://prismstandard.org/vocabs/ISO-3166/GR&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;lang&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;en&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Greece&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt; &lt;span style="color:#666616; "&gt;xml&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;lang&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;fr&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Grece&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;label&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;pcv&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Descriptor&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;coverage&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;Description&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;rdf&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;RDF&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;h2&gt;Exercice 4&lt;/h2&gt;
+&lt;p&gt;Ecrivez un document XML/RDF correspondant au tableau suivant&amp;nbsp;:&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1" class="tablebleu"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sujet&lt;/td&gt;
+                &lt;td&gt;Verbe&lt;/td&gt;
+                &lt;td&gt;Objet&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt; https://www.uqam.ca &lt;/td&gt;
+                &lt;td&gt;https://www.uquebec.ca/nom &lt;/td&gt;
+                &lt;td&gt; "UQÀM"&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;h2&gt;Exercice 5&lt;/h2&gt;
+&lt;p&gt;La licence identifiée par l'URI
+    «&amp;nbsp;https://www.mondomaine.ca/licence&amp;nbsp;»
+    permet la reproduction, la distribution et la modification des œuvres.
+    Décrivez cette licence en utilisant &lt;i&gt;Creative Commons&lt;/i&gt; et le format
+    RDF/XML.&lt;/p&gt;
+&lt;h2&gt;Exercice 6&lt;/h2&gt;
+&lt;p&gt;Le site &lt;a href="https://www.flickr.com/"&gt;flickr&lt;/a&gt; permet de chercher des
+    photographies publiées avec une licence Creative Commons. Visitez
+    la page &lt;a href="https://www.flickr.com/photos/guppiecat/1351724368/in/set-72157601927001088/"&gt;https://www.flickr.com/photos/guppiecat/1351724368/in/set-72157601927001088/&lt;/a&gt;
+    et trouvez la licence Creative Commons. Écrivez-la en XML.&lt;/p&gt;
+&lt;h2&gt;Exercice 7&lt;/h2&gt;
+&lt;p&gt;L'&lt;a href="https://r-libre.teluq.ca/"&gt;archive institutionelle de la TÉLUQ&lt;/a&gt;
+    donne accès aux articles scientifiques de ses professeurs. Choisissez un
+    article (à votre guise) et consultez le code source HTML de la page web
+    correspondante. Vous y trouverez des étiquettes Dublin Core. Écrivez le tout
+    en XML.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741898857</timemodified>
+  </page>
+</activity>

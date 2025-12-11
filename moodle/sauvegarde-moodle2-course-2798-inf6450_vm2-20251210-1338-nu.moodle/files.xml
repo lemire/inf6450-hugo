@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file id="6185188">
+    <contenthash>0383ede0fc121e0dd860cd19fffebe87882aa68e</contenthash>
+    <contextid>970103</contextid>
+    <component>mod_page</component>
+    <filearea>content</filearea>
+    <itemid>0</itemid>
+    <filepath>/</filepath>
+    <filename>Screenshot 2025-03-20 at 5.30.17 PM.png</filename>
+    <userid>14301</userid>
+    <filesize>218431</filesize>
+    <mimetype>image/png</mimetype>
+    <status>0</status>
+    <timecreated>1742506324</timecreated>
+    <timemodified>1742506519</timemodified>
+    <source>Screenshot 2025-03-20 at 5.30.17 PM.png</source>
+    <author>Lemire, Daniel</author>
+    <license>allrightsreserved</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+  <file id="6185191">
+    <contenthash>da39a3ee5e6b4b0d3255bfef95601890afd80709</contenthash>
+    <contextid>970103</contextid>
+    <component>mod_page</component>
+    <filearea>content</filearea>
+    <itemid>0</itemid>
+    <filepath>/</filepath>
+    <filename>.</filename>
+    <userid>14301</userid>
+    <filesize>0</filesize>
+    <mimetype>$@NULL@$</mimetype>
+    <status>0</status>
+    <timecreated>1742506324</timecreated>
+    <timemodified>1742506551</timemodified>
+    <source>$@NULL@$</source>
+    <author>$@NULL@$</author>
+    <license>$@NULL@$</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+  <file id="7253991">
+    <contenthash>e27e4480c44b09efabe66d28e1f1087b22fcbb62</contenthash>
+    <contextid>969998</contextid>
+    <component>course</component>
+    <filearea>overviewfiles</filearea>
+    <itemid>0</itemid>
+    <filepath>/</filepath>
+    <filename>Capture d’écran, le 2025-10-29 à 17.38.45.png</filename>
+    <userid>14301</userid>
+    <filesize>167161</filesize>
+    <mimetype>image/png</mimetype>
+    <status>0</status>
+    <timecreated>1761773932</timecreated>
+    <timemodified>1761773934</timemodified>
+    <source>Capture d’écran, le 2025-10-29 à 17.38.45.png</source>
+    <author>Lemire, Daniel</author>
+    <license>allrightsreserved</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+  <file id="7253994">
+    <contenthash>da39a3ee5e6b4b0d3255bfef95601890afd80709</contenthash>
+    <contextid>969998</contextid>
+    <component>course</component>
+    <filearea>overviewfiles</filearea>
+    <itemid>0</itemid>
+    <filepath>/</filepath>
+    <filename>.</filename>
+    <userid>14301</userid>
+    <filesize>0</filesize>
+    <mimetype>$@NULL@$</mimetype>
+    <status>0</status>
+    <timecreated>1761773932</timecreated>
+    <timemodified>1761773934</timemodified>
+    <source>$@NULL@$</source>
+    <author>$@NULL@$</author>
+    <license>$@NULL@$</license>
+    <sortorder>0</sortorder>
+    <repositorytype>$@NULL@$</repositorytype>
+    <repositoryid>$@NULL@$</repositoryid>
+    <reference>$@NULL@$</reference>
+  </file>
+</files>

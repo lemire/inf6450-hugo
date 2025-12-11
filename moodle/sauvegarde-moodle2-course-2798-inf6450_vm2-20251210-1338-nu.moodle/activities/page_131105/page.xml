@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72257" moduleid="131105" modulename="page" contextid="970226">
+  <page id="72257">
+    <name>DOM : JavaScript et autres langages</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;DOM : JavaScript et autres langages&lt;/h1&gt;
+&lt;h2&gt;DOM et ECMAScript&lt;/h2&gt;
+&lt;p&gt;ECMAScript est un langage similaire au Java quant à sa syntaxe de base
+    et qui s'exécute souvent dans un navigateur.
+    Il fut inventé par Netscape en 1995 sous le nom de JavaScript.
+    Il s'agit d'une norme
+    de l'&lt;em&gt;European Computer Manufacturers Association&lt;/em&gt; (ECMA) depuis
+    1997.
+    L'implémentation
+    du ECMAScript que l'on retrouve dans le navigateur Firefox ou Google Chrome
+    se nomme toujours
+    JavaScript, alors que Microsoft nomme son implémentation JScript.
+    L'ECMAScript
+    n'est pas une forme de Java, même s'ils ont une ressemblance superficielle,
+    adoptant
+    tous les deux une syntaxe proche du langage C. Il existe de nombreux
+    tutoriels
+    sur le ECMAScript incluant le tutoriel de Jean-Paul Davalan se trouvant à
+    l'URL
+    &lt;a href="http://perso.wanadoo.fr/jean-paul.davalan/lang/jsc/"&gt;http://perso.wanadoo.fr/jean-paul.davalan/lang/jsc/&lt;/a&gt;
+    ou encore le tutoriel de
+    &lt;a href="http://www.commentcamarche.net/javascript/jsintro.php3"&gt;commentcamarche.net&lt;/a&gt;.
+    Le site xul.fr offre un &lt;a href="http://www.xul.fr/javascript/langage.html"&gt;résumé du langage&lt;/a&gt;,
+    le site
+    mozilla.org offre une &lt;a href="http://developer.mozilla.org/en/docs/JavaScript"&gt;description
+        complète&lt;/a&gt;
+    du langage (en anglais).
+    Si vous ne connaissez pas le langage ECMAScript, vous devriez prendre
+    quelques
+    instants pour en faire un survol.
+&lt;/p&gt;
+&lt;p&gt;
+    Les implémentations ECMAScript supportent bien l'API
+    DOM en général. La documentation de l'API DOM pour l'implémentation de
+    ECMAScript se
+    trouve à l'adresse &lt;a href="http://developer.mozilla.org/en/docs/Gecko_DOM_Reference"&gt;http://developer.mozilla.org/en/docs/Gecko_DOM_Reference&lt;/a&gt;.
+    La principale différence entre DOM en ECMAScript et DOM en Java est que
+    certaines méthodes en Java deviennent des attributs en ECMAScript
+    (getNodeValue() devient nodeValue).&lt;/p&gt;
+&lt;p&gt;
+    ECMAScript peut donc lire et traiter des documents XML avec l'API DOM.
+    En particulier, si ECMAScript est utilisé au sein d'une page XHTML, le
+    script peut modifier
+    la page dynamiquement en utilisant l'API DOM. La principale différence entre
+    l'utilisation de DOM
+    en Java et ECMAScript est qu'à l'exception des méthodes getAttribute,
+    setAttribute, getAttributeNS,
+    setAttributeNS, getAttributeNode, setAttributeNode, getAttributeNodeNS,
+    setAttributeNodeNS,
+    getElementsByTagName et getElementById,
+    toutes les méthodes dont le nom commence par «&amp;nbsp;get&amp;nbsp;» ou
+    «&amp;nbsp;set&amp;nbsp;» sont remplacées
+    par un attribut de l'objet (ou «&amp;nbsp;property&amp;nbsp;» en anglais). Au lieu
+    d'écrire
+    «&amp;nbsp;e.getChildNodes();&amp;nbsp;», on écrit «&amp;nbsp;e.childNodes;&amp;nbsp;», au
+    lieu
+    d'écrire «&amp;nbsp;e.setNodeValue("texte");&amp;nbsp;», on écrit
+    «&amp;nbsp;e.nodeValue="texte";&amp;nbsp;», et ainsi de suite.&lt;/p&gt;
+&lt;p&gt;
+    Par exemple, le script suivant va
+    &lt;a onmouseover="javascript:monele=document.getElementById('javatest'); monele.childNodes.item(0).nodeValue+=' (passage de souris) ';" id="javatest" style="color:blue;"&gt;ajouter du texte lorsque la souris
+        passera sur l'élément ayant un attribut
+        «&amp;nbsp;id='javatest'&amp;nbsp;».&lt;/a&gt;.
+&lt;/p&gt;
+&lt;pre&gt;monele=document.getElementById('javatest');
+    monele.childNodes.item(0).nodeValue+=' (passage de souris) ';
+&lt;/pre&gt;
+&lt;h2&gt;DOM et autres langages&lt;/h2&gt;
+&lt;p&gt;L'API DOM est supportée en C++ (voir &lt;a href="http://xml.apache.org/xerces-c/"&gt;Xerces-C&lt;/a&gt;),
+    en Python (paquetage xml.dom), en Perl (voir &lt;a href="http://xml.apache.org/xerces-p/"&gt;Xerces-P&lt;/a&gt;),
+    en ECMAScript, etc. C'est d'ailleurs la principale force de cette API&amp;nbsp;:
+    peu importe le
+    contexte, il y a fort à parier que vous aurez accès à l'API DOM. Ce n'est
+    sans doute pas
+    la meilleure API possible, mais son ubiquité fait en sorte qu'il vaut la
+    peine d'apprendre
+    à la connaître.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741901046</timemodified>
+  </page>
+</activity>

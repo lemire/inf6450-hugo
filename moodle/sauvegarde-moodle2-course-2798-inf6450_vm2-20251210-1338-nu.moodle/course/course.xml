@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course id="2798" contextid="969998">
+  <shortname>inf6450 vm2</shortname>
+  <fullname>INF 6450 - Gestion de l’information avec XML</fullname>
+  <idnumber></idnumber>
+  <summary></summary>
+  <summaryformat>1</summaryformat>
+  <format>topics</format>
+  <showgrades>0</showgrades>
+  <newsitems>0</newsitems>
+  <startdate>1708491600</startdate>
+  <enddate>0</enddate>
+  <marker>0</marker>
+  <maxbytes>1073741824</maxbytes>
+  <legacyfiles>0</legacyfiles>
+  <showreports>0</showreports>
+  <visible>1</visible>
+  <groupmode>1</groupmode>
+  <groupmodeforce>0</groupmodeforce>
+  <defaultgroupingid>0</defaultgroupingid>
+  <lang>fr_ca</lang>
+  <theme>gabarit_simple</theme>
+  <timecreated>1708464948</timecreated>
+  <timemodified>1761773934</timemodified>
+  <requested>0</requested>
+  <showactivitydates>1</showactivitydates>
+  <showcompletionconditions>$@NULL@$</showcompletionconditions>
+  <enablecompletion>0</enablecompletion>
+  <completionnotify>0</completionnotify>
+  <category id="5">
+    <name>ST</name>
+    <description></description>
+  </category>
+  <tags>
+  </tags>
+  <customfields>
+  </customfields>
+  <courseformatoptions>
+    <courseformatoption>
+      <format>topics</format>
+      <sectionid>0</sectionid>
+      <name>hiddensections</name>
+      <value>1</value>
+    </courseformatoption>
+    <courseformatoption>
+      <format>topics</format>
+      <sectionid>0</sectionid>
+      <name>coursedisplay</name>
+      <value>0</value>
+    </courseformatoption>
+  </courseformatoptions>
+</course>

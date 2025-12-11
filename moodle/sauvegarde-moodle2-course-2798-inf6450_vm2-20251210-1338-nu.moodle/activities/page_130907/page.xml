@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72077" moduleid="130907" modulename="page" contextid="970016">
+  <page id="72077">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Autoévaluation&lt;/h1&gt;
+&lt;p style="width:20cm;"&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en plus de vous permettre &lt;br class="autobr"&gt;
+    de vérifier vos réponses, fournit une courte explication. &lt;br class="autobr"&gt;
+    Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c’est que vous avez la bonne réponse&amp;nbsp;; &lt;br class="autobr"&gt;
+    sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour comprendre votre erreur. &lt;br class="autobr"&gt;
+    Puis, essayez de nouveau en cliquant sur le bouton «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131714@$" width="612" height="379" frameborder="0" allowfullscreen="allowfullscreen" title="Question 1 Test" style="width: 100%; height: 299px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131744@$" width="612" height="337" frameborder="0" allowfullscreen="allowfullscreen" title="Semaine Quiz 2" style="width: 100%; height: 257px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;
+    &lt;/script&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+&lt;div class="boiteQuiz"&gt;
+    &lt;ol class="lstQuestions"&gt;
+        &lt;li data-typeq="RetroImmediate" data-typeval="Neutre" data-typeretro="Générale" data-txtbtval=""&gt;
+            &lt;div&gt;
+                &lt;p&gt;&lt;b&gt;Question 3&lt;/b&gt;.
+                    Qu’est-ce qu’on veut dire quand on affirme que le XML est un métalangage&amp;nbsp;?&lt;/p&gt;
+                &lt;p&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;ul class="lstChReponses" role="group" aria-labelledby="id-group1-label"&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep1" name="q1_chRep1" value="q1_chRep1"&gt;
+                    &lt;label for="q1_chRep1"&gt;On peut l’utiliser aussi bien en anglais qu’en français.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!)&lt;/span&gt; Ce n’est pas ce qu’on veut dire, mais il est vrai que le XML est international.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep2" name="q1_chRep2" value="q1_chRep2"&gt;
+                    &lt;label for="q1_chRep2"&gt;On peut l’utiliser aussi bien avec Java, Perl, Python, C, C# ou C++.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!)&lt;/span&gt; Ce n’est pas ce qu’on veut dire, mais il est vrai qu’on peut utiliser XML &lt;br&gt; avec Java, Perl, Python, C, C# ou C++.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep3" name="q1_chRep3" value="q1_chRep3"&gt;
+                    &lt;label for="q1_chRep3"&gt;Il n’y a pas d’ensemble de balises prédéfinies.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:blue"&gt;&lt;span class="lib" style="color:blue"&gt;(Réponse correcte&amp;nbsp;!)&lt;/span&gt; C’est ce qu’on veut dire. Le choix des balises dépend entièrement de l’application.
+                            &lt;br&gt;Ainsi, un scientifique utilisera peut-être des balises comme &amp;lt;mesure&amp;gt;, &amp;lt;poids&amp;gt;, &amp;lt;experience&amp;gt;, alors
+                            &lt;br&gt;qu’un comptable utilisera peut-être les balises &amp;lt;prix&amp;gt;, &amp;lt;revenu&amp;gt;, &amp;lt;impôt&amp;gt;.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class="etats"&gt;
+        &lt;!--&lt;ul class="msg erreur"&gt;
+			&lt;li&gt;Veuillez répondre à la question.&lt;/li&gt;
+		&lt;/ul&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class="controles"&gt;
+        &lt;div class="validation"&gt;
+            &lt;button type="submit"&gt;Valider&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div class="boiteQuiz"&gt;
+    &lt;ol class="lstQuestions"&gt;
+        &lt;li data-typeq="RetroImmediate" data-typeval="Neutre" data-typeretro="Générale" data-txtbtval=""&gt;
+            &lt;div&gt;
+                &lt;b&gt;Question 4&lt;/b&gt;.
+                Que signifie le «&amp;nbsp;X&amp;nbsp;» de XML&amp;nbsp;?
+                &lt;p&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;ul class="lstChReponses" role="group" aria-labelledby="id-group1-label"&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep4" name="q1_chRep4" value="q1_chRep4"&gt;
+                    &lt;label for="q1_chRep4"&gt;eXtraordinaire.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Non.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep5" name="q1_chRep5" value="q1_chRep5"&gt;
+                    &lt;label for="q1_chRep5"&gt;eXtensible.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:blue"&gt;&lt;span class="lib" style="color:blue"&gt;(Réponse correcte&amp;nbsp;!)&lt;/span&gt;
+                            &lt;br&gt;Oui. Le plus souvent, il s’agit d’un groupe d’utilisateurs du XML qui s’entendent sur le même ensemble de balises. Par exemple, les cuisiniers du monde pourrait s’entendre sur des balises servant à décrire des recettes&amp;nbsp;; il s’agirait là d’une application XML.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep6" name="q1_chRep6" value="q1_chRep6"&gt;
+                    &lt;label for="q1_chRep6"&gt;eXceptionnel.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                      &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Non.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class="etats"&gt;
+        &lt;!--&lt;ul class="msg erreur"&gt;
+			&lt;li&gt;Veuillez répondre à la question.&lt;/li&gt;
+		&lt;/ul&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class="controles"&gt;
+        &lt;div class="validation"&gt;
+            &lt;button type="submit"&gt;Valider&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131759@$" width="612" height="360" frameborder="0" allowfullscreen="allowfullscreen" title="Semaine 1 Question 5" style="width: 100%; height: 257px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div class="boiteQuiz"&gt;
+    &lt;ol class="lstQuestions"&gt;
+        &lt;li data-typeq="RetroImmediate" data-typeval="Neutre" data-typeretro="Générale" data-txtbtval=""&gt;
+            &lt;div&gt;
+                &lt;b&gt;Question 6&lt;/b&gt;.
+                Laquelle des affirmations suivantes décrit une &lt;b&gt;application XML&lt;/b&gt;&amp;nbsp;?
+                &lt;p&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;ul class="lstChReponses" role="group" aria-labelledby="id-group1-label"&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep7" name="q1_chRep7" value="q1_chRep7"&gt;
+                    &lt;label for="q1_chRep7"&gt;Il s’agit d’un programme logiciel utilisant XML.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Non.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep8" name="q1_chRep8" value="q1_chRep8"&gt;
+                    &lt;label for="q1_chRep8"&gt;Un jeu de balises favorisant l’interopérabilité.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:blue"&gt;&lt;span class="lib" style="color:blue"&gt;(Réponse correcte&amp;nbsp;!)&lt;/span&gt;
+                            &lt;br&gt;Oui. Le plus souvent, il s’agit d’un groupe d’utilisateurs du XML
+                            &lt;br&gt;qui s’entendent sur le même ensemble de balises. Par exemple, les cuisiniers du monde
+                            &lt;br&gt;pourrait s’entendre sur des balises servant à décrire des recettes&amp;nbsp;; il s’agirait là
+                            &lt;br&gt;d’une application XML.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep9" name="q1_chRep9" value="q1_chRep9"&gt;
+                    &lt;label for="q1_chRep9"&gt;Une application XML est nécessairement un document XML.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Non. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class="etats"&gt;
+        &lt;!--&lt;ul class="msg erreur"&gt;
+			&lt;li&gt;Veuillez répondre à la question.&lt;/li&gt;
+		&lt;/ul&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class="controles"&gt;
+        &lt;div class="validation"&gt;
+            &lt;button type="submit"&gt;Valider&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131801@$" width="612" height="463" frameborder="0" allowfullscreen="allowfullscreen" title="Semaine 1: Question 7" style="width: 100%; height: 383px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131804@$" width="612" height="361" frameborder="0" allowfullscreen="allowfullscreen" title="Semain 1: Question 8" style="width: 100%; height: 299px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div class="boiteQuiz"&gt;
+    &lt;ol class="lstQuestions"&gt;
+        &lt;li data-typeq="RetroImmediate" data-typeval="Neutre" data-typeretro="Générale" data-txtbtval=""&gt;
+            &lt;div&gt;
+                &lt;b&gt;Question 9&lt;/b&gt;.
+                Le XML vise à remplacer le HTML.
+                &lt;p&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;ul class="lstChReponses" role="group" aria-labelledby="id-group1-label"&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep10" name="q1_chRep10" value="q1_chRep10"&gt;
+                    &lt;label for="q1_chRep10"&gt;Vrai.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Faux, même s’il est possible d’écrire le HTML en XML.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep11" name="q1_chRep11" value="q1_chRep11"&gt;
+                    &lt;label for="q1_chRep11"&gt;Faux&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:blue"&gt;&lt;span class="lib" style="color:blue"&gt;(Réponse correcte&amp;nbsp;!) &lt;/span&gt;Vrai. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class="etats"&gt;
+        &lt;!--&lt;ul class="msg erreur"&gt;
+			&lt;li&gt;Veuillez répondre à la question.&lt;/li&gt;
+		&lt;/ul&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class="controles"&gt;
+        &lt;div class="validation"&gt;
+            &lt;button type="submit"&gt;Valider&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div&gt;
+    &lt;iframe src="$@HVPEMBEDBYID*131810@$" width="612" height="403" frameborder="0" allowfullscreen="allowfullscreen" title="Semaine 1: Question 10" style="width: 100%; height: 341px;"&gt;&lt;/iframe&gt;
+    &lt;script src="https://m2.teluq.ca/mod/hvp/library/js/h5p-resizer.js" charset="UTF-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;div class="boiteQuiz"&gt;
+    &lt;ol class="lstQuestions"&gt;
+        &lt;li data-typeq="RetroImmediate" data-typeval="Neutre" data-typeretro="Générale" data-txtbtval=""&gt;
+            &lt;div&gt;
+                &lt;b&gt;Question 11&lt;/b&gt;.
+                Que signifie XML ?
+                &lt;p&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;ul class="lstChReponses" role="group" aria-labelledby="id-group1-label"&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep12" name="q1_chRep12" value="q1_chRep12"&gt;
+                    &lt;label for="q1_chRep12"&gt;Example Markup Language.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt; (Réponse incorrecte&amp;nbsp;!) &lt;/span&gt;Non. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep13" name="q1_chRep13" value="q1_chRep13"&gt;
+                    &lt;label for="q1_chRep13"&gt;Extra Markup Language&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:red"&gt;&lt;span class="lib" style="color:red"&gt;(Réponse incorrecte&amp;nbsp;!)&lt;/span&gt;Non. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;input class="custom" type="radio" role="radio" aria-checked="false" tabindex="0" id="q1_chRep14" name="q1_chRep14" value="q1_chRep14"&gt;
+                    &lt;label for="q1_chRep14"&gt;eXtensible Markup Language.&lt;/label&gt;
+                    &lt;div class="retro neutre"&gt;
+                        &lt;p style="color:blue"&gt;&lt;span class="lib" style="color:blue"&gt;(Réponse correcte&amp;nbsp;!) &lt;/span&gt;Effectivement. &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class="etats"&gt;
+        &lt;!--&lt;ul class="msg erreur"&gt;
+			&lt;li&gt;Veuillez répondre à la question.&lt;/li&gt;
+		&lt;/ul&gt;--&gt;
+    &lt;/div&gt;
+    &lt;div class="controles"&gt;
+        &lt;div class="validation"&gt;
+            &lt;button type="submit"&gt;Valider&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Vous avez maintenant terminé votre autoévaluation.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>31</revision>
+    <timemodified>1743516837</timemodified>
+  </page>
+</activity>

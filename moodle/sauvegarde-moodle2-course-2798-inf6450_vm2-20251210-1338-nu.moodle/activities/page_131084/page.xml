@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72236" moduleid="131084" modulename="page" contextid="970205">
+  <page id="72236">
+    <name>Travail 3</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Travail 3&lt;/h1&gt;
+&lt;h2&gt;Consignes&lt;/h2&gt;
+&lt;p&gt;Faites les exercices et répondez aux questions en utilisant &lt;i&gt;Chrome&lt;/i&gt;
+    comme moteur XSLT et
+    comme navigateur.
+    En effectuant les exercices, n'utilisez que des fonctions disponibles dans
+    &lt;i&gt;Chrome&lt;/i&gt;.&lt;/p&gt;
+&lt;p&gt;Une fois votre travail terminé, transmettez à votre personne tutrice, un
+    document (Word 97/2000/XP, &lt;a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=office"&gt;ODF&lt;/a&gt;,
+    PDF, RTF ou en format texte) en fichier attaché.
+    Il s'agit d'un travail personnel et vous ne devez pas partager vos
+    solutions. Cette activité notée compte pour 15% de la note globale.
+&lt;/p&gt;
+&lt;p&gt;Vous devez transmettre votre travail en utilisant l'outil de dépôt de
+    l'Université.&lt;/p&gt;
+&lt;p&gt; Bon travail!&lt;/p&gt;
+&lt;h2&gt; Exercice 1&lt;/h2&gt;
+&lt;p&gt;Étant donné le document XML suivant, rédigez le contenu du document CSS
+    «&amp;nbsp;test.css&amp;nbsp;»,
+    de telle sorte que les mots «&amp;nbsp;Rouge&amp;nbsp;» s'affichent en rouge, les
+    mots «&amp;nbsp;Noir&amp;nbsp;» s'affichent en noir,
+    les mots «&amp;nbsp;majuscule&amp;nbsp;» s'affichent en majuscule et ainsi de suite.
+    Votre document CSS doit contenir au plus 5&amp;nbsp;instructions&amp;nbsp;CSS de la
+    forme «&amp;nbsp;quelque chose {autre chose}&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;Indice&amp;nbsp;&lt;/b&gt;: Vous pouvez utiliser «&amp;nbsp;color:red&amp;nbsp;»,
+    «&amp;nbsp;color:olive&amp;nbsp;»,
+    «&amp;nbsp;color:black&amp;nbsp;», «&amp;nbsp;color:blue&amp;nbsp;»,
+    et ainsi de suite pour fixer la couleur du texte.&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml-stylesheet&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text/css&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;test.css&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;c&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Olive&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Bleu&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Noir&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    Olive
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Bleu&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Noir&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;c&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Rouge&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Noir&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;d&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;majuscule&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;d&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Vous pouvez tester votre solution en ligne:&lt;/p&gt;
+&lt;textarea id="xmlsource" rows="15" cols="45" style="display:none;"&gt;&amp;lt;?xml
+    version="1.0" ?&amp;gt;
+    &amp;lt;a&amp;gt;
+    &amp;lt;b&amp;gt;Rouge&amp;lt;/b&amp;gt;
+    &amp;lt;c&amp;gt;&amp;lt;a&amp;gt;Olive&amp;lt;/a&amp;gt;
+    &amp;lt;b&amp;gt;Bleu&amp;lt;/b&amp;gt;
+    &amp;lt;a&amp;gt;&amp;lt;a&amp;gt;Noir&amp;lt;/a&amp;gt;
+    Olive
+    &amp;lt;b&amp;gt;Bleu&amp;lt;/b&amp;gt;
+    &amp;lt;a&amp;gt;Rouge&amp;lt;/a&amp;gt;
+    &amp;lt;a&amp;gt;Noir&amp;lt;/a&amp;gt;
+    &amp;lt;/a&amp;gt;&amp;lt;/c&amp;gt;
+    &amp;lt;b&amp;gt;&amp;lt;a&amp;gt;Rouge&amp;lt;/a&amp;gt;
+    &amp;lt;b&amp;gt;Noir&amp;lt;/b&amp;gt;&amp;lt;/b&amp;gt;
+    &amp;lt;d&amp;gt;majuscule&amp;lt;/d&amp;gt;
+    &amp;lt;/a&amp;gt;
+&lt;/textarea&gt;
+&lt;p&gt;Document CSS:&lt;/p&gt;
+&lt;textarea id="csssource" rows="15" cols="45"&gt; a {
+    display: block;
+    color: red;
+    }
+&lt;/textarea&gt;
+&lt;br&gt;
+&lt;input type="button" value="Mise en forme" onclick="
+    var xt='',h3OK=1
+    function checkErrorXML(x)
+    {
+    xt=''
+    h3OK=1
+    checkXML(x)
+    }
+    function checkXML(n)
+    {
+    var l,i,nam
+    nam=n.nodeName
+    if (nam=='h3')
+        {
+        if (h3OK==0)
+            {
+            return;
+            }
+        h3OK=0
+        }
+    if (nam=='#text')
+        {
+        xt=xt + n.nodeValue + '\n'
+        }
+    l=n.childNodes.length
+    for (i=0;i&lt;l;i++)
+        {
+        checkXML(n.childNodes[i])
+        }
+    }
+    function chargeXML(txt)
+    {
+      console.log('chargeXML ');
+       var parser=new DOMParser();
+      console.log('loading xml from id '+txt);
+      var text=document.getElementById(txt).value;
+      console.log('text from id '+text);
+      try {
+        var xmlDoc=parser.parseFromString(text,'application/xml');
+        if (xmlDoc.documentElement.nodeName=='parsererror')
+        {
+          alert(xmlDoc.documentElement.childNodes[0].nodeValue);
+        }
+       if (xmlDoc.getElementsByTagName('parsererror').length&gt;0)
+       {
+       checkErrorXML(xmlDoc.getElementsByTagName('parsererror')[0]);
+       alert(xt)
+       } else {
+        return xmlDoc;
+       }
+      }
+      catch(err)
+      {
+      alert(err.message)
+      }
+    }
+    var mondom = chargeXML('xmlsource');
+    var pi = mondom.createProcessingInstruction('xml-stylesheet',
+                                         'type=&amp;quot;text/css&amp;quot; href=&amp;quot;data:text/css;charset=utf-8,' + encodeURI(document.getElementById('csssource').value)+'&amp;quot;');
+    var root = mondom.firstChild;
+    mondom.insertBefore(pi, root);
+    var serializer = new XMLSerializer();
+    var resultatTexte = serializer.serializeToString(mondom);
+    document.getElementById('dis').src = 'data:application/xml;charset=utf-8,' + encodeURI(resultatTexte);
+    "&gt;
+&lt;p&gt;Résultat : &lt;/p&gt;
+&lt;iframe id="dis" height="300" width="300" src="data:application/xml;charset=utf-8,%3C?xml%20version=%221.0%22?%3E%3C?xml-stylesheet%20type=%22text/css%22%20href=%22data:text/css;charset=utf-8,%2520%2520a%2520%257B%250A%2520%2520display:%2520block;%250A%2520%2520color:%2520red;%250A%2520%2520%257D%250A%2520%22?%3E%3Ca%3E%0A%20%3Cb%3ERouge%3C/b%3E%0A%20%3Cc%3E%3Ca%3EOlive%3C/a%3E%0A%20%3Cb%3EBleu%3C/b%3E%0A%20%3Ca%3E%3Ca%3ENoir%3C/a%3E%20%0A%20Olive%20%0A%20%3Cb%3EBleu%3C/b%3E%0A%20%3Ca%3ERouge%3C/a%3E%0A%20%3Ca%3ENoir%3C/a%3E%0A%20%3C/a%3E%3C/c%3E%0A%20%3Cb%3E%3Ca%3ERouge%3C/a%3E%0A%20%3Cb%3ENoir%3C/b%3E%3C/b%3E%0A%3Cd%3Emajuscule%3C/d%3E%0A%3C/a%3E"&gt;&lt;/iframe&gt;
+&lt;h2&gt;Exercice 2&lt;/h2&gt;
+&lt;p&gt;Supposons que toutes les notes des étudiants, dans différents cours, se
+    trouvent dans le document XML suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml-stylesheet&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;class.xsl&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text/xsl&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;universite&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Réjean Tremblay&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF8430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;89&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1030&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;69&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1230&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;75&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Martin Lambert&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF8430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;75&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1030&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;72&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1230&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;73&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Luc Alain&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF9430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;39&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1030&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;89&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1230&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;79&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Olive Saint-Amant&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF8430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;91&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1230&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;note&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;99&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;universite&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;À partir de ce document XML, fournissez le document XSLT
+    «&amp;nbsp;class.xsl&amp;nbsp;» qui calcule les moyennes
+    des étudiants, d'après les éléments «&amp;nbsp;cours&amp;nbsp;» associés aux
+    éléments «&amp;nbsp;étudiant&amp;nbsp;»,
+    et qui trie les étudiants par ordre alphabétique de leur nom de famille.
+    Votre document XSLT doit fonctionner même si on change le nom des étudiants,
+    l'ordre des éléments et le nom des cours. En conséquence, le nom des
+    étudiants ou le nom des cours
+    ne peuvent apparaître dans votre document&amp;nbsp;XSLT. En outre, vous ne devez
+    pas
+    utiliser les crochets «&amp;nbsp;[ ]&amp;nbsp;» dans votre solution.&lt;/p&gt;
+&lt;p&gt;&lt;a href="$@PAGEVIEWBYID*131060@$"&gt;Vous pouvez
+        tester votre solution en ligne à l'aide du laboratoire XSLT&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Indices&lt;/h4&gt;
+&lt;ol&gt;
+    &lt;li&gt;
+        &lt;p&gt;Le tableau ci-dessous devrait vous permettre de vérifier votre
+            réponse.&lt;/p&gt;
+        &lt;table border="1"&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Étudiant&lt;/td&gt;
+                    &lt;td&gt; Moyenne&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Luc Alain&lt;/td&gt;
+                    &lt;td&gt;69.0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Martin Lambert&lt;/td&gt;
+                    &lt;td&gt;73.3&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Olive Saint-Amant&lt;/td&gt;
+                    &lt;td&gt;95.0&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Réjean Tremblay&lt;/td&gt;
+                    &lt;td&gt;77.7&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;p&gt;Vous pouvez trier les étudiants selon leur nom de famille, en
+            remplaçant
+            «&amp;nbsp;&amp;lt;xsl:apply-templates select="etudiant" /&amp;gt;&amp;nbsp;»
+            par&amp;nbsp;: &lt;/p&gt;
+        &lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;xsl&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;apply-templates&lt;/span&gt; &lt;span style="color:#274796; "&gt;select&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;xsl&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sort&lt;/span&gt; &lt;span style="color:#274796; "&gt;select&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;substring-after(nom,' ')&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;order&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ascending&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;xsl&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;apply-templates&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+        &lt;/pre&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;p&gt;Vous pouvez formater les nombres à virgule flottante comme dans le
+            tableau, en utilisant
+            des appels de fonction XSLT tels que «&amp;nbsp;format-number(10.1324,
+            '##.0')&amp;nbsp;».&lt;/p&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Exercice 3&lt;/h2&gt;
+&lt;p&gt;Utilisez le même document XML qu'à l'exercice précédent. Cette fois-ci,
+    comptez le nombre d'étudiants dans chaque cours et calculez la moyenne par
+    cours.
+    Encore une fois, les noms des cours ou des étudiants ne doivent pas
+    apparaître dans votre document&amp;nbsp;XSLT. &lt;/p&gt;
+&lt;p&gt;Le tableau qui suit présente le résultat.&lt;/p&gt;
+&lt;div class="tableau style1"&gt;
+    &lt;table border="1"&gt;
+        &lt;tbody&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Sigle&lt;/td&gt;
+                &lt;td&gt; Nombre d'étudiants&lt;/td&gt;
+                &lt;td&gt; Moyenne du cours&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;INF8430&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+                &lt;td&gt;85.0&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;INF1030&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+                &lt;td&gt;76.7&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;INF1230&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+                &lt;td&gt;81.5&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;INF9430&lt;/td&gt;
+                &lt;td&gt;1&lt;/td&gt;
+                &lt;td&gt;39.0&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Bien que cet exercice soit très similaire au précédent et que la solution
+    soit de même longueur,
+    vous le trouverez probablement plus difficile.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;. Si vous aviez le droit d'utiliser XSLT&amp;nbsp;2.0,
+    la nouvelle instruction «&amp;nbsp;xsl:for-each-group&amp;nbsp;» rendrait ce
+    problème plus facile.
+    Mais rappelez-vous que vous devez vous limiter à XSLT&amp;nbsp;1.0.&lt;/p&gt;
+&lt;h2&gt;Exercice 4&lt;/h2&gt;
+&lt;p&gt;Supposons que vous ayiez des documents contenant exclusivement une
+    déclaration XML, des éléments
+    et des attributs. Il n'y a pas d'espace de noms.
+    Vous souhaitez filtrer les documents XML de telle manière que seuls les
+    éléments dont le nom contient la lettre a sont inclus. Naturellement, les
+    éléments, peu importe
+    leur nom, qui ne sont pas contenus dans un élément dont le nom contient la
+    lettre a doivent être
+    omis. Le document XML devra contenir une instruction xml-stylesheet, mais
+    elle ne doit pas être
+    reproduite dans le document sortant.&lt;/p&gt;
+&lt;p&gt;Si on prend cet exemple:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml-stylesheet&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;monfichier.xsl&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text/xsl&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;
+    &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ab&lt;/span&gt; &lt;span style="color:#274796; "&gt;x&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;x&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Test&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;b&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;z&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ab&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;z&lt;/span&gt; &lt;span style="color:#274796; "&gt;x&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;x&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;z&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;z&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;On souhaite que le document sortant soit celui-ci:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ab&lt;/span&gt; &lt;span style="color:#274796; "&gt;x&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;x&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;z&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;ab&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;/&lt;span style="color:#5f5035; "&gt;a&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Vous devez proposer deux documents XSLT permettant de réaliser ce filtrage.
+    Le premier document ne devra pas contenir d'élément
+    «&amp;nbsp;xsl:element&amp;nbsp;», alors que le second
+    ne contiendra pas d'élément «&amp;nbsp;xsl:copy&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Comme précédemment, vous pouvez vérifier votre solution en ligne.&lt;/p&gt;
+&lt;h2&gt;Exercice 5&lt;/h2&gt;
+&lt;p&gt;Considérez le fichier XML de la question 2 comprenant les notes des
+    étudiants. Écrivez une requête XQuery qui calcule la moyenne des
+    notes de chaque cours et la présente sous cette forme&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;maliste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF8430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;85&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1030&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;76.66666666666667&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF1230&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;81.5&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt; &lt;span style="color:#274796; "&gt;sigle&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;INF9430&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;39&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;maliste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Vous pouvez utiliser la fonction avg qui calcule la moyenne.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741896696</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72200" moduleid="131048" modulename="page" contextid="970169">
+  <page id="72200">
+    <name>Mise en forme</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Mise en forme&lt;/h1&gt;
+
+&lt;h2&gt;Format et mise en forme&lt;/h2&gt;
+&lt;p&gt;Par défaut, le document créé par une transformation XSLT est en XML, sauf si
+    le nœud-racine est nommé HTML et qu'il est précédé uniquement d'espaces et
+    de retours de charriot, auquel cas le document créé est un document HTML.
+    L'instruction xsl:output permet de spécifier explicitement le format du
+    document
+    nouvellement créé comme étant en XML, en HTML ou même au format texte (sans
+    balise). On peut aussi spécifier l'encodage des caractères ainsi que
+    l'indentation
+    des éléments. Voici des exemples&amp;nbsp;:
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;xsl:output method="text" /&amp;gt;
+    &amp;lt;xsl:output method="html" /&amp;gt;
+    &amp;lt;xsl:output method="xml" version="1.0" indent="yes"
+    encoding="ISO-8859-1"/&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Le résultat d'une transformation XSLT peut ensuite être redirigé vers un
+    fichier sur disque en utilisant un autre langage, comme ECMAScript ou Java.
+    Avec XSLT&amp;nbsp;1.0, il n'est pas possible de créer directement un fichier
+    avec XSLT.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741893230</timemodified>
+  </page>
+</activity>

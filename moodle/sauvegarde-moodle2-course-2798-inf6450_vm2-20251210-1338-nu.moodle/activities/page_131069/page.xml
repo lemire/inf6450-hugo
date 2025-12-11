@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72221" moduleid="131069" modulename="page" contextid="970190">
+  <page id="72221">
+    <name>XQuery</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;XQuery&lt;/h1&gt;
+
+
+&lt;p&gt;XSLT peut servir pour extraire des informations d'un document XML.
+    On peut trouver tous les noms des étudiants répondant à certains critères.
+    Dans un sens, XSLT peut être utilisé comme langage dans le contexte
+    des bases de données. Cependant, pour cette fin spécifique,
+    un nouveau langage appelé XQuery a été proposé. La syntaxe du XQuery
+    est un mélange de XPath et de &lt;a href="http://fr.wikipedia.org/wiki/SQL" shape="rect"&gt;SQL&lt;/a&gt; et ressemble davantage à ce que
+    les spécialistes des bases de données connaissent bien. &lt;/p&gt;
+&lt;p&gt;Pour tester les requêtes XQuery, Saxon est un outil pratique
+    écrit en java. Pour utiliser Saxon, chargez d'abord le fichier
+    &lt;a href="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/dossier%20zip/saxon9.jar?forcedownload=1" shape="rect"&gt;saxon9.jar&lt;/a&gt;. Vous devez mettre votre requête
+    XQuery dans un fichier texte (tel que «&amp;nbsp;query&amp;nbsp;») et invoquez Saxon
+    comme ceci&amp;nbsp;:
+&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;java -cp saxon9.jar net.sf.saxon.Query query&lt;/pre&gt;
+&lt;p&gt;Dans cet exemple, il faut que les fichiers saxon9.jar et query soient
+    dans le dossier où vous lancez la commande. Le fichier query doit contenir
+    une requête XQuery. Une requête XQuery n'est pas du XML.&lt;/p&gt;
+&lt;p&gt;Pour rendre nos exemples plus concrets, supposez que le fichier qui
+    se trouve à l'URI http://universite.com/etu.xml soit celui-ci&amp;nbsp;: &lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;liste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Laroche&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pierre&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;inscrit&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;INF 6460&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;54&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;INF 6450&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;44&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Aaron&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;inscrit&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;INF 6460&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;56&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;INF 6450&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;sigle&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;46&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;note&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;cours&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Pouf&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;prenom&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;non-inscrit&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;statut&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;etudiant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;liste&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Vous pouvez créer un fichier etu.xml sur votre
+    disque dans le même dossier que le fichier query,
+    et remplacer partout l'URI par le nom du fichier (tel que
+    «&amp;nbsp;etu.xml&amp;nbsp;»).&lt;/p&gt;
+&lt;p&gt;Parce que XQuery, tout comme XSLT 2.0, s'appuie sur XPath 2.0, il est facile
+    de calculer la liste des cours&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;for $s in distinct-values(doc("etu.xml")//sigle)
+    return $s&lt;/pre&gt;
+&lt;p&gt;Cette requête donnera «&amp;nbsp;INF 6460 INF 6450&amp;nbsp;».&lt;/p&gt;
+&lt;p&gt;Voici
+    un exemple de requête XQuery pour extraire d'un document XML tous
+    les étudiants inscrits&amp;nbsp;:
+&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    {let $inscription := "inscrit"
+    for $b in doc("http://universite.com/etu.xml")/liste/etudiant
+    where $b/statut = $inscription
+    order by $b/nom ascending
+    return &amp;lt;etudiant&amp;gt;
+    { $b/prenom }
+    { $b/nom }
+    &amp;lt;/etudiant&amp;gt;}
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Cet exemple est une requête de type
+    FLWOR parce qu'elle ne contient que des
+    instructions «&amp;nbsp;for&amp;nbsp;», «&amp;nbsp;let&amp;nbsp;», «&amp;nbsp;where&amp;nbsp;»,
+    «&amp;nbsp;order by&amp;nbsp;», et «&amp;nbsp;return&amp;nbsp;».
+    L'instruction «&amp;nbsp;for&amp;nbsp;» sert à définir une boucle,
+    l'instruction «&amp;nbsp;where&amp;nbsp;» sert à poser une condition,
+    l'instruction «&amp;nbsp;order by&amp;nbsp;» permet de trier le résultat,
+    alors que l'instruction «&amp;nbsp;return&amp;nbsp;» définit le résultat.
+    L'instruction «&amp;nbsp;let&amp;nbsp;» permet de définir une constante.
+    Notez que XQuery utilise les accolades pour distinguer les
+    requêtes XQuery et XPath du texte.
+    La requête considère tous les éléments etudiant contenus dans
+    l'élément-racine liste, pour chacun d'entre eux, elle vérifie
+    qu'il contient un élément statut contenant le texte «&amp;nbsp;inscrit&amp;nbsp;»,
+    puis elle donne la liste des noms et prénoms triée selon le nom.
+    Voici quel sera le résultat&amp;nbsp;:
+&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    &amp;lt;etudiant&amp;gt;
+    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+    &amp;lt;nom&amp;gt;Aaron&amp;lt;/nom&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;etudiant&amp;gt;
+    &amp;lt;prenom&amp;gt;Pierre&amp;lt;/prenom&amp;gt;
+    &amp;lt;nom&amp;gt;Laroche&amp;lt;/nom&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;On peut attribuer un compteur aux nœuds&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    {
+    for $b at $pos in doc("http://universite.com/etu.xml")/liste/etudiant
+    order by $b/nom descending
+    return
+    &amp;lt;etudiant&amp;gt; $pos -
+    { $b/prenom }
+    { $b/nom }
+    &amp;lt;/etudiant&amp;gt;
+    }
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Le résultat sera alors&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    &amp;lt;etudiant&amp;gt;3-
+    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+    &amp;lt;nom&amp;gt;Pouf&amp;lt;/nom&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;etudiant&amp;gt;1-
+    &amp;lt;prenom&amp;gt;Pierre&amp;lt;/prenom&amp;gt;
+    &amp;lt;nom&amp;gt;Laroche&amp;lt;/nom&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;etudiant&amp;gt;2-
+    &amp;lt;prenom&amp;gt;Jean&amp;lt;/prenom&amp;gt;
+    &amp;lt;nom&amp;gt;Aaron&amp;lt;/nom&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;On peut combiner les requêtes FLWOR, comme dans cet exemple&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    {for $e in doc("http://universite.com/etu.xml")//etudiant
+    return
+    &amp;lt;etudiant nom="{$e/nom}"&amp;gt;
+    { for $v in $e/cours return
+    &amp;lt;note&amp;gt;{number($v/note)}&amp;lt;/note&amp;gt;
+    }
+    &amp;lt;/etudiant&amp;gt;
+    }
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Cette requête va considérer chaque élément etudiant du document XML
+    et créer une liste de notes obtenues pour cet étudiant, dans ce cas, le
+    résultat sera&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    &amp;lt;etudiant nom="Laroche"&amp;gt;
+    &amp;lt;note&amp;gt;54&amp;lt;/note&amp;gt;
+    &amp;lt;note&amp;gt;44&amp;lt;/note&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;etudiant nom="Aaron"&amp;gt;
+    &amp;lt;note&amp;gt;56&amp;lt;/note&amp;gt;
+    &amp;lt;note&amp;gt;46&amp;lt;/note&amp;gt;
+    &amp;lt;/etudiant&amp;gt;
+    &amp;lt;etudiant nom="Pouf"/&amp;gt;
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;L'expression suivante va calculer la moyenne de notes (50)&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;&amp;lt;maliste&amp;gt;
+    {avg(
+    for $n in doc("http://universite.com/etu.xml")//note
+    return $n
+    )}
+    &amp;lt;/maliste&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Par défaut, les documents XQuery utilisent le
+    jeu de caractères Unicode UTF-8. On peut
+    stipuler un jeu de caractères différent dans
+    la déclaration XQuery optionnelle comme
+    dans cet exemple&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;xquery version "1.0" encoding "utf-8";
+    for $s in distinct-values(doc("etu.xml")//sigle)
+    return $s&lt;/pre&gt;
+&lt;p&gt;Certains moteurs de bases de données comme &lt;a href="http://monetdb.cwi.nl/" shape="rect"&gt;MonetDB&lt;/a&gt; ou &lt;a href="http://exist.sourceforge.net/" shape="rect"&gt;eXist&lt;/a&gt; supportent les requêtes XQuery.
+    Il y a aussi d'&lt;a href="http://www.w3schools.com/xquery/default.asp" shape="rect"&gt;excellents tutoriels sur le web&lt;/a&gt;.
+    Elliotte Rusty Harold nous offre une excellente &lt;a href="http://www.cafeconleche.org/slides/albany/xquery/" shape="rect"&gt;page sur XQuery&lt;/a&gt;
+    qui résume bien les points essentiels avec des exemples.
+&lt;/p&gt;
+&lt;p&gt;Il y a plusieurs approches
+    pour appeler XQuery à partir de Java.
+    Tout d'abord &lt;a href="http://jcp.org/aboutJava/communityprocess/edr/jsr225/" shape="rect"&gt;XQJ&lt;/a&gt; est utilisée par Saxon, mais aussi Oracle.
+    Saxon offre aussi des approches qui lui sont propres dont
+    &lt;a href="http://www.saxonica.com/documentation/using-xquery/api-query/s9api-query.html" shape="rect"&gt;s9api&lt;/a&gt;.
+    On trouve de &lt;a href="http://www.devx.com/tips/Tip/33143" shape="rect"&gt;nombreux exemples sur le web&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;On peut exécuter des requêtes XQuery dans un navigateur avec &lt;a href="http://www.xqib.org/"&gt;la librairie JavaScript XQIB&lt;/a&gt;. &lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>5</revision>
+    <timemodified>1764376793</timemodified>
+  </page>
+</activity>

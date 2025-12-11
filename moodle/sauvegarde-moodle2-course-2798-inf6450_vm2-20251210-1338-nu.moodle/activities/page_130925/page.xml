@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72092" moduleid="130925" modulename="page" contextid="970043">
+  <page id="72092">
+    <name>Définition de type de document</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Définition de type de document&lt;/h1&gt;
+
+&lt;h2&gt;Document XML valable&lt;/h2&gt;
+
+&lt;p&gt;Nous avons vu ce qu'était un document XML bien formé : un seul élément-racine, les éléments ne se chevauchent pas, les noms XML ne commencent pas par un chiffre, et ainsi de suite. De plus, un document XML bien formé peut contenir n'importe quel élément et dans n'importe quel ordre, et tous les éléments peuvent contenir des attributs, et peu importe ceux-ci.&lt;/p&gt;
+
+&lt;p&gt;En pratique, il est souvent suffisant pour les documents XML d'être bien formés, mais il arrive qu'on veuille imposer des contraintes supplémentaires aux éléments et attributs pouvant être utilisés. Par exemple, un élément « étudiant » pourrait posséder un numéro d'étudiant, mais pas l'inverse : un élément « numéro d'étudiant » ne pouvant contenir qu'un numéro et pas d'autres éléments. On peut aussi vouloir contraindre le contenu d'un document XML pour des raisons d'interopérabilité. Par exemple, si un groupe d'experts s'entendent sur un format XML pour un type de données, il est utile de pouvoir vérifier si un fichier XML donné correspond bien à ce sur quoi on s'est entendu. Un document XML qui est bien formé et qui respecte les contraintes définissant son type de document est dit valable (ou valide).&lt;/p&gt;
+
+&lt;p&gt;En d'autres mots, un document XML qui est bien formé et qui, en plus, satisfait aux contraintes dictant quels éléments et attributs peuvent être utilisés, et dans quel ordre et avec quel contenu, est dit valable.&lt;/p&gt;
+
+&lt;h2&gt;Normes de définition de type de document&lt;/h2&gt;
+
+&lt;p&gt;Il y a plusieurs façons de définir des types de documents XML. L'approche la plus répandue, la plus ancienne et la plus simple, est la norme de définition de type de document (DTD). Les deux autres possibilités émergentes les plus répandues sont XML Schema et Relax NG.&lt;/p&gt;
+
+&lt;p&gt;On fait généralement deux reproches à l'approche DTD : un document DTD n'est pas du XML et la norme n'est pas assez riche pour spécifier le contenu des documents XML avec finesse. En effet, L'approche DTD ne permet pas de déclarer qu'un contenu textuel doit être une date ou un nombre, et il n'y a pas de support pour les espaces de noms, sujet que nous traiterons plus loin dans ce module.&lt;/p&gt;
+
+&lt;p&gt;D'un autre côté, la norme DTD est très répandue et tous les logiciels qui supportent XML supportent maintenant cette norme, incluant Java, Google Chrome et Firefox. Les formats comme XHTML 2.0 sont toujours publiés avec une spécification DTD. Les autres possibilités, comme XML Schema, Relax NG, Schematron et Examplotron, sont moins bien supportées.&lt;/p&gt;
+
+&lt;p&gt;La norme XML Schema permet de définir avec une grande finesse des types de données comme une date ou un code de langue (« fr », « en »). Cette norme est très utile si on veut spécifier avec beaucoup de détail le format de nos documents XML. Comme vous pouvez le constater dans l'exemple suivant, la norme XML Schema permet non seulement de spécifier le nom des éléments et des attributs (« shipTo », « billTo », « comment », « items », « orderDate »), mais aussi leur type (« xsd:string », « xsd:decimal », « xsd:date »).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;xs:complexType name="PurchaseOrderType"&amp;gt;
+  &amp;lt;xs:sequence&amp;gt;
+    &amp;lt;xs:element name="shipTo" type="USAddress"/&amp;gt;
+    &amp;lt;xs:element name="billTo" type="USAddress"/&amp;gt;
+    &amp;lt;xs:element ref="comment" minOccurs="0"/&amp;gt;
+    &amp;lt;xs:element name="items"  type="Items"/&amp;gt;
+  &amp;lt;/xs:sequence&amp;gt;
+  &amp;lt;xs:attribute name="orderDate" type="xs:date"/&amp;gt;
+&amp;lt;/xs:complexType&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La norme XML Schema est supportée en Java depuis la version 1.5. Il n'est pas nécessaire d'utiliser une librairie spécialisée. Elle est cependant sujette à des critiques sévères de la part des experts en XML tels que Tim Bray (co-inventeur du XML) qui écrivait en novembre 2006 sur son blogue :&lt;/p&gt;
+
+&lt;p&gt;Everybody who actually touches the technology has known the truth for years, and it's time to stop sweeping it under the rug. W3C XML Schemas (XSD) suck. They are hard to read, hard to write, hard to understand, have interoperability problems, and are unable to describe lots of things you want to do all the time in XML. Schemas based on Relax NG, also known as ISO Standard 19757, are easy to write, easy to read, are backed by a rigorous formalism for interoperability, and can describe immensely more different XML constructs.&lt;/p&gt;
+
+&lt;p&gt;En somme, XML Schema est trop difficile à utiliser et à comprendre. Tim Bray, ainsi que de nombreux autres experts, préconisent plutôt l'utilisation de Relax NG. Cette norme, comme XML Schema, possède plusieurs avantages sur la norme DTD : elle permet de spécifier des types de données (comme une date ou un nombre), supporte les espaces de noms, etc. De plus, la norme Relax NG est plus élégante techniquement et parfois plus simple que la norme XML Schema. Des formats importants comme l'Open Document Format, DocBook (format XML), TEI, XHTML et Atom sont définis par RelaxNG plutôt que par XML Schema. (Une définition XML Schema sera sans doute produite pour le format XHTML 2.0.) Relax NG dispose aussi d'une syntaxe « compacte », qui n'est pas en XML contrairement au format par défaut de Relax NG, et que nous allons utiliser dans nos exemples. Voici un exemple de Relax NG :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element addressBook {
+  element card {
+    element name { text }
+    element email { text }
+  }*
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cet exemple spécifie que le document XML doit avoir comme élément racine un élément « addressBook », contenant zéro ou plus éléments « card ». Un élément « card » doit obligatoirement contenir un élément « name » suivi d'un élément « email ». &lt;/p&gt;
+
+&lt;p&gt;Tout en étant plus élégante que la norme DTD, le format Relax NG est plus limitée que XML Schema puisqu'il ne permet que quatre types de contraintes sur le nombre d'occurences d'un élément (zeroOrMore comme dans notre exemple, optional, un nombre précis (comme une seule fois) et oneOrMore) alors que le XML Schema permet des contraintes beaucoup plus spécifiques. Cependant, la richesse de la norme XML Schema a un coût : il s'agit d'une norme beaucoup plus difficile à utiliser et à apprendre en pratique.&lt;/p&gt;
+
+
+&lt;p&gt;On peut passer automatiquement d'un document DTD à un document XML Schema ou Relax NG avec un outil comme NekoDTD.&lt;/p&gt;
+
+&lt;p&gt;En somme, la norme DTD n'est sans doute pas ce qui se fait de mieux, mais c'est de loin la norme la plus utilisée historiquement, et c'est celle que nous allons étudier en détail. Pour certaines applications, la norme DTD demeure supérieure aux alternatives mentionnées précédemment: la définition d'entités n'est pas possible en XML Schema ou Relax NG, par exemple. Si vous maîtrisez la norme DTD, vous n'aurez aucun mal à utiliser une autre norme comme Relax NG puisque les principes essentiels sont les mêmes.&lt;/p&gt;
+
+&lt;h2&gt;Documents valables utilisant la norme DTD&lt;/h2&gt;
+
+&lt;p&gt;Un document valable commence par une déclaration XML, comme celle qui suit :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Elle est suivie d'une déclaration de type de document sous la forme &amp;lt;!DOCTYPE ... SYSTEM ... &amp;gt; , où l'on remplace les premiers trois points par le nom XML de l'élément-racine que le document doit avoir, et les deuxièmes trois points par une URL vers le document DTD. L'URL peut être absolue, comme « http://www.google.com/mydtd.dtd », ou locale, comme « madtd.dtd » ou « ../dtd/madtd.dtd ». Dans le second cas, il faut que le fichier DTD soit sur le disque, à l'endroit indiqué par rapport au fichier XML. Ainsi, dans l'exemple « ../dtd/madtd.dtd », il faudrait que le fichier « madtd.dtd»  soit dans le répertoire « dtd », voisin du répertoire où se trouve le fichier XML. Ainsi, immédiatement après la déclaration XML, on pourrait avoir le texte suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE baliseracine SYSTEM "http://www.mondomain.com/madtd.dtd"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;où « baliseracine » est le nom de l'élément-racine du document, alors que le chemin « http://www.mondomain.com/madtd.dtd»  nous dit où trouver le document DTD.&lt;/p&gt;
+
+&lt;p&gt;Rappelons que l'attribut « encoding » nous donne le jeu des caractères. On choisit souvent « ISO-8859-1 », mais par défaut, XML utilise un jeu de caractères Unicode (UTF-8). Si le contenu est en français (avec les accents), il est essentiel que le fichier soit enregistré avec le jeu de caractères déclaré sinon on pourra constater des messages d'erreurs ou des accents manquants. L'attribut « standalone » permet au logiciel de décider, s'il est nécessaire, d'aller chercher la DTD externe avant de lire le fichier XML, même si, très souvent, un logiciel tel Mozilla Firefox ignore la consigne et ne va pas chercher la DTD externe. En gros, s'il y a une DTD externe, on utilisera l'attribut « standalone="no" », autrement on utilise « standalone="yes" ».&lt;/p&gt;
+
+&lt;h2&gt;La syntaxe des documents DTD&lt;/h2&gt;
+
+&lt;p&gt;Les documents DTD contiennent des instructions de la forme &amp;lt;!ELEMENT ... &amp;gt;. Bien que celle-ci ait l'apparence d'une balise XML, ce n'est pas du XML. Dans une instruction, on met d'abord un nom XML qui correspond à un nom d'élément : par exemple, l'instruction « &amp;lt;!ELEMENT montant ... &amp;gt; » définira ce qui peut être contenu dans un élément de nom « montant ». Tout ce qui suit le nom de l'élément dicte ce que l'élément peut contenir. Le plus souvent, on place la description du contenu entre parenthèses (« &amp;lt;!ELEMENT montant (quelque chose) &amp;gt; »), sauf pour les cas particuliers (« ANY » et « EMPTY ») définis plus loin. De façon courante, on définit le contenu d'un élément par une liste de noms XML, correspondant à des noms d'élément et séparés par des virgules. Par exemple, l'instruction « &amp;lt;!ELEMENT montant (devise,valeur) &amp;gt; » nous informe qu'un élément « montant » doit contenir un élément « devise » suivi d'un élément « valeur ». Notons que l'ordre des éléments importe et que les instructions « &amp;lt;!ELEMENT montant (devise,valeur) &amp;gt; » et « &amp;lt;!ELEMENT montant (valeur,devise) &amp;gt; » ne sont pas équivalentes.&lt;/p&gt;
+
+&lt;p&gt;Bien qu'on ne puisse exprimer toutes les possibilités, la syntaxe DTD permet tout de même de spécifier un grand nombre de règles. Par exemple, le symbole « ? » permet de spécifier qu'un élément peut être présent ou non (élément optionnel). Ainsi, l'instruction « &amp;lt;!ELEMENT montant (devise?,valeur) &amp;gt; » signifie que l'élément « montant » peut contenir un élément « devise » (ou non) et doit contenir un élément « valeur ». Si jamais l'élément « devise » apparaît, il doit apparaître avant l'élément « valeur ». Si jamais on veut qu'un élément soit optionnel et que, s'il apparaît, il puisse apparaître plus d'une fois, on utilise le symbole « * ». Ainsi, l'instruction « &amp;lt;!ELEMENT montant (devise*,valeur) &amp;gt; » signifie qu'on peut avoir zéro, un ou plusieurs éléments « devise », puis un élément « valeur ». De la même façon, le symbole « + » est utilisé pour spécifier qu'un élément doit être présent, mais peut apparaître plus d'une fois.&lt;/p&gt;
+
+&lt;p&gt;Au lieu d'utiliser la virgule, on peut utiliser le symbole « | » pour spécifier qu'un élément ou un autre peut apparaître. Ainsi, l'instruction « &amp;lt;!ELEMENT montant (devise|valeur) &amp;gt; » signifie que l'élément « montant » peut contenir soit l'élément « devise », soit l'élément « valeur » (l'un ou l'autre, mais pas les deux ou aucun des deux). Finalement, on peut combiner le tout; par exemple, l'instruction « &amp;lt;!ELEMENT montant (devise+|valeur*) &amp;gt; » signifie que l'élément « montant » peut contenir au moins un élément « devise » (et rien d'autre) ou alors, aucun, 1 ou plusieurs éléments « valeur ».&lt;/p&gt;
+
+&lt;p&gt;Si jamais on veut qu'un élément puisse contenir du texte, on utilise le terme technique « #PCDATA » dans l'instruction DTD. Par exemple, l'instruction « &amp;lt;!ELEMENT montant (#PCDATA) &amp;gt; » signifie que l'élément « montant » contient du texte et seulement du texte (pas d'éléments). Supposons maintenant qu'on veut permettre du contenu mixte, comme dans l'exemple qui suit :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;mixte&amp;gt; du texte et &amp;lt;important&amp;gt;un élément&amp;lt;/important&amp;gt; &amp;lt;/mixte&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On pourrait penser que l'instruction « &amp;lt;!ELEMENT mixte (#PCDATA|important) &amp;gt; » permettra du texte ou des éléments « important », et c'est vrai; mais elle permet l'un (juste du texte) ou l'autre (juste un élément « important »), mais pas un mélange des deux. Pour pouvoir obtenir le résultat désiré, soit un mélange d'éléments « important » et de texte, il faut permettre la répétition du choix, comme dans l'instruction « &amp;lt;!ELEMENT mixte (#PCDATA|important)* &amp;gt; ». Il s'agit de la seule façon de spécifier qu'on permet un mélange de texte et d'éléments (contenu mixte).&lt;/p&gt;
+
+&lt;p&gt;Voyons un autre exemple de contenu mixte. Considérons l'instruction « &amp;lt;!ELEMENT montant (#PCDATA|devise)* &amp;gt; ». Ce qu'elle signifie exactement, c'est que les éléments « montant » peuvent contenir un mélange de texte et des éléments « devise », comme l'exemple qui suit :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;montant&amp;gt;10 $ et &amp;lt;devise&amp;gt;dollars&amp;lt;/devise&amp;gt;&amp;lt;/montant&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut aussi utiliser « ANY » pour spécifier qu'un élément peut contenir n'importe quoi (n'importe quelle séquence d'éléments déclarés dans la DTD et du texte) ou « EMPTY » pour spécifier qu'un élément doit être vide (sans même un seul espace). C'est le seul cas où l'on n'utilise pas de parenthèses lors de la définition du contenu, comme dans ces exemples : &amp;lt;!ELEMENT question ANY&amp;gt; et &amp;lt;!ELEMENT question EMPTY&amp;gt;.&lt;/p&gt;
+
+&lt;p&gt;Un document DTD prendra donc la forme d'un fichier en format texte contenant une suite d'instructions comme :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT lettre (#PCDATA|personne)* &amp;gt;
+&amp;lt;!ELEMENT personne (age,nom) &amp;gt;
+&amp;lt;!ELEMENT age (#PCDATA) &amp;gt;
+&amp;lt;!ELEMENT nom (#PCDATA) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Notez qu'on écrit rarement de nouvelles DTD : dans un domaine particulier, il existera souvent des DTD déjà utilisées; sinon, on fera l'effort de les créer, mais qu'une seule fois. L'important demeure toutefois de pouvoir lire et comprendre les DTD.&lt;/p&gt;
+
+&lt;h2&gt;Exemple supplémentaire&lt;/h2&gt;
+
+&lt;p&gt;Pour s'assurer de bien comprendre, voyons un autre exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT lettre (#PCDATA|personne)* &amp;gt;
+&amp;lt;!ELEMENT personne (age,nom) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Cette DTD nous spécifie que l'élément « lettre » contient du mélange de texte et d'éléments « personne » (contenu mixte), alors que l'élément « personne » doit contenir un élément « age », suivi d'un élément « nom ».&lt;/p&gt;
+
+&lt;p&gt;Par exemple, ce document XML serait valable :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;lettre&amp;gt; Bonjour &amp;lt;personne&amp;gt;&amp;lt;age&amp;gt;30&amp;lt;/age&amp;gt;&amp;lt;nom&amp;gt;Jean&amp;lt;/nom&amp;gt;&amp;lt;/personne&amp;gt; &amp;lt;/lettre&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Assurez-vous de bien comprendre pourquoi ce document est valable avant de continuer.&lt;/p&gt;
+
+&lt;h2&gt;Les attributs&lt;/h2&gt;
+
+&lt;p&gt;Par défaut, aucun élément n'est autorisé à avoir un attribut. Pour permettre d'ajouter un attribut à un élément, il faut une instruction de la forme &amp;lt;!ATTLIST recipiendaire age ...&amp;gt; qui spécifie que l'élément recipiendaire peut avoir un attribut « age ». On permet généralement aux valeurs d'attribut de contenir n'importe quel texte, ce qu'on représente par « CDATA ». Hormis le contenu, il existe deux types d'attributs : les attributs obligatoires (« #REQUIRED ») et les attributs optionnels (« #IMPLIED »). Par exemple, l'instruction «  &amp;lt;!ATTLIST recipiendaire age CDATA #IMPLIED&amp;gt; » signifie qu'on peut (ou pas) accorder à un élément « recipiendaire » un attribut nommé « age » pouvant contenir n'importe quel texte. Si l'on désire que l'attribut soit obligatoire, on utilise une instruction comme « &amp;lt;!ATTLIST recipiendaire age CDATA #REQUIRED&amp;gt; ».&lt;/p&gt;
+
+&lt;p&gt;Si l'on veut permettre à un élément d'avoir plusieurs attributs, on peut le faire en utilisant plusieurs instructions comme dans « &amp;lt;!ATTLIST recipiendaire age CDATA #REQUIRED&amp;gt; &amp;lt;!ATTLIST recipiendaire nom CDATA #REQUIRED&amp;gt; »; on peut aussi combiner les instructions dans une seule : « &amp;lt;!ATTLIST recipiendaire age CDATA #REQUIRED nom CDATA #REQUIRED&amp;gt; ». Cependant, il n'est pas possible de spécifier l'ordre dans lequel les attributs doivent apparaître, les instructions « &amp;lt;!ATTLIST recipiendaire age CDATA #REQUIRED nom CDATA #REQUIRED&amp;gt; » et « &amp;lt;!ATTLIST recipiendaire nom CDATA #REQUIRED age CDATA #REQUIRED&amp;gt; » sont équivalentes.&lt;/p&gt;
+
+&lt;p&gt;L'attribut « xml:lang » utilisé pour définir la langue d'un texte, peut être déclaré comme ceci : « &amp;lt;!ATTLIST monelement xml:lang CDATA #IMPLIED&amp;gt; ». L'attribut xml:space peut être déclaré comme ceci : « &amp;lt;!ATTLIST monelement xml:space (default|preserve) #IMPLIED&amp;gt; ».&lt;/p&gt;
+
+&lt;p&gt;On peut également spécifier qu'un élément donné a toujours un attribut donné (indiqué ou non dans le XML) comme ceci : «&amp;lt;!ATTLIST recipiendaire age CDATA #FIXED "40 ans"&amp;gt;». Dans ce dernier exemple, tous les éléments « recipiendaire » ont l'attribut « age="40 ans" », même si on omet de l'indiquer dans la balise de départ de l'élément « recipiendaire ».&lt;/p&gt;
+
+&lt;p&gt;Plus simplement, on peut spécifier une valeur par défaut qui ne prendra effet que si l'on n'a pas explicitement indiqué l'attribut. Par exemple, l'instruction « &amp;lt;!ATTLIST recipiendaire age CDATA "40 ans"&amp;gt;  » signifie que l'élément « recipiendaire » aura l'attribut « age="40 ans" », à moins qu'on ne spécifie autre chose dans le XML.&lt;/p&gt;
+
+&lt;p&gt;Il peut être utile de donner une liste de valeurs que pourra prendre un attribut. Par exemple, une pièce de monnaie est soit sur « face », soit sur « pile » : il n'y a que deux choix. Si la liste de choix est composée de textes sans espace ou ponctuation, sauf la barre du soulignement ( _  ), le trait d'union ( - ) et le point ( . ), alors on peut faire une énumération comme dans l'exemple suivant : « &amp;lt;!ATTLIST piece position (face|pile) #REQUIRED&amp;gt;». On peut aussi spécifier une valeur par défaut, si l'on suppose, jusqu'à preuve du contraire, que la pièce est dans la position « face », comme ceci «  &amp;lt;!ATTLIST piece position (face|pile) "face"&amp;gt; »&lt;/p&gt;
+
+&lt;p&gt;On peut également spécifier qu'un attribut servira à identifier un élément de façon unique. Pour ce faire, on utilise une instruction comme «  &amp;lt;!ATTLIST recipiendaire code ID&amp;gt; ». Il n'est pas possible, pour deux attributs de type ID, d'avoir la même valeur dans un même document XML. En somme, si l'on donne une valeur « ID », elle devrait correspondre de façon unique à un élément et un seul. Un attribut de type « ID » doit avoir comme valeur un « nom XML », c'est-à-dire un texte sans espace ou ponctuation, sauf la barre du soulignement ( _  ), le trait d'union ( - ) et le point ( . ), et qui ne commence pas par un chiffre, un trait d'union ou un point.&lt;/p&gt;
+
+&lt;p&gt;On peut faire référence aux attributs de type « ID » avec des attributs de type « IDREF ». La valeur d'un attribut « IDREF » doit non seulement être un nom XML, mais doit aussi avoir un attribut de type « ID » qui possède cette même valeur quelque part dans le document XML. Par exemple, si on a l'instruction «  &amp;lt;!ATTLIST recipiendaire code ID&amp;gt; », on pourra ensuite faire référence à l'élément ayant une valeur d'attribut « code » particulière, avec une instruction comme «  &amp;lt;!ATTLIST mauvaispayeur code IDREF&amp;gt; ».&lt;/p&gt;
+
+&lt;p&gt;Dans ce contexte, le document XML qui suit n'est pas valable :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;recipiendaire code="123"&amp;gt;...&amp;lt;/recipiendaire&amp;gt;
+&amp;lt;mauvaispayeur code="456"&amp;gt;...&amp;lt;/mauvaispayeur&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Par contre, l'exemple qui suit est valable :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;recipiendaire code="123"&amp;gt;...&amp;lt;/recipiendaire&amp;gt;
+&amp;lt;mauvaispayeur code="123"&amp;gt;...&amp;lt;/mauvaispayeur&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il existe d'autres types d'attributs, mais ils sont peu utilisés.&lt;/p&gt;
+
+&lt;h2&gt;Les entités&lt;/h2&gt;
+
+&lt;p&gt;Vous vous rappelez sans doute que le XML définit quelques entités par défaut, « &amp;amp;lt; », par exemple. On peut toutefois définir ses propres entités avec une instruction DTD comme celle-ci :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY monentite "Introduction à XML"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;La signification de ce dernier exemple, c'est que partout où « &amp;amp;monentite; » apparaît dans un document, il sera remplacé par le texte « Introduction à XML ». Ce remplacement s'applique aussi aux valeurs par défaut des attributs de la DTD.&lt;/p&gt;
+
+&lt;p&gt;On peut mettre des éléments et des attributs dans une entité comme dans cet exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY monentite "&amp;lt;paragraphe&amp;gt;texte&amp;lt;/paragraphe&amp;gt;"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Il n'est cependant pas permis de ne mettre qu'une partie d'un élément comme ceci :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY monentite "&amp;lt;paragraphe&amp;gt;"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une entité peut faire appel à une autre entité :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY monentite1 "&amp;amp;monentite2;"&amp;gt;
+&amp;lt;!ENTITY monentite2 "texte"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une entité ne peut cependant pas faire appel à elle même de manière récursive, directement ou indirectement. Cet exemple n'est donc pas valable :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY monentite "&amp;amp;monentite;"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;DTD interne et externe&lt;/h2&gt;
+
+&lt;p&gt;Normalement, on fait référence à un document DTD à l'aide d'une URL, c'est ce qu'on appelle la DTD externe. Mais il est possible d'ajouter ses propres instructions DTD directement dans le document XML, en ajoutant une DTD interne qui est lue avant la DTD externe.&lt;/p&gt;
+
+&lt;p&gt;Prenons l'exemple suivant, soit un document XML qui débute par :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" ?&amp;gt;
+&amp;lt;!DOCTYPE question SYSTEM "question.dtd" [
+  &amp;lt;!ELEMENT question #PCDATA&amp;gt;
+]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dans ce cas, tout ce passe comme si on ajoutait la ligne « &amp;lt;!ELEMENT question #PCDATA&amp;gt; » à la DTD externe. Normalement, il ne devrait jamais y avoir de conflit entre les deux DTD (interne et externe); on ne peut pas redéfinir un élément, mais on peut y définir des éléments! Par contre, les entités peuvent être redéfinies et la définition trouvée dans le DTD interne l'emporte.&lt;/p&gt;
+
+&lt;p&gt;On peut même omettre complètement la DTD externe comme dans l'exemple suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" ?&amp;gt;
+&amp;lt;!DOCTYPE question [
+  &amp;lt;!ELEMENT question #PCDATA&amp;gt;
+]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Les entités paramètres&lt;/h2&gt;
+
+&lt;p&gt;On peut aussi définir des entités particulières qui ne s'appliquent que dans le contexte de la DTD, et non pas dans le document XML. Pour ces entités, au lieu d'utiliser l'esperluette ( &amp;amp; ), on utilise plutôt le symbole du pourcentage ( % ). Ainsi, l'instruction suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY % monentite "#PCDATA|age*"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;signifie que partout, dans la DTD externe, où se trouve le texte « %monentite; », il sera remplacé par « #PCDATA|age* »; on appelle ces entités des « entités paramètres ». On peut définir une entité paramètre dans la DTD interne, mais on ne peut pas l'y utiliser; elle doit être utilisée dans la DTD externe. Si l'entité paramètre « %monentite; » est définie, à la fois dans la DTD interne et dans la DTD externe, la DTD interne a préséance. En somme, les entités paramètres ne s'appliquent que dans la DTD externe; elles ne s'appliquent ni dans le document XML, ni dans le DTD interne, soit la partie de la DTD définie dans le document XML.&lt;/p&gt;
+
+&lt;h2&gt;Commentaires dans les fichiers DTD&lt;/h2&gt;
+
+&lt;p&gt;Pour rendre un fichier DTD plus compréhensible, on peut ajouter des commentaires. La syntaxe est la même que pour les fichiers XML comme le montre l'exemple suivant.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- ceci est un commentaire --&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Les commentaires dans les fichiers Relax NG non-textuel sont obtenus en débutant une ligne par le symbole « # » comme dans cet exemple.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# ceci est un commentaire&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Une comparaison entre Relax NG et DTD&lt;/h2&gt;
+
+&lt;p&gt;Une fois qu'on connaît bien le format DTD, il est facile d'apprendre Relax NG. Prenons d'abord un de nos exemples de fichier DTD.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT lettre (#PCDATA|personne)* &amp;gt;
+&amp;lt;!ELEMENT personne (age,nom) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Une étude attentive vous permettra de constater que ce fichier est très similaire au fichier Relax NG suivant, qui lui est essentiellement équivalent.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element lettre { (text | element personne { element age { text }, element nom { text } })* }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour bien comprendre, prenons un autre exemple, plus complexe cette fois-ci. Voici un autre fichier DTD discuté précédemment.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT question (questionText,answer+) &amp;gt;
+&amp;lt;!ELEMENT questionText (#PCDATA) &amp;gt;
+&amp;lt;!ELEMENT answer (#PCDATA) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Voici l'équivalent en Relax NG. Si vous l'étudiez avec soin, vous verrez qu'encore une fois, le format Relax NG est très similaire au format DTD.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element question { element questionText { text }, element answer { text }+ }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Prenons maintenant un exemple de fichier DTD contenant un attribut.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT personne (nom,age) &amp;gt;
+&amp;lt;!ATTLIST personne code CDATA #REQUIRED&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;L'équivalent Relax NG est, encore une fois, assez compréhensible comme vous pourrez le constater, l'instruction ATTLIST étant remplacée par l'instruction « attribute ».&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element personne { attribute code { text }, element nom { text }, element age { text } }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lorsqu'on utilise l'instruction attribute, la présence de l'attribut est requise à moins d'ajouter le point d'interrogation (« ? ») à la suite de l'instruction.&lt;/p&gt;
+
+&lt;p&gt;Le format Relax NG permet aussi de définir des motifs qui peuvent être réutilisés. Prenons ce fichier DTD simple.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT problemset (choice+) &amp;gt;
+&amp;lt;!ELEMENT choice (#PCDATA) &amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;L'équivalent en Relax NG donne ceci.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;choiceele = element choice { text }
+element problemset { choiceele+ }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Le format Relax NG a cependant plusieurs avantages. Par exemple, l'esperluette (&amp;amp;) permet de spécifier que des éléments puissent être inclus dans n'importe quel ordre. Il n'y a pas d'équivalent en DTD. Considérons l'exemple suivant.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element card { element name { text } &amp;amp; element email { text } }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut alors permettre le XML suivant. Il n'est pas possible de spécifier le contenu de l'élément card avec une instruction DTD similaire.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;card&amp;gt;&amp;lt;email&amp;gt;jean@exemple.com&amp;lt;/email&amp;gt;&amp;lt;name&amp;gt;Jean&amp;lt;/name&amp;gt;&amp;lt;/card&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Supposons maintenant qu'un élément puisse avoir soit l'attribut nas, soit à la fois les attributs nas1 et nas2. Alors qu'il n'est pas possible de représenter cette condition en DTD, c'est une chose facile en Relax NG.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;element personne { attribute nas { text } | (attribute nas1 { text } &amp;amp; attribute nas2 { text }) }&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;h2&gt;Une approche plus modulaire&lt;/h2&gt;
+
+&lt;p&gt;En pratique, les fichiers DTD et Relax NG peuvent devenir complexes. On souhaite donc souvent les diviser en plusieurs fichiers plus petits. Par exemple, pour une spécification portant des ventes et achats de biens, on pourra avoir un fichier portant sur la description des biens, un fichier portant sur la description des acheteurs, et ainsi de suite. Une approche modulaire, avec de petits fichiers, a aussi l'avantage qu'on peut réutiliser les fichiers dans plus d'une spécification.&lt;/p&gt;
+
+&lt;p&gt;À titre d'exemple, reprenons le fichier DTD portant sur la définition de l'élément « problemset ». Au lieu de définir tout d'un seul coup, on peut commencer par un fichier DTD qui ne définit que l'élément « choice » :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT choice (#PCDATA)&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour les fins de notre exemple, supposons que ce dernier fichier porte le nom de « choice.dtd » et se trouve à l'adresse « http://www.mondomaine.com/choice.dtd ». On pourra alors en importer le contenu dans un autre fichier externe avec une « entité paramètre externe ». À la différence d'une entité paramètre usuelle, une entité paramètre externe pointe vers un autre document que le logiciel devra traiter. On définit l'entité paramètre externe avec l'instruction « SYSTEM » suivie d'une adresse web comme dans cet exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ENTITY % monentite SYSTEM "http://www.mondomaine.com/choice.dtd"&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Pour inclure le contenu du fichier externe (« choice.dtd » dans notre exemple), il suffit tout simplement de faire appel à l'entité comme ceci :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;%monentite;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Dans ce cas, tout se déroule comme si le contenu du fichier « choice.dtd » était inséré à l'endroit où se trouve l'appel (« %monentite; »). On peut définir l'élément « problemset » à l'aide du fichier DTD suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;!ELEMENT problemset (choice+)&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut obtenir le même résultat avec Relax NG, un peu plus simplement avec l'utilisation de l'instruction « include ». Créons d'abord un fichier « choice.rnc » avec le contenu suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;choiceele = element choice { text }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On peut alors réutiliser le motif « choiceele » dans n'importe quel autre fichier Relax NG comme le montre cet exemple :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;include "choice.rnc"
+element problemset { choiceele+ }&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;En bref, il est facile de diviser des spécifications Relax NG ou DTD en plusieurs fichiers plus petits, plus faciles à éditer, et qui peuvent être plus facilement réutilisés.&lt;/p&gt;
+
+&lt;h2&gt;Définir l'élément-racine&lt;/h2&gt;
+
+&lt;p&gt;Avec une DTD, il n'est pas possible de définir l'élément-racine. Celui-ci est déclaré par l'instruction DOCTYPE qui se trouve dans le document XML. Avec Relax NG, on peut non seulement spécifier l'élément-racine avec le mot-clef start, mais on peut aussi permettre une certaine flexibilité. Par exemple, l'instruction « start = problemset | choice » placée dans un fichier Relax NG, nous indique qu'on peut utilisé l'élément problemset ou l'élément choice comme élément-racine.&lt;/p&gt;
+
+&lt;h2&gt;Définir le type de contenu en Relax NG&lt;/h2&gt;
+
+&lt;p&gt;Dans tous nos exemples de Relax NG, nous n'avons prévu que du contenu textuel (text) ou des éléments vides (empty). Relax NG permet de spécifier le contenu d'un élément ou d'un attribut d'une manière très fine. Il emprunte ici la spécification mise au point par XML Schema. En particulier, on peut spécifier un contenu textuel à l'aide d'une expression régulière. Voici quelques exemples.&lt;/p&gt;
+
+&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Type&lt;/th&gt;
+            &lt;th&gt;Explication&lt;/th&gt;
+            &lt;th&gt;Exemple&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:date&lt;/td&gt;
+            &lt;td&gt;Une date formattée avec la convention YYYY-MM-DD&lt;/td&gt;
+            &lt;td&gt;2001-01-01 ou 1999-12-30&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:dateTime&lt;/td&gt;
+            &lt;td&gt;Un moment spécifique à la seconde près&lt;/td&gt;
+            &lt;td&gt;2000-12-31T03:32:00&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:string {pattern = "[^:]+" }&lt;/td&gt;
+            &lt;td&gt;Une chaîne de caractères contenant au moins un caractère, à l'exclusion du symbole :&lt;/td&gt;
+            &lt;td&gt;maison&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:string { pattern = ".+/.+" }&lt;/td&gt;
+            &lt;td&gt;Deux chaînes de caractères séparée par un caractère /&lt;/td&gt;
+            &lt;td&gt;01/01&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:string { pattern = ".+@.+" }&lt;/td&gt;
+            &lt;td&gt;Deux chaînes de caractères séparée par un caractère @&lt;/td&gt;
+            &lt;td&gt;lala@to.com&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;"text" | "html"&lt;/td&gt;
+            &lt;td&gt;text ou html&lt;/td&gt;
+            &lt;td&gt;text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:string { minLength="7" maxLength="25" }&lt;/td&gt;
+            &lt;td&gt;Une chaîne caractères faisant entre 7 et 25 caractères&lt;/td&gt;
+            &lt;td&gt;monmotdepasse&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:decimal { minExclusive="0.0" maxInclusive="10.0" }&lt;/td&gt;
+            &lt;td&gt;Un nombre entre 0 et 10&lt;/td&gt;
+            &lt;td&gt;5&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;xsd:decimal { fractionDigits="3" }&lt;/td&gt;
+            &lt;td&gt;Un nombre n'ayant pas plus de 3 chiffres après la virgule (le point)&lt;/td&gt;
+            &lt;td&gt;5.001&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;On déclare ensuite le contenu d'un élément ou d'un attribut comme ceci : element madate {xsd:date}.&lt;/p&gt;
+
+&lt;h2&gt;Est-ce qu'il existe un outil pour passer d'un format à l'autre (DTD, Relax NG, XML Schema)?&lt;/h2&gt;
+
+&lt;p&gt;Oui, le programme Java Trang permet de passer facilement d'un format à l'autre.&lt;/p&gt;
+
+&lt;h2&gt;Est-ce qu'un document DTD est un document XML?&lt;/h2&gt;
+
+&lt;p&gt;Absolument pas. Par contre, une DTD est un document textuel. Les fichiers XML Schema sont par contre toujours en XML, alors que les fichiers Relax NG sont parfois en XML, parfois en simple format textuel comme dans nos exemples.&lt;/p&gt;
+
+&lt;h2&gt;Pourquoi est-ce qu'il n'est pas suffisant d'utiliser des documents bien formés? À quoi sert la validation?&lt;/h2&gt;
+
+&lt;p&gt;Les documents XML sont faits pour être échangés et assurer la pérennité des informations. Si plusieurs individus ou plusieurs institutions s'entendent sur une DTD commune, il sera beaucoup plus facile d'échanger de l'information.&lt;/p&gt;
+
+&lt;h2&gt;Est-ce vraiment nécessaire d'avoir des documents valables? Est-ce que je dois vraiment toujours travailler avec des fichiers DTD, XML Schema ou Relax NG?&lt;/h2&gt;
+
+&lt;p&gt;En pratique, la validation n'est pas essentielle et une application logicielle ne devrait pas exiger des documents valables. Si vous concevez une application, la règle implicite est que toute balise ou attribut non prévue devrait être ignorée. Un navigateur qui sait lire et afficher du XML devrait pouvoir lire tout XML bien formé, même s'il n'est pas valable. Si vous inventez une nouvelle balise XHTML, le navigateur devrait tout simplement ne pas en tenir compte. Les concepteurs du XML n'ont pas inscrit la nécessité d'être valable à même la définition du XML et c'est un choix qui n'a jamais été remis en question par l'organisme de normalisation W3C.&lt;/p&gt;
+
+&lt;p&gt;Il arrive, par exemple, qu'il soit inutilement complexe d'exiger que les documents soient valables. Si on se contraint à des documents valables, on peut même en arriver à des solutions qui sont techniquement inférieures. &lt;/p&gt;
+
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>28</revision>
+    <timemodified>1764368853</timemodified>
+  </page>
+</activity>

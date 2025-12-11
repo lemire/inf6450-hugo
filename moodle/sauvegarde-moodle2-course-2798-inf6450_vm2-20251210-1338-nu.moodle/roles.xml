@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roles_definition>
+  <role id="4">
+    <name>Tuteur</name>
+    <shortname>teacher</shortname>
+    <nameincourse>$@NULL@$</nameincourse>
+    <description>&lt;p&gt;Le tuteur ne peut modifier les ressources ou les activités.  Il peut cependant noter les étudiants.&lt;/p&gt;</description>
+    <sortorder>4</sortorder>
+    <archetype>teacher</archetype>
+  </role>
+  <role id="5">
+    <name>Étudiant</name>
+    <shortname>student</shortname>
+    <nameincourse>$@NULL@$</nameincourse>
+    <description>&lt;p&gt;L'étudiant suit le cours en lecture seule.  Il peut soumettre des travaux.&lt;/p&gt;</description>
+    <sortorder>8</sortorder>
+    <archetype>student</archetype>
+  </role>
+  <role id="38">
+    <name>Correcteur</name>
+    <shortname>correcteur</shortname>
+    <nameincourse>$@NULL@$</nameincourse>
+    <description>&lt;p&gt;Le correcteur ne peut modifier les ressources ou les activités.  Il peut cependant noter les étudiants.&lt;/p&gt;</description>
+    <sortorder>24</sortorder>
+    <archetype>teacher</archetype>
+  </role>
+</roles_definition>

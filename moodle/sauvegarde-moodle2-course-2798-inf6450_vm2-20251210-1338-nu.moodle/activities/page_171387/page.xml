@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="94200" moduleid="171387" modulename="page" contextid="1135209">
+  <page id="94200">
+    <name>Encodage des caractères Unicode</name>
+    <intro></intro>
+    <introformat>0</introformat>
+    <content>    &lt;header style="margin-bottom: 16px;"&gt;
+      &lt;h1 style="margin: 0 0 8px 0; font-size: 22px; font-weight: 700; color:#0b1220;"&gt;Visualiseur d’octets UTF-8 / UTF-16&lt;/h1&gt;
+      &lt;p&gt;Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mask). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian). &lt;/p&gt;
+
+    &lt;/header&gt;
+
+    &lt;section style="display:block; margin-bottom: 12px;"&gt;
+      &lt;label for="input" style="display:block; font-weight:600; font-size: 13px; margin-bottom:6px;"&gt;Texte&lt;/label&gt;
+      &lt;textarea id="input" placeholder="Tapez ici…" spellcheck="false"
+        style="display:block; width:100%; max-width: 980px; height: 160px; padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; font-size: 13px; line-height: 1.4; resize: vertical; background:#ffffff; color:#0f172a;"&gt;&lt;/textarea&gt;
+    &lt;/section&gt;
+
+    &lt;section style="display:flex; flex-wrap: wrap; gap: 16px; align-items: center; margin: 10px 0 18px 0;"&gt;
+      &lt;div style="display:flex; align-items:center; gap:10px;"&gt;
+        &lt;span style="font-weight:600; font-size:13px;"&gt;UTF-16&lt;/span&gt;
+        &lt;label style="display:inline-flex; align-items:center; gap:6px; font-size:13px; color:#334155;"&gt;
+          &lt;input type="radio" name="endian" value="le" checked style="margin:0;"&gt; LE
+        &lt;/label&gt;
+        &lt;label style="display:inline-flex; align-items:center; gap:6px; font-size:13px; color:#334155;"&gt;
+          &lt;input type="radio" name="endian" value="be" style="margin:0;"&gt; BE
+        &lt;/label&gt;
+      &lt;/div&gt;
+      &lt;label style="display:inline-flex; align-items:center; gap:8px; font-size:13px; color:#334155;"&gt;
+        &lt;input id="bom" type="checkbox" style="margin:0;"&gt; Inclure BOM
+      &lt;/label&gt;
+      &lt;div style="margin-left:auto; font-size:12px; color:#64748b;"&gt;Les valeurs sont affichées en hexadécimal (octets).&lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section style="display:grid; grid-template-columns: 1fr; gap: 16px; max-width: 980px;"&gt;
+      &lt;div style="border:1px solid #e2e8f0; border-radius:10px; padding:12px; background:#f8fafc;"&gt;
+        &lt;div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;"&gt;
+          &lt;strong style="font-size:14px; color:#0b1220;"&gt;UTF-8&lt;/strong&gt;
+          &lt;span id="len8" style="font-size:12px; color:#334155;"&gt;0 octet&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;pre id="hex8" style="margin:0; white-space:pre-wrap; word-break:break-word; font-size:12px; line-height:1.45; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; color:#0f172a;"&gt;—&lt;/pre&gt;
+      &lt;/div&gt;
+
+      &lt;div style="border:1px solid #e2e8f0; border-radius:10px; padding:12px; background:#f8fafc;"&gt;
+        &lt;div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;"&gt;
+          &lt;strong style="font-size:14px; color:#0b1220;"&gt;UTF-16 &lt;span id="endiantag" style="font-weight:600; color:#0b1220;"&gt;LE&lt;/span&gt;&lt;span id="bomtag" style="font-weight:400; color:#64748b;"&gt;, sans BOM&lt;/span&gt;&lt;/strong&gt;
+          &lt;span id="len16" style="font-size:12px; color:#334155;"&gt;0 octet&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;pre id="hex16" style="margin:0; white-space:pre-wrap; word-break:break-word; font-size:12px; line-height:1.45; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace; color:#0f172a;"&gt;—&lt;/pre&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;footer style="margin-top: 18px; font-size:12px; color:#64748b;"&gt;
+      Conseils: les émojis et caractères hors BMP utilisent des paires de substituts en UTF‑16. Le comptage d’octets inclut le BOM si coché.
+    &lt;/footer&gt;
+
+    &lt;script&gt;
+      (function() {
+        const $ = (id) =&gt; document.getElementById(id);
+        const input = $('input');
+        const len8 = $('len8');
+        const hex8 = $('hex8');
+        const len16 = $('len16');
+        const hex16 = $('hex16');
+        const bom = $('bom');
+        const endiantag = $('endiantag');
+        const bomtag = $('bomtag');
+        const endianRadios = Array.from(document.querySelectorAll('input[name="endian"]'));
+
+        function pluralize(n) { return n &gt; 1 ? 'octets' : 'octet'; }
+
+        function toHex(bytes) {
+          if (!bytes || bytes.length === 0) return '—';
+          const parts = [];
+          for (let i = 0; i &lt; bytes.length; i++) {
+            parts.push(bytes[i].toString(16).padStart(2, '0').toUpperCase());
+          }
+          // Group by 16 bytes per line for readability
+          const lines = [];
+          for (let i = 0; i &lt; parts.length; i += 16) {
+            lines.push(parts.slice(i, i + 16).join(' '));
+          }
+          return lines.join('\n');
+        }
+
+        function utf16Encode(str, littleEndian = true, includeBOM = false) {
+          const codeUnits = [];
+          for (const ch of str) {
+            const cp = ch.codePointAt(0);
+            if (cp &lt;= 0xFFFF) {
+              codeUnits.push(cp);
+            } else {
+              const uPrime = cp - 0x10000;
+              const high = 0xD800 + (uPrime &gt;&gt; 10);
+              const low = 0xDC00 + (uPrime &amp; 0x3FF);
+              codeUnits.push(high, low);
+            }
+          }
+
+          const extra = includeBOM ? 2 : 0;
+          const bytes = new Uint8Array(codeUnits.length * 2 + extra);
+          let offset = 0;
+          if (includeBOM) {
+            if (littleEndian) { bytes[offset++] = 0xFF; bytes[offset++] = 0xFE; }
+            else { bytes[offset++] = 0xFE; bytes[offset++] = 0xFF; }
+          }
+          for (let i = 0; i &lt; codeUnits.length; i++) {
+            const cu = codeUnits[i] &amp; 0xFFFF;
+            if (littleEndian) {
+              bytes[offset++] = cu &amp; 0xFF;
+              bytes[offset++] = (cu &gt;&gt; 8) &amp; 0xFF;
+            } else {
+              bytes[offset++] = (cu &gt;&gt; 8) &amp; 0xFF;
+              bytes[offset++] = cu &amp; 0xFF;
+            }
+          }
+          return bytes;
+        }
+
+        function update() {
+          const text = input.value || '';
+          const littleEndian = endianRadios.find(r =&gt; r.checked)?.value !== 'be';
+          const includeBOM = bom.checked;
+
+          // UTF-8
+          const utf8 = new TextEncoder().encode(text);
+          len8.textContent = utf8.length + ' ' + pluralize(utf8.length);
+          hex8.textContent = toHex(utf8);
+
+          // UTF-16
+          const utf16 = utf16Encode(text, littleEndian, includeBOM);
+          len16.textContent = utf16.length + ' ' + pluralize(utf16.length);
+          hex16.textContent = toHex(utf16);
+          endiantag.textContent = littleEndian ? 'LE' : 'BE';
+          bomtag.textContent = includeBOM ? ', avec BOM' : ', sans BOM';
+        }
+
+        input.addEventListener('input', update);
+        bom.addEventListener('change', update);
+        endianRadios.forEach(r =&gt; r.addEventListener('change', update));
+
+        // Init
+        update();
+      })();
+    &lt;/script&gt;
+
+
+&lt;p&gt;Pour en savoir plus...&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/UTF-8"&gt;UTF-8&lt;/a&gt; (wikipédia);&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/UTF-16"&gt;UTF-16&lt;/a&gt; (wikipédia);&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>6</revision>
+    <timemodified>1765390816</timemodified>
+  </page>
+</activity>

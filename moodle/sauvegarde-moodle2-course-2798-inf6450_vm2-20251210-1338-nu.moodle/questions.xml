@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<question_categories>
+  <question_category id="75964">
+    <name>top</name>
+    <contextid>969998</contextid>
+    <contextlevel>50</contextlevel>
+    <contextinstanceid>2798</contextinstanceid>
+    <info></info>
+    <infoformat>0</infoformat>
+    <stamp>m2.teluq.ca+250313215021+LJRswO</stamp>
+    <parent>0</parent>
+    <sortorder>0</sortorder>
+    <idnumber>$@NULL@$</idnumber>
+    <question_bank_entries>
+    </question_bank_entries>
+  </question_category>
+  <question_category id="75967">
+    <name>Défaut pour inf6450 vm2</name>
+    <contextid>969998</contextid>
+    <contextlevel>50</contextlevel>
+    <contextinstanceid>2798</contextinstanceid>
+    <info>La catégorie par défaut pour les questions partagées dans le contexte « inf6450 vm2 ».</info>
+    <infoformat>0</infoformat>
+    <stamp>m2.teluq.ca+250313215021+qqycVl</stamp>
+    <parent>75964</parent>
+    <sortorder>999</sortorder>
+    <idnumber>$@NULL@$</idnumber>
+    <question_bank_entries>
+    </question_bank_entries>
+  </question_category>
+  <question_category id="75970">
+    <name>Défaut pour INF 6450</name>
+    <contextid>969998</contextid>
+    <contextlevel>50</contextlevel>
+    <contextinstanceid>2798</contextinstanceid>
+    <info>La catégorie par défaut pour les questions partagées dans le contexte « INF 6450 ».</info>
+    <infoformat>0</infoformat>
+    <stamp>m2.teluq.ca+250313215036+A6mVsD</stamp>
+    <parent>75964</parent>
+    <sortorder>999</sortorder>
+    <idnumber>$@NULL@$</idnumber>
+    <question_bank_entries>
+      <question_bank_entry id="310441">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361321">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519241">
+                <parent>0</parent>
+                <name>desc1</name>
+                <questiontext>&lt;h2&gt;Partie 1 (2 points)&lt;/h2&gt;
+&lt;p&gt;Corrigez  le document XML suivant pour qu’il soit valable&amp;nbsp;:&lt;/p&gt;&lt;p&gt;
+  &amp;lt;problem xmltype=”exemple”&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;code temps=”4” temps=”6”&amp;gt;&lt;/p&gt;&lt;p&gt;
+  If (x &amp;lt; 5) { x = x + 2;}&lt;/p&gt;&lt;p&gt;
+  &amp;lt;/code&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;/problem&amp;gt; &lt;/p&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>0.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>description</qtype>
+                <length>0</length>
+                <stamp>m2.teluq.ca+250313215036+n5W9oG</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+      <question_bank_entry id="310444">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361324">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519244">
+                <parent>0</parent>
+                <name>desc2</name>
+                <questiontext>&lt;h2&gt;Partie 2 (10 points)&lt;/h2&gt;
+&lt;p&gt;Donnez  l'espace de noms de chaque élément de ce document XML. Expliquez. &lt;/p&gt;
+&lt;p&gt;&amp;lt;st:client xmlns:st= 'phone:450-444-4444&amp;gt; &lt;/p&gt;&lt;p&gt;
+  &amp;lt;st:nom xmlns:st= 'urn:443 '&amp;gt;Machin Ltee&amp;lt;st:nom&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;type&amp;gt;B&amp;lt;/type&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;st:province&amp;gt;Ontario&amp;lt;/st:province&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;/st:client&amp;gt; &lt;/p&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>0.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>description</qtype>
+                <length>0</length>
+                <stamp>m2.teluq.ca+250313215036+RynBK5</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+      <question_bank_entry id="310447">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361327">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519247">
+                <parent>0</parent>
+                <name>desc3</name>
+                <questiontext>&lt;h2&gt;Partie 3 (10 points)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Étant donné un document  XML qui prend la forme suivante, produisez un programme Java qui fait la somme  des valeurs contenues dans les éléments « paire&amp;nbsp;».&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;lt;racine&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;paire&amp;gt;1&amp;lt;/paire&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;paire&amp;gt;3.5&amp;lt;/paire&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;paire&amp;gt;7.8&amp;lt;/ paire&amp;gt;&lt;/p&gt;&lt;p&gt;
+  &amp;lt;/racine&amp;gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Faites la même chose en utilisant un  document XSLT. &lt;/li&gt;
+&lt;/ul&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>0.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>description</qtype>
+                <length>0</length>
+                <stamp>m2.teluq.ca+250313215036+09koio</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+      <question_bank_entry id="310450">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361330">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519250">
+                <parent>0</parent>
+                <name>desc4</name>
+                <questiontext>&lt;h2&gt;Partie 4 (8 points)&lt;/h2&gt;
+&lt;p&gt;Concevez  en HTML un tableau de trois rangées avec trois colonnes.&lt;/p&gt;&lt;p&gt;
+  Utilisez  des instructions CSS afin qu’une rangée sur deux ait comme couleur le bleu.&lt;/p&gt;&lt;p&gt;
+  Par  ailleurs, faites-en sorte que le texte de la dernière colonne soit en rouge. &lt;/p&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>0.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>description</qtype>
+                <length>0</length>
+                <stamp>m2.teluq.ca+250313215036+JYvbhj</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+      <question_bank_entry id="310453">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361333">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519253">
+                <parent>0</parent>
+                <name>desc5</name>
+                <questiontext>&lt;h2&gt;Partie 5 (10 points)&lt;/h2&gt;
+&lt;p&gt;Votre  application doit charger et modifier un document XML avant de le transmettre  sur un réseau. Quel est la meilleure API pour ce travail, StAX ou DOM? Pourquoi  ? &lt;/p&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>0.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>description</qtype>
+                <length>0</length>
+                <stamp>m2.teluq.ca+250313215036+aVBSFh</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+      <question_bank_entry id="310456">
+        <questioncategoryid>75970</questioncategoryid>
+        <idnumber>$@NULL@$</idnumber>
+        <ownerid>144587</ownerid>
+        <question_version>
+          <question_versions id="361336">
+            <version>1</version>
+            <status>ready</status>
+            <questions>
+              <question id="519256">
+                <parent>0</parent>
+                <name>quest1</name>
+                <questiontext>&lt;p&gt;40 points&lt;/p&gt;&lt;p&gt;
+  &lt;strong&gt;Dépôt de votre ficher réponse&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;
+  Le livrable pour tout l’examen est un seul document PDFN’oubliez  pas de mettre tous les graphiques et les codes, s’il y a lieu.&lt;/p&gt;&lt;p&gt;
+  Assurez-vous  d’avoir nommé votre fichier en respectant le modèle suivant&amp;nbsp;: INF6450_Final_Nom_Prenom.pdf&lt;/p&gt;&lt;p&gt;
+  Déposez  votre fichier dans l’espace prévu à cet effet ci-dessous.&lt;/p&gt;</questiontext>
+                <questiontextformat>1</questiontextformat>
+                <generalfeedback></generalfeedback>
+                <generalfeedbackformat>1</generalfeedbackformat>
+                <defaultmark>1.0000000</defaultmark>
+                <penalty>0.0000000</penalty>
+                <qtype>essay</qtype>
+                <length>1</length>
+                <stamp>m2.teluq.ca+250313215036+NAE0Qe</stamp>
+                <timecreated>1741902636</timecreated>
+                <timemodified>1741902636</timemodified>
+                <createdby>144587</createdby>
+                <modifiedby>144587</modifiedby>
+                <plugin_qtype_essay_question>
+                  <essay id="75880">
+                    <responseformat>noinline</responseformat>
+                    <responserequired>0</responserequired>
+                    <responsefieldlines>5</responsefieldlines>
+                    <minwordlimit>0</minwordlimit>
+                    <maxwordlimit>0</maxwordlimit>
+                    <attachments>1</attachments>
+                    <attachmentsrequired>1</attachmentsrequired>
+                    <graderinfo></graderinfo>
+                    <graderinfoformat>1</graderinfoformat>
+                    <responsetemplate></responsetemplate>
+                    <responsetemplateformat>1</responsetemplateformat>
+                    <filetypeslist></filetypeslist>
+                    <maxbytes>0</maxbytes>
+                  </essay>
+                </plugin_qtype_essay_question>
+                <plugin_qbank_comment_question>
+                  <comments>
+                  </comments>
+                </plugin_qbank_comment_question>
+                <plugin_qbank_customfields_question>
+                  <customfields>
+                  </customfields>
+                </plugin_qbank_customfields_question>
+                <question_hints>
+                </question_hints>
+                <tags>
+                </tags>
+              </question>
+            </questions>
+          </question_versions>
+        </question_version>
+      </question_bank_entry>
+    </question_bank_entries>
+  </question_category>
+</question_categories>

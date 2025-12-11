@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72239" moduleid="131087" modulename="page" contextid="970208">
+  <page id="72239">
+    <name>Modèles de programmation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>
+
+
+    &lt;style&gt;
+        .codeblock {
+            background:#282c34; color:#abb2bf; padding:18px; border-radius:8px; overflow-x:auto;
+            font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em; line-height:1.5;
+            margin:1.8em 0;
+        }
+        .xmlblock {
+            background:#f8fafc; border:1px solid #cbd5e1; color:#2d3748; padding:18px; border-radius:8px;
+            overflow-x:auto; font-family: Consolas, Monaco, 'Courier New', monospace; font-size:0.94em;
+            margin:1.8em 0;
+        }
+        code {background:#e5e7eb; padding:3px 7px; border-radius:4px; font-size:0.95em;}
+    &lt;/style&gt;
+&lt;h1&gt;Modèles de programmation XML&lt;/h1&gt;
+
+&lt;p&gt;Il y a plusieurs façons de traiter du XML. Chaque méthode a ses avantages et ses inconvénients. Bien que ce module s’intéresse surtout à l’approche DOM, il est important de connaître l’ensemble des méthodologies possibles et d’avoir une idée des forces et faiblesses relatives de chacune.&lt;/p&gt;
+
+&lt;h3&gt;Traitement du XML comme du texte&lt;/h3&gt;
+&lt;p&gt;Un fichier XML est d’abord un fichier texte. Comme certains langages, tel Java, savent bien traiter les fichiers en format texte, ils peuvent directement traiter le XML.&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; montant = &lt;span style="color:#d19a66;"&gt;10&lt;/span&gt;&lt;span style="color:#abb2bf;"&gt;;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;String&lt;/span&gt; nom = &lt;span style="color:#98c379;"&gt;"Gérard Beauford"&lt;/span&gt;&lt;span style="color:#abb2bf;"&gt;;&lt;/span&gt;
+&lt;span style="color:#61afef;"&gt;System&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;out&lt;/span&gt;.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"&amp;lt;?xml version=\"1.0\" ?&amp;gt;\n&amp;lt;facture&amp;gt;&amp;lt;montant&amp;gt;"&lt;/span&gt; + montant +
+    &lt;span style="color:#98c379;"&gt;"&amp;lt;/montant&amp;gt;&amp;lt;nom&amp;gt;"&lt;/span&gt; + nom + &lt;span style="color:#98c379;"&gt;"&amp;lt;/nom&amp;gt;&amp;lt;/facture&amp;gt;"&lt;/span&gt;);&lt;/pre&gt;
+
+&lt;p&gt;Cependant, comment savoir si le XML produit est bien formé ? Dans l’exemple précédent, le document affiché ne sera pas du XML bien formé à cause de l’accent dans « Gérard » si l’environnement n’utilise pas UTF-8. Il est donc préférable d’utiliser des librairies dédiées au XML.&lt;/p&gt;
+
+&lt;div class="xmlblock"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="no"?&amp;gt;
+&amp;lt;facture&amp;gt;
+  &amp;lt;montant&amp;gt;432&amp;lt;/montant&amp;gt;
+  &amp;lt;nom&amp;gt;Gérard Beauford&amp;lt;/nom&amp;gt;
+&amp;lt;/facture&amp;gt;&lt;/div&gt;
+
+&lt;div class="xmlblock"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?&amp;gt;
+&amp;lt;!DOCTYPE facture [
+  &amp;lt;!ELEMENT facture (montant, nom)&amp;gt;
+  &amp;lt;!ELEMENT montant (#PCDATA)&amp;gt;
+  &amp;lt;!ELEMENT nom (#PCDATA)&amp;gt;
+  &amp;lt;!ATTLIST nom surnom CDATA "Joe"&amp;gt;
+]&amp;gt;
+&amp;lt;facture&amp;gt;&amp;lt;montant&amp;gt;432&amp;lt;/montant&amp;gt;&amp;lt;nom&amp;gt;Gérard Beauford&amp;lt;/nom&amp;gt;&amp;lt;/facture&amp;gt;&lt;/div&gt;
+
+&lt;h3&gt;Traitement événementiel&lt;/h3&gt;
+&lt;p&gt;Le traitement événementiel (SAX, XNI…) lit le document séquentiellement et déclenche des événements.&lt;/p&gt;
+
+&lt;p&gt;Pour le document suivant :&lt;/p&gt;
+&lt;div class="xmlblock"&gt;&amp;lt;facture&amp;gt;&amp;lt;montant&amp;gt;432&amp;lt;/montant&amp;gt;&amp;lt;nom&amp;gt;Maman&amp;lt;/nom&amp;gt;&amp;lt;/facture&amp;gt;&lt;/div&gt;
+
+&lt;p&gt;Événements SAX générés :&lt;/p&gt;
+&lt;ol&gt;
+    &lt;li&gt;Début du document&lt;/li&gt;
+    &lt;li&gt;Début d’un élément « facture »&lt;/li&gt;
+    &lt;li&gt;Début d’un élément « montant »&lt;/li&gt;
+    &lt;li&gt;Texte « 432 »&lt;/li&gt;
+    &lt;li&gt;Fin d’un élément « montant »&lt;/li&gt;
+    &lt;li&gt;Début d’un élément « nom »&lt;/li&gt;
+    &lt;li&gt;Texte « Maman »&lt;/li&gt;
+    &lt;li&gt;Fin d’un élément « nom »&lt;/li&gt;
+    &lt;li&gt;Fin d’un élément « facture »&lt;/li&gt;
+    &lt;li&gt;Fin du document&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.xml.sax.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.xml.sax.helpers.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;MonApplicationSAX&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;extends&lt;/span&gt; DefaultHandler {
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;startElement&lt;/span&gt;(String uri, String name, String qName, Attributes atts) {
+        &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (uri.length() &amp;gt; &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;)
+            System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Début de l’élément "&lt;/span&gt; + uri + &lt;span style="color:#98c379;"&gt;":"&lt;/span&gt; + qName);
+        &lt;span style="color:#c678dd;"&gt;else&lt;/span&gt;
+            System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Début de l’élément "&lt;/span&gt; + name);
+    }
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;endElement&lt;/span&gt;(String uri, String name, String qName) {
+        &lt;span style="color:#c678dd;"&gt;if&lt;/span&gt; (uri.length() &amp;gt; &lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;)
+            System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Fin de l’élément "&lt;/span&gt; + uri + &lt;span style="color:#98c379;"&gt;":"&lt;/span&gt; + qName);
+        &lt;span style="color:#c678dd;"&gt;else&lt;/span&gt;
+            System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"Fin de l’élément "&lt;/span&gt; + name);
+    }
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;characters&lt;/span&gt;(&lt;span style="color:#e06c75;"&gt;char&lt;/span&gt;[] ch, &lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; start, &lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; length) {
+        System.out.&lt;span style="color:#61afef;"&gt;print&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; String(ch, start, length));
+    }
+
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        XMLReader xr = XMLReaderFactory.&lt;span style="color:#61afef;"&gt;createXMLReader&lt;/span&gt;();
+        xr.&lt;span style="color:#61afef;"&gt;setContentHandler&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; MonApplicationSAX());
+        xr.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; InputSource(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileReader(args[&lt;span  style="color:#d19a66;"&gt;0&lt;/span&gt;])));
+    }
+}&lt;/pre&gt;
+
+&lt;h3&gt;Traitement avec itérateurs (StAX)&lt;/h3&gt;
+&lt;p&gt;StAX propose une approche « pull » plus intuitive.&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.stream.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.net.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;staxex&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) {
+        String input = args[&lt;span style="color:#d19a66;"&gt;0&lt;/span&gt;];
+        &lt;span style="color:#c678dd;"&gt;try&lt;/span&gt; {
+            URL u = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; URL(input);
+            InputStream in = u.&lt;span style="color:#61afef;"&gt;openStream&lt;/span&gt;();
+            XMLInputFactory factory = XMLInputFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;();
+            XMLStreamReader parser = factory.&lt;span style="color:#61afef;"&gt;createXMLStreamReader&lt;/span&gt;(in);
+            &lt;span style="color:#c678dd;"&gt;for&lt;/span&gt; (&lt;span style="color:#e06c75;"&gt;int&lt;/span&gt; event = parser.&lt;span style="color:#61afef;"&gt;next&lt;/span&gt;();
+                 event != XMLStreamConstants.END_DOCUMENT;
+                 event = parser.&lt;span style="color:#61afef;"&gt;next&lt;/span&gt;()) {
+                &lt;span style="color:#c678dd;"&gt;switch&lt;/span&gt; (event) {
+                    &lt;span style="color:#c678dd;"&gt;case&lt;/span&gt; XMLStreamConstants.START_ELEMENT:
+                        System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(parser.&lt;span style="color:#61afef;"&gt;getLocalName&lt;/span&gt;());
+                        &lt;span style="color:#c678dd;"&gt;break&lt;/span&gt;;
+                    &lt;span style="color:#c678dd;"&gt;case&lt;/span&gt; XMLStreamConstants.END_ELEMENT:
+                        System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(parser.&lt;span style="color:#61afef;"&gt;getLocalName&lt;/span&gt;());
+                        &lt;span style="color:#c678dd;"&gt;break&lt;/span&gt;;
+                    &lt;span style="color:#c678dd;"&gt;case&lt;/span&gt; XMLStreamConstants.CDATA:
+                        System.out.&lt;span style="color:#61afef;"&gt;print&lt;/span&gt;(parser.&lt;span style="color:#61afef;"&gt;getText&lt;/span&gt;());
+                        &lt;span style="color:#c678dd;"&gt;break&lt;/span&gt;;
+                }
+            }
+            parser.&lt;span style="color:#61afef;"&gt;close&lt;/span&gt;();
+        } &lt;span style="color:#c678dd;"&gt;catch&lt;/span&gt; (Exception ex) { System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(ex); }
+    }
+}&lt;/pre&gt;
+
+&lt;h3&gt;Traitement avec modèle en arbre (DOM)&lt;/h3&gt;
+&lt;p&gt;Un document XML peut être vu comme un arbre. Le DOM charge tout le document en mémoire sous forme d’objets.&lt;/p&gt;
+
+&lt;div class="xmlblock"&gt;&amp;lt;?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?&amp;gt;
+&amp;lt;!DOCTYPE facture [...]&amp;gt;
+&amp;lt;facture&amp;gt;&amp;lt;montant&amp;gt;432&amp;lt;/montant&amp;gt;
+&amp;lt;nom&amp;gt;Gérard Beauford&amp;lt;/nom&amp;gt;&amp;lt;/facture&amp;gt;&lt;/div&gt;
+
+&lt;p&gt;Représentation en arbre :&lt;/p&gt;
+&lt;pre&gt; Document
+ └─ facture
+     ├─ montant → "432"
+     └─ nom (surnom="Joe") → "Gérard Beauford"&lt;/pre&gt;
+
+&lt;h3&gt;Transformations (XSLT)&lt;/h3&gt;
+&lt;p&gt;XSLT est idéal pour les transformations simples (XML → HTML, XML → texte…). Pour des traitements complexes avec bases de données, il est insuffisant.&lt;/p&gt;
+
+&lt;h3&gt;XPath&lt;/h3&gt;
+&lt;p&gt;XPath permet d’extraire très simplement des données depuis Java :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.xpath.*;&lt;/span&gt;
+
+DocumentBuilder builder = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;()
+    .&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;();
+Document doc = builder.&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"http://www.mondomaine.com/monfichier.xml"&lt;/span&gt;);
+
+XPath xpath = XPathFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;newXPath&lt;/span&gt;();
+String title = xpath.&lt;span style="color:#61afef;"&gt;evaluate&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"//nom/text()"&lt;/span&gt;, doc);&lt;/pre&gt;
+
+&lt;h3&gt;XML comme extension d’un langage (E4X)&lt;/h3&gt;
+&lt;p&gt;ECMAScript for XML permet d’écrire directement du XML dans le code :&lt;/p&gt;
+
+&lt;div class="xmlblock"&gt;var sales = &amp;lt;sales vendor="John"&amp;gt;
+  &amp;lt;item type="peas" price="4" quantity="6"/&amp;gt;
+  &amp;lt;item type="carrot" price="3" quantity="10"/&amp;gt;
+  &amp;lt;item type="chips" price="5" quantity="3"/&amp;gt;
+&amp;lt;/sales&amp;gt;;&lt;/div&gt;
+
+&lt;h3&gt;Traitement par abstraction&lt;/h3&gt;
+&lt;p&gt;De nombreuses bibliothèques (JAXB, bases de données, frameworks) manipulent du XML sans jamais vous forcer à écrire du XML à la main.&lt;/p&gt;
+
+&lt;h3&gt;Sérialisation XML (Java Beans)&lt;/h3&gt;
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.beans.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;java.io.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;Serialization&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; IOException {
+        String o = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; String(&lt;span style="color:#98c379;"&gt;"Un objet java"&lt;/span&gt;);
+        File f = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; File(&lt;span style="color:#98c379;"&gt;"test.xml"&lt;/span&gt;);
+
+        XMLEncoder e = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; XMLEncoder(
+            &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; BufferedOutputStream(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileOutputStream(f)));
+        e.&lt;span style="color:#61afef;"&gt;writeObject&lt;/span&gt;(o); e.&lt;span style="color:#61afef;"&gt;close&lt;/span&gt;();
+
+        XMLDecoder d = &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; XMLDecoder(
+            &lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; BufferedInputStream(&lt;span style="color:#c678dd;"&gt;new&lt;/span&gt; FileInputStream(f)));
+        Object lu = d.&lt;span style="color:#61afef;"&gt;readObject&lt;/span&gt;(); d.&lt;span style="color:#61afef;"&gt;close&lt;/span&gt;();
+        System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(lu.&lt;span style="color:#61afef;"&gt;equals&lt;/span&gt;(o)); &lt;span style="color:#5c6370;"&gt;// true&lt;/span&gt;
+    }
+}&lt;/pre&gt;
+
+&lt;div class="xmlblock"&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;java version="21" class="java.beans.XMLDecoder"&amp;gt;
+  &amp;lt;string&amp;gt;Un objet java&amp;lt;/string&amp;gt;
+&amp;lt;/java&amp;gt;&lt;/div&gt;
+
+&lt;h3&gt;Services web&lt;/h3&gt;
+&lt;p&gt;Les services web REST utilisent simplement HTTP (GET, POST, PUT, DELETE).&lt;/p&gt;
+
+&lt;table&gt;
+    &lt;tr&gt;&lt;th&gt;Méthode&lt;/th&gt;&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;GET&lt;/td&gt;&lt;td&gt;Récupérer une ressource (sûre et idempotente)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;POST&lt;/td&gt;&lt;td&gt;Créer ou modifier (non idempotente)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;PUT&lt;/td&gt;&lt;td&gt;Créer/remplacer une ressource à l’URI donnée&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;DELETE&lt;/td&gt;&lt;td&gt;Supprimer une ressource&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Exemple de requête SRU vers la Library of Congress :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;org.w3c.dom.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.parsers.*;&lt;/span&gt;
+&lt;span style="color:#c678dd;"&gt;import&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;javax.xml.xpath.*;&lt;/span&gt;
+
+&lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;class&lt;/span&gt; &lt;span style="color:#61afef;"&gt;example&lt;/span&gt; {
+    &lt;span style="color:#c678dd;"&gt;public&lt;/span&gt; &lt;span style="color:#c678dd;"&gt;static&lt;/span&gt; &lt;span style="color:#abb2bf;"&gt;void&lt;/span&gt; &lt;span style="color:#61afef;"&gt;main&lt;/span&gt;(String[] args) &lt;span style="color:#c678dd;"&gt;throws&lt;/span&gt; Exception {
+        String base = &lt;span style="color:#98c379;"&gt;"http://z3950.loc.gov:7090/voyager?"&lt;/span&gt;;
+        String query = &lt;span style="color:#98c379;"&gt;"operation=searchRetrieve&amp;amp;version=1.1&amp;amp;query=(dc.title=%22First Impressions of the New World%22)"&lt;/span&gt;;
+        Document doc = DocumentBuilderFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;()
+            .&lt;span style="color:#61afef;"&gt;newDocumentBuilder&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;parse&lt;/span&gt;(base + query);
+        XPath xpath = XPathFactory.&lt;span style="color:#61afef;"&gt;newInstance&lt;/span&gt;().&lt;span style="color:#61afef;"&gt;newXPath&lt;/span&gt;();
+        System.out.&lt;span style="color:#61afef;"&gt;println&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"leader : "&lt;/span&gt; + xpath.&lt;span style="color:#61afef;"&gt;evaluate&lt;/span&gt;(&lt;span style="color:#98c379;"&gt;"//leader/text()"&lt;/span&gt;, doc));
+    }
+}&lt;/pre&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1764380118</timemodified>
+  </page>
+</activity>

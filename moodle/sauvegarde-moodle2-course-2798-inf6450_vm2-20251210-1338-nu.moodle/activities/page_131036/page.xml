@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72188" moduleid="131036" modulename="page" contextid="970157">
+  <page id="72188">
+    <name>Les boucles</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt;Les boucles&lt;/h1&gt;
+&lt;h2 class="recall"&gt;Utiliser XSLT comme base de données et éléments
+    «&amp;nbsp;for-each&amp;nbsp;»&lt;/h2&gt;
+&lt;p&gt;L'exemple de la liste des clients avec leur numéro de téléphone nous permet
+    de faire plus. Tout d'abord, l'expression «&amp;nbsp;//client&amp;nbsp;» donne une
+    séquence de tous les éléments «&amp;nbsp;client&amp;nbsp;»
+    dans le nœud courant.
+    Avec l'expression XPath «&amp;nbsp;//client[nom='Sylvain']&amp;nbsp;», nous pouvons
+    obtenir la séquence de tous les
+    éléments «&amp;nbsp;client&amp;nbsp;» ayant pour nom «&amp;nbsp;Sylvain&amp;nbsp;». Dans ce
+    cas précis, il y a plus d'un élément
+    dans la réponse. Pour visiter l'ensemble des éléments dans la séquence,
+    il suffit d'utiliser l'élément «&amp;nbsp;xsl:for-each&amp;nbsp;» comme ceci&amp;nbsp;:
+&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="/"&amp;gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;Numéros de téléphone pour Sylvain:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;xsl:for-each select="//client[nom='Sylvain']/@telephone" &amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="." /&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:for-each&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Le résultat de l'application de ce fichier XSLT au fichier XML contenant les
+    numéros de téléphone sera&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;Numéros de téléphone pour Sylvain:
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;545-5455&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;545-5456&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Dans une telle boucle, il peut être utile de savoir quel est le numéro du
+    nœud
+    courant. On obtient ce numéro avec la fonction XSLT «&amp;nbsp;position()&amp;nbsp;»
+    qui a la valeur 1 quand
+    il s'agit du premier nœud et la valeur «&amp;nbsp;last()&amp;nbsp;» quand il s'agit
+    du dernier nœud.
+    On peut aussi utiliser une instruction xsl:sort au sein d'un élément
+    for-each.&lt;/p&gt;
+&lt;p&gt;Supposons maintenant que nous voulions compter le nombre de fois qu'un client
+    est dans la base de données.
+    Un modèle XSLT comme celui qui suit semble une bonne piste&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;xsl:template match="client"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="count(//client[nom=./nom])"
+    /&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Malheureusement, entre les crochets (partie conditionnelle de l'expression
+    XPath), le symbole «&amp;nbsp;.&amp;nbsp;» ne
+    représente plus l'élément «&amp;nbsp;client&amp;nbsp;»&amp;nbsp;XSLT courant, mais bien
+    chacun des éléments «&amp;nbsp;client&amp;nbsp;» du
+    document tour à tour&amp;nbsp;: la condition «&amp;nbsp;nom=./nom&amp;nbsp;» est ici
+    toujours satisfaite.
+    Heureusement, il existe une fonction&amp;nbsp;XSLT, appelée
+    «&amp;nbsp;current()&amp;nbsp;», qui représente toujours
+    l'élément XSLT courant. Donc, si nous voulons parcourir tout le document et
+    trouver combien de fois chaque client est dans la liste,
+    nous pourrions utiliser le document XSLT suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="listes"&amp;gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;ul&amp;gt;
+    &amp;lt;xsl:apply-templates select="*" /&amp;gt;
+    &amp;lt;/ul&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="vendeur"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Nom du vendeur: &amp;lt;xsl:value-of select="@nom"
+    /&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;&amp;lt;xsl:apply-templates select="*" /&amp;gt;&amp;lt;/ul&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;xsl:template match="client"&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;xsl:value-of select="nom" /&amp;gt;:
+    &amp;lt;xsl:value-of select="count(//client[nom=current()/nom])"
+    /&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Le résultat de la transformation sera alors&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;html&amp;gt;&amp;lt;body&amp;gt;&amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;
+    &amp;lt;p&amp;gt;Nom du vendeur: Jean&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;Jacques:
+    1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Sylvain:
+    2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Claude:
+    1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Yvon:
+    2&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;
+    &amp;lt;p&amp;gt;Nom du vendeur: Raymond&amp;lt;/p&amp;gt;
+    &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;Arthur:
+    1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Sylvain:
+    2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Claudette:
+    1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Yvon:
+    2&amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;
+    &amp;lt;/li&amp;gt;
+    &amp;lt;/ul&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741891565</timemodified>
+  </page>
+</activity>

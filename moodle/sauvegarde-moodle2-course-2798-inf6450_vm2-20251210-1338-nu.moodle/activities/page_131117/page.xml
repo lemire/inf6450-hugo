@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72269" moduleid="131117" modulename="page" contextid="970238">
+  <page id="72269">
+    <name>Du XML aux graphes</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Du XML aux graphes&lt;/h1&gt;
+&lt;p&gt;Le cours porte sur le XML en tant qu'outil pour la gestion de l'information.
+    Nous avons vu, dans les modules précédents, le rôle que peut jouer le XML
+    comme outil dans la gestion des données, qui sont une forme de connaissances
+    de premier niveau&amp;nbsp;: le XML rend plus facile l'échange et la
+    transformation des données.
+    De plus, nous avons vu que le XML permet le marquage
+    «&amp;nbsp;sémantique&amp;nbsp;» des informations; le XML s'impose donc
+    naturellement comme outil de gestion
+    des connaissances. En effet, prenons cet exemple de marquage
+    sémantique&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nomdefamille&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;nomdefamille&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;datedenaissance&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;3 février 1971&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;datedenaissance&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Ce document XML contient non seulement l'information souhaitée, mais en plus,
+    à un niveau élémentaire, il nous permet de comprendre le sens de cette
+    information, grâce aux noms des balises. &lt;/p&gt;
+&lt;p&gt;Cependant, utiliser le nom des balises pour représenter les connaissances
+    n'est pas toujours très pratique. Supposons que nous ayons deux documents
+    XML
+    semblables à celui de l'exemple précédent. Comment pouvons-nous représenter
+    le fait que les deux personnes sont amies?&lt;/p&gt;
+&lt;p&gt;Une façon plus naturelle de représenter les connaissances est d'utiliser
+    des graphes. Un graphe est un ensemble de nœuds liés par
+    des relations d'un nœud à un autre. Par exemple, l'ensemble des pages web
+    forme un graphe avec la relation «&amp;nbsp;contient un lien vers&amp;nbsp;». On dit
+    que le graphe est «&amp;nbsp;dirigé&amp;nbsp;» si les relations sont à sens unique.
+&lt;/p&gt;
+&lt;p&gt;Le web est un exemple de graphe dirigé&amp;nbsp;: une page web peut avoir un lien
+    vers une autre page web, qui elle-même ne contient pas un lien de retour
+    vers la page d'origine. On dit qu'un graphe est «&amp;nbsp;annoté&amp;nbsp;» si les
+    relations entre deux nœuds peuvent être de différentes natures. Par exemple,
+    une communauté d'humains forme un graphe dirigé avec les relations
+    «&amp;nbsp;est ami avec&amp;nbsp;»
+    et «&amp;nbsp;est parent avec&amp;nbsp;». Supposons que les relations «&amp;nbsp;est ami
+    avec&amp;nbsp;» et «&amp;nbsp;est parent avec&amp;nbsp;» soient réflexives, alors le
+    graphe d'humains est annoté, mais pas dirigé. Par contre, si nous acceptons
+    qu'une personne puisse être l'ami de quelqu'un sans que cette personne soit
+    son ami, alors le graphe d'humains sera annoté et dirigé.&lt;/p&gt;
+&lt;p&gt;Nous invitons à lire l'article de Wikipedia sur la &lt;a href="https://fr.wikipedia.org/wiki/Th%C3%A9orie_des_graphes"&gt;théorie de
+        graphes&lt;/a&gt; ainsi que &lt;a href="http://bv.alloprof.qc.ca/m1414.aspx"&gt;l'article correspondant sur
+        le site d'aide aux devoirs Allô Prof?&lt;/a&gt; afin de vous familiariser
+    davantage avec la notion de graphe. &lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741898971</timemodified>
+  </page>
+</activity>

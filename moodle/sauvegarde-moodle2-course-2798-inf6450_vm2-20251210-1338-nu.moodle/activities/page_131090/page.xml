@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72242" moduleid="131090" modulename="page" contextid="970211">
+  <page id="72242">
+    <name>Autoévaluation</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Autoévaluation DOM&lt;/h1&gt;
+
+&lt;p&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en
+    plus de vous permettre
+    de vérifier vos réponses, fournit une courte explication.
+    Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c'est
+    que vous avez la bonne réponse;
+    sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour
+    comprendre votre erreur.
+    Puis, essayez de nouveau en cliquant sur le bouton
+    «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 1&lt;/b&gt;.
+        Si vous faites la lecture d'un document XML avec une librairie
+        supportant DOM et que, par la suite,
+        vous utilisez la même librairie pour sauvegarder exactement le même
+        modèle en arbre, est-ce
+        que le fichier nouvellement produit sera identique au fichier d'origine?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140312857418832"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857419808false" name="idp140312857418832" onclick="javascript:var Click_MenuId='idp140312857419808false';var formid='idp140312857418832'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Oui&lt;span id="idp140312857419808false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il y a plusieurs
+                    façons de représenter un même arbre&amp;nbsp;XML. Par exemple,
+                    l'espace entre les éléments
+                    n'est pas significatif en XML et
+                    «&amp;nbsp;&amp;lt;toto&amp;gt;fds&amp;lt;/toto&amp;gt;&amp;lt;toto&amp;gt;fds&amp;lt;/toto&amp;gt;&amp;nbsp;»
+                    est équivalent à
+                    «&amp;nbsp;&amp;lt;toto&amp;gt;fds&amp;lt;/toto&amp;gt;
+                    &amp;lt;toto&amp;gt;fds&amp;lt;/toto&amp;gt;&amp;nbsp;».&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857422304true" name="idp140312857418832" onclick="javascript:var Click_MenuId='idp140312857422304true';var formid='idp140312857418832'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Non&lt;span id="idp140312857422304true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement, il
+                    peut y avoir des différences.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 2&lt;/b&gt;.
+        Si vous voulez absolument produire du XML bien formé, quelle est la
+        meilleure méthode?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140312857423808"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857424864false" name="idp140312857423808" onclick="javascript:var Click_MenuId='idp140312857424864false';var formid='idp140312857423808'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;En
+                traitant le XML comme du texte (System.out en Java).&lt;span id="idp140312857424864false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) S'il est
+                    important que votre document soit bien formé, ce n'est
+                    probablement pas la meilleure
+                    méthode, à moins que le travail ne soit relativement
+                    simple.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857426560false" name="idp140312857423808" onclick="javascript:var Click_MenuId='idp140312857426560false';var formid='idp140312857423808'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;En
+                utilisant le XSLT.&lt;span id="idp140312857426560false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Le XSLT ne
+                    permet pas de vérifier que le document produit est du XML
+                    bien formé.
+                    Il est possible de générer du XML incorrect à partir du
+                    XSLT&amp;nbsp;: par exemple, ayant deux éléments-racines.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857428320true" name="idp140312857423808" onclick="javascript:var Click_MenuId='idp140312857428320true';var formid='idp140312857423808'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;En
+                utilisant une librairie avec modèle&amp;nbsp;DOM.&lt;span id="idp140312857428320true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui. Une bonne
+                    librairie devrait nous assurer que le document produit est
+                    du XML bien formé.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 3&lt;/b&gt;.
+        Est-ce qu'une librairie événementielle nous avertit de la présence d'un
+        commentaire dans le texte XML? Est-ce
+        que le modèle en arbre doit contenir les commentaires?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140312857430192"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857431312false" name="idp140312857430192" onclick="javascript:var Click_MenuId='idp140312857431312false';var formid='idp140312857430192'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Oui.
+                Dans les deux cas.&lt;span id="idp140312857431312false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. C'est
+                    pourquoi les commentaires ne devraient pas contenir des
+                    informations importantes, car les parseurs peuvent
+                    omettre les commentaires.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857432992true" name="idp140312857430192" onclick="javascript:var Click_MenuId='idp140312857432992true';var formid='idp140312857430192'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Non.
+                Dans les deux cas.&lt;span id="idp140312857432992true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.
+                    Certains parseurs omettent les commentaires; si les
+                    les commentaires XML servent à stocker des informations
+                    importantes, cela peut entraîner un problème.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 4&lt;/b&gt;.
+        Quel type de modèle est le&amp;nbsp;DOM?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140312857434784"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857435712true" name="idp140312857434784" onclick="javascript:var Click_MenuId='idp140312857435712true';var formid='idp140312857434784'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;En
+                arbre &lt;span id="idp140312857435712true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Oui. C'est même le
+                    modèle en arbre de référence.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857437200false" name="idp140312857434784" onclick="javascript:var Click_MenuId='idp140312857437200false';var formid='idp140312857434784'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Événementiel&lt;span id="idp140312857437200false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non, mais on peut
+                    utiliser un traitement événementiel pour produire
+                    un&amp;nbsp;DOM.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857438736false" name="idp140312857434784" onclick="javascript:var Click_MenuId='idp140312857438736false';var formid='idp140312857434784'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Texte&lt;span id="idp140312857438736false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 5&lt;/b&gt;.
+        Si, dans un document XML, seule la valeur des attributs
+        «&amp;nbsp;montant&amp;nbsp;» vous intéresse, quelle serait
+        le meilleur modèle de programmation?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140312857440240"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857441616false" name="idp140312857440240" onclick="javascript:var Click_MenuId='idp140312857441616false';var formid='idp140312857440240'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;En
+                arbre&lt;span id="idp140312857441616false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Il peut être
+                    fastidieux et coûter beaucoup de mémoire que de tout mettre
+                    dans un arbre
+                    pour n'aller chercher que quelques valeurs.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857443152true" name="idp140312857440240" onclick="javascript:var Click_MenuId='idp140312857443152true';var formid='idp140312857440240'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Événementiel&lt;span id="idp140312857443152true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. Vous
+                    pourriez ainsi aller chercher que ce dont vous avez
+                    besoin.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140312857444528false" name="idp140312857440240" onclick="javascript:var Click_MenuId='idp140312857444528false';var formid='idp140312857440240'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Texte&lt;span id="idp140312857444528false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Le traitement du
+                    XML comme texte peut fonctionner dans certains cas simples,
+                    mais pas en général.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741899908</timemodified>
+  </page>
+</activity>

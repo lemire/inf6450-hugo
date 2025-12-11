@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72170" moduleid="131018" modulename="page" contextid="970139">
+  <page id="72170">
+    <name>Les valeurs d’attribut</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Les valeurs d’attribut&lt;/h1&gt;
+&lt;h2&gt;Spécifier les valeurs d'attributs&lt;/h2&gt;
+&lt;p&gt;Nous savons maintenant comment aller chercher la valeur d'un attribut en
+    utilisant
+    une expression XPath contenant le symbole «&amp;nbsp;@&amp;nbsp;». Cependant, qu'en
+    est-il de la spécification
+    des valeurs d'attributs? Supposons le document suivant&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;facture&amp;gt;
+    &amp;lt;montant&amp;gt;10.10&amp;lt;/montant&amp;gt;
+    &amp;lt;/facture&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous voulons le simplifier pour n'avoir que&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;facture montant="10.10" /&amp;gt;
+&lt;/p&gt;
+&lt;p&gt;Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer
+    une valeur XPath
+    comme valeur d'attribut, de la façon suivante&amp;nbsp;:&lt;/p&gt;
+&lt;p style="border:solid 1px black;white-space:pre; font-size:0.85em"&gt;
+    &amp;lt;?xml version="1.0" encoding="ISO-8859-1"?&amp;gt;
+    &amp;lt;xsl:stylesheet version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&amp;gt;
+    &amp;lt;xsl:template match="facture"&amp;gt;
+    &amp;lt;facture montant="{montant}" /&amp;gt;
+    &amp;lt;/xsl:template&amp;gt;
+    &amp;lt;/xsl:stylesheet&amp;gt;
+&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741881573</timemodified>
+  </page>
+</activity>

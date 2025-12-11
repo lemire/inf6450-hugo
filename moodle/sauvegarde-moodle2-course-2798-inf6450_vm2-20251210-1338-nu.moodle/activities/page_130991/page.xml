@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72143" moduleid="130991" modulename="page" contextid="970109">
+  <page id="72143">
+    <name>Travail 2</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>	
+    	&lt;h1 class=""&gt;				Travail 2
+				&lt;/h1&gt;
+        
+
+
+								
+		&lt;div class=""&gt;&lt;p&gt;Vous avez créé votre premier EPUB intitulé «&amp;nbsp;Mon premier livre&amp;nbsp;» et vous l’avez consulté avec un lecteur de EPUB comme Readium. Vous êtes maintenant prêt pour le travail noté&amp;nbsp;!&lt;/p&gt;
+&lt;p&gt;Vous allez maintenant faire le deuxième travail noté.&lt;/p&gt;
+&lt;p&gt;Vous devez transmettre votre travail en utilisant l’outil de dépôt de l’Université.&lt;/p&gt;
+&lt;p&gt;Comme le premier travail du cours, ce travail n’est ni long ni très compliqué et vise simplement à s’assurer que vous être familier avec le XHTML et les livres électroniques. Nous espérons que le travail puisse être un peu amusant. Nous aborderons des problèmes plus difficiles de programmation dans les semaines qui viennent.&lt;/p&gt;
+&lt;p&gt;Voici le travail à faire&amp;nbsp;:&lt;/p&gt;
+&lt;ul class="spip"&gt;&lt;li&gt; Choisissez un EPUB au sein du Projet Gutenberg. Vous ne devez pas choisir Eugénie Grandet... soyez original&amp;nbsp;!&lt;/li&gt;&lt;li&gt; Préparez un court questionnaire comportant au moins 3 questions sur le livre en question. On ne vous évalue pas sur le choix de questions, mais pour être acceptable, les questions doivent être pertinentes au livre choisi. Rendez ce questionnaire interactif en utilisant JavaScript. Par exemple, utilisez à cette fin l’exemple où nous demandions l’année de naissance de Balzac. Si vous maîtrisez bien le JavaScript, vous pouvez aussi innover&amp;nbsp;! Notez que votre questionnaire doit obligatoirement être du XHTML valable&amp;nbsp;! &lt;a href="http://validator.w3.org/#validate_by_input" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;Vous pouvez valider votre document XHTML en ligne.&lt;/a&gt;&lt;/li&gt;&lt;li&gt; Ouvrez le EPUB dans Sigil. Ajoutez votre questionnaire au livre électronique et créez une nouvelle version du document.&lt;/li&gt;&lt;li&gt; Ouvrez le fichier EPUB nouvellement créé dans un logiciel approprié. Avec un peu de chance, vous venez de créer un livre électronique interactif&amp;nbsp;!&lt;/li&gt;&lt;li&gt; Transmettez votre fichier à la personne qui vous encadre pour correction.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;Certains lecteurs EPUB ne supportent pas JavaScript. Par contre, le JavaScript est supporté par iBooks (Apple), Readium, etc.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important&lt;/strong&gt;&amp;nbsp;: Si vous utilisez l’outil de dépôt, il est possible que celui-ci n’accepte pas les fichiers EPUB. Si vous devez mettre votre travail dans une archive compressée, optez pour le format universel &lt;a href="http://en.wikipedia.org/wiki/Zip_%28file_format%29" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;ZIP&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Notez que vous pouvez maintenant partager votre EPUB avec le monde entier (en respectant &lt;a href="http://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;la license du Projet Gutenberg qui est plutôt permissive&lt;/a&gt;). Vous pourriez même revendre un tel EPUB&amp;nbsp;!&lt;/p&gt;
+&lt;p&gt;Cette activité notée compte pour 10 % de la note globale.&lt;/p&gt;&lt;/div&gt;
+		&lt;hr&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1743019247</timemodified>
+  </page>
+</activity>

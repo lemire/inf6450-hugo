@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72134" moduleid="130982" modulename="page" contextid="970100">
+  <page id="72134">
+    <name>Les documents EPUB</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>    	&lt;h1 class=""&gt;				Les documents EPUB
+				&lt;/h1&gt;
+        
+
+								
+		&lt;div class=""&gt;&lt;p&gt;Le livre électronique émerge comme norme dans l’édition. Bien qu’il existe plusieurs formats possibles, nous allons nous concentrer plus particulièrement dans ce cours sur le format EPUB qui est souvent utilisé. Il est notamment supporté par les plateformes iBooks d’Apple,  &lt;a href="https://en.wikipedia.org/wiki/Kobo_Inc." class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;Kobo&lt;/a&gt;, etc. Amazon utilise un format similaire pour le Kindle, mais comme il est propre à Amazon, nous ne nous y attarderons pas.&lt;span class="spip_note_ref"&gt;&amp;nbsp;[&lt;a href="#nb1" class="spip_note" rel="appendix" title="Un outil gratuit, Calibre, permet de convertir les livres électroniques&amp;nbsp;(...)" id="nh1"&gt;1&lt;/a&gt;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Le format EPUB peut être décrit sommairement comme du XHTML que l’on place dans une archive compressée zip. On peut se demander pourquoi les éditeurs préfèrent un tel format à quelque chose d’autre, comme le format PDF. Le format PDF est malheureusement mal adapté aux livres électroniques parce qu’il suppose que le document sera imprimé sur papier. Il comporte donc une notion fixée d’avance de page. Dans une liseuse électronique, la taille de la page dépend de la taille de l’écran et des goûts du lecteur.&lt;/p&gt;
+&lt;p&gt;Référence&amp;nbsp;: &lt;a href="http://fr.flossmanuals.net/creer-un-epub/introduction/" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;Créer un Epub&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;
+		&lt;hr&gt;
+		&lt;div class=""&gt;&lt;div id="nb1"&gt;
+&lt;p&gt;&lt;span class="spip_note_ref"&gt;[&lt;a href="#nh1" class="spip_note" title="Notes 1" rev="appendix"&gt;1&lt;/a&gt;]&amp;nbsp;&lt;/span&gt;Un outil gratuit, &lt;a href="http://calibre-ebook.com/" class="spip_out" rel="external"&gt;Calibre&lt;/a&gt;, permet de convertir les livres électroniques entre différents formats.&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>3</revision>
+    <timemodified>1741807453</timemodified>
+  </page>
+</activity>

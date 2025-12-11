@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72302" moduleid="131150" modulename="page" contextid="970277">
+  <page id="72302">
+    <name>Pense-bête DTD</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Pense-bête DTD&lt;/h1&gt;
+
+&lt;h2&gt;Quelques symboles importants en DTD&lt;/h2&gt;
+    &lt;p&gt;&lt;strong&gt;&amp;lt;&amp;nbsp;!DOCTYPE nomXML_élémentRacine SYSTEM&lt;br class="autobr"&gt;
+    "URL"&amp;gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Déclaration de type de document&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&amp;lt;&amp;nbsp;!ELEMENT ... &amp;gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;:&lt;br class="autobr"&gt;
+    Instruction&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&amp;nbsp;?&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Élément optionnel&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;*&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Élément pouvant être présent&lt;br class="autobr"&gt;
+    plus d’une fois (de 0 à l’infini)&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;+&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Élément présent au moins une&lt;br class="autobr"&gt;
+    fois et qui peut être présent plusieurs fois&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;|&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Ou&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;#PCDATA&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Que du texte&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&amp;lt;&amp;nbsp;!ATTLIST nomElementX&lt;br class="autobr"&gt;
+    nomAttributY...&amp;gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Spécifie que l’élément «&amp;nbsp;&amp;nbsp;X&amp;nbsp;&amp;nbsp;» a&lt;br class="autobr"&gt;
+    l’attribut «&amp;nbsp;&amp;nbsp;Y&amp;nbsp;&amp;nbsp;»&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;CDATA&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Attribut contient du&lt;br class="autobr"&gt;
+    texte&lt;/p&gt;
+    &lt;p&gt;#&lt;strong&gt;REQUIRED&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Attribut obligatoire&lt;/p&gt;
+    &lt;p&gt;#&lt;strong&gt;IMPLIED&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Attribut optionnel&lt;/p&gt;
+    &lt;p&gt;#&lt;strong&gt;FIXED&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Attribut fixé avec une valeur&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;&amp;lt;&amp;nbsp;!ENTITY nomEntiteX&lt;br class="autobr"&gt;
+    "Yvaleur"&amp;gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: L’entité «&amp;nbsp;&amp;nbsp;nomEntiteX&amp;nbsp;&amp;nbsp;» prend la valeur «&amp;nbsp;&amp;nbsp;Yvaleur&amp;nbsp;&amp;nbsp;»&lt;/p&gt;
+    &lt;p&gt;
+    &lt;!-- j'ai changé valeurY pour Yvaleur parce que sinon, on aurait dit qu'il y avait deux fois le mot valeur de suite, comme une erreur de répétition --&gt;&lt;/p&gt;
+    &lt;p&gt;
+    &lt;strong&gt;&amp;lt;&amp;nbsp;!ENTITY&amp;nbsp;% nomEntiteX&lt;br class="autobr"&gt;
+    "Yvaleur"&amp;gt;&lt;/strong&gt;&amp;nbsp;&amp;nbsp;: Localement, l’entité «&amp;nbsp;&amp;nbsp;nomEntiteX&amp;nbsp;&amp;nbsp;» prend la&lt;br class="autobr"&gt;
+    valeur «&amp;nbsp;&amp;nbsp;Yvaleur&amp;nbsp;&amp;nbsp;» dans la&amp;nbsp;DTD&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741902254</timemodified>
+  </page>
+</activity>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72146" moduleid="130994" modulename="page" contextid="970112">
+  <page id="72146">
+    <name>XPath : un premier laboratoire</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>
+	
+    	&lt;h1 class=""&gt;				XPath&amp;nbsp;: un premier laboratoire
+				&lt;/h1&gt;
+
+
+								
+		&lt;div class=""&gt;&lt;p&gt;Étant donné un document XML, on peut sélectionner un noeud au sein du document avec une expression XPath. Plus généralement, étant donné un document XML et un noeud courant, on peut sélectionner, relativement à ce noeud, tout autre noeud ou ensemble de noeuds correspondant à un certain motif régulier.&lt;/p&gt;
+&lt;p&gt;Dans cette première activité de familiarisation avec XPath, nous allons d’abord passer en revue rapidement les éléments de base et vous inviter à faire un petit laboratoire.&lt;/p&gt;
+&lt;p&gt;Les expressions XPath les plus simples comprennent seulement un nom XML. Dans ce cas, on sélectionne l’élément ayant le nom correspondant.  Par exemple, l’expression «&amp;nbsp;chien&amp;nbsp;» va sélectionner tout élément nommé «&amp;nbsp;chien&amp;nbsp;» et contenu dans le noeud courant. S’il y en a plus d’un, plusieurs éléments pourront être sélectionnés. On peut utiliser l’astérisque (*) pour sélectionner tous les éléments du context courant, peu importe leur nom. Les deux points (..) permettent de sélectionner le parent du noeud courant (indiqué par «&amp;nbsp;.&amp;nbsp;»), ainsi «&amp;nbsp;../chien&amp;nbsp;» permet de sélectionner les éléments «&amp;nbsp;chien&amp;nbsp;» dans le noeud parent. Si on veut ignorer le noeud courant et sélectionner tous les éléments chien, on peut obtenir ce résultat avec l’expression «&amp;nbsp;//chien&amp;nbsp;». On peut aussi sélectionner le noeud racine... avec l’expression XPath «&amp;nbsp;/&amp;nbsp;». Ainsi donc, «&amp;nbsp;/*&amp;nbsp;» sélectionnera toujours l’élément-racine. L’instruction «&amp;nbsp;//*&amp;nbsp;» va sélectionner tous les noeuds du document. On peut sélectionner un attribut avec le symbole «&amp;nbsp;@&amp;nbsp;». Ainsi, on peut sélectionner le contenu de l’attribut race de tous les éléments chien avec l’expression «&amp;nbsp;//chien/@race&amp;nbsp;».&lt;/p&gt;
+&lt;pre style="color:#000000;background:#ffffff;"&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;animaux&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;chien&lt;/span&gt; &lt;span style="color:#274796; "&gt;race&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;caniche&lt;/span&gt;&lt;span style="color:#800000; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;animaux&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Avant de continuer plus loin avec la syntaxe XPath, nous vous invitons à utiliser le petit script suivant pour vous familiariser davantage avec la syntaxe&amp;nbsp;:&lt;/p&gt;
+
+&lt;h1&gt; XPath en ligne&lt;/h1&gt;
+&lt;p&gt;Instructions : il suffit de saisir un document XML source et une expression XPath et d'appuyer sur le bouton. Le contenu textuel de chaque résultat est retourné. L'expression XPath est toujours appliquée à partir du noeud-racine.  Cette petite application est limitée: elle suppose que le résultat prend une certaine forme (un  ensemble de noeuds ou node set).&lt;/p&gt;
+&lt;form action=""&gt;
+&lt;p&gt;Fichier XML:&lt;/p&gt;
+&lt;textarea id="xmlsource" rows="20" cols="75"&gt;&amp;lt;?xml version="1.0" ?&amp;gt; 
+&amp;lt;boite&amp;gt;
+&amp;lt;monmessage&amp;gt;
+&amp;lt;de&amp;gt;Jean&amp;lt;/de&amp;gt; 
+&amp;lt;a&amp;gt;Pierre&amp;lt;/a&amp;gt; 
+&amp;lt;titre type="émotion"&amp;gt;Ouch!&amp;lt;/titre&amp;gt; 
+&amp;lt;corps&amp;gt;Maman!&amp;lt;/corps&amp;gt; 
+&amp;lt;/monmessage&amp;gt;
+&amp;lt;monmessage&amp;gt;
+&amp;lt;de&amp;gt;Marie&amp;lt;/de&amp;gt; 
+&amp;lt;a&amp;gt;Jean&amp;lt;/a&amp;gt; 
+&amp;lt;titre type="émotion"&amp;gt;Bah!&amp;lt;/titre&amp;gt; 
+&amp;lt;corps&amp;gt;Papa!&amp;lt;/corps&amp;gt; 
+&amp;lt;/monmessage&amp;gt;
+&amp;lt;/boite&amp;gt;
+&lt;/textarea&gt;
+&lt;p&gt;Sélection XPath:&lt;/p&gt;
+&lt;input type="text" id="myxpath" value="//titre/@type"&gt;
+&lt;input type="button" value="Sélection" onclick="
+function sel(doc,path) {
+  var snapshot = doc.evaluate(path, doc, null, 7, null);
+  var nodes = [];
+  for (var i = 0; i &lt; snapshot.snapshotLength; i++) {
+    nodes.push(snapshot.snapshotItem(i));
+  }
+  return nodes;
+}
+
+
+function applyXPath(xmlsource,myxpath,xmlout) {
+    var wheretowrite = document.getElementById(xmlout);
+    var xpathexpr = document.getElementById(myxpath).value;
+	var xmlsourceDOM = chargeXML(xmlsource);
+	var n = sel(xmlsourceDOM,xpathexpr);
+	if(n.length == 0) n[0] = '(je ne trouve pas)';
+	var i;
+	var mout = '&lt;ol&gt;';
+	for(i = 0; i &lt; n.length; ++i) {
+	   mout += '&lt;li&gt;';
+	   if(n[i].textContent !== undefined)
+	     mout += n[i].textContent;
+	   else 
+	     mout += '(je ne trouve pas)'
+	   mout += '&lt;/li&gt;';
+	}
+	mout += '&lt;/ol&gt;';
+	wheretowrite.innerHTML = mout;
+}
+
+
+var xt='',h3OK=1
+function checkErrorXML(x)
+{
+xt=''
+h3OK=1
+checkXML(x)
+}
+
+function checkXML(n)
+{
+var l,i,nam
+nam=n.nodeName
+if (nam=='h3')
+	{
+	if (h3OK==0)
+		{
+		return;
+		}
+	h3OK=0
+	}
+if (nam=='#text')
+	{
+	xt=xt + n.nodeValue + '\n'
+	}
+l=n.childNodes.length
+for (i=0;i&lt;l;i++)
+	{
+	checkXML(n.childNodes[i])
+	}
+}
+function chargeXML(txt)
+{
+   var parser=new DOMParser();
+  var text=document.getElementById(txt).value;
+  try {
+    var xmlDoc=parser.parseFromString(text,'application/xml');
+    if (xmlDoc.documentElement.nodeName=='parsererror')
+    {
+      alert(xmlDoc.documentElement.childNodes[0].nodeValue);
+    }
+   if (xmlDoc.getElementsByTagName('parsererror').length&gt;0)
+   {
+   checkErrorXML(xmlDoc.getElementsByTagName('parsererror')[0]);
+   alert(xt)
+   } else {
+    return xmlDoc;
+   }
+  }
+  catch(err)
+  {
+  alert(err.message)
+  }
+}
+
+try{
+applyXPath('xmlsource','myxpath','sol')
+} catch(err)
+  {
+  alert(err.message);
+  }"&gt;
+
+&lt;p&gt;Résultat : &lt;/p&gt;
+
+&lt;p id="sol" style="width:300px;background:#ccc"&gt; &lt;/p&gt;&lt;/form&gt;&lt;/div&gt;
+		&lt;hr&gt;
+		
+</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741807573</timemodified>
+  </page>
+</activity>

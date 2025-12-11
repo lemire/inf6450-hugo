@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72161" moduleid="131009" modulename="page" contextid="970127">
+  <page id="72161">
+    <name>Introduction au XSLT</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Introduction au XSLT&lt;/h1&gt;
+
+&lt;h2&gt;Qu'est-ce que le XSLT&lt;/h2&gt;
+&lt;p&gt;La première version du langage XSLT (&lt;i&gt;Extensible Stylesheet Language Transformation&lt;/i&gt;)
+    a été publiée en&amp;nbsp;1997 et elle est devenue une recommandation W3C en&amp;nbsp;1999.
+    Elle fait partie du XSL (&lt;i&gt;Extensible Stylesheet Language&lt;/i&gt;) qui comprend une seconde composante,
+    les XSL-FO (&lt;i&gt;Extensible Stylesheet Language Formatting Objects&lt;/i&gt;).
+    La technologie XSL tire son origine du besoin d'un langage simple, mais suffisamment puissant
+    pour pouvoir contrôler finement l'affichage du XML. On utilise beaucoup le XSLT sur le web et au sein
+    des systèmes d'information, alors que le XSL-FO est davantage utile pour les applications
+    de mise en page spécialisées. Dans ce cours, nous nous soucierons seulement du XSLT, dont l'utilité
+    dépasse de loin les problèmes de présentation.&lt;/p&gt;
+&lt;p&gt;L'objectif poursuivi par le XSLT est de transformer les documents XML en d'autres documents.
+    Par exemple, supposons que vous ayez le document suivant&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+        &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;facture&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;montant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;10.10&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;montant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean Rochond&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;raison&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Achat d'ordinateur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;raison&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+         &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;facture&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt;et que vous vouliez transformer ce type de document XML en document HTML qui aurait la forme suivante&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Facture de Jean Rochond&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;head&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Ceci est une facture pour Jean Rochond de 10.10$
+      pour: Achat d'ordinateur.&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;body&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;html&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt;Si votre entreprise utilise du XML et que vous désirez envoyer des factures
+    par courriel, vous pourriez envoyer le document HTML au lieu du document&amp;nbsp;XML. De cette
+    manière, le client pourrait consulter sa facture sans avoir à comprendre le&amp;nbsp;XML. &lt;/p&gt;
+&lt;p&gt;On pourrait bien sûr écrire un programme en Java qui effectuerait cette opération, mais
+    la conception d'un programme Java prend du temps et on cherche parfois une solution
+    plus économique, plus rapide. Avec l'exemple que nous venons de voir,
+    on pourrait automatiser la transformation de XML en HTML en moins d'une quinzaine de minutes.
+    Pour obtenir le résultat désiré, il faut utiliser un petit fichier&amp;nbsp;XSLT. À la fin de cette semaine, vous devriez être capable de faire ce travail.&lt;/p&gt;
+
+
+&lt;h3 class="recall"&gt;Les documents XSLT&lt;/h3&gt;
+&lt;p&gt;Le document XSLT contient des règles qu'un «&amp;nbsp;processeur XSLT&amp;nbsp;» applique aux documents XML
+    pour les transformer. Heureusement, si vous utilisez un navigateur récent, vous avez déjà un
+    processeur XSLT moderne à même votre navigateur. Lors de l'ouverture d'un document&amp;nbsp;XML,
+    votre navigateur tente automatiquement de trouver et d'exécuter un document XSLT
+    pour transformer le document&amp;nbsp;XML.&lt;/p&gt;
+&lt;p&gt;Un processeur XSLT va parcourir les noeuds de votre document en
+    commençant par l'élément-racine et, à chaque fois, il va tenter d'appliquer une règle. Certaines règles peuvent lui dire de continuer l'application des règles au sein des noeuds contenus dans un élément (avec l'instruction apply-template) alors que d'autres peuvent simplement extraire une information particulière. &lt;/p&gt;
+&lt;p&gt;Commençons par créer le fichier XSLT suivant qu'on enregistrera
+    sur le disque comme étant «&amp;nbsp;xslt.xml&amp;nbsp;»&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;xsl&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;stylesheet&lt;/span&gt; &lt;span style="color:#274796; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; 
+     &lt;span style="color:#666616; "&gt;xmlns&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#074726; "&gt;xsl&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#666616; "&gt;http&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;//&lt;/span&gt;&lt;span style="color:#5555dd; "&gt;www.w3.org&lt;/span&gt;&lt;span style="color:#40015a; "&gt;/1999/XSL/Transform&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+     &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;xsl&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;stylesheet&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt;Ce document ne contient aucune «&amp;nbsp;règle&amp;nbsp;» et constitue le document&amp;nbsp;XSLT de base.
+    Nous vous suggérons de faire l'exercice de création de ce document avec &lt;i&gt;Bloc-notes&lt;/i&gt;, par exemple.&lt;/p&gt;
+&lt;p&gt;Un document XSLT est un document XML bien formé, utilisant
+    l'espace de noms «&amp;nbsp;http://www.w3.org/1999/XSL/Transform&amp;nbsp;» et ayant
+    pour élément-racine &lt;i&gt;stylesheet&lt;/i&gt; (ou &lt;i&gt;transform&lt;/i&gt;), lequel a lui-même un attribut «&amp;nbsp;version&amp;nbsp;».
+    On ne discute ici que de la première version de XSLT&amp;nbsp;(1.0);
+    on utilise donc 1.0 comme valeur d'attribut pour version.&lt;/p&gt;
+
+
+&lt;p&gt;Prenons maintenant le fichier XML que nous avions auparavant; modifions-le un peu
+    en le faisant pointer vers le fichier XSLT nouvellement créé&amp;nbsp;: &lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;version&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#7d0045; "&gt;1.0&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;encoding&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;ISO-8859-1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#004a43; "&gt;&amp;lt;?&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;xml-stylesheet&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;&lt;span style="color:#074726; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#40015a; "&gt;xslt.xml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt; &lt;/span&gt;
+    &lt;span style="color:#004a43; "&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style="color:#074726; "&gt;type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;application/xml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#004a43; "&gt;?&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;facture&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+       &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;montant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;10.10&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;montant&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Jean Rochond&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;personne&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;raison&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Achat d'ordinateur&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;raison&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;facture&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;/pre&gt;
+&lt;p&gt;On ajoute donc la ligne&amp;nbsp;: «&amp;nbsp;&amp;lt;?xml-stylesheet href="xslt.xml" type="application/xml"?&amp;gt;&amp;nbsp;».
+    Cette ligne indique au navigateur, ou à un autre logiciel, que le document XML peut être transformé
+    par le fichier XSLT nommé «&amp;nbsp;xslt.xml&amp;nbsp;». Le chemin peut être relatif ou absolu&amp;nbsp;: on pourrait
+    donc aussi avoir une ligne comme&amp;nbsp;:&lt;/p&gt;
+&lt;pre xml:space="preserve"&gt;«&amp;lt;?xml-stylesheet href="http://www.mondomaine.com/xslt.xml"
+     type="application/xml"?&amp;gt;»&lt;/pre&gt;
+&lt;p&gt;si l'URL «&amp;nbsp;http://www.mondomaine.com/xslt.xml&amp;nbsp;» pointe vers un fichier&amp;nbsp;XSLT. &lt;/p&gt;
+&lt;p&gt;Dans un navigateur, on peut enregistrer ce nouveau document XML dans le même répertoire
+    que le fichier «&amp;nbsp;xslt.xml&amp;nbsp;», disons avec le nom «&amp;nbsp;test.xml&amp;nbsp;»,
+    puis d'ouvrir le fichier «&amp;nbsp;test.xml&amp;nbsp;» dans votre navigateur; il est malheureusement nécessaire de déposer les fichiers sur un serveur web pour que cela fonctionne, les développeurs craignant les failles de sécurité associées aux fichiers locaux. Heureusement, vous n'avez pas à faire ce travail: nous fournissons un &lt;a href="$@PAGEVIEWBYID*131012@$"&gt;outil en ligne&lt;/a&gt; qui vous permet de saisir vos fichiers XSLT and XML dans votre navigateur sans devoir créer de fichiers. Nous vous présenterons cet outil dans le prochain article. Ceux qui souhaitent travailler avec des fichiers directement peuvent utiliser un serveur web. &lt;/p&gt;
+
+
+&lt;p&gt;Une fois le fichier XML chargé et la transformation XSLT appliquée, normalement,
+    on ne devrait rien voir à l'écran (une page vide), car le document XSLT utilisé est vide de
+    toute instruction et le résultat ne sera donc pas du HTML.
+    Le résultat peut cependant varier selon le navigateur utilisé, car votre navigateur pourrait afficher le texte,
+    même s'il ne s'agit pas de HTML&amp;nbsp;: dans ce cas, vous ne verriez que le texte contenu dans le document XML,
+    les balises en moins. Nous expliquerons bientôt pourquoi cela est le cas.&lt;/p&gt;
+
+&lt;h2 class="recall"&gt;Application de bureau Java (optionelle)&lt;/h2&gt;
+
+
+&lt;p&gt;Nous avons préparé une application conviviale en Java qui vous permet d'appliquer une transformation XSLT à un document XML. &lt;a href="https://github.com/lemire/javaxslt"&gt;Nous vous invitons à la mettre à l'essai en suivant nos consignes&lt;/a&gt;. &lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1764703736</timemodified>
+  </page>
+</activity>

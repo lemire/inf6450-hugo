@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72293" moduleid="131141" modulename="page" contextid="970268">
+  <page id="72293">
+    <name>Examen</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Examen&lt;/h1&gt;
+
+&lt;p&gt;Vous avez complété les quinze semaines de cours, réalisé toutes les activités d’autoévaluation et tenu compte des rétroactions reçues à vos cinq travaux notés. Félicitations&amp;nbsp;!&lt;br&gt;
+    C’est maintenant le temps de passer votre examen final.&lt;/p&gt;
+&lt;p&gt; L’examen compte pour 40&amp;nbsp;% de la note du cours et comporte 5&amp;nbsp;questions, lesquelles portent sur le contenu couvert par les travaux. La correction de l’examen est rigoureuse&amp;nbsp;: vous devez décrire le comportement exact des programmes et pouvoir répondre aux questions de façon aussi précise que durant les travaux.&lt;/p&gt;
+&lt;p&gt; Durant l’examen, vous avez droit à vos notes de cours et à tout autre document. Cependant, il est important d’avoir lu &lt;strong&gt;tous les textes&lt;/strong&gt; et d’avoir fait toutes les activités d’autoévaluation du cours avant de cliquer sur le lien ci-dessous.&lt;/p&gt;
+&lt;p&gt; Bonne chance!&lt;/p&gt;
+&lt;p&gt;&lt;a href="$@QUIZVIEWBYID*158488@$" target="_blank"&gt;Pour passer votre examen &lt;/a&gt;&lt;/p&gt;
+
+&lt;!-- &lt;a href="https://caroussel.teluq.ca/gadp/?p_sigle=inf6450%20&amp;p_nom=examen"&gt;examen préparatoire&lt;/a&gt; --&gt;
+
+
+&lt;hr /&gt;
+
+&lt;h2&gt;Pour continuer vos études&lt;/h2&gt;
+
+
+&lt;h3&gt;INF 2007 : Programmation avancée&lt;/h3&gt;
+&lt;p&gt;&lt;iframe title="YouTube video player" src="https://www.youtube.com/embed/Of7vbY4eAGI?si=dP11_e0mX3SJr6IG" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;INF 6460 : recherche d'informations&lt;/h3&gt;
+&lt;p&gt;&lt;iframe title="YouTube video player" src="https://www.youtube.com/embed/xh_l-2qhe48?si=gZARtwOxEaoVeOJc" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;INF 9004 : Entrepôts de données&lt;/h3&gt;
+&lt;p&gt;&lt;iframe title="YouTube video player" src="https://www.youtube.com/embed/Qq3W6OUfrc0?si=a0GZcyqHVph-kiaF" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;INF 2020 : programmation en Python&lt;/h3&gt;
+&lt;p&gt;&lt;iframe title="YouTube video player" src="https://www.youtube.com/embed/F6fI-1dtxxw?si=W9XuXAAWc8Xfpo_Q" frameborder="0" width="560" height="315"&gt;&lt;/iframe&gt;&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>8</revision>
+    <timemodified>1764960605</timemodified>
+  </page>
+</activity>

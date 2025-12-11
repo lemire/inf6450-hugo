@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inforef>
+  <roleref>
+    <role>
+      <id>4</id>
+    </role>
+    <role>
+      <id>5</id>
+    </role>
+    <role>
+      <id>38</id>
+    </role>
+  </roleref>
+  <fileref>
+    <file>
+      <id>7253991</id>
+    </file>
+    <file>
+      <id>7253994</id>
+    </file>
+  </fileref>
+  <question_categoryref>
+    <question_category>
+      <id>75964</id>
+    </question_category>
+    <question_category>
+      <id>75967</id>
+    </question_category>
+    <question_category>
+      <id>75970</id>
+    </question_category>
+  </question_categoryref>
+</inforef>

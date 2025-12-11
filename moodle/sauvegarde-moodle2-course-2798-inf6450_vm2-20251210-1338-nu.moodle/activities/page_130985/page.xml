@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72137" moduleid="130985" modulename="page" contextid="970103">
+  <page id="72137">
+    <name>Utilisation de Sigil et de Thorium</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Utilisation de Sigil et de Thorium&lt;/h1&gt;
+&lt;h2&gt;Sigil&lt;/h2&gt;
+&lt;p&gt;Créer un fichier EPUB manuellement est un peu lourd. Ce n’est pas une
+    opération particulièrement difficile, mais il faut créer quelques fichiers
+    et les placer au bon endroit. Il est facile de faire des erreurs.&lt;/p&gt;
+&lt;p&gt;Au lieu de cela, nous allons utiliser un éditeur dédié nommé Sigil. Vous
+    devez donc commencer par installer Sigil sur votre ordinateur&amp;nbsp;:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/user-none/Sigil/releases" class="spip_url spip_out auto" rel="noopener noreferrer nofollow external" target="_blank"&gt;https://github.com/user-none/Sigil/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Il suffit de télécharger et d’exécuter le fichier setup.exe correspondant à
+    votre version de Windows. Choisissez une version "release" et non une
+    version beta ou "pre-release".&lt;/p&gt;
+&lt;p&gt;Après avoir démarré Sigil pour la première fois, ou avoir créé un nouveau
+    document, vous devriez voir une fenêtre semblable à celle-ci dans votre
+    écran&amp;nbsp;:&lt;br class="autobr"&gt;
+    &lt;img src="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/Images/screenshot_2015-02-03_15.19.19.png" width="100%"&gt;
+&lt;/p&gt;
+&lt;p&gt;Vous pouvez ensuite activer une vue sur le code source.&lt;/p&gt;
+&lt;p&gt;
+    &lt;img src="$@PLUGINFILEBYCONTEXT*970031@$/mod_folder/content/0/Images/screenshot_2015-02-03_16.35.36.png" width="100%"&gt;
+&lt;/p&gt;
+&lt;p&gt;Pour nous amuser un peu, nous allons créer un livre électronique digne de ce
+    nom. Commencer par écrire un paragraph que vous ajouterez au fichier XHTML
+    déjà ouvert. Quelque chose comme ceci&amp;nbsp;:&lt;/p&gt;
+&lt;pre style=" white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */"&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Mon premier livre&lt;span style="color:#008c00; "&gt;.&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#800000; font-weight:bold; "&gt;p&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Trouvez le fichier content.opf qui se trouve à la racine de tout EPUB et
+    modifiez-le afin de donner un titre et un auteur à votre livre. Quelque
+    chose comme ceci au sein de l’élément metadata fera l’affaire&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Mon premier livre&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;title&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt; &lt;span style="color:#274796; "&gt;opf:role&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;aut&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;Daniel Lemire&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;creator&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;fr-CA&lt;span style="color:#a65700; "&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#666616; "&gt;dc&lt;/span&gt;&lt;span style="color:#800080; "&gt;:&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;language&lt;/span&gt;&lt;span style="color:#a65700; "&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Notez bien l’espace de noms utilisé ("&lt;a href="http://purl.org/dc/elements/1.1/" rel="noopener noreferrer nofollow external" target="_blank"&gt;http://purl.org/dc/elements/1.1/&lt;/a&gt;"). Il s’agit de
+    l’espace de noms de Dublin Core. Nous y reviendrons plus tard dans le cours.
+&lt;/p&gt;
+&lt;p&gt;Un lien vers un document HTML se trouve sans doute déjà dans le fichier
+    content.opf. Vous trouverez ailleurs dans l’interface de Sigil un éditeur
+    vous permettant de modifier le fichier HTML en question. Vous pourriez ainsi
+    rédiger tout un livre dans un seul fichier HTML. Mais il peut être plus
+    pratique de diviser votre livre en plusieurs fichiers HTML. En cliquant sur
+    le bouton droit de la souris sur le dossier Text, ajoutez un nouveau fichier
+    HTML (par exemple Section0002.xhtml). Vous pouvez remplir ce nouveau fichier
+    de texte. Notez qu’il est permis d’utiliser des hyperliens offrant la
+    possibilité au lecteur de passer directement d’un fichier à l’autre.&lt;/p&gt;
+&lt;p&gt;Consultez à nouveau le fichier content.opf. Vous trouverez alors des liens
+    vers vos deux fichiers HTML. Vous devriez voir quelque chose comme
+    ceci&amp;nbsp;:&lt;/p&gt;
+&lt;pre&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;itemref&lt;/span&gt; &lt;span style="color:#274796; "&gt;idref&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Section0001.xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;itemref&lt;/span&gt; &lt;span style="color:#274796; "&gt;idref&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Section0002.xhtml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;C’est de cette manière qu’une liseuse sait quels fichiers HTML offrir au
+    lecteur.&lt;/p&gt;
+&lt;p&gt;Enregistrez ensuite le résultat sur votre disque sous la forme d’un fichier
+    avec l’extension .epub.&lt;/p&gt;
+&lt;h2&gt;Thorium&lt;/h2&gt;
+&lt;p&gt;Il n’est pas très drôle de créer un livre sans pouvoir le consulter.
+    Heureusement, il existe une application qui s’installe partout et qui fait bien l’affaire&amp;nbsp;: &lt;a href="https://thorium.edrlab.org/" rel="noopener noreferrer external" target="_blank"&gt;Thorium&lt;/a&gt;. Prenez la peine de l’installer et de la
+    lancer.&lt;/p&gt;
+&lt;p&gt;Après avoir lancé Thorium, vous devriez voir une fenêtre similaire à celle-ci :
+&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="@@PLUGINFILE@@/Screenshot%202025-03-20%20at%205.30.17%E2%80%AFPM.png" alt="xxx" width="500" class="img-fluid atto_image_button_text-bottom"&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Vous pouvez ensuite charger un livre. Vérifiez que le livre correspond bien à ce que vous avez créé. Si ça ne
+    fonctionne pas comme vous le pensez, pour une raison ou une autre, consultez
+    de nouveau le document dans Sigil. Est-ce que vous voyez bien le contenu que
+    vous y avez mis&amp;nbsp;? Si ça ne va toujours pas, vérifiez que vous utilisez
+    bien une version de Sigil de qualité «&amp;nbsp;release&amp;nbsp;». Essayez une
+    autre version de Sigil au besoin. Vous pouvez aussi expérimenter avec
+    d’autres lecteurs de EPUB.&lt;/p&gt;
+&lt;p&gt;Dans tous les cas, nous vous invitons bien sûr à expérimenter avec d’autres
+    lecteurs de livres électroniques. Si vous avez une tablette, vous trouverez
+    sans doute une application pertinente. Votre PC a peut-être déjà des
+    logiciels compatibles avec la norme EPUB.&lt;/p&gt;
+&lt;h2 class="spip"&gt;Le projet Gutenberg&lt;/h2&gt;
+&lt;p&gt;Le projet Gutenberg est une collection de livres électroniques gratuits,
+    disponibles au format EPUB. Commencez par télécharger la version &lt;a href="http://www.gutenberg.org/ebooks/11049" class="spip_out" rel="noopener noreferrer external" target="_blank"&gt;EPUB d’Eugénie
+        Grandet&lt;/a&gt; (de Balzac). Ouvrez-le dans Sigil.&lt;/p&gt;
+&lt;p&gt;Vous constaterez que le texte est composé de trois fichiers XHTML indiqué par
+    le fichier content.opf&amp;nbsp;:&lt;/p&gt;
+&lt;pre style=" white-space: pre-wrap;       /* CSS 3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */"&gt;&lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Styles/pgepub.css&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;item1&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;media-type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;text/css&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Text/www.gutenberg.org%40files%4011049%4011049-8-0.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;id00000&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;media-type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;application/xhtml+xml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Text/www.gutenberg.org%40files%4011049%4011049-8-1.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;id00639&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;media-type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;application/xhtml+xml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#a65700; "&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#5f5035; "&gt;item&lt;/span&gt; &lt;span style="color:#274796; "&gt;href&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;Text/www.gutenberg.org%40files%4011049%4011049-8-2.html&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;id&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;id01301&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#274796; "&gt;media-type&lt;/span&gt;&lt;span style="color:#808030; "&gt;=&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;application/xhtml+xml&lt;/span&gt;&lt;span style="color:#0000e6; "&gt;"&lt;/span&gt; &lt;span style="color:#a65700; "&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Si le coeur vous en dit, vous pouvez modifier les mots de Balzac, enregistrer
+    le nouveau document EPUB et le lire en famille.&lt;/p&gt;
+&lt;p&gt;Notez que l’on peut spécifier une feuille de style CSS associées avec les
+    différents fichiers HTML. Nous reviendrons sur ce point plus tard dans le
+    cours.&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>6</revision>
+    <timemodified>1742506591</timemodified>
+  </page>
+</activity>

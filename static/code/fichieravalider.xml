@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE etudiant SYSTEM "monfichier.dtd">
+<etudiant>
+    <numero>123456</numero>
+    <nom>Jean Dupont</nom>
+    <age>20</age>
+</etudiant>

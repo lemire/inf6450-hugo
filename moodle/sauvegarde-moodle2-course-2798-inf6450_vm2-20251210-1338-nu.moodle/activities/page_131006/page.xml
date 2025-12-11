@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72158" moduleid="131006" modulename="page" contextid="970124">
+  <page id="72158">
+    <name>XPath 2.0 et 3.0</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1 class=""&gt; XPath 2.0 et 3.0
+&lt;/h1&gt;
+
+
+
+&lt;div class=""&gt;
+    &lt;p&gt;
+
+    &lt;/p&gt;
+    &lt;p&gt;Jusqu'à présent, nous avons présenté XPath 1.0. Il s'agit de la version la plus largement supportée. Elle est la seule version supportée dans tous les grands navigateurs.&lt;/p&gt;
+
+
+    &lt;p&gt;XPath 2.0 ajoute de nombreuses &lt;a href="http://www.w3.org/TR/xpath-functions/" shape="rect"&gt;fonctions et opérateurs&lt;/a&gt; qui simplifient la vie du programmeur
+        tels que empty, exists, intersect, except (pour calculer le complément),
+        deep-equal (pour tester l'égalité entre deux séquences),
+        index-of, reverse, subsequence, insert-before, remove, distinct-values,
+        avg, max, min, etc. Alors que
+        XPath 1.0 ne traite que des nombres, des chaînes de caractères, des valeurs booléennes et des ensembles de nœuds, XPath 2.0
+        introduit la notion de séquence et plusieurs autres types
+        de données pour noter les notes, la durée, les entiers,
+        les nombres à virgule flottante, etc. XPath 2.0 supporte aussi
+        les &lt;a href="https://www.w3.org/TR/xpath-functions/#string.match" shape="rect"&gt;expressions régulières&lt;/a&gt; avec les fonctions matches, replace, et tokenize. XPath 2.0 intègre maintenant
+        la fonction «&amp;nbsp;document&amp;nbsp;» qui était une fonction XSLT.&lt;/p&gt;
+    &lt;p&gt;XPath&amp;nbsp;2.0 comprend maintenant un syntaxe if/then/else comme dans cet exemple&amp;nbsp;:
+        «&amp;nbsp;if ( @sexe eq 'm' ) then 'Monsieur' else 'Madame'&amp;nbsp;». On peut aussi utiliser des boucles&amp;nbsp;:
+        «&amp;nbsp;for $i in //etudiant return $i/note&amp;nbsp;». On peut vérifier si au moins un (some) ou
+        tous (every) les éléments d'une séquence satisfont une condition: «&amp;nbsp;every $i in //etudiant
+        satisfies $i/note &amp;gt; 0&amp;nbsp;» ou «&amp;nbsp;some $i in //etudiant
+        satisfies $i/note &amp;lt; 100&amp;nbsp;». En somme, XPath&amp;nbsp;2.0 permet d'effectuer plusieurs traitement qui n'étaient possible
+        qu'avec des instructions XSLT auparavant.&lt;/p&gt;
+
+
+
+    &lt;p&gt;XPath 3.0 quant à lui renforce la notion de fonction en XPath. On peut définir et exécuter ses propres fonctions. Par exemple, on peut définir (en XPath 3.0) une fonction qui ajoute 10 à un nombre: «&amp;nbsp;let $ajoute := function($n) {$n+10} ». &lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>4</revision>
+    <timemodified>1741959943</timemodified>
+  </page>
+</activity>

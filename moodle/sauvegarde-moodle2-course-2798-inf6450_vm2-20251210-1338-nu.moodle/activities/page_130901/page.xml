@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72071" moduleid="130901" modulename="page" contextid="970010">
+  <page id="72071">
+    <name>Créer un fichier XML</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Créer un fichier XML&lt;/h1&gt;
+
+&lt;p&gt;Tous les systèmes d’exploitation fournissent un éditeur de texte. Windows a son Bloc-notes, macOS son TextEdit, et Linux propose de nombreux choix (vim, nano, gedit, etc.).&lt;/p&gt;
+
+&lt;p&gt;Je vous recommande fortement d’utiliser &lt;strong&gt;&lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt;&lt;/strong&gt; : il est gratuit, multiplateforme (Windows, macOS, Linux), très léger, et il offre une excellente coloration syntaxique pour le XML, le HTML, etc.&lt;/p&gt;
+
+
+&lt;h2&gt;Assistance par intelligence artificielle&lt;/h2&gt;
+
+&lt;p&gt;Pour bénéficier d’une assistance par intelligence artificielle directement dans l’éditeur, il est possible d’ajouter GitHub Copilot, un outil d’autocomplétion alimenté par l’intelligence artificielle. Voici comment procéder.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Créez-vous un compte sur &lt;a href="https://github.com"&gt;le site GitHub&lt;/a&gt;. &lt;a href="https://github.com/lemire"&gt;Vous pouvez en profiter vous consulter la page du professeur&lt;/a&gt;.&lt;/li&gt;&lt;/li&gt;
+&lt;li&gt;Installez Visual Studio Code depuis le site officiel (code.visualstudio.com) si ce n’est pas déjà fait.&lt;/li&gt;
+&lt;li&gt;Ouvrez l’éditeur, puis accédez à la vue des extensions en cliquant sur l’icône carrée divisée en quatre dans la barre latérale gauche.&lt;/li&gt;
+&lt;li&gt;Dans la barre de recherche des extensions, tapez GitHub Copilot et sélectionnez l’extension officielle publiée par GitHub.&lt;/li&gt;
+&lt;li&gt;Cliquez sur Installer ou Install. Une fois l’installation terminée, une invite vous demandera de vous connecter avec votre compte GitHub. Suivez les instructions pour autoriser l’extension.&lt;/li&gt;
+&lt;li&gt;Copilot est désormais actif. Il proposera des suggestions de code en temps réel pendant que vous tapez. Acceptez-les avec la touche Tab.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Notez que GitHub Copilot nécessite un abonnement payant après une période d’essai gratuite.&lt;/p&gt;
+
+&lt;h2&gt;Votre premier fichier XML&lt;/h2&gt;
+
+&lt;p&gt;Comme premier exercice, créez un nouveau fichier et tapez le code suivant :&lt;/p&gt;
+
+&lt;pre&gt;&lt;span style="color:#e06c75;"&gt;&amp;lt;premier&amp;gt;&lt;/span&gt;
+    Ceci est mon premier document XML.
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/premier&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Enregistrez-le sous le nom &lt;code&gt;premier.xml&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Attention sous Windows : le Bloc-notes ajoute automatiquement l’extension &lt;code&gt;.txt&lt;/code&gt;.  
+Pour éviter cela :  
+→ dans la boîte d’enregistrement, choisissez &lt;strong&gt;Tous les fichiers (*.*)&lt;/strong&gt; dans le menu déroulant « Type » et tapez le nom &lt;code&gt;premier.xml&lt;/code&gt; entre guillemets si nécessaire.&lt;/p&gt;
+
+&lt;p&gt;Vous pouvez aussi choisir l’encodage : sous Windows XP et plus récents, sélectionnez &lt;strong&gt;UTF-8&lt;/strong&gt; (recommandé) ou &lt;strong&gt;ANSI&lt;/strong&gt; (équivalent à ISO-8859-1 pour ce cours).&lt;/p&gt;
+
+&lt;p&gt;Ouvrez maintenant &lt;code&gt;premier.xml&lt;/code&gt; dans votre navigateur (Firefox, Chrome, Edge…).  
+Si tout est correct, vous verrez le texte s’afficher. En cas d’erreur de syntaxe, le navigateur vous indiquera précisément le problème.&lt;/p&gt;
+
+
+&lt;h2&gt;Un exemple de HTML bien formé (donc aussi du XML valide)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;span style="color:#e06c75;"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+        Bonjour le monde !
+    &lt;span style="color:#e06c75;"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span style="color:#e06c75;"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+
+&lt;p&gt;Exercice facultatif :  
+recopiez ce code dans un fichier nommé &lt;code&gt;test.html&lt;/code&gt;, ouvrez-le avec votre navigateur → vous devez voir « Bonjour le monde ! » s’afficher.&lt;/p&gt;
+
+&lt;h2&gt;Assistance par intelligence artificielle (facultatif)&lt;/h2&gt;
+
+&lt;p&gt;Pour bénéficier d’une aide intelligente pendant que vous écrivez du XML/HTML/JavaScript, vous pouvez installer &lt;strong&gt;GitHub Copilot&lt;/strong&gt; dans Visual Studio Code :&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Créez un compte sur &lt;a href="https://github.com"&gt;github.com&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Téléchargez et installez &lt;a href="https://code.visualstudio.com"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Ouvrez VS Code → cliquez sur l’icône Extensions (carré divisé en 4) dans la barre latérale&lt;/li&gt;
+    &lt;li&gt;Cherchez « GitHub Copilot » → installez l’extension officielle&lt;/li&gt;
+    &lt;li&gt;Connectez-vous avec votre compte GitHub quand on vous le demande&lt;/li&gt;
+    &lt;li&gt;Copilot est prêt ! Il vous suggérera du code en temps réel (acceptez avec &lt;kbd&gt;Tab&lt;/kbd&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Note : GitHub Copilot est gratuit pendant une période d’essai, puis nécessite un abonnement payant.&lt;/p&gt;
+
+&lt;p&gt;Vous savez maintenant créer, enregistrer et visualiser des fichiers XML.  
+C’est la première étape essentielle avant de passer à des structures plus complexes !&lt;/p&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>14</revision>
+    <timemodified>1764428225</timemodified>
+  </page>
+</activity>

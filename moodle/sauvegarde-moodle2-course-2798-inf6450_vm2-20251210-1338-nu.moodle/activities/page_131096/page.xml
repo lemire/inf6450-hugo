@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="72248" moduleid="131096" modulename="page" contextid="970217">
+  <page id="72248">
+    <name>Autoévaluation DOM</name>
+    <intro></intro>
+    <introformat>1</introformat>
+    <content>&lt;h1&gt;Autoévaluation DOM&lt;/h1&gt;
+
+&lt;p&gt;Le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;» donne accès à un script qui, en
+    plus de vous permettre
+    de vérifier vos réponses, fournit une courte explication.
+    Si tous les commentaires sont en &lt;span style="color:blue"&gt;bleu&lt;/span&gt;, c'est
+    que vous avez la bonne réponse;
+    sinon, lisez les commentaires en &lt;span style="color:red"&gt;rouge&lt;/span&gt; pour
+    comprendre votre erreur.
+    Puis, essayez de nouveau en cliquant sur le bouton
+    «&amp;nbsp;Recommencer&amp;nbsp;».&lt;/p&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 1&lt;/b&gt;.
+        Si j'ai une application DOM et que je charge 100 fichiers XML faisant un
+        Mo chacun, je m'attends
+        que mon programme utilise au moins 100 Mo.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140356078637968"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078638896true" name="idp140356078637968" onclick="javascript:var Click_MenuId='idp140356078638896true';var formid='idp140356078637968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140356078638896true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!)
+                    Effectivement.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078640176false" name="idp140356078637968" onclick="javascript:var Click_MenuId='idp140356078640176false';var formid='idp140356078637968'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140356078640176false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) L'affirmation est
+                    correcte&amp;nbsp;: DOM utilise beaucoup de mémoire.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 2&lt;/b&gt;.
+        Un arbre DOM est constitué d'éléments contenant d'autres éléments.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140356078641728"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078642640false" name="idp140356078641728" onclick="javascript:var Click_MenuId='idp140356078642640false';var formid='idp140356078641728'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140356078642640false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) L'affirmation est
+                    techniquement incorrecte. C'est un arbre de nœuds et les
+                    nœuds ne sont pas tous des éléments. Par exemple, une
+                    instruction de traitement ou
+                    une déclaration de type de document est un nœud.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078644352true" name="idp140356078641728" onclick="javascript:var Click_MenuId='idp140356078644352true';var formid='idp140356078641728'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140356078644352true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement. XML
+                    est une structure d'arbre en éléments, mais DOM utilise
+                    une structure plus générale d'arbre de nœuds, où les nœuds
+                    n'ont pas à être des éléments.
+                    En général, par contre, seuls les éléments (et le document)
+                    peuvent avoir des descendants.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 3&lt;/b&gt;.
+        Dans un arbre DOM, que trouve-t-on à la racine?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140356078645824"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078647312false" name="idp140356078645824" onclick="javascript:var Click_MenuId='idp140356078647312false';var formid='idp140356078645824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;L'élément-racine
+                du document XML.&lt;span id="idp140356078647312false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Non. Si c'était
+                    le cas, on ne pourrait avoir accès à la déclaration de type
+                    de document, par exemple.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078648816false" name="idp140356078645824" onclick="javascript:var Click_MenuId='idp140356078648816false';var formid='idp140356078645824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Il
+                n'y a pas de racine unique.&lt;span id="idp140356078648816false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Ce ne serait
+                    alors pas un arbre.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078650096true" name="idp140356078645824" onclick="javascript:var Click_MenuId='idp140356078650096true';var formid='idp140356078645824'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Le
+                document lui-même contenant, parmi d'autres choses,
+                l'élément-racine du document XML.&lt;span id="idp140356078650096true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) Effectivement.
+                &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 4&lt;/b&gt;.
+        Parmi les types de nœuds DOM suivants, quels sont ceux qui ne peuvent
+        pas avoir d'enfants?
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez toutes les réponses qui s'appliquent, puis
+        appuyez sur le bouton «&amp;nbsp;Vérifier ma réponse&amp;nbsp;».
+    &lt;/p&gt;
+    &lt;form id="idp140356078651696"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140356078652464true" name="idp140356078651696"&gt;DocumentType (modèle pour une
+                déclaration de type de document)&lt;span id="idp140356078652464true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;La déclaration de type de document n'a
+                    pas d'enfants; elle ne peut pas contenir, par exemple, des
+                    éléments.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140356078654112false" name="idp140356078651696"&gt;Element (modèle pour un
+                élément)&lt;span id="idp140356078654112false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Un élément peut avoir des
+                    enfants.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140356078655392true" name="idp140356078651696"&gt;Comment (modèle pour un
+                commentaire)&lt;span id="idp140356078655392true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Les commentaires ne peuvent pas avoir
+                    d'enfants.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140356078656672false" name="idp140356078651696"&gt;Document (modèle pour le document
+                lui-même)&lt;span id="idp140356078656672false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Le document peut avoir des
+                    enfants.&lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="checkbox" value="idp140356078657952true" name="idp140356078651696"&gt;Text (modèle pour du texte contenu
+                dans un élément)&lt;span id="idp140356078657952true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;Du texte ne peut pas avoir
+                    d'enfants.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;input type="button" class="button" value="Vérifier ma réponse" onclick="javascript:var formid = 'idp140356078651696';var myform = document.getElementById(formid);var inputs = myform.getElementsByTagName('input'); for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);if(inputs[inputscount].checked) {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;blue&amp;quot;;} else {spanel.style.color = &amp;quot;red&amp;quot;;}} else {if(/true/.test(inputs[inputscount].value)) { spanel.style.color = &amp;quot;red&amp;quot;;} else { spanel.style.color = &amp;quot;blue&amp;quot;;}}spanel.style.display=&amp;quot;&amp;quot;;}"&gt;&lt;input type="button" class="button" value="Recommencer" onclick="javascript:var formid = 'idp140356078651696';var myform = document.getElementById(formid);myform.reset();var inputs = myform.getElementsByTagName('input');for(inputscount = 0; inputscount &lt; inputs.length; ++inputscount){var spanel = document.getElementById(inputs[inputscount].value);spanel.style.display=&amp;quot;none&amp;quot;;}"&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 5&lt;/b&gt;.
+        Un arbre DOM donne accès à tout le contenu en information pertinente
+        d'un document XML.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140356078660176"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078661008true" name="idp140356078660176" onclick="javascript:var Click_MenuId='idp140356078661008true';var formid='idp140356078660176'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140356078661008true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) DOM est
+                    complet&amp;nbsp;: vous pouvez obtenir tout le contenu en
+                    information du document XML.
+                    Dans un logiciel normal, il ne devrait jamais être
+                    nécessaire d'utiliser autre chose que DOM
+                    pour extraire l'information contenue dans un document XML.
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078662608false" name="idp140356078660176" onclick="javascript:var Click_MenuId='idp140356078662608false';var formid='idp140356078660176'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140356078662608false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) L'affirmation
+                    était correcte.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;
+&lt;hr style="margin-bottom:1cm; margin-top:1cm;color: #0f0; background-color: #ccc; height: 5px;"&gt;
+&lt;div style="margin-left:1cm"&gt;
+    &lt;div style="background-color:#E0EAF0"&gt;
+        &lt;b&gt;Question 6&lt;/b&gt;.
+        Un arbre DOM correspond à un document XML unique.
+    &lt;/div&gt;
+    &lt;p style="width:90%;"&gt;Choisissez la bonne réponse parmi les suivantes.&lt;/p&gt;
+    &lt;form id="idp140356078664016"&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078664784false" name="idp140356078664016" onclick="javascript:var Click_MenuId='idp140356078664784false';var formid='idp140356078664016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Vrai&lt;span id="idp140356078664784false" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse incorrecte!) Il peut y avoir
+                    plusieurs documents disposés différemment, mais contenant la
+                    même information. &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;input type="radio" value="idp140356078666272true" name="idp140356078664016" onclick="javascript:var Click_MenuId='idp140356078666272true';var formid='idp140356078664016'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';"&gt;Faux&lt;span id="idp140356078666272true" style="display: none;font-weight:bold;" class="feedback"&gt;&lt;br&gt;(Réponse correcte!) C'est juste. Deux
+                    librairies DOM pourraient, avec le même arbre, générer des
+                    documents XML différents.&lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/form&gt;
+&lt;/div&gt;</content>
+    <contentformat>1</contentformat>
+    <legacyfiles>0</legacyfiles>
+    <legacyfileslast>$@NULL@$</legacyfileslast>
+    <display>5</display>
+    <displayoptions>a:2:{s:10:"printintro";s:1:"0";s:17:"printlastmodified";s:1:"1";}</displayoptions>
+    <revision>2</revision>
+    <timemodified>1741899802</timemodified>
+  </page>
+</activity>
