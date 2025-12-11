@@ -241,7 +241,7 @@ Les services web REST utilisent simplement HTTP (GET, POST, PUT, DELETE).
 Le programme Java suivant interroge le service de recherche SRU (Search/Retrieve via URL) de la Bibliothèque du Congrès américain pour récupérer l’enregistrement bibliographique MARC21 correspondant au titre exact « First Impressions of the New World ». Il construit une requête HTTP contenant les paramètres nécessaires (opération de recherche, version du protocole, critère de recherche sur le titre Dublin Core, limitation à un seul résultat et demande du format MARCXML), ouvre la connexion réseau, télécharge la réponse XML directement depuis l’URL, la parse en tenant compte des espaces de noms, puis utilise une expression XPath pour extraire précisément la chaîne du « leader » (les 24 premiers caractères de l’enregistrement MARC qui décrivent le type de document, son statut, sa longueur, etc.) et l’affiche dans la console. En résumé, il effectue une recherche catalographique distante et récupère un élément technique clé de la notice MARC correspondante.
 
 
-{{<inlineJava path="example.java">}}
+{{<inlineJava path="Exemple.java">}}
 import org.w3c.dom.Document;
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
