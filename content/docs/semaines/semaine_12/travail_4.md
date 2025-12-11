@@ -23,9 +23,10 @@ weight: 110
  <li>
   Chaque fichier Java doit débuter par un commentaire donnant le sigle du
         cours et votre nom comme ceci :
-  <pre>/**
-            * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
-            */</pre>
+  <pre>
+  /**
+   * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+   */</pre>
  </li>
  <li>
   Vous devriez pouvoir accéder à la version de votre SDK, en tapant
