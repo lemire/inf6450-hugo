@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bibliotheque>
+    <livre isbn="978-2070416080">
+        <titre>L'Étranger</titre>
+        <auteur>Albert Camus</auteur>
+        <annee>1942</annee>
+        <prix devise="EUR">7.50</prix>
+    </livre>
+    <livre isbn="978-2253004226">
+        <titre>Le Petit Prince</titre>
+        <auteur>Antoine de Saint-Exupéry</auteur>
+        <annee>1943</annee>
+        <prix devise="EUR">6.90</prix>
+    </livre>
+    <livre isbn="978-0140449136">
+        <titre>1984</titre>
+        <auteur>George Orwell</auteur>
+        <annee>1949</annee>
+        <prix devise="EUR">9.20</prix>
+    </livre>
+</bibliotheque>
