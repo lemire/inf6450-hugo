@@ -195,25 +195,44 @@ De nombreuses bibliothèques (JAXB, bases de données, frameworks) manipulent du
 ### Sérialisation XML
 
 La sérialisation XML d'objet Java permet de convertir des objets Java en XML et vice-versa, facilitant la persistance et l'échange de données.
+Prenez quelques secondes pour exécuter le programme suivant.
 
-```java
+{{<inlineJava path="Serialization.java">}}
 import java.beans.*;
 import java.io.*;
 
 public class Serialization {
-    public static void main(String[] args) throws IOException {
-        String o = new String("Un objet java");
-        File f = new File("test.xml");
-        XMLEncoder e = new XMLEncoder(
-            new BufferedOutputStream(new FileOutputStream(f)));
-        e.writeObject(o); e.close();
-        XMLDecoder d = new XMLDecoder(
-            new BufferedInputStream(new FileInputStream(f)));
-        Object lu = d.readObject(); d.close();
-        System.out.println(lu.equals(o)); // true
+    public static void main(String[] args) {
+        try {
+            String o = new String("Un objet java");
+            File f = new File("test.xml");
+
+            // Sérialisation en XML
+            XMLEncoder e = new XMLEncoder(
+                new BufferedOutputStream(new FileOutputStream(f)));
+            e.writeObject(o);
+            e.close();
+
+            // Désérialisation
+            XMLDecoder d = new XMLDecoder(
+                new BufferedInputStream(new FileInputStream(f)));
+            Object lu = d.readObject();
+            d.close();
+
+            // Affichage clair du résultat
+            System.out.println("Objet original : " + o);
+            System.out.println("Objet lu depuis le fichier XML : " + lu);
+            System.out.println("Les deux objets sont égaux : " + lu.equals(o));
+            System.out.println("Type de l'objet lu : " + lu.getClass().getName());
+
+        } catch (Exception ex) {
+            System.err.println("Erreur lors de la sérialisation/désérialisation :");
+            ex.printStackTrace();
+        }
     }
 }
-```
+{{</inlineJava>}}
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
