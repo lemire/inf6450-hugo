@@ -2,9 +2,9 @@
 title: "Autoévaluation"
 weight: 40
 ---
-<h1>
- Autoévaluation DOM
-</h1>
+
+# Autoévaluation DOM
+
 <p>
  Le bouton « Vérifier ma réponse » donne accès à un script qui, en
     plus de vous permettre

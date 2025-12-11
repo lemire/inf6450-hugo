@@ -2,9 +2,10 @@
 title: "Travail 4"
 weight: 110
 ---
-<h1>
- Travail 4
-</h1>
+
+# Travail 4
+
+
 <h2>
  Consignes générales
 </h2>
@@ -25,7 +26,7 @@ weight: 110
         cours et votre nom comme ceci :
   <pre>
   /**
-   * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 1.9
+   * INF 6450 - Travail noté 4 - Votre nom, fait avec JDK 26
    */</pre>
  </li>
  <li>

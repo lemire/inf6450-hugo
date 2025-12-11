@@ -7,7 +7,8 @@ title: "Accueil"
 
 {{< youtube id="biMsiwqAfso" >}}
 
-Bienvenue ! Mon nom est [Daniel Lemire](http://lemire.me/fr/). Je travaille comme professeur et chercheur en informatique.
+Bienvenue ! Mon nom est [Daniel Lemire](http://lemire.me/fr/). Je travaille comme professeur et chercheur en informatique. Je suis notamment l'instigateur et le principal auteur du parseur JSON le plus rapide au monde (simdjson),
+nous verrons dans ce cours en quoi consiste JSON.
 
 Ce cours porte sur le XML et les concepts associés (CSS, XSLT, HTML, MathML, etc.).
 Le XML vous permet de générer des graphiques de grande qualité (SVG) que vous pouvez inclure au sein de pages web ou de document Word. Le XML vous permet de produire des équations mathématiques. 

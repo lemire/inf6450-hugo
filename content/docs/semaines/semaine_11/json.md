@@ -1,9 +1,12 @@
 ---
 title: "JSON"
-weight: 80
+weight: 25
 ---
+
+# JSON
+
 <p>
- Malheureusement, le traitement d’un document XML en JavaScript est parfois    inutilement lourd. Pour cette raison, on remplace souvent le XML par du
+ Malheureusement, le traitement d’un document XML est parfois    inutilement lourd. Pour cette raison, on remplace souvent le XML par du
  <a href="https://fr.wikipedia.org/wiki/JavaScript_Object_Notation" rel="noopener noreferrer external" target="_blank">
   JSON
  </a>
