@@ -1846,12 +1846,7 @@ weight: 40
  Il existe de nombreux outils pour optimiser les fichiers CSS dont
  <a href="http://csstidy.sourceforge.net/" shape="rect">
   CSSTidy
- </a>
- qui est
- <a href="http://cdburnerxp.se/cssparse/css_optimiser.php" shape="rect">
-  disponible en ligne
- </a>
- .
+ </a>.
 </p>
 <h3 class="recall">
  En terminant
@@ -1862,9 +1857,9 @@ weight: 40
     à lire le document de référence
  <a href="http://developer.mozilla.org/en/docs/CSS" shape="rect">
   http://developer.mozilla.org/en/docs/CSS
- </a>.
+ </a>
 </p>
-.
+
 <h3 class="recall">
  Livres de référence
 </h3>

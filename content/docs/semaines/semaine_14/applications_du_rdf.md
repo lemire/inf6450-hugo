@@ -66,11 +66,6 @@ weight: 20
    RSS
   </i>
   est utilisée par les blogues et sites de nouvelles.
-        Le site mozilla.org a plusieurs articles sur le sujet (
-  <a href="http://developer.mozilla.org/en/docs/RSS">
-   http://developer.mozilla.org/en/docs/RSS
-  </a>
-  ).
         En gros,
         un document RSS/RDF contient une version XML des dernières nouvelles.
         Par la suite,

@@ -139,9 +139,7 @@ weight: 20
  Dans un navigateur, on peut enregistrer ce nouveau document XML dans le même répertoire
     que le fichier « xslt.xml », disons avec le nom « test.xml »,
     puis d'ouvrir le fichier « test.xml » dans votre navigateur; il est malheureusement nécessaire de déposer les fichiers sur un serveur web pour que cela fonctionne, les développeurs craignant les failles de sécurité associées aux fichiers locaux. Heureusement, vous n'avez pas à faire ce travail: nous fournissons un
- <a href="$@PAGEVIEWBYID*131012@$">
   outil en ligne
- </a>
  qui vous permet de saisir vos fichiers XSLT and XML dans votre navigateur sans devoir créer de fichiers. Nous vous présenterons cet outil dans le prochain article. Ceux qui souhaitent travailler avec des fichiers directement peuvent utiliser un serveur web.
 </p>
 <p>

@@ -235,11 +235,8 @@ weight: 80
     utiliser les crochets « [ ] » dans votre solution.
 </p>
 <p>
- <a href="$@PAGEVIEWBYID*131060@$">
   Vous pouvez
-        tester votre solution en ligne à l'aide du laboratoire XSLT
- </a>
- .
+        tester votre solution en ligne à l'aide du laboratoire XSLT.
 </p>
 <h4>
  Indices
