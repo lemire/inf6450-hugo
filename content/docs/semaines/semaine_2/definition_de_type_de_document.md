@@ -5,13 +5,13 @@ weight: 20
 
 # Définition de type de document
 
-## Document XML valable
+## Document XML valide
 
 Nous avons vu ce qu'était un document XML bien formé : un seul élément-racine, les éléments ne se chevauchent pas, les noms XML ne commencent pas par un chiffre, et ainsi de suite. De plus, un document XML bien formé peut contenir n'importe quel élément et dans n'importe quel ordre, et tous les éléments peuvent contenir des attributs, et peu importe ceux-ci.
 
-En pratique, il est souvent suffisant pour les documents XML d'être bien formés, mais il arrive qu'on veuille imposer des contraintes supplémentaires aux éléments et attributs pouvant être utilisés. Par exemple, un élément « étudiant » pourrait posséder un numéro d'étudiant, mais pas l'inverse : un élément « numéro d'étudiant » ne pouvant contenir qu'un numéro et pas d'autres éléments. On peut aussi vouloir contraindre le contenu d'un document XML pour des raisons d'interopérabilité. Par exemple, si un groupe d'experts s'entendent sur un format XML pour un type de données, il est utile de pouvoir vérifier si un fichier XML donné correspond bien à ce sur quoi on s'est entendu. Un document XML qui est bien formé et qui respecte les contraintes définissant son type de document est dit valable (ou valide).
+En pratique, il est souvent suffisant pour les documents XML d'être bien formés, mais il arrive qu'on veuille imposer des contraintes supplémentaires aux éléments et attributs pouvant être utilisés. Par exemple, un élément « étudiant » pourrait posséder un numéro d'étudiant, mais pas l'inverse : un élément « numéro d'étudiant » ne pouvant contenir qu'un numéro et pas d'autres éléments. On peut aussi vouloir contraindre le contenu d'un document XML pour des raisons d'interopérabilité. Par exemple, si un groupe d'experts s'entendent sur un format XML pour un type de données, il est utile de pouvoir vérifier si un fichier XML donné correspond bien à ce sur quoi on s'est entendu. Un document XML qui est bien formé et qui respecte les contraintes définissant son type de document est dit valide (ou parfois valable).
 
-En d'autres mots, un document XML qui est bien formé et qui, en plus, satisfait aux contraintes dictant quels éléments et attributs peuvent être utilisés, et dans quel ordre et avec quel contenu, est dit valable.
+En d'autres mots, un document XML qui est bien formé et qui, en plus, satisfait aux contraintes dictant quels éléments et attributs peuvent être utilisés, et dans quel ordre et avec quel contenu, est dit valide.
 
 ## Normes de définition de type de document
 
@@ -58,9 +58,9 @@ On peut passer automatiquement d'un document DTD à un document XML Schema ou Re
 
 En somme, la norme DTD n'est sans doute pas ce qui se fait de mieux, mais c'est de loin la norme la plus utilisée historiquement, et c'est celle que nous allons étudier en détail. Pour certaines applications, la norme DTD demeure supérieure aux alternatives mentionnées précédemment: la définition d'entités n'est pas possible en XML Schema ou Relax NG, par exemple. Si vous maîtrisez la norme DTD, vous n'aurez aucun mal à utiliser une autre norme comme Relax NG puisque les principes essentiels sont les mêmes.
 
-## Documents valables utilisant la norme DTD
+## Documents valides utilisant la norme DTD
 
-Un document valable commence par une déclaration XML, comme celle qui suit :
+Un document valide commence par une déclaration XML, comme celle qui suit :
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
@@ -122,13 +122,13 @@ Pour s'assurer de bien comprendre, voyons un autre exemple :
 
 Cette DTD nous spécifie que l'élément « lettre » contient du mélange de texte et d'éléments « personne » (contenu mixte), alors que l'élément « personne » doit contenir un élément « age », suivi d'un élément « nom ».
 
-Par exemple, ce document XML serait valable :
+Par exemple, ce document XML serait valide :
 
 ```xml
 <lettre> Bonjour <personne><age>30</age><nom>Jean</nom></personne> </lettre>
 ```
 
-Assurez-vous de bien comprendre pourquoi ce document est valable avant de continuer.
+Assurez-vous de bien comprendre pourquoi ce document est valide avant de continuer.
 
 ## Les attributs
 
@@ -148,14 +148,14 @@ On peut également spécifier qu'un attribut servira à identifier un élément 
 
 On peut faire référence aux attributs de type « ID » avec des attributs de type « IDREF ». La valeur d'un attribut « IDREF » doit non seulement être un nom XML, mais doit aussi avoir un attribut de type « ID » qui possède cette même valeur quelque part dans le document XML. Par exemple, si on a l'instruction «  <!ATTLIST recipiendaire code ID> », on pourra ensuite faire référence à l'élément ayant une valeur d'attribut « code » particulière, avec une instruction comme «  <!ATTLIST mauvaispayeur code IDREF> ».
 
-Dans ce contexte, le document XML qui suit n'est pas valable :
+Dans ce contexte, le document XML qui suit n'est pas valide :
 
 ```xml
 <recipiendaire code="123">...</recipiendaire>
 <mauvaispayeur code="456">...</mauvaispayeur>
 ```
 
-Par contre, l'exemple qui suit est valable :
+Par contre, l'exemple qui suit est valide :
 
 ```xml
 <recipiendaire code="123">...</recipiendaire>
@@ -193,7 +193,7 @@ Une entité peut faire appel à une autre entité :
 <!ENTITY monentite2 "texte">
 ```
 
-Une entité ne peut cependant pas faire appel à elle même de manière récursive, directement ou indirectement. Cet exemple n'est donc pas valable :
+Une entité ne peut cependant pas faire appel à elle même de manière récursive, directement ou indirectement. Cet exemple n'est donc pas valide :
 
 ```xml
 <!ENTITY monentite "&monentite;">
@@ -400,8 +400,8 @@ Absolument pas. Par contre, une DTD est un document textuel. Les fichiers XML Sc
 
 Les documents XML sont faits pour être échangés et assurer la pérennité des informations. Si plusieurs individus ou plusieurs institutions s'entendent sur une DTD commune, il sera beaucoup plus facile d'échanger de l'information.
 
-## Est-ce vraiment nécessaire d'avoir des documents valables? Est-ce que je dois vraiment toujours travailler avec des fichiers DTD, XML Schema ou Relax NG?
+## Est-ce vraiment nécessaire d'avoir des documents valides? Est-ce que je dois vraiment toujours travailler avec des fichiers DTD, XML Schema ou Relax NG?
 
-En pratique, la validation n'est pas essentielle et une application logicielle ne devrait pas exiger des documents valables. Si vous concevez une application, la règle implicite est que toute balise ou attribut non prévue devrait être ignorée. Un navigateur qui sait lire et afficher du XML devrait pouvoir lire tout XML bien formé, même s'il n'est pas valable. Si vous inventez une nouvelle balise XHTML, le navigateur devrait tout simplement ne pas en tenir compte. Les concepteurs du XML n'ont pas inscrit la nécessité d'être valable à même la définition du XML et c'est un choix qui n'a jamais été remis en question par l'organisme de normalisation W3C.
+En pratique, la validation n'est pas essentielle et une application logicielle ne devrait pas exiger des documents valides. Si vous concevez une application, la règle implicite est que toute balise ou attribut non prévue devrait être ignorée. Un navigateur qui sait lire et afficher du XML devrait pouvoir lire tout XML bien formé, même s'il n'est pas valide. Si vous inventez une nouvelle balise XHTML, le navigateur devrait tout simplement ne pas en tenir compte. Les concepteurs du XML n'ont pas inscrit la nécessité d'être valide à même la définition du XML et c'est un choix qui n'a jamais été remis en question par l'organisme de normalisation W3C.
 
-Il arrive, par exemple, qu'il soit inutilement complexe d'exiger que les documents soient valables. Si on se contraint à des documents valables, on peut même en arriver à des solutions qui sont techniquement inférieures.
+Il arrive, par exemple, qu'il soit inutilement complexe d'exiger que les documents soient valides. Si on se contraint à des documents valides, on peut même en arriver à des solutions qui sont techniquement inférieures.

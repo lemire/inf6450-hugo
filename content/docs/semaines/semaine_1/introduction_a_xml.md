@@ -40,11 +40,10 @@ weight: 40
  </b>
  . Une application XML est un jeu de balises et son utilisation dans un domaine particulier, par exemple la musique ou la cuisine. On peut définir un jeu de balises et, dans une certaine mesure, son utilisation en se servant d'un document DTD, Relax NG ou XML Schema (sujets que nous étudierons plus tard dans le cours). Dans un sens, une application XML forme un langage. On dit d'un document XML qui respecte les normes d'une application XML donnée qu'il est
  <b>
-  valable
- </b>
- . Un document
+  valide
+ </b>. Un document
  <b>
-  valable
+  valide
  </b>
  doit toujours être bien formé en plus de respecter les contraintes de l'application.
 </p>
@@ -59,7 +58,7 @@ weight: 40
  <em>
   be conservative in what you do, be liberal in what you accept from others
  </em>
- (soyez strict dans ce que vous produisez, mais généreux dans ce que vous acceptez). En d'autres mots, le XML fonctionne parce que les gens tentent le plus possible de produire du XML de qualité (bien formé et valable), mais ils acceptent que les autres fassent des entorses aux règles. C'est, en partie, ce qu'on entend lorsqu'on dit que le XML est « extensible ». Cette règle est parfois
+ (soyez strict dans ce que vous produisez, mais généreux dans ce que vous acceptez). En d'autres mots, le XML fonctionne parce que les gens tentent le plus possible de produire du XML de qualité (bien formé et valide), mais ils acceptent que les autres fassent des entorses aux règles. C'est, en partie, ce qu'on entend lorsqu'on dit que le XML est « extensible ». Cette règle est parfois
     appelée la loi de Postel parce qu'elle fut rédigée par Jon Postel dans la spécification
  <a href="http://tools.ietf.org/html/rfc793">
   RFC 793

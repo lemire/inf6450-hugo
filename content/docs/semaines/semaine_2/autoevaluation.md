@@ -77,7 +77,7 @@ weight: 40
   .
         Il est nécessaire d'avoir une définition de type de document, par
         exemple un document DTD,
-        pour déterminer si un document XML est valable.
+        pour déterminer si un document XML est valide.
  </div>
  <p style="width:90%;">
   Choisissez la bonne réponse parmi les suivantes.
@@ -90,7 +90,7 @@ weight: 40
     <span class="feedback" id="idp140520596449584true" style="display: none;font-weight:bold;">
      <br/>
      (Réponse correcte!) Un document est dit
-                    valable s'il
+                    valide s'il
                     est bien formé et respecte sa DTD.
     </span>
    </li>
@@ -432,7 +432,7 @@ weight: 40
         « http://www.mondomain.com/madtd.dtd ».
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
   <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
@@ -461,7 +461,7 @@ weight: 40
     </p>
     <span class="feedback" id="idp140520596496256true" style="display: none;font-weight:bold;">
      <br/>
-     Oui. Ce document est valable, car
+     Oui. Ce document est valide, car
                     l'astérisque (*) permet d'avoir zéro ou plusieurs
                     balises « cours ».
     </span>
@@ -578,7 +578,7 @@ weight: 40
         « http://www.mondomain.com/madtd.dtd ».
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
   <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
@@ -627,7 +627,7 @@ weight: 40
     </p>
     <span class="feedback" id="idp140520596516896false" style="display: none;font-weight:bold;">
      <br/>
-     Non. Le document n'est pas valable
+     Non. Le document n'est pas valide
                     parce que le symbole « + » implique que l'élément
                     « cours » doit apparaître au moins une
                     fois.
@@ -668,7 +668,7 @@ weight: 40
         « http://www.mondomain.com/madtd.dtd ».
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
   <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
@@ -838,7 +838,7 @@ weight: 40
         « http://www.mondomain.com/madtd.dtd ».
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
   <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
@@ -960,7 +960,7 @@ weight: 40
         « http://www.mondomain.com/madtd.dtd ».
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
   <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
@@ -1087,7 +1087,7 @@ weight: 40
   .
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
  </div>
@@ -1244,7 +1244,7 @@ weight: 40
   .
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
  </div>
@@ -1427,7 +1427,7 @@ weight: 40
   .
         Dites quels documents XML sont
   <b>
-   valables
+   valides
   </b>
   .
  </div>

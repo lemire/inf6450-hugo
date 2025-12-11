@@ -27,7 +27,7 @@ weight: 70
     Question 1
    </b>
    .
-		Parmi les documents suivants, lesquels sont du XHTML valable?
+		Parmi les documents suivants, lesquels sont du XHTML valide?
   </div>
   <p style="width:90%;">
    Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton « Vérifier ma réponse ».
@@ -95,7 +95,7 @@ de la casse et l'élément « p » n'est pas la même chose que l'élément «
      </p>
      <span class="feedback" id="idp140549857066656true" style="display: none;font-weight:bold;">
       <br/>
-      Oui. L'entité contient deux éléments bien formés et le résultat est du XHTML valable.
+      Oui. L'entité contient deux éléments bien formés et le résultat est du XHTML valide.
      </span>
     </li>
     <li>
@@ -337,7 +337,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
     </li>
     <li>
      <input name="idp140549854458928" type="checkbox" value="idp140549854462944true"/>
-     Il s'agit d'un document XML valable.
+     Il s'agit d'un document XML valide.
      <span class="feedback" id="idp140549854462944true" style="display: none;font-weight:bold;">
       <br/>
       Effectivement, avec une déclaration de type de document utilisant un identifiant public.
@@ -447,7 +447,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      1
      <span class="feedback" id="idp140549854474368false" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse incorrecte!) Non. Il ne s'agit pas de XHTML valable; la balise &lt;/P&gt; est incorrecte.
+      (Réponse incorrecte!) Non. Il ne s'agit pas de XHTML valide; la balise &lt;/P&gt; est incorrecte.
      </span>
     </li>
     <li>
@@ -455,7 +455,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      2
      <span class="feedback" id="idp140549854476176false" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse incorrecte!) Ce serait vrai s'il s'agissait de XHTML valable.
+      (Réponse incorrecte!) Ce serait vrai s'il s'agissait de XHTML valide.
      </span>
     </li>
     <li>
@@ -471,7 +471,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      Aucune de ces réponses
      <span class="feedback" id="idp140549854478928true" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse correcte!) Effectivement. Il ne s'agit pas de XHTML valable, la seconde balise paragraphe se terminant 
+      (Réponse correcte!) Effectivement. Il ne s'agit pas de XHTML valide, la seconde balise paragraphe se terminant 
       par &lt;/P&gt;. Un logiciel compatible avec XHTML comme Google Chrome ou Firefox peut très bien ne rien afficher à l'écran.
      </span>
     </li>
@@ -575,7 +575,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      </p>
      <span class="feedback" id="idp140549854490464false" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse incorrecte!) Non. Ce n'est pas du XHTML valable.
+      (Réponse incorrecte!) Non. Ce n'est pas du XHTML valide.
      </span>
     </li>
     <li>
@@ -598,7 +598,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      </p>
      <span class="feedback" id="idp140549854493008false" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse incorrecte!) Non, ce n'est pas du XHTML valable.
+      (Réponse incorrecte!) Non, ce n'est pas du XHTML valide.
      </span>
     </li>
     <li>
@@ -644,7 +644,7 @@ il doit s'agir d'éléments avec balise ouvrante et balise fermante.
      </p>
      <span class="feedback" id="idp140549854498160false" style="display: none;font-weight:bold;">
       <br/>
-      (Réponse incorrecte!) Non. C'est bien du XHTML valable, mais la liste n'est pas numérotée.
+      (Réponse incorrecte!) Non. C'est bien du XHTML valide, mais la liste n'est pas numérotée.
      </span>
     </li>
    </ol>

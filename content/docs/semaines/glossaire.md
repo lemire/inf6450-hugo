@@ -453,9 +453,9 @@ JSON est facile à parser et largement supporté par les langages. Quand on conv
 </p>
 <p>
  <strong>
-  Valable :
+  Valide :
  </strong>
- : Un document est valable s’il répond à
+ : Un document est valide s’il répond à
     certains critères
  <br class="autobr"/>
  de base de l’application XML. Un document XML qui est bien formé, qui en
@@ -465,7 +465,7 @@ JSON est facile à parser et largement supporté par les langages. Quand on conv
  <br class="autobr"/>
  peuvent être utilisés, et dans quel ordre et avec quel contenu,
  <br class="autobr"/>
- est dit valable.
+ est dit valide.
 </p>
 <p>
  <strong>
