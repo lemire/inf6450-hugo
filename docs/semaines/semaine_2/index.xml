@@ -2,9 +2,9 @@
  Définition de type de document
  &lt;a class="anchor" href="#d%c3%a9finition-de-type-de-document"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 id="document-xml-valable"&gt;
- Document XML valable
- &lt;a class="anchor" href="#document-xml-valable"&gt;#&lt;/a&gt;
+&lt;h2 id="document-xml-valide"&gt;
+ Document XML valide
+ &lt;a class="anchor" href="#document-xml-valide"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Nous avons vu ce qu&amp;rsquo;était un document XML bien formé : un seul élément-racine, les éléments ne se chevauchent pas, les noms XML ne commencent pas par un chiffre, et ainsi de suite. De plus, un document XML bien formé peut contenir n&amp;rsquo;importe quel élément et dans n&amp;rsquo;importe quel ordre, et tous les éléments peuvent contenir des attributs, et peu importe ceux-ci.&lt;/p&gt;</description></item><item><title>Validation de documents XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_2/validation_de_documents_xml/</guid><description>&lt;h2 id="objectif"&gt;
  Objectif

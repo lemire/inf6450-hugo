@@ -96,9 +96,9 @@
  Définition de type de document
  &lt;a class="anchor" href="#d%c3%a9finition-de-type-de-document"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;h2 id="document-xml-valable"&gt;
- Document XML valable
- &lt;a class="anchor" href="#document-xml-valable"&gt;#&lt;/a&gt;
+&lt;h2 id="document-xml-valide"&gt;
+ Document XML valide
+ &lt;a class="anchor" href="#document-xml-valide"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Nous avons vu ce qu&amp;rsquo;était un document XML bien formé : un seul élément-racine, les éléments ne se chevauchent pas, les noms XML ne commencent pas par un chiffre, et ainsi de suite. De plus, un document XML bien formé peut contenir n&amp;rsquo;importe quel élément et dans n&amp;rsquo;importe quel ordre, et tous les éléments peuvent contenir des attributs, et peu importe ceux-ci.&lt;/p&gt;</description></item><item><title>DOM</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/dom/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/dom/</guid><description>&lt;h1 id="dom"&gt;
  DOM
@@ -1436,7 +1436,7 @@ Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application 
  Question 1
  &lt;/b&gt;
  .
-		Parmi les documents suivants, lesquels sont du XHTML valable?
+		Parmi les documents suivants, lesquels sont du XHTML valide?
  &lt;/div&gt;
  &lt;p style="width:90%;"&gt;
  Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton « Vérifier ma réponse ».
