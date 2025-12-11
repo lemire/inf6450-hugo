@@ -245,6 +245,95 @@ En passant, ce n'est pas un vrai article<span style="color:#008c00; ">...</span>
  <p>
   Les éléments canvas, video et audio sont aussi ajoutés : le HTML devient pleinement multimédia.
  </p>
+
+
+L'exemple suivant illustre comment on peut combiner HTML et JavaScript pour dessiner.
+
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple simple Canvas</title>
+    <style>
+        canvas { 
+            border: 2px solid #333; 
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Exemple basique de Canvas</h2>
+<canvas id="monCanvas" width="400" height="300"></canvas>
+
+<script>
+// 1. On récupère l'élément canvas
+const canvas = document.getElementById('monCanvas');
+const ctx = canvas.getContext('2d'); // contexte 2d (le plus courant)
+
+// 2. Carré rouge
+ctx.fillStyle = 'red';
+ctx.fillRect(50, 50, 100, 100); // x, y, largeur, hauteur
+
+// 3. Cercle bleu
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(280, 100, 50, 0, Math.PI * 2); // centre x, centre y, rayon, angle départ, angle fin
+ctx.fill();
+
+// 4. Ligne verte
+ctx.strokeStyle = 'green';
+ctx.lineWidth = 8;
+ctx.beginPath();
+ctx.moveTo(50, 200);   // point de départ
+ctx.lineTo(350, 200);  // point d'arrivée
+ctx.stroke();
+
+// 5. Texte
+ctx.font = '30px Arial';
+ctx.fillStyle = 'black';
+ctx.fillText('Hello Canvas !', 90, 260);
+</script>
+
+</body>
+</html>
+```
+
+
+
+<canvas id="monCanvas" width="400" height="300"></canvas>
+
+<script>
+// 1. On récupère l'élément canvas
+const canvas = document.getElementById('monCanvas');
+const ctx = canvas.getContext('2d'); // contexte 2d (le plus courant)
+
+// 2. Carré rouge
+ctx.fillStyle = 'red';
+ctx.fillRect(50, 50, 100, 100); // x, y, largeur, hauteur
+
+// 3. Cercle bleu
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(280, 100, 50, 0, Math.PI * 2); // centre x, centre y, rayon, angle départ, angle fin
+ctx.fill();
+
+// 4. Ligne verte
+ctx.strokeStyle = 'green';
+ctx.lineWidth = 8;
+ctx.beginPath();
+ctx.moveTo(50, 200);   // point de départ
+ctx.lineTo(350, 200);  // point d'arrivée
+ctx.stroke();
+
+// 5. Texte
+ctx.font = '30px Arial';
+ctx.fillStyle = 'black';
+ctx.fillText('Hello Canvas !', 90, 260);
+</script>
+
  <p>
   Pour en savoir plus, consulter le guide du
   <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/HTML5">
