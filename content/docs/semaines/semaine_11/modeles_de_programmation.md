@@ -143,6 +143,7 @@ public class staxex {
 
 Le modèle DOM (Document Object Model) charge l'intégralité du document XML en mémoire sous forme d'arbre d'objets, permettant une navigation et une manipulation faciles mais consommatrice de ressources.
 Un document XML peut être vu comme un arbre. Le DOM charge tout le document en mémoire sous forme d'objets.
+Le DOM sera vu en détail la semaine prochaine.
 
 ```xml
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
@@ -233,6 +234,7 @@ public class Serialization {
 }
 {{</inlineJava>}}
 
+Résultat attendu&nbsp;:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -241,6 +243,24 @@ public class Serialization {
 </java>
 ```
 
+
+
+Ce programme montre un exemple simple de sérialisation et de désérialisation d’un objet Java en format XML à l’aide des classes XMLEncoder et XMLDecoder du package java.beans. Contrairement à la sérialisation binaire classique avec ObjectOutputStream, ces deux classes permettent de transformer des objets Java en un fichier XML lisible par un humain, puis de reconstruire l’objet à partir de ce fichier. Elles sont particulièrement pratiques pour sauvegarder l’état d’objets simples (String, collections, beans Java standards) de façon portable et modifiable manuellement.
+
+Dans la méthode main, on commence par créer un objet très simple : une instance de String contenant le texte "Un objet java". Ensuite, on crée un fichier nommé "test.xml". C’est dans ce fichier que l’objet sera sauvegardé au format XML. On utilise un XMLEncoder enveloppé dans un BufferedOutputStream et un FileOutputStream pour écrire efficacement les données. La méthode writeObject(o) déclenche la conversion de l’objet String en une représentation XML complète, puis e.close() ferme proprement le flux et écrit effectivement le contenu dans le fichier.
+
+Immédiatement après la sérialisation, le programme passe à la désérialisation. On ouvre le même fichier "test.xml" en lecture avec un XMLDecoder, également entouré d’un BufferedInputStream pour optimiser les performances. L’appel à d.readObject() lit le premier (et ici unique) objet présent dans le XML et le reconstruit en mémoire sous forme d’objet Java. Comme le fichier a été généré par XMLEncoder, la reconstruction est parfaitement fidèle : on retrouve exactement le même String d’origine.
+
+Pour vérifier que tout a fonctionné correctement, le programme affiche plusieurs informations : l’objet original, l’objet reconstitué, le résultat du test d’égalité avec equals() (qui renvoie true), et enfin le type réel de l’objet lu (java.lang.String). Cela prouve que non seulement la valeur est identique, mais que l’objet a bien été recréé avec son vrai type et non comme un type générique Object ou autre.
+
+Enfin, tout le code est placé dans un bloc try-catch qui attrape n’importe quelle Exception (problème d’accès au fichier, erreur de parsing XML, etc.) et affiche la stack trace complète sur la sortie d’erreur. Cela rend le programme robuste et facile à déboguer. En exécutant ce code, vous obtiendrez un fichier test.xml contenant une représentation XML claire de la String, et vous verrez dans la console que l’objet a été parfaitement sauvegardé et restauré sans aucune perte d’information.
+
+Cette approche ne fonctionne pas avec tout objet Java, et c’est une limitation importante de XMLEncoder/XMLDecoder.
+Ces classes ne gèrent correctement que les objets dits « Java Beans » ou les types primitifs et leurs wrappers, les String, les collections standards (List, Map, Set…), les arrays, les Date, et quelques autres classes courantes du JDK. Pour qu’un objet soit sérialisable en XML avec ce mécanisme, il doit respecter les propriétés suivantes : il doit avoir un constructeur sans argument (constructor par défaut), ses propriétés doivent être accessibles via des getters et setters respectant la convention JavaBeans (getNom() / setNom() ou isNom() pour les boolean), et il ne doit pas contenir de références circulaires complexes ni de champs transient qui seraient ignorés.
+
+Si vous essayez de sérialiser un objet personnalisé qui ne respecte pas ces règles (par exemple une classe sans constructeur vide, avec des champs private sans getters/setters, ou contenant des objets tiers comme une connexion JDBC, un Thread, un Socket, ou une classe du type java.awt.Component), XMLEncoder lèvera généralement une exception ou produira un XML incomplet, voire ignorera silencieusement certaines parties de l’objet.
+
+De plus, XMLEncoder ne conserve pas l’identité des objets en cas de références partagées : chaque occurrence d’un même objet sera dupliquée lors de la désérialisation, contrairement à la sérialisation binaire classique qui préserve les références. Cela peut poser problème pour des structures de données complexes avec des graphes d’objets.
 
 ### Services web
 
