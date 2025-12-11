@@ -2,6 +2,7 @@
 title: "XSLT en ligne"
 weight: 30
 ---
+
 <h1 style="font-size: 2rem; font-weight: bold; color: #1f2937; text-align: center; margin-bottom: 1.5rem;">
  XSLT en ligne
 </h1>
@@ -106,12 +107,3 @@ document.getElementById('error').style.display='none';
 </script>
 
 
-
-
-
-## Demonstration Java
-
-
-Vous pouvez transformer le fichier XML en ligne en utilisant java, en appuyant sur le bouton *exécuter*.
-
-{{< javaMultiRunner files="Validateur.java;fichieravalider.xml;monfichier.dtd" >}}
