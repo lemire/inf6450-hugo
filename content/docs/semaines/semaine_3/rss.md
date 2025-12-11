@@ -39,3 +39,56 @@ Prenez le temps de consulter les sources suivantes.
 
 4. **Journal de Montréal (groupe Quebecor) – format RSS 2.0  
    https://www.journaldemontreal.com/rss  
+
+
+
+#### Exemple Java
+
+
+{{<inlineJava path="RadioCanadaCinqDernieres.java">}}
+import java.io.InputStream;
+import java.net.URL;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamReader;
+
+public class RadioCanadaCinqDernieres {
+
+    public static void main(String[] args) {
+        String rssUrl = "https://ici.radio-canada.ca/info/rss/info/a-la-une";
+
+        try {
+            System.out.println("Les 5 dernières nouvelles de Radio-Canada :\n");
+
+            URL url = new URL(rssUrl);
+            try (InputStream in = url.openStream()) {
+                XMLInputFactory factory = XMLInputFactory.newInstance();
+                XMLStreamReader reader = factory.createXMLStreamReader(in, "UTF-8");
+
+                int compteur = 0;
+                String titreCourant = null;
+
+                while (reader.hasNext() && compteur < 5) {
+                    int event = reader.next();
+
+                    if (event == XMLStreamReader.START_ELEMENT && "title".equals(reader.getLocalName())) {
+                        reader.next(); // passer aux caractères
+                        if (reader.getEventType() == XMLStreamReader.CHARACTERS) {
+                            titreCourant = reader.getText().trim();
+                        }
+                    }
+
+                    if (event == XMLStreamReader.END_ELEMENT && "item".equals(reader.getLocalName()) && titreCourant != null) {
+                        compteur++;
+                        System.out.println(compteur + ". " + titreCourant);
+                        titreCourant = null;
+                    }
+                }
+                reader.close();
+            }
+
+        } catch (Exception e) {
+            System.err.println("Erreur lors du chargement du flux : " + e.getMessage());
+        }
+    }
+}
+{{</inlineJava>}}
