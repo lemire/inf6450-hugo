@@ -2131,7 +2131,7 @@ tous les éléments etudiant en les regroupant selon la valeur de leur attribut 
 &lt;dl&gt;
 &lt;dt&gt;&lt;strong&gt;&lt;!ATTLIST nomElementX nomAttributY ...&gt;&lt;/strong&gt;&lt;/dt&gt;
 &lt;dd&gt;
-&lt;p&gt;Spécifie qu’un élément &lt;code&gt;nomElementX&lt;/code&gt; possède l’attribut &lt;code&gt;nomAttributY&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Pense-bête DTD</title><link>https://lemire.github.io/inf6450-hugo/docs/professeur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/professeur/</guid><description>&lt;h1 id="à-propos-du-professeur"&gt;
+&lt;p&gt;Spécifie qu’un élément &lt;code&gt;nomElementX&lt;/code&gt; possède l’attribut &lt;code&gt;nomAttributY&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Pense-bête DTD</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/professeur/</guid><description>&lt;h1 id="à-propos-du-professeur"&gt;
  À propos du professeur
  &lt;a class="anchor" href="#%c3%a0-propos-du-professeur"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
