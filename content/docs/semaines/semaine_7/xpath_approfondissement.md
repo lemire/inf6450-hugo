@@ -14,7 +14,7 @@ Supposons que nous voulions afficher uniquement les noms des éléments (sans le
 
 ### Sélection conditionnelle
 
-L'expression XPath « /listedeclients/client[nom='Sylvain'] » nous donnera les éléments pour lesquels le contenu du sous-élément « nom » est « Sylvain ». L'expression plus complète « /listedeclients/client[nom='Sylvain']/@telephone » pointera directement sur l'attribut « telephone ». D'un autre côté, l'expression XPath « /listedeclients/client[@telephone='533-3445']/nom », nous donnera l'élément « nom » contenant le nom du client ayant le numéro de téléphone indiqué.
+L'expression XPath « /listedeclients/client[nom='Sylvain'] » nous donnera les éléments pour lesquels le contenu du sous-élément « nom » est « Sylvain ». L'expression plus complète «&nbsp;/listedeclients/client[nom='Sylvain']/@telephone » pointera directement sur l'attribut « telephone ». D'un autre côté, l'expression XPath « /listedeclients/client[@telephone='533-3445']/nom », nous donnera l'élément « nom » contenant le nom du client ayant le numéro de téléphone indiqué.
 
 L'absence du symbole « = » dans le crochets indique qu'il s'agit d'un test d'existence. Ainsi, « /listedeclients/client[nom] » donne les éléments « client » qui ont un sous-élément « nom ». De la même façon, « /listedeclients/client[@telephone] » donne les éléments « client » qui ont un attribut « telephone ».
 
