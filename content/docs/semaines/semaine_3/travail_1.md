@@ -83,7 +83,7 @@ weight: 80
   5. Toujours avec le même document XML, combien y a-t-il d’espaces de noms dans ce document à l’exception de l’espace de noms par défaut ?
  </p>
  <p>
-  6. Le document XML suivant n’est pas valable :
+  6. Le document XML suivant n’est pas valide :
  </p>
  <p>
   <a class="spip_url spip_out auto" href="https://gist.github.com/lemire/66d0a7905443fdd220c1" rel="noopener noreferrer nofollow external" target="_blank">

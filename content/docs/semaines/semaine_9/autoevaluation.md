@@ -707,17 +707,17 @@ weight: 110
    <li>
     <input name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223433776false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';" type="radio" value="idp140293223433776false"/>
     Ce
-                document XSLT n'est pas valable.
+                document XSLT n'est pas valide.
     <span class="feedback" id="idp140293223433776false" style="display: none;font-weight:bold;">
      <br/>
      (Réponse incorrecte!) Il s'agit d'un
-                    document XSLT valable.
+                    document XSLT valide.
     </span>
    </li>
    <li>
     <input name="idp140293223427872" onclick="javascript:var Click_MenuId='idp140293223434992false';var formid='idp140293223427872'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';" type="radio" value="idp140293223434992false"/>
     Ce
-                document XSLT est valable, mais ne pourra pas s'exécuter.
+                document XSLT est valide, mais ne pourra pas s'exécuter.
     <span class="feedback" id="idp140293223434992false" style="display: none;font-weight:bold;">
      <br/>
      (Réponse incorrecte!) L'utilisation de

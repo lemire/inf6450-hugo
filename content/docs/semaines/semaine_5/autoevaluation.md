@@ -117,7 +117,7 @@ weight: 30
     Question 3
    </b>
    .
-		Voici un exemple de document DocBook XML valable. Parmi les énoncés qui suivent, quels sont ceux 
+		Voici un exemple de document DocBook XML valide. Parmi les énoncés qui suivent, quels sont ceux 
     qui s'appliquent à ce document?
    <p style="border:solid 1px black;white-space:pre; font-size:0.85em">
     &lt;?xml version="1.0" encoding='ISO-8859-1' standalone="no"?&gt;
@@ -202,7 +202,7 @@ weight: 30
  &lt;!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
   "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd"&gt;
   &lt;para&gt;
-  Je suis &lt;emphasis&gt;certain&lt;/emphasis&gt; que ce document est du XML valable!
+  Je suis &lt;emphasis&gt;certain&lt;/emphasis&gt; que ce document est du XML valide!
   &lt;/para&gt;
    </p>
   </div>
@@ -213,7 +213,7 @@ weight: 30
    <ol>
     <li>
      <input name="idp140650828112208" onclick="javascript:var Click_MenuId='idp140650828113360false';var formid='idp140650828112208'; var Click_Menu = document.getElementById(Click_MenuId);var myform = document.getElementById(formid);var spans = myform.getElementsByTagName('span');for (spancount=0; spancount&lt;spans.length;++spancount) spans[spancount].style.display='none';if(/true/.test(Click_MenuId)) Click_Menu.style.color = 'blue'; else Click_Menu.style.color = 'red';Click_Menu.style.display = '';" type="radio" value="idp140650828113360false"/>
-     Rien. Il s'agit d'un document valable.
+     Rien. Il s'agit d'un document valide.
      <span class="feedback" id="idp140650828113360false" style="display: none;font-weight:bold;">
       <br/>
       (Réponse incorrecte!) Non. La déclaration de type déclare l'élément-racine « book », 
@@ -358,7 +358,7 @@ le contenu; dans 10 ou 20 ans, on ne saura plus ce qui signifie tous ces numéro
     Question 7
    </b>
    .
-		Parmi les suivants, quels sont les documents DocBook valables?
+		Parmi les suivants, quels sont les documents DocBook valides?
   </div>
   <p style="width:90%;">
    Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton « Vérifier ma réponse ».
@@ -396,7 +396,7 @@ le contenu; dans 10 ou 20 ans, on ne saura plus ce qui signifie tous ces numéro
      </p>
      <span class="feedback" id="idp140650828134560true" style="display: none;font-weight:bold;">
       <br/>
-      Il s'agit d'un document bien formé et valable. Les éléments « listitem » peuvent 
+      Il s'agit d'un document bien formé et valide. Les éléments « listitem » peuvent 
 contenir plusieurs éléments « para ».
      </span>
     </li>
@@ -429,7 +429,7 @@ contenir plusieurs éléments « para ».
      </p>
      <span class="feedback" id="idp140650828136368true" style="display: none;font-weight:bold;">
       <br/>
-      Il s'agit d'un document bien formé et valable. Il est parfaitement permis de mettre 
+      Il s'agit d'un document bien formé et valide. Il est parfaitement permis de mettre 
 un élément « programlisting » dans un élément « para ».
      </span>
     </li>
@@ -461,7 +461,7 @@ un élément « programlisting » dans un élément « para ».
      </p>
      <span class="feedback" id="idp140650828138224false" style="display: none;font-weight:bold;">
       <br/>
-      Le document est bien formé, mais n'est pas valable : l'élément « title » doit apparaître 
+      Le document est bien formé, mais n'est pas valide : l'élément « title » doit apparaître 
 en premier dans un élément « chapter », et non pas en dernier.
      </span>
     </li>
@@ -525,7 +525,7 @@ il aurait fallu utiliser l'entité « &amp;lt; ».
      </p>
      <span class="feedback" id="idp140650828141936false" style="display: none;font-weight:bold;">
       <br/>
-      Le document est bien formé, mais n'est pas valable : il n'est pas permis de mettre
+      Le document est bien formé, mais n'est pas valide : il n'est pas permis de mettre
 du texte directement dans un élément « listitem », il faut utiliser un élément « para ».
      </span>
     </li>

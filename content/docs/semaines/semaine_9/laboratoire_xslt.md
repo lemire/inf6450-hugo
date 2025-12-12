@@ -14,7 +14,7 @@ weight: 80
 <p>
  Instructions : il suffit de saisir un fichier XML source et une
     transformation
-    XSLT valable et d'appuyer sur le bouton.
+    XSLT valide et d'appuyer sur le bouton.
 </p>
 <p style="color: #4b5563; margin-bottom: 1rem; line-height: 1.5;">
  <strong>
