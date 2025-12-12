@@ -220,10 +220,11 @@ CONSTRUCT {
 }
 ```
 
-</<details>
+</details>
 
 
 ## Activité avec Java
 
 Effectuez maintenant [l'activité RDF avec Java](https://github.com/lemire/javardf).
+Vous devriez déjà avoir installé maven et Java à ce point-ci du cours.
 
