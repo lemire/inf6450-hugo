@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 7 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/</link><description>Recent content in Semaine 7 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/index.xml" rel="self" type="application/rss+xml"/><item><title>XPath : un premier laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/</guid><description>&lt;h1 class=""&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 7 on INF 6450</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/</link><description>Recent content in Semaine 7 on INF 6450</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/index.xml" rel="self" type="application/rss+xml"/><item><title>XPath : un premier laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_un_premier_laboratoire/</guid><description>&lt;h1 class=""&gt;
  XPath : un premier laboratoire
 &lt;/h1&gt;
 &lt;div class=""&gt;
@@ -20,7 +20,267 @@
  Expression XPath pour le nom d&amp;rsquo;un élément
  &lt;a class="anchor" href="#expression-xpath-pour-le-nom-dun-%c3%a9l%c3%a9ment"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;p&gt;Supposons que nous voulions afficher uniquement les noms des éléments (sans leur contenu). Nous pouvons obtenir ce résultat avec la fonction XPath « name » qui donne le nom de l&amp;rsquo;élément. La fonction name inclut le préfixe de l&amp;rsquo;espace de noms. Si on souhaite le nom de l&amp;rsquo;élément sans le préfixe, on peut utiliser la fonction « local-name ». La fonction « namespace-uri » donne l&amp;rsquo;URI de l&amp;rsquo;espace de noms de l&amp;rsquo;élément. Nous reviendrons sur ces expressions XPath dans le contexte du XSLT.&lt;/p&gt;</description></item><item><title>XPath : second laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</guid><description>&lt;h1 class=""&gt;
+&lt;p&gt;Supposons que nous voulions afficher uniquement les noms des éléments (sans leur contenu). Nous pouvons obtenir ce résultat avec la fonction XPath « name » qui donne le nom de l&amp;rsquo;élément. La fonction name inclut le préfixe de l&amp;rsquo;espace de noms. Si on souhaite le nom de l&amp;rsquo;élément sans le préfixe, on peut utiliser la fonction « local-name ». La fonction « namespace-uri » donne l&amp;rsquo;URI de l&amp;rsquo;espace de noms de l&amp;rsquo;élément. Nous reviendrons sur ces expressions XPath dans le contexte du XSLT.&lt;/p&gt;</description></item><item><title>XPath avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
+ Demonstration Java
+ &lt;a class="anchor" href="#demonstration-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Vous pouvez utiliser des requêtes XPath sur un fichier XML en ligne en utilisant java, en appuyant sur le bouton &lt;em&gt;exécuter&lt;/em&gt;.
+Vous pouvez modifier les fichier Java et le fichier XML.&lt;/p&gt;
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+&lt;div id="java-multirunner-1765502258032698557"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-multirunner-1765502258032698557 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1765502258032698557 .export-form { margin-bottom:0; }
+ #java-multirunner-1765502258032698557 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1765502258032698557 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1765502258032698557 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1765502258032698557 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style&gt;
+ &lt;form class="export-form java-multirunner-1765502258032698557-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ 
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;SimpleXPath.java&lt;/div&gt;&lt;textarea&gt;import javax.xml.xpath.*;
+import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import java.io.File;
+
+public class SimpleXPath {
+ public static void main(String[] args) throws Exception {
+ // Fichier XML à lire
+ File xmlFile = new File(&amp;#34;livres.xml&amp;#34;);
+
+ // Construire le document DOM
+ DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+ DocumentBuilder builder = factory.newDocumentBuilder();
+ Document doc = builder.parse(xmlFile);
+
+ // Créer l&amp;#39;objet XPath
+ XPath xpath = XPathFactory.newInstance().newXPath();
+
+ // === Exemples d&amp;#39;expressions XPath ===
+
+ // 1. Tous les titres de livres
+ String expr1 = &amp;#34;//livre/titre&amp;#34;;
+ printResult(xpath, doc, expr1, XPathConstants.NODESET);
+
+ // 2. Le prix du premier livre
+ String expr2 = &amp;#34;//livre[1]/prix&amp;#34;;
+ printResult(xpath, doc, expr2, XPathConstants.STRING);
+
+ // 3. Tous les livres de plus de 30 €
+ String expr3 = &amp;#34;//livre[prix &amp;gt; 30]&amp;#34;;
+ printResult(xpath, doc, expr3, XPathConstants.NODESET);
+
+ // 4. Nombre total de livres
+ String expr4 = &amp;#34;count(//livre)&amp;#34;;
+ printResult(xpath, doc, expr4, XPathConstants.NUMBER);
+ }
+
+ private static void printResult(XPath xpath, Document doc, String expression, QName returnType) throws XPathExpressionException {
+ Object result = xpath.evaluate(expression, doc, returnType);
+
+ System.out.print(expression &amp;#43; &amp;#34; → &amp;#34;);
+
+ if (returnType == XPathConstants.NODESET) {
+ var nodes = (org.w3c.dom.NodeList) result;
+ for (int i = 0; i &amp;lt; nodes.getLength(); i&amp;#43;&amp;#43;) {
+ System.out.print(nodes.item(i).getTextContent());
+ if (i &amp;lt; nodes.getLength() - 1) System.out.print(&amp;#34; | &amp;#34;);
+ }
+ System.out.println();
+ } else if (returnType == XPathConstants.STRING) {
+ System.out.println((String) result);
+ } else if (returnType == XPathConstants.NUMBER) {
+ System.out.println(((Number) result).doubleValue());
+ } else {
+ System.out.println(result);
+ }
+ }
+}&lt;/textarea&gt;&lt;/div&gt;
+ 
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;livres.xml&lt;/div&gt;&lt;textarea&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
+&amp;lt;bibliotheque&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-2070416080&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;L&amp;#39;Étranger&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;Albert Camus&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1942&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;7.50&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-2253004226&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;Le Petit Prince&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;Antoine de Saint-Exupéry&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1943&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;6.90&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-0140449136&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;1984&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;George Orwell&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1949&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;9.20&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+&amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
+ 
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1765502258032698557-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;(function(){
+ var root = document.getElementById('java-multirunner-1765502258032698557');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var mode = name.endsWith('.java') ? 'text/x-java' : 'text/plain';
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: mode,
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4,
+ readOnly: false
+ });
+ block._cm = cm;
+ });
+ form.addEventListener('submit', function(e){
+ e.preventDefault();
+ var java_files = [];
+ var txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var code = block._cm.getValue();
+ if(name.endsWith('.java')) {
+ java_files.push({name:name, content:code});
+ } else {
+ txt_files.push({name:name, content:code});
+ }
+ });
+ resultDiv.textContent = 'Exécution en cours';
+ var dots = 0;
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: {'Content-Type': 'application/json'},
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(r =&gt; {
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.json();
+ })
+ .then(async function(data){
+ 
+ if (typeof data !== 'object') {
+ try { data = JSON.parse(data); } catch(e) { resultDiv.textContent = data; return; }
+ }
+ if (data.status === 'ran_successfully') {
+ 
+ function escapeHtml(str) {
+ return str.replace(/[&amp;&lt;&gt;"']/g, function(c) {
+ return {'&amp;':'&amp;amp;','&lt;':'&amp;lt;','&gt;':'&amp;gt;','"':'&amp;quot;','\'':'&amp;#39;'}[c];
+ });
+ }
+ resultDiv.innerHTML = '&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;' +
+ escapeHtml(data.output || '') + '&lt;/pre&gt;';
+ 
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.getAllMarks().forEach(m =&gt; m.clear());
+ });
+ }
+ });
+ } else if (data.status === 'compiling' || data.status == "running") {
+ resultDiv.innerHTML = '&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;' +
+ (data.error || '').replace(/\n/g, '&lt;br&gt;') + '&lt;/pre&gt;';
+ 
+ const errorText = data.error || '';
+ const errorRegex = /([\w./\\-]+\.java):(\d+): error: ([^\n]+)([\s\S]*?)(?=\n[\w./\\-]+\.java:|$)/g;
+ let match;
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.getAllMarks().forEach(m =&gt; m.clear());
+ });
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ const [_, file, lineStr, msg, details] = match;
+ const line = parseInt(lineStr, 10) - 1;
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ const name = block.querySelector('.export-file-name').textContent;
+ if (name === file || name.endsWith('/'+file) || name.endsWith('\\'+file)) {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.markText({line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim()
+ });
+ 
+ const lineHandle = block._cm.getLineHandle(line);
+ if (lineHandle) {
+ block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+ }
+ });
+ }
+ }
+ });
+ }
+ } else {
+ resultDiv.textContent = JSON.stringify(data, null, 2);
+ }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ });
+})();&lt;/script&gt;</description></item><item><title>XPath : second laboratoire</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_second_laboratoire/</guid><description>&lt;h1 class=""&gt;
  XPath : second laboratoire
 &lt;/h1&gt;
 &lt;div class=""&gt;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 14 on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/</link><description>Recent content in Semaine 14 on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/index.xml" rel="self" type="application/rss+xml"/><item><title>Applications du RDF</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</guid><description>&lt;h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semaine 14 on INF 6450</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/</link><description>Recent content in Semaine 14 on INF 6450</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/index.xml" rel="self" type="application/rss+xml"/><item><title>Applications du RDF</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</guid><description>&lt;h1&gt;
  Applications du RDF
 &lt;/h1&gt;
 &lt;p&gt;
@@ -129,7 +129,12 @@
  &lt;p style="width:90%;"&gt;
  Choisissez toutes les réponses qui s'appliquent, puis
  appuyez sur le bouton « Vérifier ma réponse ».
- &lt;/p&gt;</description></item><item><title>Travail 5</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/travail_5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/travail_5/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>Activité SPARQL</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/sparql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/sparql/</guid><description>&lt;h1 id="activité-sparql"&gt;
+ Activité SPARQL
+ &lt;a class="anchor" href="#activit%c3%a9-sparql"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;SPARQL (acronyme récursif de SPARQL Protocol and RDF Query Language) est le langage de requête standard pour interroger des données exprimées en RDF (Resource Description Framework). Il a été standardisé par le W3C en 2008 et sa version actuelle la plus utilisée est SPARQL 1.1 (2013).&lt;/p&gt;
+&lt;p&gt;Il permet de récupérer et de manipuler des données stockées dans des triplestores ou dans n’importe quel graphe RDF, que ce soit sur le web (Linked Data), dans une base locale ou via un endpoint SPARQL public comme DBpedia, Wikidata ou data.gouv.fr.&lt;/p&gt;</description></item><item><title>Travail 5</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/travail_5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/travail_5/</guid><description>&lt;h1&gt;
  Travail 5
 &lt;/h1&gt;
 &lt;h2&gt;

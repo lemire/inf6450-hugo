@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accueil on INF 6450 - Gestion de l'information avec XML</title><link>https://lemire.github.io/inf6450-hugo/</link><description>Recent content in Accueil on INF 6450 - Gestion de l'information avec XML</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Applications du RDF</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</guid><description>&lt;h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accueil on INF 6450</title><link>https://lemire.github.io/inf6450-hugo/</link><description>Recent content in Accueil on INF 6450</description><generator>Hugo</generator><language>fr</language><atom:link href="https://lemire.github.io/inf6450-hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Applications du RDF</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/applications_du_rdf/</guid><description>&lt;h1&gt;
  Applications du RDF
 &lt;/h1&gt;
 &lt;p&gt;
@@ -627,13 +627,12 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
  xml-stylesheet
  &lt;/code&gt;
  . C'est une alternative pratique pour programmer et expérimenter avec XSLT sans charger de fichiers externes.
-&lt;/p&gt;</description></item><item><title>XSLT avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
+&lt;/p&gt;</description></item><item><title>XPath avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
  Demonstration Java
  &lt;a class="anchor" href="#demonstration-java"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
-&lt;p&gt;Vous pouvez transformer le fichier XML en ligne en utilisant java, en appuyant sur le bouton &lt;em&gt;exécuter&lt;/em&gt;.
-Attention au fait que la librairie standard de Java ne supporte que XSLT 1.0.
-Vous pouvez modifier les fichiers XSLT et XML.&lt;/p&gt;
+&lt;p&gt;Vous pouvez utiliser des requêtes XPath sur un fichier XML en ligne en utilisant java, en appuyant sur le bouton &lt;em&gt;exécuter&lt;/em&gt;.
+Vous pouvez modifier les fichier Java et le fichier XML.&lt;/p&gt;
 
 
 
@@ -652,112 +651,83 @@ Vous pouvez modifier les fichiers XSLT et XML.&lt;/p&gt;
  
  
 
- 
- 
- 
- 
- 
-
-&lt;div id="java-multirunner-1765498330099557828"&gt;
+&lt;div id="java-multirunner-1765502258032698557"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-multirunner-1765498330099557828 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-multirunner-1765498330099557828 .export-form { margin-bottom:0; }
- #java-multirunner-1765498330099557828 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-multirunner-1765498330099557828 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-multirunner-1765498330099557828 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-multirunner-1765498330099557828 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-multirunner-1765502258032698557 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1765502258032698557 .export-form { margin-bottom:0; }
+ #java-multirunner-1765502258032698557 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1765502258032698557 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1765502258032698557 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1765502258032698557 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-multirunner-1765498330099557828-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-multirunner-1765502258032698557-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  
- &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;XmlVersConsole.java&lt;/div&gt;&lt;textarea&gt;import javax.xml.transform.*;
-import javax.xml.transform.stream.StreamSource;
-import javax.xml.transform.stream.StreamResult;
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;SimpleXPath.java&lt;/div&gt;&lt;textarea&gt;import javax.xml.xpath.*;
+import javax.xml.namespace.QName;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
 import java.io.File;
-import java.io.StringWriter;
 
-public class XmlVersConsole {
- public static void main(String[] args) {
- String xml = &amp;#34;livres.xml&amp;#34;;
- String xslt = &amp;#34;livres-vers-html.xsl&amp;#34;;
- try {
- String resultat = transformer(xml, xslt);
- System.out.println(resultat);
+public class SimpleXPath {
+ public static void main(String[] args) throws Exception {
+ // Fichier XML à lire
+ File xmlFile = new File(&amp;#34;livres.xml&amp;#34;);
 
- } catch (TransformerException e) {
- System.out.println(&amp;#34;Erreur lors de la transformation : &amp;#34; &amp;#43; e.getMessageAndLocation());
+ // Construire le document DOM
+ DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+ DocumentBuilder builder = factory.newDocumentBuilder();
+ Document doc = builder.parse(xmlFile);
+
+ // Créer l&amp;#39;objet XPath
+ XPath xpath = XPathFactory.newInstance().newXPath();
+
+ // === Exemples d&amp;#39;expressions XPath ===
+
+ // 1. Tous les titres de livres
+ String expr1 = &amp;#34;//livre/titre&amp;#34;;
+ printResult(xpath, doc, expr1, XPathConstants.NODESET);
+
+ // 2. Le prix du premier livre
+ String expr2 = &amp;#34;//livre[1]/prix&amp;#34;;
+ printResult(xpath, doc, expr2, XPathConstants.STRING);
+
+ // 3. Tous les livres de plus de 30 €
+ String expr3 = &amp;#34;//livre[prix &amp;gt; 30]&amp;#34;;
+ printResult(xpath, doc, expr3, XPathConstants.NODESET);
+
+ // 4. Nombre total de livres
+ String expr4 = &amp;#34;count(//livre)&amp;#34;;
+ printResult(xpath, doc, expr4, XPathConstants.NUMBER);
  }
+
+ private static void printResult(XPath xpath, Document doc, String expression, QName returnType) throws XPathExpressionException {
+ Object result = xpath.evaluate(expression, doc, returnType);
+
+ System.out.print(expression &amp;#43; &amp;#34; → &amp;#34;);
+
+ if (returnType == XPathConstants.NODESET) {
+ var nodes = (org.w3c.dom.NodeList) result;
+ for (int i = 0; i &amp;lt; nodes.getLength(); i&amp;#43;&amp;#43;) {
+ System.out.print(nodes.item(i).getTextContent());
+ if (i &amp;lt; nodes.getLength() - 1) System.out.print(&amp;#34; | &amp;#34;);
  }
-
- public static String transformer(String fichierXml, String fichierXslt) throws TransformerException {
- TransformerFactory fabrique = TransformerFactory.newInstance();
- Transformer transformateur = fabrique.newTransformer(new StreamSource(new File(fichierXslt)));
- // Transformation vers une chaîne en mémoire
- StringWriter writer = new StringWriter();
- transformateur.transform(
- new StreamSource(new File(fichierXml)),
- new StreamResult(writer)
- );
-
- return writer.toString();
+ System.out.println();
+ } else if (returnType == XPathConstants.STRING) {
+ System.out.println((String) result);
+ } else if (returnType == XPathConstants.NUMBER) {
+ System.out.println(((Number) result).doubleValue());
+ } else {
+ System.out.println(result);
+ }
  }
 }&lt;/textarea&gt;&lt;/div&gt;
- 
- &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;livres-vers-html.xsl&lt;/div&gt;&lt;textarea&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
-&amp;lt;xsl:stylesheet version=&amp;#34;1.0&amp;#34;
- xmlns:xsl=&amp;#34;http://www.w3.org/1999/XSL/Transform&amp;#34;&amp;gt;
-
- &amp;lt;xsl:output method=&amp;#34;html&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; indent=&amp;#34;yes&amp;#34;/&amp;gt;
-
- &amp;lt;xsl:template match=&amp;#34;/&amp;#34;&amp;gt;
- &amp;lt;html&amp;gt;
- &amp;lt;head&amp;gt;
- &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;/&amp;gt;
- &amp;lt;title&amp;gt;Ma bibliothèque&amp;lt;/title&amp;gt;
- &amp;lt;style&amp;gt;
- body { font-family: Arial, sans-serif; margin: 40px; }
- h1 { color: #2c3e50; }
- table { width: 100%; border-collapse: collapse; margin-top: 20px; }
- th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
- th { background-color: #3498db; color: white; }
- tr:nth-child(even) { background-color: #f9f9f9; }
- tr:hover { background-color: #f2f2f2; }
- &amp;lt;/style&amp;gt;
- &amp;lt;/head&amp;gt;
- &amp;lt;body&amp;gt;
- &amp;lt;h1&amp;gt;Ma petite bibliothèque&amp;lt;/h1&amp;gt;
- &amp;lt;p&amp;gt;Nombre de livres : &amp;lt;xsl:value-of select=&amp;#34;count(//livre)&amp;#34;/&amp;gt;&amp;lt;/p&amp;gt;
-
- &amp;lt;table&amp;gt;
- &amp;lt;thead&amp;gt;
- &amp;lt;tr&amp;gt;
- &amp;lt;th&amp;gt;Titre&amp;lt;/th&amp;gt;
- &amp;lt;th&amp;gt;Auteur&amp;lt;/th&amp;gt;
- &amp;lt;th&amp;gt;Année&amp;lt;/th&amp;gt;
- &amp;lt;th&amp;gt;Prix&amp;lt;/th&amp;gt;
- &amp;lt;/tr&amp;gt;
- &amp;lt;/thead&amp;gt;
- &amp;lt;tbody&amp;gt;
- &amp;lt;xsl:for-each select=&amp;#34;bibliotheque/livre&amp;#34;&amp;gt;
- &amp;lt;xsl:sort select=&amp;#34;annee&amp;#34;/&amp;gt;
- &amp;lt;tr&amp;gt;
- &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;titre&amp;#34;/&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
- &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;auteur&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
- &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;annee&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
- &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;prix&amp;#34;/&amp;gt; &amp;lt;xsl:value-of select=&amp;#34;prix/@devise&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
- &amp;lt;/tr&amp;gt;
- &amp;lt;/xsl:for-each&amp;gt;
- &amp;lt;/tbody&amp;gt;
- &amp;lt;/table&amp;gt;
- &amp;lt;/body&amp;gt;
- &amp;lt;/html&amp;gt;
- &amp;lt;/xsl:template&amp;gt;
-&amp;lt;/xsl:stylesheet&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
  
  &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;livres.xml&lt;/div&gt;&lt;textarea&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
 &amp;lt;bibliotheque&amp;gt;
@@ -782,14 +752,14 @@ public class XmlVersConsole {
 &amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
  
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-multirunner-1765498330099557828-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1765502258032698557-btn"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;(function(){
- var root = document.getElementById('java-multirunner-1765498330099557828');
+ var root = document.getElementById('java-multirunner-1765502258032698557');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -917,7 +887,302 @@ public class XmlVersConsole {
  }
  });
  });
-})();&lt;/script&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
+})();&lt;/script&gt;</description></item><item><title>XSLT avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_8/xslt_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
+ Demonstration Java
+ &lt;a class="anchor" href="#demonstration-java"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Vous pouvez transformer le fichier XML en ligne en utilisant java, en appuyant sur le bouton &lt;em&gt;exécuter&lt;/em&gt;.
+Attention au fait que la librairie standard de Java ne supporte que XSLT 1.0.
+Vous pouvez modifier les fichiers XSLT et XML.&lt;/p&gt;
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+&lt;div id="java-multirunner-1765502258032915835"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
+ &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
+ &lt;style&gt;
+ #java-multirunner-1765502258032915835 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1765502258032915835 .export-form { margin-bottom:0; }
+ #java-multirunner-1765502258032915835 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1765502258032915835 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1765502258032915835 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1765502258032915835 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
+ .cm-java-error-line { background: #fff0f0 !important; }
+ &lt;/style&gt;
+ &lt;form class="export-form java-multirunner-1765502258032915835-form" style="margin-bottom:0;"&gt;
+ &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
+ &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
+ 
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;XmlVersConsole.java&lt;/div&gt;&lt;textarea&gt;import javax.xml.transform.*;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
+import java.io.StringWriter;
+
+public class XmlVersConsole {
+ public static void main(String[] args) {
+ String xml = &amp;#34;livres.xml&amp;#34;;
+ String xslt = &amp;#34;livres-vers-html.xsl&amp;#34;;
+ try {
+ String resultat = transformer(xml, xslt);
+ System.out.println(resultat);
+
+ } catch (TransformerException e) {
+ System.out.println(&amp;#34;Erreur lors de la transformation : &amp;#34; &amp;#43; e.getMessageAndLocation());
+ }
+ }
+
+ public static String transformer(String fichierXml, String fichierXslt) throws TransformerException {
+ TransformerFactory fabrique = TransformerFactory.newInstance();
+ Transformer transformateur = fabrique.newTransformer(new StreamSource(new File(fichierXslt)));
+ // Transformation vers une chaîne en mémoire
+ StringWriter writer = new StringWriter();
+ transformateur.transform(
+ new StreamSource(new File(fichierXml)),
+ new StreamResult(writer)
+ );
+
+ return writer.toString();
+ }
+}&lt;/textarea&gt;&lt;/div&gt;
+ 
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;livres-vers-html.xsl&lt;/div&gt;&lt;textarea&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
+&amp;lt;xsl:stylesheet version=&amp;#34;1.0&amp;#34;
+ xmlns:xsl=&amp;#34;http://www.w3.org/1999/XSL/Transform&amp;#34;&amp;gt;
+
+ &amp;lt;xsl:output method=&amp;#34;html&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; indent=&amp;#34;yes&amp;#34;/&amp;gt;
+
+ &amp;lt;xsl:template match=&amp;#34;/&amp;#34;&amp;gt;
+ &amp;lt;html&amp;gt;
+ &amp;lt;head&amp;gt;
+ &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;/&amp;gt;
+ &amp;lt;title&amp;gt;Ma bibliothèque&amp;lt;/title&amp;gt;
+ &amp;lt;style&amp;gt;
+ body { font-family: Arial, sans-serif; margin: 40px; }
+ h1 { color: #2c3e50; }
+ table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+ th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+ th { background-color: #3498db; color: white; }
+ tr:nth-child(even) { background-color: #f9f9f9; }
+ tr:hover { background-color: #f2f2f2; }
+ &amp;lt;/style&amp;gt;
+ &amp;lt;/head&amp;gt;
+ &amp;lt;body&amp;gt;
+ &amp;lt;h1&amp;gt;Ma petite bibliothèque&amp;lt;/h1&amp;gt;
+ &amp;lt;p&amp;gt;Nombre de livres : &amp;lt;xsl:value-of select=&amp;#34;count(//livre)&amp;#34;/&amp;gt;&amp;lt;/p&amp;gt;
+
+ &amp;lt;table&amp;gt;
+ &amp;lt;thead&amp;gt;
+ &amp;lt;tr&amp;gt;
+ &amp;lt;th&amp;gt;Titre&amp;lt;/th&amp;gt;
+ &amp;lt;th&amp;gt;Auteur&amp;lt;/th&amp;gt;
+ &amp;lt;th&amp;gt;Année&amp;lt;/th&amp;gt;
+ &amp;lt;th&amp;gt;Prix&amp;lt;/th&amp;gt;
+ &amp;lt;/tr&amp;gt;
+ &amp;lt;/thead&amp;gt;
+ &amp;lt;tbody&amp;gt;
+ &amp;lt;xsl:for-each select=&amp;#34;bibliotheque/livre&amp;#34;&amp;gt;
+ &amp;lt;xsl:sort select=&amp;#34;annee&amp;#34;/&amp;gt;
+ &amp;lt;tr&amp;gt;
+ &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;titre&amp;#34;/&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;
+ &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;auteur&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
+ &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;annee&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
+ &amp;lt;td&amp;gt;&amp;lt;xsl:value-of select=&amp;#34;prix&amp;#34;/&amp;gt; &amp;lt;xsl:value-of select=&amp;#34;prix/@devise&amp;#34;/&amp;gt;&amp;lt;/td&amp;gt;
+ &amp;lt;/tr&amp;gt;
+ &amp;lt;/xsl:for-each&amp;gt;
+ &amp;lt;/tbody&amp;gt;
+ &amp;lt;/table&amp;gt;
+ &amp;lt;/body&amp;gt;
+ &amp;lt;/html&amp;gt;
+ &amp;lt;/xsl:template&amp;gt;
+&amp;lt;/xsl:stylesheet&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
+ 
+ &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;livres.xml&lt;/div&gt;&lt;textarea&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
+&amp;lt;bibliotheque&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-2070416080&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;L&amp;#39;Étranger&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;Albert Camus&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1942&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;7.50&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-2253004226&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;Le Petit Prince&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;Antoine de Saint-Exupéry&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1943&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;6.90&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+ &amp;lt;livre isbn=&amp;#34;978-0140449136&amp;#34;&amp;gt;
+ &amp;lt;titre&amp;gt;1984&amp;lt;/titre&amp;gt;
+ &amp;lt;auteur&amp;gt;George Orwell&amp;lt;/auteur&amp;gt;
+ &amp;lt;annee&amp;gt;1949&amp;lt;/annee&amp;gt;
+ &amp;lt;prix devise=&amp;#34;EUR&amp;#34;&amp;gt;9.20&amp;lt;/prix&amp;gt;
+ &amp;lt;/livre&amp;gt;
+&amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
+ 
+ &lt;/div&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1765502258032915835-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;/form&gt;
+ &lt;div class="export-result"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;(function(){
+ var root = document.getElementById('java-multirunner-1765502258032915835');
+ if (!root) return;
+ var form = root.querySelector('form');
+ var resultDiv = root.querySelector('.export-result');
+ var endpoint = form.querySelector('.export-endpoint-var').value;
+ 
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var ta = block.querySelector('textarea');
+ var mode = name.endsWith('.java') ? 'text/x-java' : 'text/plain';
+ var cm = CodeMirror.fromTextArea(ta, {
+ mode: mode,
+ theme: "eclipse",
+ lineNumbers: true,
+ indentUnit: 4,
+ tabSize: 4,
+ readOnly: false
+ });
+ block._cm = cm;
+ });
+ form.addEventListener('submit', function(e){
+ e.preventDefault();
+ var java_files = [];
+ var txt_files = [];
+ root.querySelectorAll('.export-file-block').forEach(function(block){
+ var name = block.querySelector('.export-file-name').textContent;
+ var code = block._cm.getValue();
+ if(name.endsWith('.java')) {
+ java_files.push({name:name, content:code});
+ } else {
+ txt_files.push({name:name, content:code});
+ }
+ });
+ resultDiv.textContent = 'Exécution en cours';
+ var dots = 0;
+ var execAnim = setInterval(function() {
+ dots = (dots + 1) % 4;
+ resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
+ }, 500);
+ 
+ var controller = new AbortController();
+ var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
+ fetch(endpoint, {
+ method: 'POST',
+ headers: {'Content-Type': 'application/json'},
+ body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
+ signal: controller.signal
+ })
+ .then(r =&gt; {
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (!r.ok &amp;&amp; r.status !== 400) {
+ throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
+ }
+ return r.json();
+ })
+ .then(async function(data){
+ 
+ if (typeof data !== 'object') {
+ try { data = JSON.parse(data); } catch(e) { resultDiv.textContent = data; return; }
+ }
+ if (data.status === 'ran_successfully') {
+ 
+ function escapeHtml(str) {
+ return str.replace(/[&amp;&lt;&gt;"']/g, function(c) {
+ return {'&amp;':'&amp;amp;','&lt;':'&amp;lt;','&gt;':'&amp;gt;','"':'&amp;quot;','\'':'&amp;#39;'}[c];
+ });
+ }
+ resultDiv.innerHTML = '&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;"&gt;' +
+ escapeHtml(data.output || '') + '&lt;/pre&gt;';
+ 
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.getAllMarks().forEach(m =&gt; m.clear());
+ });
+ }
+ });
+ } else if (data.status === 'compiling' || data.status == "running") {
+ resultDiv.innerHTML = '&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;"&gt;' +
+ (data.error || '').replace(/\n/g, '&lt;br&gt;') + '&lt;/pre&gt;';
+ 
+ const errorText = data.error || '';
+ const errorRegex = /([\w./\\-]+\.java):(\d+): error: ([^\n]+)([\s\S]*?)(?=\n[\w./\\-]+\.java:|$)/g;
+ let match;
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.getAllMarks().forEach(m =&gt; m.clear());
+ });
+ }
+ });
+ while ((match = errorRegex.exec(errorText)) !== null) {
+ const [_, file, lineStr, msg, details] = match;
+ const line = parseInt(lineStr, 10) - 1;
+ root.querySelectorAll('.export-file-block').forEach(block =&gt; {
+ const name = block.querySelector('.export-file-name').textContent;
+ if (name === file || name.endsWith('/'+file) || name.endsWith('\\'+file)) {
+ if (block._cm) {
+ block._cm.operation(() =&gt; {
+ block._cm.markText({line, ch:0}, {line:line+1, ch:0}, {
+ className: 'cm-java-error',
+ title: (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim()
+ });
+ 
+ const lineHandle = block._cm.getLineHandle(line);
+ if (lineHandle) {
+ block._cm.addLineClass(lineHandle, 'wrap', 'cm-java-error-line');
+ }
+ });
+ }
+ }
+ });
+ }
+ } else {
+ resultDiv.textContent = JSON.stringify(data, null, 2);
+ }
+ })
+ .catch(function(error){
+ clearInterval(execAnim);
+ clearTimeout(timeoutId);
+ if (error.name === 'AbortError') {
+ resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
+ } else {
+ resultDiv.textContent = 'Erreur lors de la requête : ' + error;
+ }
+ });
+ });
+})();&lt;/script&gt;</description></item><item><title>Activité SPARQL</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/sparql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/sparql/</guid><description>&lt;h1 id="activité-sparql"&gt;
+ Activité SPARQL
+ &lt;a class="anchor" href="#activit%c3%a9-sparql"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;SPARQL (acronyme récursif de SPARQL Protocol and RDF Query Language) est le langage de requête standard pour interroger des données exprimées en RDF (Resource Description Framework). Il a été standardisé par le W3C en 2008 et sa version actuelle la plus utilisée est SPARQL 1.1 (2013).&lt;/p&gt;
+&lt;p&gt;Il permet de récupérer et de manipuler des données stockées dans des triplestores ou dans n’importe quel graphe RDF, que ce soit sur le web (Linked Data), dans une base locale ou via un endpoint SPARQL public comme DBpedia, Wikidata ou data.gouv.fr.&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
  Laboratoire pratique avec jq (optionnel)
  &lt;a class="anchor" href="#laboratoire-pratique-avec-jq-optionnel"&gt;#&lt;/a&gt;
 &lt;/h1&gt;

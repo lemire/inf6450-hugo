@@ -1,6 +1,6 @@
 {
-  "name": "INF 6450 - Gestion de l'information avec XML",
-  "short_name": "INF 6450 - Gestion de l'information avec XML",
+  "name": "INF 6450",
+  "short_name": "INF 6450",
   "start_url": "/inf6450-hugo/",
   "scope": "/inf6450-hugo/",
   "display": "standalone",
