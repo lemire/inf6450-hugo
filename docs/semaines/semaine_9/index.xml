@@ -270,7 +270,7 @@ le document XSLT suivant :&lt;/p&gt;</description></item><item><title>Les axes</
 &lt;p&gt;
  Instructions : il suffit de saisir un fichier XML source et une
  transformation
- XSLT valable et d'appuyer sur le bouton.
+ XSLT valide et d'appuyer sur le bouton.
 &lt;/p&gt;
 &lt;p style="color: #4b5563; margin-bottom: 1rem; line-height: 1.5;"&gt;
  &lt;strong&gt;
