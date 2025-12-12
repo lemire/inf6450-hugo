@@ -307,7 +307,7 @@ element problemset { choiceele+ }
 
 Le format Relax NG a cependant plusieurs avantages. Par exemple, l'esperluette (&) permet de spécifier que des éléments puissent être inclus dans n'importe quel ordre. Il n'y a pas d'équivalent en DTD. Considérons l'exemple suivant.
 
-```xml
+```
 element card { element name { text } & element email { text } }
 ```
 
@@ -319,7 +319,7 @@ On peut alors permettre le XML suivant. Il n'est pas possible de spécifier le c
 
 Supposons maintenant qu'un élément puisse avoir soit l'attribut nas, soit à la fois les attributs nas1 et nas2. Alors qu'il n'est pas possible de représenter cette condition en DTD, c'est une chose facile en Relax NG.
 
-```xml
+```
 element personne { attribute nas { text } | (attribute nas1 { text } & attribute nas2 { text }) }
 ```
 
