@@ -18,6 +18,31 @@ On dit qu’un modèle DOM est une structure en arbre. En informatique, un arbre
 
 L’API DOM est très utilisée et supportée dans de nombreux langages (Java, JavaScript, C#, C++, etc.). Cependant, elle consomme beaucoup de mémoire et nécessite souvent beaucoup de code pour des opérations simples. Malgré ces défauts, sa large adoption en fait une référence incontournable.
 
+
+## Principaux concepts
+Le Document Object Model (DOM) représente une page XML ou HTML comme un arbre de nœuds. Chaque élément, attribut, texte ou commentaire est vu comme un nœud que l'on peut interroger et manipuler. Cette vision arborescente permet de naviguer facilement entre les différentes parties d'un document et de modifier sa structure de façon programmatique.
+
+Les nœuds ont différents types : `Element` pour les balises, `Attr` pour les attributs, `Text` pour les contenus textuels, `Comment` pour les commentaires et `Document` pour la racine. En Java, ces types sont représentés par les interfaces du package `org.w3c.dom` (par exemple `Element`, `Node`, `Document`), et chaque objet fournit des méthodes adaptées pour accéder à son contenu et à ses relations (parent, enfants, frères/sœurs).
+
+Un élément (`Element`) contient un nom (le nom de la balise), éventuellement des attributs (paires nom/valeur) et des nœuds enfants. Les attributs sont accessibles via `getAttribute` / `setAttribute` et les sous-éléments via `getElementsByTagName` ou en parcourant la liste `childNodes`. Il est important de distinguer la valeur d'un attribut (string) du texte contenu dans un nœud `Text` enfant.
+
+Les nœuds de texte (`Text`) représentent le texte brut entre balises. Ils peuvent contenir des espaces ou des retours à la ligne significatifs selon le contexte. L'accès au contenu textuel se fait généralement avec `getTextContent()` ou `getNodeValue()`. En pratique, on veillera à normaliser ou filtrer les nœuds de texte inutiles (espaces blancs) selon les besoins de l'application.
+
+Pour modifier un document on crée ou clone des nœuds (`createElement`, `createTextNode`, `cloneNode`) puis on les insère (`appendChild`, `insertBefore`) ou retire (`removeChild`). Une fois la modification effectuée, on peut sérialiser le DOM vers un flux ou un fichier avec les classes de transformation (`Transformer`, `DOMSource`, `StreamResult`) pour obtenir le XML/HTML final.
+
+
+## Présentation sommaire de l'API
+
+Les points d'entrée les plus courants sont `DocumentBuilderFactory` et `DocumentBuilder` : on obtient une instance de `DocumentBuilderFactory` via `DocumentBuilderFactory.newInstance()`, on configure ses options (par exemple `setNamespaceAware(true)` ou `setValidating(false)`) puis on crée un `DocumentBuilder` pour parser des fichiers ou construire des documents en mémoire.
+
+Le parsing s'effectue avec `DocumentBuilder.parse(...)` qui accepte un `File`, un `InputStream` ou un `InputSource`. En cas d'erreur de syntaxe le parseur lève une `SAXException` ou une `IOException` — il est donc courant d'entourer l'appel d'un bloc try/catch et de fournir des messages d'erreur clairs. Pour des environnements sensibles, activez les fonctionnalités de sécurité (par ex. `factory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true)`) afin de réduire les risques liés aux entités externes.
+
+Pour créer ou modifier un document on utilise les méthodes du `Document` : `createElement`, `createTextNode`, `setAttribute`, `appendChild`, `insertBefore`, `removeChild`, etc. `importNode`/`adoptNode` sont utiles pour déplacer des nœuds entre documents. Après de nombreuses modifications, appelez `normalizeDocument()` ou `normalize()` sur un nœud pour fusionner les nœuds de texte adjacents et avoir un arbre propre.
+
+La sérialisation du DOM se fait généralement via `TransformerFactory` et `Transformer`. On construit un `DOMSource` à partir du `Document` et un `StreamResult` vers un fichier ou `System.out`. On peut régler des propriétés de sortie (encodage, indentation) avec `transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8")` ou `OutputKeys.INDENT` pour obtenir un XML lisible.
+
+Pour interroger le document il est fréquent d'utiliser `XPath` (`XPathFactory.newInstance()` → `XPath`) ; `evaluate` permet d'extraire un `Node`, une `NodeList` ou une chaîne. Pour des besoins plus avancés on peut combiner DOM avec des bibliothèques comme Xerces, XPath 2.0/XQuery (Saxon), ou utiliser `DocumentBuilderFactory` configuré pour la validation (DTD/Schema) si l'application doit vérifier la conformité du document.
+
 ## Un document XML
 
 Créons d’abord un document XML nommé « test.xml » :
@@ -78,6 +103,8 @@ public class Test {
 | Texte | #text | le texte |
 
 ## Parcourir les enfants
+
+Prenez quelques secondes pour exécuter le programme suivant dans votre navigateur.
 
 {{<inlineJava path="Test.java">}}
 import org.w3c.dom.*;

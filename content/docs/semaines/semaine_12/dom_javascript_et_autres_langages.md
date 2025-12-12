@@ -18,6 +18,23 @@ monele=document.getElementById('javatest');
 monele.childNodes.item(0).nodeValue+=' (passage de souris) ';
 ```
 
+
+
+Ce petit script illustre plusieurs points importants. D'abord, `document.getElementById('javatest')` recherche dans le document l'élément qui porte l'attribut `id="javatest"` et retourne une référence à cet élément (ou `null` si aucun élément n'est trouvé). C'est l'un des moyens les plus rapides et les plus courants pour cibler un élément unique dans la page.
+
+Ensuite, `monele.childNodes.item(0).nodeValue` accède au premier nœud enfant de l'élément — souvent un nœud `Text` contenant le texte interne — et en modifie la valeur. Cette approche fonctionne si le premier nœud enfant est bien un nœud de texte ; dans le cas contraire (par exemple si l'élément contient d'autres éléments enfants), il faudra tester le type du nœud ou préférer `textContent` pour manipuler tout le texte intérieur.
+
+Concernant les événements, l'exemple suppose implicitement qu'une gestion d'événement a été définie ailleurs. En pratique on préfère attacher explicitement un écouteur d'événement moderne :
+
+```javascript
+const el = document.getElementById('javatest');
+el.addEventListener('mouseover', () => {
+	el.textContent += ' (passage de souris)';
+});
+```
+
+Cette version utilise `addEventListener` (plus flexible) et `textContent` (moins fragile que la manipulation directe de `nodeValue`). Enfin, pour des interactions fréquentes (mousemove) pensez à limiter la fréquence des mises à jour (throttling/debouncing) et évitez `innerHTML` pour insérer du texte fourni par l'utilisateur afin de prévenir des failles XSS.
+
 ## DOM et autres langages
 
 L'API DOM est supportée en C++ (voir [Xerces-C](http://xml.apache.org/xerces-c/)), en Python (paquetage xml.dom), en Perl (voir [Xerces-P](http://xml.apache.org/xerces-p/)), en JavaScript, etc. C'est d'ailleurs la principale force de cette API : peu importe le contexte, il y a fort à parier que vous aurez accès à l'API DOM. Ce n'est sans doute pas la meilleure API possible, mais son ubiquité fait en sorte qu'il vaut la peine d'apprendre à la connaître.
