@@ -75,7 +75,15 @@
  est arbre dont la racine est toujours le noeud-racine suivi normalement d’autres noeuds, comme des noeuds d’éléments.
  Les différents noeuds sont ordonnés (si on interverti deux éléments, on crée de facto un nouveau document). Il faut
  comprendre que les bouts de texte apparaissant dans un document XML sont noeuds à part entière.
-&lt;/p&gt;</description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</guid><description>&lt;h1&gt;
+&lt;/p&gt;</description></item><item><title>Vérificateur de XML bien formé</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/labo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/labo/</guid><description>&lt;h1 id="vérificateur-de-xml-bien-formé"&gt;
+ Vérificateur de XML bien formé
+ &lt;a class="anchor" href="#v%c3%a9rificateur-de-xml-bien-form%c3%a9"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Collez votre document XML ci-dessous et cliquez sur le bouton pour vérifier s’il est bien formé.
+Vérifiez votre compréhension de la syntaxe XML en testant différents documents.&lt;/p&gt;
+&lt;textarea id="xmlInput" placeholder="Collez ici votre XML..." style="width: 100%; height: 300px; font-family: Consolas, Monaco, monospace; font-size: 14px; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;catalogue&gt;&amp;#10;    &lt;livre id="1"&gt;&amp;#10;        &lt;titre&gt;Le Petit Prince&lt;/titre&gt;&amp;#10;        &lt;auteur&gt;Antoine de Saint-Exupéry&lt;/auteur&gt;&amp;#10;        &lt;année&gt;1943&lt;/année&gt;&amp;#10;    &lt;/livre&gt;&amp;#10;&lt;/catalogue&gt;&lt;/textarea&gt;
+&lt;p&gt;&lt;button onclick="verifierXML()" style="margin-top: 15px; padding: 10px 20px; font-size: 16px; background: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;"&gt;Vérifier le XML&lt;/button&gt;&lt;/p&gt;</description></item><item><title>Petit guide d’usage du courriel efficace</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/petit_guide_dusage_du_courriel_efficace/</guid><description>&lt;h1&gt;
  Petit guide d’usage du courriel efficace
 &lt;/h1&gt;
 &lt;p&gt;
