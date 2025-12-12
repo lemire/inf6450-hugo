@@ -184,7 +184,7 @@ Pour illustrer le fonctionnement du XSLT, prenons un example. Soit ce document X
             <souselement2>
             </souselement2>
         </element2>
-    </racine>
+</racine>
 ```
 
 Soit ce document XSLT:

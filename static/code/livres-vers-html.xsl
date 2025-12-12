@@ -44,12 +44,7 @@
             </xsl:for-each>
           </tbody>
         </table>
-
-        <p style="margin-top: 50px; color: #7f8c8d;">
-          Transformé avec XSLT le <xsl:value-of select="current-date()"/>
-        </p>
       </body>
     </html>
   </xsl:template>
-
 </xsl:stylesheet>

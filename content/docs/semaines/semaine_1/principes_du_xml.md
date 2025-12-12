@@ -29,7 +29,7 @@ Pour bien comprendre, illustrons notre propos par un exemple. Un document XML pr
 <racine>
  <element1>http://www.google.com</element1>
  <element2>Un moteur de recherche</element2>
- </racine>
+</racine>
 ```
 
 Dans ce document, il y a **trois éléments**. Tout d'abord, il y a **l'élément-racine** qui comprend tout ce qui est entre les balises <racine> et </racine>. La première balise marque le début de l'élément-racine. Tout document XML bien formé doit avoir un élément-racine et un seul élément-racine. Tous les autres éléments doivent être contenus dans cet élément-racine. Dans notre exemple, cet élément a deux sous-éléments :
@@ -77,14 +77,14 @@ Dans un document XML, l'ordre dans lequel les éléments sont présentés import
 <racine>
  <element1>http://www.google.com</element1>
  <element2>Un moteur de recherche</element2>
- </racine>
+</racine>
 ```
 
 ```xml
 <racine>
  <element2>Un moteur de recherche</element2>
  <element1>http://www.google.com</element1>
- </racine>
+</racine>
 ```
 
 Par contre, l'ordre dans lequel les attributs sont présentés est sans importance. Les deux documents XML suivants sont donc équivalents.
