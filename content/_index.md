@@ -82,7 +82,6 @@ public class JsonSimple {
         System.out.println(toJson(p));
     }
 
-    // Très petit convertisseur manuel
     public static String toJson(Object o) {
         if (o == null) return "null";
         if (o instanceof String) return "\"" + o + "\"";
@@ -96,7 +95,6 @@ public class JsonSimple {
         return "\"?\"";
     }
 
-    // Classe simple (sans getters/setters)
     static class Person {
         String nom;
         int age;
