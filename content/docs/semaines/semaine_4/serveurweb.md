@@ -1,8 +1,9 @@
 ---
-title: "HTML 5"
+title: "Serveur Web Java"
 weight: 35
 ---
 
+# Serveur Web Java
 
 Il arrive que l'on souhaite lancer rapidement un petit serveur web. Il est
 facile d'y arriver avec Java.
