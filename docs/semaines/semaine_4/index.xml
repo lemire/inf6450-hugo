@@ -43,7 +43,12 @@ vit le jour en 1990.
 &lt;/pre&gt;
  &lt;p&gt;
  Un document HTML 5 en XML ne nécessite pas de déclaration doctype :
- &lt;/p&gt;</description></item><item><title>MathML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/mathml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/mathml/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>HTML 5</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/serveurweb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/serveurweb/</guid><description>&lt;p&gt;Il arrive que l&amp;rsquo;on souhaite lancer rapidement un petit serveur web. Il est
+facile d&amp;rsquo;y arriver avec Java.
+Créez un fichier &lt;code&gt;ExempleServeurFichiersSimple.java&lt;/code&gt;
+avec le contenu suivant, compilez et exécutez-le dans un dossier. Si le port 8000 n&amp;rsquo;est pas utilisé sur votre ordinateur
+vous aurez un serveur web fonctionnant sur votre machine. (Dans le cas contraire, remplacez le port 8000 par 8001 ou 8002.) Vous pouvez déposer des fichiers HTML
+dans ce répertoire et les chargez dans votre navigateur.&lt;/p&gt;</description></item><item><title>MathML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/mathml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/mathml/</guid><description>&lt;h1&gt;
  MathML
 &lt;/h1&gt;
 &lt;style&gt;
