@@ -54,7 +54,72 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
  &lt;/h1&gt;
  &lt;p style="margin-bottom: 16px; color: #4b5563;"&gt;
  Entrez un contenu XML et un style CSS dans les champs ci-dessous, puis cliquez sur "Mise en forme" pour afficher le résultat stylisé dans l'iframe. Exemples :
- &lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/</guid><description>&lt;h1 class=""&gt;
+ &lt;/p&gt;</description></item><item><title>Laboratoire CSS/MathML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/cssmathml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/cssmathml/</guid><description>&lt;h1 id="laboratoire-cssmathml"&gt;
+ Laboratoire CSS/MathML
+ &lt;a class="anchor" href="#laboratoire-cssmathml"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Vous pouvez utiliser CSS pour modifier l&amp;rsquo;apparence du contenu MathML dans votre
+navigateur.
+Je vous invite à éditer le code MathML dans la boîte suivante pour observer le résultat.&lt;/p&gt;
+&lt;h2 id="code-mathml"&gt;
+ Code MathML
+ &lt;a class="anchor" href="#code-mathml"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;textarea id="mathmlCode" style="width:100%; height:400px"&gt;&amp;lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&amp;gt;
+ &amp;lt;mrow&amp;gt;
+ &amp;lt;mi style="color: red; font-style: italic;"&amp;gt;x&amp;lt;/mi&amp;gt;
+ &amp;lt;mo style="color: purple;"&amp;gt;=&amp;lt;/mo&amp;gt;
+ &amp;lt;mfrac&amp;gt;
+ &amp;lt;mrow&amp;gt;
+ &amp;lt;mn style="color: green;"&amp;gt;−1&amp;lt;/mn&amp;gt;
+ &amp;lt;mo style="color: purple;"&amp;gt;±&amp;lt;/mo&amp;gt;
+ &amp;lt;msqrt&amp;gt;
+ &amp;lt;mn style="color: green;"&amp;gt;1&amp;lt;/mn&amp;gt;
+ &amp;lt;mo style="color: purple;"&amp;gt;−&amp;lt;/mo&amp;gt;
+ &amp;lt;mn style="color: green;"&amp;gt;4&amp;lt;/mn&amp;gt;
+ &amp;lt;/msqrt&amp;gt;
+ &amp;lt;/mrow&amp;gt;
+ &amp;lt;mn style="color: green;"&amp;gt;2&amp;lt;/mn&amp;gt;
+ &amp;lt;/mfrac&amp;gt;
+ &amp;lt;/mrow&amp;gt;
+&amp;lt;/math&amp;gt;
+&lt;/textarea&gt;
+&lt;div class="render-container"&gt;
+ &lt;h2&gt;
+ Rendu MathML
+ &lt;/h2&gt;
+ &lt;div id="mathmlRender"&gt;
+ &lt;math display="block" xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+ &lt;mrow&gt;
+ &lt;mi style="color: red; font-style: italic;"&gt;x&lt;/mi&gt;
+ &lt;mo style="color: purple;"&gt;=&lt;/mo&gt;
+ &lt;mfrac&gt;
+ &lt;mrow&gt;
+ &lt;mn style="color: green;"&gt;−1&lt;/mn&gt;
+ &lt;mo style="color: purple;"&gt;±&lt;/mo&gt;
+ &lt;msqrt&gt;
+ &lt;mn style="color: green;"&gt;1&lt;/mn&gt;
+ &lt;mo style="color: purple;"&gt;−&lt;/mo&gt;
+ &lt;mn style="color: green;"&gt;4&lt;/mn&gt;
+ &lt;/msqrt&gt;
+ &lt;/mrow&gt;
+ &lt;mn style="color: green;"&gt;2&lt;/mn&gt;
+ &lt;/mfrac&gt;
+ &lt;/mrow&gt;
+ &lt;/math&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;script&gt;
+ const textarea = document.getElementById('mathmlCode');
+ const renderDiv = document.getElementById('mathmlRender');
+ textarea.addEventListener('input', () =&gt; {
+ try {
+ renderDiv.innerHTML = textarea.value;
+ } catch (error) {
+ console.error('Erreur MathML:', error);
+ }
+ });
+&lt;/script&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_10/autoevaluation/</guid><description>&lt;h1 class=""&gt;
  Autoévaluation
 &lt;/h1&gt;
 &lt;p&gt;
