@@ -38,7 +38,13 @@ Voici un exemple simple de sitemap.xml contenant quatre pages :&lt;/p&gt;</descr
  &lt;a class="anchor" href="#rss--loriginal"&gt;#&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;La première version de RSS est apparue en 1999 (Netscape), mais c’est la version RSS 2.0 (2002, publiée par Dave Winer sous licence Creative Commons) qui s’est imposée comme le standard le plus utilisé.&lt;br&gt;
-Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></item><item><title>Le fichier AndroidManifest.xml</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</guid><description>&lt;h1 id="le-fichier-androidmanifestxml"&gt;
+Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></item><item><title>X3D</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/three/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/three/</guid><description>&lt;h1 id="x3d"&gt;
+ X3D
+ &lt;a class="anchor" href="#x3d"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;X3D, ou Extensible 3D, est un standard international ISO/IEC ouvert pour la représentation et la communication de graphiques 3D interactifs sur le web.
+Ce format XML facilite la création de contenus 3D portables, visualisables dans des navigateurs, sans plugins supplémentaires. Maintenu par le Web3D Consortium, X3D évolue continuellement pour répondre aux besoins en visualisation scientifique, en éducation, et en réalité virtuelle/augmentée sur le web.&lt;/p&gt;
+&lt;p&gt;Prenons un exemple classique d&amp;rsquo;une scène X3D simple affichant un cône rouge tournant sur lui-même.&lt;/p&gt;</description></item><item><title>Le fichier AndroidManifest.xml</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_3/le_fichier_androidmanifestxml/</guid><description>&lt;h1 id="le-fichier-androidmanifestxml"&gt;
  Le fichier AndroidManifest.xml
  &lt;a class="anchor" href="#le-fichier-androidmanifestxml"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
