@@ -2,9 +2,8 @@
 title: "MarkDown"
 weight: 80
 ---
-<h1 class="">
- MarkDown
-</h1>
+# MarkDown
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js">
 </script>
 <div class="">

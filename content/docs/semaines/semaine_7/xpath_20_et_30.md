@@ -2,9 +2,10 @@
 title: "XPath 2.0 et 3.0"
 weight: 60
 ---
-<h1 class="">
- XPath 2.0 et 3.0
-</h1>
+
+#  XPath 2.0 et 3.0
+
+
 <div class="">
  <p>
  </p>
@@ -48,3 +49,116 @@ weight: 60
  </p>
 </div>
 <hr/>
+
+
+## XPath 2.0 et 3.0 en Java
+
+Nous pouvons utiliser la librairie Saxon en Java pour illustrer les fonctions propres à XPath 2.0 et 3.0.
+
+{{<inlineJava path="IllustrationXPathSaxon.java">}}
+
+import net.sf.saxon.s9api.*;
+
+import javax.xml.transform.stream.StreamSource;
+import java.io.StringReader;
+import java.util.Iterator;
+
+public class IllustrationXPathSaxon {
+
+    public static void main(String[] args) throws SaxonApiException {
+        // Création du Processor (configuration Saxon)
+        Processor processor = new Processor(false); // false pour édition HE
+
+        // Chargement du document XML depuis une chaîne
+        String xml = """
+            <classe>
+              <etudiant sexe="m">
+                <nom>Jean</nom>
+                <note>85</note>
+                <note>92</note>
+              </etudiant>
+              <etudiant sexe="f">
+                <nom>Marie</nom>
+                <note>78</note>
+                <note>95</note>
+              </etudiant>
+              <etudiant sexe="m">
+                <nom>Paul</nom>
+                <note>88</note>
+              </etudiant>
+            </classe>
+            """;
+
+        XdmNode document = processor.newDocumentBuilder().build(
+            new StreamSource(new StringReader(xml))
+        );
+
+        // Création du compilateur XPath
+        XPathCompiler xpathCompiler = processor.newXPathCompiler();
+
+        // Démonstration des fonctionnalités XPath 2.0
+
+        System.out.println("Fonctions agrégates (avg, max, min) :");
+        XPathExecutable execAvg = xpathCompiler.compile("avg(//note)");
+        XPathSelector selectorAvg = execAvg.load();
+        selectorAvg.setContextItem(document);
+        XdmValue resultAvg = selectorAvg.evaluate();
+        System.out.println("Moyenne de toutes les notes : " + resultAvg);
+
+        XPathExecutable execMax = xpathCompiler.compile("max(//note)");
+        XPathSelector selectorMax = execMax.load();
+        selectorMax.setContextItem(document);
+        System.out.println("Note maximale : " + selectorMax.evaluate());
+
+        XPathExecutable execMin = xpathCompiler.compile("min(//note)");
+        XPathSelector selectorMin = execMin.load();
+        selectorMin.setContextItem(document);
+        System.out.println("Note minimale : " + selectorMin.evaluate());
+        
+        System.out.println("\nExpression conditionnelle if/then/else :");
+        XPathExecutable execIf = xpathCompiler.compile("//etudiant ! ((if (@sexe eq 'm') then 'Monsieur' else 'Madame') || ' ' || nom)");
+        XPathSelector selectorIf = execIf.load();
+        selectorIf.setContextItem(document);
+        XdmValue resultIf = selectorIf.evaluate();
+        Iterator<XdmItem> itIf = resultIf.iterator();
+        while (itIf.hasNext()) {
+            System.out.println("Salutation : " + itIf.next());
+        }
+        System.out.println("\nBoucle for (retourner les notes) :");
+        XPathExecutable execFor = xpathCompiler.compile("for $i in //etudiant return $i/note");
+        XPathSelector selectorFor = execFor.load();
+        selectorFor.setContextItem(document);
+        XdmValue resultFor = selectorFor.evaluate();
+        System.out.println("Toutes les notes (séquences aplaties) : " + resultFor);
+
+        System.out.println("\nQuantificateurs some et every :");
+        XPathExecutable execSome = xpathCompiler.compile("some $i in //etudiant satisfies $i/note < 80");
+        XPathSelector selectorSome = execSome.load();
+        selectorSome.setContextItem(document);
+        System.out.println("Au moins un étudiant a une note < 80 : " + selectorSome.evaluate());
+
+        XPathExecutable execEvery = xpathCompiler.compile("every $i in //etudiant satisfies $i/note > 0");
+        XPathSelector selectorEvery = execEvery.load();
+        selectorEvery.setContextItem(document);
+        System.out.println("Tous les étudiants ont une note > 0 : " + selectorEvery.evaluate());
+
+        System.out.println("\nExpressions régulières (matches) :");
+        XPathExecutable execMatches = xpathCompiler.compile("//etudiant[matches(nom, '^M')] ! nom");
+        XPathSelector selectorMatches = execMatches.load();
+        selectorMatches.setContextItem(document);
+        XdmValue resultMatches = selectorMatches.evaluate();
+        System.out.println("Noms commençant par M : " + resultMatches);
+
+        // Démonstration XPath 3.0 : fonction inline
+        System.out.println("\nFonction inline XPath 3.0 (ajoute 10 à une note) :");
+        XPathExecutable execFunc = xpathCompiler.compile("""
+            let $ajoute10 := function($n as xs:integer) as xs:integer { $n + 10 }
+            return //note ! $ajoute10(.)
+            """);
+        XPathSelector selectorFunc = execFunc.load();
+        selectorFunc.setContextItem(document);
+        XdmValue resultFunc = selectorFunc.evaluate();
+        System.out.println("Notes + 10 : " + resultFunc);
+    }
+}
+{{</inlineJava>}}

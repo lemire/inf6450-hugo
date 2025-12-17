@@ -2,9 +2,10 @@
 title: "Base64"
 weight: 60
 ---
-<h1>
- Le Base64 : comment intégrer des images et des fichiers binaires directement dans du texte
-</h1>
+
+# Le Base64 : comment intégrer des images et des fichiers binaires directement dans du texte
+
+
 <p>
  Le Base64 est un système d’encodage qui permet de transformer n’importe quelles données binaires (images, sons, polices, PDF, etc.) en une chaîne de caractères composée uniquement des lettres A-Z, a-z, des chiffres 0-9 et des symboles + et /. Cet encodage a été créé à l’origine pour transmettre des pièces jointes dans les emails, car à l’époque les corps de message ne supportaient que du texte ASCII. Aujourd’hui, il reste très utile dès qu’on veut inclure des données binaires dans un format qui n’accepte que du texte pur.
 </p>
@@ -33,9 +34,11 @@ weight: 60
 <p>
  En résumé, le Base64 reste un outil simple et efficace pour rendre des documents texte (XML, HTML, JSON, CSS, etc.) autonomes en intégrant directement des ressources binaires, au prix d’une légère augmentation de taille.
 </p>
-<h1 style="text-align:center;color:#2c3e50;margin-top:0;">
- Convertisseur d'octets en Base64
-</h1>
+
+
+##  Convertisseur d'octets en Base64
+
+
 <p style="text-align:center;margin:20px 0;">
  Entrez des valeurs entre 0 et 255 (séparées par espaces, virgules ou retours à la ligne)
 </p>
@@ -86,3 +89,43 @@ window.onload = function() {
     convertToBase64();
 }
 </script>
+
+## Java et Base64
+
+Le programme Java suivant montre comment on peut créer et décoder des chaînes base64.
+
+{{<inlineJava path="DemoBase64.java">}}
+import java.util.Base64;
+
+public class DemoBase64 {
+
+    public static String encoder(String texte) {
+        return Base64.getEncoder().encodeToString(texte.getBytes());
+    }
+
+    public static String decoder(String texteEncode) {
+        byte[] octetsDecodes = Base64.getDecoder().decode(texteEncode);
+        return new String(octetsDecodes);
+    }
+
+    public static void main(String[] args) {
+        String texteOriginal = "Bonjour, ceci est une chaîne de test pour l'encodage Base64 !";
+
+        // Encodage
+        String texteEncode = encoder(texteOriginal);
+        System.out.println("Texte original : " + texteOriginal);
+        System.out.println("Texte encodé en Base64 : " + texteEncode);
+
+        // Décodage
+        String texteDecode = decoder(texteEncode);
+        System.out.println("Texte décodé : " + texteDecode);
+
+        // Vérification simple
+        if (texteOriginal.equals(texteDecode)) {
+            System.out.println("L'encodage et le décodage ont fonctionné correctement.");
+        } else {
+            System.out.println("Une erreur s'est produite lors du décodage.");
+        }
+    }
+}
+{{</inlineJava>}}

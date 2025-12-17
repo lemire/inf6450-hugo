@@ -179,7 +179,7 @@ Elliotte Rusty Harold nous offre une excellente [page sur XQuery](http://www.caf
 
 ## Saxon en ligne
 
-Vous pouvez aussi tester Saxon en ligne.
+Vous pouvez aussi tester Saxon en ligne pour exécuter des requêtes XQuery.
 
 {{<inlineJava path="Main.java" lang="java" >}}
 import net.sf.saxon.s9api.*;
