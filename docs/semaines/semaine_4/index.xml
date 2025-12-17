@@ -67,8 +67,9 @@ dans ce répertoire et les chargez dans votre navigateur.&lt;/p&gt;</description
 &lt;div class=""&gt;
  &lt;p&gt;
  Le Scalar Vector Graphics (SVG) est un format d'image vectorielle basé sur le langage XML, permettant de créer des graphiques évolutifs qui s'adaptent sans perte de qualité à toutes les tailles d'écran. Contrairement aux images matricielles (comme PNG ou JPEG), les SVG sont définis par des instructions textuelles décrivant des formes, des couleurs et des transformations, ce qui les rend légers, modifiables et idéaux pour le web. Grâce à leur intégration dans le HTML, les SVG peuvent être manipulés dynamiquement avec CSS ou JavaScript pour créer des animations ou des graphiques interactifs.
- &lt;/p&gt;</description></item><item><title>Base64</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/base64/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/base64/</guid><description>&lt;h1&gt;
+ &lt;/p&gt;</description></item><item><title>Base64</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/base64/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/base64/</guid><description>&lt;h1 id="le-base64--comment-intégrer-des-images-et-des-fichiers-binaires-directement-dans-du-texte"&gt;
  Le Base64 : comment intégrer des images et des fichiers binaires directement dans du texte
+ &lt;a class="anchor" href="#le-base64--comment-int%c3%a9grer-des-images-et-des-fichiers-binaires-directement-dans-du-texte"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;p&gt;
  Le Base64 est un système d’encodage qui permet de transformer n’importe quelles données binaires (images, sons, polices, PDF, etc.) en une chaîne de caractères composée uniquement des lettres A-Z, a-z, des chiffres 0-9 et des symboles + et /. Cet encodage a été créé à l’origine pour transmettre des pièces jointes dans les emails, car à l’époque les corps de message ne supportaient que du texte ASCII. Aujourd’hui, il reste très utile dès qu’on veut inclure des données binaires dans un format qui n’accepte que du texte pur.
@@ -101,8 +102,9 @@ dans ce répertoire et les chargez dans votre navigateur.&lt;/p&gt;</description
  &lt;/div&gt;
  &lt;p style="width:90%;"&gt;
  Choisissez toutes les réponses qui s'appliquent, puis appuyez sur le bouton « Vérifier ma réponse ».
- &lt;/p&gt;</description></item><item><title>MarkDown</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/markdown/</guid><description>&lt;h1 class=""&gt;
+ &lt;/p&gt;</description></item><item><title>MarkDown</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/markdown/</guid><description>&lt;h1 id="markdown"&gt;
  MarkDown
+ &lt;a class="anchor" href="#markdown"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;
 &lt;/script&gt;

@@ -44,20 +44,20 @@ Vous pouvez modifier les fichier Java et le fichier XML.&lt;/p&gt;
  
  
 
-&lt;div id="java-multirunner-1765930687973676878"&gt;
+&lt;div id="java-multirunner-1765946401001386373"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-multirunner-1765930687973676878 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-multirunner-1765930687973676878 .export-form { margin-bottom:0; }
- #java-multirunner-1765930687973676878 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-multirunner-1765930687973676878 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-multirunner-1765930687973676878 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-multirunner-1765930687973676878 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-multirunner-1765946401001386373 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1765946401001386373 .export-form { margin-bottom:0; }
+ #java-multirunner-1765946401001386373 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1765946401001386373 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1765946401001386373 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1765946401001386373 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-multirunner-1765930687973676878-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-multirunner-1765946401001386373-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  
@@ -145,14 +145,14 @@ public class SimpleXPath {
 &amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
  
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-multirunner-1765930687973676878-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1765946401001386373-btn"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;(function(){
- var root = document.getElementById('java-multirunner-1765930687973676878');
+ var root = document.getElementById('java-multirunner-1765946401001386373');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -347,8 +347,9 @@ public class SimpleXPath {
  &lt;/div&gt;
  &lt;p style="width:90%;"&gt;
  Choisissez la bonne réponse parmi les suivantes.
- &lt;/p&gt;</description></item><item><title>XPath 2.0 et 3.0</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/</guid><description>&lt;h1 class=""&gt;
+ &lt;/p&gt;</description></item><item><title>XPath 2.0 et 3.0</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_20_et_30/</guid><description>&lt;h1 id="xpath-20-et-30"&gt;
  XPath 2.0 et 3.0
+ &lt;a class="anchor" href="#xpath-20-et-30"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
 &lt;div class=""&gt;
  &lt;p&gt;
