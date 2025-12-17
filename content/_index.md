@@ -74,31 +74,27 @@ Vous ne devriez pas être intimidé par l'exemple suivant. Prenez quelques secon
 votre navigateur.
 
 
-{{<inlineJava path="JsonSimple.java">}}
-public class JsonSimple {
+{{<inlineJava path="JsonWithJackson.java">}}
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-    public static void main(String[] args) {
+public class JsonWithJackson {
+    private static final ObjectMapper mapper = new ObjectMapper();
+
+    public static void main(String[] args) throws JsonProcessingException {
         Person p = new Person("Alice", 30, true);
         System.out.println(toJson(p));
     }
 
-    public static String toJson(Object o) {
+    public static String toJson(Object o) throws JsonProcessingException {
         if (o == null) return "null";
-        if (o instanceof String) return "\"" + o + "\"";
-        if (o instanceof Number || o instanceof Boolean) return o.toString();
-        if (o instanceof Person p) {
-            return String.format(
-                "{\"nom\":\"%s\",\"age\":%d,\"majeur\":%b}",
-                p.nom, p.age, p.majeur
-            );
-        }
-        return "\"?\"";
+        return mapper.writeValueAsString(o);
     }
 
     static class Person {
-        String nom;
-        int age;
-        boolean majeur;
+        public String nom;
+        public int age;
+        public boolean majeur;
 
         Person(String nom, int age, boolean majeur) {
             this.nom = nom;

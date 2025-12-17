@@ -177,3 +177,83 @@ xquery version "1.0" encoding "utf-8";
 
 Elliotte Rusty Harold nous offre une excellente [page sur XQuery](http://www.cafeconleche.org/slides/albany/xquery/) qui résume bien les points essentiels avec des exemples.
 
+## Saxon en ligne
+
+Vous pouvez aussi tester Saxon en ligne.
+
+{{<inlineJava path="Main.java" lang="java" >}}
+import net.sf.saxon.s9api.*;
+
+import java.io.StringWriter;
+
+public class Main {
+    public static void main(String[] args) {
+        // XML intégré directement dans le code Java (chaîne multi-ligne)
+        String xmlContent = """
+            <bibliotheque>
+                <livre>
+                    <titre>Le Petit Prince</titre>
+                    <auteur>Antoine de Saint-Exupéry</auteur>
+                    <annee>1943</annee>
+                </livre>
+                <livre>
+                    <titre>1984</titre>
+                    <auteur>George Orwell</auteur>
+                    <annee>1949</annee>
+                </livre>
+                <livre>
+                    <titre>Le Seigneur des Anneaux</titre>
+                    <auteur>J.R.R. Tolkien</auteur>
+                    <annee>1954</annee>
+                </livre>
+            </bibliotheque>
+            """;
+
+        // Requête XQuery qui construit le document à partir de la chaîne
+        String xquery = """
+            declare variable $doc external;
+            <resultats>{
+                for $livre in $doc//livre
+                return <titre>{data($livre/titre)}</titre>
+            }</resultats>
+            """;
+
+        try {
+            Processor processor = new Processor(false);  // Saxon-HE
+            DocumentBuilder builder = processor.newDocumentBuilder();
+
+            // Construction du document XML à partir de la chaîne
+            XdmNode document = builder.build(
+                new javax.xml.transform.stream.StreamSource(
+                    new java.io.StringReader(xmlContent)
+                )
+            );
+
+            XQueryCompiler compiler = processor.newXQueryCompiler();
+            // Déclaration de la variable externe $doc
+            compiler.declareNamespace("", "");  // namespace par défaut si nécessaire
+            XQueryExecutable executable = compiler.compile(xquery);
+
+            XQueryEvaluator evaluator = executable.load();
+            // Passage de la variable externe $doc
+            evaluator.setExternalVariable(
+                new QName("doc"),
+                document
+            );
+
+            XdmValue result = evaluator.evaluate();
+
+            // Sérialisation du résultat
+            StringWriter writer = new StringWriter();
+            Serializer serializer = processor.newSerializer(writer);
+            serializer.serializeXdmValue(result);
+
+            System.out.println(writer.toString());
+
+        } catch (SaxonApiException e) {
+            System.err.println("Erreur lors de l'exécution XQuery : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+{{</inlineJava>}}
