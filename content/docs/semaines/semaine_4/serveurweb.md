@@ -5,6 +5,12 @@ weight: 35
 
 # Serveur Web Java
 
+
+
+Le protocole HTTP (HyperText Transfer Protocol) est un protocole de communication standard utilisé pour transférer des données sur le web. Il définit comment les clients, tels que les navigateurs web, peuvent demander des ressources aux serveurs et comment ces derniers répondent. HTTP repose sur un modèle requête-réponse, où le client envoie une requête et le serveur renvoie une réponse.
+
+Une requête HTTP est une demande initiée par le client pour accéder à une ressource spécifique sur le serveur. Elle comprend généralement une méthode (comme GET pour récupérer des données, POST pour envoyer des données), une URL pointant vers la ressource, des en-têtes contenant des informations supplémentaires (comme le type de contenu accepté), et parfois un corps pour les données envoyées. Le serveur traite la requête et renvoie une réponse avec un code de statut (par exemple, 200 pour succès, 404 pour non trouvé) et le contenu demandé.
+
 Il arrive que l'on souhaite lancer rapidement un petit serveur web. Il est
 facile d'y arriver avec Java.
 Créez un fichier `ExempleServeurFichiersSimple.java`

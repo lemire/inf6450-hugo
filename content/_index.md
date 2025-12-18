@@ -15,9 +15,14 @@ Le XML vous permet de générer des graphiques de grande qualité (SVG) que vous
 Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comment créez un document Word à partir d'un programme Java en produisant du XML. Vous apprendrez comment récupérer les dernières nouvelles de Radio-Canada avec un programme analysant du XML. Bref, le cours fait le tour généralement des formats de données et de documents.
 À la fin du cours, vous pourrez comprendre, analyser, filtrer et transformer des documents informatiques XML et JSON.
 
+## Mise en contexte
 
-### XML
 
+Les formats de données structurées comme XML, HTML, JSON, YAML et RDF jouent un rôle essentiel dans l'échange et la représentation d'informations en informatique. Chacun d'eux repose sur des structures de données fondamentales qui influencent leur utilisation. Une compréhension des liens entre ces formats et les concepts sous-jacents, tels que les arbres, les compositions de dictionnaires et listes, ou les graphes, permet de mieux choisir l'outil adapté à une situation donnée.
+
+XML et HTML sont fondamentalement basés sur une structure arborescente de nœuds. Un document XML commence par un élément racine unique, à partir duquel se ramifient des éléments enfants, formant une hiérarchie stricte similaire à un arbre. Chaque nœud peut contenir du texte, des attributs ou d'autres nœuds, ce qui facilite la représentation de données ordonnées et imbriquées. HTML suit le même principe, en tant que variante d'XML appliquée au web, où la page est vue comme un arbre  accessible et manipulable par les navigateurs.
+
+**Exemple. XML**
 ```xml
 <person>
   <name>Alice Dupont</name>
@@ -36,8 +41,52 @@ Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comm
 </person>
 ```
 
+**Exemple. HTML**
 
-### JSON
+```xml
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Exemple de HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Mon site web</h1>
+        <nav>
+            <a href="#home">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Bienvenue</h2>
+            <p>Ceci est un court exemple de HTML sémantique.</p>
+        </section>
+        
+        <article>
+            <h2>Article de blog</h2>
+            <p>Le contenu de l'article va ici.</p>
+        </article>
+        
+        <aside>
+            <h3>Liens associés</h3>
+            <p>Du contenu de barre latérale.</p>
+        </aside>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Exemple</p>
+    </footer>
+</body>
+</html>
+```
+
+En contraste, JSON et YAML s'appuient sur des compositions de dictionnaires et de listes. JSON utilise des objets (équivalents à des dictionnaires avec paires clé-valeur) et des tableaux (listes ordonnées), permettant une représentation flexible et légère de données. YAML étend cette approche en offrant une syntaxe plus lisible pour les humains, avec indentation pour les listes et mappings, tout en restant compatible avec les structures de JSON dans de nombreux cas. Ces formats excellent pour les données semi-structurées, comme les configurations ou les échanges API.
+
+
+**Exemple. JSON**
 
 ```json
 {
@@ -53,7 +102,42 @@ Nous couvrons aussi des formats comme JSON, YAML et Base64. Vous apprendrez comm
 }
 ```
 
+**Exemple. YAML**
+```yaml
+name: Alice Dupont
+age: 32
+isDeveloper: true
+address:
+  street: 12 rue des Lilas
+  city: Paris
+  country: France
+hobbies:
+  - lecture
+  - escalade
+  - photographie
+```
 
+RDF, quant à lui, adopte une modèle de graphe basé sur des relations. Il repose sur des triples (sujet-prédicat-objet), où chaque affirmation lie deux entités via une relation dirigée. Cela forme un graphe potentiellement non arborescent, avec des connexions multiples et cycliques possibles, idéal pour exprimer des connaissances sémantiques interconnectées.
+
+**Exemple. RDF/XML**
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+    <foaf:Person rdf:about="http://exemple.org/personnes#alice">
+        <foaf:name>Alice Dupont</foaf:name>
+        <foaf:age>32</foaf:age>
+        <foaf:mbox rdf:resource="mailto:alice.dupont@exemple.fr"/>
+        <foaf:topic_interest rdf:resource="http://exemple.org/interets#photographie"/>
+    </foaf:Person>
+</rdf:RDF>
+```
+
+Les ponts entre ces formats et les structures fondamentales révèlent leurs complémentarités. Par exemple, un arbre XML peut être converti en objet JSON en mappant les éléments enfants à des clés de dictionnaire ou des listes, bien que la perte d'ordre ou d'attributs puisse nécessiter des ajustements. YAML, étant un surensemble humain de JSON, facilite cette transition pour les configurations.
+
+Dans ce cours, vous pourrez approfondir votre compréhension de ces notions.
 
 ## Attention : Java
 
