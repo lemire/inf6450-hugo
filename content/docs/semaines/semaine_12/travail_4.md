@@ -143,7 +143,8 @@ weight: 110
  Ainsi, la commande « java Transactions transactions.xml » devra
     donner :
 </p>
-<pre> Nom du client: Jean Charles
+<pre> 
+    Nom du client: Jean Charles
     Somme: 1700
     Nom du client: Pierre Élisabeth
     Somme: 3400</pre>
@@ -179,7 +180,8 @@ weight: 110
  </b>
  » :
 </p>
-<pre> Jean Charles, 3214324565, 321, 2
+<pre> 
+    Jean Charles, 3214324565, 321, 2
     Yvan Richard, 5435435545, 321, 1
     Yvette Gagnon, 4324324243, 1, 12</pre>
 <p>
@@ -322,51 +324,44 @@ weight: 110
     comme en Java) pour traiter les erreurs. Cependant, cette
     syntaxe n'est pas nécessaire.
 </p>
-<!-- HTML generated using hilite.me -->
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
- <pre style="margin: 0; line-height: 125%"><span style="color: #557799">&lt;?xml version="1.0" ?&gt;</span>
-        <span style="color: #007700">&lt;html</span> <span style="color: #0000CC">xmlns=</span><span style="background-color: #fff0f0">"http://www.w3.org/1999/xhtml"</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;head&gt;</span>
-        <span style="color: #007700">&lt;meta</span> <span style="color: #0000CC">charset=</span><span style="background-color: #fff0f0">"UTF-8"</span><span style="color: #007700">&gt;</span>
-        <span style="color: #007700">&lt;title&gt;</span>Exemple AJAX<span style="color: #007700">&lt;/title&gt;</span>
-        <span style="color: #007700">&lt;script </span><span style="color: #0000CC">language=</span><span style="background-color: #fff0f0">"JavaScript"</span><span style="color: #007700">&gt;</span>
-        <span style="color: #008800; font-weight: bold">function</span>
-        afficheTitres(doc) {
-        titres <span style="color: #333333">=</span>
-        doc.getElementsByTagName(<span style="background-color: #fff0f0">"title"</span>);
-        elementol <span style="color: #333333">=</span> <span style="color: #007020">document</span>.createElement(<span style="background-color: #fff0f0">"ol"</span>);
-        <span style="color: #008800; font-weight: bold">var</span> longueur
-        <span style="color: #333333">=</span> titres.length;
-        <span style="color: #008800; font-weight: bold">for</span> ( k <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>; k <span style="color: #333333">&lt;</span> longueur ; <span style="color: #333333">++</span>k) {
-        elementli <span style="color: #333333">=</span> <span style="color: #007020">document</span>.createElement(<span style="background-color: #fff0f0">"li"</span>);
-        elementli.appendChild(<span style="color: #007020">document</span>.createTextNode(titres[k].firstChild.nodeValue));
-        elementol.appendChild(elementli);
+
+```html
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemple AJAX</title>
+    <script language="JavaScript">
+      function afficheTitres(doc) {
+        titres = doc.getElementsByTagName("title");
+        elementol = document.createElement("ol");
+        var longueur = titres.length;
+        for (k = 0; k < longueur; ++k) {
+          elementli = document.createElement("li");
+          elementli.appendChild(document.createTextNode(titres[k].firstChild.nodeValue));
+          elementol.appendChild(elementli);
         }
-        body <span style="color: #333333">=</span> <span style="color: #007020">document</span>.getElementsByTagName(<span style="background-color: #fff0f0">"body"</span>).item(<span style="color: #0000DD; font-weight: bold">0</span>);
+        body = document.getElementsByTagName("body").item(0);
         body.appendChild(elementol);
+      }
+
+      function chargeDocument(f) {
+        var fileReader = new FileReader();
+        fileReader.onload = function(evt) {
+          var doc = new DOMParser().parseFromString(this.result, 'application/xml');
+          afficheTitres(doc);
         }
-        <span style="color: #008800; font-weight: bold">function</span>
-        chargeDocument(f) {
-        <span style="color: #008800; font-weight: bold">var</span> fileReader
-        <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span> FileReader();
-        fileReader.onload <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">function</span>(evt) {
-        <span style="color: #008800; font-weight: bold">var</span> doc <span style="color: #333333">=</span> <span style="color: #008800; font-weight: bold">new</span>
-        DOMParser().parseFromString(<span style="color: #008800; font-weight: bold">this</span>.result, <span style="background-color: #fff0f0">'application/xml'</span>);
-        afficheTitres(doc);
-        }
-        fileReader.readAsText(f[<span style="color: #0000DD; font-weight: bold">0</span>]);
-        }
-        <span style="color: #007700">&lt;/script&gt;</span>
-        <span style="color: #007700">&lt;/head&gt;</span>
-        <span style="color: #007700">&lt;body&gt;</span>
-        <span style="color: #007700">&lt;p&gt;</span>Récupére et affiche
-        les nouvelles du devoir: <span style="color: #007700">&lt;/p&gt;</span>
-        <span style="color: #007700">&lt;input</span> <span style="color: #0000CC">type=</span><span style="background-color: #fff0f0">"file"</span> <span style="color: #0000CC">onchange=</span><span style="background-color: #fff0f0">"chargeDocument(this.files)"</span>
-        <span style="color: #007700">&gt;&lt;/input&gt;</span>
-        <span style="color: #007700">&lt;/body&gt;</span>
-        <span style="color: #007700">&lt;/html&gt;</span>
-    </pre>
-</div>
+        fileReader.readAsText(f[0]);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Récupére et affiche les nouvelles du devoir: </p>
+    <input type="file" onchange="chargeDocument(this.files)" />
+  </body>
+</html>
+```
+
 <h2>
  Exercice 5
 </h2>
