@@ -7,8 +7,8 @@ weight: 30
 
 <p>
  <a href="https://github.com/lemire/javajackson">
-  Nous vous invitons maintenant à faire une activité practice avec la librairie Java Jackson.
- </a>
+  Nous vous invitons maintenant à faire une activité practique avec la librairie Java Jackson.
+ </a>  L'activité vous amènera sur la plateforme GitHub et vous devrez utiliser Maven.
 </p>
 
 

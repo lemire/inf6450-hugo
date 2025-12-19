@@ -7,8 +7,9 @@ weight: 32
 
 <p>
  <a href="https://github.com/lemire/javagson">
-  Nous vous invitons maintenant à faire une activité practice avec la librairie Java Gson.
- </a>
+  Nous vous invitons maintenant à faire une activité pratique avec la librairie Java Gson. 
+ </a> L'activité vous amènera sur la plateforme GitHub et vous devrez utiliser Maven.
+ Cette démarche ressemble à une activité industrielle.
 </p>
 
 ## Utilisation de Google Gson pour le traitement JSON en Java
