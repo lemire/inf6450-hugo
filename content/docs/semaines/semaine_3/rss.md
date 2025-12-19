@@ -45,7 +45,9 @@ Prenez le temps de consulter les sources suivantes.
 #### Exemple Java (Radio-Canada)
 
 Prenez quelques secondes pour exécuter ce programme qui charge les dernières nouvelles de Radio-Canada 
-en utilisant le XML.
+en utilisant le XML. N'essayez pas de comprendre le code en détail, nous reviendrons
+plus tard sur ces notions.
+
 
 {{<inlineJava path="RadioCanadaCinqDernieres.java">}}
 import java.io.InputStream;
@@ -110,7 +112,8 @@ public class RadioCanadaCinqDernieres {
 #### Exemple Java (Blogue de Daniel Lemire)
 
 Prenez quelques secondes pour exécuter ce programme qui charge les dernières nouvelles du blogue de Daniel Lemire
-en utilisant le XML.
+en utilisant le XML. N'essayez pas de comprendre le code en détail, nous reviendrons
+plus tard sur ces notions.
 
 {{<inlineJava path="RssFeedReader.java">}}
 import java.io.InputStream;
@@ -191,9 +194,9 @@ Créez un fichier nommé `LemireBlogReader.java`,
 faites `javac LemireBlogReader.java` puis `java LemireBlogReader`.
 Vous devriez voir une application apparaître sur votre ordinateur.
 Vous pourrez consulter les billets du blogue de Daniel Lemire (en anglais).
+N'essayez pas de comprendre le code en détail.
 
-
-```
+```java
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URL;
