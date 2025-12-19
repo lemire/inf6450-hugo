@@ -183,3 +183,169 @@ public class RssFeedReader {
     }
 }
 {{</inlineJava>}}
+
+
+### Exemple d'application
+
+Créez un fichier nommé `LemireBlogReader.java`, 
+faites `javac LemireBlogReader.java` puis `java LemireBlogReader`.
+Vous devriez voir une application apparaître sur votre ordinateur.
+Vous pourrez consulter les billets du blogue de Daniel Lemire (en anglais).
+
+
+```
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URL;
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JScrollPane;
+import javax.swing.JEditorPane;
+import javax.swing.JSplitPane;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import java.awt.Desktop;
+import java.awt.image.BufferedImage;
+import java.awt.Graphics;
+import java.awt.Color;
+
+public class LemireBlogReader extends JFrame {
+
+    private static class Post {
+        String title;
+        String link;
+        String pubDate;
+        String content;
+
+        Post(String title, String link, String pubDate, String content) {
+            this.title = title;
+            this.link = link;
+            this.pubDate = pubDate;
+            this.content = content;
+        }
+
+        @Override
+        public String toString() {
+            return "<html><b>" + title + "</b><br><font color=\"gray\">" + pubDate + "</font></html>";
+        }
+    }
+
+    private JList<Post> postList;
+    private JEditorPane contentPane;
+    private List<Post> posts;
+
+    public LemireBlogReader() {
+        setTitle("Daniel Lemire's Blog Reader");
+        setSize(1000, 700);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        posts = new ArrayList<>();
+        fetchPosts();
+
+        postList = new JList<>(posts.toArray(new Post[0]));
+        postList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+
+        contentPane = new JEditorPane();
+        contentPane.setContentType("text/html");
+        contentPane.setEditable(false);
+
+        contentPane.addHyperlinkListener(new HyperlinkListener() {
+            @Override
+            public void hyperlinkUpdate(HyperlinkEvent e) {
+                if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+                    try {
+                        Desktop.getDesktop().browse(e.getURL().toURI());
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        });
+
+        postList.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                if (!e.getValueIsAdjusting()) {
+                    Post selected = postList.getSelectedValue();
+                    if (selected != null) {
+                        contentPane.setText(selected.content);
+                    }
+                }
+            }
+        });
+
+        JScrollPane listScroll = new JScrollPane(postList);
+        JScrollPane contentScroll = new JScrollPane(contentPane);
+
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, listScroll, contentScroll);
+        splitPane.setDividerLocation(300);
+
+        add(splitPane);
+    }
+
+    private void fetchPosts() {
+        try {
+            String rssUrl = "https://lemire.me/blog/feed/";
+            URL url = new URI(rssUrl).toURL();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                System.err.println("Error: HTTP response code " + responseCode);
+                return;
+            }
+
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            InputStream inputStream = connection.getInputStream();
+            Document doc = builder.parse(inputStream);
+            doc.getDocumentElement().normalize();
+
+            NodeList itemList = doc.getElementsByTagName("item");
+            for (int i = 0; i < itemList.getLength(); i++) {
+                Element item = (Element) itemList.item(i);
+                String title = getElementValue(item, "title");
+                String link = getElementValue(item, "link");
+                String pubDate = getElementValue(item, "pubDate");
+                String content = getElementValue(item, "description");
+                posts.add(new Post(title, link, pubDate, content));
+            }
+
+            inputStream.close();
+            connection.disconnect();
+        } catch (Exception e) {
+            System.err.println("Error fetching RSS: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static String getElementValue(Element parent, String tagName) {
+        NodeList nodeList = parent.getElementsByTagName(tagName);
+        if (nodeList.getLength() > 0 && nodeList.item(0).getFirstChild() != null) {
+            return nodeList.item(0).getFirstChild().getNodeValue().trim();
+        }
+        return "";
+    }
+
+    public static void main(String[] args) {
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            new LemireBlogReader().setVisible(true);
+        });
+    }
+}
+```
