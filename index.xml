@@ -136,9 +136,9 @@ nous avons deux &lt;strong&gt;vocabulaires XML&lt;/strong&gt;.&lt;/p&gt;</descri
  &lt;a class="anchor" href="#question-1"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Écrire un programme en Java utilisant l&amp;rsquo;API DOM modifiant un fichier XML de manière à ce que le préfixe « foo » soit ajouté aux noms de tous les éléments. Le fichier&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;element&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/element&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;element&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/element&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deviendra donc&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;fooelement&amp;gt;&amp;lt;fooa&amp;gt;&amp;lt;/fooa&amp;gt;&amp;lt;/fooelement&amp;gt;&lt;/span&gt;.
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;fooelement&amp;gt;&amp;lt;fooa&amp;gt;&amp;lt;/fooa&amp;gt;&amp;lt;/fooelement&amp;gt;&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vous pouvez supposer que le document ne contient que des éléments, sans attributs, sans espaces de noms.&lt;/p&gt;</description></item><item><title>Format de document</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/format_de_document/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_5/format_de_document/</guid><description>&lt;h1 id="format-de-document"&gt;
  Format de document
  &lt;a class="anchor" href="#format-de-document"&gt;#&lt;/a&gt;
@@ -160,13 +160,13 @@ nous avons deux &lt;strong&gt;vocabulaires XML&lt;/strong&gt;.&lt;/p&gt;</descri
 de plus simple ! Il suffit d&amp;rsquo;utiliser l&amp;rsquo;instruction xsl:comment comme
 dans cet
 exemple :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span style="color:#1f2328"&gt;version=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlns:xsl=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;http://www.w3.org/1999/XSL/Transform&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;xsl:comment&amp;gt;&lt;/span&gt;Ceci est un commentaire.&lt;span style="color:#0550ae"&gt;&amp;lt;/xsl:comment&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Le résultat devrait ressembler à ceci :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;!--Ceci est un commentaire.--&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="créer-des-éléments-dynamiquement-avec--xslelement-"&gt;
  Créer des éléments dynamiquement avec « xsl:element »
@@ -270,326 +270,19 @@ vit le jour en 1990.
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javajackson"&gt;
- Nous vous invitons maintenant à faire une activité avec la librairie Java Jackson.
+ Nous vous invitons maintenant à faire une activité practice avec la librairie Java Jackson.
  &lt;/a&gt;
- Dans cette activité, vous verrez comment on peut créer et analyser des documents JSON et XML avec une librairie dédiée en Java.
 &lt;/p&gt;
-&lt;h2 id="en-ligne"&gt;
- En ligne
- &lt;a class="anchor" href="#en-ligne"&gt;#&lt;/a&gt;
+&lt;h2 id="utilisation-de-jackson"&gt;
+ Utilisation de Jackson
+ &lt;a class="anchor" href="#utilisation-de-jackson"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Une fois que vous aurez complété l&amp;rsquo;activité, vous pouvez explorer davantage
-Jackson dans votre navigateur.&lt;/p&gt;
-&lt;div class="java-inline"&gt;
-
-
-
-
-
-
- &lt;div id="java-runner-1766105299452534837"&gt;
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
- &lt;style&gt;
- #java-runner-1766105299452534837 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1766105299452534837 .export-form { margin-bottom:0; }
- #java-runner-1766105299452534837 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1766105299452534837 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1766105299452534837 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1766105299452534837 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1766105299452534837 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style&gt;
- &lt;form class="export-form java-runner-1766105299452534837-form" style="margin-bottom:0;"&gt;
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
- &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;fr/example/jackson/App.java&lt;/div&gt;&lt;textarea&gt;
-package fr.example.jackson;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-
-class Person {
- private String name;
- private int age;
-
- public Person() {}
-
- public Person(String name, int age) {
- this.name = name;
- this.age = age;
- }
-
- public String getName() { return name; }
- public void setName(String name) { this.name = name; }
- public int getAge() { return age; }
- public void setAge(int age) { this.age = age; }
-
- @Override
- public String toString() {
- return &amp;#34;Person{name=&amp;#39;&amp;#34; &amp;#43; name &amp;#43; &amp;#34;&amp;#39;, age=&amp;#34; &amp;#43; age &amp;#43; &amp;#34;}&amp;#34;;
- }
-}
-
-public class App {
- public static void main(String[] args) throws Exception {
- Person person = new Person(&amp;#34;Jean Dupont&amp;#34;, 30);
-
- // Sérialisation JSON
- ObjectMapper jsonMapper = new ObjectMapper();
- String json = jsonMapper.writeValueAsString(person);
- System.out.println(&amp;#34;JSON: &amp;#34; &amp;#43; json);
-
- // Désérialisation JSON
- Person fromJson = jsonMapper.readValue(json, Person.class);
- System.out.println(&amp;#34;Depuis JSON: &amp;#34; &amp;#43; fromJson);
-
- // Sérialisation XML
- XmlMapper xmlMapper = new XmlMapper();
- String xml = xmlMapper.writeValueAsString(person);
- System.out.println(&amp;#34;XML: &amp;#34; &amp;#43; xml);
-
- // Désérialisation XML
- Person fromXml = xmlMapper.readValue(xml, Person.class);
- System.out.println(&amp;#34;Depuis XML: &amp;#34; &amp;#43; fromXml);
- }
-}
-&lt;/textarea&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1766105299452534837-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
- &lt;/form&gt;
- &lt;div class="export-result"&gt;&lt;/div&gt;
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
- &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1766105299452534837');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- function escapeHtml(text) {
- var map = {
- '&amp;': '&amp;amp;',
- '&lt;': '&amp;lt;',
- '&gt;': '&amp;gt;',
- '"': '&amp;quot;',
- "'": '&amp;#039;'
- };
- return text.replace(/[&amp;&lt;&gt;"']/g, function(m) { return map[m]; });
- }
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.output||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#f0f0f0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(t)+'&lt;/pre&gt;';
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script&gt;
- &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/</guid><description>&lt;h1&gt;
+&lt;p&gt;Jackson est une bibliothèque Java pour la manipulation du XML et du JSON, développée par FasterXML.&lt;/p&gt;
+&lt;h2 id="sérialisation-et-désérialisation-de-base"&gt;
+ Sérialisation et désérialisation de base
+ &lt;a class="anchor" href="#s%c3%a9rialisation-et-d%c3%a9s%c3%a9rialisation-de-base"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;La sérialisation convertit un objet Java en JSON via &lt;code&gt;writeValueAsString&lt;/code&gt;. La désérialisation utilise &lt;code&gt;readValue&lt;/code&gt;. Jackson ignore les champs sans getters et omet les valeurs null par défaut.&lt;/p&gt;</description></item><item><title>Autoévaluation</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_14/autoevaluation/</guid><description>&lt;h1&gt;
  Autoévaluation
 &lt;/h1&gt;
 &lt;p&gt;
@@ -777,22 +470,22 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
 &lt;/h2&gt;
 &lt;p&gt;Écrivez un programme en Java qui utilise l’API DOM et modifie un fichier XML de manière à ce que le préfixe « foo » soit ajouté aux noms de tous les éléments.&lt;/p&gt;
 &lt;p&gt;Le fichier&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;element&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/element&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;element&amp;gt;&amp;lt;a&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/element&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;deviendra donc&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;fooelement&amp;gt;&amp;lt;fooa&amp;gt;&amp;lt;/fooa&amp;gt;&amp;lt;/fooelement&amp;gt;&lt;/span&gt;.
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;fooelement&amp;gt;&amp;lt;fooa&amp;gt;&amp;lt;/fooa&amp;gt;&amp;lt;/fooelement&amp;gt;&lt;/span&gt;.
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Vous pouvez supposer que le document ne contient que des éléments, sans attributs, sans espaces de noms.&lt;/p&gt;
 &lt;h3 id="réponse"&gt;
  Réponse
  &lt;a class="anchor" href="#r%c3%a9ponse"&gt;#&lt;/a&gt;
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;java.io.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.stream.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;java.io.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.stream.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Question1&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Question1&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#57606a"&gt;/**
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt; * Cette méthode parcours récurssivement l&amp;#39;arbre DOM et ajoute
@@ -865,7 +558,7 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="question-2"&gt;
  Question 2
  &lt;a class="anchor" href="#question-2"&gt;#&lt;/a&gt;
@@ -943,7 +636,31 @@ qui comprend une petite application Python capable de traiter du XQuery et du XM
  xml-stylesheet
  &lt;/code&gt;
  . C'est une alternative pratique pour programmer et expérimenter avec XSLT sans charger de fichiers externes.
-&lt;/p&gt;</description></item><item><title>XPath avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
+&lt;/p&gt;</description></item><item><title>Google Gson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/gjson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/gjson/</guid><description>&lt;h1 id="activité-json-avec-gson"&gt;
+ Activité JSON avec Gson
+ &lt;a class="anchor" href="#activit%c3%a9-json-avec-gson"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;
+ &lt;a href="https://github.com/lemire/javagson"&gt;
+ Nous vous invitons maintenant à faire une activité practice avec la librairie Java Gson.
+ &lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id="utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;
+ Utilisation de Google Gson pour le traitement JSON en Java
+ &lt;a class="anchor" href="#utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Google Gson est une bibliothèque Java open-source populaire développée par Google pour convertir des objets Java en JSON (sérialisation) et du JSON en objets Java (désérialisation). Pour l&amp;rsquo;inclure dans un projet Maven, ajoutez la dépendance suivante.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.google.code.gson&lt;span style="color:#0550ae"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;gson&lt;span style="color:#0550ae"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.13.2&lt;span style="color:#0550ae"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="sérialisation-et-désérialisation-de-base"&gt;
+ Sérialisation et désérialisation de base
+ &lt;a class="anchor" href="#s%c3%a9rialisation-et-d%c3%a9s%c3%a9rialisation-de-base"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;La sérialisation convertit un objet Java en chaîne JSON. La désérialisation fait l&amp;rsquo;inverse. Par défaut, Gson sérialise les champs privés, exclut les champs &lt;code&gt;transient&lt;/code&gt; et &lt;code&gt;static&lt;/code&gt;, et omet les valeurs &lt;code&gt;null&lt;/code&gt;. Les champs &lt;code&gt;transient&lt;/code&gt;
+en Java ne sont pas destinés à être sauvegardé.&lt;/p&gt;</description></item><item><title>XPath avec Java</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_7/xpath_en_ligne_java/</guid><description>&lt;h1 id="demonstration-java"&gt;
  Demonstration Java
  &lt;a class="anchor" href="#demonstration-java"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
@@ -967,20 +684,20 @@ Vous pouvez modifier les fichier Java et le fichier XML.&lt;/p&gt;
  
  
 
-&lt;div id="java-multirunner-1766105299473807517"&gt;
+&lt;div id="java-multirunner-1766173730536089644"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-multirunner-1766105299473807517 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-multirunner-1766105299473807517 .export-form { margin-bottom:0; }
- #java-multirunner-1766105299473807517 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-multirunner-1766105299473807517 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-multirunner-1766105299473807517 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-multirunner-1766105299473807517 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-multirunner-1766173730536089644 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1766173730536089644 .export-form { margin-bottom:0; }
+ #java-multirunner-1766173730536089644 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1766173730536089644 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1766173730536089644 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1766173730536089644 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-multirunner-1766105299473807517-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-multirunner-1766173730536089644-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  
@@ -1068,14 +785,14 @@ public class SimpleXPath {
 &amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
  
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-multirunner-1766105299473807517-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1766173730536089644-btn"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;(function(){
- var root = document.getElementById('java-multirunner-1766105299473807517');
+ var root = document.getElementById('java-multirunner-1766173730536089644');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1234,20 +951,20 @@ Vous pouvez modifier les fichiers XSLT et XML.&lt;/p&gt;
  
  
 
-&lt;div id="java-multirunner-1766105299474054949"&gt;
+&lt;div id="java-multirunner-1766173730536323160"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
  &lt;style&gt;
- #java-multirunner-1766105299474054949 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-multirunner-1766105299474054949 .export-form { margin-bottom:0; }
- #java-multirunner-1766105299474054949 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-multirunner-1766105299474054949 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-multirunner-1766105299474054949 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-multirunner-1766105299474054949 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
+ #java-multirunner-1766173730536323160 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
+ #java-multirunner-1766173730536323160 .export-form { margin-bottom:0; }
+ #java-multirunner-1766173730536323160 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
+ #java-multirunner-1766173730536323160 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
+ #java-multirunner-1766173730536323160 .export-file-block { max-width: 100%;max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
+ #java-multirunner-1766173730536323160 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
  .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
  .cm-java-error-line { background: #fff0f0 !important; }
  &lt;/style&gt;
- &lt;form class="export-form java-multirunner-1766105299474054949-form" style="margin-bottom:0;"&gt;
+ &lt;form class="export-form java-multirunner-1766173730536323160-form" style="margin-bottom:0;"&gt;
  &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
  &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
  
@@ -1358,14 +1075,14 @@ public class XmlVersConsole {
 &amp;lt;/bibliotheque&amp;gt;&lt;/textarea&gt;&lt;/div&gt;
  
  &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-multirunner-1766105299474054949-btn"&gt;Exécuter&lt;/button&gt;
+ &lt;button type="submit" class="export-btn java-multirunner-1766173730536323160-btn"&gt;Exécuter&lt;/button&gt;
  &lt;/form&gt;
  &lt;div class="export-result"&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;(function(){
- var root = document.getElementById('java-multirunner-1766105299474054949');
+ var root = document.getElementById('java-multirunner-1766173730536323160');
  if (!root) return;
  var form = root.querySelector('form');
  var resultDiv = root.querySelector('.export-result');
@@ -1829,7 +1546,7 @@ des éléments. Voici des exemples :&lt;/p&gt;</description></item><item><title>
 &lt;p&gt;Les espaces de noms sont supportés et ne posent pas de problème. Il suffit
 de définir les préfixes, comme on le fait habituellement. Par exemple,
 considérons le code XML suivant :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt; version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34; ?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;?xml-stylesheet href=&amp;#34;class2.xsl&amp;#34; type=&amp;#34;text/xsl&amp;#34; ?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;université&amp;gt;&lt;/span&gt;
@@ -1949,11 +1666,11 @@ Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></i
  &lt;a class="anchor" href="#sp%c3%a9cifier-les-valeurs-dattributs"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
 &lt;p&gt;Nous savons maintenant comment aller chercher la valeur d&amp;rsquo;un attribut en utilisant une expression XPath contenant le symbole « @ ». Cependant, qu&amp;rsquo;en est-il de la spécification des valeurs d&amp;rsquo;attributs? Supposons le document suivant :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;facture&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;facture&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;montant&amp;gt;&lt;/span&gt;10.10&lt;span style="color:#0550ae"&gt;&amp;lt;/montant&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;/facture&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nous voulons le simplifier pour n&amp;rsquo;avoir que :&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;facture&lt;/span&gt; &lt;span style="color:#1f2328"&gt;montant=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;10.10&amp;#34;&lt;/span&gt; &lt;span style="color:#0550ae"&gt;/&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;facture&lt;/span&gt; &lt;span style="color:#1f2328"&gt;montant=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;10.10&amp;#34;&lt;/span&gt; &lt;span style="color:#0550ae"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Nous pouvons obtenir ce résultat en utilisant les accolades, pour indiquer une valeur XPath comme valeur d&amp;rsquo;attribut, de la façon suivante :&lt;/p&gt;</description></item><item><title>Solutions aux problèmes résolus</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_12/solutions_aux_problemes_resolus/</guid><description>&lt;h1&gt;
  Solutions aux problèmes résolus
 &lt;/h1&gt;
@@ -1963,10 +1680,10 @@ Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></i
 &lt;p&gt;
  Voici une solution possible (affichage récursif de l’arbre DOM avec indentation) :
 &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Arbre&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Arbre&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;static&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;void&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#6639ba"&gt;traite&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;Node&lt;span style="color:#fff"&gt; &lt;/span&gt;node&lt;span style="color:#1f2328"&gt;,&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;int&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;niveau&lt;span style="color:#1f2328"&gt;)&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;String&lt;span style="color:#fff"&gt; &lt;/span&gt;indent&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
@@ -1992,17 +1709,17 @@ Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></i
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;traite&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;doc&lt;span style="color:#1f2328"&gt;,&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;0&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3&gt;
  Solution du problème 2
 &lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;java.io.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.dom.DOMSource&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.stream.StreamResult&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Bottin&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;org.w3c.dom.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;java.io.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.parsers.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.*&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.dom.DOMSource&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;import&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#24292e"&gt;javax.xml.transform.stream.StreamResult&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;class&lt;/span&gt; &lt;span style="color:#1f2328"&gt;Bottin&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;public&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;static&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;void&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#6639ba"&gt;main&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;String&lt;span style="color:#0550ae"&gt;[]&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;args&lt;span style="color:#1f2328"&gt;)&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;throws&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;Exception&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;{&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;DocumentBuilderFactory&lt;span style="color:#fff"&gt; &lt;/span&gt;factory&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;DocumentBuilderFactory&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;newInstance&lt;/span&gt;&lt;span style="color:#1f2328"&gt;();&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;factory&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;setNamespaceAware&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#cf222e"&gt;true&lt;/span&gt;&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;&lt;span style="color:#fff"&gt;
@@ -2059,7 +1776,7 @@ Un flux RSS est un fichier XML structuré contenant :&lt;/p&gt;</description></i
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;StreamResult&lt;span style="color:#fff"&gt; &lt;/span&gt;result&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#cf222e"&gt;new&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;StreamResult&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#cf222e"&gt;new&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;FileWriter&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;bottin.xml&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;));&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;t&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;transform&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;source&lt;span style="color:#1f2328"&gt;,&lt;/span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;result&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt; &lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#fff"&gt;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#1f2328"&gt;}&lt;/span&gt;&lt;span style="color:#fff"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
  Utilisation :
 &lt;/p&gt;</description></item><item><title>SVG</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/svg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_4/svg/</guid><description>&lt;h1 class=""&gt;
@@ -2281,13 +1998,13 @@ Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application 
  Exemple simple : charger et afficher le titre d’un document XHTML
  &lt;a class="anchor" href="#exemple-simple--charger-et-afficher-le-titre-dun-document-xhtml"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xhtml" data-lang="xhtml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xhtml" data-lang="xhtml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#1f2328"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;html&lt;/span&gt; &lt;span style="color:#1f2328"&gt;xmlns&lt;/span&gt;&lt;span style="color:#0550ae"&gt;=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;head&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;title&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;Exemple AJAX&lt;span style="color:#1f2328"&gt;&amp;lt;/&lt;/span&gt;&lt;span style="color:#0550ae"&gt;title&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;script&lt;/span&gt;&lt;span style="color:#1f2328"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;// Charge un document XML/XHTML et appelle afficheTitre()
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&lt;/span&gt; &lt;span style="color:#cf222e"&gt;function&lt;/span&gt; &lt;span style="color:#1f2328"&gt;chargeDocument&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#1f2328"&gt;uri&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)&lt;/span&gt; &lt;span style="color:#1f2328"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;function&lt;/span&gt; &lt;span style="color:#1f2328"&gt;chargeDocument&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#1f2328"&gt;uri&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)&lt;/span&gt; &lt;span style="color:#1f2328"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;var&lt;/span&gt; &lt;span style="color:#1f2328"&gt;xmlhttp&lt;/span&gt; &lt;span style="color:#0550ae"&gt;=&lt;/span&gt; &lt;span style="color:#cf222e"&gt;new&lt;/span&gt; &lt;span style="color:#1f2328"&gt;XMLHttpRequest&lt;/span&gt;&lt;span style="color:#1f2328"&gt;();&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlhttp&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;open&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;,&lt;/span&gt; &lt;span style="color:#1f2328"&gt;uri&lt;/span&gt;&lt;span style="color:#1f2328"&gt;,&lt;/span&gt; &lt;span style="color:#cf222e"&gt;true&lt;/span&gt;&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlhttp&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;onreadystatechange&lt;/span&gt; &lt;span style="color:#0550ae"&gt;=&lt;/span&gt; &lt;span style="color:#cf222e"&gt;function&lt;/span&gt;&lt;span style="color:#1f2328"&gt;()&lt;/span&gt; &lt;span style="color:#1f2328"&gt;{&lt;/span&gt;
@@ -2298,7 +2015,7 @@ Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application 
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlhttp&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;send&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#cf222e"&gt;null&lt;/span&gt;&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;// Affiche le contenu de l&amp;#39;élément &amp;lt;title&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&lt;/span&gt; &lt;span style="color:#cf222e"&gt;function&lt;/span&gt; &lt;span style="color:#1f2328"&gt;afficheTitre&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#1f2328"&gt;doc&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)&lt;/span&gt; &lt;span style="color:#1f2328"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;function&lt;/span&gt; &lt;span style="color:#1f2328"&gt;afficheTitre&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#1f2328"&gt;doc&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)&lt;/span&gt; &lt;span style="color:#1f2328"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;var&lt;/span&gt; &lt;span style="color:#1f2328"&gt;titre&lt;/span&gt; &lt;span style="color:#0550ae"&gt;=&lt;/span&gt; &lt;span style="color:#1f2328"&gt;doc&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;getElementsByTagName&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;title&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;)[&lt;/span&gt;&lt;span style="color:#0550ae"&gt;0&lt;/span&gt;&lt;span style="color:#1f2328"&gt;];&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;var&lt;/span&gt; &lt;span style="color:#1f2328"&gt;texte&lt;/span&gt; &lt;span style="color:#0550ae"&gt;=&lt;/span&gt; &lt;span style="color:#1f2328"&gt;titre&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;firstChild&lt;/span&gt; &lt;span style="color:#0550ae"&gt;?&lt;/span&gt; &lt;span style="color:#1f2328"&gt;titre&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;firstChild&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;nodeValue&lt;/span&gt; &lt;span style="color:#0550ae"&gt;:&lt;/span&gt; &lt;span style="color:#0a3069"&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#cf222e"&gt;var&lt;/span&gt; &lt;span style="color:#1f2328"&gt;p&lt;/span&gt; &lt;span style="color:#0550ae"&gt;=&lt;/span&gt; &lt;span style="color:#6639ba"&gt;document&lt;/span&gt;&lt;span style="color:#1f2328"&gt;.&lt;/span&gt;&lt;span style="color:#1f2328"&gt;createElement&lt;/span&gt;&lt;span style="color:#1f2328"&gt;(&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;p&amp;#34;&lt;/span&gt;&lt;span style="color:#1f2328"&gt;);&lt;/span&gt;
@@ -2385,7 +2102,7 @@ Voici un exemple simple d&amp;rsquo;un AndroidManifest.xml pour une application 
 &lt;/h2&gt;
 &lt;p&gt;On peut utiliser &lt;a href="http://www.google.com"&gt;un document XSLT pour transformer des documents DocBook simple en HTML&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Nous allons passer en revue brièvement les éléments « xsl:template » qu&amp;rsquo;il contient.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span style="color:#1f2328"&gt;version=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;1.0&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#1f2328"&gt;xmlns:xsl=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;http://www.w3.org/1999/XSL/Transform&amp;#34;&lt;/span&gt;&lt;span style="color:#0550ae"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;xsl:output&lt;/span&gt; &lt;span style="color:#1f2328"&gt;method=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;html&amp;#34;&lt;/span&gt; &lt;span style="color:#1f2328"&gt;indent=&lt;/span&gt;&lt;span style="color:#0a3069"&gt;&amp;#34;yes&amp;#34;&lt;/span&gt;
@@ -2886,7 +2603,7 @@ il suffit d&amp;rsquo;utiliser l&amp;rsquo;élément « xsl:for-each » comme ce
 &lt;p&gt;Supposons qu&amp;rsquo;on veuille calculer le total des
 éléments « quantite », mais en faisant l&amp;rsquo;aggrégation
 pour chaque valeur de l&amp;rsquo;attribut « type » dans l&amp;rsquo;exemple suivant.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#57606a"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;ISO-8859-1&amp;#34;?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#57606a"&gt;&amp;lt;?xml-stylesheet href=&amp;#34;produits.xsl&amp;#34; type=&amp;#34;text/xsl&amp;#34; ?&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;produits&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;france&amp;gt;&lt;/span&gt;

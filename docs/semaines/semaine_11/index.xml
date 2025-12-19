@@ -43,326 +43,43 @@
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javajackson"&gt;
- Nous vous invitons maintenant à faire une activité avec la librairie Java Jackson.
+ Nous vous invitons maintenant à faire une activité practice avec la librairie Java Jackson.
  &lt;/a&gt;
- Dans cette activité, vous verrez comment on peut créer et analyser des documents JSON et XML avec une librairie dédiée en Java.
 &lt;/p&gt;
-&lt;h2 id="en-ligne"&gt;
- En ligne
- &lt;a class="anchor" href="#en-ligne"&gt;#&lt;/a&gt;
+&lt;h2 id="utilisation-de-jackson"&gt;
+ Utilisation de Jackson
+ &lt;a class="anchor" href="#utilisation-de-jackson"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Une fois que vous aurez complété l&amp;rsquo;activité, vous pouvez explorer davantage
-Jackson dans votre navigateur.&lt;/p&gt;
-&lt;div class="java-inline"&gt;
-
-
-
-
-
-
- &lt;div id="java-runner-1766105299452534837"&gt;
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css"&gt;
- &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/eclipse.min.css"&gt;
- &lt;style&gt;
- #java-runner-1766105299452534837 .export-form textarea { width:100%; min-height:120px; font-family:monospace; border-radius:4px; border:1px solid #ccc; }
- #java-runner-1766105299452534837 .export-form { margin-bottom:0; }
- #java-runner-1766105299452534837 .export-result { background:#222; color:#eee; padding:12px; border-radius:6px; margin-top:16px; white-space:pre-wrap; font-family:monospace; }
- #java-runner-1766105299452534837 .export-endpoint-info { color:#1976d2; font-size:0.98em; margin-top:8px; }
- #java-runner-1766105299452534837 .export-btn { background:#1976d2; color:#fff; border:none; border-radius:4px; padding:8px 16px; font-size:1em; cursor:pointer; margin-top:8px; }
- #java-runner-1766105299452534837 .export-file-block { max-width: 100%;flex:1 1 350px; background:#f9f9f9; border:1px solid #ddd; border-radius:6px; padding:12px; margin-bottom:8px; }
- #java-runner-1766105299452534837 .export-file-block .export-file-name { font-weight:bold; margin-bottom:4px; }
- .cm-java-error { background: #ffe0e0 !important; border-bottom: 2px dotted #c00; cursor: pointer; }
- .cm-java-error-line { background: #fff0f0 !important; }
- &lt;/style&gt;
- &lt;form class="export-form java-runner-1766105299452534837-form" style="margin-bottom:0;"&gt;
- &lt;input type="hidden" class="export-endpoint-var" value="https://flask-service-inf1220-java.90qakjuvfj4f8.ca-central-1.cs.amazonlightsail.com/run"&gt;
- &lt;div style="display:flex;gap:12px;flex-wrap:wrap;"&gt;
- &lt;div class='export-file-block'&gt;&lt;div class='export-file-name'&gt;fr/example/jackson/App.java&lt;/div&gt;&lt;textarea&gt;
-package fr.example.jackson;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-
-class Person {
- private String name;
- private int age;
-
- public Person() {}
-
- public Person(String name, int age) {
- this.name = name;
- this.age = age;
- }
-
- public String getName() { return name; }
- public void setName(String name) { this.name = name; }
- public int getAge() { return age; }
- public void setAge(int age) { this.age = age; }
-
- @Override
- public String toString() {
- return &amp;#34;Person{name=&amp;#39;&amp;#34; &amp;#43; name &amp;#43; &amp;#34;&amp;#39;, age=&amp;#34; &amp;#43; age &amp;#43; &amp;#34;}&amp;#34;;
- }
-}
-
-public class App {
- public static void main(String[] args) throws Exception {
- Person person = new Person(&amp;#34;Jean Dupont&amp;#34;, 30);
-
- // Sérialisation JSON
- ObjectMapper jsonMapper = new ObjectMapper();
- String json = jsonMapper.writeValueAsString(person);
- System.out.println(&amp;#34;JSON: &amp;#34; &amp;#43; json);
-
- // Désérialisation JSON
- Person fromJson = jsonMapper.readValue(json, Person.class);
- System.out.println(&amp;#34;Depuis JSON: &amp;#34; &amp;#43; fromJson);
-
- // Sérialisation XML
- XmlMapper xmlMapper = new XmlMapper();
- String xml = xmlMapper.writeValueAsString(person);
- System.out.println(&amp;#34;XML: &amp;#34; &amp;#43; xml);
-
- // Désérialisation XML
- Person fromXml = xmlMapper.readValue(xml, Person.class);
- System.out.println(&amp;#34;Depuis XML: &amp;#34; &amp;#43; fromXml);
- }
-}
-&lt;/textarea&gt;&lt;/div&gt;
- &lt;/div&gt;
- &lt;button type="submit" class="export-btn java-runner-1766105299452534837-btn" style="background:#1976d2;color:#fff;border:none;border-radius:4px;padding:8px 16px;font-size:1em;cursor:pointer;margin-top:8px;"&gt;Exécuter&lt;/button&gt;
- &lt;/form&gt;
- &lt;div class="export-result"&gt;&lt;/div&gt;
- &lt;div class="java-error-tooltip" style="display:none;position:absolute;z-index:1000;background:#fff0f0;color:#c00;border:1px solid #c00;padding:6px 12px;border-radius:6px;font-size:1em;box-shadow:0 2px 8px #0002;"&gt;&lt;/div&gt;
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"&gt;&lt;/script&gt;
- &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"&gt;&lt;/script&gt;
- &lt;script&gt;(function(){
- var root = document.getElementById('java-runner-1766105299452534837');
- if (!root) return;
- var form = root.querySelector('form');
- var resultDiv = root.querySelector('.export-result');
- var endpoint = form.querySelector('.export-endpoint-var').value;
- var tooltip = root.querySelector('.java-error-tooltip');
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- if(name.endsWith('.java')) {
- var cm = CodeMirror.fromTextArea(ta, {
- mode: "text/x-java",
- theme: "eclipse",
- lineNumbers: true,
- indentUnit: 4,
- tabSize: 4
- });
- block._cm = cm;
- 
- block._javaErrorLines = {};
- 
- cm.on('cursorActivity', function() {
- var statusBar = block.querySelector('.java-error-status-bar');
- if (!statusBar) return;
- var cursor = cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- 
- if(name.endsWith('.java')) {
- if (!block.querySelector('.java-error-status-bar')) {
- var statusBar = document.createElement('div');
- statusBar.className = 'java-error-status-bar';
- statusBar.style.marginTop = '4px';
- statusBar.style.fontSize = '0.95em';
- statusBar.style.color = '#c00';
- statusBar.style.minHeight = '1.2em';
- statusBar.style.visibility = 'hidden';
- block.appendChild(statusBar);
- }
- }
- });
- 
- function showTooltip(msg, x, y) {
- tooltip.textContent = msg;
- tooltip.style.display = 'block';
- tooltip.style.left = (x+10) + 'px';
- tooltip.style.top = (y+10) + 'px';
- }
- function hideTooltip() {
- tooltip.style.display = 'none';
- }
- form.onsubmit = function(e){
- e.preventDefault();
- var java_files = [], txt_files = [];
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var name = block.querySelector('.export-file-name').textContent;
- var ta = block.querySelector('textarea');
- var content = block._cm ? block._cm.getValue() : ta.value;
- if(name.endsWith('.java')) java_files.push({name: name, content: content});
- else txt_files.push({name: name, content: content});
- });
- 
- var dots = 0;
- resultDiv.textContent = 'Exécution en cours';
- var execAnim = setInterval(function() {
- dots = (dots + 1) % 4;
- resultDiv.textContent = 'Exécution en cours' + '.'.repeat(dots);
- }, 500);
- 
- var controller = new AbortController();
- var timeoutId = setTimeout(function() { controller.abort(); }, 30000); 
- fetch(endpoint, {
- method: 'POST',
- headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ java_files: java_files, txt_files: txt_files }),
- signal: controller.signal
- })
- .then(function(r){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (!r.ok &amp;&amp; r.status !== 400) {
- throw new Error('Erreur HTTP ' + r.status + ' : ' + r.statusText);
- }
- return r.text();
- })
- .then(function(t){
- try {
- var j=JSON.parse(t);
- 
- function escapeHtml(text) {
- var map = {
- '&amp;': '&amp;amp;',
- '&lt;': '&amp;lt;',
- '&gt;': '&amp;gt;',
- '"': '&amp;quot;',
- "'": '&amp;#039;'
- };
- return text.replace(/[&amp;&lt;&gt;"']/g, function(m) { return map[m]; });
- }
- 
- if(j.status==='ran_successfully') {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.output||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='compiling') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else if(j.status==='runtime_error') {
- resultDiv.innerHTML='&lt;pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'&lt;/pre&gt;';
- } else {
- resultDiv.innerHTML='&lt;pre style="color:#222;background:#f0f0f0;padding:12px;border-radius:6px;white-space:pre-wrap;"&gt;'+escapeHtml(t)+'&lt;/pre&gt;';
- }
- 
- if(j.status==='compiling') {
- var errorText = j.error || '';
- var errorRegex = new RegExp('([\\w./\\-]+\\.java):(\\d+): error: ([^\\n]+)([\\s\\S]*?)(?=\\n[\\w./\\-]+\\.java:|$)','g');
- var match;
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- 
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- while ((match = errorRegex.exec(errorText)) !== null) {
- var file = match[1], lineStr = match[2], msg = match[3], details = match[4];
- var line = parseInt(lineStr, 10) - 1;
- var errorMsg = (msg + (details ? details.replace(/\s+/g, ' ') : '')).trim();
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var nameInput = block.querySelector('.export-file-name');
- if (nameInput &amp;&amp; (nameInput.textContent.trim() === file || nameInput.textContent.trim().endsWith('/'+file) || nameInput.textContent.trim().endsWith('\\'+file))) {
- if (block._cm) {
- block._cm.operation(function() {
- block._cm.markText({line:line, ch:0}, {line:line+1, ch:0}, {
- className: 'cm-java-error',
- title: errorMsg
- });
- });
- }
- 
- if (!block._javaErrorLines) { block._javaErrorLines = {}; }
- block._javaErrorLines[line] = errorMsg;
- }
- });
- }
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm &amp;&amp; block._cm.getOption('lineNumbers')) {
- 
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- var cursor = block._cm.getCursor();
- var errMsg = block._javaErrorLines &amp;&amp; block._javaErrorLines[cursor.line];
- if (errMsg) {
- statusBar.textContent = 'Ligne ' + (cursor.line+1) + ' : ' + errMsg;
- statusBar.style.visibility = 'visible';
- } else {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- }
- }
- });
- } else {
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- if (block._cm) {
- block._cm.operation(function() {
- var marks = block._cm.getAllMarks();
- for (var i = 0; i &lt; marks.length; i++) { marks[i].clear(); }
- });
- }
- block._javaErrorLines = {};
- var statusBar = block.querySelector('.java-error-status-bar');
- if (statusBar) {
- statusBar.textContent = '';
- statusBar.style.visibility = 'hidden';
- }
- });
- }
- } catch(e){ console.log(e); resultDiv.textContent=t; }
- })
- .catch(function(error){
- clearInterval(execAnim);
- clearTimeout(timeoutId);
- if (error.name === 'AbortError') {
- resultDiv.textContent = 'Erreur : délai d’attente dépassé (30 secondes).';
- } else {
- resultDiv.textContent = 'Erreur lors de la requête : ' + error;
- }
- });
- };
- 
- root.querySelectorAll('.export-file-block').forEach(function(block){
- var cm = block._cm;
- if (!cm) return;
- cm.on('mouseover', function(cm, event) {
- var pos = cm.coordsChar({ left: event.clientX, top: event.clientY });
- var line = pos.line, ch = pos.ch;
- var cursor = cm.getCursor();
- if (line === cursor.line &amp;&amp; block._javaErrorLines &amp;&amp; block._javaErrorLines[line]) {
- var msg = block._javaErrorLines[line];
- showTooltip(msg, event.clientX, event.clientY);
- }
- });
- cm.on('mouseout', function(cm, event) {
- hideTooltip();
- });
- });
- })();&lt;/script&gt;
- &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
+&lt;p&gt;Jackson est une bibliothèque Java pour la manipulation du XML et du JSON, développée par FasterXML.&lt;/p&gt;
+&lt;h2 id="sérialisation-et-désérialisation-de-base"&gt;
+ Sérialisation et désérialisation de base
+ &lt;a class="anchor" href="#s%c3%a9rialisation-et-d%c3%a9s%c3%a9rialisation-de-base"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;La sérialisation convertit un objet Java en JSON via &lt;code&gt;writeValueAsString&lt;/code&gt;. La désérialisation utilise &lt;code&gt;readValue&lt;/code&gt;. Jackson ignore les champs sans getters et omet les valeurs null par défaut.&lt;/p&gt;</description></item><item><title>Google Gson</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/gjson/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/gjson/</guid><description>&lt;h1 id="activité-json-avec-gson"&gt;
+ Activité JSON avec Gson
+ &lt;a class="anchor" href="#activit%c3%a9-json-avec-gson"&gt;#&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;
+ &lt;a href="https://github.com/lemire/javagson"&gt;
+ Nous vous invitons maintenant à faire une activité practice avec la librairie Java Gson.
+ &lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id="utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;
+ Utilisation de Google Gson pour le traitement JSON en Java
+ &lt;a class="anchor" href="#utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Google Gson est une bibliothèque Java open-source populaire développée par Google pour convertir des objets Java en JSON (sérialisation) et du JSON en objets Java (désérialisation). Pour l&amp;rsquo;inclure dans un projet Maven, ajoutez la dépendance suivante.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.google.code.gson&lt;span style="color:#0550ae"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;gson&lt;span style="color:#0550ae"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.13.2&lt;span style="color:#0550ae"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="sérialisation-et-désérialisation-de-base"&gt;
+ Sérialisation et désérialisation de base
+ &lt;a class="anchor" href="#s%c3%a9rialisation-et-d%c3%a9s%c3%a9rialisation-de-base"&gt;#&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;La sérialisation convertit un objet Java en chaîne JSON. La désérialisation fait l&amp;rsquo;inverse. Par défaut, Gson sérialise les champs privés, exclut les champs &lt;code&gt;transient&lt;/code&gt; et &lt;code&gt;static&lt;/code&gt;, et omet les valeurs &lt;code&gt;null&lt;/code&gt;. Les champs &lt;code&gt;transient&lt;/code&gt;
+en Java ne sont pas destinés à être sauvegardé.&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
  Laboratoire pratique avec jq (optionnel)
  &lt;a class="anchor" href="#laboratoire-pratique-avec-jq-optionnel"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
