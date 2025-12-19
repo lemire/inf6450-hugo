@@ -43,8 +43,8 @@
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javajackson"&gt;
- Nous vous invitons maintenant à faire une activité practice avec la librairie Java Jackson.
- &lt;/a&gt;
+ Nous vous invitons maintenant à faire une activité practique avec la librairie Java Jackson.
+ &lt;/a&gt; L'activité vous amènera sur la plateforme GitHub et vous devrez utiliser Maven.
 &lt;/p&gt;
 &lt;h2 id="utilisation-de-jackson"&gt;
  Utilisation de Jackson
@@ -61,25 +61,15 @@
 &lt;/h1&gt;
 &lt;p&gt;
  &lt;a href="https://github.com/lemire/javagson"&gt;
- Nous vous invitons maintenant à faire une activité practice avec la librairie Java Gson.
- &lt;/a&gt;
+ Nous vous invitons maintenant à faire une activité pratique avec la librairie Java Gson. 
+ &lt;/a&gt; L'activité vous amènera sur la plateforme GitHub et vous devrez utiliser Maven.
+ Cette démarche ressemble à une activité industrielle.
 &lt;/p&gt;
 &lt;h2 id="utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;
  Utilisation de Google Gson pour le traitement JSON en Java
  &lt;a class="anchor" href="#utilisation-de-google-gson-pour-le-traitement-json-en-java"&gt;#&lt;/a&gt;
 &lt;/h2&gt;
-&lt;p&gt;Google Gson est une bibliothèque Java open-source populaire développée par Google pour convertir des objets Java en JSON (sérialisation) et du JSON en objets Java (désérialisation). Pour l&amp;rsquo;inclure dans un projet Maven, ajoutez la dépendance suivante.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.google.code.gson&lt;span style="color:#0550ae"&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;gson&lt;span style="color:#0550ae"&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#0550ae"&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.13.2&lt;span style="color:#0550ae"&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#0550ae"&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="sérialisation-et-désérialisation-de-base"&gt;
- Sérialisation et désérialisation de base
- &lt;a class="anchor" href="#s%c3%a9rialisation-et-d%c3%a9s%c3%a9rialisation-de-base"&gt;#&lt;/a&gt;
-&lt;/h2&gt;
-&lt;p&gt;La sérialisation convertit un objet Java en chaîne JSON. La désérialisation fait l&amp;rsquo;inverse. Par défaut, Gson sérialise les champs privés, exclut les champs &lt;code&gt;transient&lt;/code&gt; et &lt;code&gt;static&lt;/code&gt;, et omet les valeurs &lt;code&gt;null&lt;/code&gt;. Les champs &lt;code&gt;transient&lt;/code&gt;
-en Java ne sont pas destinés à être sauvegardé.&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
+&lt;p&gt;Google Gson est une bibliothèque Java open-source populaire développée par Google pour convertir des objets Java en JSON (sérialisation) et du JSON en objets Java (désérialisation). Pour l&amp;rsquo;inclure dans un projet Maven, ajoutez la dépendance suivante.&lt;/p&gt;</description></item><item><title>Activité avec jq (optionnel)</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_11/jq/</guid><description>&lt;h1 id="laboratoire-pratique-avec-jq-optionnel"&gt;
  Laboratoire pratique avec jq (optionnel)
  &lt;a class="anchor" href="#laboratoire-pratique-avec-jq-optionnel"&gt;#&lt;/a&gt;
 &lt;/h1&gt;
