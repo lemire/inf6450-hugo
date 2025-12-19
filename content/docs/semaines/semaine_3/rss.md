@@ -42,7 +42,7 @@ Prenez le temps de consulter les sources suivantes.
 
 
 
-#### Exemple Java
+#### Exemple Java (Radio-Canada)
 
 Prenez quelques secondes pour exécuter ce programme qui charge les dernières nouvelles de Radio-Canada 
 en utilisant le XML.
@@ -91,6 +91,85 @@ public class RadioCanadaCinqDernieres {
         } catch (Exception e) {
             System.err.println("Erreur lors du chargement du flux : " + e.getMessage());
         }
+    }
+}
+{{</inlineJava>}}
+
+
+
+#### Exemple Java (Blogue de Daniel Lemire)
+
+Prenez quelques secondes pour exécuter ce programme qui charge les dernières nouvelles du blogue de Daniel Lemire
+en utilisant le XML.
+
+{{<inlineJava path="RssFeedReader.java">}}
+import java.io.InputStream;
+import java.net.URL;
+import java.net.HttpURLConnection;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+public class RssFeedReader {
+    public static void main(String[] args) {
+        try {
+            // Connexion au flux RSS
+            String rssUrl = "https://lemire.me/blog/feed/";
+            URL url = new URL(rssUrl);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            // Vérification de la réponse
+            int responseCode = connection.getResponseCode();
+            if (responseCode != HttpURLConnection.HTTP_OK) {
+                System.out.println("Erreur : Code de réponse " + responseCode);
+                return;
+            }
+            // Parsing du XML
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            InputStream inputStream = connection.getInputStream();
+            Document doc = builder.parse(inputStream);
+            doc.getDocumentElement().normalize();
+            // Extraction des informations du channel
+            NodeList channelList = doc.getElementsByTagName("channel");
+            if (channelList.getLength() > 0) {
+                Element channel = (Element) channelList.item(0);
+                String channelTitle = getElementValue(channel, "title");
+                String channelDescription = getElementValue(channel, "description");
+                String channelLink = getElementValue(channel, "link");
+                System.out.println("Flux RSS : " + channelTitle);
+                System.out.println("Description : " + channelDescription);
+                System.out.println("Lien : " + channelLink);
+                System.out.println("Articles :");
+            }
+            // Extraction des items (articles)
+            NodeList itemList = doc.getElementsByTagName("item");
+            for (int i = 0; i < itemList.getLength(); i++) {
+                Element item = (Element) itemList.item(i); 
+                String title = getElementValue(item, "title");
+                String link = getElementValue(item, "link");
+                String pubDate = getElementValue(item, "pubDate");
+                System.out.println("Article " + (i + 1) + ":");
+                System.out.println("  Titre : " + title);
+                System.out.println("  Lien : " + link);
+                System.out.println("  Date de publication : " + pubDate);
+                System.out.println();
+            }
+            inputStream.close();
+            connection.disconnect();
+        } catch (Exception e) {
+            System.out.println("Erreur lors de la récupération du flux RSS : " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    // Méthode utilitaire pour extraire la valeur d'un élément
+    private static String getElementValue(Element parent, String tagName) {
+        NodeList nodeList = parent.getElementsByTagName(tagName);
+        if (nodeList.getLength() > 0 && nodeList.item(0).getFirstChild() != null) {
+            return nodeList.item(0).getFirstChild().getNodeValue();
+        }
+        return "";
     }
 }
 {{</inlineJava>}}

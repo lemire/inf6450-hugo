@@ -141,11 +141,11 @@
             }
             // Affiche toujours la sortie ou l'erreur d'exécution dans la zone de résultat
             if(j.status==='ran_successfully') {
-              resultDiv.innerHTML='<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.output||'')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#222;background:#e0ffe0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.output||'')+escapeHtml(j.stderr||'')+'</pre>';
             } else if(j.status==='compiling') {
-              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.error||'')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'</pre>';
             } else if(j.status==='runtime_error') {
-              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.error||'')+'</pre>';
+              resultDiv.innerHTML='<pre style="color:#c00;background:#ffe0e0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(j.error||'')+escapeHtml(j.stderr||'')+'</pre>';
             } else {
               resultDiv.innerHTML='<pre style="color:#222;background:#f0f0f0;padding:12px;border-radius:6px;white-space:pre-wrap;">'+escapeHtml(t)+'</pre>';
             }
