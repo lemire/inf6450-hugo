@@ -51,45 +51,55 @@ en utilisant le XML.
 import java.io.InputStream;
 import java.net.URL;
 import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamReader;
 
 public class RadioCanadaCinqDernieres {
-
     public static void main(String[] args) {
         String rssUrl = "https://ici.radio-canada.ca/info/rss/info/a-la-une";
-
         try {
             System.out.println("Les 5 dernières nouvelles de Radio-Canada :\n");
-
             URL url = new URL(rssUrl);
             try (InputStream in = url.openStream()) {
                 XMLInputFactory factory = XMLInputFactory.newInstance();
                 XMLStreamReader reader = factory.createXMLStreamReader(in, "UTF-8");
 
                 int compteur = 0;
-                String titreCourant = null;
+                StringBuilder titreBuilder = null;
+                boolean dansTitle = false;
 
                 while (reader.hasNext() && compteur < 5) {
                     int event = reader.next();
 
-                    if (event == XMLStreamReader.START_ELEMENT && "title".equals(reader.getLocalName())) {
-                        reader.next(); // passer aux caractères
-                        if (reader.getEventType() == XMLStreamReader.CHARACTERS) {
-                            titreCourant = reader.getText().trim();
+                    if (event == XMLStreamConstants.START_ELEMENT) {
+                        String localName = reader.getLocalName();
+                        if ("title".equals(localName)) {
+                            dansTitle = true;
+                            titreBuilder = new StringBuilder();
                         }
-                    }
-
-                    if (event == XMLStreamReader.END_ELEMENT && "item".equals(reader.getLocalName()) && titreCourant != null) {
-                        compteur++;
-                        System.out.println(compteur + ". " + titreCourant);
-                        titreCourant = null;
+                    } else if (event == XMLStreamConstants.CHARACTERS || event == XMLStreamConstants.CDATA) {
+                        if (dansTitle && titreBuilder != null) {
+                            titreBuilder.append(reader.getText());
+                        }
+                    } else if (event == XMLStreamConstants.END_ELEMENT) {
+                        String localName = reader.getLocalName();
+                        if ("title".equals(localName)) {
+                            dansTitle = false;
+                        } else if ("item".equals(localName) && titreBuilder != null) {
+                            String titre = titreBuilder.toString().trim();
+                            if (!titre.isEmpty()) {
+                                compteur++;
+                                System.out.println(compteur + ". " + titre);
+                            }
+                            titreBuilder = null;
+                        }
                     }
                 }
                 reader.close();
             }
-
         } catch (Exception e) {
-            System.err.println("Erreur lors du chargement du flux : " + e.getMessage());
+            System.err.println("Erreur lors du chargement du flux : " + e.toString());
+            e.printStackTrace();
         }
     }
 }
