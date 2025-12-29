@@ -24,11 +24,10 @@ weight: 40
  Bonne chance!
 </p>
 <p>
- <a href="$@QUIZVIEWBYID*158488@$" target="_blank">
+ <a href="https://m2.teluq.ca/mod/quiz/view.php?id=158488" target="_blank">
   Pour passer votre examen
  </a>
 </p>
-<!-- <a href="https://caroussel.teluq.ca/gadp/?p_sigle=inf6450%20&p_nom=examen">examen préparatoire</a> -->
 <hr/>
 <h2>
  Pour continuer vos études
