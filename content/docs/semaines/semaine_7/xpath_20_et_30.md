@@ -31,7 +31,7 @@ weight: 60
    expressions régulières
   </a>
   avec les fonctions matches, replace, et tokenize. XPath 2.0 intègre maintenant
-        la fonction « document » qui était une fonction XSLT.
+        une fonction fn:doc() équivalente à la fonction « document » du XSLT.
  </p>
  <p>
   XPath 2.0 comprend maintenant un syntaxe if/then/else comme dans cet exemple :

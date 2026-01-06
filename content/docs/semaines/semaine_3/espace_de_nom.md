@@ -136,7 +136,7 @@ Ainsi, le document suivant est bien formé, mais il ne respecte pas les conventi
 ```
 
 Avez-vous remarqué que ces derniers documents n'ont pas de déclaration de type de document et ne peuvent 
-donc pas être des documents XML valables? La plupart des documents XML utilisant les espaces 
+donc pas être des documents XML valables dans le cadre d'une validation DTD? La plupart des documents XML utilisant les espaces 
 de noms sont dans ce cas. Si jamais nous avions une déclaration de type de document, il faudrait une 
 DTD qui contiennent les éléments « fact:facture », « fact:montant » et « fact:nom ». 
 En d'autres mots, ce nouveau document XML ne peut utiliser la DTD facture décrite plus haut. 

@@ -135,13 +135,13 @@ weight: 30
  Un URI contient un protocole (http, mailto, ftp, etc.), un domaine comme
     « fichiers.com » et un chemin
     comme « /mesfichiers/index.html ». Dans ce cours, nous adoptons la
-    norme RFC2396 et
+    norme RFC3986 et
     nous permettons que les URI comportent le symbole du dièse ( # ),
     comme « ftp://fichiers.com#maman » :
     tout ce qui apparaît après ce symbole forme le « fragment ».
     Notons
-    que les accents ne peuvent pas être utilisés dans un URI; ainsi,
-    « http://école.com » n'est pas un URI valable.
+    que les accents ne peuvent pas être utilisés dans un URI selon la norme RFC3986; ainsi,
+    « http://école.com » n'est pas un URI valable. Par contre, la plupart des navigateurs modernes utilisent la norme WHATWG URL qui supporte les caractères non-ASCII selon certaintes conditions.
     Un protocole particulier, « urn », est parfois utilisé dans
     les URI. Par exemple, pour
     identifier un livre par son code ISBN, nous pouvons utiliser l'URI

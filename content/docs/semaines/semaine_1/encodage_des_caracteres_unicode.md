@@ -7,7 +7,7 @@ weight: 70
   Visualiseur d’octets UTF-8 / UTF-16
  </h1>
  <p>
-  Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mask). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian).
+  Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mark). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian).
  </p>
 </header>
 <section style="display:block; margin-bottom: 12px;">

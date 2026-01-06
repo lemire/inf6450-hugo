@@ -58,7 +58,7 @@ weight: 40
  <em>
   be conservative in what you do, be liberal in what you accept from others
  </em>
- (soyez strict dans ce que vous produisez, mais généreux dans ce que vous acceptez). En d'autres mots, le XML fonctionne parce que les gens tentent le plus possible de produire du XML de qualité (bien formé et valide), mais ils acceptent que les autres fassent des entorses aux règles. C'est, en partie, ce qu'on entend lorsqu'on dit que le XML est « extensible ». Cette règle est parfois
+ (soyez strict dans ce que vous produisez, mais généreux dans ce que vous acceptez). En d'autres mots, le XML fonctionne parce que les gens tentent le plus possible de produire du XML de qualité (bien formé et valide), mais ils acceptent que les autres fassent des entorses aux règles tant que les documents sont bien formés. C'est, en partie, ce qu'on entend lorsqu'on dit que le XML est « extensible ». Cette règle est parfois
     appelée la loi de Postel parce qu'elle fut rédigée par Jon Postel dans la spécification
  <a href="http://tools.ietf.org/html/rfc793">
   RFC 793

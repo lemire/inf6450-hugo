@@ -107,7 +107,7 @@ Pour éviter cela :
 Si tout est correct, vous verrez le texte s’afficher. En cas d’erreur de syntaxe, le navigateur vous indiquera précisément le problème.
 </p>
 <h2>
- Un exemple de HTML bien formé (donc aussi du XML valide)
+ Un exemple de XHTML bien formé (donc aussi du XML valide)
 </h2>
 <pre><span style="color:#e06c75;">&lt;html&gt;</span>
     <span style="color:#e06c75;">&lt;body&gt;</span>
