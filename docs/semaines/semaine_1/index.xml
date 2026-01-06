@@ -46,7 +46,7 @@
  Visualiseur d’octets UTF-8 / UTF-16
  &lt;/h1&gt;
  &lt;p&gt;
- Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mask). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian).
+ Le XML est généralement stocké dans un fichier texte avec un encodage Unicode (soit UTF-16, soit UTF-8). Il peut être intéressant de voir comment le texte est converti en données binaires sur votre disque. Saisissez du texte. Voyez les octets en UTF-8 et UTF-16. Pour distinguer les encodages, il arrive que les systèmes ajoutent quelques octets au début du contenu (appelé BOM pour Byte-Order-Mark). Le format UTF-16 comporte deux variantes : LE (little endian) et BE (big endian).
  &lt;/p&gt;</description></item><item><title>Mise en forme du XML</title><link>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lemire.github.io/inf6450-hugo/docs/semaines/semaine_1/mise_en_forme_du_xml/</guid><description>&lt;p&gt;
  Si vous utilisez un traitement de texte pour préparer votre travaux et que vous souhaitez présenter le code XML, vous pouvez utiliser cette application pour le mettre en forme. Saisissez votre code XML et copiez la version mise en forme. Vous pouvez ensuite la copier dans votre logiciel de traitement de texte.
 &lt;/p&gt;
