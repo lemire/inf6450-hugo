@@ -10,6 +10,26 @@ import sys
 import requests
 from urllib.parse import urlparse
 from pathlib import Path
+import concurrent.futures
+from functools import lru_cache
+
+# Cache for URL checks
+url_cache = {}
+session = requests.Session()
+
+@lru_cache(maxsize=None)
+def check_url(url, timeout=10):
+    """Check if URL is reachable."""
+    if url in url_cache:
+        return url_cache[url]
+    try:
+        response = session.head(url, timeout=timeout, allow_redirects=True)
+        result = response.status_code < 400
+        url_cache[url] = result
+        return result
+    except requests.RequestException:
+        url_cache[url] = False
+        return False
 
 def find_links(content):
     """Find all Markdown and HTML links in the content."""
@@ -34,14 +54,6 @@ def is_url(link):
     parsed = urlparse(link)
     return parsed.scheme in ('http', 'https')
 
-def check_url(url, timeout=10):
-    """Check if URL is reachable."""
-    try:
-        response = requests.head(url, timeout=timeout, allow_redirects=True)
-        return response.status_code < 400
-    except requests.RequestException:
-        return False
-
 def check_local_file(filepath, base_dir):
     """Check if local file exists, resolving relative paths."""
     if os.path.isabs(filepath):
@@ -54,14 +66,31 @@ def check_local_file(filepath, base_dir):
 def check_links_in_file(filepath, base_dir):
     """Check all links in a Markdown file."""
     broken_links = []
+    links = []
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
             content = f.read()
         
         links = find_links(content)
+        urls_to_check = set()
+        local_links = []
+        
         for link_type, text, link in links:
             if is_url(link):
-                if not check_url(link):
+                urls_to_check.add(link)
+            else:
+                local_links.append((link_type, text, link))
+        
+        # Check URLs in parallel
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            url_results = {url: executor.submit(check_url, url) for url in urls_to_check}
+            for url, future in url_results.items():
+                url_cache[url] = future.result()
+        
+        # Now check all links
+        for link_type, text, link in links:
+            if is_url(link):
+                if not url_cache[link]:
                     if link_type == 'markdown':
                         broken_links.append(f"Broken URL: [{text}]({link})")
                     else:
