@@ -11,16 +11,15 @@ import requests
 from urllib.parse import urlparse
 from pathlib import Path
 import concurrent.futures
-from functools import lru_cache
 
 # Cache for URL checks
 url_cache = {}
 session = requests.Session()
 
-@lru_cache(maxsize=None)
 def check_url(url, timeout=10):
     """Check if URL is reachable."""
     if url in url_cache:
+        print("in cache")
         return url_cache[url]
     try:
         response = session.head(url, timeout=timeout, allow_redirects=True)
